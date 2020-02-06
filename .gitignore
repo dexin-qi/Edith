@@ -1,0 +1,20 @@
+# Vscode files
+.vscode
+
+# Bazel
+build
+
+# Logs
+edith_log
+
+# temporary files
+*.swp
+*.swo
+
+*.pyc
+*genrule.log
+
+# Doxygen
+docs/doxygen
+cyber/doxy-docs/build/
+cyber/doxy-docs/xml/
