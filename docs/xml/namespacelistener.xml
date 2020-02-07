@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="namespacelistener" kind="namespace" language="Python">
+    <compoundname>listener</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="examples_2listener_8py_1afd5e2cf7c064e3a4cec7121a95b21026" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def listener::callback</definition>
+        <argsstring>(data)</argsstring>
+        <name>callback</name>
+        <param>
+          <type>data</type>
+          <defname>data</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Reader message callback.
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/examples/listener.py" line="25" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/examples/listener.py" bodystart="25" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="examples_2listener_8py_1a71f4dd6688981e8f2e4539aa33906b07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def listener::test_listener_class</definition>
+        <argsstring>()</argsstring>
+        <name>test_listener_class</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Reader message.
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/examples/listener.py" line="35" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/examples/listener.py" bodystart="35" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dexin/code/Edith/cyber/python/cyber_py/examples/listener.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

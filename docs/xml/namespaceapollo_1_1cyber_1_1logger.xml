@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="namespaceapollo_1_1cyber_1_1logger" kind="namespace" language="C++">
+    <compoundname>apollo::cyber::logger</compoundname>
+    <innerclass refid="classapollo_1_1cyber_1_1logger_1_1_async_logger" prot="public">apollo::cyber::logger::AsyncLogger</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1logger_1_1_log_file_object" prot="public">apollo::cyber::logger::LogFileObject</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1logger_1_1_logger" prot="public">apollo::cyber::logger::Logger</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="log__file__object_8h_1a06b7044f0845df0775f6c4d093572d2e" prot="public" static="no">
+        <type>int32_t</type>
+        <definition>typedef int32_t apollo::cyber::logger::int32</definition>
+        <argsstring></argsstring>
+        <name>int32</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/logger/log_file_object.h" line="32" column="1" bodyfile="/home/dexin/code/Edith/cyber/logger/log_file_object.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="log__file__object_8h_1a593cd4aa78b98ef91309803cfd29cc13" prot="public" static="no">
+        <type>uint32_t</type>
+        <definition>typedef uint32_t apollo::cyber::logger::uint32</definition>
+        <argsstring></argsstring>
+        <name>uint32</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/logger/log_file_object.h" line="33" column="1" bodyfile="/home/dexin/code/Edith/cyber/logger/log_file_object.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="log__file__object_8h_1a4a5e9cdd45ac54cd5a09de74c549b1f1" prot="public" static="no">
+        <type>int64_t</type>
+        <definition>typedef int64_t apollo::cyber::logger::int64</definition>
+        <argsstring></argsstring>
+        <name>int64</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/logger/log_file_object.h" line="34" column="1" bodyfile="/home/dexin/code/Edith/cyber/logger/log_file_object.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="log__file__object_8h_1a5a4f8fa2c4a98f8df476926e47ed2034" prot="public" static="no">
+        <type>uint64_t</type>
+        <definition>typedef uint64_t apollo::cyber::logger::uint64</definition>
+        <argsstring></argsstring>
+        <name>uint64</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/logger/log_file_object.h" line="35" column="1" bodyfile="/home/dexin/code/Edith/cyber/logger/log_file_object.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="logger__util_8h_1aba925dc8ddf04e41bd631c3753ae6d01" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>int64_t apollo::cyber::logger::CycleClock_Now</definition>
+        <argsstring>()</argsstring>
+        <name>CycleClock_Now</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/logger/logger_util.h" line="40" column="1" bodyfile="/home/dexin/code/Edith/cyber/logger/logger_util.h" bodystart="40" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="logger__util_8h_1a622c239ca481ada66fb8c82e6786db53" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>int64_t apollo::cyber::logger::UsecToCycles</definition>
+        <argsstring>(int64_t usec)</argsstring>
+        <name>UsecToCycles</name>
+        <param>
+          <type>int64_t</type>
+          <declname>usec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/logger/logger_util.h" line="46" column="1" bodyfile="/home/dexin/code/Edith/cyber/logger/logger_util.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="logger__util_8h_1a509a0f768e34d905ee9b733cf17682f5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void apollo::cyber::logger::GetHostName</definition>
+        <argsstring>(std::string *hostname)</argsstring>
+        <name>GetHostName</name>
+        <param>
+          <type>std::string *</type>
+          <declname>hostname</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/logger/logger_util.h" line="48" column="1" bodyfile="/home/dexin/code/Edith/cyber/logger/logger_util.h" bodystart="48" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="logger__util_8h_1a334681ec45cd64f9405c7135e37cbcca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t apollo::cyber::logger::GetMainThreadPid</definition>
+        <argsstring>()</argsstring>
+        <name>GetMainThreadPid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/logger/logger_util.h" line="57" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="logger__util_8h_1ac2c417a8a3cc95d11e1e7929cc5788f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::logger::PidHasChanged</definition>
+        <argsstring>()</argsstring>
+        <name>PidHasChanged</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/logger/logger_util.h" line="59" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="logger__util_8h_1a8d55e950cfc7f5415b3c117646af57f1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t apollo::cyber::logger::MaxLogSize</definition>
+        <argsstring>()</argsstring>
+        <name>MaxLogSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/logger/logger_util.h" line="61" column="1" bodyfile="/home/dexin/code/Edith/cyber/logger/logger_util.h" bodystart="61" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="logger__util_8h_1a6e57417aaf22029fdb28924a53c70d6f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::logger::FindModuleName</definition>
+        <argsstring>(std::string *log_message, std::string *module_name)</argsstring>
+        <name>FindModuleName</name>
+        <param>
+          <type>std::string *</type>
+          <declname>log_message</declname>
+        </param>
+        <param>
+          <type>std::string *</type>
+          <declname>module_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/logger/logger_util.h" line="65" column="1" bodyfile="/home/dexin/code/Edith/cyber/logger/logger_util.h" bodystart="65" bodyend="79"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dexin/code/Edith/cyber/logger/async_logger.h" line="38" column="1"/>
+  </compounddef>
+</doxygen>

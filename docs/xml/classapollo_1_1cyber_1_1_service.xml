@@ -1,0 +1,527 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classapollo_1_1cyber_1_1_service" kind="class" language="C++" prot="public">
+    <compoundname>apollo::cyber::Service</compoundname>
+    <basecompoundref refid="classapollo_1_1cyber_1_1_service_base" prot="public" virt="non-virtual">apollo::cyber::ServiceBase</basecompoundref>
+    <includes refid="service_8h" local="no">service.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>Request</declname>
+        <defname>Request</defname>
+      </param>
+      <param>
+        <type>typename</type>
+        <declname>Response</declname>
+        <defname>Response</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1_service_1aedd53fb1d4b3636253ddcaba4dc896ab" prot="public" static="no">
+        <type>std::function&lt; void(const std::shared_ptr&lt; Request &gt; &amp;, std::shared_ptr&lt; Response &gt; &amp;)&gt;</type>
+        <definition>using apollo::cyber::Service&lt; Request, Response &gt;::ServiceCallback =  std::function&lt;void(const std::shared_ptr&lt;Request&gt;&amp;, std::shared_ptr&lt;Response&gt;&amp;)&gt;</definition>
+        <argsstring></argsstring>
+        <name>ServiceCallback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service/service.h" line="44" column="1" bodyfile="/home/dexin/code/Edith/cyber/service/service.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_service_1a5d898e348220ba05c2f3997875ba2ec4" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string apollo::cyber::Service&lt; Request, Response &gt;::node_name_</definition>
+        <argsstring></argsstring>
+        <name>node_name_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service/service.h" line="104" column="1" bodyfile="/home/dexin/code/Edith/cyber/service/service.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_service_1a1fa2cb859454bfc73299470e36648ed3" prot="private" static="no" mutable="no">
+        <type>ServiceCallback</type>
+        <definition>ServiceCallback apollo::cyber::Service&lt; Request, Response &gt;::service_callback_</definition>
+        <argsstring></argsstring>
+        <name>service_callback_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service/service.h" line="105" column="1" bodyfile="/home/dexin/code/Edith/cyber/service/service.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_service_1aad642b07ca0bac7ac1304ca1bb946eed" prot="private" static="no" mutable="no">
+        <type>std::function&lt; void(const std::shared_ptr&lt; Request &gt; &amp;, const transport::MessageInfo &amp;)&gt;</type>
+        <definition>std::function&lt;void(const std::shared_ptr&lt;Request&gt;&amp;, const transport::MessageInfo&amp;)&gt; apollo::cyber::Service&lt; Request, Response &gt;::request_callback_</definition>
+        <argsstring></argsstring>
+        <name>request_callback_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service/service.h" line="109" column="1" bodyfile="/home/dexin/code/Edith/cyber/service/service.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_service_1a3d0c840429b0e6d6fece389067b81757" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; transport::Transmitter&lt; Response &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;transport::Transmitter&lt;Response&gt; &gt; apollo::cyber::Service&lt; Request, Response &gt;::response_transmitter_</definition>
+        <argsstring></argsstring>
+        <name>response_transmitter_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service/service.h" line="110" column="1" bodyfile="/home/dexin/code/Edith/cyber/service/service.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_service_1a91f2641d8746e778f376b818e82e44fa" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; transport::Receiver&lt; Request &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;transport::Receiver&lt;Request&gt; &gt; apollo::cyber::Service&lt; Request, Response &gt;::request_receiver_</definition>
+        <argsstring></argsstring>
+        <name>request_receiver_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service/service.h" line="111" column="1" bodyfile="/home/dexin/code/Edith/cyber/service/service.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_service_1a7d608dfbc0ca4ca0b049bd98a2414769" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string apollo::cyber::Service&lt; Request, Response &gt;::request_channel_</definition>
+        <argsstring></argsstring>
+        <name>request_channel_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service/service.h" line="112" column="1" bodyfile="/home/dexin/code/Edith/cyber/service/service.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_service_1a3a69243428a43606ce347a23be39381f" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string apollo::cyber::Service&lt; Request, Response &gt;::response_channel_</definition>
+        <argsstring></argsstring>
+        <name>response_channel_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service/service.h" line="113" column="1" bodyfile="/home/dexin/code/Edith/cyber/service/service.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_service_1a5c8fe530f3c6252b5ef3ec2c5e8e16be" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex apollo::cyber::Service&lt; Request, Response &gt;::service_handle_request_mutex_</definition>
+        <argsstring></argsstring>
+        <name>service_handle_request_mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service/service.h" line="114" column="1" bodyfile="/home/dexin/code/Edith/cyber/service/service.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_service_1a395a485575e4ef19615d8a1d9ce2ca01" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>volatile bool apollo::cyber::Service&lt; Request, Response &gt;::inited_</definition>
+        <argsstring></argsstring>
+        <name>inited_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service/service.h" line="116" column="1" bodyfile="/home/dexin/code/Edith/cyber/service/service.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_service_1a84cad59fd572efc77b81e5f1169d273a" prot="private" static="no" mutable="no">
+        <type>std::thread</type>
+        <definition>std::thread apollo::cyber::Service&lt; Request, Response &gt;::thread_</definition>
+        <argsstring></argsstring>
+        <name>thread_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service/service.h" line="119" column="1" bodyfile="/home/dexin/code/Edith/cyber/service/service.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_service_1ae8f3674803541ccafb1946cd987d25e1" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex apollo::cyber::Service&lt; Request, Response &gt;::queue_mutex_</definition>
+        <argsstring></argsstring>
+        <name>queue_mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service/service.h" line="120" column="1" bodyfile="/home/dexin/code/Edith/cyber/service/service.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_service_1af381d15ec5f1288c7ff214fb35362ce4" prot="private" static="no" mutable="no">
+        <type>std::condition_variable</type>
+        <definition>std::condition_variable apollo::cyber::Service&lt; Request, Response &gt;::condition_</definition>
+        <argsstring></argsstring>
+        <name>condition_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service/service.h" line="121" column="1" bodyfile="/home/dexin/code/Edith/cyber/service/service.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_service_1a6e223d7b18757cfeeee1618df40f2649" prot="private" static="no" mutable="no">
+        <type>std::list&lt; std::function&lt; void()&gt; &gt;</type>
+        <definition>std::list&lt;std::function&lt;void()&gt; &gt; apollo::cyber::Service&lt; Request, Response &gt;::tasks_</definition>
+        <argsstring></argsstring>
+        <name>tasks_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service/service.h" line="122" column="1" bodyfile="/home/dexin/code/Edith/cyber/service/service.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_service_1a564ad60a164abebb94329d9542e84aec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::Service&lt; Request, Response &gt;::Service</definition>
+        <argsstring>(const std::string &amp;node_name, const std::string &amp;service_name, const ServiceCallback &amp;service_callback)</argsstring>
+        <name>Service</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>node_name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>service_name</declname>
+        </param>
+        <param>
+          <type>const ServiceCallback &amp;</type>
+          <declname>service_callback</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classapollo_1_1cyber_1_1_service" kindref="compound">Service</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>used to fill RoleAttribute when join the topology </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>service_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the service name we provide </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>service_callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reference of <computeroutput>ServiceCallback</computeroutput> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service/service.h" line="53" column="1" bodyfile="/home/dexin/code/Edith/cyber/service/service.h" bodystart="53" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_service_1a616f1abb7686a6ba5af0dfd1e5d920f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::Service&lt; Request, Response &gt;::Service</definition>
+        <argsstring>(const std::string &amp;node_name, const std::string &amp;service_name, ServiceCallback &amp;&amp;service_callback)</argsstring>
+        <name>Service</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>node_name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>service_name</declname>
+        </param>
+        <param>
+          <type>ServiceCallback &amp;&amp;</type>
+          <declname>service_callback</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classapollo_1_1cyber_1_1_service" kindref="compound">Service</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>used to fill RoleAttribute when join the topology </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>service_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the service name we provide </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>service_callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>rvalue reference of <computeroutput>ServiceCallback</computeroutput> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service/service.h" line="68" column="1" bodyfile="/home/dexin/code/Edith/cyber/service/service.h" bodystart="68" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_service_1aea802e52a8799ad566e779b48c0bd75b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::Service&lt; Request, Response &gt;::Service</definition>
+        <argsstring>()=delete</argsstring>
+        <name>Service</name>
+        <briefdescription>
+<para>Forbid default constructing. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service/service.h" line="79" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_service_1a24ff23a2c3f10481a6ee46bb0e7f2205" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::Service&lt; Request, Response &gt;::~Service</definition>
+        <argsstring>()</argsstring>
+        <name>~Service</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service/service.h" line="81" column="1" bodyfile="/home/dexin/code/Edith/cyber/service/service.h" bodystart="81" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_service_1a611e7a31ce9b5d3700af21b13871a3cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::Service&lt; Request, Response &gt;::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+<para>Init the <ref refid="classapollo_1_1cyber_1_1_service" kindref="compound">Service</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service/service.h" line="88" column="1" bodyfile="/home/dexin/code/Edith/cyber/service/service.h" bodystart="163" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_service_1aeaaef735425d56ab7879e1597587c081" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::Service&lt; Request, Response &gt;::destroy</definition>
+        <argsstring>()</argsstring>
+        <name>destroy</name>
+        <reimplements refid="classapollo_1_1cyber_1_1_service_base_1ab6587b2517f16bb8133e2ef5518b2243">destroy</reimplements>
+        <briefdescription>
+<para>Destroy the <ref refid="classapollo_1_1cyber_1_1_service" kindref="compound">Service</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service/service.h" line="93" column="1" bodyfile="/home/dexin/code/Edith/cyber/service/service.h" bodystart="126" bodyend="136"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_service_1a9ed0b62384d23ed246fca4e82f3dbe7d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::Service&lt; Request, Response &gt;::HandleRequest</definition>
+        <argsstring>(const std::shared_ptr&lt; Request &gt; &amp;request, const transport::MessageInfo &amp;message_info)</argsstring>
+        <name>HandleRequest</name>
+        <param>
+          <type>const std::shared_ptr&lt; Request &gt; &amp;</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type>const transport::MessageInfo &amp;</type>
+          <declname>message_info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service/service.h" line="96" column="1" bodyfile="/home/dexin/code/Edith/cyber/service/service.h" bodystart="212" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_service_1a556f3fcb7d37e683a39fa37a4434900a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::Service&lt; Request, Response &gt;::SendResponse</definition>
+        <argsstring>(const transport::MessageInfo &amp;message_info, const std::shared_ptr&lt; Response &gt; &amp;response)</argsstring>
+        <name>SendResponse</name>
+        <param>
+          <type>const transport::MessageInfo &amp;</type>
+          <declname>message_info</declname>
+        </param>
+        <param>
+          <type>const std::shared_ptr&lt; Response &gt; &amp;</type>
+          <declname>response</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service/service.h" line="99" column="1" bodyfile="/home/dexin/code/Edith/cyber/service/service.h" bodystart="229" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_service_1a88afc38e23bac7241ed705c7243d2ac4" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::Service&lt; Request, Response &gt;::IsInit</definition>
+        <argsstring>(void) const </argsstring>
+        <name>IsInit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service/service.h" line="102" column="1" bodyfile="/home/dexin/code/Edith/cyber/service/service.h" bodystart="102" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_service_1a86c5f12fdebf8f61f059bfcfc29df859" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::Service&lt; Request, Response &gt;::Enqueue</definition>
+        <argsstring>(std::function&lt; void()&gt; &amp;&amp;task)</argsstring>
+        <name>Enqueue</name>
+        <param>
+          <type>std::function&lt; void()&gt; &amp;&amp;</type>
+          <declname>task</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service/service.h" line="117" column="1" bodyfile="/home/dexin/code/Edith/cyber/service/service.h" bodystart="139" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_service_1a7f85a4c126c0668d00da561ac372c450" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::Service&lt; Request, Response &gt;::Process</definition>
+        <argsstring>()</argsstring>
+        <name>Process</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service/service.h" line="118" column="1" bodyfile="/home/dexin/code/Edith/cyber/service/service.h" bodystart="146" bodyend="160"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classapollo_1_1cyber_1_1_service" kindref="compound">Service</ref> handles <computeroutput>Request</computeroutput> from the <ref refid="classapollo_1_1cyber_1_1_client" kindref="compound">Client</ref>, and send a <computeroutput>Response</computeroutput> to it. </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>Request</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request type </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Response</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the response type </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="706">
+        <label>apollo::cyber::Service&lt; Request, Response &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1_service"/>
+        <childnode refid="707" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="707">
+        <label>apollo::cyber::ServiceBase</label>
+        <link refid="classapollo_1_1cyber_1_1_service_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="708">
+        <label>apollo::cyber::Service&lt; Request, Response &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1_service"/>
+        <childnode refid="709" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="710">
+        <label>string</label>
+      </node>
+      <node id="709">
+        <label>apollo::cyber::ServiceBase</label>
+        <link refid="classapollo_1_1cyber_1_1_service_base"/>
+        <childnode refid="710" relation="usage">
+          <edgelabel>service_name_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dexin/code/Edith/cyber/service/service.h" line="42" column="1" bodyfile="/home/dexin/code/Edith/cyber/service/service.h" bodystart="42" bodyend="123"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1_service_1af381d15ec5f1288c7ff214fb35362ce4" prot="private" virt="non-virtual"><scope>apollo::cyber::Service</scope><name>condition_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_service_1aeaaef735425d56ab7879e1597587c081" prot="public" virt="virtual"><scope>apollo::cyber::Service</scope><name>destroy</name></member>
+      <member refid="classapollo_1_1cyber_1_1_service_1a86c5f12fdebf8f61f059bfcfc29df859" prot="private" virt="non-virtual"><scope>apollo::cyber::Service</scope><name>Enqueue</name></member>
+      <member refid="classapollo_1_1cyber_1_1_service_1a9ed0b62384d23ed246fca4e82f3dbe7d" prot="private" virt="non-virtual"><scope>apollo::cyber::Service</scope><name>HandleRequest</name></member>
+      <member refid="classapollo_1_1cyber_1_1_service_1a611e7a31ce9b5d3700af21b13871a3cf" prot="public" virt="non-virtual"><scope>apollo::cyber::Service</scope><name>Init</name></member>
+      <member refid="classapollo_1_1cyber_1_1_service_1a395a485575e4ef19615d8a1d9ce2ca01" prot="private" virt="non-virtual"><scope>apollo::cyber::Service</scope><name>inited_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_service_1a88afc38e23bac7241ed705c7243d2ac4" prot="private" virt="non-virtual"><scope>apollo::cyber::Service</scope><name>IsInit</name></member>
+      <member refid="classapollo_1_1cyber_1_1_service_1a5d898e348220ba05c2f3997875ba2ec4" prot="private" virt="non-virtual"><scope>apollo::cyber::Service</scope><name>node_name_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_service_1a7f85a4c126c0668d00da561ac372c450" prot="private" virt="non-virtual"><scope>apollo::cyber::Service</scope><name>Process</name></member>
+      <member refid="classapollo_1_1cyber_1_1_service_1ae8f3674803541ccafb1946cd987d25e1" prot="private" virt="non-virtual"><scope>apollo::cyber::Service</scope><name>queue_mutex_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_service_1aad642b07ca0bac7ac1304ca1bb946eed" prot="private" virt="non-virtual"><scope>apollo::cyber::Service</scope><name>request_callback_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_service_1a7d608dfbc0ca4ca0b049bd98a2414769" prot="private" virt="non-virtual"><scope>apollo::cyber::Service</scope><name>request_channel_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_service_1a91f2641d8746e778f376b818e82e44fa" prot="private" virt="non-virtual"><scope>apollo::cyber::Service</scope><name>request_receiver_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_service_1a3a69243428a43606ce347a23be39381f" prot="private" virt="non-virtual"><scope>apollo::cyber::Service</scope><name>response_channel_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_service_1a3d0c840429b0e6d6fece389067b81757" prot="private" virt="non-virtual"><scope>apollo::cyber::Service</scope><name>response_transmitter_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_service_1a556f3fcb7d37e683a39fa37a4434900a" prot="private" virt="non-virtual"><scope>apollo::cyber::Service</scope><name>SendResponse</name></member>
+      <member refid="classapollo_1_1cyber_1_1_service_1a564ad60a164abebb94329d9542e84aec" prot="public" virt="non-virtual"><scope>apollo::cyber::Service</scope><name>Service</name></member>
+      <member refid="classapollo_1_1cyber_1_1_service_1a616f1abb7686a6ba5af0dfd1e5d920f9" prot="public" virt="non-virtual"><scope>apollo::cyber::Service</scope><name>Service</name></member>
+      <member refid="classapollo_1_1cyber_1_1_service_1aea802e52a8799ad566e779b48c0bd75b" prot="public" virt="non-virtual"><scope>apollo::cyber::Service</scope><name>Service</name></member>
+      <member refid="classapollo_1_1cyber_1_1_service_1a1fa2cb859454bfc73299470e36648ed3" prot="private" virt="non-virtual"><scope>apollo::cyber::Service</scope><name>service_callback_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_service_1a5c8fe530f3c6252b5ef3ec2c5e8e16be" prot="private" virt="non-virtual"><scope>apollo::cyber::Service</scope><name>service_handle_request_mutex_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_service_base_1af50ffeb173dc4e7b5410af9f74fdfe5b" prot="public" virt="non-virtual"><scope>apollo::cyber::Service</scope><name>service_name</name></member>
+      <member refid="classapollo_1_1cyber_1_1_service_base_1a57ba3936b59c0b2b77ad7ef47134477b" prot="protected" virt="non-virtual"><scope>apollo::cyber::Service</scope><name>service_name_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_service_base_1ae44c71fcd7f69aeae29be17354707122" prot="public" virt="non-virtual"><scope>apollo::cyber::Service</scope><name>ServiceBase</name></member>
+      <member refid="classapollo_1_1cyber_1_1_service_1aedd53fb1d4b3636253ddcaba4dc896ab" prot="public" virt="non-virtual"><scope>apollo::cyber::Service</scope><name>ServiceCallback</name></member>
+      <member refid="classapollo_1_1cyber_1_1_service_1a6e223d7b18757cfeeee1618df40f2649" prot="private" virt="non-virtual"><scope>apollo::cyber::Service</scope><name>tasks_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_service_1a84cad59fd572efc77b81e5f1169d273a" prot="private" virt="non-virtual"><scope>apollo::cyber::Service</scope><name>thread_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_service_1a24ff23a2c3f10481a6ee46bb0e7f2205" prot="public" virt="non-virtual"><scope>apollo::cyber::Service</scope><name>~Service</name></member>
+      <member refid="classapollo_1_1cyber_1_1_service_base_1a89e8db9cea8b546c4e8153cd4b5034bc" prot="public" virt="virtual"><scope>apollo::cyber::Service</scope><name>~ServiceBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

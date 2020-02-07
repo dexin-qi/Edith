@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="namespacecyber__py_1_1parameter" kind="namespace" language="Python">
+    <compoundname>cyber_py::parameter</compoundname>
+    <innerclass refid="classcyber__py_1_1parameter_1_1_parameter" prot="public">cyber_py::parameter::Parameter</innerclass>
+    <innerclass refid="classcyber__py_1_1parameter_1_1_parameter_client" prot="public">cyber_py::parameter::ParameterClient</innerclass>
+    <innerclass refid="classcyber__py_1_1parameter_1_1_parameter_server" prot="public">cyber_py::parameter::ParameterServer</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="parameter_8py_1afc384413705b3e54e8036987f7ec6893" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cyber_py::parameter.CYBER_PATH</definition>
+        <argsstring></argsstring>
+        <name>CYBER_PATH</name>
+        <initializer>= os.environ[&apos;CYBER_PATH&apos;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/parameter.py" line="27" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/parameter.py" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="parameter_8py_1aa346957355ec41d2ede8727747793d47" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cyber_py::parameter.CYBER_DIR</definition>
+        <argsstring></argsstring>
+        <name>CYBER_DIR</name>
+        <initializer>= os.path.split(CYBER_PATH)[0]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/parameter.py" line="28" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/parameter.py" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="parameter_8py_1a94a551681f58672fbed1e1ffaed5f67b" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>cyber_py::parameter._CYBER_PARAM</definition>
+        <argsstring></argsstring>
+        <name>_CYBER_PARAM</name>
+        <initializer>= importlib.import_module(&apos;_cyber_parameter&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/parameter.py" line="37" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/parameter.py" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dexin/code/Edith/cyber/python/cyber_py/parameter.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

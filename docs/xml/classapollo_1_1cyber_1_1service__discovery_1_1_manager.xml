@@ -1,0 +1,797 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classapollo_1_1cyber_1_1service__discovery_1_1_manager" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>apollo::cyber::service_discovery::Manager</compoundname>
+    <derivedcompoundref refid="classapollo_1_1cyber_1_1service__discovery_1_1_channel_manager" prot="public" virt="non-virtual">apollo::cyber::service_discovery::ChannelManager</derivedcompoundref>
+    <derivedcompoundref refid="classapollo_1_1cyber_1_1service__discovery_1_1_node_manager" prot="public" virt="non-virtual">apollo::cyber::service_discovery::NodeManager</derivedcompoundref>
+    <derivedcompoundref refid="classapollo_1_1cyber_1_1service__discovery_1_1_service_manager" prot="public" virt="non-virtual">apollo::cyber::service_discovery::ServiceManager</derivedcompoundref>
+    <includes refid="manager_8h" local="no">manager.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a9730b844d88e23f65d5dcbcfca1a7d59" prot="public" static="no">
+        <type>base::Signal&lt; const ChangeMsg &amp; &gt;</type>
+        <definition>using apollo::cyber::service_discovery::Manager::ChangeSignal =  base::Signal&lt;const ChangeMsg&amp;&gt;</definition>
+        <argsstring></argsstring>
+        <name>ChangeSignal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="53" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a1e08b690a5829fbabeb6d3aea5ab8320" prot="public" static="no">
+        <type>std::function&lt; void(const ChangeMsg &amp;)&gt;</type>
+        <definition>using apollo::cyber::service_discovery::Manager::ChangeFunc =  std::function&lt;void(const ChangeMsg&amp;)&gt;</definition>
+        <argsstring></argsstring>
+        <name>ChangeFunc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="54" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1ab43fa282f6aa1b3b1180a1e416b98b68" prot="public" static="no">
+        <type>base::Connection&lt; const ChangeMsg &amp; &gt;</type>
+        <definition>using apollo::cyber::service_discovery::Manager::ChangeConnection =  base::Connection&lt;const ChangeMsg&amp;&gt;</definition>
+        <argsstring></argsstring>
+        <name>ChangeConnection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="55" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a7576b9ac293ff99af06e30a971df5dce" prot="public" static="no">
+        <type>eprosima::fastrtps::Participant</type>
+        <definition>using apollo::cyber::service_discovery::Manager::RtpsParticipant =  eprosima::fastrtps::Participant</definition>
+        <argsstring></argsstring>
+        <name>RtpsParticipant</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="57" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a1b8464bc115c49a16a0d943c7cb5ef32" prot="public" static="no">
+        <type>eprosima::fastrtps::PublisherAttributes</type>
+        <definition>using apollo::cyber::service_discovery::Manager::RtpsPublisherAttr =  eprosima::fastrtps::PublisherAttributes</definition>
+        <argsstring></argsstring>
+        <name>RtpsPublisherAttr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="58" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1ac16fc5e01d6d107cbb865d6d8127f622" prot="public" static="no">
+        <type>eprosima::fastrtps::SubscriberAttributes</type>
+        <definition>using apollo::cyber::service_discovery::Manager::RtpsSubscriberAttr =  eprosima::fastrtps::SubscriberAttributes</definition>
+        <argsstring></argsstring>
+        <name>RtpsSubscriberAttr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="59" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a260bde7ce1d7749c3cb35e98b820d278" prot="protected" static="no" mutable="no">
+        <type>std::atomic&lt; bool &gt;</type>
+        <definition>std::atomic&lt;bool&gt; apollo::cyber::service_discovery::Manager::is_shutdown_</definition>
+        <argsstring></argsstring>
+        <name>is_shutdown_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="155" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a8a8bd0560f76ccb0be2a37fd62fbb2d8" prot="protected" static="no" mutable="no">
+        <type>std::atomic&lt; bool &gt;</type>
+        <definition>std::atomic&lt;bool&gt; apollo::cyber::service_discovery::Manager::is_discovery_started_</definition>
+        <argsstring></argsstring>
+        <name>is_discovery_started_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="156" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a901cf709cf2707faf0ced991bc2da591" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int apollo::cyber::service_discovery::Manager::allowed_role_</definition>
+        <argsstring></argsstring>
+        <name>allowed_role_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="157" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a26dbcd395983f96ff00060648e16ff93" prot="protected" static="no" mutable="no">
+        <type>ChangeType</type>
+        <definition>ChangeType apollo::cyber::service_discovery::Manager::change_type_</definition>
+        <argsstring></argsstring>
+        <name>change_type_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="158" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a6e221053092ac40fd6810510a3eb10cc" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string apollo::cyber::service_discovery::Manager::host_name_</definition>
+        <argsstring></argsstring>
+        <name>host_name_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="159" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1ac251ffb4700b4b901451ad9f103ccdd8" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int apollo::cyber::service_discovery::Manager::process_id_</definition>
+        <argsstring></argsstring>
+        <name>process_id_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="160" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a2ff877c30b287c1a5c7efeedfde0afe0" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string apollo::cyber::service_discovery::Manager::channel_name_</definition>
+        <argsstring></argsstring>
+        <name>channel_name_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="161" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1ab5caa9d2feb69e9746f6371a908d2661" prot="protected" static="no" mutable="no">
+        <type>eprosima::fastrtps::Publisher *</type>
+        <definition>eprosima::fastrtps::Publisher* apollo::cyber::service_discovery::Manager::publisher_</definition>
+        <argsstring></argsstring>
+        <name>publisher_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="162" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1ab97c68b06403476a563dcc7389ed1168" prot="protected" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex apollo::cyber::service_discovery::Manager::lock_</definition>
+        <argsstring></argsstring>
+        <name>lock_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="163" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a4324a7de5c025ab948d210916bbadcb2" prot="protected" static="no" mutable="no">
+        <type>eprosima::fastrtps::Subscriber *</type>
+        <definition>eprosima::fastrtps::Subscriber* apollo::cyber::service_discovery::Manager::subscriber_</definition>
+        <argsstring></argsstring>
+        <name>subscriber_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="164" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a8dd4cf136c87d16027530af545cb0842" prot="protected" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_subscriber_listener" kindref="compound">SubscriberListener</ref> *</type>
+        <definition>SubscriberListener* apollo::cyber::service_discovery::Manager::listener_</definition>
+        <argsstring></argsstring>
+        <name>listener_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="165" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1af92680680a5e900f48f8a39d9a0524f9" prot="protected" static="no" mutable="no">
+        <type>ChangeSignal</type>
+        <definition>ChangeSignal apollo::cyber::service_discovery::Manager::signal_</definition>
+        <argsstring></argsstring>
+        <name>signal_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="167" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a8bc33aa7aefffcaa50ebf3ca12b4dd48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::service_discovery::Manager::Manager</definition>
+        <argsstring>()</argsstring>
+        <name>Manager</name>
+        <briefdescription>
+<para>Construct a new <ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager" kindref="compound">Manager</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="64" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1ae683108196b8958825bb4142ab98a378" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual apollo::cyber::service_discovery::Manager::~Manager</definition>
+        <argsstring>()</argsstring>
+        <name>~Manager</name>
+        <briefdescription>
+<para>Destroy the <ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager" kindref="compound">Manager</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="69" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a0a007e927b14cb2584a9b97b1c8ec299" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::service_discovery::Manager::StartDiscovery</definition>
+        <argsstring>(RtpsParticipant *participant)</argsstring>
+        <name>StartDiscovery</name>
+        <param>
+          <type>RtpsParticipant *</type>
+          <declname>participant</declname>
+        </param>
+        <briefdescription>
+<para>Startup topology discovery. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>participant</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is used to create rtps Publisher and Subscriber </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if start successfully </para></simplesect>
+<simplesect kind="return"><para>false if start fail </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="78" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1ae06ca49d144ab1ca78cfd30f204e4caa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::service_discovery::Manager::StopDiscovery</definition>
+        <argsstring>()</argsstring>
+        <name>StopDiscovery</name>
+        <briefdescription>
+<para>Stop topology discovery. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="83" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a4a4e6fc42da96478d0ff6ca5d8f21ad7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void apollo::cyber::service_discovery::Manager::Shutdown</definition>
+        <argsstring>()</argsstring>
+        <name>Shutdown</name>
+        <briefdescription>
+<para>Shutdown module. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="88" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a21da44e9c4c3fe10af7005c4d5eec894" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::service_discovery::Manager::Join</definition>
+        <argsstring>(const RoleAttributes &amp;attr, RoleType role, bool need_publish=true)</argsstring>
+        <name>Join</name>
+        <param>
+          <type>const RoleAttributes &amp;</type>
+          <declname>attr</declname>
+        </param>
+        <param>
+          <type>RoleType</type>
+          <declname>role</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>need_publish</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Join the topology. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>attr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the attributes that will be sent to other <ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager" kindref="compound">Manager</ref>(include ourselves) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>role</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is one of RoleType enum </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>need_publish</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if Join topology successfully </para></simplesect>
+<simplesect kind="return"><para>false if Join topology failed </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="100" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1abf37a1b3c4f23425fcdbd46ec0a3b632" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::service_discovery::Manager::Leave</definition>
+        <argsstring>(const RoleAttributes &amp;attr, RoleType role)</argsstring>
+        <name>Leave</name>
+        <param>
+          <type>const RoleAttributes &amp;</type>
+          <declname>attr</declname>
+        </param>
+        <param>
+          <type>RoleType</type>
+          <declname>role</declname>
+        </param>
+        <briefdescription>
+<para>Leave the topology. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>attr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the attributes that will be sent to other <ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager" kindref="compound">Manager</ref>(include ourselves) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>role</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if one of RoleType enum. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if Leave topology successfully </para></simplesect>
+<simplesect kind="return"><para>false if Leave topology failed </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="112" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1abe0325759c5c14d16cfe2e2b1460b9ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ChangeConnection</type>
+        <definition>ChangeConnection apollo::cyber::service_discovery::Manager::AddChangeListener</definition>
+        <argsstring>(const ChangeFunc &amp;func)</argsstring>
+        <name>AddChangeListener</name>
+        <param>
+          <type>const ChangeFunc &amp;</type>
+          <declname>func</declname>
+        </param>
+        <briefdescription>
+<para>Add topology change listener, when topology changed, func will be called. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the callback function </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ChangeConnection Store it to use when you want to stop listening. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="121" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a2e46899f22d9e001b10a7e49ef61bd0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::service_discovery::Manager::RemoveChangeListener</definition>
+        <argsstring>(const ChangeConnection &amp;conn)</argsstring>
+        <name>RemoveChangeListener</name>
+        <param>
+          <type>const ChangeConnection &amp;</type>
+          <declname>conn</declname>
+        </param>
+        <briefdescription>
+<para>Remove our listener for topology change. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>conn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the return value of <computeroutput>AddChangeListener</computeroutput> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="128" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a95a679e0fc7904e6f1a8b2fdd139cc03" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void apollo::cyber::service_discovery::Manager::OnTopoModuleLeave</definition>
+        <argsstring>(const std::string &amp;host_name, int process_id)=0</argsstring>
+        <name>OnTopoModuleLeave</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1service__discovery_1_1_node_manager_1ae397dee1edf09f1c89bd546b36f6c3cf">OnTopoModuleLeave</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1service__discovery_1_1_service_manager_1a1b154f0679b49c2ee378f8d7e591b222">OnTopoModuleLeave</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1service__discovery_1_1_channel_manager_1a4e39fc638d77bbe6d397299fa30ff6d6">OnTopoModuleLeave</reimplementedby>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>host_name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>process_id</declname>
+        </param>
+        <briefdescription>
+<para>Called when a process&apos; topology manager instance leave. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>host_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the process&apos;s host&apos;s name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>process_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the process&apos; id </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="136" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a722f92a9db32919ef83b9fbfcaaff85a" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::service_discovery::Manager::CreatePublisher</definition>
+        <argsstring>(RtpsParticipant *participant)</argsstring>
+        <name>CreatePublisher</name>
+        <param>
+          <type>RtpsParticipant *</type>
+          <declname>participant</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="140" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a777040a412671e776f1f750933a629f3" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::service_discovery::Manager::CreateSubscriber</definition>
+        <argsstring>(RtpsParticipant *participant)</argsstring>
+        <name>CreateSubscriber</name>
+        <param>
+          <type>RtpsParticipant *</type>
+          <declname>participant</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="141" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1acfa0224581a6722daf4861f34e4c11ef" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool apollo::cyber::service_discovery::Manager::Check</definition>
+        <argsstring>(const RoleAttributes &amp;attr)=0</argsstring>
+        <name>Check</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1service__discovery_1_1_node_manager_1affa8f0c21cffc2ff647f6823acc928e2">Check</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1service__discovery_1_1_service_manager_1aba4d8350c1f20a9b07084a714fe87428">Check</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1service__discovery_1_1_channel_manager_1a470b79e3a7780121ede3552956722cf7">Check</reimplementedby>
+        <param>
+          <type>const RoleAttributes &amp;</type>
+          <declname>attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="143" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a6e36e4095291597364ce4b37ee1c897b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void apollo::cyber::service_discovery::Manager::Dispose</definition>
+        <argsstring>(const ChangeMsg &amp;msg)=0</argsstring>
+        <name>Dispose</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1service__discovery_1_1_node_manager_1a908f3fca225735f0277f1a9801f71334">Dispose</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1service__discovery_1_1_service_manager_1a8a1117b41cc2e7f5620ad62639fb0fe8">Dispose</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1service__discovery_1_1_channel_manager_1ae4ed92f11a64d7ef4bb30680dad64493">Dispose</reimplementedby>
+        <param>
+          <type>const ChangeMsg &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="144" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1ab3221bff519725654e6e232d6ad528e0" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool apollo::cyber::service_discovery::Manager::NeedPublish</definition>
+        <argsstring>(const ChangeMsg &amp;msg) const </argsstring>
+        <name>NeedPublish</name>
+        <param>
+          <type>const ChangeMsg &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="145" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a0aee2af4344c78f97ec72b885d98ab5d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::service_discovery::Manager::Convert</definition>
+        <argsstring>(const RoleAttributes &amp;attr, RoleType role, OperateType opt, ChangeMsg *msg)</argsstring>
+        <name>Convert</name>
+        <param>
+          <type>const RoleAttributes &amp;</type>
+          <declname>attr</declname>
+        </param>
+        <param>
+          <type>RoleType</type>
+          <declname>role</declname>
+        </param>
+        <param>
+          <type>OperateType</type>
+          <declname>opt</declname>
+        </param>
+        <param>
+          <type>ChangeMsg *</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="147" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a086e96a029a1f05a0561d57e541c9526" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::service_discovery::Manager::Notify</definition>
+        <argsstring>(const ChangeMsg &amp;msg)</argsstring>
+        <name>Notify</name>
+        <param>
+          <type>const ChangeMsg &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="150" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a2a82d0febb575ddd693184b639016426" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::service_discovery::Manager::Publish</definition>
+        <argsstring>(const ChangeMsg &amp;msg)</argsstring>
+        <name>Publish</name>
+        <param>
+          <type>const ChangeMsg &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="151" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a8c4903e0876ace79003d4e2994be43ab" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::service_discovery::Manager::OnRemoteChange</definition>
+        <argsstring>(const std::string &amp;msg_str)</argsstring>
+        <name>OnRemoteChange</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>msg_str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="152" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a26c75e76647b6753e1565c4129c518f7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::service_discovery::Manager::IsFromSameProcess</definition>
+        <argsstring>(const ChangeMsg &amp;msg)</argsstring>
+        <name>IsFromSameProcess</name>
+        <param>
+          <type>const ChangeMsg &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="153" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Base class for management of Topology elements. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager" kindref="compound">Manager</ref> can Join/Leave the Topology, and Listen the topology change </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="525">
+        <label>apollo::cyber::service_discovery::ChannelManager</label>
+        <link refid="classapollo_1_1cyber_1_1service__discovery_1_1_channel_manager"/>
+        <childnode refid="524" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="526">
+        <label>apollo::cyber::service_discovery::NodeManager</label>
+        <link refid="classapollo_1_1cyber_1_1service__discovery_1_1_node_manager"/>
+        <childnode refid="524" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="524">
+        <label>apollo::cyber::service_discovery::Manager</label>
+        <link refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager"/>
+      </node>
+      <node id="527">
+        <label>apollo::cyber::service_discovery::ServiceManager</label>
+        <link refid="classapollo_1_1cyber_1_1service__discovery_1_1_service_manager"/>
+        <childnode refid="524" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="530">
+        <label>eprosima::fastrtps::SubscriberListener</label>
+      </node>
+      <node id="532">
+        <label>string</label>
+      </node>
+      <node id="531">
+        <label>ChangeType</label>
+      </node>
+      <node id="529">
+        <label>apollo::cyber::service_discovery::SubscriberListener</label>
+        <link refid="classapollo_1_1cyber_1_1service__discovery_1_1_subscriber_listener"/>
+        <childnode refid="530" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="528">
+        <label>apollo::cyber::service_discovery::Manager</label>
+        <link refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager"/>
+        <childnode refid="529" relation="usage">
+          <edgelabel>listener_</edgelabel>
+        </childnode>
+        <childnode refid="531" relation="usage">
+          <edgelabel>change_type_</edgelabel>
+        </childnode>
+        <childnode refid="532" relation="usage">
+          <edgelabel>host_name_</edgelabel>
+          <edgelabel>channel_name_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" line="51" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/specific_manager/manager.h" bodystart="51" bodyend="168"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1abe0325759c5c14d16cfe2e2b1460b9ce" prot="public" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>AddChangeListener</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a901cf709cf2707faf0ced991bc2da591" prot="protected" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>allowed_role_</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a26dbcd395983f96ff00060648e16ff93" prot="protected" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>change_type_</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1ab43fa282f6aa1b3b1180a1e416b98b68" prot="public" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>ChangeConnection</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a1e08b690a5829fbabeb6d3aea5ab8320" prot="public" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>ChangeFunc</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a9730b844d88e23f65d5dcbcfca1a7d59" prot="public" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>ChangeSignal</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a2ff877c30b287c1a5c7efeedfde0afe0" prot="protected" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>channel_name_</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1acfa0224581a6722daf4861f34e4c11ef" prot="protected" virt="pure-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>Check</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a0aee2af4344c78f97ec72b885d98ab5d" prot="protected" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>Convert</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a722f92a9db32919ef83b9fbfcaaff85a" prot="protected" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>CreatePublisher</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a777040a412671e776f1f750933a629f3" prot="protected" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>CreateSubscriber</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a6e36e4095291597364ce4b37ee1c897b" prot="protected" virt="pure-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>Dispose</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a6e221053092ac40fd6810510a3eb10cc" prot="protected" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>host_name_</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a8a8bd0560f76ccb0be2a37fd62fbb2d8" prot="protected" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>is_discovery_started_</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a260bde7ce1d7749c3cb35e98b820d278" prot="protected" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>is_shutdown_</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a26c75e76647b6753e1565c4129c518f7" prot="protected" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>IsFromSameProcess</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a21da44e9c4c3fe10af7005c4d5eec894" prot="public" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>Join</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1abf37a1b3c4f23425fcdbd46ec0a3b632" prot="public" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>Leave</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a8dd4cf136c87d16027530af545cb0842" prot="protected" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>listener_</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1ab97c68b06403476a563dcc7389ed1168" prot="protected" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>lock_</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a8bc33aa7aefffcaa50ebf3ca12b4dd48" prot="public" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>Manager</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1ab3221bff519725654e6e232d6ad528e0" prot="protected" virt="virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>NeedPublish</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a086e96a029a1f05a0561d57e541c9526" prot="protected" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>Notify</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a8c4903e0876ace79003d4e2994be43ab" prot="protected" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>OnRemoteChange</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a95a679e0fc7904e6f1a8b2fdd139cc03" prot="public" virt="pure-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>OnTopoModuleLeave</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1ac251ffb4700b4b901451ad9f103ccdd8" prot="protected" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>process_id_</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a2a82d0febb575ddd693184b639016426" prot="protected" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>Publish</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1ab5caa9d2feb69e9746f6371a908d2661" prot="protected" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>publisher_</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a2e46899f22d9e001b10a7e49ef61bd0c" prot="public" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>RemoveChangeListener</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a7576b9ac293ff99af06e30a971df5dce" prot="public" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>RtpsParticipant</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a1b8464bc115c49a16a0d943c7cb5ef32" prot="public" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>RtpsPublisherAttr</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1ac16fc5e01d6d107cbb865d6d8127f622" prot="public" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>RtpsSubscriberAttr</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a4a4e6fc42da96478d0ff6ca5d8f21ad7" prot="public" virt="virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>Shutdown</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1af92680680a5e900f48f8a39d9a0524f9" prot="protected" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>signal_</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a0a007e927b14cb2584a9b97b1c8ec299" prot="public" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>StartDiscovery</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1ae06ca49d144ab1ca78cfd30f204e4caa" prot="public" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>StopDiscovery</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1a4324a7de5c025ab948d210916bbadcb2" prot="protected" virt="non-virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>subscriber_</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager_1ae683108196b8958825bb4142ab98a378" prot="public" virt="virtual"><scope>apollo::cyber::service_discovery::Manager</scope><name>~Manager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

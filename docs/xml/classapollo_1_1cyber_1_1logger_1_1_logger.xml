@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classapollo_1_1cyber_1_1logger_1_1_logger" kind="class" language="C++" prot="public">
+    <compoundname>apollo::cyber::logger::Logger</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Logger</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1logger_1_1_logger_1a80db29c400adaba27edbe8a1aec55f90" prot="private" static="no" mutable="no">
+        <type>google::base::Logger *const</type>
+        <definition>google::base::Logger* const apollo::cyber::logger::Logger::wrapped_</definition>
+        <argsstring></argsstring>
+        <name>wrapped_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/logger/logger.h" line="38" column="1" bodyfile="/home/dexin/code/Edith/cyber/logger/logger.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1logger_1_1_logger_1a127c753b55ea9542c8b88882fd4c0b2e" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex apollo::cyber::logger::Logger::mutex_</definition>
+        <argsstring></argsstring>
+        <name>mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/logger/logger.h" line="39" column="1" bodyfile="/home/dexin/code/Edith/cyber/logger/logger.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1logger_1_1_logger_1ae66fdd9a20171e47e9e2074aa0880a4d" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::logger::Logger::Logger</definition>
+        <argsstring>(google::base::Logger *wrapped)</argsstring>
+        <name>Logger</name>
+        <param>
+          <type>google::base::Logger *</type>
+          <declname>wrapped</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/logger/logger.h" line="30" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1logger_1_1_logger_1a7238886d763068ac235125dbea29189b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::logger::Logger::~Logger</definition>
+        <argsstring>()</argsstring>
+        <name>~Logger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/logger/logger.h" line="31" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1logger_1_1_logger_1a714b49458650913f6eadf078f93aabd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::logger::Logger::Write</definition>
+        <argsstring>(bool force_flush, time_t timestamp, const char *message, int message_len) override</argsstring>
+        <name>Write</name>
+        <param>
+          <type>bool</type>
+          <declname>force_flush</declname>
+        </param>
+        <param>
+          <type>time_t</type>
+          <declname>timestamp</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>message_len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/logger/logger.h" line="32" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1logger_1_1_logger_1a7cc4e4b73f4c974022e38982b8567ed3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::logger::Logger::Flush</definition>
+        <argsstring>() override</argsstring>
+        <name>Flush</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/logger/logger.h" line="34" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1logger_1_1_logger_1a3f4323607c447f93b01f84c9a4c22113" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t apollo::cyber::logger::Logger::LogSize</definition>
+        <argsstring>() override</argsstring>
+        <name>LogSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/logger/logger.h" line="35" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="521">
+        <label>Logger</label>
+      </node>
+      <node id="520">
+        <label>apollo::cyber::logger::Logger</label>
+        <link refid="classapollo_1_1cyber_1_1logger_1_1_logger"/>
+        <childnode refid="521" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="523">
+        <label>Logger</label>
+      </node>
+      <node id="522">
+        <label>apollo::cyber::logger::Logger</label>
+        <link refid="classapollo_1_1cyber_1_1logger_1_1_logger"/>
+        <childnode refid="523" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dexin/code/Edith/cyber/logger/logger.h" line="28" column="1" bodyfile="/home/dexin/code/Edith/cyber/logger/logger.h" bodystart="28" bodyend="40"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1_logger_1a7cc4e4b73f4c974022e38982b8567ed3" prot="public" virt="non-virtual"><scope>apollo::cyber::logger::Logger</scope><name>Flush</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1_logger_1ae66fdd9a20171e47e9e2074aa0880a4d" prot="public" virt="non-virtual"><scope>apollo::cyber::logger::Logger</scope><name>Logger</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1_logger_1a3f4323607c447f93b01f84c9a4c22113" prot="public" virt="non-virtual"><scope>apollo::cyber::logger::Logger</scope><name>LogSize</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1_logger_1a127c753b55ea9542c8b88882fd4c0b2e" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::Logger</scope><name>mutex_</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1_logger_1a80db29c400adaba27edbe8a1aec55f90" prot="private" virt="non-virtual"><scope>apollo::cyber::logger::Logger</scope><name>wrapped_</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1_logger_1a714b49458650913f6eadf078f93aabd1" prot="public" virt="non-virtual"><scope>apollo::cyber::logger::Logger</scope><name>Write</name></member>
+      <member refid="classapollo_1_1cyber_1_1logger_1_1_logger_1a7238886d763068ac235125dbea29189b" prot="public" virt="non-virtual"><scope>apollo::cyber::logger::Logger</scope><name>~Logger</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

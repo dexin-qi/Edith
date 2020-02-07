@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="dir_949985ab817005cdfe8e644c75caa65d" kind="dir">
+    <compoundname>/home/dexin/code/Edith/cyber/service_discovery/communication</compoundname>
+    <innerfile refid="participant__listener_8h">participant_listener.h</innerfile>
+    <innerfile refid="subscriber__listener_8h">subscriber_listener.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dexin/code/Edith/cyber/service_discovery/communication/"/>
+  </compounddef>
+</doxygen>

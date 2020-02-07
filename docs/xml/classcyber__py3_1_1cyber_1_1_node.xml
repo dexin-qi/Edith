@@ -1,0 +1,597 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classcyber__py3_1_1cyber_1_1_node" kind="class" language="Python" prot="public">
+    <compoundname>cyber_py3::cyber::Node</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">object</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classcyber__py3_1_1cyber_1_1_node_1acb3431978b8a4e3653f0c1902ce6e039" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cyber_py3.cyber.Node::node</definition>
+        <argsstring></argsstring>
+        <name>node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" line="163" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcyber__py3_1_1cyber_1_1_node_1a74ec84eb001514a3615586950575d782" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cyber_py3.cyber.Node::list_writer</definition>
+        <argsstring></argsstring>
+        <name>list_writer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" line="164" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcyber__py3_1_1cyber_1_1_node_1ad4d0d1c51171f627cde317ac504b2082" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cyber_py3.cyber.Node::list_reader</definition>
+        <argsstring></argsstring>
+        <name>list_reader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" line="165" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcyber__py3_1_1cyber_1_1_node_1afcb491fb6eafe3a0ea0651eedb633b5a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cyber_py3.cyber.Node::subs</definition>
+        <argsstring></argsstring>
+        <name>subs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" line="166" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcyber__py3_1_1cyber_1_1_node_1a23185b9e2366dd2d07bbef981cf5b5a6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cyber_py3.cyber.Node::pubs</definition>
+        <argsstring></argsstring>
+        <name>pubs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" line="167" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcyber__py3_1_1cyber_1_1_node_1aa011f9a255e8f7ded9b4fa3b1f8dabc0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cyber_py3.cyber.Node::list_client</definition>
+        <argsstring></argsstring>
+        <name>list_client</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" line="168" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcyber__py3_1_1cyber_1_1_node_1af4b6cb82ecec21fe2d6c196772000cb1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cyber_py3.cyber.Node::list_service</definition>
+        <argsstring></argsstring>
+        <name>list_service</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" line="169" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcyber__py3_1_1cyber_1_1_node_1aabf711fc78dbdf114131d199ea7e95b3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cyber_py3.cyber.Node::mutex</definition>
+        <argsstring></argsstring>
+        <name>mutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" line="170" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcyber__py3_1_1cyber_1_1_node_1a42c276a9cb7b6569c6abd32dbcbacfe7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cyber_py3.cyber.Node::callbacks</definition>
+        <argsstring></argsstring>
+        <name>callbacks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" line="171" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcyber__py3_1_1cyber_1_1_node_1aea0eed544422bb6dd5f633c106aa551e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cyber_py3.cyber.Node::services</definition>
+        <argsstring></argsstring>
+        <name>services</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" line="172" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcyber__py3_1_1cyber_1_1_node_1a4de17462979900ad85519bdebf7e831a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.cyber.Node.__init__</definition>
+        <argsstring>(self, name)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>name</type>
+          <defname>name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" line="162" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" bodystart="162" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py3_1_1cyber_1_1_node_1a8c17bed61623e76055bb9211e1afc478" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.cyber.Node.__del__</definition>
+        <argsstring>(self)</argsstring>
+        <name>__del__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" line="174" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" bodystart="174" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py3_1_1cyber_1_1_node_1ab4db4e470b123e95b2c0ebe494f21471" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.cyber.Node.register_message</definition>
+        <argsstring>(self, file_desc)</argsstring>
+        <name>register_message</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>file_desc</type>
+          <defname>file_desc</defname>
+        </param>
+        <briefdescription>
+<para>register proto message by proto descriptor file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file_desc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>object about datatype.DESCRIPTOR.file . <verbatim>register proto message desc file.
+</verbatim> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" line="190" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" bodystart="190" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py3_1_1cyber_1_1_node_1a357787239a71aae92a8be977420c5c32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.cyber.Node.create_writer</definition>
+        <argsstring>(self, name, data_type, qos_depth=1)</argsstring>
+        <name>create_writer</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>name</type>
+          <defname>name</defname>
+        </param>
+        <param>
+          <type>data_type</type>
+          <defname>data_type</defname>
+        </param>
+        <param>
+          <type>qos_depth</type>
+          <defname>qos_depth</defname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>create a channel writer for send message to another channel. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the channel name. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is message class for serialization </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>qos_depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is a queue size, which defines the size of the cache.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>return the writer object. <verbatim>create a channel writer for send message to another channel.
+</verbatim> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" line="210" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" bodystart="210" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py3_1_1cyber_1_1_node_1a86bd759fd47a08f6931fe9ac832ecf44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.cyber.Node.reader_callback</definition>
+        <argsstring>(self, name)</argsstring>
+        <name>reader_callback</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>name</type>
+          <defname>name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" line="221" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" bodystart="221" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py3_1_1cyber_1_1_node_1a97f6893f0e1e76dd0ecfdd08e8e84ba8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.cyber.Node.create_reader</definition>
+        <argsstring>(self, name, data_type, callback, args=None)</argsstring>
+        <name>create_reader</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>name</type>
+          <defname>name</defname>
+        </param>
+        <param>
+          <type>data_type</type>
+          <defname>data_type</defname>
+        </param>
+        <param>
+          <type>callback</type>
+          <defname>callback</defname>
+        </param>
+        <param>
+          <type>args</type>
+          <defname>args</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+<para>create a channel reader for receive message from another channel. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel name to read. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>message class for serialization </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>function to call (fn(data)) when data is received. If args is set, the function must accept the args as a second argument, i.e. fn(data, args) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>additional arguments to pass to the callback</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>return the writer object. <verbatim>create a channel reader for receive message from another channel.
+</verbatim> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" line="249" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" bodystart="249" bodyend="276"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py3_1_1cyber_1_1_node_1a24db8e836ba9d821328b1747db9d0624" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.cyber.Node.create_rawdata_reader</definition>
+        <argsstring>(self, name, callback, args=None)</argsstring>
+        <name>create_rawdata_reader</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>name</type>
+          <defname>name</defname>
+        </param>
+        <param>
+          <type>callback</type>
+          <defname>callback</defname>
+        </param>
+        <param>
+          <type>args</type>
+          <defname>args</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Create RawData reader:listener RawMessage
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" line="277" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" bodystart="277" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py3_1_1cyber_1_1_node_1a62b821046a0bb9c70830fd33e12bc984" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.cyber.Node.create_client</definition>
+        <argsstring>(self, name, request_data_type, response_data_type)</argsstring>
+        <name>create_client</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>name</type>
+          <defname>name</defname>
+        </param>
+        <param>
+          <type>request_data_type</type>
+          <defname>request_data_type</defname>
+        </param>
+        <param>
+          <type>response_data_type</type>
+          <defname>response_data_type</defname>
+        </param>
+        <briefdescription>
+<para>create client for the c/s. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the service name. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>request_data_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request message type. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>response_data_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the response message type.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the client object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" line="291" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" bodystart="291" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py3_1_1cyber_1_1_node_1a265bcb9de4054d209fa957f95658834c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.cyber.Node.service_callback</definition>
+        <argsstring>(self, name)</argsstring>
+        <name>service_callback</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>name</type>
+          <defname>name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" line="298" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" bodystart="298" bodyend="311"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py3_1_1cyber_1_1_node_1a20ba9beb1a508f5cb3b5485cdb8f45d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.cyber.Node.create_service</definition>
+        <argsstring>(self, name, req_data_type, res_data_type, callback, args=None)</argsstring>
+        <name>create_service</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>name</type>
+          <defname>name</defname>
+        </param>
+        <param>
+          <type>req_data_type</type>
+          <defname>req_data_type</defname>
+        </param>
+        <param>
+          <type>res_data_type</type>
+          <defname>res_data_type</defname>
+        </param>
+        <param>
+          <type>callback</type>
+          <defname>callback</defname>
+        </param>
+        <param>
+          <type>args</type>
+          <defname>args</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+<para>create client for the c/s. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the service name. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>req_data_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the request message type. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>res_data_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the response message type. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>function to call (fn(data)) when data is received. If args is set, the function must accept the args as a second argument, i.e. fn(data, args) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>additional arguments to pass to the callback.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>return the service object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" line="324" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" bodystart="325" bodyend="343"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py3_1_1cyber_1_1_node_1a3c45b2cce67c168b7c06a8c84bec0c3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.cyber.Node.spin</definition>
+        <argsstring>(self)</argsstring>
+        <name>spin</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>spin for every 0.002s.
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" line="344" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" bodystart="344" bodyend="351"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Class for cyber Node wrapper.
+</verbatim> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="547">
+        <label>object</label>
+      </node>
+      <node id="546">
+        <label>cyber_py3.cyber.Node</label>
+        <link refid="classcyber__py3_1_1cyber_1_1_node"/>
+        <childnode refid="547" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="549">
+        <label>object</label>
+      </node>
+      <node id="548">
+        <label>cyber_py3.cyber.Node</label>
+        <link refid="classcyber__py3_1_1cyber_1_1_node"/>
+        <childnode refid="549" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" line="156" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" bodystart="156" bodyend="352"/>
+    <listofallmembers>
+      <member refid="classcyber__py3_1_1cyber_1_1_node_1a8c17bed61623e76055bb9211e1afc478" prot="public" virt="non-virtual"><scope>cyber_py3::cyber::Node</scope><name>__del__</name></member>
+      <member refid="classcyber__py3_1_1cyber_1_1_node_1a4de17462979900ad85519bdebf7e831a" prot="public" virt="non-virtual"><scope>cyber_py3::cyber::Node</scope><name>__init__</name></member>
+      <member refid="classcyber__py3_1_1cyber_1_1_node_1a42c276a9cb7b6569c6abd32dbcbacfe7" prot="public" virt="non-virtual"><scope>cyber_py3::cyber::Node</scope><name>callbacks</name></member>
+      <member refid="classcyber__py3_1_1cyber_1_1_node_1a62b821046a0bb9c70830fd33e12bc984" prot="public" virt="non-virtual"><scope>cyber_py3::cyber::Node</scope><name>create_client</name></member>
+      <member refid="classcyber__py3_1_1cyber_1_1_node_1a24db8e836ba9d821328b1747db9d0624" prot="public" virt="non-virtual"><scope>cyber_py3::cyber::Node</scope><name>create_rawdata_reader</name></member>
+      <member refid="classcyber__py3_1_1cyber_1_1_node_1a97f6893f0e1e76dd0ecfdd08e8e84ba8" prot="public" virt="non-virtual"><scope>cyber_py3::cyber::Node</scope><name>create_reader</name></member>
+      <member refid="classcyber__py3_1_1cyber_1_1_node_1a20ba9beb1a508f5cb3b5485cdb8f45d9" prot="public" virt="non-virtual"><scope>cyber_py3::cyber::Node</scope><name>create_service</name></member>
+      <member refid="classcyber__py3_1_1cyber_1_1_node_1a357787239a71aae92a8be977420c5c32" prot="public" virt="non-virtual"><scope>cyber_py3::cyber::Node</scope><name>create_writer</name></member>
+      <member refid="classcyber__py3_1_1cyber_1_1_node_1aa011f9a255e8f7ded9b4fa3b1f8dabc0" prot="public" virt="non-virtual"><scope>cyber_py3::cyber::Node</scope><name>list_client</name></member>
+      <member refid="classcyber__py3_1_1cyber_1_1_node_1ad4d0d1c51171f627cde317ac504b2082" prot="public" virt="non-virtual"><scope>cyber_py3::cyber::Node</scope><name>list_reader</name></member>
+      <member refid="classcyber__py3_1_1cyber_1_1_node_1af4b6cb82ecec21fe2d6c196772000cb1" prot="public" virt="non-virtual"><scope>cyber_py3::cyber::Node</scope><name>list_service</name></member>
+      <member refid="classcyber__py3_1_1cyber_1_1_node_1a74ec84eb001514a3615586950575d782" prot="public" virt="non-virtual"><scope>cyber_py3::cyber::Node</scope><name>list_writer</name></member>
+      <member refid="classcyber__py3_1_1cyber_1_1_node_1aabf711fc78dbdf114131d199ea7e95b3" prot="public" virt="non-virtual"><scope>cyber_py3::cyber::Node</scope><name>mutex</name></member>
+      <member refid="classcyber__py3_1_1cyber_1_1_node_1acb3431978b8a4e3653f0c1902ce6e039" prot="public" virt="non-virtual"><scope>cyber_py3::cyber::Node</scope><name>node</name></member>
+      <member refid="classcyber__py3_1_1cyber_1_1_node_1a23185b9e2366dd2d07bbef981cf5b5a6" prot="public" virt="non-virtual"><scope>cyber_py3::cyber::Node</scope><name>pubs</name></member>
+      <member refid="classcyber__py3_1_1cyber_1_1_node_1a86bd759fd47a08f6931fe9ac832ecf44" prot="public" virt="non-virtual"><scope>cyber_py3::cyber::Node</scope><name>reader_callback</name></member>
+      <member refid="classcyber__py3_1_1cyber_1_1_node_1ab4db4e470b123e95b2c0ebe494f21471" prot="public" virt="non-virtual"><scope>cyber_py3::cyber::Node</scope><name>register_message</name></member>
+      <member refid="classcyber__py3_1_1cyber_1_1_node_1a265bcb9de4054d209fa957f95658834c" prot="public" virt="non-virtual"><scope>cyber_py3::cyber::Node</scope><name>service_callback</name></member>
+      <member refid="classcyber__py3_1_1cyber_1_1_node_1aea0eed544422bb6dd5f633c106aa551e" prot="public" virt="non-virtual"><scope>cyber_py3::cyber::Node</scope><name>services</name></member>
+      <member refid="classcyber__py3_1_1cyber_1_1_node_1a3c45b2cce67c168b7c06a8c84bec0c3d" prot="public" virt="non-virtual"><scope>cyber_py3::cyber::Node</scope><name>spin</name></member>
+      <member refid="classcyber__py3_1_1cyber_1_1_node_1afcb491fb6eafe3a0ea0651eedb633b5a" prot="public" virt="non-virtual"><scope>cyber_py3::cyber::Node</scope><name>subs</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

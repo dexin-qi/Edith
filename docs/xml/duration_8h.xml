@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="duration_8h" kind="file" language="C++">
+    <compoundname>duration.h</compoundname>
+    <includes local="no">climits</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">stdexcept</includes>
+    <includedby refid="rate_8h" local="yes">/home/dexin/code/Edith/cyber/time/rate.h</includedby>
+    <includedby refid="time_8h" local="yes">/home/dexin/code/Edith/cyber/time/time.h</includedby>
+    <incdepgraph>
+      <node id="1817">
+        <label>/home/dexin/code/Edith/cyber/time/duration.h</label>
+        <link refid="duration.h"/>
+        <childnode refid="1818" relation="include">
+        </childnode>
+        <childnode refid="1819" relation="include">
+        </childnode>
+        <childnode refid="1820" relation="include">
+        </childnode>
+        <childnode refid="1821" relation="include">
+        </childnode>
+        <childnode refid="1822" relation="include">
+        </childnode>
+      </node>
+      <node id="1820">
+        <label>cstdint</label>
+      </node>
+      <node id="1819">
+        <label>cmath</label>
+      </node>
+      <node id="1822">
+        <label>stdexcept</label>
+      </node>
+      <node id="1821">
+        <label>iostream</label>
+      </node>
+      <node id="1818">
+        <label>climits</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1836">
+        <label>/home/dexin/code/Edith/cyber/node/node_service_impl.h</label>
+        <link refid="node__service__impl_8h_source"/>
+        <childnode refid="1831" relation="include">
+        </childnode>
+      </node>
+      <node id="1831">
+        <label>/home/dexin/code/Edith/cyber/node/node.h</label>
+        <link refid="node_8h_source"/>
+        <childnode refid="1827" relation="include">
+        </childnode>
+        <childnode refid="1832" relation="include">
+        </childnode>
+      </node>
+      <node id="1823">
+        <label>/home/dexin/code/Edith/cyber/time/duration.h</label>
+        <link refid="duration.h"/>
+        <childnode refid="1824" relation="include">
+        </childnode>
+        <childnode refid="1828" relation="include">
+        </childnode>
+      </node>
+      <node id="1827">
+        <label>/home/dexin/code/Edith/cyber/cyber.h</label>
+        <link refid="cyber_8h_source"/>
+      </node>
+      <node id="1835">
+        <label>/home/dexin/code/Edith/cyber/service/client.h</label>
+        <link refid="client_8h_source"/>
+        <childnode refid="1836" relation="include">
+        </childnode>
+        <childnode refid="1837" relation="include">
+        </childnode>
+      </node>
+      <node id="1825">
+        <label>/home/dexin/code/Edith/cyber/timer/timing_wheel.h</label>
+        <link refid="timing__wheel_8h_source"/>
+        <childnode refid="1826" relation="include">
+        </childnode>
+      </node>
+      <node id="1832">
+        <label>/home/dexin/code/Edith/cyber/component/component_base.h</label>
+        <link refid="component__base_8h_source"/>
+        <childnode refid="1833" relation="include">
+        </childnode>
+        <childnode refid="1834" relation="include">
+        </childnode>
+      </node>
+      <node id="1830">
+        <label>/home/dexin/code/Edith/cyber/node/node_channel_impl.h</label>
+        <link refid="node__channel__impl_8h_source"/>
+        <childnode refid="1831" relation="include">
+        </childnode>
+        <childnode refid="1835" relation="include">
+        </childnode>
+        <childnode refid="1838" relation="include">
+        </childnode>
+      </node>
+      <node id="1841">
+        <label>/home/dexin/code/Edith/cyber/record/record_reader.h</label>
+        <link refid="record__reader_8h_source"/>
+        <childnode refid="1842" relation="include">
+        </childnode>
+      </node>
+      <node id="1839">
+        <label>/home/dexin/code/Edith/cyber/parameter/parameter_server.h</label>
+        <link refid="parameter__server_8h_source"/>
+      </node>
+      <node id="1842">
+        <label>/home/dexin/code/Edith/cyber/record/record_viewer.h</label>
+        <link refid="record__viewer_8h_source"/>
+      </node>
+      <node id="1826">
+        <label>/home/dexin/code/Edith/cyber/timer/timer.h</label>
+        <link refid="timer_8h_source"/>
+        <childnode refid="1827" relation="include">
+        </childnode>
+      </node>
+      <node id="1828">
+        <label>/home/dexin/code/Edith/cyber/time/time.h</label>
+        <link refid="time_8h_source"/>
+        <childnode refid="1827" relation="include">
+        </childnode>
+        <childnode refid="1829" relation="include">
+        </childnode>
+        <childnode refid="1840" relation="include">
+        </childnode>
+        <childnode refid="1843" relation="include">
+        </childnode>
+        <childnode refid="1824" relation="include">
+        </childnode>
+      </node>
+      <node id="1834">
+        <label>/home/dexin/code/Edith/cyber/component/timer_component.h</label>
+        <link refid="timer__component_8h_source"/>
+      </node>
+      <node id="1844">
+        <label>/home/dexin/code/Edith/cyber/record/record_writer.h</label>
+        <link refid="record__writer_8h_source"/>
+      </node>
+      <node id="1837">
+        <label>/home/dexin/code/Edith/cyber/parameter/parameter_client.h</label>
+        <link refid="parameter__client_8h_source"/>
+      </node>
+      <node id="1838">
+        <label>/home/dexin/code/Edith/cyber/service/service.h</label>
+        <link refid="service_8h_source"/>
+        <childnode refid="1836" relation="include">
+        </childnode>
+        <childnode refid="1839" relation="include">
+        </childnode>
+      </node>
+      <node id="1824">
+        <label>/home/dexin/code/Edith/cyber/time/rate.h</label>
+        <link refid="rate_8h_source"/>
+        <childnode refid="1825" relation="include">
+        </childnode>
+      </node>
+      <node id="1833">
+        <label>/home/dexin/code/Edith/cyber/component/component.h</label>
+        <link refid="component_8h_source"/>
+        <childnode refid="1827" relation="include">
+        </childnode>
+      </node>
+      <node id="1829">
+        <label>/home/dexin/code/Edith/cyber/node/reader.h</label>
+        <link refid="reader_8h_source"/>
+        <childnode refid="1830" relation="include">
+        </childnode>
+      </node>
+      <node id="1840">
+        <label>/home/dexin/code/Edith/cyber/record/file/record_file_reader.h</label>
+        <link refid="record__file__reader_8h_source"/>
+        <childnode refid="1841" relation="include">
+        </childnode>
+      </node>
+      <node id="1843">
+        <label>/home/dexin/code/Edith/cyber/record/file/record_file_writer.h</label>
+        <link refid="record__file__writer_8h_source"/>
+        <childnode refid="1844" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classapollo_1_1cyber_1_1_duration" prot="public">apollo::cyber::Duration</innerclass>
+    <innernamespace refid="namespaceapollo">apollo</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber">apollo::cyber</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2018<sp/>The<sp/>Apollo<sp/>Authors.<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CYBER_TIME_DURATION_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CYBER_TIME_DURATION_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;climits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceapollo" kindref="compound">apollo</ref><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacecyber" kindref="compound">cyber</ref><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classapollo_1_1cyber_1_1_duration" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref>(int64_t<sp/>nanoseconds);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nanoseconds);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>seconds);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref>(uint32_t<sp/>seconds,<sp/>uint32_t<sp/>nanoseconds);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref><sp/>&amp;operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>~<ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ToSecond()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>int64_t<sp/>ToNanosecond()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>IsZero()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Sleep()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref><sp/>operator+(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref><sp/>&amp;rhs)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref><sp/>operator-(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref><sp/>&amp;rhs)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref><sp/>operator-()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref><sp/>operator*(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>scale)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref><sp/>&amp;operator+=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref><sp/>&amp;rhs);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref><sp/>&amp;operator-=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref><sp/>&amp;rhs);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref><sp/>&amp;operator*=(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>scale);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>operator==(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref><sp/>&amp;rhs)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>operator!=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref><sp/>&amp;rhs)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>operator&gt;(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref><sp/>&amp;rhs)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>operator&lt;(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref><sp/>&amp;rhs)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>operator&gt;=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref><sp/>&amp;rhs)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>operator&lt;=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref><sp/>&amp;rhs)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>int64_t<sp/>nanoseconds_<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">std::ostream<sp/>&amp;operator&lt;&lt;(std::ostream<sp/>&amp;os,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref><sp/>&amp;rhs);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>cyber</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>apollo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>CYBER_TIME_DURATION_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/dexin/code/Edith/cyber/time/duration.h"/>
+  </compounddef>
+</doxygen>

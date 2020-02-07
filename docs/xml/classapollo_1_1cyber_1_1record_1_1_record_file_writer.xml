@@ -1,0 +1,371 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classapollo_1_1cyber_1_1record_1_1_record_file_writer" kind="class" language="C++" prot="public">
+    <compoundname>apollo::cyber::record::RecordFileWriter</compoundname>
+    <basecompoundref refid="classapollo_1_1cyber_1_1record_1_1_record_file_base" prot="public" virt="non-virtual">apollo::cyber::record::RecordFileBase</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1a3594172acf9d83c7276cd387c4f62b7f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::RecordFileWriter::is_writing_</definition>
+        <argsstring></argsstring>
+        <name>is_writing_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" line="95" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1a70eb9d380cca0c9e9e277c9903d338fc" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="structapollo_1_1cyber_1_1record_1_1_chunk" kindref="compound">Chunk</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;Chunk&gt; apollo::cyber::record::RecordFileWriter::chunk_active_</definition>
+        <argsstring></argsstring>
+        <name>chunk_active_</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" line="96" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1a4e115eea29809bec0a280350e3193969" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="structapollo_1_1cyber_1_1record_1_1_chunk" kindref="compound">Chunk</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;Chunk&gt; apollo::cyber::record::RecordFileWriter::chunk_flush_</definition>
+        <argsstring></argsstring>
+        <name>chunk_flush_</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" line="97" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1aa8f0f4f7fe1d8da5b01a5079a16452a9" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; std::thread &gt;</type>
+        <definition>std::shared_ptr&lt;std::thread&gt; apollo::cyber::record::RecordFileWriter::flush_thread_</definition>
+        <argsstring></argsstring>
+        <name>flush_thread_</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" line="98" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1a6e1e0d90c3ce75d4c19a74bec5e82ef5" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex apollo::cyber::record::RecordFileWriter::flush_mutex_</definition>
+        <argsstring></argsstring>
+        <name>flush_mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" line="99" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1a60b937f5a912b7f1b6dd16b7ee67a249" prot="private" static="no" mutable="no">
+        <type>std::condition_variable</type>
+        <definition>std::condition_variable apollo::cyber::record::RecordFileWriter::flush_cv_</definition>
+        <argsstring></argsstring>
+        <name>flush_cv_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" line="100" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1a88068ed84f3d00bfa066b921ad48948c" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, uint64_t &gt;</type>
+        <definition>std::unordered_map&lt;std::string, uint64_t&gt; apollo::cyber::record::RecordFileWriter::channel_message_number_map_</definition>
+        <argsstring></argsstring>
+        <name>channel_message_number_map_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" line="101" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1ad6c9371e27b506c1e916b9122f2fd3f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::record::RecordFileWriter::RecordFileWriter</definition>
+        <argsstring>()</argsstring>
+        <name>RecordFileWriter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" line="79" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1a823790f4cd9cad56cc12670209137179" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual apollo::cyber::record::RecordFileWriter::~RecordFileWriter</definition>
+        <argsstring>()</argsstring>
+        <name>~RecordFileWriter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" line="80" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1a1ad9eb3d567f7864612c452a75b0c967" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::RecordFileWriter::Open</definition>
+        <argsstring>(const std::string &amp;path) override</argsstring>
+        <name>Open</name>
+        <reimplements refid="classapollo_1_1cyber_1_1record_1_1_record_file_base_1a9128d7ad36b3331d21e0eae475632892">Open</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" line="81" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1aa0eadfe8e1f3f91c17babefb0d5e4c7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::record::RecordFileWriter::Close</definition>
+        <argsstring>() override</argsstring>
+        <name>Close</name>
+        <reimplements refid="classapollo_1_1cyber_1_1record_1_1_record_file_base_1a6792f98d27bf7e3d4557156122bd43ab">Close</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" line="82" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1ab0c1e0441d3fb277a5e8f2c31106b25b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::RecordFileWriter::WriteHeader</definition>
+        <argsstring>(const proto::Header &amp;header)</argsstring>
+        <name>WriteHeader</name>
+        <param>
+          <type>const proto::Header &amp;</type>
+          <declname>header</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" line="83" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1ab999aeab3ded10bb4aa0fc493cb0d29a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::RecordFileWriter::WriteChannel</definition>
+        <argsstring>(const proto::Channel &amp;channel)</argsstring>
+        <name>WriteChannel</name>
+        <param>
+          <type>const proto::Channel &amp;</type>
+          <declname>channel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" line="84" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1aeb70ec3520dc010c1f94e0b513bdc6e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::RecordFileWriter::WriteMessage</definition>
+        <argsstring>(const proto::SingleMessage &amp;message)</argsstring>
+        <name>WriteMessage</name>
+        <param>
+          <type>const proto::SingleMessage &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" line="85" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1aa396513459032609d20eb98dd5c0d758" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::record::RecordFileWriter::GetMessageNumber</definition>
+        <argsstring>(const std::string &amp;channel_name) const </argsstring>
+        <name>GetMessageNumber</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>channel_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" line="86" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1a43838e2e046ad5fa1ac801e0906da6bd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::RecordFileWriter::WriteChunk</definition>
+        <argsstring>(const proto::ChunkHeader &amp;chunk_header, const proto::ChunkBody &amp;chunk_body)</argsstring>
+        <name>WriteChunk</name>
+        <param>
+          <type>const proto::ChunkHeader &amp;</type>
+          <declname>chunk_header</declname>
+        </param>
+        <param>
+          <type>const proto::ChunkBody &amp;</type>
+          <declname>chunk_body</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" line="89" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1a1d5ab4981b71ae0ee82edfed00ac3aab" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::RecordFileWriter::WriteSection</definition>
+        <argsstring>(const T &amp;message)</argsstring>
+        <name>WriteSection</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>zero out whole struct even if padded </para>        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" line="92" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" bodystart="105" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1ad219175016997c7bc038117723460341" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::RecordFileWriter::WriteIndex</definition>
+        <argsstring>()</argsstring>
+        <name>WriteIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" line="93" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1add82a05fc9a0d63e6ff91120bdfe3947" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::record::RecordFileWriter::Flush</definition>
+        <argsstring>()</argsstring>
+        <name>Flush</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" line="94" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="651">
+        <label>apollo::cyber::record::RecordFileWriter</label>
+        <link refid="classapollo_1_1cyber_1_1record_1_1_record_file_writer"/>
+        <childnode refid="652" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="652">
+        <label>apollo::cyber::record::RecordFileBase</label>
+        <link refid="classapollo_1_1cyber_1_1record_1_1_record_file_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="655">
+        <label>string</label>
+      </node>
+      <node id="653">
+        <label>apollo::cyber::record::RecordFileWriter</label>
+        <link refid="classapollo_1_1cyber_1_1record_1_1_record_file_writer"/>
+        <childnode refid="654" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="654">
+        <label>apollo::cyber::record::RecordFileBase</label>
+        <link refid="classapollo_1_1cyber_1_1record_1_1_record_file_base"/>
+        <childnode refid="655" relation="usage">
+          <edgelabel>path_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" line="77" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" bodystart="77" bodyend="102"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1a88068ed84f3d00bfa066b921ad48948c" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordFileWriter</scope><name>channel_message_number_map_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1a70eb9d380cca0c9e9e277c9903d338fc" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordFileWriter</scope><name>chunk_active_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1a4e115eea29809bec0a280350e3193969" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordFileWriter</scope><name>chunk_flush_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1aa0eadfe8e1f3f91c17babefb0d5e4c7e" prot="public" virt="virtual"><scope>apollo::cyber::record::RecordFileWriter</scope><name>Close</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_base_1ae9ab782e3a023c522ccb2de275622559" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordFileWriter</scope><name>CurrentPosition</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_base_1aaa370e96b2b0fde778dc514652a0a912" prot="protected" virt="non-virtual"><scope>apollo::cyber::record::RecordFileWriter</scope><name>fd_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1add82a05fc9a0d63e6ff91120bdfe3947" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordFileWriter</scope><name>Flush</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1a60b937f5a912b7f1b6dd16b7ee67a249" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordFileWriter</scope><name>flush_cv_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1a6e1e0d90c3ce75d4c19a74bec5e82ef5" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordFileWriter</scope><name>flush_mutex_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1aa8f0f4f7fe1d8da5b01a5079a16452a9" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordFileWriter</scope><name>flush_thread_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_base_1a991448d6e22680b7927442e5097da803" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordFileWriter</scope><name>GetHeader</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_base_1a2b9da49b15ba7f4ef1b0717edb8d75a1" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordFileWriter</scope><name>GetIndex</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1aa396513459032609d20eb98dd5c0d758" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordFileWriter</scope><name>GetMessageNumber</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_base_1a206265263d6a60524e4cb3d0379a24b4" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordFileWriter</scope><name>GetPath</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_base_1aa79e57d487356167d10a8147d8b2edd9" prot="protected" virt="non-virtual"><scope>apollo::cyber::record::RecordFileWriter</scope><name>header_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_base_1a5e276abeb8ef5db750f197d422e0cc1f" prot="protected" virt="non-virtual"><scope>apollo::cyber::record::RecordFileWriter</scope><name>index_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1a3594172acf9d83c7276cd387c4f62b7f" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordFileWriter</scope><name>is_writing_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_base_1a3dc8cd39b2ed0e2f28490f80923f4582" prot="protected" virt="non-virtual"><scope>apollo::cyber::record::RecordFileWriter</scope><name>mutex_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1a1ad9eb3d567f7864612c452a75b0c967" prot="public" virt="virtual"><scope>apollo::cyber::record::RecordFileWriter</scope><name>Open</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_base_1a2c1132e34b786a471501e3a43f7be672" prot="protected" virt="non-virtual"><scope>apollo::cyber::record::RecordFileWriter</scope><name>path_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_base_1afb0962279fdbc35b71f7df8a1d2b1321" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordFileWriter</scope><name>RecordFileBase</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1ad6c9371e27b506c1e916b9122f2fd3f8" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordFileWriter</scope><name>RecordFileWriter</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_base_1a5349dcfbdbc71a784e7eef98504c04ea" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordFileWriter</scope><name>SetPosition</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1ab999aeab3ded10bb4aa0fc493cb0d29a" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordFileWriter</scope><name>WriteChannel</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1a43838e2e046ad5fa1ac801e0906da6bd" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordFileWriter</scope><name>WriteChunk</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1ab0c1e0441d3fb277a5e8f2c31106b25b" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordFileWriter</scope><name>WriteHeader</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1ad219175016997c7bc038117723460341" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordFileWriter</scope><name>WriteIndex</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1aeb70ec3520dc010c1f94e0b513bdc6e4" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordFileWriter</scope><name>WriteMessage</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1a1d5ab4981b71ae0ee82edfed00ac3aab" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordFileWriter</scope><name>WriteSection</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_base_1a7a9ce97d8bae01fa9cb3ae8632e34f84" prot="public" virt="virtual"><scope>apollo::cyber::record::RecordFileWriter</scope><name>~RecordFileBase</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1a823790f4cd9cad56cc12670209137179" prot="public" virt="virtual"><scope>apollo::cyber::record::RecordFileWriter</scope><name>~RecordFileWriter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

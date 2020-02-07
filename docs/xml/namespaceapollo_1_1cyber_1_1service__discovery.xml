@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="namespaceapollo_1_1cyber_1_1service__discovery" kind="namespace" language="C++">
+    <compoundname>apollo::cyber::service_discovery</compoundname>
+    <innerclass refid="classapollo_1_1cyber_1_1service__discovery_1_1_channel_manager" prot="public">apollo::cyber::service_discovery::ChannelManager</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1service__discovery_1_1_edge" prot="public">apollo::cyber::service_discovery::Edge</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1service__discovery_1_1_graph" prot="public">apollo::cyber::service_discovery::Graph</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1service__discovery_1_1_manager" prot="public">apollo::cyber::service_discovery::Manager</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse" prot="public">apollo::cyber::service_discovery::MultiValueWarehouse</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1service__discovery_1_1_node_manager" prot="public">apollo::cyber::service_discovery::NodeManager</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1service__discovery_1_1_participant_listener" prot="public">apollo::cyber::service_discovery::ParticipantListener</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1service__discovery_1_1_role_base" prot="public">apollo::cyber::service_discovery::RoleBase</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1service__discovery_1_1_role_server" prot="public">apollo::cyber::service_discovery::RoleServer</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1service__discovery_1_1_role_writer" prot="public">apollo::cyber::service_discovery::RoleWriter</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1service__discovery_1_1_service_manager" prot="public">apollo::cyber::service_discovery::ServiceManager</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1service__discovery_1_1_single_value_warehouse" prot="public">apollo::cyber::service_discovery::SingleValueWarehouse</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1service__discovery_1_1_subscriber_listener" prot="public">apollo::cyber::service_discovery::SubscriberListener</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager" prot="public">apollo::cyber::service_discovery::TopologyManager</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1service__discovery_1_1_vertice" prot="public">apollo::cyber::service_discovery::Vertice</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1service__discovery_1_1_warehouse_base" prot="public">apollo::cyber::service_discovery::WarehouseBase</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="graph_8h_1a463f9fa98e31287620adc568e1299c79" prot="public" static="no">
+        <name>FlowDirection</name>
+        <enumvalue id="graph_8h_1a463f9fa98e31287620adc568e1299c79a6fc110ded3787fc4167d94abfd3b1fcd" prot="public">
+          <name>UNREACHABLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="graph_8h_1a463f9fa98e31287620adc568e1299c79ad6c10069de9e16662456d5c56507ee0c" prot="public">
+          <name>UPSTREAM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="graph_8h_1a463f9fa98e31287620adc568e1299c79ac20fc42eb935133731caf620e070cffe" prot="public">
+          <name>DOWNSTREAM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>describe the flow direction between nodes As the DAG below A-<mdash/>&gt;B--<mdash/>&gt;C&lt;--<mdash/>D GetDirectionOf(A, B) is UPSTREAM GetDirectionOf(C, A) is DOWNSTREAM GetDirectionOf(D, A) is UNREACHABLE GetDirectionOf(A, D) is UNREACHABLE </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/container/graph.h" line="39" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/container/graph.h" bodystart="39" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="role_8h_1a47c65bbb4b41d9ae41bfbd33271df525" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_role_base" kindref="compound">RoleBase</ref> &gt;</type>
+        <definition>using apollo::cyber::service_discovery::RolePtr = typedef std::shared_ptr&lt;RoleBase&gt;</definition>
+        <argsstring></argsstring>
+        <name>RolePtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/role/role.h" line="31" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/role/role.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="role_8h_1a215a77a4c98a99914680e6234f6a3806" prot="public" static="no">
+        <type><ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_role_base" kindref="compound">RoleBase</ref></type>
+        <definition>using apollo::cyber::service_discovery::RoleNode = typedef RoleBase</definition>
+        <argsstring></argsstring>
+        <name>RoleNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/role/role.h" line="32" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/role/role.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="role_8h_1ab1151fabf4ca79506ed917781c500b5e" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_role_base" kindref="compound">RoleNode</ref> &gt;</type>
+        <definition>using apollo::cyber::service_discovery::RoleNodePtr = typedef std::shared_ptr&lt;RoleNode&gt;</definition>
+        <argsstring></argsstring>
+        <name>RoleNodePtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/role/role.h" line="33" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/role/role.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="role_8h_1ad246cadc25c6cbfc2320ab309b5c60f4" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_role_writer" kindref="compound">RoleWriter</ref> &gt;</type>
+        <definition>using apollo::cyber::service_discovery::RoleWriterPtr = typedef std::shared_ptr&lt;RoleWriter&gt;</definition>
+        <argsstring></argsstring>
+        <name>RoleWriterPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/role/role.h" line="36" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/role/role.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="role_8h_1a5d6b4379a39ee25ab414b1b2a8998e28" prot="public" static="no">
+        <type><ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_role_writer" kindref="compound">RoleWriter</ref></type>
+        <definition>using apollo::cyber::service_discovery::RoleReader = typedef RoleWriter</definition>
+        <argsstring></argsstring>
+        <name>RoleReader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/role/role.h" line="37" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/role/role.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="role_8h_1a59f1f32faed73356751837c33e6a34fa" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_role_writer" kindref="compound">RoleReader</ref> &gt;</type>
+        <definition>using apollo::cyber::service_discovery::RoleReaderPtr = typedef std::shared_ptr&lt;RoleReader&gt;</definition>
+        <argsstring></argsstring>
+        <name>RoleReaderPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/role/role.h" line="38" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/role/role.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="role_8h_1a247914445b59846191483e1e1f2005a6" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_role_server" kindref="compound">RoleServer</ref> &gt;</type>
+        <definition>using apollo::cyber::service_discovery::RoleServerPtr = typedef std::shared_ptr&lt;RoleServer&gt;</definition>
+        <argsstring></argsstring>
+        <name>RoleServerPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/role/role.h" line="41" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/role/role.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="role_8h_1a2578fbdec532dea479a355ace565a5af" prot="public" static="no">
+        <type><ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_role_server" kindref="compound">RoleServer</ref></type>
+        <definition>using apollo::cyber::service_discovery::RoleClient = typedef RoleServer</definition>
+        <argsstring></argsstring>
+        <name>RoleClient</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/role/role.h" line="42" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/role/role.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="role_8h_1a9321a2a191c847f9b5e7704201a18ca2" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_role_server" kindref="compound">RoleClient</ref> &gt;</type>
+        <definition>using apollo::cyber::service_discovery::RoleClientPtr = typedef std::shared_ptr&lt;RoleClient&gt;</definition>
+        <argsstring></argsstring>
+        <name>RoleClientPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/role/role.h" line="43" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/role/role.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="topology__manager_8h_1a1e5adf7bd56b68299dae8d202f20bc81" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_node_manager" kindref="compound">NodeManager</ref> &gt;</type>
+        <definition>using apollo::cyber::service_discovery::NodeManagerPtr = typedef std::shared_ptr&lt;NodeManager&gt;</definition>
+        <argsstring></argsstring>
+        <name>NodeManagerPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="39" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="topology__manager_8h_1a12c2dfc39551ef96e3110dae235ab609" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_channel_manager" kindref="compound">ChannelManager</ref> &gt;</type>
+        <definition>using apollo::cyber::service_discovery::ChannelManagerPtr = typedef std::shared_ptr&lt;ChannelManager&gt;</definition>
+        <argsstring></argsstring>
+        <name>ChannelManagerPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="42" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="topology__manager_8h_1a257bddadfae4c3b6efbc25c6d63c28f9" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_service_manager" kindref="compound">ServiceManager</ref> &gt;</type>
+        <definition>using apollo::cyber::service_discovery::ServiceManagerPtr = typedef std::shared_ptr&lt;ServiceManager&gt;</definition>
+        <argsstring></argsstring>
+        <name>ServiceManagerPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="45" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dexin/code/Edith/cyber/service_discovery/communication/participant_listener.h" line="29" column="1"/>
+  </compounddef>
+</doxygen>

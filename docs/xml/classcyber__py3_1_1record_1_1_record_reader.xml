@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classcyber__py3_1_1record_1_1_record_reader" kind="class" language="Python" prot="public">
+    <compoundname>cyber_py3::record::RecordReader</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">object</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classcyber__py3_1_1record_1_1_record_reader_1a370f3f0c0936d75d381571ce666ed815" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cyber_py3.record.RecordReader::record_reader</definition>
+        <argsstring></argsstring>
+        <name>record_reader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/record.py" line="54" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/record.py" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcyber__py3_1_1record_1_1_record_reader_1a5511d266682937d8c3f9c7ef90555beb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.record.RecordReader.__init__</definition>
+        <argsstring>(self, file_name)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>file_name</type>
+          <defname>file_name</defname>
+        </param>
+        <briefdescription>
+<para>the constructor function. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the record file name. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/record.py" line="53" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/record.py" bodystart="53" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py3_1_1record_1_1_record_reader_1a642d6e13bfa0bdbc2d70f5e7b14b8ae5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.record.RecordReader.__del__</definition>
+        <argsstring>(self)</argsstring>
+        <name>__del__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/record.py" line="56" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/record.py" bodystart="56" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py3_1_1record_1_1_record_reader_1a8d9d9a5a4fa46cd37fa77c8c292c4ddb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.record.RecordReader.read_messages</definition>
+        <argsstring>(self, start_time=0, end_time=18446744073709551615)</argsstring>
+        <name>read_messages</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>start_time</type>
+          <defname>start_time</defname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>end_time</type>
+          <defname>end_time</defname>
+          <defval>18446744073709551615</defval>
+        </param>
+        <briefdescription>
+<para>Read message from bag file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the start time to read. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the end time to read.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>return (channnel, data, data_type, timestamp) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/record.py" line="66" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/record.py" bodystart="66" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py3_1_1record_1_1_record_reader_1a04214d6ce3fc8b800f6495c434f130f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.record.RecordReader.get_messagenumber</definition>
+        <argsstring>(self, channel_name)</argsstring>
+        <name>get_messagenumber</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>channel_name</type>
+          <defname>channel_name</defname>
+        </param>
+        <briefdescription>
+<para>Return message count of the channel in current record file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel name.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>return the message count. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/record.py" line="84" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/record.py" bodystart="84" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py3_1_1record_1_1_record_reader_1aa07b0a563d78cc36d53619137330282f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.record.RecordReader.get_messagetype</definition>
+        <argsstring>(self, channel_name)</argsstring>
+        <name>get_messagetype</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>channel_name</type>
+          <defname>channel_name</defname>
+        </param>
+        <briefdescription>
+<para>Get the corresponding message type of channel. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel name.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>return the name of ther string type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/record.py" line="94" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/record.py" bodystart="94" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py3_1_1record_1_1_record_reader_1adc7866843d6381b9b9cce5215bd2a4ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.record.RecordReader.get_protodesc</definition>
+        <argsstring>(self, channel_name)</argsstring>
+        <name>get_protodesc</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>channel_name</type>
+          <defname>channel_name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return message protodesc.
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/record.py" line="98" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/record.py" bodystart="98" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py3_1_1record_1_1_record_reader_1a628cc5bdc13d444de3eb4c8d72839506" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.record.RecordReader.get_headerstring</definition>
+        <argsstring>(self)</argsstring>
+        <name>get_headerstring</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return message header string.
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/record.py" line="105" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/record.py" bodystart="105" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py3_1_1record_1_1_record_reader_1a51858c1189bfcbd609a13e9ae9ea42f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.record.RecordReader.reset</definition>
+        <argsstring>(self)</argsstring>
+        <name>reset</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return reset.
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/record.py" line="111" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/record.py" bodystart="111" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py3_1_1record_1_1_record_reader_1a8c33a2aaecd981e4d9d99b0186add980" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.record.RecordReader.get_channellist</definition>
+        <argsstring>(self)</argsstring>
+        <name>get_channellist</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return current channel names list.
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/record.py" line="117" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/record.py" bodystart="117" bodyend="123"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Class for cyber RecordReader wrapper.
+</verbatim> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="663">
+        <label>cyber_py3.record.RecordReader</label>
+        <link refid="classcyber__py3_1_1record_1_1_record_reader"/>
+        <childnode refid="664" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="664">
+        <label>object</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="665">
+        <label>cyber_py3.record.RecordReader</label>
+        <link refid="classcyber__py3_1_1record_1_1_record_reader"/>
+        <childnode refid="666" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="666">
+        <label>object</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/record.py" line="43" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/record.py" bodystart="43" bodyend="124"/>
+    <listofallmembers>
+      <member refid="classcyber__py3_1_1record_1_1_record_reader_1a642d6e13bfa0bdbc2d70f5e7b14b8ae5" prot="public" virt="non-virtual"><scope>cyber_py3::record::RecordReader</scope><name>__del__</name></member>
+      <member refid="classcyber__py3_1_1record_1_1_record_reader_1a5511d266682937d8c3f9c7ef90555beb" prot="public" virt="non-virtual"><scope>cyber_py3::record::RecordReader</scope><name>__init__</name></member>
+      <member refid="classcyber__py3_1_1record_1_1_record_reader_1a8c33a2aaecd981e4d9d99b0186add980" prot="public" virt="non-virtual"><scope>cyber_py3::record::RecordReader</scope><name>get_channellist</name></member>
+      <member refid="classcyber__py3_1_1record_1_1_record_reader_1a628cc5bdc13d444de3eb4c8d72839506" prot="public" virt="non-virtual"><scope>cyber_py3::record::RecordReader</scope><name>get_headerstring</name></member>
+      <member refid="classcyber__py3_1_1record_1_1_record_reader_1a04214d6ce3fc8b800f6495c434f130f7" prot="public" virt="non-virtual"><scope>cyber_py3::record::RecordReader</scope><name>get_messagenumber</name></member>
+      <member refid="classcyber__py3_1_1record_1_1_record_reader_1aa07b0a563d78cc36d53619137330282f" prot="public" virt="non-virtual"><scope>cyber_py3::record::RecordReader</scope><name>get_messagetype</name></member>
+      <member refid="classcyber__py3_1_1record_1_1_record_reader_1adc7866843d6381b9b9cce5215bd2a4ee" prot="public" virt="non-virtual"><scope>cyber_py3::record::RecordReader</scope><name>get_protodesc</name></member>
+      <member refid="classcyber__py3_1_1record_1_1_record_reader_1a8d9d9a5a4fa46cd37fa77c8c292c4ddb" prot="public" virt="non-virtual"><scope>cyber_py3::record::RecordReader</scope><name>read_messages</name></member>
+      <member refid="classcyber__py3_1_1record_1_1_record_reader_1a370f3f0c0936d75d381571ce666ed815" prot="public" virt="non-virtual"><scope>cyber_py3::record::RecordReader</scope><name>record_reader</name></member>
+      <member refid="classcyber__py3_1_1record_1_1_record_reader_1a51858c1189bfcbd609a13e9ae9ea42f2" prot="public" virt="non-virtual"><scope>cyber_py3::record::RecordReader</scope><name>reset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

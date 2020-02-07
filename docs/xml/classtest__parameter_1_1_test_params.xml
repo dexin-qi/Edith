@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classtest__parameter_1_1_test_params" kind="class" language="Python" prot="public">
+    <compoundname>test_parameter::TestParams</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">TestCase</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">TestCase</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtest__parameter_1_1_test_params_1a46bcb2b16554ddc206166d076c133878" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def test_parameter.TestParams.setUpClass</definition>
+        <argsstring>(cls)</argsstring>
+        <name>setUpClass</name>
+        <param>
+          <type>cls</type>
+          <defname>cls</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/test/test_parameter.py" line="37" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/test/test_parameter.py" bodystart="37" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classtest__parameter_1_1_test_params_1a1ee20133c69fbbb256b105c183a8f51a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def test_parameter.TestParams.tearDownClass</definition>
+        <argsstring>(cls)</argsstring>
+        <name>tearDownClass</name>
+        <param>
+          <type>cls</type>
+          <defname>cls</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/test/test_parameter.py" line="41" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/test/test_parameter.py" bodystart="41" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classtest__parameter_1_1_test_params_1a18d74b5c58311aadeaa537ee61ae1759" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def test_parameter.TestParams.test_params</definition>
+        <argsstring>(self)</argsstring>
+        <name>test_params</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/test/test_parameter.py" line="44" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/test/test_parameter.py" bodystart="44" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classtest__parameter_1_1_test_params_1a46bcb2b16554ddc206166d076c133878" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def test_parameter.TestParams.setUpClass</definition>
+        <argsstring>(cls)</argsstring>
+        <name>setUpClass</name>
+        <param>
+          <type>cls</type>
+          <defname>cls</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/test/test_parameter.py" line="37" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/test/test_parameter.py" bodystart="37" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classtest__parameter_1_1_test_params_1a1ee20133c69fbbb256b105c183a8f51a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def test_parameter.TestParams.tearDownClass</definition>
+        <argsstring>(cls)</argsstring>
+        <name>tearDownClass</name>
+        <param>
+          <type>cls</type>
+          <defname>cls</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/test/test_parameter.py" line="41" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/test/test_parameter.py" bodystart="41" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classtest__parameter_1_1_test_params_1a18d74b5c58311aadeaa537ee61ae1759" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def test_parameter.TestParams.test_params</definition>
+        <argsstring>(self)</argsstring>
+        <name>test_params</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/test/test_parameter.py" line="44" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/test/test_parameter.py" bodystart="44" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Class for node unit test.
+</verbatim> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="753">
+        <label>test_parameter.TestParams</label>
+        <link refid="classtest__parameter_1_1_test_params"/>
+        <childnode refid="754" relation="public-inheritance">
+        </childnode>
+        <childnode refid="754" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="754">
+        <label>TestCase</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="755">
+        <label>test_parameter.TestParams</label>
+        <link refid="classtest__parameter_1_1_test_params"/>
+        <childnode refid="756" relation="public-inheritance">
+        </childnode>
+        <childnode refid="756" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="756">
+        <label>TestCase</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dexin/code/Edith/cyber/python/cyber_py/test/test_parameter.py" line="31" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/test/test_parameter.py" bodystart="31" bodyend="64"/>
+    <listofallmembers>
+      <member refid="classtest__parameter_1_1_test_params_1a46bcb2b16554ddc206166d076c133878" prot="public" virt="non-virtual"><scope>test_parameter::TestParams</scope><name>setUpClass</name></member>
+      <member refid="classtest__parameter_1_1_test_params_1a46bcb2b16554ddc206166d076c133878" prot="public" virt="non-virtual"><scope>test_parameter::TestParams</scope><name>setUpClass</name></member>
+      <member refid="classtest__parameter_1_1_test_params_1a1ee20133c69fbbb256b105c183a8f51a" prot="public" virt="non-virtual"><scope>test_parameter::TestParams</scope><name>tearDownClass</name></member>
+      <member refid="classtest__parameter_1_1_test_params_1a1ee20133c69fbbb256b105c183a8f51a" prot="public" virt="non-virtual"><scope>test_parameter::TestParams</scope><name>tearDownClass</name></member>
+      <member refid="classtest__parameter_1_1_test_params_1a18d74b5c58311aadeaa537ee61ae1759" prot="public" virt="non-virtual"><scope>test_parameter::TestParams</scope><name>test_params</name></member>
+      <member refid="classtest__parameter_1_1_test_params_1a18d74b5c58311aadeaa537ee61ae1759" prot="public" virt="non-virtual"><scope>test_parameter::TestParams</scope><name>test_params</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

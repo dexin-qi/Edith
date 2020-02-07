@@ -1,0 +1,401 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classcyber__py_1_1record_1_1_record_writer" kind="class" language="Python" prot="public">
+    <compoundname>cyber_py::record::RecordWriter</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">object</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classcyber__py_1_1record_1_1_record_writer_1a398f5c011e8d8cc9dee542305ac22491" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cyber_py.record.RecordWriter::record_writer</definition>
+        <argsstring></argsstring>
+        <name>record_writer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/record.py" line="137" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/record.py" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcyber__py_1_1record_1_1_record_writer_1a59fcbf2d130cc666dbc27d040d91f8b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.record.RecordWriter.__init__</definition>
+        <argsstring>(self, file_segmentation_size_kb=0, file_segmentation_interval_sec=0)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>file_segmentation_size_kb</type>
+          <defname>file_segmentation_size_kb</defname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>file_segmentation_interval_sec</type>
+          <defname>file_segmentation_interval_sec</defname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>the constructor function. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file_segmentation_size_kb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size to segment the file, 0 is no segmentation. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file_segmentation_interval_sec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size to segment the file, 0 is no segmentation. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/record.py" line="135" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/record.py" bodystart="136" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py_1_1record_1_1_record_writer_1a0b9f0405abe2ccc1ca1c59af06fa0868" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.record.RecordWriter.__del__</definition>
+        <argsstring>(self)</argsstring>
+        <name>__del__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/record.py" line="143" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/record.py" bodystart="143" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py_1_1record_1_1_record_writer_1a51d9944cb52ef24d454a42ed2151eea4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.record.RecordWriter.open</definition>
+        <argsstring>(self, path)</argsstring>
+        <name>open</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>path</type>
+          <defname>path</defname>
+        </param>
+        <briefdescription>
+<para>Open record file for write. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the file path.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Success is True, other False. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/record.py" line="152" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/record.py" bodystart="152" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py_1_1record_1_1_record_writer_1a6862f940ecc857b0a1bc355b91888c02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.record.RecordWriter.close</definition>
+        <argsstring>(self)</argsstring>
+        <name>close</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+<para>Close record file. </para>        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Close record file.
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/record.py" line="157" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/record.py" bodystart="157" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py_1_1record_1_1_record_writer_1ae90c9a13b190f1f13dab0987c235a353" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.record.RecordWriter.write_channel</definition>
+        <argsstring>(self, channel_name, type_name, proto_desc)</argsstring>
+        <name>write_channel</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>channel_name</type>
+          <defname>channel_name</defname>
+        </param>
+        <param>
+          <type>type_name</type>
+          <defname>type_name</defname>
+        </param>
+        <param>
+          <type>proto_desc</type>
+          <defname>proto_desc</defname>
+        </param>
+        <briefdescription>
+<para>Writer channel by channelname, typename, protodesc. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the channel name to write </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a string of message type name. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>proto_desc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message descriptor.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Success is True, other False. <verbatim>Writer channel by channelname,typename,protodesc
+</verbatim> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/record.py" line="171" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/record.py" bodystart="171" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py_1_1record_1_1_record_writer_1a5bb12dd93b38219ce4acf19e13d0f6d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.record.RecordWriter.write_message</definition>
+        <argsstring>(self, channel_name, data, time, raw=True)</argsstring>
+        <name>write_message</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>channel_name</type>
+          <defname>channel_name</defname>
+        </param>
+        <param>
+          <type>data</type>
+          <defname>data</defname>
+        </param>
+        <param>
+          <type>time</type>
+          <defname>time</defname>
+        </param>
+        <param>
+          <type>raw</type>
+          <defname>raw</defname>
+          <defval>True</defval>
+        </param>
+        <briefdescription>
+<para>Writer msg: channelname, data, writer time. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channel_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>channel name to write. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when raw is True, data processed as a rawdata, other it needs to SerializeToString </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>message time. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>raw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the flag implies data whether or not a rawdata.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Success is True, other False. <verbatim>Writer msg:channelname,rawmsg,writer time
+</verbatim> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/record.py" line="187" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/record.py" bodystart="187" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py_1_1record_1_1_record_writer_1a8213d64415bc4b139f2d714d74dd82b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.record.RecordWriter.set_size_fileseg</definition>
+        <argsstring>(self, size_kilobytes)</argsstring>
+        <name>set_size_fileseg</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>size_kilobytes</type>
+          <defname>size_kilobytes</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return filesegment size.
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/record.py" line="204" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/record.py" bodystart="204" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py_1_1record_1_1_record_writer_1a180a309b13543895242205f2e2406341" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.record.RecordWriter.set_intervaltime_fileseg</definition>
+        <argsstring>(self, time_sec)</argsstring>
+        <name>set_intervaltime_fileseg</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>time_sec</type>
+          <defname>time_sec</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return file interval time.
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/record.py" line="211" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/record.py" bodystart="211" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py_1_1record_1_1_record_writer_1a04c6ffd7271f11af87de401ec5c1bd73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.record.RecordWriter.get_messagenumber</definition>
+        <argsstring>(self, channel_name)</argsstring>
+        <name>get_messagenumber</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>channel_name</type>
+          <defname>channel_name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return message count.
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/record.py" line="218" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/record.py" bodystart="218" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py_1_1record_1_1_record_writer_1a9318b386c8181e2ad3506a12fc01fda9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.record.RecordWriter.get_messagetype</definition>
+        <argsstring>(self, channel_name)</argsstring>
+        <name>get_messagetype</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>channel_name</type>
+          <defname>channel_name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return message type.
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/record.py" line="225" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/record.py" bodystart="225" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py_1_1record_1_1_record_writer_1a148c4ec2cbe6edef5d2815d9aebc30a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.record.RecordWriter.get_protodesc</definition>
+        <argsstring>(self, channel_name)</argsstring>
+        <name>get_protodesc</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>channel_name</type>
+          <defname>channel_name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return message protodesc.
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/record.py" line="232" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/record.py" bodystart="232" bodyend="238"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Class for cyber RecordWriter wrapper.
+</verbatim> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="674">
+        <label>cyber_py.record.RecordWriter</label>
+        <link refid="classcyber__py_1_1record_1_1_record_writer"/>
+        <childnode refid="675" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="675">
+        <label>object</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="676">
+        <label>cyber_py.record.RecordWriter</label>
+        <link refid="classcyber__py_1_1record_1_1_record_writer"/>
+        <childnode refid="677" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="677">
+        <label>object</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dexin/code/Edith/cyber/python/cyber_py/record.py" line="124" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/record.py" bodystart="124" bodyend="238"/>
+    <listofallmembers>
+      <member refid="classcyber__py_1_1record_1_1_record_writer_1a0b9f0405abe2ccc1ca1c59af06fa0868" prot="public" virt="non-virtual"><scope>cyber_py::record::RecordWriter</scope><name>__del__</name></member>
+      <member refid="classcyber__py_1_1record_1_1_record_writer_1a59fcbf2d130cc666dbc27d040d91f8b5" prot="public" virt="non-virtual"><scope>cyber_py::record::RecordWriter</scope><name>__init__</name></member>
+      <member refid="classcyber__py_1_1record_1_1_record_writer_1a6862f940ecc857b0a1bc355b91888c02" prot="public" virt="non-virtual"><scope>cyber_py::record::RecordWriter</scope><name>close</name></member>
+      <member refid="classcyber__py_1_1record_1_1_record_writer_1a04c6ffd7271f11af87de401ec5c1bd73" prot="public" virt="non-virtual"><scope>cyber_py::record::RecordWriter</scope><name>get_messagenumber</name></member>
+      <member refid="classcyber__py_1_1record_1_1_record_writer_1a9318b386c8181e2ad3506a12fc01fda9" prot="public" virt="non-virtual"><scope>cyber_py::record::RecordWriter</scope><name>get_messagetype</name></member>
+      <member refid="classcyber__py_1_1record_1_1_record_writer_1a148c4ec2cbe6edef5d2815d9aebc30a4" prot="public" virt="non-virtual"><scope>cyber_py::record::RecordWriter</scope><name>get_protodesc</name></member>
+      <member refid="classcyber__py_1_1record_1_1_record_writer_1a51d9944cb52ef24d454a42ed2151eea4" prot="public" virt="non-virtual"><scope>cyber_py::record::RecordWriter</scope><name>open</name></member>
+      <member refid="classcyber__py_1_1record_1_1_record_writer_1a398f5c011e8d8cc9dee542305ac22491" prot="public" virt="non-virtual"><scope>cyber_py::record::RecordWriter</scope><name>record_writer</name></member>
+      <member refid="classcyber__py_1_1record_1_1_record_writer_1a180a309b13543895242205f2e2406341" prot="public" virt="non-virtual"><scope>cyber_py::record::RecordWriter</scope><name>set_intervaltime_fileseg</name></member>
+      <member refid="classcyber__py_1_1record_1_1_record_writer_1a8213d64415bc4b139f2d714d74dd82b1" prot="public" virt="non-virtual"><scope>cyber_py::record::RecordWriter</scope><name>set_size_fileseg</name></member>
+      <member refid="classcyber__py_1_1record_1_1_record_writer_1ae90c9a13b190f1f13dab0987c235a353" prot="public" virt="non-virtual"><scope>cyber_py::record::RecordWriter</scope><name>write_channel</name></member>
+      <member refid="classcyber__py_1_1record_1_1_record_writer_1a5bb12dd93b38219ce4acf19e13d0f6d5" prot="public" virt="non-virtual"><scope>cyber_py::record::RecordWriter</scope><name>write_message</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

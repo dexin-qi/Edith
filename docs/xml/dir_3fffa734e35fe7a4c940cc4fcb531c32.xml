@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="dir_3fffa734e35fe7a4c940cc4fcb531c32" kind="dir">
+    <compoundname>/home/dexin/code/Edith/cyber/service_discovery</compoundname>
+    <innerdir refid="dir_949985ab817005cdfe8e644c75caa65d">/home/dexin/code/Edith/cyber/service_discovery/communication</innerdir>
+    <innerdir refid="dir_af4dfbbd125dbec16bd25359a370151c">/home/dexin/code/Edith/cyber/service_discovery/container</innerdir>
+    <innerdir refid="dir_e5fbe61ce5e8dae9bccec377d711ef3f">/home/dexin/code/Edith/cyber/service_discovery/role</innerdir>
+    <innerdir refid="dir_a1e2afad54799d1db945c7cb7633b385">/home/dexin/code/Edith/cyber/service_discovery/specific_manager</innerdir>
+    <innerfile refid="topology__manager_8h">topology_manager.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dexin/code/Edith/cyber/service_discovery/"/>
+  </compounddef>
+</doxygen>

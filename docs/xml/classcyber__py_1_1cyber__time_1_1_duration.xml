@@ -1,0 +1,400 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classcyber__py_1_1cyber__time_1_1_duration" kind="class" language="Python" prot="public">
+    <compoundname>cyber_py::cyber_time::Duration</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">object</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classcyber__py_1_1cyber__time_1_1_duration_1acc9cd4d365707e296573ec88b0150d11" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cyber_py.cyber_time.Duration::nanoseconds_</definition>
+        <argsstring></argsstring>
+        <name>nanoseconds_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="49" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcyber__py_1_1cyber__time_1_1_duration_1abc7dca6e0a9cf8e6f336e2b5a7e9fac3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cyber_py.cyber_time.Duration::duration_</definition>
+        <argsstring></argsstring>
+        <name>duration_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="56" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcyber__py_1_1cyber__time_1_1_duration_1abc2d34907ab3ee37cf3af9e45842aa3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.cyber_time.Duration.__init__</definition>
+        <argsstring>(self, other)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>other</type>
+          <defname>other</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="47" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="47" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py_1_1cyber__time_1_1_duration_1a2f9053125077fa931de5b76c352271aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.cyber_time.Duration.__del__</definition>
+        <argsstring>(self)</argsstring>
+        <name>__del__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="58" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="58" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py_1_1cyber__time_1_1_duration_1a3ee57561d3f3b7f7354e96598b3b633c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.cyber_time.Duration.sleep</definition>
+        <argsstring>(self)</argsstring>
+        <name>sleep</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>sleep for the amount of time specified by the duration.
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="61" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="61" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py_1_1cyber__time_1_1_duration_1a3de38576af035037d09eb1129c489e01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.cyber_time.Duration.__str__</definition>
+        <argsstring>(self)</argsstring>
+        <name>__str__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="67" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="67" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py_1_1cyber__time_1_1_duration_1a35b3212d3d983f77d9184f01f06f9076" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.cyber_time.Duration.to_sec</definition>
+        <argsstring>(self)</argsstring>
+        <name>to_sec</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>convert to second.
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="70" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="70" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py_1_1cyber__time_1_1_duration_1ab29fa02ea60dbbe9da97595ae9496664" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.cyber_time.Duration.to_nsec</definition>
+        <argsstring>(self)</argsstring>
+        <name>to_nsec</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>convert to nanosecond.
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="76" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="76" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py_1_1cyber__time_1_1_duration_1aa33a7f6bb4c88a648dfd4e4cffd9103e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.cyber_time.Duration.iszero</definition>
+        <argsstring>(self)</argsstring>
+        <name>iszero</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="82" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="82" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py_1_1cyber__time_1_1_duration_1a01a1dafbd1934f6a37e7fc8aaf168304" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.cyber_time.Duration.__add__</definition>
+        <argsstring>(self, other)</argsstring>
+        <name>__add__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>other</type>
+          <defname>other</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="85" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="85" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py_1_1cyber__time_1_1_duration_1af4563cb596c774c059200e90181bb1c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.cyber_time.Duration.__radd__</definition>
+        <argsstring>(self, other)</argsstring>
+        <name>__radd__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>other</type>
+          <defname>other</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="88" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="88" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py_1_1cyber__time_1_1_duration_1a9883747489f302d50a87b2e517eaa9b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.cyber_time.Duration.__sub__</definition>
+        <argsstring>(self, other)</argsstring>
+        <name>__sub__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>other</type>
+          <defname>other</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="91" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="91" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py_1_1cyber__time_1_1_duration_1a78823cb72a486029e32f1e5c3c781c8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.cyber_time.Duration.__lt__</definition>
+        <argsstring>(self, other)</argsstring>
+        <name>__lt__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>other</type>
+          <defname>other</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="94" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="94" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py_1_1cyber__time_1_1_duration_1aa7f0c638c9b8a313c51baf07121ea039" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.cyber_time.Duration.__gt__</definition>
+        <argsstring>(self, other)</argsstring>
+        <name>__gt__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>other</type>
+          <defname>other</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="97" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="97" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py_1_1cyber__time_1_1_duration_1a7667e78f9c2f5a0e2120b1d59739f184" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.cyber_time.Duration.__le__</definition>
+        <argsstring>(self, other)</argsstring>
+        <name>__le__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>other</type>
+          <defname>other</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="100" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="100" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py_1_1cyber__time_1_1_duration_1ac5b69b5881528b768fc24d19adf91f8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.cyber_time.Duration.__ge__</definition>
+        <argsstring>(self, other)</argsstring>
+        <name>__ge__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>other</type>
+          <defname>other</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="103" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="103" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py_1_1cyber__time_1_1_duration_1a2b0c42fca1ad66015ddcfe318bbb3619" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.cyber_time.Duration.__eq__</definition>
+        <argsstring>(self, other)</argsstring>
+        <name>__eq__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>other</type>
+          <defname>other</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="106" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="106" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py_1_1cyber__time_1_1_duration_1aa37da6c1a429a9d0fa03d20bfbb52013" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.cyber_time.Duration.__ne__</definition>
+        <argsstring>(self, other)</argsstring>
+        <name>__ne__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>other</type>
+          <defname>other</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="109" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="109" bodyend="112"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Class for cyber Duration wrapper.
+</verbatim> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="499">
+        <label>object</label>
+      </node>
+      <node id="498">
+        <label>cyber_py.cyber_time.Duration</label>
+        <link refid="classcyber__py_1_1cyber__time_1_1_duration"/>
+        <childnode refid="499" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="501">
+        <label>object</label>
+      </node>
+      <node id="500">
+        <label>cyber_py.cyber_time.Duration</label>
+        <link refid="classcyber__py_1_1cyber__time_1_1_duration"/>
+        <childnode refid="501" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="41" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="41" bodyend="113"/>
+    <listofallmembers>
+      <member refid="classcyber__py_1_1cyber__time_1_1_duration_1a01a1dafbd1934f6a37e7fc8aaf168304" prot="public" virt="non-virtual"><scope>cyber_py::cyber_time::Duration</scope><name>__add__</name></member>
+      <member refid="classcyber__py_1_1cyber__time_1_1_duration_1a2f9053125077fa931de5b76c352271aa" prot="public" virt="non-virtual"><scope>cyber_py::cyber_time::Duration</scope><name>__del__</name></member>
+      <member refid="classcyber__py_1_1cyber__time_1_1_duration_1a2b0c42fca1ad66015ddcfe318bbb3619" prot="public" virt="non-virtual"><scope>cyber_py::cyber_time::Duration</scope><name>__eq__</name></member>
+      <member refid="classcyber__py_1_1cyber__time_1_1_duration_1ac5b69b5881528b768fc24d19adf91f8e" prot="public" virt="non-virtual"><scope>cyber_py::cyber_time::Duration</scope><name>__ge__</name></member>
+      <member refid="classcyber__py_1_1cyber__time_1_1_duration_1aa7f0c638c9b8a313c51baf07121ea039" prot="public" virt="non-virtual"><scope>cyber_py::cyber_time::Duration</scope><name>__gt__</name></member>
+      <member refid="classcyber__py_1_1cyber__time_1_1_duration_1abc2d34907ab3ee37cf3af9e45842aa3a" prot="public" virt="non-virtual"><scope>cyber_py::cyber_time::Duration</scope><name>__init__</name></member>
+      <member refid="classcyber__py_1_1cyber__time_1_1_duration_1a7667e78f9c2f5a0e2120b1d59739f184" prot="public" virt="non-virtual"><scope>cyber_py::cyber_time::Duration</scope><name>__le__</name></member>
+      <member refid="classcyber__py_1_1cyber__time_1_1_duration_1a78823cb72a486029e32f1e5c3c781c8e" prot="public" virt="non-virtual"><scope>cyber_py::cyber_time::Duration</scope><name>__lt__</name></member>
+      <member refid="classcyber__py_1_1cyber__time_1_1_duration_1aa37da6c1a429a9d0fa03d20bfbb52013" prot="public" virt="non-virtual"><scope>cyber_py::cyber_time::Duration</scope><name>__ne__</name></member>
+      <member refid="classcyber__py_1_1cyber__time_1_1_duration_1af4563cb596c774c059200e90181bb1c9" prot="public" virt="non-virtual"><scope>cyber_py::cyber_time::Duration</scope><name>__radd__</name></member>
+      <member refid="classcyber__py_1_1cyber__time_1_1_duration_1a3de38576af035037d09eb1129c489e01" prot="public" virt="non-virtual"><scope>cyber_py::cyber_time::Duration</scope><name>__str__</name></member>
+      <member refid="classcyber__py_1_1cyber__time_1_1_duration_1a9883747489f302d50a87b2e517eaa9b4" prot="public" virt="non-virtual"><scope>cyber_py::cyber_time::Duration</scope><name>__sub__</name></member>
+      <member refid="classcyber__py_1_1cyber__time_1_1_duration_1abc7dca6e0a9cf8e6f336e2b5a7e9fac3" prot="public" virt="non-virtual"><scope>cyber_py::cyber_time::Duration</scope><name>duration_</name></member>
+      <member refid="classcyber__py_1_1cyber__time_1_1_duration_1aa33a7f6bb4c88a648dfd4e4cffd9103e" prot="public" virt="non-virtual"><scope>cyber_py::cyber_time::Duration</scope><name>iszero</name></member>
+      <member refid="classcyber__py_1_1cyber__time_1_1_duration_1acc9cd4d365707e296573ec88b0150d11" prot="public" virt="non-virtual"><scope>cyber_py::cyber_time::Duration</scope><name>nanoseconds_</name></member>
+      <member refid="classcyber__py_1_1cyber__time_1_1_duration_1a3ee57561d3f3b7f7354e96598b3b633c" prot="public" virt="non-virtual"><scope>cyber_py::cyber_time::Duration</scope><name>sleep</name></member>
+      <member refid="classcyber__py_1_1cyber__time_1_1_duration_1ab29fa02ea60dbbe9da97595ae9496664" prot="public" virt="non-virtual"><scope>cyber_py::cyber_time::Duration</scope><name>to_nsec</name></member>
+      <member refid="classcyber__py_1_1cyber__time_1_1_duration_1a35b3212d3d983f77d9184f01f06f9076" prot="public" virt="non-virtual"><scope>cyber_py::cyber_time::Duration</scope><name>to_sec</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

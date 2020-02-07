@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classapollo_1_1cyber_1_1_node_service_impl" kind="class" language="C++" prot="public">
+    <compoundname>apollo::cyber::NodeServiceImpl</compoundname>
+    <includes refid="node__service__impl_8h" local="no">node_service_impl.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classapollo_1_1cyber_1_1_node_service_impl_1a6db9d28bd448a131448276ee03de1e6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class Node</definition>
+        <argsstring></argsstring>
+        <name>Node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/node/node_service_impl.h" line="41" column="1" bodyfile="/home/dexin/code/Edith/cyber/node/node_service_impl.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_node_service_impl_1a5c763412befbe5299c797e670d4be36d" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::weak_ptr&lt; <ref refid="classapollo_1_1cyber_1_1_service_base" kindref="compound">ServiceBase</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::weak_ptr&lt;ServiceBase&gt; &gt; apollo::cyber::NodeServiceImpl::service_list_</definition>
+        <argsstring></argsstring>
+        <name>service_list_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/node/node_service_impl.h" line="79" column="1" bodyfile="/home/dexin/code/Edith/cyber/node/node_service_impl.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_node_service_impl_1a6b9e4bdf90743f8ae324ef1a44ed883f" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::weak_ptr&lt; <ref refid="classapollo_1_1cyber_1_1_client_base" kindref="compound">ClientBase</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::weak_ptr&lt;ClientBase&gt; &gt; apollo::cyber::NodeServiceImpl::client_list_</definition>
+        <argsstring></argsstring>
+        <name>client_list_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/node/node_service_impl.h" line="80" column="1" bodyfile="/home/dexin/code/Edith/cyber/node/node_service_impl.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_node_service_impl_1a8f9533d4f5e1f460bd8ee0e76644c912" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string apollo::cyber::NodeServiceImpl::node_name_</definition>
+        <argsstring></argsstring>
+        <name>node_name_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/node/node_service_impl.h" line="81" column="1" bodyfile="/home/dexin/code/Edith/cyber/node/node_service_impl.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_node_service_impl_1a762c2be3d310b7af1c0da1b83df54349" prot="private" static="no" mutable="no">
+        <type>proto::RoleAttributes</type>
+        <definition>proto::RoleAttributes apollo::cyber::NodeServiceImpl::attr_</definition>
+        <argsstring></argsstring>
+        <name>attr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/node/node_service_impl.h" line="82" column="1" bodyfile="/home/dexin/code/Edith/cyber/node/node_service_impl.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_node_service_impl_1ac518c6b95388e87a0243c53e4cdab402" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::NodeServiceImpl::NodeServiceImpl</definition>
+        <argsstring>(const std::string &amp;node_name)</argsstring>
+        <name>NodeServiceImpl</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>node_name</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classapollo_1_1cyber_1_1_node" kindref="compound">Node</ref> <ref refid="classapollo_1_1cyber_1_1_service" kindref="compound">Service</ref> Impl object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>node name </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/node/node_service_impl.h" line="48" column="1" bodyfile="/home/dexin/code/Edith/cyber/node/node_service_impl.h" bodystart="48" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_node_service_impl_1a559f15a34d47e87450f8366242f699c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::NodeServiceImpl::NodeServiceImpl</definition>
+        <argsstring>()=delete</argsstring>
+        <name>NodeServiceImpl</name>
+        <briefdescription>
+<para>Forbid default-constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/node/node_service_impl.h" line="60" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_node_service_impl_1a80eba07a61bf286d23b547e8ad5fe07a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::NodeServiceImpl::~NodeServiceImpl</definition>
+        <argsstring>()</argsstring>
+        <name>~NodeServiceImpl</name>
+        <briefdescription>
+<para>Destroy the <ref refid="classapollo_1_1cyber_1_1_node" kindref="compound">Node</ref> <ref refid="classapollo_1_1cyber_1_1_service" kindref="compound">Service</ref> Impl object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/node/node_service_impl.h" line="66" column="1" bodyfile="/home/dexin/code/Edith/cyber/node/node_service_impl.h" bodystart="66" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_node_service_impl_1a3a758c09a1c57b7db2e8df66ef8b4478" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Request</type>
+          </param>
+          <param>
+            <type>typename Response</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto apollo::cyber::NodeServiceImpl::CreateService</definition>
+        <argsstring>(const std::string &amp;service_name, const typename Service&lt; Request, Response &gt;::ServiceCallback &amp;service_callback) -&gt; typename std::shared_ptr&lt; Service&lt; Request, Response &gt;&gt;</argsstring>
+        <name>CreateService</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>service_name</declname>
+        </param>
+        <param>
+          <type>const typename <ref refid="classapollo_1_1cyber_1_1_service" kindref="compound">Service</ref>&lt; Request, Response &gt;::ServiceCallback &amp;</type>
+          <declname>service_callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/node/node_service_impl.h" line="70" column="1" bodyfile="/home/dexin/code/Edith/cyber/node/node_service_impl.h" bodystart="86" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_node_service_impl_1ae5e61b7a241ded9d370fef484abb0064" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Request</type>
+          </param>
+          <param>
+            <type>typename Response</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto apollo::cyber::NodeServiceImpl::CreateClient</definition>
+        <argsstring>(const std::string &amp;service_name) -&gt; typename std::shared_ptr&lt; Client&lt; Request, Response &gt;&gt;</argsstring>
+        <name>CreateClient</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>service_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/node/node_service_impl.h" line="76" column="1" bodyfile="/home/dexin/code/Edith/cyber/node/node_service_impl.h" bodystart="105" bodyend="118"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The implementation for <ref refid="classapollo_1_1cyber_1_1_node" kindref="compound">Node</ref> to create Objects connected by Param. </para>    </briefdescription>
+    <detaileddescription>
+<para>e.g. Param Server and <ref refid="classapollo_1_1cyber_1_1_client" kindref="compound">Client</ref> </para>    </detaileddescription>
+    <location file="/home/dexin/code/Edith/cyber/node/node_service_impl.h" line="39" column="1" bodyfile="/home/dexin/code/Edith/cyber/node/node_service_impl.h" bodystart="39" bodyend="83"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1_node_service_impl_1a762c2be3d310b7af1c0da1b83df54349" prot="private" virt="non-virtual"><scope>apollo::cyber::NodeServiceImpl</scope><name>attr_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_node_service_impl_1a6b9e4bdf90743f8ae324ef1a44ed883f" prot="private" virt="non-virtual"><scope>apollo::cyber::NodeServiceImpl</scope><name>client_list_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_node_service_impl_1ae5e61b7a241ded9d370fef484abb0064" prot="private" virt="non-virtual"><scope>apollo::cyber::NodeServiceImpl</scope><name>CreateClient</name></member>
+      <member refid="classapollo_1_1cyber_1_1_node_service_impl_1a3a758c09a1c57b7db2e8df66ef8b4478" prot="private" virt="non-virtual"><scope>apollo::cyber::NodeServiceImpl</scope><name>CreateService</name></member>
+      <member refid="classapollo_1_1cyber_1_1_node_service_impl_1a6db9d28bd448a131448276ee03de1e6d" prot="public" virt="non-virtual"><scope>apollo::cyber::NodeServiceImpl</scope><name>Node</name></member>
+      <member refid="classapollo_1_1cyber_1_1_node_service_impl_1a8f9533d4f5e1f460bd8ee0e76644c912" prot="private" virt="non-virtual"><scope>apollo::cyber::NodeServiceImpl</scope><name>node_name_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_node_service_impl_1ac518c6b95388e87a0243c53e4cdab402" prot="public" virt="non-virtual"><scope>apollo::cyber::NodeServiceImpl</scope><name>NodeServiceImpl</name></member>
+      <member refid="classapollo_1_1cyber_1_1_node_service_impl_1a559f15a34d47e87450f8366242f699c2" prot="public" virt="non-virtual"><scope>apollo::cyber::NodeServiceImpl</scope><name>NodeServiceImpl</name></member>
+      <member refid="classapollo_1_1cyber_1_1_node_service_impl_1a5c763412befbe5299c797e670d4be36d" prot="private" virt="non-virtual"><scope>apollo::cyber::NodeServiceImpl</scope><name>service_list_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_node_service_impl_1a80eba07a61bf286d23b547e8ad5fe07a" prot="public" virt="non-virtual"><scope>apollo::cyber::NodeServiceImpl</scope><name>~NodeServiceImpl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

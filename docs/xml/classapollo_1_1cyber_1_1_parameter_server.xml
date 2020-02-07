@@ -1,0 +1,292 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classapollo_1_1cyber_1_1_parameter_server" kind="class" language="C++" prot="public">
+    <compoundname>apollo::cyber::ParameterServer</compoundname>
+    <includes refid="parameter__server_8h" local="no">parameter_server.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1_parameter_server_1aabdbb6b8047a5748cb9e4f336650e303" prot="public" static="no">
+        <type>apollo::cyber::proto::Param</type>
+        <definition>using apollo::cyber::ParameterServer::Param =  apollo::cyber::proto::Param</definition>
+        <argsstring></argsstring>
+        <name>Param</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/parameter/parameter_server.h" line="45" column="1" bodyfile="/home/dexin/code/Edith/cyber/parameter/parameter_server.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1_parameter_server_1ac7ab499bb218b50675bb950b500bbae8" prot="public" static="no">
+        <type>apollo::cyber::proto::NodeName</type>
+        <definition>using apollo::cyber::ParameterServer::NodeName =  apollo::cyber::proto::NodeName</definition>
+        <argsstring></argsstring>
+        <name>NodeName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/parameter/parameter_server.h" line="46" column="1" bodyfile="/home/dexin/code/Edith/cyber/parameter/parameter_server.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1_parameter_server_1a9a36f8371c476a478cbce477c443aa16" prot="public" static="no">
+        <type>apollo::cyber::proto::ParamName</type>
+        <definition>using apollo::cyber::ParameterServer::ParamName =  apollo::cyber::proto::ParamName</definition>
+        <argsstring></argsstring>
+        <name>ParamName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/parameter/parameter_server.h" line="47" column="1" bodyfile="/home/dexin/code/Edith/cyber/parameter/parameter_server.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1_parameter_server_1a603661a34f7d6cff05fb6cf5618b96b9" prot="public" static="no">
+        <type>apollo::cyber::proto::BoolResult</type>
+        <definition>using apollo::cyber::ParameterServer::BoolResult =  apollo::cyber::proto::BoolResult</definition>
+        <argsstring></argsstring>
+        <name>BoolResult</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/parameter/parameter_server.h" line="48" column="1" bodyfile="/home/dexin/code/Edith/cyber/parameter/parameter_server.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1_parameter_server_1adc6130bafd919f927f669737307a12d1" prot="public" static="no">
+        <type>apollo::cyber::proto::Params</type>
+        <definition>using apollo::cyber::ParameterServer::Params =  apollo::cyber::proto::Params</definition>
+        <argsstring></argsstring>
+        <name>Params</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/parameter/parameter_server.h" line="49" column="1" bodyfile="/home/dexin/code/Edith/cyber/parameter/parameter_server.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_parameter_server_1aff97f5c8d606d874176a4a547be55a8b" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;Node&gt; apollo::cyber::ParameterServer::node_</definition>
+        <argsstring></argsstring>
+        <name>node_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/parameter/parameter_server.h" line="82" column="1" bodyfile="/home/dexin/code/Edith/cyber/parameter/parameter_server.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_parameter_server_1adf90630f82004589b443f9c24b66f230" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1_service" kindref="compound">Service</ref>&lt; ParamName, Param &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;Service&lt;ParamName, Param&gt; &gt; apollo::cyber::ParameterServer::get_parameter_service_</definition>
+        <argsstring></argsstring>
+        <name>get_parameter_service_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/parameter/parameter_server.h" line="83" column="1" bodyfile="/home/dexin/code/Edith/cyber/parameter/parameter_server.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_parameter_server_1a2f6c6c91e98fd38bbc3dfdbee24746d3" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1_service" kindref="compound">Service</ref>&lt; Param, BoolResult &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;Service&lt;Param, BoolResult&gt; &gt; apollo::cyber::ParameterServer::set_parameter_service_</definition>
+        <argsstring></argsstring>
+        <name>set_parameter_service_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/parameter/parameter_server.h" line="84" column="1" bodyfile="/home/dexin/code/Edith/cyber/parameter/parameter_server.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_parameter_server_1a64f0850ba2189ecf105e0e9cf14bde94" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1_service" kindref="compound">Service</ref>&lt; NodeName, Params &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;Service&lt;NodeName, Params&gt; &gt; apollo::cyber::ParameterServer::list_parameters_service_</definition>
+        <argsstring></argsstring>
+        <name>list_parameters_service_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/parameter/parameter_server.h" line="85" column="1" bodyfile="/home/dexin/code/Edith/cyber/parameter/parameter_server.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_parameter_server_1aa18f1fc802ab7bef852a7c4f37d18b1d" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex apollo::cyber::ParameterServer::param_map_mutex_</definition>
+        <argsstring></argsstring>
+        <name>param_map_mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/parameter/parameter_server.h" line="87" column="1" bodyfile="/home/dexin/code/Edith/cyber/parameter/parameter_server.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_parameter_server_1acad7d9ac54e984ba5e857366b4c80e7e" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, Param &gt;</type>
+        <definition>std::unordered_map&lt;std::string, Param&gt; apollo::cyber::ParameterServer::param_map_</definition>
+        <argsstring></argsstring>
+        <name>param_map_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/parameter/parameter_server.h" line="88" column="1" bodyfile="/home/dexin/code/Edith/cyber/parameter/parameter_server.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_parameter_server_1ac976496689a128ce5db8059aa1ca9e54" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::ParameterServer::ParameterServer</definition>
+        <argsstring>(const std::shared_ptr&lt; Node &gt; &amp;node)</argsstring>
+        <name>ParameterServer</name>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1_node" kindref="compound">Node</ref> &gt; &amp;</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classapollo_1_1cyber_1_1_parameter_server" kindref="compound">ParameterServer</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>shared_ptr of the node handler </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/parameter/parameter_server.h" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_parameter_server_1ad54689c4cf62b72601a1fed489fa05b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::ParameterServer::SetParameter</definition>
+        <argsstring>(const Parameter &amp;parmeter)</argsstring>
+        <name>SetParameter</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1_parameter" kindref="compound">Parameter</ref> &amp;</type>
+          <declname>parmeter</declname>
+        </param>
+        <briefdescription>
+<para>Set the <ref refid="classapollo_1_1cyber_1_1_parameter" kindref="compound">Parameter</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parmeter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>parameter to be set </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/parameter/parameter_server.h" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_parameter_server_1aaf09c1da116708008070cfb1e306988c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::ParameterServer::GetParameter</definition>
+        <argsstring>(const std::string &amp;parameter_name, Parameter *parameter)</argsstring>
+        <name>GetParameter</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>parameter_name</declname>
+        </param>
+        <param>
+          <type><ref refid="classapollo_1_1cyber_1_1_parameter" kindref="compound">Parameter</ref> *</type>
+          <declname>parameter</declname>
+        </param>
+        <briefdescription>
+<para>Get the <ref refid="classapollo_1_1cyber_1_1_parameter" kindref="compound">Parameter</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parameter_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of the parameer want to get </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parameter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to store parameter want to get </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true get parameter success </para></simplesect>
+<simplesect kind="return"><para>false parameter not exists </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/parameter/parameter_server.h" line="72" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_parameter_server_1a49103f681e732d45eba0c6d4fe57ca34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::ParameterServer::ListParameters</definition>
+        <argsstring>(std::vector&lt; Parameter &gt; *parameters)</argsstring>
+        <name>ListParameters</name>
+        <param>
+          <type>std::vector&lt; <ref refid="classapollo_1_1cyber_1_1_parameter" kindref="compound">Parameter</ref> &gt; *</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+<para>get all the parameters </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>result Paramter vector </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/parameter/parameter_server.h" line="79" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classapollo_1_1cyber_1_1_parameter" kindref="compound">Parameter</ref> <ref refid="classapollo_1_1cyber_1_1_service" kindref="compound">Service</ref> is a very important function of auto-driving. </para>    </briefdescription>
+    <detaileddescription>
+<para>If you want to set a key-value, and hope other nodes to get the value, Routing, sensor internal/external references are set by <ref refid="classapollo_1_1cyber_1_1_parameter" kindref="compound">Parameter</ref> <ref refid="classapollo_1_1cyber_1_1_service" kindref="compound">Service</ref> <ref refid="classapollo_1_1cyber_1_1_parameter_server" kindref="compound">ParameterServer</ref> can set a parameter, and then you can get/list paramter(s) by start a <ref refid="classapollo_1_1cyber_1_1_parameter_client" kindref="compound">ParameterClient</ref> to send responding request <simplesect kind="warning"><para>You should only have one <ref refid="classapollo_1_1cyber_1_1_parameter_server" kindref="compound">ParameterServer</ref> works </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/dexin/code/Edith/cyber/parameter/parameter_server.h" line="43" column="1" bodyfile="/home/dexin/code/Edith/cyber/parameter/parameter_server.h" bodystart="43" bodyend="89"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1_parameter_server_1a603661a34f7d6cff05fb6cf5618b96b9" prot="public" virt="non-virtual"><scope>apollo::cyber::ParameterServer</scope><name>BoolResult</name></member>
+      <member refid="classapollo_1_1cyber_1_1_parameter_server_1adf90630f82004589b443f9c24b66f230" prot="private" virt="non-virtual"><scope>apollo::cyber::ParameterServer</scope><name>get_parameter_service_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_parameter_server_1aaf09c1da116708008070cfb1e306988c" prot="public" virt="non-virtual"><scope>apollo::cyber::ParameterServer</scope><name>GetParameter</name></member>
+      <member refid="classapollo_1_1cyber_1_1_parameter_server_1a64f0850ba2189ecf105e0e9cf14bde94" prot="private" virt="non-virtual"><scope>apollo::cyber::ParameterServer</scope><name>list_parameters_service_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_parameter_server_1a49103f681e732d45eba0c6d4fe57ca34" prot="public" virt="non-virtual"><scope>apollo::cyber::ParameterServer</scope><name>ListParameters</name></member>
+      <member refid="classapollo_1_1cyber_1_1_parameter_server_1aff97f5c8d606d874176a4a547be55a8b" prot="private" virt="non-virtual"><scope>apollo::cyber::ParameterServer</scope><name>node_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_parameter_server_1ac7ab499bb218b50675bb950b500bbae8" prot="public" virt="non-virtual"><scope>apollo::cyber::ParameterServer</scope><name>NodeName</name></member>
+      <member refid="classapollo_1_1cyber_1_1_parameter_server_1aabdbb6b8047a5748cb9e4f336650e303" prot="public" virt="non-virtual"><scope>apollo::cyber::ParameterServer</scope><name>Param</name></member>
+      <member refid="classapollo_1_1cyber_1_1_parameter_server_1acad7d9ac54e984ba5e857366b4c80e7e" prot="private" virt="non-virtual"><scope>apollo::cyber::ParameterServer</scope><name>param_map_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_parameter_server_1aa18f1fc802ab7bef852a7c4f37d18b1d" prot="private" virt="non-virtual"><scope>apollo::cyber::ParameterServer</scope><name>param_map_mutex_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_parameter_server_1ac976496689a128ce5db8059aa1ca9e54" prot="public" virt="non-virtual"><scope>apollo::cyber::ParameterServer</scope><name>ParameterServer</name></member>
+      <member refid="classapollo_1_1cyber_1_1_parameter_server_1a9a36f8371c476a478cbce477c443aa16" prot="public" virt="non-virtual"><scope>apollo::cyber::ParameterServer</scope><name>ParamName</name></member>
+      <member refid="classapollo_1_1cyber_1_1_parameter_server_1adc6130bafd919f927f669737307a12d1" prot="public" virt="non-virtual"><scope>apollo::cyber::ParameterServer</scope><name>Params</name></member>
+      <member refid="classapollo_1_1cyber_1_1_parameter_server_1a2f6c6c91e98fd38bbc3dfdbee24746d3" prot="private" virt="non-virtual"><scope>apollo::cyber::ParameterServer</scope><name>set_parameter_service_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_parameter_server_1ad54689c4cf62b72601a1fed489fa05b3" prot="public" virt="non-virtual"><scope>apollo::cyber::ParameterServer</scope><name>SetParameter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

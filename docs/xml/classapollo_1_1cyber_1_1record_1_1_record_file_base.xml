@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classapollo_1_1cyber_1_1record_1_1_record_file_base" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>apollo::cyber::record::RecordFileBase</compoundname>
+    <derivedcompoundref refid="classapollo_1_1cyber_1_1record_1_1_record_file_reader" prot="public" virt="non-virtual">apollo::cyber::record::RecordFileReader</derivedcompoundref>
+    <derivedcompoundref refid="classapollo_1_1cyber_1_1record_1_1_record_file_writer" prot="public" virt="non-virtual">apollo::cyber::record::RecordFileWriter</derivedcompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1_record_file_base_1a3dc8cd39b2ed0e2f28490f80923f4582" prot="protected" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex apollo::cyber::record::RecordFileBase::mutex_</definition>
+        <argsstring></argsstring>
+        <name>mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_base.h" line="44" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/file/record_file_base.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1_record_file_base_1a2c1132e34b786a471501e3a43f7be672" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string apollo::cyber::record::RecordFileBase::path_</definition>
+        <argsstring></argsstring>
+        <name>path_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_base.h" line="45" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/file/record_file_base.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1_record_file_base_1aa79e57d487356167d10a8147d8b2edd9" prot="protected" static="no" mutable="no">
+        <type>proto::Header</type>
+        <definition>proto::Header apollo::cyber::record::RecordFileBase::header_</definition>
+        <argsstring></argsstring>
+        <name>header_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_base.h" line="46" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/file/record_file_base.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1_record_file_base_1a5e276abeb8ef5db750f197d422e0cc1f" prot="protected" static="no" mutable="no">
+        <type>proto::Index</type>
+        <definition>proto::Index apollo::cyber::record::RecordFileBase::index_</definition>
+        <argsstring></argsstring>
+        <name>index_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_base.h" line="47" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/file/record_file_base.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1_record_file_base_1aaa370e96b2b0fde778dc514652a0a912" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int apollo::cyber::record::RecordFileBase::fd_</definition>
+        <argsstring></argsstring>
+        <name>fd_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_base.h" line="48" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/file/record_file_base.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_file_base_1afb0962279fdbc35b71f7df8a1d2b1321" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::record::RecordFileBase::RecordFileBase</definition>
+        <argsstring>()=default</argsstring>
+        <name>RecordFileBase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_base.h" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_file_base_1a7a9ce97d8bae01fa9cb3ae8632e34f84" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual apollo::cyber::record::RecordFileBase::~RecordFileBase</definition>
+        <argsstring>()=default</argsstring>
+        <name>~RecordFileBase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_base.h" line="34" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_file_base_1a9128d7ad36b3331d21e0eae475632892" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool apollo::cyber::record::RecordFileBase::Open</definition>
+        <argsstring>(const std::string &amp;path)=0</argsstring>
+        <name>Open</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1record_1_1_record_file_reader_1acfa88962cea18d7b501d89aa25e6357d">Open</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1a1ad9eb3d567f7864612c452a75b0c967">Open</reimplementedby>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_base.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_file_base_1a6792f98d27bf7e3d4557156122bd43ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void apollo::cyber::record::RecordFileBase::Close</definition>
+        <argsstring>()=0</argsstring>
+        <name>Close</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1record_1_1_record_file_reader_1ac4e0a584b0ee980e42418511d9743d1f">Close</reimplementedby>
+        <reimplementedby refid="classapollo_1_1cyber_1_1record_1_1_record_file_writer_1aa0eadfe8e1f3f91c17babefb0d5e4c7e">Close</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_base.h" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_file_base_1a206265263d6a60524e4cb3d0379a24b4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string&amp; apollo::cyber::record::RecordFileBase::GetPath</definition>
+        <argsstring>() const </argsstring>
+        <name>GetPath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_base.h" line="37" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/file/record_file_base.h" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_file_base_1a991448d6e22680b7927442e5097da803" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const proto::Header &amp;</type>
+        <definition>const proto::Header&amp; apollo::cyber::record::RecordFileBase::GetHeader</definition>
+        <argsstring>() const </argsstring>
+        <name>GetHeader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_base.h" line="38" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/file/record_file_base.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_file_base_1a2b9da49b15ba7f4ef1b0717edb8d75a1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const proto::Index &amp;</type>
+        <definition>const proto::Index&amp; apollo::cyber::record::RecordFileBase::GetIndex</definition>
+        <argsstring>() const </argsstring>
+        <name>GetIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_base.h" line="39" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/file/record_file_base.h" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_file_base_1ae9ab782e3a023c522ccb2de275622559" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>int64_t apollo::cyber::record::RecordFileBase::CurrentPosition</definition>
+        <argsstring>()</argsstring>
+        <name>CurrentPosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_base.h" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_file_base_1a5349dcfbdbc71a784e7eef98504c04ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::RecordFileBase::SetPosition</definition>
+        <argsstring>(int64_t position)</argsstring>
+        <name>SetPosition</name>
+        <param>
+          <type>int64_t</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_base.h" line="41" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="642">
+        <label>apollo::cyber::record::RecordFileReader</label>
+        <link refid="classapollo_1_1cyber_1_1record_1_1_record_file_reader"/>
+        <childnode refid="641" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="643">
+        <label>apollo::cyber::record::RecordFileWriter</label>
+        <link refid="classapollo_1_1cyber_1_1record_1_1_record_file_writer"/>
+        <childnode refid="641" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="641">
+        <label>apollo::cyber::record::RecordFileBase</label>
+        <link refid="classapollo_1_1cyber_1_1record_1_1_record_file_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="645">
+        <label>string</label>
+      </node>
+      <node id="644">
+        <label>apollo::cyber::record::RecordFileBase</label>
+        <link refid="classapollo_1_1cyber_1_1record_1_1_record_file_base"/>
+        <childnode refid="645" relation="usage">
+          <edgelabel>path_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dexin/code/Edith/cyber/record/file/record_file_base.h" line="31" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/file/record_file_base.h" bodystart="31" bodyend="49"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_base_1a6792f98d27bf7e3d4557156122bd43ab" prot="public" virt="pure-virtual"><scope>apollo::cyber::record::RecordFileBase</scope><name>Close</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_base_1ae9ab782e3a023c522ccb2de275622559" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordFileBase</scope><name>CurrentPosition</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_base_1aaa370e96b2b0fde778dc514652a0a912" prot="protected" virt="non-virtual"><scope>apollo::cyber::record::RecordFileBase</scope><name>fd_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_base_1a991448d6e22680b7927442e5097da803" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordFileBase</scope><name>GetHeader</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_base_1a2b9da49b15ba7f4ef1b0717edb8d75a1" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordFileBase</scope><name>GetIndex</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_base_1a206265263d6a60524e4cb3d0379a24b4" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordFileBase</scope><name>GetPath</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_base_1aa79e57d487356167d10a8147d8b2edd9" prot="protected" virt="non-virtual"><scope>apollo::cyber::record::RecordFileBase</scope><name>header_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_base_1a5e276abeb8ef5db750f197d422e0cc1f" prot="protected" virt="non-virtual"><scope>apollo::cyber::record::RecordFileBase</scope><name>index_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_base_1a3dc8cd39b2ed0e2f28490f80923f4582" prot="protected" virt="non-virtual"><scope>apollo::cyber::record::RecordFileBase</scope><name>mutex_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_base_1a9128d7ad36b3331d21e0eae475632892" prot="public" virt="pure-virtual"><scope>apollo::cyber::record::RecordFileBase</scope><name>Open</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_base_1a2c1132e34b786a471501e3a43f7be672" prot="protected" virt="non-virtual"><scope>apollo::cyber::record::RecordFileBase</scope><name>path_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_base_1afb0962279fdbc35b71f7df8a1d2b1321" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordFileBase</scope><name>RecordFileBase</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_base_1a5349dcfbdbc71a784e7eef98504c04ea" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordFileBase</scope><name>SetPosition</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_file_base_1a7a9ce97d8bae01fa9cb3ae8632e34f84" prot="public" virt="virtual"><scope>apollo::cyber::record::RecordFileBase</scope><name>~RecordFileBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

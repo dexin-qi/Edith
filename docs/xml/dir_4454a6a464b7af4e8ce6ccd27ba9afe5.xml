@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="dir_4454a6a464b7af4e8ce6ccd27ba9afe5" kind="dir">
+    <compoundname>/home/dexin/code/Edith/cyber/python</compoundname>
+    <innerdir refid="dir_b7352e8b446a5a8fbb51a064e162f9cc">/home/dexin/code/Edith/cyber/python/cyber_py</innerdir>
+    <innerdir refid="dir_1d865fbc2ea47c190629a15b1800bf4d">/home/dexin/code/Edith/cyber/python/cyber_py3</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dexin/code/Edith/cyber/python/"/>
+  </compounddef>
+</doxygen>

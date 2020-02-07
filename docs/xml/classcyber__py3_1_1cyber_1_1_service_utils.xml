@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classcyber__py3_1_1cyber_1_1_service_utils" kind="class" language="Python" prot="public">
+    <compoundname>cyber_py3::cyber::ServiceUtils</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">object</basecompoundref>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcyber__py3_1_1cyber_1_1_service_utils_1a75b0ff5a0a92e890ec77c26fd44b852d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.cyber.ServiceUtils.get_services</definition>
+        <argsstring>(sleep_s=2)</argsstring>
+        <name>get_services</name>
+        <param>
+          <type>sleep_s</type>
+          <defname>sleep_s</defname>
+          <defval>2</defval>
+        </param>
+        <briefdescription>
+<para>Get all active service names. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sleep_s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>wait time for topo discovery.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>all active service names. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" line="453" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" bodystart="453" bodyend="455"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py3_1_1cyber_1_1_service_utils_1a702abeda7e17fb5a0c22c0eaf0071022" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.cyber.ServiceUtils.get_service_attr</definition>
+        <argsstring>(service_name, sleep_s=2)</argsstring>
+        <name>get_service_attr</name>
+        <param>
+          <type>service_name</type>
+          <defname>service_name</defname>
+        </param>
+        <param>
+          <type>sleep_s</type>
+          <defname>sleep_s</defname>
+          <defval>2</defval>
+        </param>
+        <briefdescription>
+<para>Get service attribute by the service name. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>service_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>service name. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sleep_s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>wait time for topo discovery.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the service&apos;s attribute. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" line="464" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" bodystart="464" bodyend="466"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="727">
+        <label>cyber_py3.cyber.ServiceUtils</label>
+        <link refid="classcyber__py3_1_1cyber_1_1_service_utils"/>
+        <childnode refid="728" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="728">
+        <label>object</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="729">
+        <label>cyber_py3.cyber.ServiceUtils</label>
+        <link refid="classcyber__py3_1_1cyber_1_1_service_utils"/>
+        <childnode refid="730" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="730">
+        <label>object</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" line="444" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" bodystart="444" bodyend="466"/>
+    <listofallmembers>
+      <member refid="classcyber__py3_1_1cyber_1_1_service_utils_1a702abeda7e17fb5a0c22c0eaf0071022" prot="public" virt="non-virtual"><scope>cyber_py3::cyber::ServiceUtils</scope><name>get_service_attr</name></member>
+      <member refid="classcyber__py3_1_1cyber_1_1_service_utils_1a75b0ff5a0a92e890ec77c26fd44b852d" prot="public" virt="non-virtual"><scope>cyber_py3::cyber::ServiceUtils</scope><name>get_services</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

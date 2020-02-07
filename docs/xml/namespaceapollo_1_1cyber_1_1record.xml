@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="namespaceapollo_1_1cyber_1_1record" kind="namespace" language="C++">
+    <compoundname>apollo::cyber::record</compoundname>
+    <innerclass refid="structapollo_1_1cyber_1_1record_1_1_chunk" prot="public">apollo::cyber::record::Chunk</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1record_1_1_header_builder" prot="public">apollo::cyber::record::HeaderBuilder</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1record_1_1_record_base" prot="public">apollo::cyber::record::RecordBase</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1record_1_1_record_file_base" prot="public">apollo::cyber::record::RecordFileBase</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1record_1_1_record_file_reader" prot="public">apollo::cyber::record::RecordFileReader</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1record_1_1_record_file_writer" prot="public">apollo::cyber::record::RecordFileWriter</innerclass>
+    <innerclass refid="structapollo_1_1cyber_1_1record_1_1_record_message" prot="public">apollo::cyber::record::RecordMessage</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1record_1_1_record_reader" prot="public">apollo::cyber::record::RecordReader</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1record_1_1_record_viewer" prot="public">apollo::cyber::record::RecordViewer</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1record_1_1_record_writer" prot="public">apollo::cyber::record::RecordWriter</innerclass>
+    <innerclass refid="structapollo_1_1cyber_1_1record_1_1_section" prot="public">apollo::cyber::record::Section</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="record__file__base_8h_1afa8c164e9d516ce65e39bcc9d3689a05" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int apollo::cyber::record::HEADER_LENGTH</definition>
+        <argsstring></argsstring>
+        <name>HEADER_LENGTH</name>
+        <initializer>= 2048</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_base.h" line="29" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/file/record_file_base.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="record__message_8h_1a14d7e2759675c862eb695ed265564c33" prot="public" static="yes" mutable="no">
+        <type>constexpr size_t</type>
+        <definition>constexpr size_t apollo::cyber::record::kGB</definition>
+        <argsstring></argsstring>
+        <name>kGB</name>
+        <initializer>= 1 &lt;&lt; 30</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/record_message.h" line="27" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/record_message.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="record__message_8h_1a21fa2aed6a738fb762069f23b4f7602a" prot="public" static="yes" mutable="no">
+        <type>constexpr size_t</type>
+        <definition>constexpr size_t apollo::cyber::record::kMB</definition>
+        <argsstring></argsstring>
+        <name>kMB</name>
+        <initializer>= 1 &lt;&lt; 20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/record_message.h" line="28" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/record_message.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="record__message_8h_1adcac01e7090dc96f158f7ad829413fa6" prot="public" static="yes" mutable="no">
+        <type>constexpr size_t</type>
+        <definition>constexpr size_t apollo::cyber::record::kKB</definition>
+        <argsstring></argsstring>
+        <name>kKB</name>
+        <initializer>= 1 &lt;&lt; 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/record_message.h" line="29" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/record_message.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dexin/code/Edith/cyber/record/file/record_file_base.h" line="27" column="1"/>
+  </compounddef>
+</doxygen>

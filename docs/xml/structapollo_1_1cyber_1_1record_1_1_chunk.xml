@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="structapollo_1_1cyber_1_1record_1_1_chunk" kind="struct" language="C++" prot="public">
+    <compoundname>apollo::cyber::record::Chunk</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structapollo_1_1cyber_1_1record_1_1_chunk_1af89d9a0952404a4d3f3877da67b40128" prot="public" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex apollo::cyber::record::Chunk::mutex_</definition>
+        <argsstring></argsstring>
+        <name>mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" line="72" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structapollo_1_1cyber_1_1record_1_1_chunk_1af00b81b964ea3450254860ef2a53def4" prot="public" static="no" mutable="no">
+        <type>proto::ChunkHeader</type>
+        <definition>proto::ChunkHeader apollo::cyber::record::Chunk::header_</definition>
+        <argsstring></argsstring>
+        <name>header_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" line="73" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structapollo_1_1cyber_1_1record_1_1_chunk_1aa43914ba9cf2344bdb13d32e6fe22a7f" prot="public" static="no" mutable="no">
+        <type>std::unique_ptr&lt; proto::ChunkBody &gt;</type>
+        <definition>std::unique_ptr&lt;proto::ChunkBody&gt; apollo::cyber::record::Chunk::body_</definition>
+        <argsstring></argsstring>
+        <name>body_</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" line="74" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structapollo_1_1cyber_1_1record_1_1_chunk_1a2cf02bb8d216f44ecff00f4e08c07897" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::record::Chunk::Chunk</definition>
+        <argsstring>()</argsstring>
+        <name>Chunk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" line="43" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="structapollo_1_1cyber_1_1record_1_1_chunk_1a05ac768236d95c41080758f19b7d5a98" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::record::Chunk::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" line="45" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" bodystart="45" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="structapollo_1_1cyber_1_1record_1_1_chunk_1a82e3163188a9bb98bf812b0a4ccc438c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::record::Chunk::add</definition>
+        <argsstring>(const proto::SingleMessage &amp;message)</argsstring>
+        <name>add</name>
+        <param>
+          <type>const proto::SingleMessage &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" line="53" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" bodystart="53" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="structapollo_1_1cyber_1_1record_1_1_chunk_1a9cc10421521b0bb0b3e0c92f3bf5dfed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::Chunk::empty</definition>
+        <argsstring>()</argsstring>
+        <name>empty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" line="70" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" bodystart="70" bodyend="70"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" line="42" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/file/record_file_writer.h" bodystart="42" bodyend="75"/>
+    <listofallmembers>
+      <member refid="structapollo_1_1cyber_1_1record_1_1_chunk_1a82e3163188a9bb98bf812b0a4ccc438c" prot="public" virt="non-virtual"><scope>apollo::cyber::record::Chunk</scope><name>add</name></member>
+      <member refid="structapollo_1_1cyber_1_1record_1_1_chunk_1aa43914ba9cf2344bdb13d32e6fe22a7f" prot="public" virt="non-virtual"><scope>apollo::cyber::record::Chunk</scope><name>body_</name></member>
+      <member refid="structapollo_1_1cyber_1_1record_1_1_chunk_1a2cf02bb8d216f44ecff00f4e08c07897" prot="public" virt="non-virtual"><scope>apollo::cyber::record::Chunk</scope><name>Chunk</name></member>
+      <member refid="structapollo_1_1cyber_1_1record_1_1_chunk_1a05ac768236d95c41080758f19b7d5a98" prot="public" virt="non-virtual"><scope>apollo::cyber::record::Chunk</scope><name>clear</name></member>
+      <member refid="structapollo_1_1cyber_1_1record_1_1_chunk_1a9cc10421521b0bb0b3e0c92f3bf5dfed" prot="public" virt="non-virtual"><scope>apollo::cyber::record::Chunk</scope><name>empty</name></member>
+      <member refid="structapollo_1_1cyber_1_1record_1_1_chunk_1af00b81b964ea3450254860ef2a53def4" prot="public" virt="non-virtual"><scope>apollo::cyber::record::Chunk</scope><name>header_</name></member>
+      <member refid="structapollo_1_1cyber_1_1record_1_1_chunk_1af89d9a0952404a4d3f3877da67b40128" prot="public" virt="non-virtual"><scope>apollo::cyber::record::Chunk</scope><name>mutex_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

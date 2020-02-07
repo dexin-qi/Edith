@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="namespacetest__record" kind="namespace" language="Python">
+    <compoundname>test_record</compoundname>
+    <innerclass refid="classtest__record_1_1_test_record" prot="public">test_record::TestRecord</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="test_2test__record_8py_1a7af0838f5e2ad55d380da2f6e914e518" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string test_record::TEST_RECORD_FILE</definition>
+        <argsstring></argsstring>
+        <name>TEST_RECORD_FILE</name>
+        <initializer>= &quot;/tmp/test02.record&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/test/test_record.py" line="28" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/test/test_record.py" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="test_2test__record_8py_1adca828a9effaf7942836b8c7eb880f86" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string test_record::CHAN_1</definition>
+        <argsstring></argsstring>
+        <name>CHAN_1</name>
+        <initializer>= &quot;channel/chatter&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/test/test_record.py" line="29" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/test/test_record.py" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="test_2test__record_8py_1a467a1bcc9e9f1b8f29d3e755ed259f88" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string test_record::MSG_TYPE</definition>
+        <argsstring></argsstring>
+        <name>MSG_TYPE</name>
+        <initializer>= &quot;apollo.common.util.test.SimpleMessage&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/test/test_record.py" line="30" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/test/test_record.py" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="test_2test__record_8py_1a26c4a087a5b577a85dfdb6772e1d9f8f" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string test_record::PROTO_DESC</definition>
+        <argsstring></argsstring>
+        <name>PROTO_DESC</name>
+        <initializer>= &quot;1234567890&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/test/test_record.py" line="31" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/test/test_record.py" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="test_2test__record_8py_1a07fe3cce7359c143c330312f3c9181fd" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string test_record::MSG_DATA</definition>
+        <argsstring></argsstring>
+        <name>MSG_DATA</name>
+        <initializer>= &quot;0123456789&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/test/test_record.py" line="32" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/test/test_record.py" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="test_2test__record_8py_1a154b495674b6b8445f41301f2a9fd499" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int test_record::TIME</definition>
+        <argsstring></argsstring>
+        <name>TIME</name>
+        <initializer>= 999</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/test/test_record.py" line="33" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/test/test_record.py" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dexin/code/Edith/cyber/python/cyber_py/test/test_record.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

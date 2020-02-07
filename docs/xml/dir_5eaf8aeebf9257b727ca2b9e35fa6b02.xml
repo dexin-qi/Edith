@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="dir_5eaf8aeebf9257b727ca2b9e35fa6b02" kind="dir">
+    <compoundname>/home/dexin/code/Edith/cyber/time</compoundname>
+    <innerfile refid="duration_8h">duration.h</innerfile>
+    <innerfile refid="rate_8h">rate.h</innerfile>
+    <innerfile refid="time_8h">time.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dexin/code/Edith/cyber/time/"/>
+  </compounddef>
+</doxygen>

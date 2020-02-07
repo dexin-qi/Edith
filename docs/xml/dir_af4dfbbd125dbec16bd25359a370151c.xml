@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="dir_af4dfbbd125dbec16bd25359a370151c" kind="dir">
+    <compoundname>/home/dexin/code/Edith/cyber/service_discovery/container</compoundname>
+    <innerfile refid="graph_8h">graph.h</innerfile>
+    <innerfile refid="multi__value__warehouse_8h">multi_value_warehouse.h</innerfile>
+    <innerfile refid="single__value__warehouse_8h">single_value_warehouse.h</innerfile>
+    <innerfile refid="warehouse__base_8h">warehouse_base.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dexin/code/Edith/cyber/service_discovery/container/"/>
+  </compounddef>
+</doxygen>

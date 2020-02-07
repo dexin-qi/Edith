@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classapollo_1_1cyber_1_1_receiver_manager" kind="class" language="C++" prot="public">
+    <compoundname>apollo::cyber::ReceiverManager</compoundname>
+    <includes refid="reader__base_8h" local="no">reader_base.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename MessageT</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_receiver_manager_1a14b14b40ce05bdc1677e7ff0d99b2c44" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, typename std::shared_ptr&lt; transport::Receiver&lt; MessageT &gt; &gt; &gt;</type>
+        <definition>std::unordered_map&lt;std::string, typename std::shared_ptr&lt;transport::Receiver&lt;MessageT&gt; &gt; &gt; apollo::cyber::ReceiverManager&lt; MessageT &gt;::receiver_map_</definition>
+        <argsstring></argsstring>
+        <name>receiver_map_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/node/reader_base.h" line="179" column="1" bodyfile="/home/dexin/code/Edith/cyber/node/reader_base.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_receiver_manager_1aec1d31290551f065d0af89d4a94f7c5c" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex apollo::cyber::ReceiverManager&lt; MessageT &gt;::receiver_map_mutex_</definition>
+        <argsstring></argsstring>
+        <name>receiver_map_mutex_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/node/reader_base.h" line="180" column="1" bodyfile="/home/dexin/code/Edith/cyber/node/reader_base.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_receiver_manager_1a456021b6463afbe8535f80ca7a438589" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::ReceiverManager&lt; MessageT &gt;::~ReceiverManager</definition>
+        <argsstring>()</argsstring>
+        <name>~ReceiverManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/node/reader_base.h" line="166" column="1" bodyfile="/home/dexin/code/Edith/cyber/node/reader_base.h" bodystart="166" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_receiver_manager_1a06ac2c615eb75c3cbeb58e9af5d3730b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto apollo::cyber::ReceiverManager&lt; MessageT &gt;::GetReceiver</definition>
+        <argsstring>(const proto::RoleAttributes &amp;role_attr) -&gt; typename std::shared_ptr&lt; transport::Receiver&lt; MessageT &gt;&gt;</argsstring>
+        <name>GetReceiver</name>
+        <param>
+          <type>const proto::RoleAttributes &amp;</type>
+          <declname>role_attr</declname>
+        </param>
+        <briefdescription>
+<para>Get the Receiver object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>role_attr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the attribute that the Receiver has </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::shared_ptr&lt;transport::Receiver&lt;MessageT&gt;&gt; result Receiver </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/node/reader_base.h" line="174" column="1" bodyfile="/home/dexin/code/Edith/cyber/node/reader_base.h" bodystart="194" bodyend="214"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>One Channel is related to one Receiver. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classapollo_1_1cyber_1_1_receiver_manager" kindref="compound">ReceiverManager</ref> is in charge of attaching one Receiver to its responding Channel. We pass a DataDispatche&apos;s callback func to this Receiver so when a message is received, it will be push to the <computeroutput>ChannelBuffer</computeroutput>, and <computeroutput>DataVisitor</computeroutput> will <computeroutput>Fetch</computeroutput> data and pass to <computeroutput><ref refid="classapollo_1_1cyber_1_1_reader" kindref="compound">Reader</ref></computeroutput>&apos;s callback func</para><para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>MessageT</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message Type. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <location file="/home/dexin/code/Edith/cyber/node/reader_base.h" line="164" column="1" bodyfile="/home/dexin/code/Edith/cyber/node/reader_base.h" bodystart="164" bodyend="183"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1_receiver_manager_1a06ac2c615eb75c3cbeb58e9af5d3730b" prot="public" virt="non-virtual"><scope>apollo::cyber::ReceiverManager</scope><name>GetReceiver</name></member>
+      <member refid="classapollo_1_1cyber_1_1_receiver_manager_1a14b14b40ce05bdc1677e7ff0d99b2c44" prot="private" virt="non-virtual"><scope>apollo::cyber::ReceiverManager</scope><name>receiver_map_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_receiver_manager_1aec1d31290551f065d0af89d4a94f7c5c" prot="private" virt="non-virtual"><scope>apollo::cyber::ReceiverManager</scope><name>receiver_map_mutex_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_receiver_manager_1a456021b6463afbe8535f80ca7a438589" prot="public" virt="non-virtual"><scope>apollo::cyber::ReceiverManager</scope><name>~ReceiverManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

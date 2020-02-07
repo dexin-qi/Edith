@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="dir_1d8b49bd0d37082c629c29cedef2fd87" kind="dir">
+    <compoundname>/home/dexin/code/Edith/cyber/record</compoundname>
+    <innerdir refid="dir_8f32e6d71dabbdb01869fa7b9bd4f365">/home/dexin/code/Edith/cyber/record/file</innerdir>
+    <innerfile refid="header__builder_8h">header_builder.h</innerfile>
+    <innerfile refid="record__base_8h">record_base.h</innerfile>
+    <innerfile refid="record__message_8h">record_message.h</innerfile>
+    <innerfile refid="record__reader_8h">record_reader.h</innerfile>
+    <innerfile refid="record__viewer_8h">record_viewer.h</innerfile>
+    <innerfile refid="record__writer_8h">record_writer.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dexin/code/Edith/cyber/record/"/>
+  </compounddef>
+</doxygen>

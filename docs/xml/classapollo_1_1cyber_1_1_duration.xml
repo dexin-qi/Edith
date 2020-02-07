@@ -1,0 +1,458 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classapollo_1_1cyber_1_1_duration" kind="class" language="C++" prot="public">
+    <compoundname>apollo::cyber::Duration</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_duration_1aa7c53ba8085b28586fac1e915a356d3b" prot="private" static="no" mutable="no">
+        <type>int64_t</type>
+        <definition>int64_t apollo::cyber::Duration::nanoseconds_</definition>
+        <argsstring></argsstring>
+        <name>nanoseconds_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/time/duration.h" line="60" column="1" bodyfile="/home/dexin/code/Edith/cyber/time/duration.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_duration_1a7a5e661b09ebf84ccbd8dbead9f77963" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::Duration::Duration</definition>
+        <argsstring>()</argsstring>
+        <name>Duration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/time/duration.h" line="31" column="1" bodyfile="/home/dexin/code/Edith/cyber/time/duration.h" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_duration_1a16699eaf9e0a21e070ad63b6fe7993c6" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::Duration::Duration</definition>
+        <argsstring>(int64_t nanoseconds)</argsstring>
+        <name>Duration</name>
+        <param>
+          <type>int64_t</type>
+          <declname>nanoseconds</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/time/duration.h" line="32" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_duration_1abb9c8becd41cc055936a2a18195735a8" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::Duration::Duration</definition>
+        <argsstring>(int nanoseconds)</argsstring>
+        <name>Duration</name>
+        <param>
+          <type>int</type>
+          <declname>nanoseconds</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/time/duration.h" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_duration_1a5496457a72e19aafa01eadee586c0666" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::Duration::Duration</definition>
+        <argsstring>(double seconds)</argsstring>
+        <name>Duration</name>
+        <param>
+          <type>double</type>
+          <declname>seconds</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/time/duration.h" line="34" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_duration_1a766cc1a77762fbf1868b31ccea3a454c" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::Duration::Duration</definition>
+        <argsstring>(uint32_t seconds, uint32_t nanoseconds)</argsstring>
+        <name>Duration</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>seconds</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>nanoseconds</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/time/duration.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_duration_1a96eea1cb85abd7f665b8ffd2ae6e6346" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::Duration::Duration</definition>
+        <argsstring>(const Duration &amp;other)</argsstring>
+        <name>Duration</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/time/duration.h" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_duration_1ae98ef6b05c7ab3e66b49353f5461db86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref> &amp;</type>
+        <definition>Duration&amp; apollo::cyber::Duration::operator=</definition>
+        <argsstring>(const Duration &amp;other)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/time/duration.h" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_duration_1a83ef21a27de322184c9faa25026d88c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::Duration::~Duration</definition>
+        <argsstring>()</argsstring>
+        <name>~Duration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/time/duration.h" line="38" column="1" bodyfile="/home/dexin/code/Edith/cyber/time/duration.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_duration_1a61ed856e5c40cf6675845a27c7d7182f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double apollo::cyber::Duration::ToSecond</definition>
+        <argsstring>() const </argsstring>
+        <name>ToSecond</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/time/duration.h" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_duration_1aa5e9e105c79b7087494cb7b6677f0c85" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>int64_t apollo::cyber::Duration::ToNanosecond</definition>
+        <argsstring>() const </argsstring>
+        <name>ToNanosecond</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/time/duration.h" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_duration_1aa9acb321bac196fc2fb5f6e84825bb6a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::Duration::IsZero</definition>
+        <argsstring>() const </argsstring>
+        <name>IsZero</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/time/duration.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_duration_1a240ddeaf69ee492e54c09518191c789b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::Duration::Sleep</definition>
+        <argsstring>() const </argsstring>
+        <name>Sleep</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/time/duration.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_duration_1afd2507261eeedbfa387e28d3954709f1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref></type>
+        <definition>Duration apollo::cyber::Duration::operator+</definition>
+        <argsstring>(const Duration &amp;rhs) const </argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/time/duration.h" line="45" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_duration_1a4a07adceef070a4c0d9225bd69ea5f8a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref></type>
+        <definition>Duration apollo::cyber::Duration::operator-</definition>
+        <argsstring>(const Duration &amp;rhs) const </argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/time/duration.h" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_duration_1a9f0615f3c445ac6850b9c0f295dd9552" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref></type>
+        <definition>Duration apollo::cyber::Duration::operator-</definition>
+        <argsstring>() const </argsstring>
+        <name>operator-</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/time/duration.h" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_duration_1af7c1442e0950357809d9452df2674459" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref></type>
+        <definition>Duration apollo::cyber::Duration::operator*</definition>
+        <argsstring>(double scale) const </argsstring>
+        <name>operator*</name>
+        <param>
+          <type>double</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/time/duration.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_duration_1a32669135bc80a8211f81df67110da7c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref> &amp;</type>
+        <definition>Duration&amp; apollo::cyber::Duration::operator+=</definition>
+        <argsstring>(const Duration &amp;rhs)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/time/duration.h" line="49" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_duration_1aae3b5dacb40e0ef43ad955b6ee63c39a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref> &amp;</type>
+        <definition>Duration&amp; apollo::cyber::Duration::operator-=</definition>
+        <argsstring>(const Duration &amp;rhs)</argsstring>
+        <name>operator-=</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/time/duration.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_duration_1ae4058c0c81fecb76a2e33de5beddc337" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref> &amp;</type>
+        <definition>Duration&amp; apollo::cyber::Duration::operator*=</definition>
+        <argsstring>(double scale)</argsstring>
+        <name>operator*=</name>
+        <param>
+          <type>double</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/time/duration.h" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_duration_1a02d320ebe06cbce72bb554c228f57942" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::Duration::operator==</definition>
+        <argsstring>(const Duration &amp;rhs) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/time/duration.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_duration_1a34d9a42e50f5ab65416f92f8b340b9da" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::Duration::operator!=</definition>
+        <argsstring>(const Duration &amp;rhs) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/time/duration.h" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_duration_1ad57ff542c093f69d52d5fcd1e9bef3e9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::Duration::operator&gt;</definition>
+        <argsstring>(const Duration &amp;rhs) const </argsstring>
+        <name>operator&gt;</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/time/duration.h" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_duration_1aafe6d4c78a88c7fc4cfd8969bc3d3dbc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::Duration::operator&lt;</definition>
+        <argsstring>(const Duration &amp;rhs) const </argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/time/duration.h" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_duration_1ab95228ad318e860cd242be863ba064d3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::Duration::operator&gt;=</definition>
+        <argsstring>(const Duration &amp;rhs) const </argsstring>
+        <name>operator&gt;=</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/time/duration.h" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_duration_1a2dcd98c7a530dac26f54539cd698473f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::Duration::operator&lt;=</definition>
+        <argsstring>(const Duration &amp;rhs) const </argsstring>
+        <name>operator&lt;=</name>
+        <param>
+          <type>const <ref refid="classapollo_1_1cyber_1_1_duration" kindref="compound">Duration</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/time/duration.h" line="57" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dexin/code/Edith/cyber/time/duration.h" line="29" column="1" bodyfile="/home/dexin/code/Edith/cyber/time/duration.h" bodystart="29" bodyend="61"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1_duration_1a7a5e661b09ebf84ccbd8dbead9f77963" prot="public" virt="non-virtual"><scope>apollo::cyber::Duration</scope><name>Duration</name></member>
+      <member refid="classapollo_1_1cyber_1_1_duration_1a16699eaf9e0a21e070ad63b6fe7993c6" prot="public" virt="non-virtual"><scope>apollo::cyber::Duration</scope><name>Duration</name></member>
+      <member refid="classapollo_1_1cyber_1_1_duration_1abb9c8becd41cc055936a2a18195735a8" prot="public" virt="non-virtual"><scope>apollo::cyber::Duration</scope><name>Duration</name></member>
+      <member refid="classapollo_1_1cyber_1_1_duration_1a5496457a72e19aafa01eadee586c0666" prot="public" virt="non-virtual"><scope>apollo::cyber::Duration</scope><name>Duration</name></member>
+      <member refid="classapollo_1_1cyber_1_1_duration_1a766cc1a77762fbf1868b31ccea3a454c" prot="public" virt="non-virtual"><scope>apollo::cyber::Duration</scope><name>Duration</name></member>
+      <member refid="classapollo_1_1cyber_1_1_duration_1a96eea1cb85abd7f665b8ffd2ae6e6346" prot="public" virt="non-virtual"><scope>apollo::cyber::Duration</scope><name>Duration</name></member>
+      <member refid="classapollo_1_1cyber_1_1_duration_1aa9acb321bac196fc2fb5f6e84825bb6a" prot="public" virt="non-virtual"><scope>apollo::cyber::Duration</scope><name>IsZero</name></member>
+      <member refid="classapollo_1_1cyber_1_1_duration_1aa7c53ba8085b28586fac1e915a356d3b" prot="private" virt="non-virtual"><scope>apollo::cyber::Duration</scope><name>nanoseconds_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_duration_1a34d9a42e50f5ab65416f92f8b340b9da" prot="public" virt="non-virtual"><scope>apollo::cyber::Duration</scope><name>operator!=</name></member>
+      <member refid="classapollo_1_1cyber_1_1_duration_1af7c1442e0950357809d9452df2674459" prot="public" virt="non-virtual"><scope>apollo::cyber::Duration</scope><name>operator*</name></member>
+      <member refid="classapollo_1_1cyber_1_1_duration_1ae4058c0c81fecb76a2e33de5beddc337" prot="public" virt="non-virtual"><scope>apollo::cyber::Duration</scope><name>operator*=</name></member>
+      <member refid="classapollo_1_1cyber_1_1_duration_1afd2507261eeedbfa387e28d3954709f1" prot="public" virt="non-virtual"><scope>apollo::cyber::Duration</scope><name>operator+</name></member>
+      <member refid="classapollo_1_1cyber_1_1_duration_1a32669135bc80a8211f81df67110da7c0" prot="public" virt="non-virtual"><scope>apollo::cyber::Duration</scope><name>operator+=</name></member>
+      <member refid="classapollo_1_1cyber_1_1_duration_1a4a07adceef070a4c0d9225bd69ea5f8a" prot="public" virt="non-virtual"><scope>apollo::cyber::Duration</scope><name>operator-</name></member>
+      <member refid="classapollo_1_1cyber_1_1_duration_1a9f0615f3c445ac6850b9c0f295dd9552" prot="public" virt="non-virtual"><scope>apollo::cyber::Duration</scope><name>operator-</name></member>
+      <member refid="classapollo_1_1cyber_1_1_duration_1aae3b5dacb40e0ef43ad955b6ee63c39a" prot="public" virt="non-virtual"><scope>apollo::cyber::Duration</scope><name>operator-=</name></member>
+      <member refid="classapollo_1_1cyber_1_1_duration_1aafe6d4c78a88c7fc4cfd8969bc3d3dbc" prot="public" virt="non-virtual"><scope>apollo::cyber::Duration</scope><name>operator&lt;</name></member>
+      <member refid="classapollo_1_1cyber_1_1_duration_1a2dcd98c7a530dac26f54539cd698473f" prot="public" virt="non-virtual"><scope>apollo::cyber::Duration</scope><name>operator&lt;=</name></member>
+      <member refid="classapollo_1_1cyber_1_1_duration_1ae98ef6b05c7ab3e66b49353f5461db86" prot="public" virt="non-virtual"><scope>apollo::cyber::Duration</scope><name>operator=</name></member>
+      <member refid="classapollo_1_1cyber_1_1_duration_1a02d320ebe06cbce72bb554c228f57942" prot="public" virt="non-virtual"><scope>apollo::cyber::Duration</scope><name>operator==</name></member>
+      <member refid="classapollo_1_1cyber_1_1_duration_1ad57ff542c093f69d52d5fcd1e9bef3e9" prot="public" virt="non-virtual"><scope>apollo::cyber::Duration</scope><name>operator&gt;</name></member>
+      <member refid="classapollo_1_1cyber_1_1_duration_1ab95228ad318e860cd242be863ba064d3" prot="public" virt="non-virtual"><scope>apollo::cyber::Duration</scope><name>operator&gt;=</name></member>
+      <member refid="classapollo_1_1cyber_1_1_duration_1a240ddeaf69ee492e54c09518191c789b" prot="public" virt="non-virtual"><scope>apollo::cyber::Duration</scope><name>Sleep</name></member>
+      <member refid="classapollo_1_1cyber_1_1_duration_1aa5e9e105c79b7087494cb7b6677f0c85" prot="public" virt="non-virtual"><scope>apollo::cyber::Duration</scope><name>ToNanosecond</name></member>
+      <member refid="classapollo_1_1cyber_1_1_duration_1a61ed856e5c40cf6675845a27c7d7182f" prot="public" virt="non-virtual"><scope>apollo::cyber::Duration</scope><name>ToSecond</name></member>
+      <member refid="classapollo_1_1cyber_1_1_duration_1a83ef21a27de322184c9faa25026d88c8" prot="public" virt="non-virtual"><scope>apollo::cyber::Duration</scope><name>~Duration</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

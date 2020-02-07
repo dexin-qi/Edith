@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="namespacecyber__py_1_1cyber__time" kind="namespace" language="Python">
+    <compoundname>cyber_py::cyber_time</compoundname>
+    <innerclass refid="classcyber__py_1_1cyber__time_1_1_duration" prot="public">cyber_py::cyber_time::Duration</innerclass>
+    <innerclass refid="classcyber__py_1_1cyber__time_1_1_rate" prot="public">cyber_py::cyber_time::Rate</innerclass>
+    <innerclass refid="classcyber__py_1_1cyber__time_1_1_time" prot="public">cyber_py::cyber_time::Time</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="cyber__time_8py_1a81767ed7872f735db8f2e9e0ad3ca760" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cyber_py::cyber_time.CYBER_PATH</definition>
+        <argsstring></argsstring>
+        <name>CYBER_PATH</name>
+        <initializer>= os.environ[&apos;CYBER_PATH&apos;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="27" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cyber__time_8py_1a927b6e17923d7e8a2f4414c2c0db5c3f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cyber_py::cyber_time.CYBER_DIR</definition>
+        <argsstring></argsstring>
+        <name>CYBER_DIR</name>
+        <initializer>= os.path.split(CYBER_PATH)[0]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="28" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cyber__time_8py_1a55cfe6478d204e2768242f2df860d1f6" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>cyber_py::cyber_time._CYBER</definition>
+        <argsstring></argsstring>
+        <name>_CYBER</name>
+        <initializer>= importlib.import_module(&apos;_cyber&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="37" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cyber__time_8py_1a3c9bdb3cbcc544b262e16d2d14f9abb8" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>cyber_py::cyber_time._CYBER_TIME</definition>
+        <argsstring></argsstring>
+        <name>_CYBER_TIME</name>
+        <initializer>= importlib.import_module(&apos;_cyber_time&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="38" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

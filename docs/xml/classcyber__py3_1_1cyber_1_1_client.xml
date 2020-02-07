@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classcyber__py3_1_1cyber_1_1_client" kind="class" language="Python" prot="public">
+    <compoundname>cyber_py3::cyber::Client</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">object</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classcyber__py3_1_1cyber_1_1_client_1af34d307b48706946c58acb080cce2e8b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cyber_py3.cyber.Client::client</definition>
+        <argsstring></argsstring>
+        <name>client</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" line="133" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcyber__py3_1_1cyber_1_1_client_1ab5fe18d8eb08b6bdb66f0f7d79a1fd53" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cyber_py3.cyber.Client::data_type</definition>
+        <argsstring></argsstring>
+        <name>data_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" line="134" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcyber__py3_1_1cyber_1_1_client_1aeb600b698eaab78644f3779cce5f313a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.cyber.Client.__init__</definition>
+        <argsstring>(self, client, data_type)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>client</type>
+          <defname>client</defname>
+        </param>
+        <param>
+          <type>data_type</type>
+          <defname>data_type</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" line="132" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" bodystart="132" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py3_1_1cyber_1_1_client_1af81dab70c2444b7a260ec4fb08e2c66f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.cyber.Client.send_request</definition>
+        <argsstring>(self, data)</argsstring>
+        <name>send_request</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>data</type>
+          <defname>data</defname>
+        </param>
+        <briefdescription>
+<para>send request message to service. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is a message type.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None or response from service. <verbatim>send request to service
+</verbatim> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" line="142" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" bodystart="142" bodyend="155"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Class for cyber service client wrapper.
+</verbatim> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="443">
+        <label>object</label>
+      </node>
+      <node id="442">
+        <label>cyber_py3.cyber.Client</label>
+        <link refid="classcyber__py3_1_1cyber_1_1_client"/>
+        <childnode refid="443" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="445">
+        <label>object</label>
+      </node>
+      <node id="444">
+        <label>cyber_py3.cyber.Client</label>
+        <link refid="classcyber__py3_1_1cyber_1_1_client"/>
+        <childnode refid="445" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" line="126" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber.py" bodystart="126" bodyend="156"/>
+    <listofallmembers>
+      <member refid="classcyber__py3_1_1cyber_1_1_client_1aeb600b698eaab78644f3779cce5f313a" prot="public" virt="non-virtual"><scope>cyber_py3::cyber::Client</scope><name>__init__</name></member>
+      <member refid="classcyber__py3_1_1cyber_1_1_client_1af34d307b48706946c58acb080cce2e8b" prot="public" virt="non-virtual"><scope>cyber_py3::cyber::Client</scope><name>client</name></member>
+      <member refid="classcyber__py3_1_1cyber_1_1_client_1ab5fe18d8eb08b6bdb66f0f7d79a1fd53" prot="public" virt="non-virtual"><scope>cyber_py3::cyber::Client</scope><name>data_type</name></member>
+      <member refid="classcyber__py3_1_1cyber_1_1_client_1af81dab70c2444b7a260ec4fb08e2c66f" prot="public" virt="non-virtual"><scope>cyber_py3::cyber::Client</scope><name>send_request</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

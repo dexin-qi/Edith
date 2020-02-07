@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="structapollo_1_1cyber_1_1_reader_config" kind="struct" language="C++" prot="public">
+    <compoundname>apollo::cyber::ReaderConfig</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structapollo_1_1cyber_1_1_reader_config_1aaffc3b9efdd953a4fad71e9709a1e79b" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string apollo::cyber::ReaderConfig::channel_name</definition>
+        <argsstring></argsstring>
+        <name>channel_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/node/node_channel_impl.h" line="52" column="1" bodyfile="/home/dexin/code/Edith/cyber/node/node_channel_impl.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structapollo_1_1cyber_1_1_reader_config_1a8cf1a58770f0b0abef6a2f3d33b2778c" prot="public" static="no" mutable="no">
+        <type>proto::QosProfile</type>
+        <definition>proto::QosProfile apollo::cyber::ReaderConfig::qos_profile</definition>
+        <argsstring></argsstring>
+        <name>qos_profile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/node/node_channel_impl.h" line="53" column="1" bodyfile="/home/dexin/code/Edith/cyber/node/node_channel_impl.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structapollo_1_1cyber_1_1_reader_config_1affa7656a5714023523d0f9202d0d0f2b" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t apollo::cyber::ReaderConfig::pending_queue_size</definition>
+        <argsstring></argsstring>
+        <name>pending_queue_size</name>
+        <briefdescription>
+<para>configuration for responding ChannelBuffer. </para>        </briefdescription>
+        <detaileddescription>
+<para>Older messages will dropped if you have no time to handle </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/node/node_channel_impl.h" line="58" column="1" bodyfile="/home/dexin/code/Edith/cyber/node/node_channel_impl.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structapollo_1_1cyber_1_1_reader_config_1aeba0186e348e190f4749430b9bbc9d96" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::ReaderConfig::ReaderConfig</definition>
+        <argsstring>()</argsstring>
+        <name>ReaderConfig</name>
+        <briefdescription>
+<para>&lt; configurations for a <ref refid="classapollo_1_1cyber_1_1_reader" kindref="compound">Reader</ref> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/node/node_channel_impl.h" line="37" column="1" bodyfile="/home/dexin/code/Edith/cyber/node/node_channel_impl.h" bodystart="37" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="structapollo_1_1cyber_1_1_reader_config_1aaa1830dccef81c6ee40a48c8ff2d1129" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::ReaderConfig::ReaderConfig</definition>
+        <argsstring>(const ReaderConfig &amp;other)</argsstring>
+        <name>ReaderConfig</name>
+        <param>
+          <type>const <ref refid="structapollo_1_1cyber_1_1_reader_config" kindref="compound">ReaderConfig</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/node/node_channel_impl.h" line="47" column="1" bodyfile="/home/dexin/code/Edith/cyber/node/node_channel_impl.h" bodystart="47" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="633">
+        <label>string</label>
+      </node>
+      <node id="632">
+        <label>apollo::cyber::ReaderConfig</label>
+        <link refid="structapollo_1_1cyber_1_1_reader_config"/>
+        <childnode refid="633" relation="usage">
+          <edgelabel>channel_name</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dexin/code/Edith/cyber/node/node_channel_impl.h" line="36" column="1" bodyfile="/home/dexin/code/Edith/cyber/node/node_channel_impl.h" bodystart="36" bodyend="59"/>
+    <listofallmembers>
+      <member refid="structapollo_1_1cyber_1_1_reader_config_1aaffc3b9efdd953a4fad71e9709a1e79b" prot="public" virt="non-virtual"><scope>apollo::cyber::ReaderConfig</scope><name>channel_name</name></member>
+      <member refid="structapollo_1_1cyber_1_1_reader_config_1affa7656a5714023523d0f9202d0d0f2b" prot="public" virt="non-virtual"><scope>apollo::cyber::ReaderConfig</scope><name>pending_queue_size</name></member>
+      <member refid="structapollo_1_1cyber_1_1_reader_config_1a8cf1a58770f0b0abef6a2f3d33b2778c" prot="public" virt="non-virtual"><scope>apollo::cyber::ReaderConfig</scope><name>qos_profile</name></member>
+      <member refid="structapollo_1_1cyber_1_1_reader_config_1aeba0186e348e190f4749430b9bbc9d96" prot="public" virt="non-virtual"><scope>apollo::cyber::ReaderConfig</scope><name>ReaderConfig</name></member>
+      <member refid="structapollo_1_1cyber_1_1_reader_config_1aaa1830dccef81c6ee40a48c8ff2d1129" prot="public" virt="non-virtual"><scope>apollo::cyber::ReaderConfig</scope><name>ReaderConfig</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

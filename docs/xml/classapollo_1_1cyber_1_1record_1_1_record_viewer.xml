@@ -1,0 +1,486 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classapollo_1_1cyber_1_1record_1_1_record_viewer" kind="class" language="C++" prot="public">
+    <compoundname>apollo::cyber::record::RecordViewer</compoundname>
+    <includes refid="record__viewer_8h" local="no">record_viewer.h</includes>
+    <innerclass refid="classapollo_1_1cyber_1_1record_1_1_record_viewer_1_1_iterator" prot="public">apollo::cyber::record::RecordViewer::Iterator</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a70f4191b0d79cbc8d8213f1227fd8609" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classapollo_1_1cyber_1_1record_1_1_record_reader" kindref="compound">RecordReader</ref> &gt;</type>
+        <definition>using apollo::cyber::record::RecordViewer::RecordReaderPtr =  std::shared_ptr&lt;RecordReader&gt;</definition>
+        <argsstring></argsstring>
+        <name>RecordReaderPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/record_viewer.h" line="39" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/record_viewer.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a9830fc407400559db7e7783cc10a9394" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class Iterator</definition>
+        <argsstring></argsstring>
+        <name>Iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/record_viewer.h" line="178" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/record_viewer.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a8d4525026acdfae38a0fe6c943315b9f" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::record::RecordViewer::begin_time_</definition>
+        <argsstring></argsstring>
+        <name>begin_time_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/record_viewer.h" line="186" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/record_viewer.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a122d865feea8eefb448bdb10c47082c8" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::record::RecordViewer::end_time_</definition>
+        <argsstring></argsstring>
+        <name>end_time_</name>
+        <initializer>= UINT64_MAX</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/record_viewer.h" line="187" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/record_viewer.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1_record_viewer_1ade7529a1b8e9e8bc5f79bff113c32092" prot="private" static="no" mutable="no">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt;std::string&gt; apollo::cyber::record::RecordViewer::channels_</definition>
+        <argsstring></argsstring>
+        <name>channels_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/record_viewer.h" line="189" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/record_viewer.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1_record_viewer_1ad695e1188e7f7b25fc1e9a86fc7ed87f" prot="private" static="no" mutable="no">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt;std::string&gt; apollo::cyber::record::RecordViewer::channel_list_</definition>
+        <argsstring></argsstring>
+        <name>channel_list_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/record_viewer.h" line="191" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/record_viewer.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1_record_viewer_1abfbbd6d4ac0ef2819ffa57be352e7bd1" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; RecordReaderPtr &gt;</type>
+        <definition>std::vector&lt;RecordReaderPtr&gt; apollo::cyber::record::RecordViewer::readers_</definition>
+        <argsstring></argsstring>
+        <name>readers_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/record_viewer.h" line="192" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/record_viewer.h" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a08005bf5452618ab9bdedd6f54da1bc9" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; bool &gt;</type>
+        <definition>std::vector&lt;bool&gt; apollo::cyber::record::RecordViewer::readers_finished_</definition>
+        <argsstring></argsstring>
+        <name>readers_finished_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/record_viewer.h" line="193" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/record_viewer.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a5a1cce2bc3ddd982742354c66aef13fd" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::record::RecordViewer::curr_begin_time_</definition>
+        <argsstring></argsstring>
+        <name>curr_begin_time_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/record_viewer.h" line="195" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/record_viewer.h" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1_record_viewer_1ac7877d001fd1ebb44c43cbc37ac136cb" prot="private" static="no" mutable="no">
+        <type>std::multimap&lt; uint64_t, std::shared_ptr&lt; <ref refid="structapollo_1_1cyber_1_1record_1_1_record_message" kindref="compound">RecordMessage</ref> &gt; &gt;</type>
+        <definition>std::multimap&lt;uint64_t, std::shared_ptr&lt;RecordMessage&gt; &gt; apollo::cyber::record::RecordViewer::msg_buffer_</definition>
+        <argsstring></argsstring>
+        <name>msg_buffer_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/record_viewer.h" line="196" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/record_viewer.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1_record_viewer_1aac975118f31e4a376fa1f02f0a04291c" prot="private" static="no" mutable="no">
+        <type>const uint64_t</type>
+        <definition>const uint64_t apollo::cyber::record::RecordViewer::kStepTimeNanoSec</definition>
+        <argsstring></argsstring>
+        <name>kStepTimeNanoSec</name>
+        <initializer>= 1000000000UL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/record_viewer.h" line="198" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/record_viewer.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a9b5c3fd4e6ec8d65628d070a40f854a7" prot="private" static="no" mutable="no">
+        <type>const std::size_t</type>
+        <definition>const std::size_t apollo::cyber::record::RecordViewer::kBufferMinSize</definition>
+        <argsstring></argsstring>
+        <name>kBufferMinSize</name>
+        <initializer>= 128</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/record_viewer.h" line="199" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/record_viewer.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a56a61361a809d14baf97b63d28ee79f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::record::RecordViewer::RecordViewer</definition>
+        <argsstring>(const RecordReaderPtr &amp;reader, uint64_t begin_time=0, uint64_t end_time=UINT64_MAX, const std::set&lt; std::string &gt; &amp;channels=std::set&lt; std::string &gt;())</argsstring>
+        <name>RecordViewer</name>
+        <param>
+          <type>const RecordReaderPtr &amp;</type>
+          <declname>reader</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>begin_time</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>end_time</declname>
+          <defval>UINT64_MAX</defval>
+        </param>
+        <param>
+          <type>const std::set&lt; std::string &gt; &amp;</type>
+          <declname>channels</declname>
+          <defval>std::set&lt; std::string &gt;()</defval>
+        </param>
+        <briefdescription>
+<para>The constructor with single reader. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reader</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>begin_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>channels</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/record_viewer.h" line="49" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_viewer_1ad66e8c8b234122983a7bd1f956201c20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::record::RecordViewer::RecordViewer</definition>
+        <argsstring>(const std::vector&lt; RecordReaderPtr &gt; &amp;readers, uint64_t begin_time=0, uint64_t end_time=UINT64_MAX, const std::set&lt; std::string &gt; &amp;channels=std::set&lt; std::string &gt;())</argsstring>
+        <name>RecordViewer</name>
+        <param>
+          <type>const std::vector&lt; RecordReaderPtr &gt; &amp;</type>
+          <declname>readers</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>begin_time</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>end_time</declname>
+          <defval>UINT64_MAX</defval>
+        </param>
+        <param>
+          <type>const std::set&lt; std::string &gt; &amp;</type>
+          <declname>channels</declname>
+          <defval>std::set&lt; std::string &gt;()</defval>
+        </param>
+        <briefdescription>
+<para>The constructor with multiple readers. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>readers</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>begin_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>channels</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/record_viewer.h" line="61" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a47a12c3a999368c7fcf4f8bc581d9db2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::RecordViewer::IsValid</definition>
+        <argsstring>() const </argsstring>
+        <name>IsValid</name>
+        <briefdescription>
+<para>Is this record reader is valid. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True for valid, false for not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/record_viewer.h" line="70" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_viewer_1ae0a5dc3616c012d242360d8c5a10c507" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::record::RecordViewer::begin_time</definition>
+        <argsstring>() const </argsstring>
+        <name>begin_time</name>
+        <briefdescription>
+<para>Get begin time. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Begin time (nanoseconds). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/record_viewer.h" line="77" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/record_viewer.h" bodystart="77" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a59728eb2a8c67691fda06bbf0c246f0c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::record::RecordViewer::end_time</definition>
+        <argsstring>() const </argsstring>
+        <name>end_time</name>
+        <briefdescription>
+<para>Get end time. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>end time (nanoseconds). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/record_viewer.h" line="84" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/record_viewer.h" bodystart="84" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a6e9c6ba317e0d0e0f77a3d7cfdc778f8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt;std::string&gt; apollo::cyber::record::RecordViewer::GetChannelList</definition>
+        <argsstring>() const </argsstring>
+        <name>GetChannelList</name>
+        <briefdescription>
+<para>Get channel list. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>List container with all channel name string. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/record_viewer.h" line="91" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/record_viewer.h" bodystart="91" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a7cd9af47ca08d6b07d9bd78a7f197c8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classapollo_1_1cyber_1_1record_1_1_record_viewer_1_1_iterator" kindref="compound">Iterator</ref></type>
+        <definition>Iterator apollo::cyber::record::RecordViewer::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <briefdescription>
+<para>Get the begin iterator. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The begin iterator. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/record_viewer.h" line="168" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a142bc45d0387f9982573aba250d3bebd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classapollo_1_1cyber_1_1record_1_1_record_viewer_1_1_iterator" kindref="compound">Iterator</ref></type>
+        <definition>Iterator apollo::cyber::record::RecordViewer::end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <briefdescription>
+<para>Get the end iterator. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The end iterator. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/record_viewer.h" line="175" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_viewer_1afef5a007901d706a60846215c4ec425b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::record::RecordViewer::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/record_viewer.h" line="180" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a84fd2f304977915fca9ff67699cb2d64" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::record::RecordViewer::Reset</definition>
+        <argsstring>()</argsstring>
+        <name>Reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/record_viewer.h" line="181" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a7287a016645e55ac43fd3e9f97a1171c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::record::RecordViewer::UpdateTime</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/record_viewer.h" line="182" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_viewer_1acf64f4fef9ae3e2c32648cfd46433519" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::RecordViewer::FillBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>FillBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/record_viewer.h" line="183" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a5542c18bb14c4d9a167ede3951abffd3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::record::RecordViewer::Update</definition>
+        <argsstring>(RecordMessage *message)</argsstring>
+        <name>Update</name>
+        <param>
+          <type><ref refid="structapollo_1_1cyber_1_1record_1_1_record_message" kindref="compound">RecordMessage</ref> *</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/record/record_viewer.h" line="184" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The record viewer. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dexin/code/Edith/cyber/record/record_viewer.h" line="37" column="1" bodyfile="/home/dexin/code/Edith/cyber/record/record_viewer.h" bodystart="37" bodyend="200"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a7cd9af47ca08d6b07d9bd78a7f197c8e" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordViewer</scope><name>begin</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_viewer_1ae0a5dc3616c012d242360d8c5a10c507" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordViewer</scope><name>begin_time</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a8d4525026acdfae38a0fe6c943315b9f" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordViewer</scope><name>begin_time_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_viewer_1ad695e1188e7f7b25fc1e9a86fc7ed87f" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordViewer</scope><name>channel_list_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_viewer_1ade7529a1b8e9e8bc5f79bff113c32092" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordViewer</scope><name>channels_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a5a1cce2bc3ddd982742354c66aef13fd" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordViewer</scope><name>curr_begin_time_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a142bc45d0387f9982573aba250d3bebd" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordViewer</scope><name>end</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a59728eb2a8c67691fda06bbf0c246f0c" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordViewer</scope><name>end_time</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a122d865feea8eefb448bdb10c47082c8" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordViewer</scope><name>end_time_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_viewer_1acf64f4fef9ae3e2c32648cfd46433519" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordViewer</scope><name>FillBuffer</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a6e9c6ba317e0d0e0f77a3d7cfdc778f8" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordViewer</scope><name>GetChannelList</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_viewer_1afef5a007901d706a60846215c4ec425b" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordViewer</scope><name>Init</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a47a12c3a999368c7fcf4f8bc581d9db2" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordViewer</scope><name>IsValid</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a9830fc407400559db7e7783cc10a9394" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordViewer</scope><name>Iterator</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a9b5c3fd4e6ec8d65628d070a40f854a7" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordViewer</scope><name>kBufferMinSize</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_viewer_1aac975118f31e4a376fa1f02f0a04291c" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordViewer</scope><name>kStepTimeNanoSec</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_viewer_1ac7877d001fd1ebb44c43cbc37ac136cb" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordViewer</scope><name>msg_buffer_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_viewer_1abfbbd6d4ac0ef2819ffa57be352e7bd1" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordViewer</scope><name>readers_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a08005bf5452618ab9bdedd6f54da1bc9" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordViewer</scope><name>readers_finished_</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a70f4191b0d79cbc8d8213f1227fd8609" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordViewer</scope><name>RecordReaderPtr</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a56a61361a809d14baf97b63d28ee79f3" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordViewer</scope><name>RecordViewer</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_viewer_1ad66e8c8b234122983a7bd1f956201c20" prot="public" virt="non-virtual"><scope>apollo::cyber::record::RecordViewer</scope><name>RecordViewer</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a84fd2f304977915fca9ff67699cb2d64" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordViewer</scope><name>Reset</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a5542c18bb14c4d9a167ede3951abffd3" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordViewer</scope><name>Update</name></member>
+      <member refid="classapollo_1_1cyber_1_1record_1_1_record_viewer_1a7287a016645e55ac43fd3e9f97a1171c" prot="private" virt="non-virtual"><scope>apollo::cyber::record::RecordViewer</scope><name>UpdateTime</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

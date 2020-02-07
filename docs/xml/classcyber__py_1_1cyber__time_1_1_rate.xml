@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classcyber__py_1_1cyber__time_1_1_rate" kind="class" language="Python" prot="public">
+    <compoundname>cyber_py::cyber_time::Rate</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">object</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classcyber__py_1_1cyber__time_1_1_rate_1a925c7d9c5403baab034607efe37a85b9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cyber_py.cyber_time.Rate::rate_</definition>
+        <argsstring></argsstring>
+        <name>rate_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="227" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcyber__py_1_1cyber__time_1_1_rate_1a958f8c29cd080b4d9f2d9aaa70af84d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.cyber_time.Rate.__init__</definition>
+        <argsstring>(self, other)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>other</type>
+          <defname>other</defname>
+        </param>
+        <briefdescription>
+<para>Constructor, creates a <ref refid="classcyber__py_1_1cyber__time_1_1_rate" kindref="compound">Rate</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>float means frequency the desired rate to run at in Hz. int or long means the expected_cycle_time. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="225" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="225" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py_1_1cyber__time_1_1_rate_1a8ab1d741ba665ee57fe5afd1ad07a6f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.cyber_time.Rate.__del__</definition>
+        <argsstring>(self)</argsstring>
+        <name>__del__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="233" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="233" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py_1_1cyber__time_1_1_rate_1a0c74a5f76d2b6976bc39b2b3defd32fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.cyber_time.Rate.__str__</definition>
+        <argsstring>(self)</argsstring>
+        <name>__str__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="236" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="236" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py_1_1cyber__time_1_1_rate_1a0c2ff37c27ac6ded01cd256b2eb11dac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.cyber_time.Rate.sleep</definition>
+        <argsstring>(self)</argsstring>
+        <name>sleep</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Sleeps for any leftover time in a cycle.
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="239" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="239" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py_1_1cyber__time_1_1_rate_1a583a4433345db3491af7475d4e277265" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.cyber_time.Rate.reset</definition>
+        <argsstring>(self)</argsstring>
+        <name>reset</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Sets the start time for the rate to now.
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="245" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="245" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py_1_1cyber__time_1_1_rate_1a7871b770f69af0e8b61039bc71d1c888" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.cyber_time.Rate.get_cycle_time</definition>
+        <argsstring>(self)</argsstring>
+        <name>get_cycle_time</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Get the actual run time of a cycle from start to sleep.
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="251" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="251" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py_1_1cyber__time_1_1_rate_1a1ee26fa86a0842a8d486fe105a1abefa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py.cyber_time.Rate.get_expected_cycle_time</definition>
+        <argsstring>(self)</argsstring>
+        <name>get_expected_cycle_time</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Get the expected cycle time.
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="257" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="257" bodyend="262"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Class for cyber Rate wrapper. Help run loops at a desired frequency.
+</verbatim> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="609">
+        <label>object</label>
+      </node>
+      <node id="608">
+        <label>cyber_py.cyber_time.Rate</label>
+        <link refid="classcyber__py_1_1cyber__time_1_1_rate"/>
+        <childnode refid="609" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="611">
+        <label>object</label>
+      </node>
+      <node id="610">
+        <label>cyber_py.cyber_time.Rate</label>
+        <link refid="classcyber__py_1_1cyber__time_1_1_rate"/>
+        <childnode refid="611" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" line="214" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/cyber_time.py" bodystart="214" bodyend="262"/>
+    <listofallmembers>
+      <member refid="classcyber__py_1_1cyber__time_1_1_rate_1a8ab1d741ba665ee57fe5afd1ad07a6f6" prot="public" virt="non-virtual"><scope>cyber_py::cyber_time::Rate</scope><name>__del__</name></member>
+      <member refid="classcyber__py_1_1cyber__time_1_1_rate_1a958f8c29cd080b4d9f2d9aaa70af84d4" prot="public" virt="non-virtual"><scope>cyber_py::cyber_time::Rate</scope><name>__init__</name></member>
+      <member refid="classcyber__py_1_1cyber__time_1_1_rate_1a0c74a5f76d2b6976bc39b2b3defd32fd" prot="public" virt="non-virtual"><scope>cyber_py::cyber_time::Rate</scope><name>__str__</name></member>
+      <member refid="classcyber__py_1_1cyber__time_1_1_rate_1a7871b770f69af0e8b61039bc71d1c888" prot="public" virt="non-virtual"><scope>cyber_py::cyber_time::Rate</scope><name>get_cycle_time</name></member>
+      <member refid="classcyber__py_1_1cyber__time_1_1_rate_1a1ee26fa86a0842a8d486fe105a1abefa" prot="public" virt="non-virtual"><scope>cyber_py::cyber_time::Rate</scope><name>get_expected_cycle_time</name></member>
+      <member refid="classcyber__py_1_1cyber__time_1_1_rate_1a925c7d9c5403baab034607efe37a85b9" prot="public" virt="non-virtual"><scope>cyber_py::cyber_time::Rate</scope><name>rate_</name></member>
+      <member refid="classcyber__py_1_1cyber__time_1_1_rate_1a583a4433345db3491af7475d4e277265" prot="public" virt="non-virtual"><scope>cyber_py::cyber_time::Rate</scope><name>reset</name></member>
+      <member refid="classcyber__py_1_1cyber__time_1_1_rate_1a0c2ff37c27ac6ded01cd256b2eb11dac" prot="public" virt="non-virtual"><scope>cyber_py::cyber_time::Rate</scope><name>sleep</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

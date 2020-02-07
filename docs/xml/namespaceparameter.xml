@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="namespaceparameter" kind="namespace" language="Python">
+    <compoundname>parameter</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="examples_2parameter_8py_1ad94b91bfc12a7b980730c775bfdc395d" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string parameter::PARAM_SERVICE_NAME</definition>
+        <argsstring></argsstring>
+        <name>PARAM_SERVICE_NAME</name>
+        <initializer>= &quot;global_parameter_service&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/examples/parameter.py" line="25" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/examples/parameter.py" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="examples_2parameter_8py_1a39362a965c8a3a4a8a1d4d82e782e1d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def parameter::print_param_srv</definition>
+        <argsstring>()</argsstring>
+        <name>print_param_srv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/examples/parameter.py" line="28" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/examples/parameter.py" bodystart="28" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dexin/code/Edith/cyber/python/cyber_py/examples/parameter.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

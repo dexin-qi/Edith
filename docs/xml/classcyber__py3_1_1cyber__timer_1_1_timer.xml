@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classcyber__py3_1_1cyber__timer_1_1_timer" kind="class" language="Python" prot="public">
+    <compoundname>cyber_py3::cyber_timer::Timer</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">object</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classcyber__py3_1_1cyber__timer_1_1_timer_1abc7762a41248e96fb0f101864fa5f6a3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cyber_py3.cyber_timer.Timer::timer</definition>
+        <argsstring></argsstring>
+        <name>timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber_timer.py" line="58" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber_timer.py" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcyber__py3_1_1cyber__timer_1_1_timer_1a8d8990ade8b8209ae9ea0fdfd7a1bec5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cyber_py3.cyber_timer.Timer::timer_cb</definition>
+        <argsstring></argsstring>
+        <name>timer_cb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber_timer.py" line="60" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber_timer.py" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcyber__py3_1_1cyber__timer_1_1_timer_1ae6440a268d5ff46340657fa6cbf91108" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cyber_py3.cyber_timer.Timer::f_ptr_cb</definition>
+        <argsstring></argsstring>
+        <name>f_ptr_cb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber_timer.py" line="61" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber_timer.py" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcyber__py3_1_1cyber__timer_1_1_timer_1a6a8a705da5ba3fb3a08659a2dd1c5665" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.cyber_timer.Timer.__init__</definition>
+        <argsstring>(self, period=None, callback=None, oneshot=None)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>period</type>
+          <defname>period</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>callback</type>
+          <defname>callback</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>oneshot</type>
+          <defname>oneshot</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+<para>Used to perform oneshot or periodic timing tasks. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>period</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The period of the timer, unit is ms. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tasks that the timer needs to perform. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oneshot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>1:perform the callback only after the first timing cycle 0:perform the callback every timed period </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber_timer.py" line="56" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber_timer.py" bodystart="56" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py3_1_1cyber__timer_1_1_timer_1ab07cc97b89c38c56376dff6ff0aceb9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.cyber_timer.Timer.__del__</definition>
+        <argsstring>(self)</argsstring>
+        <name>__del__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber_timer.py" line="65" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber_timer.py" bodystart="65" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py3_1_1cyber__timer_1_1_timer_1a14b0c4a17e3b2a957222166e21d80019" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.cyber_timer.Timer.set_option</definition>
+        <argsstring>(self, period, callback, oneshot=0)</argsstring>
+        <name>set_option</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>period</type>
+          <defname>period</defname>
+        </param>
+        <param>
+          <type>callback</type>
+          <defname>callback</defname>
+        </param>
+        <param>
+          <type>oneshot</type>
+          <defname>oneshot</defname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>set the option of timer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>period</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The period of the timer, unit is ms. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tasks that the timer needs to perform. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oneshot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>1:perform the callback only after the first timing cycle 0:perform the callback every timed period </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber_timer.py" line="75" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber_timer.py" bodystart="75" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py3_1_1cyber__timer_1_1_timer_1ab35fc3cd3368ba521859bbb70e56b32a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.cyber_timer.Timer.start</definition>
+        <argsstring>(self)</argsstring>
+        <name>start</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+<para>start the timer </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber_timer.py" line="83" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber_timer.py" bodystart="83" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py3_1_1cyber__timer_1_1_timer_1ac4e8bce97a2d2fe06912338c76c000b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.cyber_timer.Timer.stop</definition>
+        <argsstring>(self)</argsstring>
+        <name>stop</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+<para>stop the timer </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber_timer.py" line="88" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber_timer.py" bodystart="88" bodyend="90"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Class for cyber timer wrapper.
+</verbatim> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="782">
+        <label>object</label>
+      </node>
+      <node id="781">
+        <label>cyber_py3.cyber_timer.Timer</label>
+        <link refid="classcyber__py3_1_1cyber__timer_1_1_timer"/>
+        <childnode refid="782" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="784">
+        <label>object</label>
+      </node>
+      <node id="783">
+        <label>cyber_py3.cyber_timer.Timer</label>
+        <link refid="classcyber__py3_1_1cyber__timer_1_1_timer"/>
+        <childnode refid="784" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber_timer.py" line="43" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/cyber_timer.py" bodystart="43" bodyend="90"/>
+    <listofallmembers>
+      <member refid="classcyber__py3_1_1cyber__timer_1_1_timer_1ab07cc97b89c38c56376dff6ff0aceb9c" prot="public" virt="non-virtual"><scope>cyber_py3::cyber_timer::Timer</scope><name>__del__</name></member>
+      <member refid="classcyber__py3_1_1cyber__timer_1_1_timer_1a6a8a705da5ba3fb3a08659a2dd1c5665" prot="public" virt="non-virtual"><scope>cyber_py3::cyber_timer::Timer</scope><name>__init__</name></member>
+      <member refid="classcyber__py3_1_1cyber__timer_1_1_timer_1ae6440a268d5ff46340657fa6cbf91108" prot="public" virt="non-virtual"><scope>cyber_py3::cyber_timer::Timer</scope><name>f_ptr_cb</name></member>
+      <member refid="classcyber__py3_1_1cyber__timer_1_1_timer_1a14b0c4a17e3b2a957222166e21d80019" prot="public" virt="non-virtual"><scope>cyber_py3::cyber_timer::Timer</scope><name>set_option</name></member>
+      <member refid="classcyber__py3_1_1cyber__timer_1_1_timer_1ab35fc3cd3368ba521859bbb70e56b32a" prot="public" virt="non-virtual"><scope>cyber_py3::cyber_timer::Timer</scope><name>start</name></member>
+      <member refid="classcyber__py3_1_1cyber__timer_1_1_timer_1ac4e8bce97a2d2fe06912338c76c000b4" prot="public" virt="non-virtual"><scope>cyber_py3::cyber_timer::Timer</scope><name>stop</name></member>
+      <member refid="classcyber__py3_1_1cyber__timer_1_1_timer_1abc7762a41248e96fb0f101864fa5f6a3" prot="public" virt="non-virtual"><scope>cyber_py3::cyber_timer::Timer</scope><name>timer</name></member>
+      <member refid="classcyber__py3_1_1cyber__timer_1_1_timer_1a8d8990ade8b8209ae9ea0fdfd7a1bec5" prot="public" virt="non-virtual"><scope>cyber_py3::cyber_timer::Timer</scope><name>timer_cb</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

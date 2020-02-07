@@ -1,0 +1,455 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager" kind="class" language="C++" prot="public">
+    <compoundname>apollo::cyber::service_discovery::TopologyManager</compoundname>
+    <includes refid="topology__manager_8h" local="no">topology_manager.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a7ba67fa3500a132796c24cd4aa7356f6" prot="public" static="no">
+        <type>base::Signal&lt; const ChangeMsg &amp; &gt;</type>
+        <definition>using apollo::cyber::service_discovery::TopologyManager::ChangeSignal =  base::Signal&lt;const ChangeMsg&amp;&gt;</definition>
+        <argsstring></argsstring>
+        <name>ChangeSignal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="65" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a50328f9e6813bf53a9e974bb39f716f5" prot="public" static="no">
+        <type>std::function&lt; void(const ChangeMsg &amp;)&gt;</type>
+        <definition>using apollo::cyber::service_discovery::TopologyManager::ChangeFunc =  std::function&lt;void(const ChangeMsg&amp;)&gt;</definition>
+        <argsstring></argsstring>
+        <name>ChangeFunc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="66" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a9e207f3236b725d74eb37e5d27551ae6" prot="public" static="no">
+        <type>base::Connection&lt; const ChangeMsg &amp; &gt;</type>
+        <definition>using apollo::cyber::service_discovery::TopologyManager::ChangeConnection =  base::Connection&lt;const ChangeMsg&amp;&gt;</definition>
+        <argsstring></argsstring>
+        <name>ChangeConnection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="67" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1ab64bea3df8dfe44534854c87b84925a2" prot="public" static="no">
+        <type>std::map&lt; eprosima::fastrtps::rtps::GUID_t, std::string &gt;</type>
+        <definition>using apollo::cyber::service_discovery::TopologyManager::PartNameContainer =  std::map&lt;eprosima::fastrtps::rtps::GUID_t, std::string&gt;</definition>
+        <argsstring></argsstring>
+        <name>PartNameContainer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="68" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1aa25acdf39ae101851911d7562d332cdf" prot="public" static="no">
+        <type>eprosima::fastrtps::ParticipantDiscoveryInfo</type>
+        <definition>using apollo::cyber::service_discovery::TopologyManager::PartInfo =  eprosima::fastrtps::ParticipantDiscoveryInfo</definition>
+        <argsstring></argsstring>
+        <name>PartInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="70" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a70da9ef8dbc059cffe18669195632946" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; bool &gt;</type>
+        <definition>std::atomic&lt;bool&gt; apollo::cyber::service_discovery::TopologyManager::init_</definition>
+        <argsstring></argsstring>
+        <name>init_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="121" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1aeba928170db72639cf54c81f3a4fc650" prot="private" static="no" mutable="no">
+        <type>NodeManagerPtr</type>
+        <definition>NodeManagerPtr apollo::cyber::service_discovery::TopologyManager::node_manager_</definition>
+        <argsstring></argsstring>
+        <name>node_manager_</name>
+        <briefdescription>
+<para>Is <ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager" kindref="compound">TopologyManager</ref> inited. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="122" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a665115924a374ff7710355bd514fa14d" prot="private" static="no" mutable="no">
+        <type>ChannelManagerPtr</type>
+        <definition>ChannelManagerPtr apollo::cyber::service_discovery::TopologyManager::channel_manager_</definition>
+        <argsstring></argsstring>
+        <name>channel_manager_</name>
+        <briefdescription>
+<para>shared ptr of <ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_node_manager" kindref="compound">NodeManager</ref> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="123" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a9048b410bdf762de9345a7f94d2253da" prot="private" static="no" mutable="no">
+        <type>ServiceManagerPtr</type>
+        <definition>ServiceManagerPtr apollo::cyber::service_discovery::TopologyManager::service_manager_</definition>
+        <argsstring></argsstring>
+        <name>service_manager_</name>
+        <briefdescription>
+<para>shared ptr of <ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_channel_manager" kindref="compound">ChannelManager</ref> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="124" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1afe612355674bd772cbc5540980870a62" prot="private" static="no" mutable="no">
+        <type>transport::ParticipantPtr</type>
+        <definition>transport::ParticipantPtr apollo::cyber::service_discovery::TopologyManager::participant_</definition>
+        <argsstring></argsstring>
+        <name>participant_</name>
+        <briefdescription>
+<para>shared ptr of <ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_service_manager" kindref="compound">ServiceManager</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para>rtps participant to publish and subscribe </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="126" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1ae177b9dbd4aa56a6bf5c3ff0388ffc36" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_participant_listener" kindref="compound">ParticipantListener</ref> *</type>
+        <definition>ParticipantListener* apollo::cyber::service_discovery::TopologyManager::participant_listener_</definition>
+        <argsstring></argsstring>
+        <name>participant_listener_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="127" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a8c65f2ecdb5418c86e58ba3251982616" prot="private" static="no" mutable="no">
+        <type>ChangeSignal</type>
+        <definition>ChangeSignal apollo::cyber::service_discovery::TopologyManager::change_signal_</definition>
+        <argsstring></argsstring>
+        <name>change_signal_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="128" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a1197be9a9fda7d19f7a8ddb01867f864" prot="private" static="no" mutable="no">
+        <type>PartNameContainer</type>
+        <definition>PartNameContainer apollo::cyber::service_discovery::TopologyManager::participant_names_</definition>
+        <argsstring></argsstring>
+        <name>participant_names_</name>
+        <briefdescription>
+<para>topology changing signal, connect to <computeroutput>ChangeFunc</computeroutput>s </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="130" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a20db67d81617386524f5a64b1d678806" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual apollo::cyber::service_discovery::TopologyManager::~TopologyManager</definition>
+        <argsstring>()</argsstring>
+        <name>~TopologyManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="72" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a63f75445d72c3e01fc87429b0356ba6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::service_discovery::TopologyManager::Shutdown</definition>
+        <argsstring>()</argsstring>
+        <name>Shutdown</name>
+        <briefdescription>
+<para>Shutdown the <ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager" kindref="compound">TopologyManager</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="77" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a2a223b8391a9b739040957c044dd9033" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ChangeConnection</type>
+        <definition>ChangeConnection apollo::cyber::service_discovery::TopologyManager::AddChangeListener</definition>
+        <argsstring>(const ChangeFunc &amp;func)</argsstring>
+        <name>AddChangeListener</name>
+        <param>
+          <type>const ChangeFunc &amp;</type>
+          <declname>func</declname>
+        </param>
+        <briefdescription>
+<para>To observe the topology change, you can register a <computeroutput>ChangeFunc</computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the observe function </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ChangeConnection is the connection that connected to <computeroutput>change_signal_</computeroutput>. Used to Remove your observe function </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="86" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a20f4728bef31bd0894b6fee951c9580c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::service_discovery::TopologyManager::RemoveChangeListener</definition>
+        <argsstring>(const ChangeConnection &amp;conn)</argsstring>
+        <name>RemoveChangeListener</name>
+        <param>
+          <type>const ChangeConnection &amp;</type>
+          <declname>conn</declname>
+        </param>
+        <briefdescription>
+<para>Remove the observe function connect to <computeroutput>change_signal_</computeroutput> by <computeroutput>conn</computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="91" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a94b6ab1c670e49315afeed6269c60714" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>NodeManagerPtr &amp;</type>
+        <definition>NodeManagerPtr&amp; apollo::cyber::service_discovery::TopologyManager::node_manager</definition>
+        <argsstring>()</argsstring>
+        <name>node_manager</name>
+        <briefdescription>
+<para>Get shared_ptr for <ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_node_manager" kindref="compound">NodeManager</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="96" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" bodystart="96" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a7ca771e869399d565596c43d3f73ce6b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ChannelManagerPtr &amp;</type>
+        <definition>ChannelManagerPtr&amp; apollo::cyber::service_discovery::TopologyManager::channel_manager</definition>
+        <argsstring>()</argsstring>
+        <name>channel_manager</name>
+        <briefdescription>
+<para>Get shared_ptr for <ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_channel_manager" kindref="compound">ChannelManager</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="101" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" bodystart="101" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1ac1d46063cd465d606b188884b4be2269" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ServiceManagerPtr &amp;</type>
+        <definition>ServiceManagerPtr&amp; apollo::cyber::service_discovery::TopologyManager::service_manager</definition>
+        <argsstring>()</argsstring>
+        <name>service_manager</name>
+        <briefdescription>
+<para>Get shared_ptr for <ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_service_manager" kindref="compound">ServiceManager</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="106" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" bodystart="106" bodyend="106"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a885ec7c446c523cdceb0c7e798741131" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::service_discovery::TopologyManager::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="109" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a216abf40b6b6716c940bd91ae7c23688" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::service_discovery::TopologyManager::InitNodeManager</definition>
+        <argsstring>()</argsstring>
+        <name>InitNodeManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="111" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a15e2df0ff19069acc674c47a7a04cfcf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::service_discovery::TopologyManager::InitChannelManager</definition>
+        <argsstring>()</argsstring>
+        <name>InitChannelManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="112" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a5c57484d3ea7174ca98120799293e045" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::service_discovery::TopologyManager::InitServiceManager</definition>
+        <argsstring>()</argsstring>
+        <name>InitServiceManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="113" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1aa3c636e9eb33231d29bd938aa694407a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::service_discovery::TopologyManager::CreateParticipant</definition>
+        <argsstring>()</argsstring>
+        <name>CreateParticipant</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="115" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1aa2ef6e89d81cf8650d7d4a680eb79fab" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::service_discovery::TopologyManager::OnParticipantChange</definition>
+        <argsstring>(const PartInfo &amp;info)</argsstring>
+        <name>OnParticipantChange</name>
+        <param>
+          <type>const PartInfo &amp;</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="116" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a114ead053c70644fdcec30729c466f80" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::service_discovery::TopologyManager::Convert</definition>
+        <argsstring>(const PartInfo &amp;info, ChangeMsg *change_msg)</argsstring>
+        <name>Convert</name>
+        <param>
+          <type>const PartInfo &amp;</type>
+          <declname>info</declname>
+        </param>
+        <param>
+          <type>ChangeMsg *</type>
+          <declname>change_msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="117" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a6e55fb327092fe74b4a48573a9231951" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::service_discovery::TopologyManager::ParseParticipantName</definition>
+        <argsstring>(const std::string &amp;participant_name, std::string *host_name, int *process_id)</argsstring>
+        <name>ParseParticipantName</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>participant_name</declname>
+        </param>
+        <param>
+          <type>std::string *</type>
+          <declname>host_name</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>process_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="118" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>elements in Cyber <ndash/> <ref refid="classapollo_1_1cyber_1_1_node" kindref="compound">Node</ref>, Channel, <ref refid="classapollo_1_1cyber_1_1_service" kindref="compound">Service</ref>, <ref refid="classapollo_1_1cyber_1_1_writer" kindref="compound">Writer</ref>, <ref refid="classapollo_1_1cyber_1_1_reader" kindref="compound">Reader</ref>, <ref refid="classapollo_1_1cyber_1_1_client" kindref="compound">Client</ref> and Server&apos;s relationship is presented by Topology. </para>    </briefdescription>
+    <detaileddescription>
+<para>You can Imagine that a directed graph <ndash/> <ref refid="classapollo_1_1cyber_1_1_node" kindref="compound">Node</ref> is the container of Server/Client/Writer/Reader, and they are the vertice of the graph and Channel is the <ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_edge" kindref="compound">Edge</ref> from <ref refid="classapollo_1_1cyber_1_1_writer" kindref="compound">Writer</ref> flow to the <ref refid="classapollo_1_1cyber_1_1_reader" kindref="compound">Reader</ref>, <ref refid="classapollo_1_1cyber_1_1_service" kindref="compound">Service</ref> is the <ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_edge" kindref="compound">Edge</ref> from Server to <ref refid="classapollo_1_1cyber_1_1_client" kindref="compound">Client</ref>. Thus we call <ref refid="classapollo_1_1cyber_1_1_writer" kindref="compound">Writer</ref> and Server <computeroutput>Upstream</computeroutput>, <ref refid="classapollo_1_1cyber_1_1_reader" kindref="compound">Reader</ref> and <ref refid="classapollo_1_1cyber_1_1_client" kindref="compound">Client</ref> <computeroutput>Downstream</computeroutput> To generate this graph, we use <ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager" kindref="compound">TopologyManager</ref>, it has three sub managers <ndash/> <ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_node_manager" kindref="compound">NodeManager</ref>: You can find Nodes in this topology <ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_channel_manager" kindref="compound">ChannelManager</ref>: You can find Channels in this topology, and their Writers and Readers <ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_service_manager" kindref="compound">ServiceManager</ref>: You can find Services in this topology, and their Servers and Clients <ref refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager" kindref="compound">TopologyManager</ref> use fast-rtps&apos; Participant to communicate. It can broadcast Join or Leave messages of those elements. Also, you can register you own <computeroutput>ChangeFunc</computeroutput> to monitor topology change </para>    </detaileddescription>
+    <location file="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" line="63" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/topology_manager.h" bodystart="63" bodyend="133"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a2a223b8391a9b739040957c044dd9033" prot="public" virt="non-virtual"><scope>apollo::cyber::service_discovery::TopologyManager</scope><name>AddChangeListener</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a8c65f2ecdb5418c86e58ba3251982616" prot="private" virt="non-virtual"><scope>apollo::cyber::service_discovery::TopologyManager</scope><name>change_signal_</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a9e207f3236b725d74eb37e5d27551ae6" prot="public" virt="non-virtual"><scope>apollo::cyber::service_discovery::TopologyManager</scope><name>ChangeConnection</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a50328f9e6813bf53a9e974bb39f716f5" prot="public" virt="non-virtual"><scope>apollo::cyber::service_discovery::TopologyManager</scope><name>ChangeFunc</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a7ba67fa3500a132796c24cd4aa7356f6" prot="public" virt="non-virtual"><scope>apollo::cyber::service_discovery::TopologyManager</scope><name>ChangeSignal</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a7ca771e869399d565596c43d3f73ce6b" prot="public" virt="non-virtual"><scope>apollo::cyber::service_discovery::TopologyManager</scope><name>channel_manager</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a665115924a374ff7710355bd514fa14d" prot="private" virt="non-virtual"><scope>apollo::cyber::service_discovery::TopologyManager</scope><name>channel_manager_</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a114ead053c70644fdcec30729c466f80" prot="private" virt="non-virtual"><scope>apollo::cyber::service_discovery::TopologyManager</scope><name>Convert</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1aa3c636e9eb33231d29bd938aa694407a" prot="private" virt="non-virtual"><scope>apollo::cyber::service_discovery::TopologyManager</scope><name>CreateParticipant</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a885ec7c446c523cdceb0c7e798741131" prot="private" virt="non-virtual"><scope>apollo::cyber::service_discovery::TopologyManager</scope><name>Init</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a70da9ef8dbc059cffe18669195632946" prot="private" virt="non-virtual"><scope>apollo::cyber::service_discovery::TopologyManager</scope><name>init_</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a15e2df0ff19069acc674c47a7a04cfcf" prot="private" virt="non-virtual"><scope>apollo::cyber::service_discovery::TopologyManager</scope><name>InitChannelManager</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a216abf40b6b6716c940bd91ae7c23688" prot="private" virt="non-virtual"><scope>apollo::cyber::service_discovery::TopologyManager</scope><name>InitNodeManager</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a5c57484d3ea7174ca98120799293e045" prot="private" virt="non-virtual"><scope>apollo::cyber::service_discovery::TopologyManager</scope><name>InitServiceManager</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a94b6ab1c670e49315afeed6269c60714" prot="public" virt="non-virtual"><scope>apollo::cyber::service_discovery::TopologyManager</scope><name>node_manager</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1aeba928170db72639cf54c81f3a4fc650" prot="private" virt="non-virtual"><scope>apollo::cyber::service_discovery::TopologyManager</scope><name>node_manager_</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1aa2ef6e89d81cf8650d7d4a680eb79fab" prot="private" virt="non-virtual"><scope>apollo::cyber::service_discovery::TopologyManager</scope><name>OnParticipantChange</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a6e55fb327092fe74b4a48573a9231951" prot="private" virt="non-virtual"><scope>apollo::cyber::service_discovery::TopologyManager</scope><name>ParseParticipantName</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1afe612355674bd772cbc5540980870a62" prot="private" virt="non-virtual"><scope>apollo::cyber::service_discovery::TopologyManager</scope><name>participant_</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1ae177b9dbd4aa56a6bf5c3ff0388ffc36" prot="private" virt="non-virtual"><scope>apollo::cyber::service_discovery::TopologyManager</scope><name>participant_listener_</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a1197be9a9fda7d19f7a8ddb01867f864" prot="private" virt="non-virtual"><scope>apollo::cyber::service_discovery::TopologyManager</scope><name>participant_names_</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1aa25acdf39ae101851911d7562d332cdf" prot="public" virt="non-virtual"><scope>apollo::cyber::service_discovery::TopologyManager</scope><name>PartInfo</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1ab64bea3df8dfe44534854c87b84925a2" prot="public" virt="non-virtual"><scope>apollo::cyber::service_discovery::TopologyManager</scope><name>PartNameContainer</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a20f4728bef31bd0894b6fee951c9580c" prot="public" virt="non-virtual"><scope>apollo::cyber::service_discovery::TopologyManager</scope><name>RemoveChangeListener</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1ac1d46063cd465d606b188884b4be2269" prot="public" virt="non-virtual"><scope>apollo::cyber::service_discovery::TopologyManager</scope><name>service_manager</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a9048b410bdf762de9345a7f94d2253da" prot="private" virt="non-virtual"><scope>apollo::cyber::service_discovery::TopologyManager</scope><name>service_manager_</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a63f75445d72c3e01fc87429b0356ba6e" prot="public" virt="non-virtual"><scope>apollo::cyber::service_discovery::TopologyManager</scope><name>Shutdown</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_topology_manager_1a20db67d81617386524f5a64b1d678806" prot="public" virt="virtual"><scope>apollo::cyber::service_discovery::TopologyManager</scope><name>~TopologyManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

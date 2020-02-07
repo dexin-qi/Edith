@@ -1,0 +1,495 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse" kind="class" language="C++" prot="public">
+    <compoundname>apollo::cyber::service_discovery::MultiValueWarehouse</compoundname>
+    <basecompoundref refid="classapollo_1_1cyber_1_1service__discovery_1_1_warehouse_base" prot="public" virt="non-virtual">apollo::cyber::service_discovery::WarehouseBase</basecompoundref>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1ac7825b1126cd0ce4193fb1c6de2e1159" prot="public" static="no">
+        <type>std::unordered_multimap&lt; uint64_t, RolePtr &gt;</type>
+        <definition>using apollo::cyber::service_discovery::MultiValueWarehouse::RoleMap =  std::unordered_multimap&lt;uint64_t, RolePtr&gt;</definition>
+        <argsstring></argsstring>
+        <name>RoleMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/container/multi_value_warehouse.h" line="33" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/container/multi_value_warehouse.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1a8c064f1d708e8c0b905454df8efbf00c" prot="private" static="no" mutable="no">
+        <type>RoleMap</type>
+        <definition>RoleMap apollo::cyber::service_discovery::MultiValueWarehouse::roles_</definition>
+        <argsstring></argsstring>
+        <name>roles_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/container/multi_value_warehouse.h" line="70" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/container/multi_value_warehouse.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1a0b5aad2758df1db3e170337b9775abb6" prot="private" static="no" mutable="no">
+        <type>base::AtomicRWLock</type>
+        <definition>base::AtomicRWLock apollo::cyber::service_discovery::MultiValueWarehouse::rw_lock_</definition>
+        <argsstring></argsstring>
+        <name>rw_lock_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/container/multi_value_warehouse.h" line="71" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/container/multi_value_warehouse.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1ab137a895871b0a5e9742bb38fea6db7f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::service_discovery::MultiValueWarehouse::MultiValueWarehouse</definition>
+        <argsstring>()</argsstring>
+        <name>MultiValueWarehouse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/container/multi_value_warehouse.h" line="35" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/container/multi_value_warehouse.h" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1ae1e7e62f8d412dcc5ec93edc94c6fe2f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual apollo::cyber::service_discovery::MultiValueWarehouse::~MultiValueWarehouse</definition>
+        <argsstring>()</argsstring>
+        <name>~MultiValueWarehouse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/container/multi_value_warehouse.h" line="36" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/container/multi_value_warehouse.h" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1accd3db47b675921fd1ac27c224467069" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::service_discovery::MultiValueWarehouse::Add</definition>
+        <argsstring>(uint64_t key, const RolePtr &amp;role, bool ignore_if_exist=true) override</argsstring>
+        <name>Add</name>
+        <reimplements refid="classapollo_1_1cyber_1_1service__discovery_1_1_warehouse_base_1adf9fe2ed8875839b635f701f480504cf">Add</reimplements>
+        <param>
+          <type>uint64_t</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const RolePtr &amp;</type>
+          <declname>role</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ignore_if_exist</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/container/multi_value_warehouse.h" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1a78118000cb24fb6899cb4dc2f46023de" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::service_discovery::MultiValueWarehouse::Clear</definition>
+        <argsstring>() override</argsstring>
+        <name>Clear</name>
+        <reimplements refid="classapollo_1_1cyber_1_1service__discovery_1_1_warehouse_base_1a9cecd6e55fc85b08b47eafe9e1205d4d">Clear</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/container/multi_value_warehouse.h" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1a7fb59c1ab79ba957b0da337ec4488d49" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t apollo::cyber::service_discovery::MultiValueWarehouse::Size</definition>
+        <argsstring>() override</argsstring>
+        <name>Size</name>
+        <reimplements refid="classapollo_1_1cyber_1_1service__discovery_1_1_warehouse_base_1ac7af8481d1770471effacbf7b7dd0b64">Size</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/container/multi_value_warehouse.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1ac96d1a2faf4b62343c565b282d03f036" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::service_discovery::MultiValueWarehouse::Remove</definition>
+        <argsstring>(uint64_t key) override</argsstring>
+        <name>Remove</name>
+        <reimplements refid="classapollo_1_1cyber_1_1service__discovery_1_1_warehouse_base_1a27db5c1c3556b2ac5648dbb732043192">Remove</reimplements>
+        <param>
+          <type>uint64_t</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/container/multi_value_warehouse.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1ac61b78aa52c1b7115d19ca6a5a419f0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::service_discovery::MultiValueWarehouse::Remove</definition>
+        <argsstring>(uint64_t key, const RolePtr &amp;role) override</argsstring>
+        <name>Remove</name>
+        <reimplements refid="classapollo_1_1cyber_1_1service__discovery_1_1_warehouse_base_1a03312166f883df1eb41afa6bb7cf6287">Remove</reimplements>
+        <param>
+          <type>uint64_t</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const RolePtr &amp;</type>
+          <declname>role</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/container/multi_value_warehouse.h" line="45" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1a50032c7ce957cf1d2508b43b6fcf73e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::service_discovery::MultiValueWarehouse::Remove</definition>
+        <argsstring>(const proto::RoleAttributes &amp;target_attr) override</argsstring>
+        <name>Remove</name>
+        <reimplements refid="classapollo_1_1cyber_1_1service__discovery_1_1_warehouse_base_1a2b1a87fa8806f212f5502e2d6fe2f30b">Remove</reimplements>
+        <param>
+          <type>const proto::RoleAttributes &amp;</type>
+          <declname>target_attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/container/multi_value_warehouse.h" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1a0d4f03663bf91e70c7b44570085a989b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::service_discovery::MultiValueWarehouse::Search</definition>
+        <argsstring>(uint64_t key) override</argsstring>
+        <name>Search</name>
+        <reimplements refid="classapollo_1_1cyber_1_1service__discovery_1_1_warehouse_base_1a6c7a223edc8b3b02666c318c9992be02">Search</reimplements>
+        <param>
+          <type>uint64_t</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/container/multi_value_warehouse.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1a6381d4cd1a9b4290ca5b2fafd7238226" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::service_discovery::MultiValueWarehouse::Search</definition>
+        <argsstring>(uint64_t key, RolePtr *first_matched_role) override</argsstring>
+        <name>Search</name>
+        <reimplements refid="classapollo_1_1cyber_1_1service__discovery_1_1_warehouse_base_1a2294a1bae82fcb65a1f854a1e3d8f677">Search</reimplements>
+        <param>
+          <type>uint64_t</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>RolePtr *</type>
+          <declname>first_matched_role</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/container/multi_value_warehouse.h" line="49" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1a709b52d620cf7b32e47555fc507d79db" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::service_discovery::MultiValueWarehouse::Search</definition>
+        <argsstring>(uint64_t key, proto::RoleAttributes *first_matched_role_attr) override</argsstring>
+        <name>Search</name>
+        <reimplements refid="classapollo_1_1cyber_1_1service__discovery_1_1_warehouse_base_1aa6b471913855b73127521857a4b2dde5">Search</reimplements>
+        <param>
+          <type>uint64_t</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>proto::RoleAttributes *</type>
+          <declname>first_matched_role_attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/container/multi_value_warehouse.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1aa5330ff3c6788887b1373e6878f1816f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::service_discovery::MultiValueWarehouse::Search</definition>
+        <argsstring>(uint64_t key, std::vector&lt; RolePtr &gt; *matched_roles) override</argsstring>
+        <name>Search</name>
+        <reimplements refid="classapollo_1_1cyber_1_1service__discovery_1_1_warehouse_base_1a6d5bf47e2d4a438851f7b56c8ecff8c0">Search</reimplements>
+        <param>
+          <type>uint64_t</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; RolePtr &gt; *</type>
+          <declname>matched_roles</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/container/multi_value_warehouse.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1acc3ed44f34a5b8736b8a2f3c3ff5593b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::service_discovery::MultiValueWarehouse::Search</definition>
+        <argsstring>(uint64_t key, std::vector&lt; proto::RoleAttributes &gt; *matched_roles_attr) override</argsstring>
+        <name>Search</name>
+        <reimplements refid="classapollo_1_1cyber_1_1service__discovery_1_1_warehouse_base_1aad706abb3dfb23ff1c5d10e88fa91940">Search</reimplements>
+        <param>
+          <type>uint64_t</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; proto::RoleAttributes &gt; *</type>
+          <declname>matched_roles_attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/container/multi_value_warehouse.h" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1af5dca21f644c0f2d1d10f5dd68996823" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::service_discovery::MultiValueWarehouse::Search</definition>
+        <argsstring>(const proto::RoleAttributes &amp;target_attr) override</argsstring>
+        <name>Search</name>
+        <reimplements refid="classapollo_1_1cyber_1_1service__discovery_1_1_warehouse_base_1a634b5bca3df82e1e86720a36b0bb6acc">Search</reimplements>
+        <param>
+          <type>const proto::RoleAttributes &amp;</type>
+          <declname>target_attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/container/multi_value_warehouse.h" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1a1fdf37b96214172a0a9a0f988a6278ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::service_discovery::MultiValueWarehouse::Search</definition>
+        <argsstring>(const proto::RoleAttributes &amp;target_attr, RolePtr *first_matched) override</argsstring>
+        <name>Search</name>
+        <reimplements refid="classapollo_1_1cyber_1_1service__discovery_1_1_warehouse_base_1a9735a6a80026cd83aa140885ece16233">Search</reimplements>
+        <param>
+          <type>const proto::RoleAttributes &amp;</type>
+          <declname>target_attr</declname>
+        </param>
+        <param>
+          <type>RolePtr *</type>
+          <declname>first_matched</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/container/multi_value_warehouse.h" line="57" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1a4221f9d02cc798048b0273504a9311f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::service_discovery::MultiValueWarehouse::Search</definition>
+        <argsstring>(const proto::RoleAttributes &amp;target_attr, proto::RoleAttributes *first_matched_role_attr) override</argsstring>
+        <name>Search</name>
+        <reimplements refid="classapollo_1_1cyber_1_1service__discovery_1_1_warehouse_base_1a6911eb3141b838250dd281a321a690de">Search</reimplements>
+        <param>
+          <type>const proto::RoleAttributes &amp;</type>
+          <declname>target_attr</declname>
+        </param>
+        <param>
+          <type>proto::RoleAttributes *</type>
+          <declname>first_matched_role_attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/container/multi_value_warehouse.h" line="59" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1acb403c3473dbdf772bd98ed3dc9fcb81" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::service_discovery::MultiValueWarehouse::Search</definition>
+        <argsstring>(const proto::RoleAttributes &amp;target_attr, std::vector&lt; RolePtr &gt; *matched_roles) override</argsstring>
+        <name>Search</name>
+        <reimplements refid="classapollo_1_1cyber_1_1service__discovery_1_1_warehouse_base_1a5ad083b13db1921e613a2c6303d0881f">Search</reimplements>
+        <param>
+          <type>const proto::RoleAttributes &amp;</type>
+          <declname>target_attr</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; RolePtr &gt; *</type>
+          <declname>matched_roles</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/container/multi_value_warehouse.h" line="61" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1ad82b63e4466fb527f021620c282ed371" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::service_discovery::MultiValueWarehouse::Search</definition>
+        <argsstring>(const proto::RoleAttributes &amp;target_attr, std::vector&lt; proto::RoleAttributes &gt; *matched_roles_attr) override</argsstring>
+        <name>Search</name>
+        <reimplements refid="classapollo_1_1cyber_1_1service__discovery_1_1_warehouse_base_1a06a4eeebfafee845cac5b19a72d2590a">Search</reimplements>
+        <param>
+          <type>const proto::RoleAttributes &amp;</type>
+          <declname>target_attr</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; proto::RoleAttributes &gt; *</type>
+          <declname>matched_roles_attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/container/multi_value_warehouse.h" line="63" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1a986c2ba47627ee7abfddd86425412eb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::service_discovery::MultiValueWarehouse::GetAllRoles</definition>
+        <argsstring>(std::vector&lt; RolePtr &gt; *roles) override</argsstring>
+        <name>GetAllRoles</name>
+        <reimplements refid="classapollo_1_1cyber_1_1service__discovery_1_1_warehouse_base_1a7c1565f4a852da30e331d6354b369ebb">GetAllRoles</reimplements>
+        <param>
+          <type>std::vector&lt; RolePtr &gt; *</type>
+          <declname>roles</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/container/multi_value_warehouse.h" line="66" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1aa1b70c69f72cd975095b7624a6b83e3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::service_discovery::MultiValueWarehouse::GetAllRoles</definition>
+        <argsstring>(std::vector&lt; proto::RoleAttributes &gt; *roles_attr) override</argsstring>
+        <name>GetAllRoles</name>
+        <reimplements refid="classapollo_1_1cyber_1_1service__discovery_1_1_warehouse_base_1a95343b4852d3913c9764f41f0be0fb9e">GetAllRoles</reimplements>
+        <param>
+          <type>std::vector&lt; proto::RoleAttributes &gt; *</type>
+          <declname>roles_attr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/service_discovery/container/multi_value_warehouse.h" line="67" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="537">
+        <label>apollo::cyber::service_discovery::WarehouseBase</label>
+        <link refid="classapollo_1_1cyber_1_1service__discovery_1_1_warehouse_base"/>
+      </node>
+      <node id="536">
+        <label>apollo::cyber::service_discovery::MultiValueWarehouse</label>
+        <link refid="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse"/>
+        <childnode refid="537" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="539">
+        <label>apollo::cyber::service_discovery::WarehouseBase</label>
+        <link refid="classapollo_1_1cyber_1_1service__discovery_1_1_warehouse_base"/>
+      </node>
+      <node id="538">
+        <label>apollo::cyber::service_discovery::MultiValueWarehouse</label>
+        <link refid="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse"/>
+        <childnode refid="539" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dexin/code/Edith/cyber/service_discovery/container/multi_value_warehouse.h" line="31" column="1" bodyfile="/home/dexin/code/Edith/cyber/service_discovery/container/multi_value_warehouse.h" bodystart="31" bodyend="72"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1accd3db47b675921fd1ac27c224467069" prot="public" virt="virtual"><scope>apollo::cyber::service_discovery::MultiValueWarehouse</scope><name>Add</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1a78118000cb24fb6899cb4dc2f46023de" prot="public" virt="virtual"><scope>apollo::cyber::service_discovery::MultiValueWarehouse</scope><name>Clear</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1a986c2ba47627ee7abfddd86425412eb1" prot="public" virt="virtual"><scope>apollo::cyber::service_discovery::MultiValueWarehouse</scope><name>GetAllRoles</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1aa1b70c69f72cd975095b7624a6b83e3f" prot="public" virt="virtual"><scope>apollo::cyber::service_discovery::MultiValueWarehouse</scope><name>GetAllRoles</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1ab137a895871b0a5e9742bb38fea6db7f" prot="public" virt="non-virtual"><scope>apollo::cyber::service_discovery::MultiValueWarehouse</scope><name>MultiValueWarehouse</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1ac96d1a2faf4b62343c565b282d03f036" prot="public" virt="virtual"><scope>apollo::cyber::service_discovery::MultiValueWarehouse</scope><name>Remove</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1ac61b78aa52c1b7115d19ca6a5a419f0b" prot="public" virt="virtual"><scope>apollo::cyber::service_discovery::MultiValueWarehouse</scope><name>Remove</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1a50032c7ce957cf1d2508b43b6fcf73e2" prot="public" virt="virtual"><scope>apollo::cyber::service_discovery::MultiValueWarehouse</scope><name>Remove</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1ac7825b1126cd0ce4193fb1c6de2e1159" prot="public" virt="non-virtual"><scope>apollo::cyber::service_discovery::MultiValueWarehouse</scope><name>RoleMap</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1a8c064f1d708e8c0b905454df8efbf00c" prot="private" virt="non-virtual"><scope>apollo::cyber::service_discovery::MultiValueWarehouse</scope><name>roles_</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1a0b5aad2758df1db3e170337b9775abb6" prot="private" virt="non-virtual"><scope>apollo::cyber::service_discovery::MultiValueWarehouse</scope><name>rw_lock_</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1a0d4f03663bf91e70c7b44570085a989b" prot="public" virt="virtual"><scope>apollo::cyber::service_discovery::MultiValueWarehouse</scope><name>Search</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1a6381d4cd1a9b4290ca5b2fafd7238226" prot="public" virt="virtual"><scope>apollo::cyber::service_discovery::MultiValueWarehouse</scope><name>Search</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1a709b52d620cf7b32e47555fc507d79db" prot="public" virt="virtual"><scope>apollo::cyber::service_discovery::MultiValueWarehouse</scope><name>Search</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1aa5330ff3c6788887b1373e6878f1816f" prot="public" virt="virtual"><scope>apollo::cyber::service_discovery::MultiValueWarehouse</scope><name>Search</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1acc3ed44f34a5b8736b8a2f3c3ff5593b" prot="public" virt="virtual"><scope>apollo::cyber::service_discovery::MultiValueWarehouse</scope><name>Search</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1af5dca21f644c0f2d1d10f5dd68996823" prot="public" virt="virtual"><scope>apollo::cyber::service_discovery::MultiValueWarehouse</scope><name>Search</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1a1fdf37b96214172a0a9a0f988a6278ec" prot="public" virt="virtual"><scope>apollo::cyber::service_discovery::MultiValueWarehouse</scope><name>Search</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1a4221f9d02cc798048b0273504a9311f8" prot="public" virt="virtual"><scope>apollo::cyber::service_discovery::MultiValueWarehouse</scope><name>Search</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1acb403c3473dbdf772bd98ed3dc9fcb81" prot="public" virt="virtual"><scope>apollo::cyber::service_discovery::MultiValueWarehouse</scope><name>Search</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1ad82b63e4466fb527f021620c282ed371" prot="public" virt="virtual"><scope>apollo::cyber::service_discovery::MultiValueWarehouse</scope><name>Search</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1a7fb59c1ab79ba957b0da337ec4488d49" prot="public" virt="virtual"><scope>apollo::cyber::service_discovery::MultiValueWarehouse</scope><name>Size</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_warehouse_base_1a3d207c66e54fd0b38389bb8bf9ec32a4" prot="public" virt="non-virtual"><scope>apollo::cyber::service_discovery::MultiValueWarehouse</scope><name>WarehouseBase</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_multi_value_warehouse_1ae1e7e62f8d412dcc5ec93edc94c6fe2f" prot="public" virt="virtual"><scope>apollo::cyber::service_discovery::MultiValueWarehouse</scope><name>~MultiValueWarehouse</name></member>
+      <member refid="classapollo_1_1cyber_1_1service__discovery_1_1_warehouse_base_1ac691b3168e8d5e72aa2a0b2ea6694e07" prot="public" virt="virtual"><scope>apollo::cyber::service_discovery::MultiValueWarehouse</scope><name>~WarehouseBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

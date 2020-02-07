@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classcyber__py3_1_1parameter_1_1_parameter_server" kind="class" language="Python" prot="public">
+    <compoundname>cyber_py3::parameter::ParameterServer</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">object</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classcyber__py3_1_1parameter_1_1_parameter_server_1a31b6c6d019ed357e3820ce2dce293d19" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cyber_py3.parameter.ParameterServer::param_srv</definition>
+        <argsstring></argsstring>
+        <name>param_srv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/parameter.py" line="159" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/parameter.py" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcyber__py3_1_1parameter_1_1_parameter_server_1a4b5eeadf899bffb79ceda79192615742" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.parameter.ParameterServer.__init__</definition>
+        <argsstring>(self, node)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>node</type>
+          <defname>node</defname>
+        </param>
+        <briefdescription>
+<para>constructor the <ref refid="classcyber__py3_1_1parameter_1_1_parameter_server" kindref="compound">ParameterServer</ref> by the node object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the node to support the parameter server. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/parameter.py" line="158" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/parameter.py" bodystart="158" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py3_1_1parameter_1_1_parameter_server_1a47b08e118fc8c3e61749daf174ed96b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.parameter.ParameterServer.__del__</definition>
+        <argsstring>(self)</argsstring>
+        <name>__del__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/parameter.py" line="161" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/parameter.py" bodystart="161" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py3_1_1parameter_1_1_parameter_server_1a8401f087143a45aa940b14592524aa1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.parameter.ParameterServer.set_parameter</definition>
+        <argsstring>(self, param)</argsstring>
+        <name>set_parameter</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>param</type>
+          <defname>param</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>set parameter, param is Parameter.
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/parameter.py" line="164" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/parameter.py" bodystart="164" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py3_1_1parameter_1_1_parameter_server_1af7112395efb9117db532ea60a951a179" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.parameter.ParameterServer.get_parameter</definition>
+        <argsstring>(self, param_name)</argsstring>
+        <name>get_parameter</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>param_name</type>
+          <defname>param_name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>get Parameter by param name param_name.
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/parameter.py" line="170" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/parameter.py" bodystart="170" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="classcyber__py3_1_1parameter_1_1_parameter_server_1a587beb16a027f2ee42729896cb5c9455" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cyber_py3.parameter.ParameterServer.get_paramslist</definition>
+        <argsstring>(self)</argsstring>
+        <name>get_paramslist</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>get all params of this parameterserver.
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/parameter.py" line="176" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/parameter.py" bodystart="176" bodyend="186"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Class for ParameterServer wrapper.
+</verbatim> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="596">
+        <label>cyber_py3.parameter.ParameterServer</label>
+        <link refid="classcyber__py3_1_1parameter_1_1_parameter_server"/>
+        <childnode refid="597" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="597">
+        <label>object</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="598">
+        <label>cyber_py3.parameter.ParameterServer</label>
+        <link refid="classcyber__py3_1_1parameter_1_1_parameter_server"/>
+        <childnode refid="599" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="599">
+        <label>object</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dexin/code/Edith/cyber/python/cyber_py3/parameter.py" line="148" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py3/parameter.py" bodystart="148" bodyend="186"/>
+    <listofallmembers>
+      <member refid="classcyber__py3_1_1parameter_1_1_parameter_server_1a47b08e118fc8c3e61749daf174ed96b8" prot="public" virt="non-virtual"><scope>cyber_py3::parameter::ParameterServer</scope><name>__del__</name></member>
+      <member refid="classcyber__py3_1_1parameter_1_1_parameter_server_1a4b5eeadf899bffb79ceda79192615742" prot="public" virt="non-virtual"><scope>cyber_py3::parameter::ParameterServer</scope><name>__init__</name></member>
+      <member refid="classcyber__py3_1_1parameter_1_1_parameter_server_1af7112395efb9117db532ea60a951a179" prot="public" virt="non-virtual"><scope>cyber_py3::parameter::ParameterServer</scope><name>get_parameter</name></member>
+      <member refid="classcyber__py3_1_1parameter_1_1_parameter_server_1a587beb16a027f2ee42729896cb5c9455" prot="public" virt="non-virtual"><scope>cyber_py3::parameter::ParameterServer</scope><name>get_paramslist</name></member>
+      <member refid="classcyber__py3_1_1parameter_1_1_parameter_server_1a31b6c6d019ed357e3820ce2dce293d19" prot="public" virt="non-virtual"><scope>cyber_py3::parameter::ParameterServer</scope><name>param_srv</name></member>
+      <member refid="classcyber__py3_1_1parameter_1_1_parameter_server_1a8401f087143a45aa940b14592524aa1b" prot="public" virt="non-virtual"><scope>cyber_py3::parameter::ParameterServer</scope><name>set_parameter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

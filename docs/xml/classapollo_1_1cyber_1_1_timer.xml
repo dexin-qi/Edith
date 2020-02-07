@@ -1,0 +1,262 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classapollo_1_1cyber_1_1_timer" kind="class" language="C++" prot="public">
+    <compoundname>apollo::cyber::Timer</compoundname>
+    <includes refid="timer_8h" local="no">timer.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_timer_1acd0cde31c5d7213a99bb688b0d06ee66" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t apollo::cyber::Timer::timer_id_</definition>
+        <argsstring></argsstring>
+        <name>timer_id_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/timer/timer.h" line="114" column="1" bodyfile="/home/dexin/code/Edith/cyber/timer/timer.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_timer_1ac72f9500a21b1f8011de877da8840d9f" prot="private" static="no" mutable="no">
+        <type><ref refid="structapollo_1_1cyber_1_1_timer_option" kindref="compound">TimerOption</ref></type>
+        <definition>TimerOption apollo::cyber::Timer::timer_opt_</definition>
+        <argsstring></argsstring>
+        <name>timer_opt_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/timer/timer.h" line="115" column="1" bodyfile="/home/dexin/code/Edith/cyber/timer/timer.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_timer_1a2fd1f38cf8fecda366a548ec1c2095ff" prot="private" static="no" mutable="no">
+        <type><ref refid="classapollo_1_1cyber_1_1_timing_wheel" kindref="compound">TimingWheel</ref> *</type>
+        <definition>TimingWheel* apollo::cyber::Timer::timing_wheel_</definition>
+        <argsstring></argsstring>
+        <name>timing_wheel_</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/timer/timer.h" line="116" column="1" bodyfile="/home/dexin/code/Edith/cyber/timer/timer.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_timer_1a12dd67dcacc899ce4d106e9c26e7f28e" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="structapollo_1_1cyber_1_1_timer_task" kindref="compound">TimerTask</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;TimerTask&gt; apollo::cyber::Timer::task_</definition>
+        <argsstring></argsstring>
+        <name>task_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/timer/timer.h" line="117" column="1" bodyfile="/home/dexin/code/Edith/cyber/timer/timer.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_timer_1abd2d33f780bda0a1f1fa36e52deb26ef" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; bool &gt;</type>
+        <definition>std::atomic&lt;bool&gt; apollo::cyber::Timer::started_</definition>
+        <argsstring></argsstring>
+        <name>started_</name>
+        <initializer>= {false}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/timer/timer.h" line="118" column="1" bodyfile="/home/dexin/code/Edith/cyber/timer/timer.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_timer_1a433f8bd6376d0a3d8cac529998052f6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::Timer::Timer</definition>
+        <argsstring>()</argsstring>
+        <name>Timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/timer/timer.h" line="73" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_timer_1afdd6c9fe9bb5b5d48d4061e82197daae" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::Timer::Timer</definition>
+        <argsstring>(TimerOption opt)</argsstring>
+        <name>Timer</name>
+        <param>
+          <type><ref refid="structapollo_1_1cyber_1_1_timer_option" kindref="compound">TimerOption</ref></type>
+          <declname>opt</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classapollo_1_1cyber_1_1_timer" kindref="compound">Timer</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>opt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classapollo_1_1cyber_1_1_timer" kindref="compound">Timer</ref> option </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/timer/timer.h" line="80" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_timer_1a1c3d651afac72fe0370485dcb07c13e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::Timer::Timer</definition>
+        <argsstring>(uint32_t period, std::function&lt; void()&gt; callback, bool oneshot)</argsstring>
+        <name>Timer</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>period</declname>
+        </param>
+        <param>
+          <type>std::function&lt; void()&gt;</type>
+          <declname>callback</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>oneshot</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classapollo_1_1cyber_1_1_timer" kindref="compound">Timer</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>period</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The period of the timer, unit is ms </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tasks that the timer needs to perform </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oneshot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True: perform the callback only after the first timing cycle False: perform the callback every timed period </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/timer/timer.h" line="90" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_timer_1a31c3aa1ad7acc8a20afb1ef6839b1b0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::Timer::~Timer</definition>
+        <argsstring>()</argsstring>
+        <name>~Timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/timer/timer.h" line="91" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_timer_1aa56aad6720943db62e3d59475d400b24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::Timer::SetTimerOption</definition>
+        <argsstring>(TimerOption opt)</argsstring>
+        <name>SetTimerOption</name>
+        <param>
+          <type><ref refid="structapollo_1_1cyber_1_1_timer_option" kindref="compound">TimerOption</ref></type>
+          <declname>opt</declname>
+        </param>
+        <briefdescription>
+<para>Set the <ref refid="classapollo_1_1cyber_1_1_timer" kindref="compound">Timer</ref> Option object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>opt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The timer option will be set </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/timer/timer.h" line="98" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_timer_1acfee595a5b142ce443e1b37427e2efc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::Timer::Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+<para>Start the timer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/timer/timer.h" line="104" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_timer_1a350a69e04b943f960ca992de21b676cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void apollo::cyber::Timer::Stop</definition>
+        <argsstring>()</argsstring>
+        <name>Stop</name>
+        <briefdescription>
+<para>Stop the timer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/timer/timer.h" line="110" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_timer_1a8bc67661b4be8080baa85d3f95d9672b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::Timer::InitTimerTask</definition>
+        <argsstring>()</argsstring>
+        <name>InitTimerTask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/timer/timer.h" line="113" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Used to perform oneshot or periodic timing tasks. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dexin/code/Edith/cyber/timer/timer.h" line="71" column="1" bodyfile="/home/dexin/code/Edith/cyber/timer/timer.h" bodystart="71" bodyend="119"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1_timer_1a8bc67661b4be8080baa85d3f95d9672b" prot="private" virt="non-virtual"><scope>apollo::cyber::Timer</scope><name>InitTimerTask</name></member>
+      <member refid="classapollo_1_1cyber_1_1_timer_1aa56aad6720943db62e3d59475d400b24" prot="public" virt="non-virtual"><scope>apollo::cyber::Timer</scope><name>SetTimerOption</name></member>
+      <member refid="classapollo_1_1cyber_1_1_timer_1acfee595a5b142ce443e1b37427e2efc5" prot="public" virt="non-virtual"><scope>apollo::cyber::Timer</scope><name>Start</name></member>
+      <member refid="classapollo_1_1cyber_1_1_timer_1abd2d33f780bda0a1f1fa36e52deb26ef" prot="private" virt="non-virtual"><scope>apollo::cyber::Timer</scope><name>started_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_timer_1a350a69e04b943f960ca992de21b676cf" prot="public" virt="non-virtual"><scope>apollo::cyber::Timer</scope><name>Stop</name></member>
+      <member refid="classapollo_1_1cyber_1_1_timer_1a12dd67dcacc899ce4d106e9c26e7f28e" prot="private" virt="non-virtual"><scope>apollo::cyber::Timer</scope><name>task_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_timer_1a433f8bd6376d0a3d8cac529998052f6e" prot="public" virt="non-virtual"><scope>apollo::cyber::Timer</scope><name>Timer</name></member>
+      <member refid="classapollo_1_1cyber_1_1_timer_1afdd6c9fe9bb5b5d48d4061e82197daae" prot="public" virt="non-virtual"><scope>apollo::cyber::Timer</scope><name>Timer</name></member>
+      <member refid="classapollo_1_1cyber_1_1_timer_1a1c3d651afac72fe0370485dcb07c13e6" prot="public" virt="non-virtual"><scope>apollo::cyber::Timer</scope><name>Timer</name></member>
+      <member refid="classapollo_1_1cyber_1_1_timer_1acd0cde31c5d7213a99bb688b0d06ee66" prot="private" virt="non-virtual"><scope>apollo::cyber::Timer</scope><name>timer_id_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_timer_1ac72f9500a21b1f8011de877da8840d9f" prot="private" virt="non-virtual"><scope>apollo::cyber::Timer</scope><name>timer_opt_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_timer_1a2fd1f38cf8fecda366a548ec1c2095ff" prot="private" virt="non-virtual"><scope>apollo::cyber::Timer</scope><name>timing_wheel_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_timer_1a31c3aa1ad7acc8a20afb1ef6839b1b0c" prot="public" virt="non-virtual"><scope>apollo::cyber::Timer</scope><name>~Timer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,832 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="node__channel__impl_8h" kind="file" language="C++">
+    <compoundname>node_channel_impl.h</compoundname>
+    <includes local="no">memory</includes>
+    <includes local="no">string</includes>
+    <includes local="yes">cyber/blocker/intra_reader.h</includes>
+    <includes local="yes">cyber/blocker/intra_writer.h</includes>
+    <includes local="yes">cyber/common/global_data.h</includes>
+    <includes local="yes">cyber/message/message_traits.h</includes>
+    <includes refid="reader_8h" local="yes">cyber/node/reader.h</includes>
+    <includes refid="writer_8h" local="yes">cyber/node/writer.h</includes>
+    <includes local="yes">cyber/proto/run_mode_conf.pb.h</includes>
+    <includedby refid="node_8h" local="yes">/home/dexin/code/Edith/cyber/node/node.h</includedby>
+    <includedby refid="client_8h" local="yes">/home/dexin/code/Edith/cyber/service/client.h</includedby>
+    <includedby refid="service_8h" local="yes">/home/dexin/code/Edith/cyber/service/service.h</includedby>
+    <incdepgraph>
+      <node id="504">
+        <label>list</label>
+      </node>
+      <node id="559">
+        <label>cyber/proto/run_mode_conf.pb.h</label>
+      </node>
+      <node id="534">
+        <label>cyber/service_discovery/container/warehouse_base.h</label>
+        <link refid="warehouse__base_8h_source"/>
+        <childnode refid="531" relation="include">
+        </childnode>
+        <childnode refid="508" relation="include">
+        </childnode>
+        <childnode refid="535" relation="include">
+        </childnode>
+      </node>
+      <node id="532">
+        <label>cyber/base/atomic_rw_lock.h</label>
+      </node>
+      <node id="526">
+        <label>fastrtps/participant/Participant.h</label>
+      </node>
+      <node id="513">
+        <label>atomic</label>
+      </node>
+      <node id="510">
+        <label>cyber/croutine/routine_factory.h</label>
+      </node>
+      <node id="539">
+        <label>fastrtps/attributes/PublisherAttributes.h</label>
+      </node>
+      <node id="523">
+        <label>cyber/base/signal.h</label>
+      </node>
+      <node id="521">
+        <label>functional</label>
+      </node>
+      <node id="550">
+        <label>limits</label>
+      </node>
+      <node id="543">
+        <label>cyber/service_discovery/communication/subscriber_listener.h</label>
+        <link refid="subscriber__listener_8h_source"/>
+        <childnode refid="521" relation="include">
+        </childnode>
+        <childnode refid="505" relation="include">
+        </childnode>
+        <childnode refid="497" relation="include">
+        </childnode>
+        <childnode refid="525" relation="include">
+        </childnode>
+        <childnode refid="544" relation="include">
+        </childnode>
+        <childnode refid="542" relation="include">
+        </childnode>
+        <childnode refid="545" relation="include">
+        </childnode>
+      </node>
+      <node id="551">
+        <label>cyber/time/duration.h</label>
+        <link refid="duration_8h_source"/>
+        <childnode refid="552" relation="include">
+        </childnode>
+        <childnode refid="553" relation="include">
+        </childnode>
+        <childnode refid="531" relation="include">
+        </childnode>
+        <childnode refid="554" relation="include">
+        </childnode>
+        <childnode refid="555" relation="include">
+        </childnode>
+      </node>
+      <node id="536">
+        <label>cyber/proto/role_attributes.pb.h</label>
+      </node>
+      <node id="540">
+        <label>fastrtps/attributes/SubscriberAttributes.h</label>
+      </node>
+      <node id="544">
+        <label>fastrtps/subscriber/SampleInfo.h</label>
+      </node>
+      <node id="531">
+        <label>cstdint</label>
+      </node>
+      <node id="535">
+        <label>cyber/service_discovery/role/role.h</label>
+        <link refid="role_8h_source"/>
+        <childnode refid="531" relation="include">
+        </childnode>
+        <childnode refid="496" relation="include">
+        </childnode>
+        <childnode refid="497" relation="include">
+        </childnode>
+        <childnode refid="536" relation="include">
+        </childnode>
+      </node>
+      <node id="548">
+        <label>cyber/transport/rtps/participant.h</label>
+      </node>
+      <node id="511">
+        <label>cyber/data/data_visitor.h</label>
+      </node>
+      <node id="495">
+        <label>/home/dexin/code/Edith/cyber/node/node_channel_impl.h</label>
+        <link refid="node_channel_impl.h"/>
+        <childnode refid="496" relation="include">
+        </childnode>
+        <childnode refid="497" relation="include">
+        </childnode>
+        <childnode refid="498" relation="include">
+        </childnode>
+        <childnode refid="499" relation="include">
+        </childnode>
+        <childnode refid="500" relation="include">
+        </childnode>
+        <childnode refid="501" relation="include">
+        </childnode>
+        <childnode refid="502" relation="include">
+        </childnode>
+        <childnode refid="556" relation="include">
+        </childnode>
+        <childnode refid="559" relation="include">
+        </childnode>
+      </node>
+      <node id="553">
+        <label>cmath</label>
+      </node>
+      <node id="555">
+        <label>stdexcept</label>
+      </node>
+      <node id="556">
+        <label>cyber/node/writer.h</label>
+        <link refid="writer_8h_source"/>
+        <childnode refid="496" relation="include">
+        </childnode>
+        <childnode refid="497" relation="include">
+        </childnode>
+        <childnode refid="508" relation="include">
+        </childnode>
+        <childnode refid="557" relation="include">
+        </childnode>
+        <childnode refid="558" relation="include">
+        </childnode>
+        <childnode refid="518" relation="include">
+        </childnode>
+        <childnode refid="520" relation="include">
+        </childnode>
+        <childnode refid="517" relation="include">
+        </childnode>
+      </node>
+      <node id="541">
+        <label>fastrtps/publisher/Publisher.h</label>
+      </node>
+      <node id="500">
+        <label>cyber/common/global_data.h</label>
+      </node>
+      <node id="497">
+        <label>string</label>
+      </node>
+      <node id="512">
+        <label>cyber/node/reader_base.h</label>
+        <link refid="reader__base_8h_source"/>
+        <childnode refid="513" relation="include">
+        </childnode>
+        <childnode refid="496" relation="include">
+        </childnode>
+        <childnode refid="497" relation="include">
+        </childnode>
+        <childnode refid="506" relation="include">
+        </childnode>
+        <childnode refid="508" relation="include">
+        </childnode>
+        <childnode refid="514" relation="include">
+        </childnode>
+        <childnode refid="515" relation="include">
+        </childnode>
+        <childnode refid="516" relation="include">
+        </childnode>
+        <childnode refid="517" relation="include">
+        </childnode>
+      </node>
+      <node id="522">
+        <label>map</label>
+      </node>
+      <node id="515">
+        <label>cyber/common/util.h</label>
+      </node>
+      <node id="529">
+        <label>unordered_set</label>
+      </node>
+      <node id="557">
+        <label>cyber/common/log.h</label>
+      </node>
+      <node id="549">
+        <label>cyber/time/time.h</label>
+        <link refid="time_8h_source"/>
+        <childnode refid="550" relation="include">
+        </childnode>
+        <childnode refid="497" relation="include">
+        </childnode>
+        <childnode refid="551" relation="include">
+        </childnode>
+      </node>
+      <node id="518">
+        <label>cyber/proto/topology_change.pb.h</label>
+      </node>
+      <node id="533">
+        <label>cyber/service_discovery/container/multi_value_warehouse.h</label>
+        <link refid="multi__value__warehouse_8h_source"/>
+        <childnode refid="531" relation="include">
+        </childnode>
+        <childnode refid="506" relation="include">
+        </childnode>
+        <childnode refid="508" relation="include">
+        </childnode>
+        <childnode refid="532" relation="include">
+        </childnode>
+        <childnode refid="534" relation="include">
+        </childnode>
+      </node>
+      <node id="499">
+        <label>cyber/blocker/intra_writer.h</label>
+      </node>
+      <node id="528">
+        <label>cyber/service_discovery/specific_manager/channel_manager.h</label>
+        <link refid="channel__manager_8h_source"/>
+        <childnode refid="496" relation="include">
+        </childnode>
+        <childnode refid="497" relation="include">
+        </childnode>
+        <childnode refid="506" relation="include">
+        </childnode>
+        <childnode refid="529" relation="include">
+        </childnode>
+        <childnode refid="508" relation="include">
+        </childnode>
+        <childnode refid="530" relation="include">
+        </childnode>
+        <childnode refid="533" relation="include">
+        </childnode>
+        <childnode refid="537" relation="include">
+        </childnode>
+        <childnode refid="535" relation="include">
+        </childnode>
+        <childnode refid="538" relation="include">
+        </childnode>
+      </node>
+      <node id="546">
+        <label>cyber/service_discovery/specific_manager/node_manager.h</label>
+        <link refid="node__manager_8h_source"/>
+        <childnode refid="496" relation="include">
+        </childnode>
+        <childnode refid="497" relation="include">
+        </childnode>
+        <childnode refid="508" relation="include">
+        </childnode>
+        <childnode refid="537" relation="include">
+        </childnode>
+        <childnode refid="535" relation="include">
+        </childnode>
+        <childnode refid="538" relation="include">
+        </childnode>
+      </node>
+      <node id="520">
+        <label>cyber/service_discovery/topology_manager.h</label>
+        <link refid="topology__manager_8h_source"/>
+        <childnode refid="513" relation="include">
+        </childnode>
+        <childnode refid="521" relation="include">
+        </childnode>
+        <childnode refid="522" relation="include">
+        </childnode>
+        <childnode refid="496" relation="include">
+        </childnode>
+        <childnode refid="505" relation="include">
+        </childnode>
+        <childnode refid="497" relation="include">
+        </childnode>
+        <childnode refid="523" relation="include">
+        </childnode>
+        <childnode refid="514" relation="include">
+        </childnode>
+        <childnode refid="524" relation="include">
+        </childnode>
+        <childnode refid="528" relation="include">
+        </childnode>
+        <childnode refid="546" relation="include">
+        </childnode>
+        <childnode refid="547" relation="include">
+        </childnode>
+        <childnode refid="548" relation="include">
+        </childnode>
+      </node>
+      <node id="558">
+        <label>cyber/node/writer_base.h</label>
+        <link refid="writer__base_8h_source"/>
+        <childnode refid="513" relation="include">
+        </childnode>
+        <childnode refid="505" relation="include">
+        </childnode>
+        <childnode refid="497" relation="include">
+        </childnode>
+        <childnode refid="508" relation="include">
+        </childnode>
+        <childnode refid="536" relation="include">
+        </childnode>
+      </node>
+      <node id="530">
+        <label>cyber/service_discovery/container/graph.h</label>
+        <link refid="graph_8h_source"/>
+        <childnode refid="531" relation="include">
+        </childnode>
+        <childnode refid="497" relation="include">
+        </childnode>
+        <childnode refid="506" relation="include">
+        </childnode>
+        <childnode refid="532" relation="include">
+        </childnode>
+      </node>
+      <node id="537">
+        <label>cyber/service_discovery/container/single_value_warehouse.h</label>
+        <link refid="single__value__warehouse_8h_source"/>
+        <childnode refid="531" relation="include">
+        </childnode>
+        <childnode refid="506" relation="include">
+        </childnode>
+        <childnode refid="508" relation="include">
+        </childnode>
+        <childnode refid="532" relation="include">
+        </childnode>
+        <childnode refid="534" relation="include">
+        </childnode>
+      </node>
+      <node id="527">
+        <label>fastrtps/participant/ParticipantListener.h</label>
+      </node>
+      <node id="538">
+        <label>cyber/service_discovery/specific_manager/manager.h</label>
+        <link refid="manager_8h_source"/>
+        <childnode refid="513" relation="include">
+        </childnode>
+        <childnode refid="521" relation="include">
+        </childnode>
+        <childnode refid="505" relation="include">
+        </childnode>
+        <childnode refid="497" relation="include">
+        </childnode>
+        <childnode refid="525" relation="include">
+        </childnode>
+        <childnode refid="539" relation="include">
+        </childnode>
+        <childnode refid="540" relation="include">
+        </childnode>
+        <childnode refid="526" relation="include">
+        </childnode>
+        <childnode refid="541" relation="include">
+        </childnode>
+        <childnode refid="542" relation="include">
+        </childnode>
+        <childnode refid="523" relation="include">
+        </childnode>
+        <childnode refid="518" relation="include">
+        </childnode>
+        <childnode refid="543" relation="include">
+        </childnode>
+      </node>
+      <node id="516">
+        <label>cyber/event/perf_event_cache.h</label>
+      </node>
+      <node id="508">
+        <label>vector</label>
+      </node>
+      <node id="507">
+        <label>utility</label>
+      </node>
+      <node id="519">
+        <label>cyber/scheduler/scheduler_factory.h</label>
+      </node>
+      <node id="498">
+        <label>cyber/blocker/intra_reader.h</label>
+      </node>
+      <node id="524">
+        <label>cyber/service_discovery/communication/participant_listener.h</label>
+        <link refid="participant__listener_8h_source"/>
+        <childnode refid="521" relation="include">
+        </childnode>
+        <childnode refid="505" relation="include">
+        </childnode>
+        <childnode refid="525" relation="include">
+        </childnode>
+        <childnode refid="526" relation="include">
+        </childnode>
+        <childnode refid="527" relation="include">
+        </childnode>
+      </node>
+      <node id="525">
+        <label>fastrtps/Domain.h</label>
+      </node>
+      <node id="542">
+        <label>fastrtps/subscriber/Subscriber.h</label>
+      </node>
+      <node id="545">
+        <label>fastrtps/subscriber/SubscriberListener.h</label>
+      </node>
+      <node id="554">
+        <label>iostream</label>
+      </node>
+      <node id="514">
+        <label>cyber/common/macros.h</label>
+      </node>
+      <node id="506">
+        <label>unordered_map</label>
+      </node>
+      <node id="552">
+        <label>climits</label>
+      </node>
+      <node id="505">
+        <label>mutex</label>
+      </node>
+      <node id="509">
+        <label>cyber/blocker/blocker.h</label>
+      </node>
+      <node id="517">
+        <label>cyber/transport/transport.h</label>
+      </node>
+      <node id="503">
+        <label>algorithm</label>
+      </node>
+      <node id="502">
+        <label>cyber/node/reader.h</label>
+        <link refid="reader_8h_source"/>
+        <childnode refid="503" relation="include">
+        </childnode>
+        <childnode refid="504" relation="include">
+        </childnode>
+        <childnode refid="496" relation="include">
+        </childnode>
+        <childnode refid="505" relation="include">
+        </childnode>
+        <childnode refid="497" relation="include">
+        </childnode>
+        <childnode refid="506" relation="include">
+        </childnode>
+        <childnode refid="507" relation="include">
+        </childnode>
+        <childnode refid="508" relation="include">
+        </childnode>
+        <childnode refid="509" relation="include">
+        </childnode>
+        <childnode refid="500" relation="include">
+        </childnode>
+        <childnode refid="510" relation="include">
+        </childnode>
+        <childnode refid="511" relation="include">
+        </childnode>
+        <childnode refid="512" relation="include">
+        </childnode>
+        <childnode refid="518" relation="include">
+        </childnode>
+        <childnode refid="519" relation="include">
+        </childnode>
+        <childnode refid="520" relation="include">
+        </childnode>
+        <childnode refid="549" relation="include">
+        </childnode>
+        <childnode refid="517" relation="include">
+        </childnode>
+      </node>
+      <node id="501">
+        <label>cyber/message/message_traits.h</label>
+      </node>
+      <node id="547">
+        <label>cyber/service_discovery/specific_manager/service_manager.h</label>
+        <link refid="service__manager_8h_source"/>
+        <childnode refid="496" relation="include">
+        </childnode>
+        <childnode refid="497" relation="include">
+        </childnode>
+        <childnode refid="508" relation="include">
+        </childnode>
+        <childnode refid="533" relation="include">
+        </childnode>
+        <childnode refid="537" relation="include">
+        </childnode>
+        <childnode refid="535" relation="include">
+        </childnode>
+        <childnode refid="538" relation="include">
+        </childnode>
+      </node>
+      <node id="496">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="567">
+        <label>/home/dexin/code/Edith/cyber/node/node_service_impl.h</label>
+        <link refid="node__service__impl_8h_source"/>
+        <childnode refid="561" relation="include">
+        </childnode>
+      </node>
+      <node id="561">
+        <label>/home/dexin/code/Edith/cyber/node/node.h</label>
+        <link refid="node_8h_source"/>
+        <childnode refid="562" relation="include">
+        </childnode>
+        <childnode refid="563" relation="include">
+        </childnode>
+      </node>
+      <node id="562">
+        <label>/home/dexin/code/Edith/cyber/cyber.h</label>
+        <link refid="cyber_8h_source"/>
+      </node>
+      <node id="566">
+        <label>/home/dexin/code/Edith/cyber/service/client.h</label>
+        <link refid="client_8h_source"/>
+        <childnode refid="567" relation="include">
+        </childnode>
+        <childnode refid="568" relation="include">
+        </childnode>
+      </node>
+      <node id="563">
+        <label>/home/dexin/code/Edith/cyber/component/component_base.h</label>
+        <link refid="component__base_8h_source"/>
+        <childnode refid="564" relation="include">
+        </childnode>
+        <childnode refid="565" relation="include">
+        </childnode>
+      </node>
+      <node id="560">
+        <label>/home/dexin/code/Edith/cyber/node/node_channel_impl.h</label>
+        <link refid="node_channel_impl.h"/>
+        <childnode refid="561" relation="include">
+        </childnode>
+        <childnode refid="566" relation="include">
+        </childnode>
+        <childnode refid="569" relation="include">
+        </childnode>
+      </node>
+      <node id="570">
+        <label>/home/dexin/code/Edith/cyber/parameter/parameter_server.h</label>
+        <link refid="parameter__server_8h_source"/>
+      </node>
+      <node id="565">
+        <label>/home/dexin/code/Edith/cyber/component/timer_component.h</label>
+        <link refid="timer__component_8h_source"/>
+      </node>
+      <node id="568">
+        <label>/home/dexin/code/Edith/cyber/parameter/parameter_client.h</label>
+        <link refid="parameter__client_8h_source"/>
+      </node>
+      <node id="569">
+        <label>/home/dexin/code/Edith/cyber/service/service.h</label>
+        <link refid="service_8h_source"/>
+        <childnode refid="567" relation="include">
+        </childnode>
+        <childnode refid="570" relation="include">
+        </childnode>
+      </node>
+      <node id="564">
+        <label>/home/dexin/code/Edith/cyber/component/component.h</label>
+        <link refid="component_8h_source"/>
+        <childnode refid="562" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structapollo_1_1cyber_1_1_reader_config" prot="public">apollo::cyber::ReaderConfig</innerclass>
+    <innerclass refid="classapollo_1_1cyber_1_1_node_channel_impl" prot="public">apollo::cyber::NodeChannelImpl</innerclass>
+    <innernamespace refid="namespaceapollo">apollo</innernamespace>
+    <innernamespace refid="namespaceapollo_1_1cyber">apollo::cyber</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2018<sp/>The<sp/>Apollo<sp/>Authors.<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CYBER_NODE_NODE_CHANNEL_IMPL_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CYBER_NODE_NODE_CHANNEL_IMPL_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cyber/blocker/intra_reader.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cyber/blocker/intra_writer.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cyber/common/global_data.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cyber/message/message_traits.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cyber/node/reader.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cyber/node/writer.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cyber/proto/run_mode_conf.pb.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceapollo" kindref="compound">apollo</ref><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacecyber" kindref="compound">cyber</ref><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Node;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="structapollo_1_1cyber_1_1_reader_config" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structapollo_1_1cyber_1_1_reader_config" kindref="compound">ReaderConfig</ref><sp/>{<sp/><sp/></highlight></codeline>
+<codeline lineno="37" refid="structapollo_1_1cyber_1_1_reader_config_1aeba0186e348e190f4749430b9bbc9d96" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structapollo_1_1cyber_1_1_reader_config_1aeba0186e348e190f4749430b9bbc9d96" kindref="member">ReaderConfig</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>qos_profile.set_history(proto::QosHistoryPolicy::HISTORY_KEEP_LAST);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>qos_profile.set_depth(1);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>qos_profile.set_mps(0);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>qos_profile.set_reliability(</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>proto::QosReliabilityPolicy::RELIABILITY_RELIABLE);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>qos_profile.set_durability(proto::QosDurabilityPolicy::DURABILITY_VOLATILE);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1_reader_config_1affa7656a5714023523d0f9202d0d0f2b" kindref="member">pending_queue_size</ref><sp/>=<sp/>DEFAULT_PENDING_QUEUE_SIZE;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><ref refid="structapollo_1_1cyber_1_1_reader_config_1aeba0186e348e190f4749430b9bbc9d96" kindref="member">ReaderConfig</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structapollo_1_1cyber_1_1_reader_config" kindref="compound">ReaderConfig</ref>&amp;<sp/>other)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>channel_name(other.channel_name),</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>qos_profile(other.qos_profile),</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1_reader_config_1affa7656a5714023523d0f9202d0d0f2b" kindref="member">pending_queue_size</ref>(other.<ref refid="structapollo_1_1cyber_1_1_reader_config_1affa7656a5714023523d0f9202d0d0f2b" kindref="member">pending_queue_size</ref>)<sp/>{}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>std::string<sp/>channel_name;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&lt;<sp/>channel<sp/>reads</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>proto::QosProfile<sp/>qos_profile;<sp/><sp/></highlight><highlight class="comment">//&lt;<sp/>the<sp/>qos<sp/>configuration</highlight></codeline>
+<codeline lineno="58" refid="structapollo_1_1cyber_1_1_reader_config_1affa7656a5714023523d0f9202d0d0f2b" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="structapollo_1_1cyber_1_1_reader_config_1affa7656a5714023523d0f9202d0d0f2b" kindref="member">pending_queue_size</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="classapollo_1_1cyber_1_1_node_channel_impl" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classapollo_1_1cyber_1_1_node_channel_impl" kindref="compound">NodeChannelImpl</ref><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classapollo_1_1cyber_1_1_node" kindref="compound">Node</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>NodeManagerPtr<sp/>=<sp/>std::shared_ptr&lt;service_discovery::NodeManager&gt;;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="classapollo_1_1cyber_1_1_node_channel_impl_1ac50ae040942a835396f296213b3f030a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1_node_channel_impl_1ac50ae040942a835396f296213b3f030a" kindref="member">NodeChannelImpl</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>node_name)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>is_reality_mode_(true),<sp/>node_name_(node_name)<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>node_attr_.set_host_name(common::GlobalData::Instance()-&gt;HostName());</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>node_attr_.set_host_ip(common::GlobalData::Instance()-&gt;HostIp());</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>node_attr_.set_process_id(common::GlobalData::Instance()-&gt;ProcessId());</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>node_attr_.set_node_name(node_name);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>node_id<sp/>=<sp/>common::GlobalData::RegisterNode(node_name);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>node_attr_.set_node_id(node_id);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>is_reality_mode_<sp/>=<sp/>common::GlobalData::Instance()-&gt;IsRealityMode();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(is_reality_mode_)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>node_manager_<sp/>=</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>service_discovery::TopologyManager::Instance()-&gt;node_manager();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>node_manager_-&gt;Join(node_attr_,<sp/>RoleType::ROLE_NODE);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="classapollo_1_1cyber_1_1_node_channel_impl_1aeaed99822b9bc30590213d62179f387f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classapollo_1_1cyber_1_1_node_channel_impl_1aeaed99822b9bc30590213d62179f387f" kindref="member">~NodeChannelImpl</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(is_reality_mode_)<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>node_manager_-&gt;Leave(node_attr_,<sp/>RoleType::ROLE_NODE);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>node_manager_<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="classapollo_1_1cyber_1_1_node_channel_impl_1a2b099aa90db9523d1a6db5629acb77a6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="classapollo_1_1cyber_1_1_node_channel_impl_1a2b099aa90db9523d1a6db5629acb77a6" kindref="member">NodeName</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>node_name_;<sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>MessageT&gt;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>CreateWriter(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>proto::RoleAttributes&amp;<sp/>role_attr)</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;<sp/>std::shared_ptr&lt;Writer&lt;MessageT&gt;&gt;;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>MessageT&gt;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>CreateWriter(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>channel_name)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;<sp/>std::shared_ptr&lt;Writer&lt;MessageT&gt;&gt;;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>MessageT&gt;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>CreateReader(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>channel_name,</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CallbackFunc&lt;MessageT&gt;&amp;<sp/>reader_func)</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;<sp/>std::shared_ptr&lt;Reader&lt;MessageT&gt;&gt;;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>MessageT&gt;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>CreateReader(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structapollo_1_1cyber_1_1_reader_config" kindref="compound">ReaderConfig</ref>&amp;<sp/>config,</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CallbackFunc&lt;MessageT&gt;&amp;<sp/>reader_func)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;<sp/>std::shared_ptr&lt;Reader&lt;MessageT&gt;&gt;;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>MessageT&gt;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>CreateReader(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>proto::RoleAttributes&amp;<sp/>role_attr,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CallbackFunc&lt;MessageT&gt;&amp;<sp/>reader_func,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structapollo_1_1cyber_1_1_reader_config_1affa7656a5714023523d0f9202d0d0f2b" kindref="member">pending_queue_size</ref><sp/>=<sp/>DEFAULT_PENDING_QUEUE_SIZE)</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;<sp/>std::shared_ptr&lt;Reader&lt;MessageT&gt;&gt;;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>MessageT&gt;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>CreateReader(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>proto::RoleAttributes&amp;<sp/>role_attr)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;<sp/>std::shared_ptr&lt;Reader&lt;MessageT&gt;&gt;;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>MessageT&gt;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>FillInAttr(proto::RoleAttributes*<sp/>attr);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_reality_mode_;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/>std::string<sp/>node_name_;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/>proto::RoleAttributes<sp/>node_attr_;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/>NodeManagerPtr<sp/>node_manager_<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>MessageT&gt;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>NodeChannelImpl::CreateWriter(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>proto::RoleAttributes&amp;<sp/>role_attr)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;<sp/>std::shared_ptr&lt;Writer&lt;MessageT&gt;&gt;<sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!role_attr.has_channel_name()<sp/>||<sp/>role_attr.channel_name().empty())<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>AERROR<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Can&apos;t<sp/>create<sp/>a<sp/>writer<sp/>with<sp/>empty<sp/>channel<sp/>name!&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>proto::RoleAttributes<sp/>new_attr(role_attr);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/>FillInAttr&lt;MessageT&gt;(&amp;new_attr);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;Writer&lt;MessageT&gt;&gt;<sp/>writer_ptr<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!is_reality_mode_)<sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>writer_ptr<sp/>=<sp/>std::make_shared&lt;blocker::IntraWriter&lt;MessageT&gt;&gt;(new_attr);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>writer_ptr<sp/>=<sp/>std::make_shared&lt;Writer&lt;MessageT&gt;&gt;(new_attr);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/>RETURN_VAL_IF_NULL(writer_ptr,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/>RETURN_VAL_IF(!writer_ptr-&gt;Init(),<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>writer_ptr;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>MessageT&gt;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>NodeChannelImpl::CreateWriter(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>channel_name)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;<sp/>std::shared_ptr&lt;Writer&lt;MessageT&gt;&gt;<sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/>proto::RoleAttributes<sp/>role_attr;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/>role_attr.set_channel_name(channel_name);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;CreateWriter&lt;MessageT&gt;(role_attr);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>MessageT&gt;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>NodeChannelImpl::CreateReader(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>channel_name,</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CallbackFunc&lt;MessageT&gt;&amp;<sp/>reader_func)</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;<sp/>std::shared_ptr&lt;Reader&lt;MessageT&gt;&gt;<sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/>proto::RoleAttributes<sp/>role_attr;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/>role_attr.set_channel_name(channel_name);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;</highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>CreateReader&lt;MessageT&gt;(role_attr,<sp/>reader_func);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>MessageT&gt;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>NodeChannelImpl::CreateReader(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structapollo_1_1cyber_1_1_reader_config" kindref="compound">ReaderConfig</ref>&amp;<sp/>config,</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CallbackFunc&lt;MessageT&gt;&amp;<sp/>reader_func)</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;<sp/>std::shared_ptr&lt;Reader&lt;MessageT&gt;&gt;<sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/>proto::RoleAttributes<sp/>role_attr;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/>role_attr.set_channel_name(config.channel_name);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/>role_attr.mutable_qos_profile()-&gt;CopyFrom(config.qos_profile);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;</highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>CreateReader&lt;MessageT&gt;(role_attr,<sp/>reader_func,</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>config.<ref refid="structapollo_1_1cyber_1_1_reader_config_1affa7656a5714023523d0f9202d0d0f2b" kindref="member">pending_queue_size</ref>);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>MessageT&gt;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>NodeChannelImpl::CreateReader(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>proto::RoleAttributes&amp;<sp/>role_attr,</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CallbackFunc&lt;MessageT&gt;&amp;<sp/>reader_func,</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structapollo_1_1cyber_1_1_reader_config_1affa7656a5714023523d0f9202d0d0f2b" kindref="member">pending_queue_size</ref>)</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;<sp/>std::shared_ptr&lt;Reader&lt;MessageT&gt;&gt;<sp/>{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!role_attr.has_channel_name()<sp/>||<sp/>role_attr.channel_name().empty())<sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>AERROR<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Can&apos;t<sp/>create<sp/>a<sp/>reader<sp/>with<sp/>empty<sp/>channel<sp/>name!&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/>proto::RoleAttributes<sp/>new_attr(role_attr);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/>FillInAttr&lt;MessageT&gt;(&amp;new_attr);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;Reader&lt;MessageT&gt;&gt;<sp/>reader_ptr<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!is_reality_mode_)<sp/>{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>reader_ptr<sp/>=</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::make_shared&lt;blocker::IntraReader&lt;MessageT&gt;&gt;(new_attr,<sp/>reader_func);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>reader_ptr<sp/>=<sp/>std::make_shared&lt;Reader&lt;MessageT&gt;&gt;(new_attr,<sp/>reader_func,</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structapollo_1_1cyber_1_1_reader_config_1affa7656a5714023523d0f9202d0d0f2b" kindref="member">pending_queue_size</ref>);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/>RETURN_VAL_IF_NULL(reader_ptr,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/>RETURN_VAL_IF(!reader_ptr-&gt;Init(),<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>reader_ptr;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>MessageT&gt;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>NodeChannelImpl::CreateReader(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>proto::RoleAttributes&amp;<sp/>role_attr)</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;<sp/>std::shared_ptr&lt;Reader&lt;MessageT&gt;&gt;<sp/>{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;</highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>CreateReader&lt;MessageT&gt;(role_attr,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>MessageT&gt;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>NodeChannelImpl::FillInAttr(proto::RoleAttributes*<sp/>attr)<sp/>{</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/>attr-&gt;set_host_name(node_attr_.host_name());</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/>attr-&gt;set_host_ip(node_attr_.host_ip());</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/>attr-&gt;set_process_id(node_attr_.process_id());</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/>attr-&gt;set_node_name(node_attr_.node_name());</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/>attr-&gt;set_node_id(node_attr_.node_id());</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>channel_id<sp/>=<sp/>GlobalData::RegisterChannel(attr-&gt;channel_name());</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/>attr-&gt;set_channel_id(channel_id);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!attr-&gt;has_message_type())<sp/>{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>attr-&gt;set_message_type(message::MessageType&lt;MessageT&gt;());</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!attr-&gt;has_proto_desc())<sp/>{</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>proto_desc(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>message::GetDescriptorString&lt;MessageT&gt;(attr-&gt;message_type(),<sp/>&amp;proto_desc);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>attr-&gt;set_proto_desc(proto_desc);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!attr-&gt;has_qos_profile())<sp/>{</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/>attr-&gt;mutable_qos_profile()-&gt;CopyFrom(</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>transport::QosProfileConf::QOS_PROFILE_DEFAULT);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="254"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>cyber</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>apollo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>CYBER_NODE_NODE_CHANNEL_IMPL_H_</highlight></codeline>
+    </programlisting>
+    <location file="/home/dexin/code/Edith/cyber/node/node_channel_impl.h"/>
+  </compounddef>
+</doxygen>

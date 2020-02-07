@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="dir_f12202c4b93b4aaf4ca4ff498fb3a3d4" kind="dir">
+    <compoundname>/home/dexin/code/Edith/cyber/timer</compoundname>
+    <innerfile refid="timer_8h">timer.h</innerfile>
+    <innerfile refid="timer__bucket_8h">timer_bucket.h</innerfile>
+    <innerfile refid="timer__task_8h">timer_task.h</innerfile>
+    <innerfile refid="timing__wheel_8h">timing_wheel.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dexin/code/Edith/cyber/timer/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="structapollo_1_1cyber_1_1_timer_option" kind="struct" language="C++" prot="public">
+    <compoundname>apollo::cyber::TimerOption</compoundname>
+    <includes refid="timer_8h" local="no">timer.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structapollo_1_1cyber_1_1_timer_option_1a1396276508eb65076ffad3b8490118e8" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t apollo::cyber::TimerOption::period</definition>
+        <argsstring></argsstring>
+        <name>period</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>The period of the timer, unit is ms max: 512 * 64 min: 1. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/timer/timer.h" line="54" column="1" bodyfile="/home/dexin/code/Edith/cyber/timer/timer.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structapollo_1_1cyber_1_1_timer_option_1af36f1413cc8bc74335906347c90d22f3" prot="public" static="no" mutable="no">
+        <type>std::function&lt; void()&gt;</type>
+        <definition>std::function&lt;void()&gt; apollo::cyber::TimerOption::callback</definition>
+        <argsstring></argsstring>
+        <name>callback</name>
+        <briefdescription>
+<para>The task that the timer needs to perform. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/timer/timer.h" line="57" column="1" bodyfile="/home/dexin/code/Edith/cyber/timer/timer.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structapollo_1_1cyber_1_1_timer_option_1abbadf97fc595abb13d5a8eccb6151487" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool apollo::cyber::TimerOption::oneshot</definition>
+        <argsstring></argsstring>
+        <name>oneshot</name>
+        <briefdescription>
+<para>True: perform the callback only after the first timing cycle False: perform the callback every timed period. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/timer/timer.h" line="63" column="1" bodyfile="/home/dexin/code/Edith/cyber/timer/timer.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structapollo_1_1cyber_1_1_timer_option_1aedd28b488532f1707f6adaa9829ddc57" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::TimerOption::TimerOption</definition>
+        <argsstring>(uint32_t period, std::function&lt; void()&gt; callback, bool oneshot)</argsstring>
+        <name>TimerOption</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>period</declname>
+        </param>
+        <param>
+          <type>std::function&lt; void()&gt;</type>
+          <declname>callback</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>oneshot</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classapollo_1_1cyber_1_1_timer" kindref="compound">Timer</ref> Option object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>period</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The period of the timer, unit is ms </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The task that the timer needs to perform </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oneshot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Oneshot or period </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/timer/timer.h" line="40" column="1" bodyfile="/home/dexin/code/Edith/cyber/timer/timer.h" bodystart="40" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="structapollo_1_1cyber_1_1_timer_option_1a27d5b9b0445d5a06948b0d7d39b8424d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::TimerOption::TimerOption</definition>
+        <argsstring>()</argsstring>
+        <name>TimerOption</name>
+        <briefdescription>
+<para>Default onstructor for initializer list. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/timer/timer.h" line="47" column="1" bodyfile="/home/dexin/code/Edith/cyber/timer/timer.h" bodystart="47" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The options of timer. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dexin/code/Edith/cyber/timer/timer.h" line="32" column="1" bodyfile="/home/dexin/code/Edith/cyber/timer/timer.h" bodystart="32" bodyend="64"/>
+    <listofallmembers>
+      <member refid="structapollo_1_1cyber_1_1_timer_option_1af36f1413cc8bc74335906347c90d22f3" prot="public" virt="non-virtual"><scope>apollo::cyber::TimerOption</scope><name>callback</name></member>
+      <member refid="structapollo_1_1cyber_1_1_timer_option_1abbadf97fc595abb13d5a8eccb6151487" prot="public" virt="non-virtual"><scope>apollo::cyber::TimerOption</scope><name>oneshot</name></member>
+      <member refid="structapollo_1_1cyber_1_1_timer_option_1a1396276508eb65076ffad3b8490118e8" prot="public" virt="non-virtual"><scope>apollo::cyber::TimerOption</scope><name>period</name></member>
+      <member refid="structapollo_1_1cyber_1_1_timer_option_1aedd28b488532f1707f6adaa9829ddc57" prot="public" virt="non-virtual"><scope>apollo::cyber::TimerOption</scope><name>TimerOption</name></member>
+      <member refid="structapollo_1_1cyber_1_1_timer_option_1a27d5b9b0445d5a06948b0d7d39b8424d" prot="public" virt="non-virtual"><scope>apollo::cyber::TimerOption</scope><name>TimerOption</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

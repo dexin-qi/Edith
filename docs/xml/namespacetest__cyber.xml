@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="namespacetest__cyber" kind="namespace" language="Python">
+    <compoundname>test_cyber</compoundname>
+    <innerclass refid="classtest__cyber_1_1_test_cyber" prot="public">test_cyber::TestCyber</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dexin/code/Edith/cyber/python/cyber_py/test/test_cyber.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

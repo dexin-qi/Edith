@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="namespaceclient" kind="namespace" language="Python">
+    <compoundname>client</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="examples_2client_8py_1a3b5f6b8135ee1ede0df2f8a637de8daf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def client::test_client_class</definition>
+        <argsstring>()</argsstring>
+        <name>test_client_class</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Client send request
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/python/cyber_py/examples/client.py" line="28" column="1" bodyfile="/home/dexin/code/Edith/cyber/python/cyber_py/examples/client.py" bodystart="28" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/dexin/code/Edith/cyber/python/cyber_py/examples/client.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

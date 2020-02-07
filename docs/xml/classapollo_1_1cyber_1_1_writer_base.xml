@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classapollo_1_1cyber_1_1_writer_base" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>apollo::cyber::WriterBase</compoundname>
+    <derivedcompoundref refid="classapollo_1_1cyber_1_1_writer" prot="public" virt="non-virtual">apollo::cyber::Writer&lt; MessageT &gt;</derivedcompoundref>
+    <includes refid="writer__base_8h" local="no">writer_base.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_writer_base_1aa6fa91676f28b3010a849b7eecb18b76" prot="protected" static="no" mutable="no">
+        <type>proto::RoleAttributes</type>
+        <definition>proto::RoleAttributes apollo::cyber::WriterBase::role_attr_</definition>
+        <argsstring></argsstring>
+        <name>role_attr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/node/writer_base.h" line="98" column="1" bodyfile="/home/dexin/code/Edith/cyber/node/writer_base.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_writer_base_1aee167e7d2135c520e2e635b545449acb" prot="protected" static="no" mutable="yes">
+        <type>std::mutex</type>
+        <definition>std::mutex apollo::cyber::WriterBase::lock_</definition>
+        <argsstring></argsstring>
+        <name>lock_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/node/writer_base.h" line="99" column="1" bodyfile="/home/dexin/code/Edith/cyber/node/writer_base.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classapollo_1_1cyber_1_1_writer_base_1a4fc901907b73dc78d2f30f12d962b3c8" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool apollo::cyber::WriterBase::init_</definition>
+        <argsstring></argsstring>
+        <name>init_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/node/writer_base.h" line="100" column="1" bodyfile="/home/dexin/code/Edith/cyber/node/writer_base.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_writer_base_1a1c04642de705c6bee86124f18728a4b9" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>apollo::cyber::WriterBase::WriterBase</definition>
+        <argsstring>(const proto::RoleAttributes &amp;role_attr)</argsstring>
+        <name>WriterBase</name>
+        <param>
+          <type>const proto::RoleAttributes &amp;</type>
+          <declname>role_attr</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classapollo_1_1cyber_1_1_writer" kindref="compound">Writer</ref> Base object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>role_attr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>role attributes for this <ref refid="classapollo_1_1cyber_1_1_writer" kindref="compound">Writer</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/node/writer_base.h" line="44" column="1" bodyfile="/home/dexin/code/Edith/cyber/node/writer_base.h" bodystart="44" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_writer_base_1a151a9f6d1429e02d236fd400ef935846" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual apollo::cyber::WriterBase::~WriterBase</definition>
+        <argsstring>()</argsstring>
+        <name>~WriterBase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/node/writer_base.h" line="46" column="1" bodyfile="/home/dexin/code/Edith/cyber/node/writer_base.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_writer_base_1acff05a3215b2a2da4b2a140069ac001d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool apollo::cyber::WriterBase::Init</definition>
+        <argsstring>()=0</argsstring>
+        <name>Init</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1_writer_1a3a8efad4bf1917f541d41e3102ef8776">Init</reimplementedby>
+        <briefdescription>
+<para>Init the <ref refid="classapollo_1_1cyber_1_1_writer" kindref="compound">Writer</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if init success </para></simplesect>
+<simplesect kind="return"><para>false if init failed </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/node/writer_base.h" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_writer_base_1ad2f187881a2832ece860eb11d69acc8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void apollo::cyber::WriterBase::Shutdown</definition>
+        <argsstring>()=0</argsstring>
+        <name>Shutdown</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1_writer_1a915a8e6c0bb86a98f4ab09d41a9d3242">Shutdown</reimplementedby>
+        <briefdescription>
+<para>Shutdown the <ref refid="classapollo_1_1cyber_1_1_writer" kindref="compound">Writer</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/node/writer_base.h" line="59" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_writer_base_1a2c158df45980927544cff2c55214c31a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool apollo::cyber::WriterBase::HasReader</definition>
+        <argsstring>()</argsstring>
+        <name>HasReader</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1_writer_1a0eba2d4599a273a2dc56e5ca5845ebd1">HasReader</reimplementedby>
+        <briefdescription>
+<para>Is there any <ref refid="classapollo_1_1cyber_1_1_reader" kindref="compound">Reader</ref> that subscribes our Channel? You can publish message when this return true. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if the channel has reader </para></simplesect>
+<simplesect kind="return"><para>false if the channel has no reader </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/node/writer_base.h" line="68" column="1" bodyfile="/home/dexin/code/Edith/cyber/node/writer_base.h" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_writer_base_1a93845a2774b7515bf63d432ffbed5fda" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void apollo::cyber::WriterBase::GetReaders</definition>
+        <argsstring>(std::vector&lt; proto::RoleAttributes &gt; *readers)</argsstring>
+        <name>GetReaders</name>
+        <reimplementedby refid="classapollo_1_1cyber_1_1_writer_1abf208c7a535967956542965c9a6d6e58">GetReaders</reimplementedby>
+        <param>
+          <type>std::vector&lt; proto::RoleAttributes &gt; *</type>
+          <declname>readers</declname>
+        </param>
+        <briefdescription>
+<para>Get all Readers that subscriber our writing channel. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>readers</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>result vector of RoleAttributes </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/node/writer_base.h" line="75" column="1" bodyfile="/home/dexin/code/Edith/cyber/node/writer_base.h" bodystart="75" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_writer_base_1a899ae473e501c2230dc1e4f1cf7f265c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string&amp; apollo::cyber::WriterBase::GetChannelName</definition>
+        <argsstring>() const </argsstring>
+        <name>GetChannelName</name>
+        <briefdescription>
+<para>Get <ref refid="classapollo_1_1cyber_1_1_writer" kindref="compound">Writer</ref>&apos;s Channel name. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>const std::string&amp; const reference to the channel name </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/node/writer_base.h" line="82" column="1" bodyfile="/home/dexin/code/Edith/cyber/node/writer_base.h" bodystart="82" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classapollo_1_1cyber_1_1_writer_base_1a76acead79b6c85ed9450ba0cdaed7d42" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool apollo::cyber::WriterBase::IsInit</definition>
+        <argsstring>() const </argsstring>
+        <name>IsInit</name>
+        <briefdescription>
+<para>Is <ref refid="classapollo_1_1cyber_1_1_writer" kindref="compound">Writer</ref> initialized? </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if the <ref refid="classapollo_1_1cyber_1_1_writer" kindref="compound">Writer</ref> is inited </para></simplesect>
+<simplesect kind="return"><para>false if the Write is not inited </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/dexin/code/Edith/cyber/node/writer_base.h" line="92" column="1" bodyfile="/home/dexin/code/Edith/cyber/node/writer_base.h" bodystart="92" bodyend="95"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Base class for a <ref refid="classapollo_1_1cyber_1_1_writer" kindref="compound">Writer</ref>. </para>    </briefdescription>
+    <detaileddescription>
+<para>A <ref refid="classapollo_1_1cyber_1_1_writer" kindref="compound">Writer</ref> is an object to send messages through a &apos;Channel&apos; <simplesect kind="warning"><para>One <ref refid="classapollo_1_1cyber_1_1_writer" kindref="compound">Writer</ref> can only write one channel. But different writers can write through the same channel </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="824">
+        <label>apollo::cyber::Writer&lt; MessageT &gt;</label>
+        <link refid="classapollo_1_1cyber_1_1_writer"/>
+        <childnode refid="823" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="823">
+        <label>apollo::cyber::WriterBase</label>
+        <link refid="classapollo_1_1cyber_1_1_writer_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="826">
+        <label>RoleAttributes</label>
+      </node>
+      <node id="825">
+        <label>apollo::cyber::WriterBase</label>
+        <link refid="classapollo_1_1cyber_1_1_writer_base"/>
+        <childnode refid="826" relation="usage">
+          <edgelabel>role_attr_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/dexin/code/Edith/cyber/node/writer_base.h" line="37" column="1" bodyfile="/home/dexin/code/Edith/cyber/node/writer_base.h" bodystart="37" bodyend="101"/>
+    <listofallmembers>
+      <member refid="classapollo_1_1cyber_1_1_writer_base_1a899ae473e501c2230dc1e4f1cf7f265c" prot="public" virt="non-virtual"><scope>apollo::cyber::WriterBase</scope><name>GetChannelName</name></member>
+      <member refid="classapollo_1_1cyber_1_1_writer_base_1a93845a2774b7515bf63d432ffbed5fda" prot="public" virt="virtual"><scope>apollo::cyber::WriterBase</scope><name>GetReaders</name></member>
+      <member refid="classapollo_1_1cyber_1_1_writer_base_1a2c158df45980927544cff2c55214c31a" prot="public" virt="virtual"><scope>apollo::cyber::WriterBase</scope><name>HasReader</name></member>
+      <member refid="classapollo_1_1cyber_1_1_writer_base_1acff05a3215b2a2da4b2a140069ac001d" prot="public" virt="pure-virtual"><scope>apollo::cyber::WriterBase</scope><name>Init</name></member>
+      <member refid="classapollo_1_1cyber_1_1_writer_base_1a4fc901907b73dc78d2f30f12d962b3c8" prot="protected" virt="non-virtual"><scope>apollo::cyber::WriterBase</scope><name>init_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_writer_base_1a76acead79b6c85ed9450ba0cdaed7d42" prot="public" virt="non-virtual"><scope>apollo::cyber::WriterBase</scope><name>IsInit</name></member>
+      <member refid="classapollo_1_1cyber_1_1_writer_base_1aee167e7d2135c520e2e635b545449acb" prot="protected" virt="non-virtual"><scope>apollo::cyber::WriterBase</scope><name>lock_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_writer_base_1aa6fa91676f28b3010a849b7eecb18b76" prot="protected" virt="non-virtual"><scope>apollo::cyber::WriterBase</scope><name>role_attr_</name></member>
+      <member refid="classapollo_1_1cyber_1_1_writer_base_1ad2f187881a2832ece860eb11d69acc8b" prot="public" virt="pure-virtual"><scope>apollo::cyber::WriterBase</scope><name>Shutdown</name></member>
+      <member refid="classapollo_1_1cyber_1_1_writer_base_1a1c04642de705c6bee86124f18728a4b9" prot="public" virt="non-virtual"><scope>apollo::cyber::WriterBase</scope><name>WriterBase</name></member>
+      <member refid="classapollo_1_1cyber_1_1_writer_base_1a151a9f6d1429e02d236fd400ef935846" prot="public" virt="virtual"><scope>apollo::cyber::WriterBase</scope><name>~WriterBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
