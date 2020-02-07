@@ -16,8 +16,6 @@
 # limitations under the License.
 ###############################################################################
 
-INCHINA="no"
-LOCAL_IMAGE="no"
 VERSION=""
 ARCH=$(uname -m)
 VERSION_X86_64="x86_64"
@@ -31,7 +29,6 @@ Usage: $(basename $0) [options] ...
 OPTIONS:
     -h, --help             Display this help and exit.
     -t, --tag <version>    Specify which version of a docker image to pull.
-    -l, --local            Use local docker image.
     stop                   Stop all running cyber containers.
 EOF
 exit 0
@@ -43,7 +40,7 @@ running_containers=$(docker ps --format "{{.Names}}")
 
 for i in ${running_containers[*]}
 do
-  if [[ "$i" =~ uibot_* ]];then
+  if [[ "$i" =~ edith_* ]];then
     printf %-*s 70 "stopping container: $i ..."
     docker stop $i > /dev/null
     if [ $? -eq 0 ];then
@@ -57,12 +54,12 @@ done
 
 PROJECT_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../.." && pwd )"
 
-if [ ! -e /uibot ]; then
-    sudo ln -sf ${PROJECT_ROOT} /uibot
+if [ ! -e /Edith ]; then
+    sudo ln -sf ${PROJECT_ROOT} /Edith
 fi
 
 if [ -e /proc/sys/kernel ]; then
-    echo "/uibot/data/core/core_%e.%p" | sudo tee /proc/sys/kernel/core_pattern > /dev/null
+    echo "/Edith/data/core/core_%e.%p" | sudo tee /proc/sys/kernel/core_pattern > /dev/null
 fi
 
 source ${PROJECT_ROOT}/scripts/apollo_base.sh CYBER_ONLY
@@ -80,9 +77,6 @@ do
         ;;
     -h|--help)
         show_usage
-        ;;
-    -l|--local)
-        LOCAL_IMAGE="yes"
         ;;
     stop)
 	    stop_containers
@@ -111,17 +105,15 @@ if [ -z "${DOCKER_REPO}" ]; then
     DOCKER_REPO=dustinksi/edith
 fi
 
-if [ "$LOCAL_IMAGE" == "yes" ] && [ -z "$VERSION_OPT" ]; then
-    VERSION="x86_64_dev"
+if [ -z "$VERSION_OPT" ]; then
+    VERSION="x86_64"
 fi
 
 
 IMG=${DOCKER_REPO}:$VERSION
 
 function local_volumes() {
-    # uibot root and bazel cache dirs are required.
-    volumes="-v $PROJECT_ROOT:/uibot \
-             -v $HOME/.cache:${DOCKER_HOME}/.cache"
+    volumes="-v $PROJECT_ROOT:/Edith"
     case "$(uname -s)" in
         Linux)
             case "$(lsb_release -r | cut -f2)" in
@@ -138,28 +130,19 @@ function local_volumes() {
                                 -v /usr/src:/usr/src \
                                 -v /lib/modules:/lib/modules"
             ;;
-        Darwin)
-            # MacOS has strict limitations on mapping volumes.
-            chmod -R a+wr ~/.cache/bazel
-            ;;
     esac
     echo "${volumes}"
 }
 
 function main(){
-
-    if [ "$LOCAL_IMAGE" = "yes" ];then
-        info "Start docker container based on local image : $IMG"
-    else
-        info "Start pulling docker image $IMG ..."
-        docker pull $IMG
-        if [ $? -ne 0 ];then
-            error "Failed to pull docker image."
-            exit 1
-        fi
+    info "Start pulling docker image $IMG ..."
+    docker pull $IMG
+    if [ $? -ne 0 ];then
+        error "Failed to pull docker image."
+        exit 1
     fi
 
-    DOCKER_NAME="uibot_edith_${USER}"
+    DOCKER_NAME="edith_cyber_${USER}"
     docker ps -a --format "{{.Names}}" | grep "$DOCKER_NAME" 1>/dev/null
     if [ $? == 0 ]; then
         docker stop $DOCKER_NAME 1>/dev/null
@@ -189,17 +172,10 @@ function main(){
 
     info "Starting docker container \"${DOCKER_NAME}\" ..."
 
-    DOCKER_CMD="nvidia-docker"
-    USE_GPU=1
-    if ! [ -x "$(command -v ${DOCKER_CMD})" ]; then
-        DOCKER_CMD="docker"
-        USE_GPU=0
-    fi
-
     ip=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}') 
     xhost + $ip
 
-    ${DOCKER_CMD} run -it \
+    docker run -it \
         -d \
         --privileged \
         --name $DOCKER_NAME \
@@ -210,12 +186,10 @@ function main(){
         -e DOCKER_GRP="$GRP" \
         -e DOCKER_GRP_ID=$GRP_ID \
         -e DOCKER_IMG=$IMG \
-        -e USE_GPU=$USE_GPU \
         -e OMP_NUM_THREADS=1 \
-        -e DISPLAY=127.0.0.1:0 \
         $(local_volumes) \
         --net host \
-        -w /uibot \
+        -w /Edith \
         --add-host in_cyber_docker:127.0.0.1 \
         --add-host ${LOCAL_HOST}:127.0.0.1 \
         --hostname in_cyber_docker \
@@ -232,13 +206,13 @@ function main(){
 
     if [ ${ARCH} == "x86_64" ]; then
         if [ "${USER}" != "root" ]; then
-            docker exec $DOCKER_NAME bash -c '/uibot/scripts/docker_adduser.sh'
+            docker exec $DOCKER_NAME bash -c '/Edith/scripts/docker_adduser.sh'
         fi
     else
-        warning "!!! Due to the problem with 'docker exec' on Drive PX platform, please run '/uibot/scripts/docker_adduser.sh' for the first time when you get into the docker !!!"
+        warning "!!! Due to the problem with 'docker exec' on Drive PX platform, please run '/Edith/scripts/docker_adduser.sh' for the first time when you get into the docker !!!"
     fi
 
-    ok "Finished setting up uibot docker environment. Now you can enter with: \nbash docker/scripts/cyber_into.sh"
+    ok "Finished setting up edith docker environment. Now you can enter with: \nbash docker/scripts/cyber_into.sh"
     ok "Enjoy!"
 }
 

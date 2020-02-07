@@ -4,8 +4,11 @@
 # CMake
 /build/**
 
-# Logs
-edith_log
+# log and coredump files
+/data/**
+
+# 
+/py_proto/**
 
 # temporary files
 *.swp
