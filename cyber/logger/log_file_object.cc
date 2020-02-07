@@ -145,9 +145,9 @@ bool LogFileObject::CreateLogfile(const string& time_pid_string) {
   string string_filename =
       base_filename_ + filename_extension_ + time_pid_string;
   const char* filename = string_filename.c_str();
+  std::cout << filename << std::endl;
   // int fd = open(filename, O_WRONLY | O_CREAT | O_EXCL, FLAGS_logfile_mode);
-  mode_t FLAGS_logfile_mode;
-  int fd = open(filename, O_WRONLY | O_CREAT | O_EXCL, FLAGS_logfile_mode);
+  int fd = open(filename, O_WRONLY | O_CREAT | O_EXCL, 0600);
   if (fd == -1) {
     return false;
   }

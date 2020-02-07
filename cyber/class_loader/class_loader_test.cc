@@ -23,7 +23,7 @@
 #include "cyber/class_loader/class_loader.h"
 #include "cyber/class_loader/class_loader_manager.h"
 
-#include "cyber/examples/class_loader_example/base.h"
+#include "cyber/examples/example_class_loader/base.h"
 #include "cyber/cyber.h"
 
 const char LIBRARY_1[] = "/home/dexin/code/Edith/build/cyber/examples/libclass_plugin1.so";

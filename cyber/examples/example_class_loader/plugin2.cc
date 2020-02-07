@@ -16,31 +16,29 @@
 
 #include <iostream>
 #include "cyber/class_loader/class_loader.h"
-#include "cyber/examples/class_loader_example/base.h"
-#include "cyber/common/log.h"
+#include "cyber/examples/example_class_loader/base.h"
 
-class Circle : public Base {
+class Apple : public Base {
  public:
-  virtual void DoSomething() { AWARN << "I am Circle"; }
+  virtual void DoSomething() { AWARN << "I am Apple" ; }
 };
 
-class Rect : public Base {
+class Pear : public Base {
  public:
-  virtual void DoSomething() { AWARN << "I am Rect"; }
-  ~Rect() {}
+  virtual void DoSomething() { AWARN << "I am Pear!!!" ; }
 };
 
-class Triangle : public Base {
+class Banana : public Base {
  public:
-  virtual void DoSomething() { AWARN << "I am Triangle"; }
+  virtual void DoSomething() { AWARN << "I am Banana" ; }
 };
 
-class Star : public Base {
+class Peach : public Base {
  public:
-  virtual void DoSomething() { AWARN << "I am Star"; }
+  virtual void DoSomething() { AWARN << "I am Peach!!!" ; }
 };
 
-CLASS_LOADER_REGISTER_CLASS(Circle, Base)
-CLASS_LOADER_REGISTER_CLASS(Rect, Base)
-CLASS_LOADER_REGISTER_CLASS(Triangle, Base)
-CLASS_LOADER_REGISTER_CLASS(Star, Base)
+CLASS_LOADER_REGISTER_CLASS(Apple, Base)
+CLASS_LOADER_REGISTER_CLASS(Pear, Base)
+CLASS_LOADER_REGISTER_CLASS(Banana, Base)
+CLASS_LOADER_REGISTER_CLASS(Peach, Base)

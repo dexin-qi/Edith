@@ -23,6 +23,7 @@
 #include "gtest/gtest.h"
 
 #include "cyber/proto/unit_test.pb.h"
+#include "cyber/common/environment.h"
 
 namespace apollo {
 namespace cyber {
@@ -114,15 +115,15 @@ TEST(FileTest, Glob) {
   // Match none.
   EXPECT_TRUE(Glob("/path/impossible/*").empty());
   // Match one.
-  EXPECT_THAT(Glob("/apollo"), testing::ElementsAre(std::string("/apollo")));
-  EXPECT_THAT(Glob("/apol?o"), testing::ElementsAre(std::string("/apollo")));
+  EXPECT_THAT(Glob("/usr"), testing::ElementsAre(std::string("/usr")));
+  EXPECT_THAT(Glob("/u?r"), testing::ElementsAre(std::string("/usr")));
   // Match multiple.
   EXPECT_THAT(
-      Glob("/apol?o/modules/p*"),
+      Glob("/usr/local/include/fastrtps/fast*"),
       testing::AllOf(
-          testing::Contains(std::string("/apollo/modules/perception")),
-          testing::Contains(std::string("/apollo/modules/planning")),
-          testing::Contains(std::string("/apollo/modules/prediction"))));
+          testing::Contains(std::string("/usr/local/include/fastrtps/fastrtps_all.h")),
+          testing::Contains(std::string("/usr/local/include/fastrtps/fastrtps_dll.h")),
+          testing::Contains(std::string("/usr/local/include/fastrtps/fastrtps_fwd.h"))));
 }
 
 TEST(FileTest, GetAbsolutePath) {
