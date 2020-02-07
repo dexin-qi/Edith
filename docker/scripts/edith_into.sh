@@ -20,9 +20,7 @@ ARCH=$(uname -m)
 CMD=""
 
 PROJECT_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../.." && pwd )"
-DOCKER_NAME="uibot_edith_${USER}"
-
-source ${PROJECT_ROOT}/scripts/apollo_base.sh CYBER_ONLY
+DOCKER_NAME="edith_cyber_${USER}"
 
 xhost +local:root 1>/dev/null 2>&1
 
@@ -30,6 +28,5 @@ docker exec \
     -u $USER \
     -it ${DOCKER_NAME} \
     /bin/bash
-
 
 xhost -local:root 1>/dev/null 2>&1

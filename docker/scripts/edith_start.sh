@@ -166,14 +166,8 @@ function main(){
     if [ "$USER" == "root" ];then
         DOCKER_HOME="/root"
     fi
-    if [ ! -d "$HOME/.cache" ];then
-        mkdir "$HOME/.cache"
-    fi
 
     info "Starting docker container \"${DOCKER_NAME}\" ..."
-
-    ip=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}') 
-    xhost + $ip
 
     docker run -it \
         -d \
@@ -190,9 +184,9 @@ function main(){
         $(local_volumes) \
         --net host \
         -w /Edith \
-        --add-host in_cyber_docker:127.0.0.1 \
+        --add-host in_edith_docker:127.0.0.1 \
         --add-host ${LOCAL_HOST}:127.0.0.1 \
-        --hostname in_cyber_docker \
+        --hostname in_edith_docker \
         --shm-size 2G \
         --pid=host \
         -v /dev/null:/dev/raw1394 \
