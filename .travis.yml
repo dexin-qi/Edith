@@ -1,0 +1,39 @@
+language: python
+
+# This will run on Travis' 'new' container-based infrastructure
+sudo: false
+
+# Blacklist
+branches:
+  except:
+    - gh-pages
+
+addons:
+    apt:
+      packages:
+        - doxygen
+        - doxygen-doc
+        - doxygen-latex
+        - doxygen-gui
+        - graphviz
+        - python3-pip
+        - python3-sphinx
+        - python3-breathe
+    
+
+install:
+    - pip3 install sphinx breathe sphinx-autobuild sphinx_rtd_theme recommonmark sphinx-markdown-tables
+    - pip3 install travis-sphinx
+
+script:
+    - cd docs
+    - doxygen Edith.doxyfile
+    - sphinx-build -b html -d build/doctrees source build/html
+    - cd build/html
+    - touch .nojekyll
+    - cd ../../..
+
+after_success:
+    - git config user.name "dustinksi"
+    - git config user.email "dustinksi@126.com"
+    - ghp-import -p docs/build/html -f -r "https://${GH_TOKEN}@github.com/dustinksi/Edith.git"

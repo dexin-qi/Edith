@@ -15,6 +15,5 @@ edith_log
 *genrule.log
 
 # Doxygen
-docs/doxygen
-cyber/doxy-docs/build/
-cyber/doxy-docs/xml/
+docs/build/
+docs/xml/
