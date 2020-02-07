@@ -1,8 +1,8 @@
 # Vscode files
 .vscode
 
-# Bazel
-build
+# CMake
+/build/**
 
 # Logs
 edith_log
