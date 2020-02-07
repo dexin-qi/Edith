@@ -29,48 +29,81 @@ macro(_common_compile_stuff LIB_NAME)
   set_target_properties(${NAME} PROPERTIES COMPILE_FLAGS ${TARGET_COMPILE_FLAGS})
 endmacro(_common_compile_stuff)
 
-macro(_py2_library LIB_NAME LIB_SRCS LIB_DEPS)
-  add_library(${LIB_NAME} SHARED ${LIB_SRCS})
+function(_py2_library NAME)
+  _parse_arguments("${ARGN}")
+  message(STATUS "Add Cyber Py2 Lib: ${NAME}")
 
-  target_include_directories(${LIB_NAME} SYSTEM PUBLIC ${PYTHON2_INCLUDE_DIR})
-  target_link_libraries(${LIB_NAME} ${PYTHON2_LIBRARIES} ${LIB_DEPS})
+  add_library(${NAME} SHARED ${ARG_SRCS})
 
-  set_target_properties(${LIB_NAME} PROPERTIES PREFIX "")
-  set_target_properties(${LIB_NAME} PROPERTIES COMPILE_FLAGS ${EDITH_CXX_FLAGS})
+  target_include_directories(${NAME} SYSTEM PUBLIC ${PYTHON2_INCLUDE_DIR})
+  target_link_libraries(${NAME} ${PYTHON2_LIBRARIES})
+  
+  foreach(LIB ${ARG_LIBS})
+    _common_compile_stuff(${LIB})
+  endforeach()
 
-  target_include_directories(${LIB_NAME} PUBLIC
+  set_target_properties(${NAME} PROPERTIES PREFIX "")
+  set_target_properties(${NAME} PROPERTIES COMPILE_FLAGS ${EDITH_CXX_FLAGS})
+
+  target_include_directories(${NAME} PUBLIC
     $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}>
     $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
     $<INSTALL_INTERFACE:include>
   )
-endmacro(_py2_library)
+endfunction()
 
-macro(_py3_library LIB_NAME LIB_SRCS LIB_DEPS)
-  add_library(${LIB_NAME} SHARED ${LIB_SRCS})
+function(_py3_library NAME)
+  _parse_arguments("${ARGN}")
+  message(STATUS "Add Cyber Py3 Lib: ${NAME}")
 
-  target_include_directories(${LIB_NAME} SYSTEM PUBLIC ${PYTHON3_INCLUDE_DIR})
-  target_link_libraries(${LIB_NAME} ${PYTHON3_LIBRARIES} ${LIB_DEPS})
+  add_library(${NAME} SHARED ${ARG_SRCS})
 
-  set_target_properties(${LIB_NAME} PROPERTIES PREFIX "")
-  set_target_properties(${LIB_NAME} PROPERTIES COMPILE_FLAGS ${EDITH_CXX_FLAGS})
+  target_include_directories(${NAME} SYSTEM PUBLIC ${PYTHON3_INCLUDE_DIR})
+  target_link_libraries(${NAME} ${PYTHON3_LIBRARIES})
+  
+  foreach(LIB ${ARG_LIBS})
+    _common_compile_stuff(${LIB})
+  endforeach()
 
-  target_include_directories(${LIB_NAME} PUBLIC
+  set_target_properties(${NAME} PROPERTIES PREFIX "")
+  set_target_properties(${NAME} PROPERTIES COMPILE_FLAGS ${EDITH_CXX_FLAGS})
+
+  target_include_directories(${NAME} PUBLIC
     $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}>
     $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
     $<INSTALL_INTERFACE:include>
   )
-endmacro(_py3_library)
+endfunction()
+
+function(_edith_library NAME)
+  _parse_arguments("${ARGN}")
+  message(STATUS "Add Edith Lib: ${NAME}")
+  
+  add_library(${NAME} SHARED ${ARG_SRCS})
+
+  foreach(LIB ${ARG_LIBS})
+    _common_compile_stuff(${LIB})
+  endforeach()
+
+  set_target_properties(${NAME} PROPERTIES COMPILE_FLAGS ${EDITH_CXX_FLAGS})
+
+  target_include_directories(${NAME} PUBLIC
+    $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}>
+    $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
+    $<INSTALL_INTERFACE:include>
+  )
+endfunction()
+
 
 # add test block
 function(edith_test NAME)
   _parse_arguments("${ARGN}")
-
-  message(STATUS "Add Edith Test: ${NAME} ${ARG_DESCRIPTS}")
+  message(STATUS "Add Edith Test: ${NAME}")
 
   add_executable(${NAME} ${ARG_SRCS})
-  if(ARG_LIBS)
-    _common_compile_stuff(${ARG_LIBS}) 
-  endif()
+  foreach(LIB ${ARG_LIBS})
+    _common_compile_stuff(${LIB})
+  endforeach()
 
   target_include_directories("${NAME}" SYSTEM PUBLIC "${GMOCK_INCLUDE_DIRS}")
   target_link_libraries("${NAME}" ${GTEST_LIBRARIES} ${GTEST_MAIN_LIBRARIES})
@@ -79,15 +112,16 @@ function(edith_test NAME)
   add_test(${NAME} ${NAME})
 endfunction()
 
+
 # add binary block
 function(edith_binary NAME)
   _parse_arguments("${ARGN}")
-
   message(STATUS "Add Edith Binary: ${NAME} ${ARG_DESCRIPTS}")
+
   add_executable(${NAME} ${ARG_SRCS})
-  if(ARG_LIBS)
-    _common_compile_stuff(${ARG_LIBS}) 
-  endif()
+  foreach(LIB ${ARG_LIBS})
+    _common_compile_stuff(${LIB})
+  endforeach()
 
   install(TARGETS "${NAME}" RUNTIME DESTINATION bin)
 endfunction()

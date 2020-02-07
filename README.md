@@ -1,5 +1,7 @@
 # DustinKsi -- Edith
-![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
+[![Doc Status](https://travis-ci.org/dustinksi/Edith.svg?branch=master)](https://dustinksi.github.io/Edith/)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/dustinksi/Edith/blob/master/LICENSE)
+
 #### Description
 Edith is an Robotic Operation System framework developed by DustinKsi, Youibot Robotic Technology inc.
 
