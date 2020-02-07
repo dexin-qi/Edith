@@ -14,11 +14,7 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/examples/example_component_timer/timer_component_example.h"
-
-#include "cyber/class_loader/class_loader.h"
-#include "cyber/component/component.h"
-#include "cyber/examples/proto/examples.pb.h"
+#include "cyber/examples/example_component_timer/example_component_timer.h"
 
 bool TimerComponentSample::Init() {
   driver_writer_ = node_->CreateWriter<Driver>("/carstatus/channel");
@@ -28,10 +24,10 @@ bool TimerComponentSample::Init() {
 bool TimerComponentSample::Proc() {
   static int i = 0;
   AINFO << "Timer Callback!";
-  // auto out_msg = std::make_shared<Driver>();
-  // out_msg->set_msg_id(i++);
-  // driver_writer_->Write(out_msg);
-  // AINFO << "timer_component_example: Write drivermsg->"
-  //       << out_msg->ShortDebugString();
+  auto out_msg = std::make_shared<Driver>();
+  out_msg->set_msg_id(i++);
+  driver_writer_->Write(out_msg);
+  AINFO << "timer_component_example: Write drivermsg->"
+        << out_msg->ShortDebugString();
   return true;
 }

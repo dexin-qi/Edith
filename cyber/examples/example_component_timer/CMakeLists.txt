@@ -1,6 +1,6 @@
-_edith_library(timer_component_example
+_edith_library(example_component_timer
     SRCS
-        "timer_component_example.cc;timer_component_example.h"
+        "example_component_timer.cc;example_component_timer.h"
     LIBS 
         "edith_cyber;proto_example"
 )

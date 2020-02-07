@@ -24,7 +24,7 @@ list(REMOVE_ITEM ALL_LIBRARY_SRCS ${ALL_TOOLS_FILES})
 list(REMOVE_ITEM ALL_LIBRARY_SRCS ${ALL_TESTS})
 list(APPEND ALL_LIBRARY_SRCS "croutine/detail/swap_x86_64.S")
 
-# MESSAGE(STATUS "ALL_LIBRARY_SRCS: ${ALL_LIBRARY_SRCS}")
+MESSAGE(STATUS "ALL_LIBRARY_SRCS: ${ALL_LIBRARY_SRCS}")
 
 # remove protos from examples
 list(REMOVE_ITEM ALL_PROTOS ${ALL_EXAMPLE_FILES})
@@ -107,8 +107,23 @@ target_include_directories(edith_cyber PUBLIC
   $<INSTALL_INTERFACE:include>
 )
 
-
-add_subdirectory(mainboard)
+# add_subdirectory(mainboard)
 add_subdirectory(tools)
 add_subdirectory(py_wrapper)
 add_subdirectory(examples)
+
+file(GLOB_RECURSE ALL_MAINBOARD_SRCS "mainboard/*.cc")
+file(GLOB_RECURSE ALL_MAINBOARD_HRDS "mainboard/*.h")
+
+set(ALL_MAINBOARD_FILES)
+list(APPEND ALL_MAINBOARD_FILES ${ALL_MAINBOARD_SRCS})
+list(APPEND ALL_MAINBOARD_FILES ${ALL_MAINBOARD_HRDS})
+# message(STATUS "ALL_MAINBOARD_FILES: ${ALL_MAINBOARD_FILES}")
+
+edith_binary(mainboard
+  SRCS
+    ${ALL_MAINBOARD_FILES}
+  LIBS
+    "edith_cyber;-pthread"
+)
+

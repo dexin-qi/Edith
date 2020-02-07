@@ -138,6 +138,7 @@ class ProcessWrapper(object):
             args_list = self.name.split()
         else:
             args_list = [self.binary_path, '-d'] + self.dag_list
+            logger.info("dexin var: %s" % args_list )
             if len(self.name) != 0:
                 args_list.append('-p')
                 args_list.append(self.name)

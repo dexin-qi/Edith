@@ -2,7 +2,7 @@ export CYBER_PATH=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 export EDITH_PATH=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
 
 # cxx app: mainboard
-mainboard_path="${EDITH_PATH}/build/cyber/mainboard"
+mainboard_path="${EDITH_PATH}/build/cyber"
 # cxx tools(recorder, monitor) path
 cxx_tools_path="${EDITH_PATH}/build/cyber/tools"
 # python tools
