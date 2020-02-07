@@ -39,32 +39,22 @@ namespace logger {
 
 /**
  * @class AsyncLogger
- * @brief Wrapper for a glog Logger which asynchronously writes log messages.
- * This class starts a new thread responsible for forwarding the messages
- * to the logger, and performs double buffering. Writers append to the
- * current buffer and then wake up the logger thread. The logger swaps in
- * a new buffer and writes any accumulated messages to the wrapped
- * Logger.
+ * @brief 对 glog 中 Logger 的封装，以实现日志消息的异步写入。此类将启动单独的线程负责将消息转发到
+ * Logger，并执行双缓冲。当自缓冲区写文件的线程启动时，会触发对记录线程的唤醒。记录线程会将
+ * 写文件线程运行中累积的全部日志写入一个新的缓冲区，在写文件的线程运行结束后，交换两个缓冲区。
  *
- * This double-buffering design dramatically improves performance, especially
- * for logging messages which require flushing the underlying file (i.e WARNING
- * and above for default). The flush can take a couple of milliseconds, and in
- * some cases can even block for hundreds of milliseconds or more. With the
- * double-buffered approach, threads can proceed with useful work while the IO
- * thread blocks.
+ * 这种双缓冲设计极大地提高了性能，特别是对于需要刷新底层文件的日志消息（默认为 WARNING
+ * 及以上等级）。刷新的操作可能需要几毫秒，在某些情况下会阻塞主线程数百毫秒、甚至更长。
+ * 使用双缓冲方法，当日志文件IO线程被阻塞时，主线程仍然可以进行后续操作。
  *
- * The semantics provided by this wrapper are slightly weaker than the default
- * glog semantics. By default, glog will immediately (synchronously) flush
- * WARNING
- * and above to the underlying file, whereas here we are deferring that flush to
- * a separate thread. This means that a crash just after a 'LOG_WARN' would
- * may be missing the message in the logs, but the perf benefit is probably
- * worth it. We do take care that a glog FATAL message flushes all buffered log
- * messages before exiting.
+ * 该封装的语义相比 glog 要稍弱一些。默认情况下，glog将立即（同步地）刷新 WARNING
+ * 及以上等级相应的底层文件，而该封装将该刷新延迟转移到单独的线程。这意味着 ‘LOG_WARN’
+ * 之后的崩溃信息有可能会丢失。我们确实注意到一个 glog 的 FATAL
+ * 级错误在退出之前刷新了所有缓冲日志消息。
  *
- * @warning The logger limits the total amount of buffer space, so if the
- * underlying log blocks for too long, eventually the threads generating the log
- * messages will block as well. This prevents runaway memory usage.
+ * @warning
+ * 记录器限制了缓冲区的内存总量，以防止内存使用失控。因此：如果底层日志刷新时的阻塞时间过长，
+ * 最终生成日志消息的线程也将被阻塞。
  */
 class AsyncLogger : public google::base::Logger {
  public:
