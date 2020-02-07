@@ -107,12 +107,8 @@ target_include_directories(edith_cyber PUBLIC
   $<INSTALL_INTERFACE:include>
 )
 
-edith_binary(mainboard
-  SRCS
-    ${ALL_MAINBOARD_FILES}
-  LIBS
-    edith_cyber
-)
 
+add_subdirectory(mainboard)
+add_subdirectory(tools)
 add_subdirectory(py_wrapper)
 add_subdirectory(examples)
