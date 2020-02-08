@@ -89,6 +89,7 @@ bool ModuleController::LoadModule(const DagConfig& dag_config) {
     }
 
     class_loader_manager_.LoadLibrary(load_path);
+    CHECK(class_loader_manager_.IsLibraryValid(load_path)) << load_path << " is not valid!";
 
     for (auto& component : module_config.components()) {
       const std::string& class_name = component.class_name();

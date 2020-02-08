@@ -1,5 +1,5 @@
 module_config {
-    module_library : "/home/dexin/code/Edith/build/cyber/examples/example_component_timer/libexample_component_timer.so"
+    module_library : "/Edith/build/cyber/examples/example_component_timer/libexample_component_timer.so"
     timer_components {
         class_name : "TimerComponentSample"
         config {

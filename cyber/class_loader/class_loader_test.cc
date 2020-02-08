@@ -26,8 +26,8 @@
 #include "cyber/examples/example_class_loader/base.h"
 #include "cyber/cyber.h"
 
-const char LIBRARY_1[] = "/home/dexin/code/Edith/build/cyber/examples/libclass_plugin1.so";
-const char LIBRARY_2[] = "/home/dexin/code/Edith/build/cyber/examples/libclass_plugin2.so";
+const char LIBRARY_1[] = "/Edith/build/cyber/examples/libclass_plugin1.so";
+const char LIBRARY_2[] = "/Edith/build/cyber/examples/libclass_plugin2.so";
 using apollo::cyber::class_loader::ClassLoader;
 using apollo::cyber::class_loader::ClassLoaderManager;
 using apollo::cyber::class_loader::utility::IsLibraryLoadedByAnybody;

@@ -1,7 +1,7 @@
 <cyber>
     <module>
         <name>common</name>
-        <dag_conf>/home/dexin/code/Edith/cyber/examples/example_component_common/common.dag</dag_conf>
+        <dag_conf>/Edith/cyber/examples/example_component_common/common.dag</dag_conf>
         <process_name>common</process_name>
     </module>
 </cyber>

@@ -62,7 +62,7 @@ if [ -e /proc/sys/kernel ]; then
     echo "/Edith/data/core/core_%e.%p" | sudo tee /proc/sys/kernel/core_pattern > /dev/null
 fi
 
-source ${PROJECT_ROOT}/scripts/apollo_base.sh CYBER_ONLY
+source ${PROJECT_ROOT}/scripts/edith_base.sh CYBER_ONLY
 
 while [ $# -gt 0 ]
 do
@@ -206,7 +206,7 @@ function main(){
         warning "!!! Due to the problem with 'docker exec' on Drive PX platform, please run '/Edith/scripts/docker_adduser.sh' for the first time when you get into the docker !!!"
     fi
 
-    ok "Finished setting up edith docker environment. Now you can enter with: \nbash docker/scripts/cyber_into.sh"
+    ok "Finished setting up edith docker environment. Now you can enter with: \nbash docker/scripts/edith_into.sh"
     ok "Enjoy!"
 }
 

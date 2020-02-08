@@ -115,15 +115,14 @@ TEST(FileTest, Glob) {
   // Match none.
   EXPECT_TRUE(Glob("/path/impossible/*").empty());
   // Match one.
-  EXPECT_THAT(Glob("/usr"), testing::ElementsAre(std::string("/usr")));
-  EXPECT_THAT(Glob("/u?r"), testing::ElementsAre(std::string("/usr")));
+  EXPECT_THAT(Glob("/Edith"), testing::ElementsAre(std::string("/Edith")));
+  EXPECT_THAT(Glob("/Edi?h"), testing::ElementsAre(std::string("/Edith")));
   // Match multiple.
   EXPECT_THAT(
-      Glob("/usr/local/include/fastrtps/fast*"),
+      Glob("/Edi?h/cyber/com*"),
       testing::AllOf(
-          testing::Contains(std::string("/usr/local/include/fastrtps/fastrtps_all.h")),
-          testing::Contains(std::string("/usr/local/include/fastrtps/fastrtps_dll.h")),
-          testing::Contains(std::string("/usr/local/include/fastrtps/fastrtps_fwd.h"))));
+          testing::Contains(std::string("/Edith/cyebr/common")),
+          testing::Contains(std::string("/Edith/cyber/component"))));
 }
 
 TEST(FileTest, GetAbsolutePath) {
