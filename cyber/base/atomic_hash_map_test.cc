@@ -29,16 +29,16 @@ TEST(AtomicHashMapTest, int_int) {
   int value = 0;
   for (int i = 0; i < 1000; i++) {
     map.Set(i, i);
-    EXPECT_TRUE(map.Has(i));
-    EXPECT_TRUE(map.Get(i, &value));
-    EXPECT_EQ(i, value);
+    ASSERT_TRUE(map.Has(i));
+    ASSERT_TRUE(map.Get(i, &value));
+    ASSERT_EQ(i, value);
   }
 
   for (int i = 0; i < 1000; i++) {
     map.Set(1000 - i, i);
-    EXPECT_TRUE(map.Has(1000 - i));
-    EXPECT_TRUE(map.Get(1000 - i, &value));
-    EXPECT_EQ(i, value);
+    ASSERT_TRUE(map.Has(1000 - i));
+    ASSERT_TRUE(map.Get(1000 - i, &value));
+    ASSERT_EQ(i, value);
   }
 }
 
@@ -47,16 +47,16 @@ TEST(AtomicHashMapTest, int_str) {
   std::string value("");
   for (int i = 0; i < 1000; i++) {
     map.Set(i, std::to_string(i));
-    EXPECT_TRUE(map.Has(i));
-    EXPECT_TRUE(map.Get(i, &value));
-    EXPECT_EQ(std::to_string(i), value);
+    ASSERT_TRUE(map.Has(i));
+    ASSERT_TRUE(map.Get(i, &value));
+    ASSERT_EQ(std::to_string(i), value);
   }
   map.Set(100);
-  EXPECT_TRUE(map.Get(100, &value));
-  EXPECT_TRUE(value.empty());
+  ASSERT_TRUE(map.Get(100, &value));
+  ASSERT_TRUE(value.empty());
   map.Set(100, std::move(std::string("test")));
-  EXPECT_TRUE(map.Get(100, &value));
-  EXPECT_EQ("test", value);
+  ASSERT_TRUE(map.Get(100, &value));
+  ASSERT_EQ("test", value);
 }
 
 TEST(AtomicHashMapTest, concurrency) {
@@ -89,12 +89,12 @@ TEST(AtomicHashMapTest, concurrency) {
 
   std::string value("");
   for (int i = 1; i < thread_num * 1000; i++) {
-    EXPECT_TRUE(map.Get(i, &value));
-    EXPECT_EQ(std::to_string(i), value);
+    ASSERT_TRUE(map.Get(i, &value));
+    ASSERT_EQ(std::to_string(i), value);
   }
   std::string* str = nullptr;
-  EXPECT_TRUE(map.Get(0, &str));
-  EXPECT_EQ("0", *str);
+  ASSERT_TRUE(map.Get(0, &str));
+  ASSERT_EQ("0", *str);
 }
 
 }  // namespace base

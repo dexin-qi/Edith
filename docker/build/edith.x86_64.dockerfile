@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:16.04
 
 LABEL version="1.0"
 
@@ -8,8 +8,6 @@ RUN apt clean
 RUN apt update -y && \
     apt install -y \
     build-essential \
-    gcc-4.8 \
-    g++-4.8 \
     cmake \
     curl \
     git \
@@ -48,15 +46,6 @@ RUN apt update -y && \
     libopenni2-dev \
     software-properties-common
 
-#install gcc 4.8.5
-RUN rm -f /usr/bin/gcc
-RUN ln -s /usr/bin/gcc-4.8 /etc/alternatives/gcc
-RUN ln -s /etc/alternatives/gcc /usr/bin/gcc
-RUN rm -f /usr/bin/g++
-RUN ln -s /usr/bin/g++-4.8 /etc/alternatives/g++
-RUN ln -s /etc/alternatives/g++ /usr/bin/g++
-
-
 COPY installers /tmp/installers
 # RUN bash /tmp/installers/install_bazel.sh
 RUN bash /tmp/installers/install_gflags_glog.sh
@@ -66,15 +55,15 @@ RUN bash /tmp/installers/install_bazel_packages.sh
 RUN bash /tmp/installers/install_osqp.sh
 RUN bash /tmp/installers/install_python_modules.sh
 
-RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ bionic main restricted" > /etc/apt/sources.list
-RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ bionic-updates main restricted" >> /etc/apt/sources.list
-RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ bionic universe" >> /etc/apt/sources.list
-RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ bionic-updates universe" >> /etc/apt/sources.list
-RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ bionic multiverse" >> /etc/apt/sources.list
-RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ bionic-updates multiverse" >> /etc/apt/sources.list
-RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ bionic-backports main restricted universe multiverse" >> /etc/apt/sources.list
-RUN echo "deb http://security.ubuntu.com/ubuntu bionic-security main restricted" >> /etc/apt/sources.list
-RUN echo "deb http://security.ubuntu.com/ubuntu bionic-security multiverse" >> /etc/apt/sources.list
+RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ xenial main restricted" > /etc/apt/sources.list
+RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ xenial-updates main restricted" >> /etc/apt/sources.list
+RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ xenial universe" >> /etc/apt/sources.list
+RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ xenial-updates universe" >> /etc/apt/sources.list
+RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ xenial multiverse" >> /etc/apt/sources.list
+RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ xenial-updates multiverse" >> /etc/apt/sources.list
+RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ xenial-backports main restricted universe multiverse" >> /etc/apt/sources.list
+RUN echo "deb http://security.ubuntu.com/ubuntu xenial-security main restricted" >> /etc/apt/sources.list
+RUN echo "deb http://security.ubuntu.com/ubuntu xenial-security multiverse" >> /etc/apt/sources.list
 
 RUN echo "deb http://dk.archive.ubuntu.com/ubuntu/ trusty main" >> /etc/apt/sources.list
 RUN echo "deb http://dk.archive.ubuntu.com/ubuntu/ trusty universe" >> /etc/apt/sources.list

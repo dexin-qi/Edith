@@ -13,14 +13,17 @@ include("${PROJECT_SOURCE_DIR}/cmake/functions.cmake")
 dustin_initialize_edith_project()
 dustin_enable_google_testing()
 
+find_package(Abseil REQUIRED)
+find_package(Boost REQUIRED QUIET)
+find_package(Protobuf 3.0.0 REQUIRED QUIET)
+find_package(Poco REQUIRED Foundation)
+
+SET(Poco_INCLUDE_DIRS "/usr/include/Poco")
+
 set(PYTHON2_INCLUDE_DIR "/usr/include/python2.7")
 set(PYTHON2_LIBRARIES   "/usr/lib/x86_64-linux-gnu/libpython2.7.so")
 set(PYTHON3_INCLUDE_DIR "/usr/include/python3.6m")
 set(PYTHON3_LIBRARIES   "/usr/lib/x86_64-linux-gnu/libpython3.6m.so")
-
-find_package(Abseil REQUIRED)
-find_package(Boost REQUIRED QUIET)
-find_package(Protobuf 3.0.0 REQUIRED QUIET)
 
 # Find requirements
 find_package(fastrtps REQUIRED)

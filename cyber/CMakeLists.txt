@@ -24,16 +24,13 @@ list(REMOVE_ITEM ALL_LIBRARY_SRCS ${ALL_TOOLS_FILES})
 list(REMOVE_ITEM ALL_LIBRARY_SRCS ${ALL_TESTS})
 list(APPEND ALL_LIBRARY_SRCS "croutine/detail/swap_x86_64.S")
 
-MESSAGE(STATUS "ALL_LIBRARY_SRCS: ${ALL_LIBRARY_SRCS}")
-
-# remove protos from examples
-list(REMOVE_ITEM ALL_PROTOS ${ALL_EXAMPLE_FILES})
+# MESSAGE(STATUS "ALL_LIBRARY_SRCS: ${ALL_LIBRARY_SRCS}")
+# MESSAGE(STATUS "ALL_LIBRARY_HDRS: ${ALL_LIBRARY_HDRS}")
 
 # remove tests from examples, python, wrapper
 list(REMOVE_ITEM ALL_TESTS ${ALL_PYTHON_FILES})
 list(REMOVE_ITEM ALL_TESTS ${ALL_WRAPPER_FILES})
 list(REMOVE_ITEM ALL_TESTS ${ALL_EXAMPLE_FILES})
-
 
 set(ALL_PROTO_SRCS)
 set(ALL_PROTO_HDRS)
@@ -78,7 +75,11 @@ target_link_libraries(edith_cyber -latomic)
 target_link_libraries(edith_cyber -lncurses)
 target_link_libraries(edith_cyber -lrt)
 target_link_libraries(edith_cyber -luuid)
-target_link_libraries(edith_cyber -lPocoFoundation)
+# target_link_libraries(edith_cyber -lPocoFoundation)
+target_include_directories(edith_cyber SYSTEM PUBLIC 
+  ${Poco_INCLUDE_DIRS})
+target_link_libraries(edith_cyber Poco::Foundation)
+
 target_link_libraries(edith_cyber glog)
 target_link_libraries(edith_cyber gflags)
 
@@ -118,12 +119,17 @@ file(GLOB_RECURSE ALL_MAINBOARD_HRDS "mainboard/*.h")
 set(ALL_MAINBOARD_FILES)
 list(APPEND ALL_MAINBOARD_FILES ${ALL_MAINBOARD_SRCS})
 list(APPEND ALL_MAINBOARD_FILES ${ALL_MAINBOARD_HRDS})
-# message(STATUS "ALL_MAINBOARD_FILES: ${ALL_MAINBOARD_FILES}")
 
 edith_binary(mainboard
   SRCS
     ${ALL_MAINBOARD_FILES}
   LIBS
-    "edith_cyber;-pthread"
+    edith_cyber
+)
+
+target_include_directories(mainboard PUBLIC
+  $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}>
+  $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
+  $<INSTALL_INTERFACE:include>
 )
 

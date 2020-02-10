@@ -31,7 +31,7 @@ endmacro(_common_compile_stuff)
 
 function(_py2_library NAME)
   _parse_arguments("${ARGN}")
-  message(STATUS "Add Cyber Py2 Lib: ${NAME}")
+  # message(STATUS "Add Edith Py2 Lib: ${NAME}")
 
   add_library(${NAME} SHARED ${ARG_SRCS})
 
@@ -54,7 +54,7 @@ endfunction()
 
 function(_py3_library NAME)
   _parse_arguments("${ARGN}")
-  message(STATUS "Add Cyber Py3 Lib: ${NAME}")
+  # message(STATUS "Add Edith Py3 Lib: ${NAME}")
 
   add_library(${NAME} SHARED ${ARG_SRCS})
 
@@ -77,7 +77,7 @@ endfunction()
 
 function(_edith_library NAME)
   _parse_arguments("${ARGN}")
-  message(STATUS "Add Edith Lib: ${NAME}")
+  # message(STATUS "Add Edith Lib: ${NAME}")
   
   add_library(${NAME} SHARED ${ARG_SRCS})
 
@@ -98,7 +98,7 @@ endfunction()
 # add test block
 function(edith_test NAME)
   _parse_arguments("${ARGN}")
-  message(STATUS "Add Edith Test: ${NAME}")
+  # message(STATUS "Add Edith Test: ${NAME}")
 
   add_executable(${NAME} ${ARG_SRCS})
   foreach(LIB ${ARG_LIBS})
@@ -116,10 +116,11 @@ endfunction()
 # add binary block
 function(edith_binary NAME)
   _parse_arguments("${ARGN}")
-  message(STATUS "Add Edith Binary: ${NAME} ${ARG_DESCRIPTS}")
+  # message(STATUS "Add Edith Binary: ${NAME} ${ARG_DESCRIPTS}")
 
   add_executable(${NAME} ${ARG_SRCS})
   foreach(LIB ${ARG_LIBS})
+    # message(STATUS "Add depend lib: ${LIB}")
     _common_compile_stuff(${LIB})
   endforeach()
 
