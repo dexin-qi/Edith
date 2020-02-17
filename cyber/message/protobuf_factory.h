@@ -105,7 +105,7 @@ class ProtobufFactory {
   std::unique_ptr<DescriptorPool> pool_ = nullptr;
   std::unique_ptr<DynamicMessageFactory> factory_ = nullptr;
 
-  DECLARE_SINGLETON(ProtobufFactory)
+  DECLARE_SINGLETON(ProtobufFactory);
 };
 
 }  // namespace message

@@ -6,14 +6,14 @@ set(EDITH_VERSION_MINOR  0)
 set(EDITH_VERSION_PATCH  0)
 set(EDITH_VERSION ${EDITH_VERSION_MAJOR}.${EDITH_VERSION_MINOR}.${EDITH_VERSION_PATCH})
 
-option(BUILD_EDITH_TEST "build Edith test" false)
+option(BUILD_EDITH_TEST "Build Edith Tests" false)
 
 include("${PROJECT_SOURCE_DIR}/cmake/functions.cmake")
 
 dustin_initialize_edith_project()
 dustin_enable_google_testing()
 
-# find_package(Abseil REQUIRED)
+find_package(Abseil REQUIRED)
 find_package(Boost REQUIRED QUIET)
 find_package(Protobuf 3.0.0 REQUIRED QUIET)
 

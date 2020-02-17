@@ -1,94 +1,184 @@
-message(STATUS "Python2: ${PYTHON2_INCLUDE_DIR}")
-message(STATUS "Python2: ${PYTHON2_LIBRARIES}")
-message(STATUS "Python3: ${PYTHON3_INCLUDE_DIR}")
-message(STATUS "Python3: ${PYTHON3_LIBRARIES}")
+###### bazel lib: _py_wrapper_py3_timer ######
+add_library(_py_wrapper_py3_timer SHARED
+  "py_timer.cc"
+  "py_timer.h"
+)
+target_link_libraries(_py_wrapper_py3_timer _cyber_core)
+target_include_directories(_py_wrapper_py3_timer SYSTEM PUBLIC ${PYTHON3_INCLUDE_DIR})
+target_link_libraries(_py_wrapper_py3_timer ${PYTHON3_LIBRARIES})
 
-# Python2 Interface
-_py2_library(_cyber 
-    SRCS 
-        "py_cyber.h;py_cyber.cc" 
-    LIBS
-        edith_cyber
+set_target_properties(_py_wrapper_py3_timer PROPERTIES COMPILE_FLAGS ${EDITH_CXX_FLAGS})
+
+target_include_directories(_py_wrapper_py3_timer PUBLIC
+  $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}>
+  $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
+  $<INSTALL_INTERFACE:include>
 )
 
-_py2_library(_cyber_record 
-    SRCS 
-        "py_record.h;py_record.cc" 
-    LIBS 
-        edith_cyber
+###### bazel lib: _py_wrapper_py3_time ######
+add_library(_py_wrapper_py3_time SHARED
+  "py_time.cc"
+  "py_time.h"
+)
+target_link_libraries(_py_wrapper_py3_time _cyber_core)
+target_link_libraries(_py_wrapper_py3_time fastrtps fastcdr)
+target_include_directories(_py_wrapper_py3_time SYSTEM PUBLIC ${PYTHON3_INCLUDE_DIR})
+target_link_libraries(_py_wrapper_py3_time ${PYTHON3_LIBRARIES})
+
+set_target_properties(_py_wrapper_py3_time PROPERTIES COMPILE_FLAGS ${EDITH_CXX_FLAGS})
+
+target_include_directories(_py_wrapper_py3_time PUBLIC
+  $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}>
+  $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
+  $<INSTALL_INTERFACE:include>
 )
 
+###### bazel lib: _py_wrapper_py_timer ######
+add_library(_py_wrapper_py_timer SHARED
+  "py_timer.cc"
+  "py_timer.h"
+)
+target_link_libraries(_py_wrapper_py_timer _cyber_core)
+target_include_directories(_py_wrapper_py_timer SYSTEM PUBLIC ${PYTHON2_INCLUDE_DIR})
+target_link_libraries(_py_wrapper_py_timer ${PYTHON2_LIBRARIES})
 
-_py2_library(_cyber_time 
-    SRCS 
-        "py_time.h;py_time.cc" 
-    LIBS 
-        edith_cyber
+set_target_properties(_py_wrapper_py_timer PROPERTIES COMPILE_FLAGS ${EDITH_CXX_FLAGS})
+
+target_include_directories(_py_wrapper_py_timer PUBLIC
+  $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}>
+  $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
+  $<INSTALL_INTERFACE:include>
 )
 
+###### bazel lib: _py_wrapper_py_record ######
+add_library(_py_wrapper_py_record SHARED
+  "py_record.cc"
+  "py_record.h"
+  "/apollo/cyber/message/py_message.h"
+)
+target_include_directories(_py_wrapper_py_record SYSTEM PUBLIC ${PYTHON2_INCLUDE_DIR})
+target_link_libraries(_py_wrapper_py_record ${PYTHON2_LIBRARIES})
+target_link_libraries(_py_wrapper_py_record _message_protobuf_factory)
+target_link_libraries(_py_wrapper_py_record _record_record_reader)
+target_link_libraries(_py_wrapper_py_record _record_record_viewer)
+target_link_libraries(_py_wrapper_py_record _record_record_writer)
 
-_py2_library(_cyber_timer 
-    SRCS 
-        "py_timer.h;py_timer.cc" 
-    LIBS 
-        edith_cyber
+set_target_properties(_py_wrapper_py_record PROPERTIES COMPILE_FLAGS ${EDITH_CXX_FLAGS})
+
+target_include_directories(_py_wrapper_py_record PUBLIC
+  $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}>
+  $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
+  $<INSTALL_INTERFACE:include>
 )
 
+###### bazel lib: _py_wrapper_py_cyber ######
+add_library(_py_wrapper_py_cyber SHARED
+  "py_cyber.cc"
+  "py_cyber.h"
+)
+target_link_libraries(_py_wrapper_py_cyber _cyber_core)
+target_include_directories(_py_wrapper_py_cyber SYSTEM PUBLIC ${PYTHON2_INCLUDE_DIR})
+target_link_libraries(_py_wrapper_py_cyber ${PYTHON2_LIBRARIES})
+target_link_libraries(_py_wrapper_py_cyber -lrt)
 
-_py2_library(_cyber_parameter 
-    SRCS 
-        "py_parameter.h;py_parameter.cc" 
-    LIBS 
-        edith_cyber
+set_target_properties(_py_wrapper_py_cyber PROPERTIES COMPILE_FLAGS ${EDITH_CXX_FLAGS})
+
+target_include_directories(_py_wrapper_py_cyber PUBLIC
+  $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}>
+  $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
+  $<INSTALL_INTERFACE:include>
 )
 
-# Python3 Interface
-_py3_library(_cyber_py3 
-    SRCS
-        "py_cyber.h;py_cyber.cc"
-    LIBS
-        edith_cyber
+###### bazel lib: _py_wrapper_py3_cyber ######
+add_library(_py_wrapper_py3_cyber SHARED
+  "py_cyber.cc"
+  "py_cyber.h"
+)
+target_link_libraries(_py_wrapper_py3_cyber _cyber_core)
+target_include_directories(_py_wrapper_py3_cyber SYSTEM PUBLIC ${PYTHON3_INCLUDE_DIR})
+target_link_libraries(_py_wrapper_py3_cyber ${PYTHON3_LIBRARIES})
+target_link_libraries(_py_wrapper_py3_cyber -lrt)
+
+set_target_properties(_py_wrapper_py3_cyber PROPERTIES COMPILE_FLAGS ${EDITH_CXX_FLAGS})
+
+target_include_directories(_py_wrapper_py3_cyber PUBLIC
+  $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}>
+  $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
+  $<INSTALL_INTERFACE:include>
 )
 
-_py3_library(_cyber_record_py3 
-    SRCS 
-        "py_record.h;py_record.cc" 
-    LIBS 
-        edith_cyber
+###### bazel lib: _py_wrapper_py_parameter ######
+add_library(_py_wrapper_py_parameter SHARED
+  "py_parameter.cc"
+  "py_parameter.h"
+)
+target_link_libraries(_py_wrapper_py_parameter _py_wrapper_py_cyber)
+target_link_libraries(_py_wrapper_py_parameter _cyber_core)
+target_include_directories(_py_wrapper_py_parameter SYSTEM PUBLIC ${PYTHON2_INCLUDE_DIR})
+target_link_libraries(_py_wrapper_py_parameter ${PYTHON2_LIBRARIES})
+
+set_target_properties(_py_wrapper_py_parameter PROPERTIES COMPILE_FLAGS ${EDITH_CXX_FLAGS})
+
+target_include_directories(_py_wrapper_py_parameter PUBLIC
+  $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}>
+  $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
+  $<INSTALL_INTERFACE:include>
 )
 
-_py3_library(_cyber_time_py3 
-    SRCS 
-        "py_time.h;py_time.cc" 
-    LIBS 
-        edith_cyber
+###### bazel lib: _py_wrapper_py3_parameter ######
+add_library(_py_wrapper_py3_parameter SHARED
+  "py_parameter.cc"
+  "py_parameter.h"
+)
+target_link_libraries(_py_wrapper_py3_parameter _py_wrapper_py3_cyber)
+target_link_libraries(_py_wrapper_py3_parameter _cyber_core)
+target_include_directories(_py_wrapper_py3_parameter SYSTEM PUBLIC ${PYTHON3_INCLUDE_DIR})
+target_link_libraries(_py_wrapper_py3_parameter ${PYTHON3_LIBRARIES})
+
+set_target_properties(_py_wrapper_py3_parameter PROPERTIES COMPILE_FLAGS ${EDITH_CXX_FLAGS})
+
+target_include_directories(_py_wrapper_py3_parameter PUBLIC
+  $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}>
+  $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
+  $<INSTALL_INTERFACE:include>
 )
 
-_py3_library(_cyber_timer_py3 
-    SRCS 
-        "py_timer.h;py_timer.cc" 
-    LIBS 
-        edith_cyber
+###### bazel lib: _py_wrapper_py3_record ######
+add_library(_py_wrapper_py3_record SHARED
+  "py_record.cc"
+  "py_record.h"
+  "/apollo/cyber/message/py_message.h"
+)
+target_include_directories(_py_wrapper_py3_record SYSTEM PUBLIC ${PYTHON3_INCLUDE_DIR})
+target_link_libraries(_py_wrapper_py3_record ${PYTHON3_LIBRARIES})
+target_link_libraries(_py_wrapper_py3_record _message_protobuf_factory)
+target_link_libraries(_py_wrapper_py3_record _record_record_reader)
+target_link_libraries(_py_wrapper_py3_record _record_record_viewer)
+target_link_libraries(_py_wrapper_py3_record _record_record_writer)
+
+set_target_properties(_py_wrapper_py3_record PROPERTIES COMPILE_FLAGS ${EDITH_CXX_FLAGS})
+
+target_include_directories(_py_wrapper_py3_record PUBLIC
+  $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}>
+  $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
+  $<INSTALL_INTERFACE:include>
 )
 
-_py3_library(_cyber_parameter_py3 
-    SRCS 
-        "py_parameter.h;py_parameter.cc" 
-    LIBS 
-        edith_cyber
+###### bazel lib: _py_wrapper_py_time ######
+add_library(_py_wrapper_py_time SHARED
+  "py_time.cc"
+  "py_time.h"
+)
+target_link_libraries(_py_wrapper_py_time _cyber_core)
+target_link_libraries(_py_wrapper_py_time fastrtps fastcdr)
+target_include_directories(_py_wrapper_py_time SYSTEM PUBLIC ${PYTHON2_INCLUDE_DIR})
+target_link_libraries(_py_wrapper_py_time ${PYTHON2_LIBRARIES})
+
+set_target_properties(_py_wrapper_py_time PROPERTIES COMPILE_FLAGS ${EDITH_CXX_FLAGS})
+
+target_include_directories(_py_wrapper_py_time PUBLIC
+  $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}>
+  $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
+  $<INSTALL_INTERFACE:include>
 )
 
-# Tests
-edith_test("cyber.py_wrapper.py_cyber_test"
-    SRCS 
-        py_cyber_test.cc
-    LIBS 
-        _cyber_py3
-)
-
-edith_test("cyber.py_wrapper.py_record_test"
-    SRCS 
-        py_record_test.cc
-    LIBS 
-        _cyber_record
-)

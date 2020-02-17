@@ -93,7 +93,6 @@ class Manager {
    * @param attr is the attributes that will be sent to other Manager(include
    * ourselves)
    * @param role is one of RoleType enum
-   * @param need_publish
    * @return true if Join topology successfully
    * @return false if Join topology failed
    */

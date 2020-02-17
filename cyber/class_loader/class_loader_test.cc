@@ -23,13 +23,13 @@
 #include "gtest/gtest.h"
 
 #include "cyber/class_loader/class_loader_manager.h"
-#include "cyber/examples/example_class_loader/base.h"
+#include "cyber/class_loader/test/base.h"
 #include "cyber/cyber.h"
 
 const char LIBRARY_1[] =
-    "/Edith/build/cyber/examples/example_class_loader/libplugin1.so";
+    "/apollo/bazel-bin/cyber/class_loader/test/libplugin1.so";
 const char LIBRARY_2[] =
-    "/Edith/build/cyber/examples/example_class_loader/libplugin2.so";
+    "/apollo/bazel-bin/cyber/class_loader/test/libplugin2.so";
 using apollo::cyber::class_loader::ClassLoader;
 using apollo::cyber::class_loader::ClassLoaderManager;
 using apollo::cyber::class_loader::utility::IsLibraryLoadedByAnybody;

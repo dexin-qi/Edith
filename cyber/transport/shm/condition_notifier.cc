@@ -30,7 +30,7 @@ namespace transport {
 using common::Hash;
 
 ConditionNotifier::ConditionNotifier() {
-  key_ = static_cast<key_t>(Hash("/Edith/cyber/transport/shm/notifier"));
+  key_ = static_cast<key_t>(Hash("/apollo/cyber/transport/shm/notifier"));
   ADEBUG << "condition notifier key: " << key_;
   shm_size_ = sizeof(Indicator);
 

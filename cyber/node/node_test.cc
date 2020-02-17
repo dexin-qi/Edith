@@ -40,7 +40,7 @@ TEST(NodeTest, cases) {
   attr.mutable_qos_profile()->set_depth(10);
 
   auto reader = node->CreateReader<Chatter>(attr);
-  EXPECT_TRUE(node->GetReader<Chatter>(attr.channel_name()) != nullptr);
+  EXPECT_TRUE(node->GetReader<Chatter>(attr.channel_name()));
 
   auto writer = node->CreateWriter<Chatter>(attr);
   auto server = node->CreateService<Chatter, Chatter>(

@@ -217,24 +217,28 @@ class Parameter {
    * @brief Translate paramter value as a protobuf::Message
    *
    * @tparam ValueType type of the value
-   * @return std::enable_if<std::is_base_of<google::protobuf::Message,
-   * ValueType>::value,ValueType>::type protobuf::Message
-   * type result
+   * @return std::enable_if<
+std::is_base_of<google::protobuf::Message, ValueType>::value,
+ValueType>::type protobuf::Message type result
    */
   template <typename ValueType>
-  typename std::enable_if<std::is_base_of<google::protobuf::Message, ValueType>::value,
-                          ValueType>::type
+  typename std::enable_if<
+      std::is_base_of<google::protobuf::Message, ValueType>::value,
+      ValueType>::type
   value() const;
 
   /**
    * @brief Translate paramter value to int type
+   *
    * @tparam ValueType type of the value
-   * @return std::enable_if<std::is_integral<ValueType>::value &&!std::is_same<ValueType,
-   * bool>::value, ValueType>::type int type result
+   * @return std::enable_if<std::is_integral<ValueType>::value &&
+!std::is_same<ValueType, bool>::value,
+ValueType>::type int type result
    */
   template <typename ValueType>
-  typename std::enable_if<
-      std::is_integral<ValueType>::value && !std::is_same<ValueType, bool>::value, ValueType>::type
+  typename std::enable_if<std::is_integral<ValueType>::value &&
+                              !std::is_same<ValueType, bool>::value,
+                          ValueType>::type
   value() const;
 
   /**

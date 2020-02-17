@@ -114,14 +114,15 @@ TEST(FileTest, Glob) {
   // Match none.
   EXPECT_TRUE(Glob("/path/impossible/*").empty());
   // Match one.
-  EXPECT_THAT(Glob("/Edith"), testing::ElementsAre(std::string("/Edith")));
-  EXPECT_THAT(Glob("/Ed?th"), testing::ElementsAre(std::string("/Edith")));
+  EXPECT_THAT(Glob("/apollo"), testing::ElementsAre(std::string("/apollo")));
+  EXPECT_THAT(Glob("/apol?o"), testing::ElementsAre(std::string("/apollo")));
   // Match multiple.
   EXPECT_THAT(
-      Glob("/Edi?h/cyber/com*"),
+      Glob("/apol?o/modules/p*"),
       testing::AllOf(
-          testing::Contains(std::string("/Edith/cyber/common")),
-          testing::Contains(std::string("/Edith/cyber/component"))));
+          testing::Contains(std::string("/apollo/modules/perception")),
+          testing::Contains(std::string("/apollo/modules/planning")),
+          testing::Contains(std::string("/apollo/modules/prediction"))));
 }
 
 TEST(FileTest, GetAbsolutePath) {

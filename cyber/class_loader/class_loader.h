@@ -40,13 +40,10 @@ class ClassLoader {
   bool LoadLibrary();
   int UnloadLibrary();
   const std::string GetLibraryPath() const;
-  
   template <typename Base>
   std::vector<std::string> GetValidClassNames();
-
   template <typename Base>
   std::shared_ptr<Base> CreateClassObj(const std::string& class_name);
-
   template <typename Base>
   bool IsClassValid(const std::string& class_name);
 
@@ -75,7 +72,8 @@ bool ClassLoader::IsClassValid(const std::string& class_name) {
 }
 
 template <typename Base>
-std::shared_ptr<Base> ClassLoader::CreateClassObj(const std::string& class_name) {
+std::shared_ptr<Base> ClassLoader::CreateClassObj(
+    const std::string& class_name) {
   if (!IsLibraryLoaded()) {
     LoadLibrary();
   }
@@ -89,8 +87,6 @@ std::shared_ptr<Base> ClassLoader::CreateClassObj(const std::string& class_name)
 
   std::lock_guard<std::mutex> lck(classobj_ref_count_mutex_);
   classobj_ref_count_ = classobj_ref_count_ + 1;
-
-  AINFO << "CreateClassObj() classobj_ref_count_ ++";
   std::shared_ptr<Base> classObjSharePtr(
       class_object, std::bind(&ClassLoader::OnClassObjDeleter<Base>, this,
                               std::placeholders::_1));
@@ -99,7 +95,6 @@ std::shared_ptr<Base> ClassLoader::CreateClassObj(const std::string& class_name)
 
 template <typename Base>
 void ClassLoader::OnClassObjDeleter(Base* obj) {
-  AINFO << "Callback OnClassObjDeleter";
   if (nullptr == obj) {
     return;
   }
@@ -107,7 +102,6 @@ void ClassLoader::OnClassObjDeleter(Base* obj) {
   std::lock_guard<std::mutex> lck(classobj_ref_count_mutex_);
   delete obj;
   --classobj_ref_count_;
-  AINFO << "OnClassObjDeleter() --classobj_ref_count_";
 }
 
 }  // namespace class_loader

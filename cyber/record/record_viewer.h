@@ -126,7 +126,7 @@ class RecordViewer {
     /**
      * @brief Overloading operator !=.
      *
-     * @param rhs
+     * @param other
      *
      * @return The result.
      */

@@ -22,83 +22,15 @@ macro(_parse_arguments ARGS)
     "${OPTIONS}" "${ONE_VALUE_ARG}" "${MULTI_VALUE_ARGS}" ${ARGS})
 endmacro(_parse_arguments)
 
+
 macro(_common_compile_stuff LIB_NAME)
   target_link_libraries(${NAME} ${LIB_NAME})
-  
-  set(TARGET_COMPILE_FLAGS "${TARGET_COMPILE_FLAGS} ${EDITH_CXX_FLAGS}")
-  set_target_properties(${NAME} PROPERTIES COMPILE_FLAGS ${TARGET_COMPILE_FLAGS})
+  set_target_properties(${NAME} PROPERTIES COMPILE_FLAGS ${EDITH_CXX_FLAGS})
 endmacro(_common_compile_stuff)
 
-function(_py2_library NAME)
-  _parse_arguments("${ARGN}")
-  # message(STATUS "Add Edith Py2 Lib: ${NAME}")
 
-  add_library(${NAME} SHARED ${ARG_SRCS})
-
-  target_include_directories(${NAME} SYSTEM PUBLIC ${PYTHON2_INCLUDE_DIR})
-  target_link_libraries(${NAME} ${PYTHON2_LIBRARIES})
-  
-  foreach(LIB ${ARG_LIBS})
-    _common_compile_stuff(${LIB})
-  endforeach()
-
-  set_target_properties(${NAME} PROPERTIES PREFIX "")
-  set_target_properties(${NAME} PROPERTIES COMPILE_FLAGS ${EDITH_CXX_FLAGS})
-
-  target_include_directories(${NAME} PUBLIC
-    $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}>
-    $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
-    $<INSTALL_INTERFACE:include>
-  )
-endfunction()
-
-function(_py3_library NAME)
-  _parse_arguments("${ARGN}")
-  # message(STATUS "Add Edith Py3 Lib: ${NAME}")
-
-  add_library(${NAME} SHARED ${ARG_SRCS})
-
-  target_include_directories(${NAME} SYSTEM PUBLIC ${PYTHON3_INCLUDE_DIR})
-  target_link_libraries(${NAME} ${PYTHON3_LIBRARIES})
-  
-  foreach(LIB ${ARG_LIBS})
-    _common_compile_stuff(${LIB})
-  endforeach()
-
-  set_target_properties(${NAME} PROPERTIES PREFIX "")
-  set_target_properties(${NAME} PROPERTIES COMPILE_FLAGS ${EDITH_CXX_FLAGS})
-
-  target_include_directories(${NAME} PUBLIC
-    $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}>
-    $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
-    $<INSTALL_INTERFACE:include>
-  )
-endfunction()
-
-function(_edith_library NAME)
-  _parse_arguments("${ARGN}")
-  # message(STATUS "Add Edith Lib: ${NAME}")
-  
-  add_library(${NAME} SHARED ${ARG_SRCS})
-
-  foreach(LIB ${ARG_LIBS})
-    _common_compile_stuff(${LIB})
-  endforeach()
-
-  set_target_properties(${NAME} PROPERTIES COMPILE_FLAGS ${EDITH_CXX_FLAGS})
-
-  target_include_directories(${NAME} PUBLIC
-    $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}>
-    $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
-    $<INSTALL_INTERFACE:include>
-  )
-endfunction()
-
-
-# add test block
 function(edith_test NAME)
   _parse_arguments("${ARGN}")
-  # message(STATUS "Add Edith Test: ${NAME}")
 
   add_executable(${NAME} ${ARG_SRCS})
   foreach(LIB ${ARG_LIBS})
@@ -112,20 +44,59 @@ function(edith_test NAME)
   add_test(${NAME} ${NAME})
 endfunction()
 
-
 # add binary block
 function(edith_binary NAME)
   _parse_arguments("${ARGN}")
-  # message(STATUS "Add Edith Binary: ${NAME} ${ARG_DESCRIPTS}")
 
   add_executable(${NAME} ${ARG_SRCS})
   foreach(LIB ${ARG_LIBS})
-    # message(STATUS "Add depend lib: ${LIB}")
     _common_compile_stuff(${LIB})
   endforeach()
 
   install(TARGETS "${NAME}" RUNTIME DESTINATION bin)
 endfunction()
+
+
+macro(_add_proto_cc_lib LIB_NAME)
+  file(GLOB_RECURSE ALL_PROTOS "*.proto")
+  
+  set(ALL_PROTO_SRCS)
+  set(ALL_PROTO_HDRS)
+  foreach(ABS_FIL ${ALL_PROTOS})
+    file(RELATIVE_PATH REL_FIL ${PROJECT_SOURCE_DIR} ${ABS_FIL})
+    get_filename_component(DIR ${REL_FIL} DIRECTORY)
+    get_filename_component(FIL_WE ${REL_FIL} NAME_WE)
+
+    list(APPEND ALL_PROTO_SRCS "${PROJECT_BINARY_DIR}/${DIR}/${FIL_WE}.pb.cc")
+    list(APPEND ALL_PROTO_HDRS "${PROJECT_BINARY_DIR}/${DIR}/${FIL_WE}.pb.h")
+
+    add_custom_command(
+      OUTPUT "${PROJECT_BINARY_DIR}/${DIR}/${FIL_WE}.pb.cc"
+      "${PROJECT_BINARY_DIR}/${DIR}/${FIL_WE}.pb.h"
+      COMMAND  ${PROTOBUF_PROTOC_EXECUTABLE}
+      ARGS --cpp_out  ${PROJECT_BINARY_DIR} -I
+      ${PROJECT_SOURCE_DIR} ${ABS_FIL}
+      DEPENDS ${ABS_FIL}
+      COMMENT "Running C++ protocol buffer compiler on ${ABS_FIL}"
+      VERBATIM
+    )
+  endforeach()
+
+  set_source_files_properties(${ALL_PROTO_SRCS} ${ALL_PROTO_HDRS} PROPERTIES GENERATED TRUE)
+
+  add_library(${LIB_NAME} STATIC ${ALL_PROTO_SRCS} ${ALL_PROTO_HDRS})
+
+  target_include_directories(${LIB_NAME} SYSTEM PUBLIC ${PROTOBUF_INCLUDE_DIR})
+  target_link_libraries(${LIB_NAME} ${PROTOBUF_LIBRARY} standalone_absl)
+
+  set_target_properties(${LIB_NAME} PROPERTIES COMPILE_FLAGS ${EDITH_CXX_FLAGS})
+
+  target_include_directories(${LIB_NAME} PUBLIC
+    $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}>
+    $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
+    $<INSTALL_INTERFACE:include>
+  )
+endmacro(_add_proto_cc_lib LIB_NAME)
 
 function(dustin_add_flag VAR_NAME FLAG)
   if (${VAR_NAME})
@@ -143,10 +114,6 @@ macro(dustin_initialize_edith_project)
   endif()
 
   dustin_add_flag(EDITH_CXX_FLAGS "-pthread -std=c++14 -fPIC")
-
-  dustin_add_flag(EDITH_CXX_FLAGS "-Wall")
-  dustin_add_flag(EDITH_CXX_FLAGS "-Wpedantic")
-
   # Turn some warnings into errors.
   dustin_add_flag(EDITH_CXX_FLAGS "-Werror=format-security")
   dustin_add_flag(EDITH_CXX_FLAGS "-Werror=missing-braces")
