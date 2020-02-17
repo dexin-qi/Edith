@@ -25,9 +25,9 @@ pushd Fast-RTPS
 git checkout origin/release/1.5.0
 git submodule init
 git submodule update
-patch -p1 < ../FastRTPS_1.5.0.patch
+# patch -p1 < ../FastRTPS_1.5.0.patch
 mkdir -p build && cd build
-cmake -DEPROSIMA_BUILD=ON -DCMAKE_INSTALL_PREFIX=/usr/local ..
-make -j 8
-make install
+# cmake -DEPROSIMA_BUILD=ON -DCMAKE_INSTALL_PREFIX=/usr/local ..
+# make -j 8
+# make install
 popd
