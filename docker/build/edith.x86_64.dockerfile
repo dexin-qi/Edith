@@ -8,8 +8,8 @@ RUN apt clean
 RUN apt update -y && \
     apt install -y \
     build-essential \
-    gcc-4.8 \
-    g++-4.8 \
+    gcc-5 \
+    g++-5 \
     cmake \
     curl \
     git \
@@ -48,13 +48,13 @@ RUN apt update -y && \
     libopenni2-dev \
     software-properties-common
 
-#install gcc 4.8.5
-# RUN rm -f /usr/bin/gcc
-# RUN ln -s /usr/bin/gcc-4.8 /etc/alternatives/gcc
-# RUN ln -s /etc/alternatives/gcc /usr/bin/gcc
-# RUN rm -f /usr/bin/g++
-# RUN ln -s /usr/bin/g++-4.8 /etc/alternatives/g++
-# RUN ln -s /etc/alternatives/g++ /usr/bin/g++
+#install gcc 5.5.0-12
+RUN rm -f /usr/bin/gcc
+RUN ln -s /usr/bin/gcc-5 /etc/alternatives/gcc
+RUN ln -s /etc/alternatives/gcc /usr/bin/gcc
+RUN rm -f /usr/bin/g++
+RUN ln -s /usr/bin/g++-5 /etc/alternatives/g++
+RUN ln -s /etc/alternatives/g++ /usr/bin/g++
 
 
 COPY installers /tmp/installers
@@ -112,6 +112,5 @@ RUN ln -s /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.54.0 /usr/lib/x86_64-li
 RUN ln -s /usr/lib/python2.7/dist-packages/vtk/libvtkRenderingPythonTkWidgets.x86_64-linux-gnu.so /usr/lib/x86_64-linux-gnu/libvtkRenderingPythonTkWidgets.so
 
 RUN bash /tmp/installers/install_fast-rtps.sh
-# RUN bash /tmp/installers/install_pcl.sh
 
 WORKDIR /edith
