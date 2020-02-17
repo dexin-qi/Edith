@@ -17,7 +17,7 @@ target_include_directories(_record_header_builder PUBLIC
 add_library(_record_record_file_writer SHARED
   "file/record_file_writer.cc"
   "file/record_file_writer.h"
-  "/apollo/cyber/record/file/section.h"
+  "/edith/cyber/record/file/section.h"
 )
 target_link_libraries(_record_record_file_writer _record_record_file_base)
 target_link_libraries(_record_record_file_writer _common_file)
@@ -37,7 +37,7 @@ target_include_directories(_record_record_file_writer PUBLIC
 add_library(_record_record_viewer SHARED
   "record_viewer.cc"
   "record_viewer.h"
-  "/apollo/cyber/record/record_message.h"
+  "/edith/cyber/record/record_message.h"
 )
 target_link_libraries(_record_record_viewer _record_record_reader)
 
@@ -53,8 +53,8 @@ target_include_directories(_record_record_viewer PUBLIC
 add_library(_record_record_file_base SHARED
   "file/record_file_base.cc"
   "file/record_file_base.h"
-  "/apollo/cyber/common/log.h"
-  "/apollo/cyber/binary.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/binary.h"
 )
 target_link_libraries(_record_record_file_base _cyber_proto_cc_lib)
 target_link_libraries(_record_record_file_base glog)
@@ -71,15 +71,15 @@ target_include_directories(_record_record_file_base PUBLIC
 add_library(_record_record_writer SHARED
   "record_writer.cc"
   "record_writer.h"
-  "/apollo/cyber/record/record_base.h"
-  "/apollo/cyber/message/message_traits.h"
-  "/apollo/cyber/message/raw_message.h"
-  "/apollo/cyber/message/message_header.h"
-  "/apollo/cyber/message/protobuf_traits.h"
-  "/apollo/cyber/message/py_message_traits.h"
-  "/apollo/cyber/message/raw_message_traits.h"
-  "/apollo/cyber/base/macros.h"
-  "/apollo/cyber/message/py_message.h"
+  "/edith/cyber/record/record_base.h"
+  "/edith/cyber/message/message_traits.h"
+  "/edith/cyber/message/raw_message.h"
+  "/edith/cyber/message/message_header.h"
+  "/edith/cyber/message/protobuf_traits.h"
+  "/edith/cyber/message/py_message_traits.h"
+  "/edith/cyber/message/raw_message_traits.h"
+  "/edith/cyber/base/macros.h"
+  "/edith/cyber/message/py_message.h"
 )
 target_link_libraries(_record_record_writer _record_header_builder)
 target_link_libraries(_record_record_writer _record_record_file_writer)
@@ -98,8 +98,8 @@ target_include_directories(_record_record_writer PUBLIC
 add_library(_record_record_reader SHARED
   "record_reader.cc"
   "record_reader.h"
-  "/apollo/cyber/record/record_base.h"
-  "/apollo/cyber/record/record_message.h"
+  "/edith/cyber/record/record_base.h"
+  "/edith/cyber/record/record_message.h"
 )
 target_link_libraries(_record_record_reader _record_record_file_reader)
 target_link_libraries(_record_record_reader _cyber_proto_cc_lib)
@@ -116,7 +116,7 @@ target_include_directories(_record_record_reader PUBLIC
 add_library(_record_record_file_reader SHARED
   "file/record_file_reader.cc"
   "file/record_file_reader.h"
-  "/apollo/cyber/record/file/section.h"
+  "/edith/cyber/record/file/section.h"
 )
 target_link_libraries(_record_record_file_reader _record_record_file_base)
 target_link_libraries(_record_record_file_reader _common_file)

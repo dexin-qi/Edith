@@ -2,8 +2,8 @@
 add_library(_common_file SHARED
   "file.cc"
   "file.h"
-  "/apollo/cyber/common/log.h"
-  "/apollo/cyber/binary.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/binary.h"
 )
 target_link_libraries(_common_file glog)
 
@@ -19,13 +19,13 @@ target_include_directories(_common_file PUBLIC
 add_library(_common_global_data SHARED
   "global_data.cc"
   "global_data.h"
-  "/apollo/cyber/base/atomic_hash_map.h"
-  "/apollo/cyber/base/atomic_rw_lock.h"
-  "/apollo/cyber/common/environment.h"
-  "/apollo/cyber/common/macros.h"
-  "/apollo/cyber/common/util.h"
-  "/apollo/cyber/base/rw_lock_guard.h"
-  "/apollo/cyber/base/macros.h"
+  "/edith/cyber/base/atomic_hash_map.h"
+  "/edith/cyber/base/atomic_rw_lock.h"
+  "/edith/cyber/common/environment.h"
+  "/edith/cyber/common/macros.h"
+  "/edith/cyber/common/util.h"
+  "/edith/cyber/base/rw_lock_guard.h"
+  "/edith/cyber/base/macros.h"
 )
 target_link_libraries(_common_global_data _common_file)
 target_link_libraries(_common_global_data _cyber_proto_cc_lib)

@@ -51,7 +51,7 @@ Due to some limitation of docker on Drive PX platform, you need to follow the st
 For the first time after running cyber_into.sh to get into the Cyber RT container, please run the following two commands:
 
 ```bash
-/apollo/scripts/docker_adduser.sh
+/edith/scripts/docker_adduser.sh
 su nvidia
 ```
 

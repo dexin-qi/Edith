@@ -1,7 +1,7 @@
 ###### bazel lib: _class_loader_test_plugin1 ######
 add_library(_class_loader_test_plugin1 SHARED
   "plugin1.cc"
-  "/apollo/cyber/class_loader/test/base.h"
+  "/edith/cyber/class_loader/test/base.h"
 )
 target_link_libraries(_class_loader_test_plugin1 _class_loader_class_loader_manager)
 
@@ -16,7 +16,7 @@ target_include_directories(_class_loader_test_plugin1 PUBLIC
 ###### bazel lib: _class_loader_test_plugin2 ######
 add_library(_class_loader_test_plugin2 SHARED
   "plugin2.cc"
-  "/apollo/cyber/class_loader/test/base.h"
+  "/edith/cyber/class_loader/test/base.h"
 )
 target_link_libraries(_class_loader_test_plugin2 _class_loader_class_loader_manager)
 

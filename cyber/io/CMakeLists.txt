@@ -2,13 +2,13 @@
 add_library(_io_poller SHARED
   "poller.cc"
   "poller.h"
-  "/apollo/cyber/io/poll_data.h"
-  "/apollo/cyber/base/atomic_rw_lock.h"
-  "/apollo/cyber/common/log.h"
-  "/apollo/cyber/common/macros.h"
-  "/apollo/cyber/base/rw_lock_guard.h"
-  "/apollo/cyber/binary.h"
-  "/apollo/cyber/base/macros.h"
+  "/edith/cyber/io/poll_data.h"
+  "/edith/cyber/base/atomic_rw_lock.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/common/macros.h"
+  "/edith/cyber/base/rw_lock_guard.h"
+  "/edith/cyber/binary.h"
+  "/edith/cyber/base/macros.h"
 )
 target_link_libraries(_io_poller _scheduler_scheduler_factory)
 target_link_libraries(_io_poller _time_time)
@@ -26,9 +26,9 @@ target_include_directories(_io_poller PUBLIC
 add_library(_io_poll_handler SHARED
   "poll_handler.cc"
   "poll_handler.h"
-  "/apollo/cyber/io/poll_data.h"
-  "/apollo/cyber/common/log.h"
-  "/apollo/cyber/binary.h"
+  "/edith/cyber/io/poll_data.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/binary.h"
 )
 target_link_libraries(_io_poll_handler _io_poller)
 target_link_libraries(_io_poll_handler _croutine_croutine)
@@ -46,8 +46,8 @@ target_include_directories(_io_poll_handler PUBLIC
 add_library(_io_session SHARED
   "session.cc"
   "session.h"
-  "/apollo/cyber/common/log.h"
-  "/apollo/cyber/binary.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/binary.h"
 )
 target_link_libraries(_io_session _io_poll_handler)
 target_link_libraries(_io_session glog)

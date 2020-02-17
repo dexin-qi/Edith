@@ -52,14 +52,14 @@ target_include_directories(_scheduler_choreography_context PUBLIC
 add_library(_scheduler_processor SHARED
   "processor.cc"
   "processor.h"
-  "/apollo/cyber/data/fusion/all_latest.h"
-  "/apollo/cyber/data/cache_buffer.h"
-  "/apollo/cyber/data/channel_buffer.h"
-  "/apollo/cyber/data/data_dispatcher.h"
-  "/apollo/cyber/data/fusion/data_fusion.h"
-  "/apollo/cyber/data/data_notifier.h"
-  "/apollo/cyber/data/data_visitor.h"
-  "/apollo/cyber/data/data_visitor_base.h"
+  "/edith/cyber/data/fusion/all_latest.h"
+  "/edith/cyber/data/cache_buffer.h"
+  "/edith/cyber/data/channel_buffer.h"
+  "/edith/cyber/data/data_dispatcher.h"
+  "/edith/cyber/data/fusion/data_fusion.h"
+  "/edith/cyber/data/data_notifier.h"
+  "/edith/cyber/data/data_visitor.h"
+  "/edith/cyber/data/data_visitor_base.h"
 )
 target_link_libraries(_scheduler_processor _scheduler_processor_context)
 target_link_libraries(_scheduler_processor _cyber_proto_cc_lib)
@@ -76,14 +76,14 @@ target_include_directories(_scheduler_processor PUBLIC
 add_library(_scheduler_processor_context SHARED
   "processor_context.cc"
   "processor_context.h"
-  "/apollo/cyber/data/fusion/all_latest.h"
-  "/apollo/cyber/data/cache_buffer.h"
-  "/apollo/cyber/data/channel_buffer.h"
-  "/apollo/cyber/data/data_dispatcher.h"
-  "/apollo/cyber/data/fusion/data_fusion.h"
-  "/apollo/cyber/data/data_notifier.h"
-  "/apollo/cyber/data/data_visitor.h"
-  "/apollo/cyber/data/data_visitor_base.h"
+  "/edith/cyber/data/fusion/all_latest.h"
+  "/edith/cyber/data/cache_buffer.h"
+  "/edith/cyber/data/channel_buffer.h"
+  "/edith/cyber/data/data_dispatcher.h"
+  "/edith/cyber/data/fusion/data_fusion.h"
+  "/edith/cyber/data/data_notifier.h"
+  "/edith/cyber/data/data_visitor.h"
+  "/edith/cyber/data/data_visitor_base.h"
 )
 target_link_libraries(_scheduler_processor_context _croutine_croutine)
 target_link_libraries(_scheduler_processor_context _cyber_proto_cc_lib)
@@ -100,7 +100,7 @@ target_include_directories(_scheduler_processor_context PUBLIC
 add_library(_scheduler_scheduler SHARED
   "scheduler.cc"
   "scheduler.h"
-  "/apollo/cyber/scheduler/common/mutex_wrapper.h"
+  "/edith/cyber/scheduler/common/mutex_wrapper.h"
 )
 target_link_libraries(_scheduler_scheduler _croutine_croutine)
 target_link_libraries(_scheduler_scheduler _scheduler_pin_thread)
@@ -118,8 +118,8 @@ target_include_directories(_scheduler_scheduler PUBLIC
 add_library(_scheduler_classic_context SHARED
   "policy/classic_context.cc"
   "policy/classic_context.h"
-  "/apollo/cyber/scheduler/common/cv_wrapper.h"
-  "/apollo/cyber/scheduler/common/mutex_wrapper.h"
+  "/edith/cyber/scheduler/common/cv_wrapper.h"
+  "/edith/cyber/scheduler/common/mutex_wrapper.h"
 )
 target_link_libraries(_scheduler_classic_context _croutine_croutine)
 target_link_libraries(_scheduler_classic_context _cyber_proto_cc_lib)
@@ -137,8 +137,8 @@ target_include_directories(_scheduler_classic_context PUBLIC
 add_library(_scheduler_pin_thread SHARED
   "common/pin_thread.cc"
   "common/pin_thread.h"
-  "/apollo/cyber/common/log.h"
-  "/apollo/cyber/binary.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/binary.h"
 )
 target_link_libraries(_scheduler_pin_thread glog)
 

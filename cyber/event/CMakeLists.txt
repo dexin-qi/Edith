@@ -2,13 +2,13 @@
 add_library(_event_perf_event_cache SHARED
   "perf_event_cache.cc"
   "perf_event_cache.h"
-  "/apollo/cyber/event/perf_event.h"
-  "/apollo/cyber/base/bounded_queue.h"
-  "/apollo/cyber/common/log.h"
-  "/apollo/cyber/common/macros.h"
-  "/apollo/cyber/base/macros.h"
-  "/apollo/cyber/base/wait_strategy.h"
-  "/apollo/cyber/binary.h"
+  "/edith/cyber/event/perf_event.h"
+  "/edith/cyber/base/bounded_queue.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/common/macros.h"
+  "/edith/cyber/base/macros.h"
+  "/edith/cyber/base/wait_strategy.h"
+  "/edith/cyber/binary.h"
 )
 target_link_libraries(_event_perf_event_cache _state)
 target_link_libraries(_event_perf_event_cache _common_global_data)

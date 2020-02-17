@@ -6,14 +6,14 @@ add_executable(cyber_monitor
   "main.cc"
   "renderable_message.cc"
   "screen.cc"
-  "/apollo/cyber/tools/cyber_monitor/cyber_topology_message.h"
-  "/apollo/cyber/tools/cyber_monitor/general_channel_message.h"
-  "/apollo/cyber/tools/cyber_monitor/screen.h"
-  "/apollo/cyber/tools/cyber_monitor/renderable_message.h"
-  "/apollo/cyber/tools/cyber_monitor/general_message.h"
-  "/apollo/cyber/tools/cyber_monitor/general_message_base.h"
-  "/apollo/cyber/message/raw_message.h"
-  "/apollo/cyber/record/record_message.h"
+  "/edith/cyber/tools/cyber_monitor/cyber_topology_message.h"
+  "/edith/cyber/tools/cyber_monitor/general_channel_message.h"
+  "/edith/cyber/tools/cyber_monitor/screen.h"
+  "/edith/cyber/tools/cyber_monitor/renderable_message.h"
+  "/edith/cyber/tools/cyber_monitor/general_message.h"
+  "/edith/cyber/tools/cyber_monitor/general_message_base.h"
+  "/edith/cyber/message/raw_message.h"
+  "/edith/cyber/record/record_message.h"
 )
 target_link_libraries(cyber_monitor _init)
 target_link_libraries(cyber_monitor _service_discovery_topology_manager)

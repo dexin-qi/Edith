@@ -519,7 +519,7 @@ Default global config path: cyber/setup.bash
 The configs below could be modified by devloper:
 
 ```
-export GLOG_log_dir=/apollo/data/log
+export GLOG_log_dir=/edith/data/log
 export GLOG_alsologtostderr=0
 export GLOG_colorlogtostderr=1
 export GLOG_minloglevel=0

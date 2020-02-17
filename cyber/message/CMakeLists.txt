@@ -2,10 +2,10 @@
 add_library(_message_protobuf_factory SHARED
   "protobuf_factory.cc"
   "protobuf_factory.h"
-  "/apollo/cyber/common/log.h"
-  "/apollo/cyber/common/macros.h"
-  "/apollo/cyber/binary.h"
-  "/apollo/cyber/base/macros.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/common/macros.h"
+  "/edith/cyber/binary.h"
+  "/edith/cyber/base/macros.h"
 )
 target_link_libraries(_message_protobuf_factory _cyber_proto_cc_lib)
 target_link_libraries(_message_protobuf_factory glog)

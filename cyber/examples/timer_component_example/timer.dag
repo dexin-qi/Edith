@@ -1,5 +1,5 @@
 module_config {
-    module_library : "/home/dexin/code/apollo/build/cyber/examples/timer_component_example/libtimer_component_example.so"
+    module_library : "/edith/build/cyber/examples/timer_component_example/libtimer_component_example.so"
     timer_components {
         class_name : "TimerComponentSample"
         config {

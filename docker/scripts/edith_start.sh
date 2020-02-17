@@ -54,12 +54,12 @@ done
 
 PROJECT_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../.." && pwd )"
 
-if [ ! -e /Edith ]; then
-    sudo ln -sf ${PROJECT_ROOT} /Edith
+if [ ! -e /edith ]; then
+    sudo ln -sf ${PROJECT_ROOT} /edith
 fi
 
 if [ -e /proc/sys/kernel ]; then
-    echo "/Edith/data/core/core_%e.%p" | sudo tee /proc/sys/kernel/core_pattern > /dev/null
+    echo "/edith/data/core/core_%e.%p" | sudo tee /proc/sys/kernel/core_pattern > /dev/null
 fi
 
 source ${PROJECT_ROOT}/scripts/edith_base.sh CYBER_ONLY
@@ -113,7 +113,7 @@ fi
 IMG=${DOCKER_REPO}:$VERSION
 
 function local_volumes() {
-    volumes="-v $PROJECT_ROOT:/Edith"
+    volumes="-v $PROJECT_ROOT:/edith"
     case "$(uname -s)" in
         Linux)
             case "$(lsb_release -r | cut -f2)" in
@@ -183,7 +183,7 @@ function main(){
         -e OMP_NUM_THREADS=1 \
         $(local_volumes) \
         --net host \
-        -w /Edith \
+        -w /edith \
         --add-host in_edith_docker:127.0.0.1 \
         --add-host ${LOCAL_HOST}:127.0.0.1 \
         --hostname in_edith_docker \
@@ -200,10 +200,10 @@ function main(){
 
     if [ ${ARCH} == "x86_64" ]; then
         if [ "${USER}" != "root" ]; then
-            docker exec $DOCKER_NAME bash -c '/Edith/scripts/docker_adduser.sh'
+            docker exec $DOCKER_NAME bash -c '/edith/scripts/docker_adduser.sh'
         fi
     else
-        warning "!!! Due to the problem with 'docker exec' on Drive PX platform, please run '/Edith/scripts/docker_adduser.sh' for the first time when you get into the docker !!!"
+        warning "!!! Due to the problem with 'docker exec' on Drive PX platform, please run '/edith/scripts/docker_adduser.sh' for the first time when you get into the docker !!!"
     fi
 
     ok "Finished setting up edith docker environment. Now you can enter with: \nbash docker/scripts/edith_into.sh"

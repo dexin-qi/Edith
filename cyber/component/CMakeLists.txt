@@ -2,16 +2,16 @@
 add_library(_component_timer_component SHARED
   "timer_component.cc"
   "timer_component.h"
-  "/apollo/cyber/component/component_base.h"
-  "/apollo/cyber/transport/message/history.h"
-  "/apollo/cyber/transport/transmitter/hybrid_transmitter.h"
-  "/apollo/cyber/transport/transmitter/intra_transmitter.h"
-  "/apollo/cyber/transport/transmitter/rtps_transmitter.h"
-  "/apollo/cyber/transport/transmitter/shm_transmitter.h"
-  "/apollo/cyber/base/signal.h"
-  "/apollo/cyber/base/thread_pool.h"
-  "/apollo/cyber/transport/message/history_attributes.h"
-  "/apollo/cyber/transport/transmitter/transmitter.h"
+  "/edith/cyber/component/component_base.h"
+  "/edith/cyber/transport/message/history.h"
+  "/edith/cyber/transport/transmitter/hybrid_transmitter.h"
+  "/edith/cyber/transport/transmitter/intra_transmitter.h"
+  "/edith/cyber/transport/transmitter/rtps_transmitter.h"
+  "/edith/cyber/transport/transmitter/shm_transmitter.h"
+  "/edith/cyber/base/signal.h"
+  "/edith/cyber/base/thread_pool.h"
+  "/edith/cyber/transport/message/history_attributes.h"
+  "/edith/cyber/transport/transmitter/transmitter.h"
 )
 target_link_libraries(_component_timer_component _blocker_blocker_manager)
 target_link_libraries(_component_timer_component _timer_timer)

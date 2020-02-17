@@ -2,9 +2,9 @@
 add_library(_timer_timing_wheel SHARED
   "timing_wheel.cc"
   "timing_wheel.h"
-  "/apollo/cyber/timer/timer_bucket.h"
-  "/apollo/cyber/task/task.h"
-  "/apollo/cyber/timer/timer_task.h"
+  "/edith/cyber/timer/timer_bucket.h"
+  "/edith/cyber/task/task.h"
+  "/edith/cyber/timer/timer_task.h"
 )
 target_link_libraries(_timer_timing_wheel _time_time)
 target_link_libraries(_timer_timing_wheel _time_duration)

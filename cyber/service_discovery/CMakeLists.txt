@@ -2,9 +2,9 @@
 add_library(_service_discovery_multi_value_warehouse SHARED
   "container/multi_value_warehouse.cc"
   "container/multi_value_warehouse.h"
-  "/apollo/cyber/service_discovery/container/warehouse_base.h"
-  "/apollo/cyber/base/atomic_rw_lock.h"
-  "/apollo/cyber/base/rw_lock_guard.h"
+  "/edith/cyber/service_discovery/container/warehouse_base.h"
+  "/edith/cyber/base/atomic_rw_lock.h"
+  "/edith/cyber/base/rw_lock_guard.h"
 )
 target_link_libraries(_service_discovery_multi_value_warehouse _service_discovery_role)
 
@@ -20,9 +20,9 @@ target_include_directories(_service_discovery_multi_value_warehouse PUBLIC
 add_library(_service_discovery_role SHARED
   "role/role.cc"
   "role/role.h"
-  "/apollo/cyber/binary.h"
-  "/apollo/cyber/common/log.h"
-  "/apollo/cyber/common/types.h"
+  "/edith/cyber/binary.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/common/types.h"
 )
 target_link_libraries(_service_discovery_role _cyber_proto_cc_lib)
 target_link_libraries(_service_discovery_role glog)
@@ -39,8 +39,8 @@ target_include_directories(_service_discovery_role PUBLIC
 add_library(_service_discovery_subscriber_listener SHARED
   "communication/subscriber_listener.cc"
   "communication/subscriber_listener.h"
-  "/apollo/cyber/common/log.h"
-  "/apollo/cyber/binary.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/binary.h"
 )
 target_link_libraries(_service_discovery_subscriber_listener _transport_underlay_message)
 target_link_libraries(_service_discovery_subscriber_listener _transport_underlay_message_type)
@@ -76,9 +76,9 @@ target_include_directories(_service_discovery_service_manager PUBLIC
 add_library(_service_discovery_single_value_warehouse SHARED
   "container/single_value_warehouse.cc"
   "container/single_value_warehouse.h"
-  "/apollo/cyber/service_discovery/container/warehouse_base.h"
-  "/apollo/cyber/base/atomic_rw_lock.h"
-  "/apollo/cyber/base/rw_lock_guard.h"
+  "/edith/cyber/service_discovery/container/warehouse_base.h"
+  "/edith/cyber/base/atomic_rw_lock.h"
+  "/edith/cyber/base/rw_lock_guard.h"
 )
 target_link_libraries(_service_discovery_single_value_warehouse _service_discovery_role)
 
@@ -113,15 +113,15 @@ target_include_directories(_service_discovery_topology_manager PUBLIC
 add_library(_service_discovery_manager SHARED
   "specific_manager/manager.cc"
   "specific_manager/manager.h"
-  "/apollo/cyber/base/signal.h"
-  "/apollo/cyber/message/message_traits.h"
-  "/apollo/cyber/message/message_header.h"
-  "/apollo/cyber/message/protobuf_traits.h"
-  "/apollo/cyber/message/py_message_traits.h"
-  "/apollo/cyber/message/raw_message_traits.h"
-  "/apollo/cyber/base/macros.h"
-  "/apollo/cyber/message/py_message.h"
-  "/apollo/cyber/message/raw_message.h"
+  "/edith/cyber/base/signal.h"
+  "/edith/cyber/message/message_traits.h"
+  "/edith/cyber/message/message_header.h"
+  "/edith/cyber/message/protobuf_traits.h"
+  "/edith/cyber/message/py_message_traits.h"
+  "/edith/cyber/message/raw_message_traits.h"
+  "/edith/cyber/base/macros.h"
+  "/edith/cyber/message/py_message.h"
+  "/edith/cyber/message/raw_message.h"
 )
 target_link_libraries(_service_discovery_manager _service_discovery_subscriber_listener)
 target_link_libraries(_service_discovery_manager _state)
@@ -146,8 +146,8 @@ target_include_directories(_service_discovery_manager PUBLIC
 add_library(_service_discovery_participant_listener SHARED
   "communication/participant_listener.cc"
   "communication/participant_listener.h"
-  "/apollo/cyber/common/log.h"
-  "/apollo/cyber/binary.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/binary.h"
 )
 target_link_libraries(_service_discovery_participant_listener fastrtps fastcdr)
 target_link_libraries(_service_discovery_participant_listener glog)
@@ -164,8 +164,8 @@ target_include_directories(_service_discovery_participant_listener PUBLIC
 add_library(_service_discovery_graph SHARED
   "container/graph.cc"
   "container/graph.h"
-  "/apollo/cyber/base/atomic_rw_lock.h"
-  "/apollo/cyber/base/rw_lock_guard.h"
+  "/edith/cyber/base/atomic_rw_lock.h"
+  "/edith/cyber/base/rw_lock_guard.h"
 )
 
 set_target_properties(_service_discovery_graph PROPERTIES COMPILE_FLAGS ${EDITH_CXX_FLAGS})

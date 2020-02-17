@@ -22,8 +22,8 @@ add_library(_class_loader_class_loader SHARED
   "class_loader_register_macro.h"
   "utility/class_factory.h"
   "utility/class_loader_utility.h"
-  "/apollo/cyber/common/log.h"
-  "/apollo/cyber/binary.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/binary.h"
 )
 target_link_libraries(_class_loader_class_loader _init)
 target_link_libraries(_class_loader_class_loader -lPocoFoundation)

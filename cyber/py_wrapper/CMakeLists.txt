@@ -54,7 +54,7 @@ target_include_directories(_py_wrapper_py_timer PUBLIC
 add_library(_py_wrapper_py_record SHARED
   "py_record.cc"
   "py_record.h"
-  "/apollo/cyber/message/py_message.h"
+  "/edith/cyber/message/py_message.h"
 )
 target_include_directories(_py_wrapper_py_record SYSTEM PUBLIC ${PYTHON2_INCLUDE_DIR})
 target_link_libraries(_py_wrapper_py_record ${PYTHON2_LIBRARIES})
@@ -147,7 +147,7 @@ target_include_directories(_py_wrapper_py3_parameter PUBLIC
 add_library(_py_wrapper_py3_record SHARED
   "py_record.cc"
   "py_record.h"
-  "/apollo/cyber/message/py_message.h"
+  "/edith/cyber/message/py_message.h"
 )
 target_include_directories(_py_wrapper_py3_record SYSTEM PUBLIC ${PYTHON3_INCLUDE_DIR})
 target_link_libraries(_py_wrapper_py3_record ${PYTHON3_LIBRARIES})

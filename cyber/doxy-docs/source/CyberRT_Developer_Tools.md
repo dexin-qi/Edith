@@ -232,22 +232,22 @@ size:           28275479 Bytes (26.965598 MB)
 is_complete:    true
 message_number: 15379
 channel_number: 16
-channel_info:   /apollo/localization/pose                             2000 messages : apollo.localization.LocalizationEstimate
+channel_info:   /edith/localization/pose                             2000 messages : apollo.localization.LocalizationEstimate
                 /tf                                                   4000 messages : apollo.transform.TransformStampeds
-                /apollo/control                                       2000 messages : apollo.control.ControlCommand
-                /apollo/sensor/gnss/odometry                          2000 messages : apollo.localization.Gps
-                /apollo/canbus/chassis                                2000 messages : apollo.canbus.Chassis
-                /apollo/sensor/gnss/imu                               1999 messages : apollo.drivers.gnss.Imu
-                /apollo/sensor/gnss/rtk_obs                             41 messages : apollo.drivers.gnss.EpochObservation
-                /apollo/sensor/gnss/ins_stat                            20 messages : apollo.drivers.gnss.InsStat
-                /apollo/sensor/gnss/best_pose                           20 messages : apollo.drivers.gnss.GnssBestPose
-                /apollo/perception/obstacles                           400 messages : apollo.perception.PerceptionObstacles
-                /apollo/prediction                                     400 messages : apollo.prediction.PredictionObstacles
-                /apollo/sensor/conti_radar                             270 messages : apollo.drivers.ContiRadar
-                /apollo/planning                                       200 messages : apollo.planning.ADCTrajectory
-                /apollo/monitor/static_info                              1 messages : apollo.data.StaticInfo
-                /apollo/sensor/gnss/rtk_eph                             25 messages : apollo.drivers.gnss.GnssEphemeris
-                /apollo/monitor                                          3 messages : apollo.common.monitor.MonitorMessage
+                /edith/control                                       2000 messages : apollo.control.ControlCommand
+                /edith/sensor/gnss/odometry                          2000 messages : apollo.localization.Gps
+                /edith/canbus/chassis                                2000 messages : apollo.canbus.Chassis
+                /edith/sensor/gnss/imu                               1999 messages : apollo.drivers.gnss.Imu
+                /edith/sensor/gnss/rtk_obs                             41 messages : apollo.drivers.gnss.EpochObservation
+                /edith/sensor/gnss/ins_stat                            20 messages : apollo.drivers.gnss.InsStat
+                /edith/sensor/gnss/best_pose                           20 messages : apollo.drivers.gnss.GnssBestPose
+                /edith/perception/obstacles                           400 messages : apollo.perception.PerceptionObstacles
+                /edith/prediction                                     400 messages : apollo.prediction.PredictionObstacles
+                /edith/sensor/conti_radar                             270 messages : apollo.drivers.ContiRadar
+                /edith/planning                                       200 messages : apollo.planning.ADCTrajectory
+                /edith/monitor/static_info                              1 messages : apollo.data.StaticInfo
+                /edith/sensor/gnss/rtk_eph                             25 messages : apollo.drivers.gnss.GnssEphemeris
+                /edith/monitor                                          3 messages : apollo.common.monitor.MonitorMessage
 
 ```
 
@@ -275,33 +275,33 @@ play finished. file: 20180720202307.record
 `rosbag_to_record` is a tool which can convert rosbag to recorder file provided by Apollo Cyber RT. Now the tool support following channel:
 
 ```
-/apollo/perception/obstacles
-/apollo/planning
-/apollo/prediction
-/apollo/canbus/chassis
-/apollo/control
-/apollo/guardian
-/apollo/localization/pose
-/apollo/perception/traffic_light
-/apollo/drive_event
-/apollo/sensor/gnss/odometry
-/apollo/monitor/static_info
-/apollo/monitor
-/apollo/canbus/chassis_detail
-/apollo/control/pad
-/apollo/navigation
-/apollo/routing_request
-/apollo/routing_response
+/edith/perception/obstacles
+/edith/planning
+/edith/prediction
+/edith/canbus/chassis
+/edith/control
+/edith/guardian
+/edith/localization/pose
+/edith/perception/traffic_light
+/edith/drive_event
+/edith/sensor/gnss/odometry
+/edith/monitor/static_info
+/edith/monitor
+/edith/canbus/chassis_detail
+/edith/control/pad
+/edith/navigation
+/edith/routing_request
+/edith/routing_response
 /tf
 /tf_static
-/apollo/sensor/conti_radar
-/apollo/sensor/delphi_esr
-/apollo/sensor/gnss/best_pose
-/apollo/sensor/gnss/imu
-/apollo/sensor/gnss/ins_stat
-/apollo/sensor/gnss/rtk_eph
-/apollo/sensor/gnss/rtk_obs
-/apollo/sensor/velodyne64/compensator/PointCloud2
+/edith/sensor/conti_radar
+/edith/sensor/delphi_esr
+/edith/sensor/gnss/best_pose
+/edith/sensor/gnss/imu
+/edith/sensor/gnss/ins_stat
+/edith/sensor/gnss/rtk_eph
+/edith/sensor/gnss/rtk_obs
+/edith/sensor/velodyne64/compensator/PointCloud2
 ```
 
 ### Install and run
@@ -330,21 +330,21 @@ size:           28275479 Bytes (26.965598 MB)
 is_complete:    true
 message_number: 15379
 channel_number: 16
-channel_info:   /apollo/localization/pose                             2000 messages : apollo.localization.LocalizationEstimate
+channel_info:   /edith/localization/pose                             2000 messages : apollo.localization.LocalizationEstimate
                 /tf                                                   4000 messages : apollo.transform.TransformStampeds
-                /apollo/control                                       2000 messages : apollo.control.ControlCommand
-                /apollo/sensor/gnss/odometry                          2000 messages : apollo.localization.Gps
-                /apollo/canbus/chassis                                2000 messages : apollo.canbus.Chassis
-                /apollo/sensor/gnss/imu                               1999 messages : apollo.drivers.gnss.Imu
-                /apollo/sensor/gnss/rtk_obs                             41 messages : apollo.drivers.gnss.EpochObservation
-                /apollo/sensor/gnss/ins_stat                            20 messages : apollo.drivers.gnss.InsStat
-                /apollo/sensor/gnss/best_pose                           20 messages : apollo.drivers.gnss.GnssBestPose
-                /apollo/perception/obstacles                           400 messages : apollo.perception.PerceptionObstacles
-                /apollo/prediction                                     400 messages : apollo.prediction.PredictionObstacles
-                /apollo/sensor/conti_radar                             270 messages : apollo.drivers.ContiRadar
-                /apollo/planning                                       200 messages : apollo.planning.ADCTrajectory
-                /apollo/monitor/static_info                              1 messages : apollo.data.StaticInfo
-                /apollo/sensor/gnss/rtk_eph                             25 messages : apollo.drivers.gnss.GnssEphemeris
-                /apollo/monitor                                          3 messages : apollo.common.monitor.MonitorMessage
+                /edith/control                                       2000 messages : apollo.control.ControlCommand
+                /edith/sensor/gnss/odometry                          2000 messages : apollo.localization.Gps
+                /edith/canbus/chassis                                2000 messages : apollo.canbus.Chassis
+                /edith/sensor/gnss/imu                               1999 messages : apollo.drivers.gnss.Imu
+                /edith/sensor/gnss/rtk_obs                             41 messages : apollo.drivers.gnss.EpochObservation
+                /edith/sensor/gnss/ins_stat                            20 messages : apollo.drivers.gnss.InsStat
+                /edith/sensor/gnss/best_pose                           20 messages : apollo.drivers.gnss.GnssBestPose
+                /edith/perception/obstacles                           400 messages : apollo.perception.PerceptionObstacles
+                /edith/prediction                                     400 messages : apollo.prediction.PredictionObstacles
+                /edith/sensor/conti_radar                             270 messages : apollo.drivers.ContiRadar
+                /edith/planning                                       200 messages : apollo.planning.ADCTrajectory
+                /edith/monitor/static_info                              1 messages : apollo.data.StaticInfo
+                /edith/sensor/gnss/rtk_eph                             25 messages : apollo.drivers.gnss.GnssEphemeris
+                /edith/monitor                                          3 messages : apollo.common.monitor.MonitorMessage
 Conversion finished! Took 0.505623051 seconds in total.
 ```

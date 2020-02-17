@@ -2,8 +2,8 @@
 add_library(_transport_shm_conf SHARED
   "shm/shm_conf.cc"
   "shm/shm_conf.h"
-  "/apollo/cyber/common/log.h"
-  "/apollo/cyber/binary.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/binary.h"
 )
 target_link_libraries(_transport_shm_conf glog)
 
@@ -19,9 +19,9 @@ target_include_directories(_transport_shm_conf PUBLIC
 add_library(_transport_posix_segment SHARED
   "shm/posix_segment.cc"
   "shm/posix_segment.h"
-  "/apollo/cyber/common/log.h"
-  "/apollo/cyber/common/util.h"
-  "/apollo/cyber/binary.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/common/util.h"
+  "/edith/cyber/binary.h"
 )
 target_link_libraries(_transport_posix_segment _transport_segment)
 target_link_libraries(_transport_posix_segment -lrt)
@@ -39,14 +39,14 @@ target_include_directories(_transport_posix_segment PUBLIC
 add_library(_transport_shm_dispatcher SHARED
   "dispatcher/shm_dispatcher.cc"
   "dispatcher/shm_dispatcher.h"
-  "/apollo/cyber/message/message_traits.h"
-  "/apollo/cyber/message/message_header.h"
-  "/apollo/cyber/message/protobuf_traits.h"
-  "/apollo/cyber/message/py_message_traits.h"
-  "/apollo/cyber/message/raw_message_traits.h"
-  "/apollo/cyber/base/macros.h"
-  "/apollo/cyber/message/py_message.h"
-  "/apollo/cyber/message/raw_message.h"
+  "/edith/cyber/message/message_traits.h"
+  "/edith/cyber/message/message_header.h"
+  "/edith/cyber/message/protobuf_traits.h"
+  "/edith/cyber/message/py_message_traits.h"
+  "/edith/cyber/message/raw_message_traits.h"
+  "/edith/cyber/base/macros.h"
+  "/edith/cyber/message/py_message.h"
+  "/edith/cyber/message/raw_message.h"
 )
 target_link_libraries(_transport_shm_dispatcher _transport_dispatcher)
 target_link_libraries(_transport_shm_dispatcher _transport_notifier_factory)
@@ -85,10 +85,10 @@ target_include_directories(_transport_sub_listener PUBLIC
 add_library(_transport_block SHARED
   "shm/block.cc"
   "shm/block.h"
-  "/apollo/cyber/base/atomic_rw_lock.h"
-  "/apollo/cyber/common/log.h"
-  "/apollo/cyber/base/rw_lock_guard.h"
-  "/apollo/cyber/binary.h"
+  "/edith/cyber/base/atomic_rw_lock.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/base/rw_lock_guard.h"
+  "/edith/cyber/binary.h"
 )
 target_link_libraries(_transport_block glog)
 
@@ -104,8 +104,8 @@ target_include_directories(_transport_block PUBLIC
 add_library(_transport_attributes_filler SHARED
   "rtps/attributes_filler.cc"
   "rtps/attributes_filler.h"
-  "/apollo/cyber/common/log.h"
-  "/apollo/cyber/binary.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/binary.h"
 )
 target_link_libraries(_transport_attributes_filler _transport_qos_profile_conf)
 target_link_libraries(_transport_attributes_filler fastrtps fastcdr)
@@ -123,14 +123,14 @@ target_include_directories(_transport_attributes_filler PUBLIC
 add_library(_transport_rtps_dispatcher SHARED
   "dispatcher/rtps_dispatcher.cc"
   "dispatcher/rtps_dispatcher.h"
-  "/apollo/cyber/message/message_traits.h"
-  "/apollo/cyber/message/message_header.h"
-  "/apollo/cyber/message/protobuf_traits.h"
-  "/apollo/cyber/message/py_message_traits.h"
-  "/apollo/cyber/message/raw_message_traits.h"
-  "/apollo/cyber/base/macros.h"
-  "/apollo/cyber/message/py_message.h"
-  "/apollo/cyber/message/raw_message.h"
+  "/edith/cyber/message/message_traits.h"
+  "/edith/cyber/message/message_header.h"
+  "/edith/cyber/message/protobuf_traits.h"
+  "/edith/cyber/message/py_message_traits.h"
+  "/edith/cyber/message/raw_message_traits.h"
+  "/edith/cyber/base/macros.h"
+  "/edith/cyber/message/py_message.h"
+  "/edith/cyber/message/raw_message.h"
 )
 target_link_libraries(_transport_rtps_dispatcher _transport_attributes_filler)
 target_link_libraries(_transport_rtps_dispatcher _transport_dispatcher)
@@ -151,10 +151,10 @@ target_include_directories(_transport_rtps_dispatcher PUBLIC
 add_library(_transport_condition_notifier SHARED
   "shm/condition_notifier.cc"
   "shm/condition_notifier.h"
-  "/apollo/cyber/transport/shm/notifier_base.h"
-  "/apollo/cyber/common/log.h"
-  "/apollo/cyber/common/util.h"
-  "/apollo/cyber/binary.h"
+  "/edith/cyber/transport/shm/notifier_base.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/common/util.h"
+  "/edith/cyber/binary.h"
 )
 target_link_libraries(_transport_condition_notifier _common_global_data)
 target_link_libraries(_transport_condition_notifier _transport_readable_info)
@@ -172,7 +172,7 @@ target_include_directories(_transport_condition_notifier PUBLIC
 add_library(_transport_identity SHARED
   "common/identity.cc"
   "common/identity.h"
-  "/apollo/cyber/common/util.h"
+  "/edith/cyber/common/util.h"
 )
 target_link_libraries(_transport_identity -luuid)
 
@@ -188,8 +188,8 @@ target_include_directories(_transport_identity PUBLIC
 add_library(_transport_readable_info SHARED
   "shm/readable_info.cc"
   "shm/readable_info.h"
-  "/apollo/cyber/common/log.h"
-  "/apollo/cyber/binary.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/binary.h"
 )
 target_link_libraries(_transport_readable_info glog)
 
@@ -205,15 +205,15 @@ target_include_directories(_transport_readable_info PUBLIC
 add_library(_transport_dispatcher SHARED
   "dispatcher/dispatcher.cc"
   "dispatcher/dispatcher.h"
-  "/apollo/cyber/transport/message/listener_handler.h"
-  "/apollo/cyber/message/message_traits.h"
-  "/apollo/cyber/message/message_header.h"
-  "/apollo/cyber/message/protobuf_traits.h"
-  "/apollo/cyber/message/py_message_traits.h"
-  "/apollo/cyber/message/raw_message_traits.h"
-  "/apollo/cyber/base/macros.h"
-  "/apollo/cyber/message/py_message.h"
-  "/apollo/cyber/message/raw_message.h"
+  "/edith/cyber/transport/message/listener_handler.h"
+  "/edith/cyber/message/message_traits.h"
+  "/edith/cyber/message/message_header.h"
+  "/edith/cyber/message/protobuf_traits.h"
+  "/edith/cyber/message/py_message_traits.h"
+  "/edith/cyber/message/raw_message_traits.h"
+  "/edith/cyber/base/macros.h"
+  "/edith/cyber/message/py_message.h"
+  "/edith/cyber/message/raw_message.h"
 )
 target_link_libraries(_transport_dispatcher _transport_message_info)
 target_link_libraries(_transport_dispatcher _cyber_proto_cc_lib)
@@ -247,8 +247,8 @@ target_include_directories(_transport_underlay_message_type PUBLIC
 add_library(_transport_underlay_message SHARED
   "rtps/underlay_message.cc"
   "rtps/underlay_message.h"
-  "/apollo/cyber/common/log.h"
-  "/apollo/cyber/binary.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/binary.h"
 )
 target_link_libraries(_transport_underlay_message fastrtps fastcdr)
 target_link_libraries(_transport_underlay_message glog)
@@ -282,14 +282,14 @@ target_include_directories(_transport_participant PUBLIC
 add_library(_transport_intra_dispatcher SHARED
   "dispatcher/intra_dispatcher.cc"
   "dispatcher/intra_dispatcher.h"
-  "/apollo/cyber/message/message_traits.h"
-  "/apollo/cyber/message/message_header.h"
-  "/apollo/cyber/message/protobuf_traits.h"
-  "/apollo/cyber/message/py_message_traits.h"
-  "/apollo/cyber/message/raw_message_traits.h"
-  "/apollo/cyber/base/macros.h"
-  "/apollo/cyber/message/py_message.h"
-  "/apollo/cyber/message/raw_message.h"
+  "/edith/cyber/message/message_traits.h"
+  "/edith/cyber/message/message_header.h"
+  "/edith/cyber/message/protobuf_traits.h"
+  "/edith/cyber/message/py_message_traits.h"
+  "/edith/cyber/message/raw_message_traits.h"
+  "/edith/cyber/base/macros.h"
+  "/edith/cyber/message/py_message.h"
+  "/edith/cyber/message/raw_message.h"
 )
 target_link_libraries(_transport_intra_dispatcher _transport_dispatcher)
 target_link_libraries(_transport_intra_dispatcher _cyber_proto_cc_lib)
@@ -307,9 +307,9 @@ target_include_directories(_transport_intra_dispatcher PUBLIC
 add_library(_transport_segment SHARED
   "shm/segment.cc"
   "shm/segment.h"
-  "/apollo/cyber/common/log.h"
-  "/apollo/cyber/common/util.h"
-  "/apollo/cyber/binary.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/common/util.h"
+  "/edith/cyber/binary.h"
 )
 target_link_libraries(_transport_segment _transport_block)
 target_link_libraries(_transport_segment _transport_shm_conf)
@@ -328,16 +328,16 @@ target_include_directories(_transport_segment PUBLIC
 add_library(_transport_message_info SHARED
   "message/message_info.cc"
   "message/message_info.h"
-  "/apollo/cyber/base/signal.h"
-  "/apollo/cyber/message/raw_message.h"
-  "/apollo/cyber/common/environment.h"
-  "/apollo/cyber/common/log.h"
-  "/apollo/cyber/common/macros.h"
-  "/apollo/cyber/common/time_conversion.h"
-  "/apollo/cyber/common/types.h"
-  "/apollo/cyber/common/util.h"
-  "/apollo/cyber/binary.h"
-  "/apollo/cyber/base/macros.h"
+  "/edith/cyber/base/signal.h"
+  "/edith/cyber/message/raw_message.h"
+  "/edith/cyber/common/environment.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/common/macros.h"
+  "/edith/cyber/common/time_conversion.h"
+  "/edith/cyber/common/types.h"
+  "/edith/cyber/common/util.h"
+  "/edith/cyber/binary.h"
+  "/edith/cyber/base/macros.h"
 )
 target_link_libraries(_transport_message_info _transport_identity)
 target_link_libraries(_transport_message_info _common_file)
@@ -374,9 +374,9 @@ target_include_directories(_transport_endpoint PUBLIC
 add_library(_transport_notifier_factory SHARED
   "shm/notifier_factory.cc"
   "shm/notifier_factory.h"
-  "/apollo/cyber/transport/shm/notifier_base.h"
-  "/apollo/cyber/common/log.h"
-  "/apollo/cyber/binary.h"
+  "/edith/cyber/transport/shm/notifier_base.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/binary.h"
 )
 target_link_libraries(_transport_notifier_factory _transport_condition_notifier)
 target_link_libraries(_transport_notifier_factory _transport_multicast_notifier)
@@ -396,9 +396,9 @@ target_include_directories(_transport_notifier_factory PUBLIC
 add_library(_transport_xsi_segment SHARED
   "shm/xsi_segment.cc"
   "shm/xsi_segment.h"
-  "/apollo/cyber/common/log.h"
-  "/apollo/cyber/common/util.h"
-  "/apollo/cyber/binary.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/common/util.h"
+  "/edith/cyber/binary.h"
 )
 target_link_libraries(_transport_xsi_segment _transport_segment)
 target_link_libraries(_transport_xsi_segment glog)
@@ -415,11 +415,11 @@ target_include_directories(_transport_xsi_segment PUBLIC
 add_library(_transport_multicast_notifier SHARED
   "shm/multicast_notifier.cc"
   "shm/multicast_notifier.h"
-  "/apollo/cyber/transport/shm/notifier_base.h"
-  "/apollo/cyber/common/log.h"
-  "/apollo/cyber/common/macros.h"
-  "/apollo/cyber/binary.h"
-  "/apollo/cyber/base/macros.h"
+  "/edith/cyber/transport/shm/notifier_base.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/common/macros.h"
+  "/edith/cyber/binary.h"
+  "/edith/cyber/base/macros.h"
 )
 target_link_libraries(_transport_multicast_notifier _common_global_data)
 target_link_libraries(_transport_multicast_notifier _transport_readable_info)
@@ -437,8 +437,8 @@ target_include_directories(_transport_multicast_notifier PUBLIC
 add_library(_transport_segment_factory SHARED
   "shm/segment_factory.cc"
   "shm/segment_factory.h"
-  "/apollo/cyber/common/log.h"
-  "/apollo/cyber/binary.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/binary.h"
 )
 target_link_libraries(_transport_segment_factory _transport_posix_segment)
 target_link_libraries(_transport_segment_factory _transport_segment)
@@ -458,19 +458,19 @@ target_include_directories(_transport_segment_factory PUBLIC
 add_library(_transport_transport SHARED
   "transport.cc"
   "transport.h"
-  "/apollo/cyber/transport/message/history.h"
-  "/apollo/cyber/transport/receiver/hybrid_receiver.h"
-  "/apollo/cyber/transport/transmitter/hybrid_transmitter.h"
-  "/apollo/cyber/transport/receiver/intra_receiver.h"
-  "/apollo/cyber/transport/transmitter/intra_transmitter.h"
-  "/apollo/cyber/transport/receiver/rtps_receiver.h"
-  "/apollo/cyber/transport/transmitter/rtps_transmitter.h"
-  "/apollo/cyber/transport/receiver/shm_receiver.h"
-  "/apollo/cyber/transport/transmitter/shm_transmitter.h"
-  "/apollo/cyber/task/task.h"
-  "/apollo/cyber/transport/message/history_attributes.h"
-  "/apollo/cyber/transport/receiver/receiver.h"
-  "/apollo/cyber/transport/transmitter/transmitter.h"
+  "/edith/cyber/transport/message/history.h"
+  "/edith/cyber/transport/receiver/hybrid_receiver.h"
+  "/edith/cyber/transport/transmitter/hybrid_transmitter.h"
+  "/edith/cyber/transport/receiver/intra_receiver.h"
+  "/edith/cyber/transport/transmitter/intra_transmitter.h"
+  "/edith/cyber/transport/receiver/rtps_receiver.h"
+  "/edith/cyber/transport/transmitter/rtps_transmitter.h"
+  "/edith/cyber/transport/receiver/shm_receiver.h"
+  "/edith/cyber/transport/transmitter/shm_transmitter.h"
+  "/edith/cyber/task/task.h"
+  "/edith/cyber/transport/message/history_attributes.h"
+  "/edith/cyber/transport/receiver/receiver.h"
+  "/edith/cyber/transport/transmitter/transmitter.h"
 )
 target_link_libraries(_transport_transport _transport_attributes_filler)
 target_link_libraries(_transport_transport _transport_intra_dispatcher)
@@ -515,8 +515,8 @@ target_include_directories(_transport_state PUBLIC
 add_library(_transport_qos_profile_conf SHARED
   "qos/qos_profile_conf.cc"
   "qos/qos_profile_conf.h"
-  "/apollo/cyber/transport/message/history.h"
-  "/apollo/cyber/transport/message/history_attributes.h"
+  "/edith/cyber/transport/message/history.h"
+  "/edith/cyber/transport/message/history_attributes.h"
 )
 target_link_libraries(_transport_qos_profile_conf _cyber_proto_cc_lib)
 

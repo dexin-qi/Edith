@@ -2,9 +2,9 @@
 add_library(_parameter_parameter_server SHARED
   "parameter_server.cc"
   "parameter_server.h"
-  "/apollo/cyber/parameter/parameter_service_names.h"
-  "/apollo/cyber/service/service.h"
-  "/apollo/cyber/service/service_base.h"
+  "/edith/cyber/parameter/parameter_service_names.h"
+  "/edith/cyber/service/service.h"
+  "/edith/cyber/service/service_base.h"
 )
 target_link_libraries(_parameter_parameter_server _parameter_parameter)
 target_link_libraries(_parameter_parameter_server _node_node)
@@ -23,9 +23,9 @@ target_include_directories(_parameter_parameter_server PUBLIC
 add_library(_parameter_parameter_client SHARED
   "parameter_client.cc"
   "parameter_client.h"
-  "/apollo/cyber/parameter/parameter_service_names.h"
-  "/apollo/cyber/service/client.h"
-  "/apollo/cyber/service/client_base.h"
+  "/edith/cyber/parameter/parameter_service_names.h"
+  "/edith/cyber/service/client.h"
+  "/edith/cyber/service/client_base.h"
 )
 target_link_libraries(_parameter_parameter_client _parameter_parameter)
 target_link_libraries(_parameter_parameter_client _node_node)

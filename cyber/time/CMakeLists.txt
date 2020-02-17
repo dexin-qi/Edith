@@ -2,14 +2,14 @@
 add_library(_time_time SHARED
   "time.cc"
   "time.h"
-  "/apollo/cyber/common/environment.h"
-  "/apollo/cyber/common/log.h"
-  "/apollo/cyber/common/macros.h"
-  "/apollo/cyber/common/time_conversion.h"
-  "/apollo/cyber/common/types.h"
-  "/apollo/cyber/common/util.h"
-  "/apollo/cyber/binary.h"
-  "/apollo/cyber/base/macros.h"
+  "/edith/cyber/common/environment.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/common/macros.h"
+  "/edith/cyber/common/time_conversion.h"
+  "/edith/cyber/common/types.h"
+  "/edith/cyber/common/util.h"
+  "/edith/cyber/binary.h"
+  "/edith/cyber/base/macros.h"
 )
 target_link_libraries(_time_time _time_duration)
 target_link_libraries(_time_time _common_file)
@@ -28,14 +28,14 @@ target_include_directories(_time_time PUBLIC
 add_library(_time_rate SHARED
   "rate.cc"
   "rate.h"
-  "/apollo/cyber/common/environment.h"
-  "/apollo/cyber/common/log.h"
-  "/apollo/cyber/common/macros.h"
-  "/apollo/cyber/common/time_conversion.h"
-  "/apollo/cyber/common/types.h"
-  "/apollo/cyber/common/util.h"
-  "/apollo/cyber/binary.h"
-  "/apollo/cyber/base/macros.h"
+  "/edith/cyber/common/environment.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/common/macros.h"
+  "/edith/cyber/common/time_conversion.h"
+  "/edith/cyber/common/types.h"
+  "/edith/cyber/common/util.h"
+  "/edith/cyber/binary.h"
+  "/edith/cyber/base/macros.h"
 )
 target_link_libraries(_time_rate _time_duration)
 target_link_libraries(_time_rate _time_time)
@@ -55,14 +55,14 @@ target_include_directories(_time_rate PUBLIC
 add_library(_time_duration SHARED
   "duration.cc"
   "duration.h"
-  "/apollo/cyber/common/environment.h"
-  "/apollo/cyber/common/log.h"
-  "/apollo/cyber/common/macros.h"
-  "/apollo/cyber/common/time_conversion.h"
-  "/apollo/cyber/common/types.h"
-  "/apollo/cyber/common/util.h"
-  "/apollo/cyber/binary.h"
-  "/apollo/cyber/base/macros.h"
+  "/edith/cyber/common/environment.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/common/macros.h"
+  "/edith/cyber/common/time_conversion.h"
+  "/edith/cyber/common/types.h"
+  "/edith/cyber/common/util.h"
+  "/edith/cyber/binary.h"
+  "/edith/cyber/base/macros.h"
 )
 target_link_libraries(_time_duration _common_file)
 target_link_libraries(_time_duration _common_global_data)

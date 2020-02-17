@@ -7,7 +7,7 @@
 # log and coredump files
 /data/**
 
-# 
+# python proto interface
 /py_proto/**
 
 # temporary files

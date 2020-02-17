@@ -3,7 +3,7 @@
 ## Usage
 
 Make sure you have built Apollo successfully, which should also have added
-`/apollo/cyber/python` to the PYTHONPATH for you. Then in Python code:
+`/edith/cyber/python` to the PYTHONPATH for you. Then in Python code:
 
 ```python
 import sys

@@ -2,14 +2,14 @@
 add_library(_logger_async_logger SHARED
   "async_logger.cc"
   "async_logger.h"
-  "/apollo/cyber/base/macros.h"
-  "/apollo/cyber/common/environment.h"
-  "/apollo/cyber/common/log.h"
-  "/apollo/cyber/common/macros.h"
-  "/apollo/cyber/common/time_conversion.h"
-  "/apollo/cyber/common/types.h"
-  "/apollo/cyber/common/util.h"
-  "/apollo/cyber/binary.h"
+  "/edith/cyber/base/macros.h"
+  "/edith/cyber/common/environment.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/common/macros.h"
+  "/edith/cyber/common/time_conversion.h"
+  "/edith/cyber/common/types.h"
+  "/edith/cyber/common/util.h"
+  "/edith/cyber/binary.h"
 )
 target_link_libraries(_logger_async_logger _logger_log_file_object)
 target_link_libraries(_logger_async_logger _common_file)
@@ -43,14 +43,14 @@ target_include_directories(_logger_logger_util PUBLIC
 add_library(_logger_logger SHARED
   "logger.cc"
   "logger.h"
-  "/apollo/cyber/common/environment.h"
-  "/apollo/cyber/common/log.h"
-  "/apollo/cyber/common/macros.h"
-  "/apollo/cyber/common/time_conversion.h"
-  "/apollo/cyber/common/types.h"
-  "/apollo/cyber/common/util.h"
-  "/apollo/cyber/binary.h"
-  "/apollo/cyber/base/macros.h"
+  "/edith/cyber/common/environment.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/common/macros.h"
+  "/edith/cyber/common/time_conversion.h"
+  "/edith/cyber/common/types.h"
+  "/edith/cyber/common/util.h"
+  "/edith/cyber/binary.h"
+  "/edith/cyber/base/macros.h"
 )
 target_link_libraries(_logger_logger _logger_log_file_object)
 target_link_libraries(_logger_logger _common_file)
@@ -69,8 +69,8 @@ target_include_directories(_logger_logger PUBLIC
 add_library(_logger_log_file_object SHARED
   "log_file_object.cc"
   "log_file_object.h"
-  "/apollo/cyber/binary.h"
-  "/apollo/cyber/common/log.h"
+  "/edith/cyber/binary.h"
+  "/edith/cyber/common/log.h"
 )
 target_link_libraries(_logger_log_file_object _logger_logger_util)
 target_link_libraries(_logger_log_file_object glog)

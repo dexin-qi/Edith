@@ -11,13 +11,13 @@ In order to successfully create and launch a new component, there are four essen
 - Set up the configuration files
 - Launch the component
 
-The example below demonstrates how to create a simple component, then build, run and watch the final output on screen. If you would like to explore more about Apollo Cyber RT, you can find a couple of examples showing how to use different functionalities of the framework under directory `/apollo/cyber/examples/`.
+The example below demonstrates how to create a simple component, then build, run and watch the final output on screen. If you would like to explore more about Apollo Cyber RT, you can find a couple of examples showing how to use different functionalities of the framework under directory `/edith/cyber/examples/`.
 
 > **Note**: the example has to be run within apollo docker environment and it's compiled with Bazel.
 
 ## Set up the component file structure
 
-Please create the following files, assumed under the directory of `/apollo/cyber/examples/common_component_example/`:
+Please create the following files, assumed under the directory of `/edith/cyber/examples/common_component_example/`:
 
 - Header file: common_component_example.h
 - Source file: common_component_example.cc
@@ -124,16 +124,16 @@ To configure the DAG dependency file (common.dag), specify the following items a
 ```protobuf
 # Define all coms in DAG streaming.
 component_config {
-    component_library : "/apollo/bazel-bin/cyber/examples/common_component_example/libcommon_component_example.so"
+    component_library : "/edith/bazel-bin/cyber/examples/common_component_example/libcommon_component_example.so"
     components {
         class_name : "CommonComponentSample"
         config {
             name : "common"
             readers {
-                channel: "/apollo/prediction"
+                channel: "/edith/prediction"
             }
             readers {
-                channel: "/apollo/test"
+                channel: "/edith/test"
             }
         }
     }
@@ -152,7 +152,7 @@ To configure the launch (common.launch) file, specify the following items:
 <cyber>
     <component>
         <name>common</name>
-        <dag_conf>/apollo/cyber/examples/common_component_example/common.dag</dag_conf>
+        <dag_conf>/edith/cyber/examples/common_component_example/common.dag</dag_conf>
         <process_name>common</process_name>
     </component>
 </cyber>
@@ -163,7 +163,7 @@ To configure the launch (common.launch) file, specify the following items:
 Build the component by running the command below:
 
 ```bash
-bash /apollo/apollo.sh build
+bash /edith/apollo.sh build
 ```
 
 Note: make sure the example component builds fine
@@ -171,7 +171,7 @@ Note: make sure the example component builds fine
 Then configure the environment:
 
 ```bash
-cd /apollo/cyber
+cd /edith/cyber
 source setup.bash
 ```
 
@@ -180,11 +180,11 @@ There are two ways to launch the component:
 - Launch with the launch file (recommended)
 
 ```bash
-cyber_launch start /apollo/cyber/examples/common_component_example/common.launch
+cyber_launch start /edith/cyber/examples/common_component_example/common.launch
 ```
 
 - Launch with the DAG file
 
 ```bash
-mainboard -d /apollo/cyber/examples/common_component_example/common.dag
+mainboard -d /edith/cyber/examples/common_component_example/common.dag
 ```
