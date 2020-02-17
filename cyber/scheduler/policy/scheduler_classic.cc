@@ -127,6 +127,7 @@ bool SchedulerClassic::DispatchTask(const std::shared_ptr<CRoutine>& cr) {
   {
     WriteLockGuard<AtomicRWLock> lk(id_cr_lock_);
     if (id_cr_.find(cr->id()) != id_cr_.end()) {
+      // AINFO << "Scheduler dispatch fail, task id not found";
       return false;
     }
     id_cr_[cr->id()] = cr;
@@ -157,6 +158,7 @@ bool SchedulerClassic::DispatchTask(const std::shared_ptr<CRoutine>& cr) {
   }
 
   ClassicContext::Notify(cr->group_name());
+  // AINFO << "Scheduler dispatch success";
   return true;
 }
 

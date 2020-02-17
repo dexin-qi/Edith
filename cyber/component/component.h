@@ -38,7 +38,7 @@ using apollo::cyber::common::GlobalData;
 using apollo::cyber::proto::RoleAttributes;
 
 /**
- * @brief
+ * @brief .
  * The Component can process up to four channels of messages. The message type
  * is specified when the component is created. The Component is inherited from
  * ComponentBase. Your component can inherit from Component, and implement
@@ -53,8 +53,8 @@ using apollo::cyber::proto::RoleAttributes;
  * be called. They are called by the CyberRT Frame.
  *
  */
-template <typename M0 = NullType, typename M1 = NullType, typename M2 = NullType,
-          typename M3 = NullType>
+template <typename M0 = NullType, typename M1 = NullType,
+          typename M2 = NullType, typename M3 = NullType>
 class Component : public ComponentBase {
  public:
   Component() {}
@@ -69,7 +69,8 @@ class Component : public ComponentBase {
    */
   bool Initialize(const ComponentConfig& config) override;
   bool Process(const std::shared_ptr<M0>& msg0, const std::shared_ptr<M1>& msg1,
-               const std::shared_ptr<M2>& msg2, const std::shared_ptr<M3>& msg3);
+               const std::shared_ptr<M2>& msg2,
+               const std::shared_ptr<M3>& msg3);
 
  private:
   /**
@@ -82,8 +83,10 @@ class Component : public ComponentBase {
    *
    * @return returns true if successful, otherwise returns false
    */
-  virtual bool Proc(const std::shared_ptr<M0>& msg0, const std::shared_ptr<M1>& msg1,
-                    const std::shared_ptr<M2>& msg2, const std::shared_ptr<M3>& msg3) = 0;
+  virtual bool Proc(const std::shared_ptr<M0>& msg0,
+                    const std::shared_ptr<M1>& msg1,
+                    const std::shared_ptr<M2>& msg2,
+                    const std::shared_ptr<M3>& msg3) = 0;
 };
 
 template <>
@@ -112,10 +115,12 @@ class Component<M0, M1, NullType, NullType> : public ComponentBase {
   Component() {}
   ~Component() override {}
   bool Initialize(const ComponentConfig& config) override;
-  bool Process(const std::shared_ptr<M0>& msg0, const std::shared_ptr<M1>& msg1);
+  bool Process(const std::shared_ptr<M0>& msg0,
+               const std::shared_ptr<M1>& msg1);
 
  private:
-  virtual bool Proc(const std::shared_ptr<M0>& msg, const std::shared_ptr<M1>& msg1) = 0;
+  virtual bool Proc(const std::shared_ptr<M0>& msg,
+                    const std::shared_ptr<M1>& msg1) = 0;
 };
 
 template <typename M0, typename M1, typename M2>
@@ -128,19 +133,22 @@ class Component<M0, M1, M2, NullType> : public ComponentBase {
                const std::shared_ptr<M2>& msg2);
 
  private:
-  virtual bool Proc(const std::shared_ptr<M0>& msg, const std::shared_ptr<M1>& msg1,
+  virtual bool Proc(const std::shared_ptr<M0>& msg,
+                    const std::shared_ptr<M1>& msg1,
                     const std::shared_ptr<M2>& msg2) = 0;
 };
 
 template <typename M0>
-bool Component<M0, NullType, NullType, NullType>::Process(const std::shared_ptr<M0>& msg) {
+bool Component<M0, NullType, NullType, NullType>::Process(
+    const std::shared_ptr<M0>& msg) {
   if (is_shutdown_.load()) {
     return true;
   }
   return Proc(msg);
 }
 
-inline bool Component<NullType, NullType, NullType>::Initialize(const ComponentConfig& config) {
+inline bool Component<NullType, NullType, NullType>::Initialize(
+    const ComponentConfig& config) {
   node_.reset(new Node(config.name()));
   LoadConfigFiles(config);
   if (!Init()) {
@@ -151,7 +159,8 @@ inline bool Component<NullType, NullType, NullType>::Initialize(const ComponentC
 }
 
 template <typename M0>
-bool Component<M0, NullType, NullType, NullType>::Initialize(const ComponentConfig& config) {
+bool Component<M0, NullType, NullType, NullType>::Initialize(
+    const ComponentConfig& config) {
   node_.reset(new Node(config.name()));
   LoadConfigFiles(config);
 
@@ -172,7 +181,8 @@ bool Component<M0, NullType, NullType, NullType>::Initialize(const ComponentConf
   reader_cfg.qos_profile.CopyFrom(config.readers(0).qos_profile());
   reader_cfg.pending_queue_size = config.readers(0).pending_queue_size();
 
-  std::weak_ptr<Component<M0>> self = std::dynamic_pointer_cast<Component<M0>>(shared_from_this());
+  std::weak_ptr<Component<M0>> self =
+      std::dynamic_pointer_cast<Component<M0>>(shared_from_this());
   auto func = [self](const std::shared_ptr<M0>& msg) {
     auto ptr = self.lock();
     if (ptr) {
@@ -200,16 +210,18 @@ bool Component<M0, NullType, NullType, NullType>::Initialize(const ComponentConf
     return true;
   }
 
-  data::VisitorConfig conf = {readers_[0]->ChannelId(), readers_[0]->PendingQueueSize()};
+  data::VisitorConfig conf = {readers_[0]->ChannelId(),
+                              readers_[0]->PendingQueueSize()};
   auto dv = std::make_shared<data::DataVisitor<M0>>(conf);
-  croutine::RoutineFactory factory = croutine::CreateRoutineFactory<M0>(func, dv);
+  croutine::RoutineFactory factory =
+      croutine::CreateRoutineFactory<M0>(func, dv);
   auto sched = scheduler::Instance();
   return sched->CreateTask(factory, node_->Name());
 }
 
 template <typename M0, typename M1>
-bool Component<M0, M1, NullType, NullType>::Process(const std::shared_ptr<M0>& msg0,
-                                                    const std::shared_ptr<M1>& msg1) {
+bool Component<M0, M1, NullType, NullType>::Process(
+    const std::shared_ptr<M0>& msg0, const std::shared_ptr<M1>& msg1) {
   if (is_shutdown_.load()) {
     return true;
   }
@@ -217,7 +229,8 @@ bool Component<M0, M1, NullType, NullType>::Process(const std::shared_ptr<M0>& m
 }
 
 template <typename M0, typename M1>
-bool Component<M0, M1, NullType, NullType>::Initialize(const ComponentConfig& config) {
+bool Component<M0, M1, NullType, NullType>::Initialize(
+    const ComponentConfig& config) {
   node_.reset(new Node(config.name()));
   LoadConfigFiles(config);
 
@@ -251,8 +264,8 @@ bool Component<M0, M1, NullType, NullType>::Initialize(const ComponentConfig& co
     std::weak_ptr<Component<M0, M1>> self =
         std::dynamic_pointer_cast<Component<M0, M1>>(shared_from_this());
 
-    auto blocker1 =
-        blocker::BlockerManager::Instance()->GetBlocker<M1>(config.readers(1).channel());
+    auto blocker1 = blocker::BlockerManager::Instance()->GetBlocker<M1>(
+        config.readers(1).channel());
 
     auto func = [self, blocker1](const std::shared_ptr<M0>& msg0) {
       auto ptr = self.lock();
@@ -282,7 +295,8 @@ bool Component<M0, M1, NullType, NullType>::Initialize(const ComponentConfig& co
   auto sched = scheduler::Instance();
   std::weak_ptr<Component<M0, M1>> self =
       std::dynamic_pointer_cast<Component<M0, M1>>(shared_from_this());
-  auto func = [self](const std::shared_ptr<M0>& msg0, const std::shared_ptr<M1>& msg1) {
+  auto func = [self](const std::shared_ptr<M0>& msg0,
+                     const std::shared_ptr<M1>& msg1) {
     auto ptr = self.lock();
     if (ptr) {
       ptr->Process(msg0, msg1);
@@ -296,7 +310,8 @@ bool Component<M0, M1, NullType, NullType>::Initialize(const ComponentConfig& co
     config_list.emplace_back(reader->ChannelId(), reader->PendingQueueSize());
   }
   auto dv = std::make_shared<data::DataVisitor<M0, M1>>(config_list);
-  croutine::RoutineFactory factory = croutine::CreateRoutineFactory<M0, M1>(func, dv);
+  croutine::RoutineFactory factory =
+      croutine::CreateRoutineFactory<M0, M1>(func, dv);
   return sched->CreateTask(factory, node_->Name());
 }
 
@@ -311,7 +326,8 @@ bool Component<M0, M1, M2, NullType>::Process(const std::shared_ptr<M0>& msg0,
 }
 
 template <typename M0, typename M1, typename M2>
-bool Component<M0, M1, M2, NullType>::Initialize(const ComponentConfig& config) {
+bool Component<M0, M1, M2, NullType>::Initialize(
+    const ComponentConfig& config) {
   node_.reset(new Node(config.name()));
   LoadConfigFiles(config);
 
@@ -348,12 +364,13 @@ bool Component<M0, M1, M2, NullType>::Initialize(const ComponentConfig& config) 
     reader0 = node_->template CreateReader<M0>(reader_cfg);
   } else {
     std::weak_ptr<Component<M0, M1, M2, NullType>> self =
-        std::dynamic_pointer_cast<Component<M0, M1, M2, NullType>>(shared_from_this());
+        std::dynamic_pointer_cast<Component<M0, M1, M2, NullType>>(
+            shared_from_this());
 
-    auto blocker1 =
-        blocker::BlockerManager::Instance()->GetBlocker<M1>(config.readers(1).channel());
-    auto blocker2 =
-        blocker::BlockerManager::Instance()->GetBlocker<M2>(config.readers(2).channel());
+    auto blocker1 = blocker::BlockerManager::Instance()->GetBlocker<M1>(
+        config.readers(1).channel());
+    auto blocker2 = blocker::BlockerManager::Instance()->GetBlocker<M2>(
+        config.readers(2).channel());
 
     auto func = [self, blocker1, blocker2](const std::shared_ptr<M0>& msg0) {
       auto ptr = self.lock();
@@ -385,8 +402,10 @@ bool Component<M0, M1, M2, NullType>::Initialize(const ComponentConfig& config) 
 
   auto sched = scheduler::Instance();
   std::weak_ptr<Component<M0, M1, M2, NullType>> self =
-      std::dynamic_pointer_cast<Component<M0, M1, M2, NullType>>(shared_from_this());
-  auto func = [self](const std::shared_ptr<M0>& msg0, const std::shared_ptr<M1>& msg1,
+      std::dynamic_pointer_cast<Component<M0, M1, M2, NullType>>(
+          shared_from_this());
+  auto func = [self](const std::shared_ptr<M0>& msg0,
+                     const std::shared_ptr<M1>& msg1,
                      const std::shared_ptr<M2>& msg2) {
     auto ptr = self.lock();
     if (ptr) {
@@ -401,7 +420,8 @@ bool Component<M0, M1, M2, NullType>::Initialize(const ComponentConfig& config) 
     config_list.emplace_back(reader->ChannelId(), reader->PendingQueueSize());
   }
   auto dv = std::make_shared<data::DataVisitor<M0, M1, M2>>(config_list);
-  croutine::RoutineFactory factory = croutine::CreateRoutineFactory<M0, M1, M2>(func, dv);
+  croutine::RoutineFactory factory =
+      croutine::CreateRoutineFactory<M0, M1, M2>(func, dv);
   return sched->CreateTask(factory, node_->Name());
 }
 
@@ -461,16 +481,18 @@ bool Component<M0, M1, M2, M3>::Initialize(const ComponentConfig& config) {
     reader0 = node_->template CreateReader<M0>(reader_cfg);
   } else {
     std::weak_ptr<Component<M0, M1, M2, M3>> self =
-        std::dynamic_pointer_cast<Component<M0, M1, M2, M3>>(shared_from_this());
+        std::dynamic_pointer_cast<Component<M0, M1, M2, M3>>(
+            shared_from_this());
 
-    auto blocker1 =
-        blocker::BlockerManager::Instance()->GetBlocker<M1>(config.readers(1).channel());
-    auto blocker2 =
-        blocker::BlockerManager::Instance()->GetBlocker<M2>(config.readers(2).channel());
-    auto blocker3 =
-        blocker::BlockerManager::Instance()->GetBlocker<M3>(config.readers(3).channel());
+    auto blocker1 = blocker::BlockerManager::Instance()->GetBlocker<M1>(
+        config.readers(1).channel());
+    auto blocker2 = blocker::BlockerManager::Instance()->GetBlocker<M2>(
+        config.readers(2).channel());
+    auto blocker3 = blocker::BlockerManager::Instance()->GetBlocker<M3>(
+        config.readers(3).channel());
 
-    auto func = [self, blocker1, blocker2, blocker3](const std::shared_ptr<M0>& msg0) {
+    auto func = [self, blocker1, blocker2,
+                 blocker3](const std::shared_ptr<M0>& msg0) {
       auto ptr = self.lock();
       if (ptr) {
         if (!blocker1->IsPublishedEmpty() && !blocker2->IsPublishedEmpty() &&
@@ -488,7 +510,8 @@ bool Component<M0, M1, M2, M3>::Initialize(const ComponentConfig& config) {
     reader0 = node_->template CreateReader<M0>(reader_cfg, func);
   }
 
-  if (reader0 == nullptr || reader1 == nullptr || reader2 == nullptr || reader3 == nullptr) {
+  if (reader0 == nullptr || reader1 == nullptr || reader2 == nullptr ||
+      reader3 == nullptr) {
     AERROR << "Component create reader failed." << std::endl;
     return false;
   }
@@ -504,22 +527,24 @@ bool Component<M0, M1, M2, M3>::Initialize(const ComponentConfig& config) {
   auto sched = scheduler::Instance();
   std::weak_ptr<Component<M0, M1, M2, M3>> self =
       std::dynamic_pointer_cast<Component<M0, M1, M2, M3>>(shared_from_this());
-  auto func = [self](const std::shared_ptr<M0>& msg0, const std::shared_ptr<M1>& msg1,
-                     const std::shared_ptr<M2>& msg2, const std::shared_ptr<M3>& msg3) {
-    auto ptr = self.lock();
-    if (ptr) {
-      ptr->Process(msg0, msg1, msg2, msg3);
-    } else {
-      AERROR << "Component object has been destroyed." << std::endl;
-    }
-  };
+  auto func =
+      [self](const std::shared_ptr<M0>& msg0, const std::shared_ptr<M1>& msg1,
+             const std::shared_ptr<M2>& msg2, const std::shared_ptr<M3>& msg3) {
+        auto ptr = self.lock();
+        if (ptr) {
+          ptr->Process(msg0, msg1, msg2, msg3);
+        } else {
+          AERROR << "Component object has been destroyed." << std::endl;
+        }
+      };
 
   std::vector<data::VisitorConfig> config_list;
   for (auto& reader : readers_) {
     config_list.emplace_back(reader->ChannelId(), reader->PendingQueueSize());
   }
   auto dv = std::make_shared<data::DataVisitor<M0, M1, M2, M3>>(config_list);
-  croutine::RoutineFactory factory = croutine::CreateRoutineFactory<M0, M1, M2, M3>(func, dv);
+  croutine::RoutineFactory factory =
+      croutine::CreateRoutineFactory<M0, M1, M2, M3>(func, dv);
   return sched->CreateTask(factory, node_->Name());
 }
 

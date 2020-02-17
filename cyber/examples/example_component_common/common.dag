@@ -1,16 +1,16 @@
 # Define all coms in DAG streaming.
-    module_config {
-    module_library : "/Edith/build/cyber/examples/example_component_common/libcommon_component_example.so"
-    components {
-        class_name : "CommonComponentSample"
-        config {
-            name : "common"
-            readers {
-                channel: "/edith/prediction"
-            }
-            readers {
-                channel: "/edith/test"
-            }
+module_config {
+module_library : "/Edith/build/cyber/examples/example_component_common/libcommon_component_example.so"
+components {
+    class_name : "CommonComponentSample"
+    config {
+        name : "common"
+        readers {
+            channel: "/edith/prediction"
         }
-      }
+        readers {
+            channel: "/edith/test"
+        }
     }
+  }
+}

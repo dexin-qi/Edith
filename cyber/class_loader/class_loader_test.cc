@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *****************************************************************************/
+#include "cyber/class_loader/class_loader.h"
 
 #include <iostream>
 #include <string>
@@ -20,14 +21,15 @@
 #include <vector>
 
 #include "gtest/gtest.h"
-#include "cyber/class_loader/class_loader.h"
-#include "cyber/class_loader/class_loader_manager.h"
 
+#include "cyber/class_loader/class_loader_manager.h"
 #include "cyber/examples/example_class_loader/base.h"
 #include "cyber/cyber.h"
 
-const char LIBRARY_1[] = "/Edith/build/cyber/examples/libclass_plugin1.so";
-const char LIBRARY_2[] = "/Edith/build/cyber/examples/libclass_plugin2.so";
+const char LIBRARY_1[] =
+    "/Edith/build/cyber/examples/example_class_loader/libplugin1.so";
+const char LIBRARY_2[] =
+    "/Edith/build/cyber/examples/example_class_loader/libplugin2.so";
 using apollo::cyber::class_loader::ClassLoader;
 using apollo::cyber::class_loader::ClassLoaderManager;
 using apollo::cyber::class_loader::utility::IsLibraryLoadedByAnybody;

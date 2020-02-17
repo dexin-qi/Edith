@@ -275,6 +275,7 @@ void UnloadLibrary(const std::string& library_path, ClassLoader* loader) {
     } catch (const Poco::RuntimeException& e) {
       AERROR << "library unLoad error: Poco::RuntimeException: " << e.message();
     }
+    AINFO << "Util::Unload";
   }
 }
 

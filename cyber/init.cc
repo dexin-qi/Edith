@@ -105,6 +105,7 @@ bool Init(const char* binary_name) {
     AINFO << "Register exit handle succ.";
     g_atexit_registered = true;
   }
+
   SetState(STATE_INITIALIZED);
   return true;
 }
@@ -114,13 +115,16 @@ void Clear() {
   if (GetState() == STATE_SHUTDOWN || GetState() == STATE_UNINITIALIZED) {
     return;
   }
+  std::cout << "Clear begin";
   SysMo::CleanUp();
   TaskManager::CleanUp();
   TimingWheel::CleanUp();
   scheduler::CleanUp();
   service_discovery::TopologyManager::CleanUp();
   transport::Transport::CleanUp();
+  std::cout << "Clear over";
   StopLogger();
+  std::cout << "Logger stoped";
   SetState(STATE_SHUTDOWN);
 }
 

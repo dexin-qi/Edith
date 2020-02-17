@@ -142,7 +142,7 @@ macro(dustin_initialize_edith_project)
     set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules)
   endif()
 
-  dustin_add_flag(EDITH_CXX_FLAGS "-pthread -std=c++11 -fPIC")
+  dustin_add_flag(EDITH_CXX_FLAGS "-pthread -std=c++14 -fPIC")
 
   dustin_add_flag(EDITH_CXX_FLAGS "-Wall")
   dustin_add_flag(EDITH_CXX_FLAGS "-Wpedantic")

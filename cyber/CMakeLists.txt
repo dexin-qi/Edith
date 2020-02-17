@@ -67,18 +67,15 @@ target_link_libraries(edith_cyber ${Boost_LIBRARIES})
 
 target_include_directories(edith_cyber SYSTEM PUBLIC
   ${PROTOBUF_INCLUDE_DIR})
-target_link_libraries(edith_cyber ${PROTOBUF_LIBRARY})
+target_link_libraries(edith_cyber ${glog})
 
-target_link_libraries(edith_cyber standalone_absl)
+# target_link_libraries(edith_cyber standalone_absl)
 target_link_libraries(edith_cyber fastcdr fastrtps)
 target_link_libraries(edith_cyber -latomic)
 target_link_libraries(edith_cyber -lncurses)
 target_link_libraries(edith_cyber -lrt)
 target_link_libraries(edith_cyber -luuid)
-# target_link_libraries(edith_cyber -lPocoFoundation)
-target_include_directories(edith_cyber SYSTEM PUBLIC 
-  ${Poco_INCLUDE_DIRS})
-target_link_libraries(edith_cyber Poco::Foundation)
+target_link_libraries(edith_cyber -lPocoFoundation)
 
 target_link_libraries(edith_cyber glog)
 target_link_libraries(edith_cyber gflags)
@@ -112,6 +109,7 @@ target_include_directories(edith_cyber PUBLIC
 add_subdirectory(tools)
 add_subdirectory(py_wrapper)
 add_subdirectory(examples)
+add_subdirectory(third_party/tf2)
 
 file(GLOB_RECURSE ALL_MAINBOARD_SRCS "mainboard/*.cc")
 file(GLOB_RECURSE ALL_MAINBOARD_HRDS "mainboard/*.h")
@@ -119,12 +117,13 @@ file(GLOB_RECURSE ALL_MAINBOARD_HRDS "mainboard/*.h")
 set(ALL_MAINBOARD_FILES)
 list(APPEND ALL_MAINBOARD_FILES ${ALL_MAINBOARD_SRCS})
 list(APPEND ALL_MAINBOARD_FILES ${ALL_MAINBOARD_HRDS})
+list(APPEND ALL_MAINBOARD_FILES ${ALL_LIBRARY_HDRS})
 
 edith_binary(mainboard
   SRCS
     ${ALL_MAINBOARD_FILES}
   LIBS
-    edith_cyber
+    "edith_cyber;tf2"
 )
 
 target_include_directories(mainboard PUBLIC

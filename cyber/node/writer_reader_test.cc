@@ -267,7 +267,7 @@ TEST(WriterReaderTest, user_defined_message) {
   EXPECT_FALSE(message::HasType<Message>::value);
 
   auto node = CreateNode("node");
-  ASSERT_TRUE(node != NULL);
+  ASSERT_TRUE(node != nullptr);
 
   auto writer = node->CreateWriter<Message>(attr);
   auto reader = node->CreateReader<Message>(attr);

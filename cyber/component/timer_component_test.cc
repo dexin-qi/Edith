@@ -30,8 +30,8 @@ static bool ret_init = true;
 class Component_Timer : public TimerComponent {
  public:
   Component_Timer() {}
-  bool Init() { AINFO << "Init!"; return ret_init; }
-  bool Proc() { AINFO << "Proc Running!";return ret_proc; }
+  bool Init() { return ret_init; }
+  bool Proc() { return ret_proc; }
 };
 
 TEST(TimerComponent, timertest) {
@@ -45,7 +45,6 @@ TEST(TimerComponent, timertest) {
   std::shared_ptr<Component_Timer> com = std::make_shared<Component_Timer>();
   EXPECT_TRUE(com->Initialize(compcfg));
   EXPECT_TRUE(com->Process());
-  sleep(1);
 }
 
 TEST(TimerComponentFalse, timerfail) {
@@ -59,7 +58,6 @@ TEST(TimerComponentFalse, timerfail) {
   std::shared_ptr<Component_Timer> com = std::make_shared<Component_Timer>();
   EXPECT_FALSE(com->Initialize(compcfg));
   EXPECT_FALSE(com->Process());
-  sleep(1);
 }
 }  // namespace cyber
 }  // namespace apollo

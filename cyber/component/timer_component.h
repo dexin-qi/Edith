@@ -27,7 +27,8 @@ namespace cyber {
 class Timer;
 
 /**
- * @brief TimerComponent is a timer component. Your component can inherit from
+ * @brief .
+ * TimerComponent is a timer component. Your component can inherit from
  * Component, and implement Init() & Proc(), They are called by the CyberRT
  * frame.
  */

@@ -23,7 +23,6 @@
 #include "gtest/gtest.h"
 
 #include "cyber/proto/unit_test.pb.h"
-#include "cyber/common/environment.h"
 
 namespace apollo {
 namespace cyber {
@@ -116,12 +115,12 @@ TEST(FileTest, Glob) {
   EXPECT_TRUE(Glob("/path/impossible/*").empty());
   // Match one.
   EXPECT_THAT(Glob("/Edith"), testing::ElementsAre(std::string("/Edith")));
-  EXPECT_THAT(Glob("/Edi?h"), testing::ElementsAre(std::string("/Edith")));
+  EXPECT_THAT(Glob("/Ed?th"), testing::ElementsAre(std::string("/Edith")));
   // Match multiple.
   EXPECT_THAT(
       Glob("/Edi?h/cyber/com*"),
       testing::AllOf(
-          testing::Contains(std::string("/Edith/cyebr/common")),
+          testing::Contains(std::string("/Edith/cyber/common")),
           testing::Contains(std::string("/Edith/cyber/component"))));
 }
 

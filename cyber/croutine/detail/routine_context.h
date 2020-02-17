@@ -25,7 +25,7 @@
 
 extern "C" {
 extern void ctx_swap(void**, void**) asm("ctx_swap");
-}
+};
 
 namespace apollo {
 namespace cyber {

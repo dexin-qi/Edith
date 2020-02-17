@@ -70,7 +70,7 @@ int ClassLoaderManager::UnloadLibrary(const std::string& library_path) {
       libpath_loader_map_[library_path] = nullptr;
       delete class_loader;
     }
-  }
+  } 
   return num_remain_unload;
 }
 
@@ -80,6 +80,7 @@ void ClassLoaderManager::UnloadAllLibrary() {
     UnloadLibrary(lib);
   }
 }
+
 }  // namespace class_loader
 }  // namespace cyber
 }  // namespace apollo
