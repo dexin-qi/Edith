@@ -130,6 +130,9 @@ function local_volumes() {
                                 -v /usr/src:/usr/src \
                                 -v /lib/modules:/lib/modules"
             ;;
+        Darwin)
+            chmod -R a+wr ~/.cache/bazel
+            ;;
     esac
     echo "${volumes}"
 }

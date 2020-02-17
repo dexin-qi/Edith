@@ -22,6 +22,8 @@ CMD=""
 PROJECT_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../.." && pwd )"
 DOCKER_NAME="edith_cyber_${USER}"
 
+source ${PROJECT_ROOT}/scripts/edith_base.sh CYBER_ONLY
+
 xhost +local:root 1>/dev/null 2>&1
 
 docker exec \

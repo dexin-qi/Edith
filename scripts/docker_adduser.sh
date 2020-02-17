@@ -24,7 +24,6 @@ usermod -aG sudo "$DOCKER_USER"
 echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 cp -r /etc/skel/. /home/${DOCKER_USER}
 echo '
-export PATH=${PATH}:/Edith/scripts:/usr/local/miniconda/bin
 
 # if [ -e "/Edith/cyber/setup.bash" ]; then
 #   source /Edith/cyber/setup.bash

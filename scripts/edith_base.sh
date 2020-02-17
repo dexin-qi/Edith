@@ -84,38 +84,38 @@ function set_lib_path() {
   export LD_LIBRARY_PATH=/usr/lib:/usr/lib/x86_64-linux-gnu
 
   if [ "$RELEASE_DOCKER" == 1 ]; then
-    local CYBER_SETUP="/Edith/cyber/setup.bash"
+    local CYBER_SETUP="/edith/cyber/setup.bash"
     if [ -e "${CYBER_SETUP}" ]; then
       source "${CYBER_SETUP}"
     fi
-    PY_LIB_PATH=/Edith/lib
-    PY_TOOLS_PATH=/Edith/modules/tools
+    PY_LIB_PATH=/edith/lib
+    PY_TOOLS_PATH=/edith/modules/tools
   else
-    local CYBER_SETUP="/Edith/cyber/setup.bash"
+    local CYBER_SETUP="/edith/cyber/setup.bash"
     if [ -e "${CYBER_SETUP}" ]; then
       source "${CYBER_SETUP}"
     fi
     PY_LIB_PATH=${EDITH_ROOT_DIR}/py_proto
     PY_TOOLS_PATH=${EDITH_ROOT_DIR}/modules/tools
-    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/Edith/lib:/Edith/bazel-genfiles/external/caffe/lib
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/edith/lib:/edith/bazel-genfiles/external/caffe/lib
   fi
-  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/Edith/lib:/usr/local/Edith/local_integ/lib
+  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/edith/lib:/usr/local/edith/local_integ/lib
   export LD_LIBRARY_PATH=/usr/local/adolc/lib64:$LD_LIBRARY_PATH
   export LD_LIBRARY_PATH=/usr/local/Qt5.5.1/5.5/gcc_64/lib:$LD_LIBRARY_PATH
   export LD_LIBRARY_PATH=/usr/local/fast-rtps/lib:$LD_LIBRARY_PATH
   if [ "$USE_GPU" != "1" ];then
-    export LD_LIBRARY_PATH=/usr/local/Edith/libtorch/lib:$LD_LIBRARY_PATH
+    export LD_LIBRARY_PATH=/usr/local/edith/libtorch/lib:$LD_LIBRARY_PATH
   else
-    export LD_LIBRARY_PATH=/usr/local/Edith/libtorch_gpu/lib:$LD_LIBRARY_PATH
+    export LD_LIBRARY_PATH=/usr/local/edith/libtorch_gpu/lib:$LD_LIBRARY_PATH
   fi
-  export LD_LIBRARY_PATH=/usr/local/Edith/boost/lib:$LD_LIBRARY_PATH
-  export LD_LIBRARY_PATH=/usr/local/Edith/paddlepaddle_dep/mkldnn/lib/:$LD_LIBRARY_PATH
+  export LD_LIBRARY_PATH=/usr/local/edith/boost/lib:$LD_LIBRARY_PATH
+  export LD_LIBRARY_PATH=/usr/local/edith/paddlepaddle_dep/mkldnn/lib/:$LD_LIBRARY_PATH
   export PYTHONPATH=/usr/local/lib/python2.7/dist-packages:${PY_LIB_PATH}:${PY_TOOLS_PATH}:${PYTHONPATH}
 
   # Set teleop paths
   export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
-  export PYTHONPATH=/Edith/modules/teleop/common:${PYTHONPATH}
-  export PATH=/Edith/modules/teleop/common/scripts:${PATH}
+  export PYTHONPATH=/edith/modules/teleop/common:${PYTHONPATH}
+  export PATH=/edith/modules/teleop/common/scripts:${PATH}
 
   if [ -e /usr/local/cuda/ ];then
     export PATH=/usr/local/cuda/bin:$PATH
@@ -219,7 +219,7 @@ function decide_task_dir() {
 
   if [ -z "${DISK}" ]; then
     echo "Cannot find portable disk. Fallback to Edith data dir."
-    DISK="/Edith"
+    DISK="/edith"
   fi
 
   # Create task dir.
@@ -251,7 +251,7 @@ function start_customized_path() {
 
   is_stopped_customized_path "${MODULE_PATH}" "${MODULE}"
   if [ $? -eq 1 ]; then
-    eval "nohup cyber_launch start /Edith/modules/${MODULE_PATH}/launch/${MODULE}.launch &"
+    eval "nohup cyber_launch start /edith/modules/${MODULE_PATH}/launch/${MODULE}.launch &"
     sleep 0.5
     is_stopped_customized_path "${MODULE_PATH}" "${MODULE}"
     if [ $? -eq 0 ]; then
@@ -319,7 +319,7 @@ function start_fe_customized_path() {
 
   is_stopped_customized_path "${MODULE_PATH}" "${MODULE}"
   if [ $? -eq 1 ]; then
-    eval "cyber_launch start /Edith/modules/${MODULE_PATH}/launch/${MODULE}.launch"
+    eval "cyber_launch start /edith/modules/${MODULE_PATH}/launch/${MODULE}.launch"
   else
     echo "Module ${MODULE} is already running - skipping."
     return 2
@@ -360,7 +360,7 @@ function stop_customized_path() {
     return
   fi
 
-  cyber_launch stop "/Edith/modules/${MODULE_PATH}/launch/${MODULE}.launch"
+  cyber_launch stop "/edith/modules/${MODULE_PATH}/launch/${MODULE}.launch"
   if [ $? -eq 0 ]; then
     echo "Successfully stopped module ${MODULE}."
   else
@@ -453,7 +453,7 @@ function run() {
 check_in_docker
 unset OMP_NUM_THREADS
 if [ $EDITH_IN_DOCKER = "true" ]; then
-  CYBER_SETUP="/Edith/cyber/setup.bash"
+  CYBER_SETUP="/edith/cyber/setup.bash"
   if [ -e "${CYBER_SETUP}" ]; then
     source "${CYBER_SETUP}"
   fi

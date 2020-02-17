@@ -11,11 +11,12 @@ option(BUILD_EDITH_TEST "Build Edith Tests" false)
 include("${PROJECT_SOURCE_DIR}/cmake/functions.cmake")
 
 dustin_initialize_edith_project()
-dustin_enable_google_testing()
+# dustin_enable_google_testing()
 
 find_package(Abseil REQUIRED)
 find_package(Boost REQUIRED QUIET)
 find_package(Protobuf 3.0.0 REQUIRED QUIET)
+find_package(Poco REQUIRED Foundation)
 
 set(PYTHON2_INCLUDE_DIR "/usr/include/python2.7")
 set(PYTHON2_LIBRARIES   "/usr/lib/x86_64-linux-gnu/libpython2.7.so")
