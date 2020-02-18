@@ -25,9 +25,9 @@ echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 cp -r /etc/skel/. /home/${DOCKER_USER}
 echo '
 
-# if [ -e "/Edith/cyber/setup.bash" ]; then
-#   source /Edith/cyber/setup.bash
-# fi
+if [ -e "/edith/cyber/setup.bash" ]; then
+  source /edith/cyber/setup.bash
+fi
 
 ulimit -c unlimited
 ' >> "/home/${DOCKER_USER}/.bashrc"

@@ -7,6 +7,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt clean
 RUN apt update -y && \
     apt install -y \
+    sudo \
     build-essential \
     gcc-5 \
     g++-5 \

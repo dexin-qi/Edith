@@ -11,7 +11,6 @@ option(BUILD_EDITH_TEST "Build Edith Tests" false)
 include("${PROJECT_SOURCE_DIR}/cmake/functions.cmake")
 
 dustin_initialize_edith_project()
-# dustin_enable_google_testing()
 
 find_package(Abseil REQUIRED)
 find_package(Boost REQUIRED QUIET)
