@@ -27,7 +27,7 @@
 #include "cyber/service_discovery/topology_manager.h"
 #include "cyber/transport/transport.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 /**
@@ -231,6 +231,6 @@ void Writer<MessageT>::GetReaders(std::vector<proto::RoleAttributes>* readers) {
 }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_NODE_WRITER_H_

@@ -25,12 +25,12 @@
 #include "cyber/transport/common/endpoint.h"
 #include "cyber/transport/message/message_info.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
-using apollo::cyber::event::PerfEventCache;
-using apollo::cyber::event::TransPerf;
+using edith::cyber::event::PerfEventCache;
+using edith::cyber::event::TransPerf;
 
 template <typename M>
 class Transmitter : public Endpoint {
@@ -90,6 +90,6 @@ void Transmitter<M>::Disable(const RoleAttributes& opposite_attr) {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_TRANSMITTER_TRANSMITTER_H_

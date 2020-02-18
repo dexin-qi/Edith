@@ -24,7 +24,7 @@
 #include "cyber/proto/unit_test.pb.h"
 #include "cyber/transport/receiver/intra_receiver.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -138,4 +138,4 @@ TEST_F(IntraTranceiverTest, enable_and_disable) {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

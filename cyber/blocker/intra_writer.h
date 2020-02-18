@@ -22,12 +22,12 @@
 #include "cyber/blocker/blocker_manager.h"
 #include "cyber/node/writer.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace blocker {
 
 template <typename MessageT>
-class IntraWriter : public apollo::cyber::Writer<MessageT> {
+class IntraWriter : public edith::cyber::Writer<MessageT> {
  public:
   using MessagePtr = std::shared_ptr<MessageT>;
   using BlockerManagerPtr = std::shared_ptr<BlockerManager>;
@@ -101,6 +101,6 @@ bool IntraWriter<MessageT>::Write(const MessagePtr& msg_ptr) {
 
 }  // namespace blocker
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_BLOCKER_INTRA_WRITER_H_

@@ -22,7 +22,7 @@
 
 #include "cyber/common/global_data.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace service_discovery {
 
@@ -129,4 +129,4 @@ TEST_F(NodeManagerTest, get_nodes) {
 
 }  // namespace service_discovery
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

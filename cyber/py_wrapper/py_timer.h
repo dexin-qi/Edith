@@ -25,7 +25,7 @@
 #include "cyber/init.h"
 #include "cyber/timer/timer.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 class PyTimer {
@@ -55,6 +55,6 @@ class PyTimer {
 };
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_PY_WRAPPER_PY_TIMER_H_

@@ -24,11 +24,11 @@
 #include "cyber/common/macros.h"
 #include "cyber/message/protobuf_factory.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace message {
 
-const char* const PY_MESSAGE_FULLNAME = "apollo.cyber.message.PyMessage";
+const char* const PY_MESSAGE_FULLNAME = "edith.cyber.message.PyMessage";
 
 class PyMessageWrap {
  public:
@@ -135,6 +135,6 @@ inline std::string PyMessageWrap::TypeName() { return PY_MESSAGE_FULLNAME; }
 
 }  // namespace message
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_MESSAGE_PY_MESSAGE_H_

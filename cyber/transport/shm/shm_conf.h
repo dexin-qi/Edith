@@ -20,7 +20,7 @@
 #include <cstdint>
 #include <string>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -77,6 +77,6 @@ class ShmConf {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_SHM_SHM_CONF_H_

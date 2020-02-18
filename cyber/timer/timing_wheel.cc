@@ -17,7 +17,7 @@
 #include "cyber/timer/timing_wheel.h"
 #include "cyber/task/task.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 void TimingWheel::Start() {
@@ -139,4 +139,4 @@ void TimingWheel::TickFunc() {
 TimingWheel::TimingWheel() {}
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

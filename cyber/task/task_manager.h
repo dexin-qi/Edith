@@ -28,7 +28,7 @@
 #include "cyber/base/bounded_queue.h"
 #include "cyber/scheduler/scheduler_factory.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 class TaskManager {
@@ -63,6 +63,6 @@ class TaskManager {
 };
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TASK_TASK_MANAGER_H_

@@ -25,12 +25,12 @@
 #include "cyber/cyber.h"
 #include "cyber/message/raw_message.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace data {
 
-using apollo::cyber::message::RawMessage;
-using apollo::cyber::proto::RoleAttributes;
+using edith::cyber::message::RawMessage;
+using edith::cyber::proto::RoleAttributes;
 std::hash<std::string> str_hash;
 
 auto channel0 = str_hash("/channel0");
@@ -140,4 +140,4 @@ TEST(DataVisitorTest, four_channel) {
 
 }  // namespace data
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

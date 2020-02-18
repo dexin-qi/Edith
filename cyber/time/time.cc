@@ -23,7 +23,7 @@
 #include <sstream>
 #include <thread>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 using std::chrono::high_resolution_clock;
@@ -163,4 +163,4 @@ std::ostream& operator<<(std::ostream& os, const Time& rhs) {
 }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

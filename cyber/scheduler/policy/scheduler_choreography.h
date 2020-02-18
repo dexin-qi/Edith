@@ -26,12 +26,12 @@
 #include "cyber/proto/choreography_conf.pb.h"
 #include "cyber/scheduler/scheduler.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace scheduler {
 
-using apollo::cyber::croutine::CRoutine;
-using apollo::cyber::proto::ChoreographyTask;
+using edith::cyber::croutine::CRoutine;
+using edith::cyber::proto::ChoreographyTask;
 
 class SchedulerChoreography : public Scheduler {
  public:
@@ -63,6 +63,6 @@ class SchedulerChoreography : public Scheduler {
 
 }  // namespace scheduler
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_SCHEDULER_POLICY_SCHEDULER_CHOREOGRAPHY_H_

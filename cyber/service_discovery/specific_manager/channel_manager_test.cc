@@ -27,7 +27,7 @@
 #include "cyber/proto/unit_test.pb.h"
 #include "cyber/transport/common/identity.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace service_discovery {
 
@@ -432,4 +432,4 @@ TEST_F(ChannelManagerTest, is_message_type_matching) {
 
 }  // namespace service_discovery
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

@@ -23,7 +23,7 @@
 
 #include "cyber/proto/role_attributes.pb.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace service_discovery {
 
@@ -85,6 +85,6 @@ class RoleServer : public RoleBase {
 
 }  // namespace service_discovery
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_SERVICE_DISCOVERY_ROLE_ROLE_H_

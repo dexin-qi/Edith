@@ -20,7 +20,7 @@
 
 #include "cyber/common/log.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -114,4 +114,4 @@ bool MessageInfo::DeserializeFrom(const char* src, std::size_t len) {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

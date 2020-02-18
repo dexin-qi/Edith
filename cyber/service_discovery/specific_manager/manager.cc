@@ -25,7 +25,7 @@
 #include "cyber/transport/rtps/underlay_message.h"
 #include "cyber/transport/rtps/underlay_message_type.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace service_discovery {
 
@@ -206,7 +206,7 @@ bool Manager::Publish(const ChangeMsg& msg) {
     return false;
   }
 
-  apollo::cyber::transport::UnderlayMessage m;
+  edith::cyber::transport::UnderlayMessage m;
   RETURN_VAL_IF(!message::SerializeToString(msg, &m.data()), false);
   {
     std::lock_guard<std::mutex> lg(lock_);
@@ -229,4 +229,4 @@ bool Manager::IsFromSameProcess(const ChangeMsg& msg) {
 
 }  // namespace service_discovery
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

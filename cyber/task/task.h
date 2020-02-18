@@ -22,10 +22,10 @@
 
 #include "cyber/task/task_manager.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
-using apollo::cyber::common::GlobalData;
+using edith::cyber::common::GlobalData;
 
 template <typename F, typename... Args>
 static auto Async(F&& f, Args&&... args)
@@ -66,6 +66,6 @@ static inline void USleep(useconds_t usec) {
 }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TASK_TASK_H_

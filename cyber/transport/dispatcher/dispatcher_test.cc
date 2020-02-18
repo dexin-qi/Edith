@@ -24,7 +24,7 @@
 #include "cyber/proto/unit_test.pb.h"
 #include "cyber/transport/common/identity.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -132,4 +132,4 @@ TEST_F(DispatcherTest, has_channel) {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

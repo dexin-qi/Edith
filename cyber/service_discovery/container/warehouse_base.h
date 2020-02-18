@@ -22,7 +22,7 @@
 
 #include "cyber/service_discovery/role/role.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace service_discovery {
 
@@ -65,6 +65,6 @@ class WarehouseBase {
 
 }  // namespace service_discovery
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_SERVICE_DISCOVERY_CONTAINER_WAREHOUSE_BASE_H_

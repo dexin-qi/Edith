@@ -16,7 +16,7 @@
 
 #include "cyber/transport/dispatcher/intra_dispatcher.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -26,4 +26,4 @@ IntraDispatcher::~IntraDispatcher() {}
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

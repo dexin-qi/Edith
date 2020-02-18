@@ -27,7 +27,7 @@ extern "C" {
 extern void ctx_swap(void**, void**) asm("ctx_swap");
 };
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace croutine {
 
@@ -56,6 +56,6 @@ inline void SwapContext(char** src_sp, char** dest_sp) {
 
 }  // namespace croutine
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_CROUTINE_ROUTINE_CONTEXT_H_

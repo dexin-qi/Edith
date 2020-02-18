@@ -19,7 +19,7 @@
 
 #include <string>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 constexpr auto SERVICE_NAME_DELIMITER = "/";
@@ -34,6 +34,6 @@ static inline std::string FixParameterServiceName(const std::string& node_name,
 }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_PARAMETER_PARAMETER_SERVICE_NAMES_H_

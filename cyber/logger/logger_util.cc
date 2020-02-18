@@ -28,7 +28,7 @@
 
 #include "glog/logging.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace logger {
 
@@ -47,4 +47,4 @@ bool PidHasChanged() {
 
 }  // namespace logger
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

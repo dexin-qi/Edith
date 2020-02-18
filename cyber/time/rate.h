@@ -20,7 +20,7 @@
 #include "cyber/time/duration.h"
 #include "cyber/time/time.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 class Rate {
@@ -40,6 +40,6 @@ class Rate {
 };
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TIME_RATE_H_

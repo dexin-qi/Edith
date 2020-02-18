@@ -24,14 +24,14 @@
 
 #include "cyber/proto/unit_test.pb.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace common {
 
 TEST(FileTest, proto_set_get_test) {
-  apollo::cyber::proto::UnitTest message;
+  edith::cyber::proto::UnitTest message;
   message.set_class_name("FileTest");
-  apollo::cyber::proto::UnitTest read_message;
+  edith::cyber::proto::UnitTest read_message;
   EXPECT_FALSE(SetProtoToASCIIFile(message, -1));
   EXPECT_FALSE(SetProtoToASCIIFile(message, "not_exists_dir/message.proto"));
   EXPECT_TRUE(SetProtoToASCIIFile(message, "message.ascii"));
@@ -52,9 +52,9 @@ TEST(FileTest, proto_set_get_test) {
 }
 
 TEST(FileTest, file_utils_test) {
-  apollo::cyber::proto::UnitTest message;
+  edith::cyber::proto::UnitTest message;
   message.set_class_name("FileTest");
-  apollo::cyber::proto::UnitTest read_message;
+  edith::cyber::proto::UnitTest read_message;
   EXPECT_TRUE(SetProtoToBinaryFile(message, "message.binary"));
 
   std::string content;
@@ -148,4 +148,4 @@ TEST(FileTest, GetFileName) {
 
 }  // namespace common
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

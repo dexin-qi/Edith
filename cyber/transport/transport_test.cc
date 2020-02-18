@@ -24,7 +24,7 @@
 #include "cyber/proto/unit_test.pb.h"
 #include "cyber/transport/common/identity.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -77,13 +77,13 @@ TEST(TransportTest, create_receiver) {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
-  apollo::cyber::Init(argv[0]);
-  apollo::cyber::transport::Transport::Instance();
+  edith::cyber::Init(argv[0]);
+  edith::cyber::transport::Transport::Instance();
   auto res = RUN_ALL_TESTS();
-  apollo::cyber::transport::Transport::Instance()->Shutdown();
+  edith::cyber::transport::Transport::Instance()->Shutdown();
   return res;
 }

@@ -18,7 +18,7 @@
 #include "cyber/proto/unit_test.pb.h"
 #include "cyber/py_wrapper/py_cyber.h"
 
-apollo::cyber::PyReader *pr = nullptr;
+edith::cyber::PyReader *pr = nullptr;
 
 int cbfun(const char *channel_name) {
   AINFO << "recv->[ " << channel_name << " ]";
@@ -29,13 +29,13 @@ int cbfun(const char *channel_name) {
 }
 
 int main(int argc, char *argv[]) {
-  apollo::cyber::Init("cyber_python");
-  apollo::cyber::proto::Chatter chat;
-  apollo::cyber::PyNode node("listener");
+  edith::cyber::Init("cyber_python");
+  edith::cyber::proto::Chatter chat;
+  edith::cyber::PyNode node("listener");
   pr = node.create_reader("channel/chatter", chat.GetTypeName());
   pr->register_func(cbfun);
 
-  apollo::cyber::WaitForShutdown();
+  edith::cyber::WaitForShutdown();
   delete pr;
 
   return 0;

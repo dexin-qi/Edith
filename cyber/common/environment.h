@@ -22,7 +22,7 @@
 
 #include "cyber/common/log.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace common {
 
@@ -47,6 +47,6 @@ inline const std::string WorkRoot() {
 
 }  // namespace common
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_COMMON_ENVIRONMENT_H_

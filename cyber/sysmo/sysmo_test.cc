@@ -23,10 +23,10 @@
 #include "cyber/common/environment.h"
 #include "cyber/scheduler/scheduler_factory.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
-using apollo::cyber::common::GetEnv;
+using edith::cyber::common::GetEnv;
 
 TEST(SysMoTest, cases) {
   auto sched = scheduler::Instance();
@@ -40,4 +40,4 @@ TEST(SysMoTest, cases) {
 }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

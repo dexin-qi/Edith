@@ -23,7 +23,7 @@
 
 #include "cyber/timer/timer_task.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 class TimerBucket {
@@ -42,6 +42,6 @@ class TimerBucket {
 };
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TIMER_TIMER_BUCKET_H_

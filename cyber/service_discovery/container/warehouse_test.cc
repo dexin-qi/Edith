@@ -19,7 +19,7 @@
 
 #include "gtest/gtest.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace service_discovery {
 
@@ -276,4 +276,4 @@ TEST_F(WarehouseTest, get_all_roles) {
 
 }  // namespace service_discovery
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

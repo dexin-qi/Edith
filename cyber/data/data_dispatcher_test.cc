@@ -22,7 +22,7 @@
 
 #include "cyber/common/util.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace data {
 
@@ -59,4 +59,4 @@ TEST(DataDispatcher, Dispatch) {
 
 }  // namespace data
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

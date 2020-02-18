@@ -16,4 +16,6 @@ ln -s lib_py_wrapper_py3_timer.so _cyber_timer_py3.so
 ln -s lib_py_wrapper_py3_record.so _cyber_record_py3.so
 ln -s lib_py_wrapper_py3_parameter.so _cyber_parameter_py3.so
 
+echo -e "\e[1;38mpython interface generate\e[0m \e[1;32msuccess\e[0m"
+
 popd

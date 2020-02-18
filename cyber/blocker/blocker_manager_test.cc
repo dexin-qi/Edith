@@ -22,11 +22,11 @@
 #include "cyber/blocker/intra_writer.h"
 #include "cyber/proto/unit_test.pb.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace blocker {
 
-using apollo::cyber::proto::UnitTest;
+using edith::cyber::proto::UnitTest;
 
 void cb(const std::shared_ptr<UnitTest>& msg_ptr) { UNUSED(msg_ptr); }
 
@@ -99,4 +99,4 @@ TEST(BlockerTest, blocker_intra_reader) {
 
 }  // namespace blocker
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

@@ -23,11 +23,11 @@
 #include "cyber/message/message_traits.h"
 #include "cyber/proto/parameter.pb.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
-using apollo::cyber::proto::Param;
-using apollo::cyber::proto::ParamType;
+using edith::cyber::proto::Param;
+using edith::cyber::proto::ParamType;
 
 class ParameterTest : public ::testing::Test {
  protected:
@@ -120,7 +120,7 @@ TEST_F(ParameterTest, type_name) {
   EXPECT_EQ("INT", int_param_->TypeName());
   EXPECT_EQ("DOUBLE", double_param_->TypeName());
   EXPECT_EQ("STRING", string_param_->TypeName());
-  EXPECT_EQ("apollo.cyber.proto.Param", protobuf_param_->TypeName());
+  EXPECT_EQ("edith.cyber.proto.Param", protobuf_param_->TypeName());
 }
 
 TEST_F(ParameterTest, name) {
@@ -163,7 +163,7 @@ TEST_F(ParameterTest, value) {
 
   auto param = protobuf_param_->value<proto::Param>();
   EXPECT_EQ("protobuf", protobuf_param_->Name());
-  EXPECT_EQ("apollo.cyber.proto.Param", protobuf_param_->TypeName());
+  EXPECT_EQ("edith.cyber.proto.Param", protobuf_param_->TypeName());
   std::string str;
   param.SerializeToString(&str);
   EXPECT_EQ(str, protobuf_param_->value<std::string>());
@@ -180,10 +180,10 @@ TEST_F(ParameterTest, debug_string) {
   EXPECT_EQ("{name: \"string\", type: \"STRING\", value: \"test\"}",
             string_param_->DebugString());
   EXPECT_EQ(
-      "{name: \"protobuf\", type: \"apollo.cyber.proto.Param\", value: "
+      "{name: \"protobuf\", type: \"edith.cyber.proto.Param\", value: "
       "\"name: \"param\"\"}",
       protobuf_param_->DebugString());
 }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

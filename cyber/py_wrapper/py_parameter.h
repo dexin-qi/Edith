@@ -29,7 +29,7 @@
 #include "cyber/parameter/parameter_client.h"
 #include "cyber/parameter/parameter_server.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 class PyParameter {
@@ -106,6 +106,6 @@ class PyParameterServer {
 };
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_PY_WRAPPER_PY_PARAMETER_H_

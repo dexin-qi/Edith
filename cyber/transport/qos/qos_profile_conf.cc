@@ -16,7 +16,7 @@
 
 #include "cyber/transport/qos/qos_profile_conf.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -84,4 +84,4 @@ const QosProfile QosProfileConf::QOS_PROFILE_TOPO_CHANGE = CreateQosProfile(
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

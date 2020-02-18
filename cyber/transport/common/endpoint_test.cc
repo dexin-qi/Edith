@@ -20,7 +20,7 @@
 
 #include "cyber/common/global_data.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -49,4 +49,4 @@ TEST(EndpointTest, construction) {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

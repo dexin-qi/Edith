@@ -27,7 +27,7 @@
 #include "cyber/transport/message/history_attributes.h"
 #include "cyber/transport/message/message_info.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -129,6 +129,6 @@ size_t History<MessageT>::GetSize() const {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_MESSAGE_HISTORY_H_

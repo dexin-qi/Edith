@@ -23,7 +23,7 @@
   namespace {                                                             \
   struct ProxyType##UniqueID {                                            \
     ProxyType##UniqueID() {                                               \
-      apollo::cyber::class_loader::utility::RegisterClass<Derived, Base>( \
+      edith::cyber::class_loader::utility::RegisterClass<Derived, Base>( \
           #Derived, #Base);                                               \
     }                                                                     \
   };                                                                      \

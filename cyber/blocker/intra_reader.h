@@ -26,12 +26,12 @@
 #include "cyber/node/reader.h"
 #include "cyber/time/time.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace blocker {
 
 template <typename MessageT>
-class IntraReader : public apollo::cyber::Reader<MessageT> {
+class IntraReader : public edith::cyber::Reader<MessageT> {
  public:
   using MessagePtr = std::shared_ptr<MessageT>;
   using Callback = std::function<void(const std::shared_ptr<MessageT>&)>;
@@ -197,7 +197,7 @@ auto IntraReader<MessageT>::End() const -> Iterator {
 template <typename MessageT>
 void IntraReader<MessageT>::OnMessage(const MessagePtr& msg_ptr) {
   this->second_to_lastest_recv_time_sec_ = this->latest_recv_time_sec_;
-  this->latest_recv_time_sec_ = apollo::cyber::Time::Now().ToSecond();
+  this->latest_recv_time_sec_ = edith::cyber::Time::Now().ToSecond();
   if (msg_callback_ != nullptr) {
     msg_callback_(msg_ptr);
   }
@@ -205,6 +205,6 @@ void IntraReader<MessageT>::OnMessage(const MessagePtr& msg_ptr) {
 
 }  // namespace blocker
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_BLOCKER_INTRA_READER_H_

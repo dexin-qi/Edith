@@ -18,10 +18,10 @@
 
 #include "cyber/common/environment.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
-using apollo::cyber::common::GetEnv;
+using edith::cyber::common::GetEnv;
 
 SysMo::SysMo() { Start(); }
 
@@ -53,4 +53,4 @@ void SysMo::Checker() {
 }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

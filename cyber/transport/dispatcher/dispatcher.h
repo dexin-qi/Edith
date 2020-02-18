@@ -33,15 +33,15 @@
 #include "cyber/transport/message/listener_handler.h"
 #include "cyber/transport/message/message_info.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
-using apollo::cyber::base::AtomicHashMap;
-using apollo::cyber::base::AtomicRWLock;
-using apollo::cyber::base::ReadLockGuard;
-using apollo::cyber::base::WriteLockGuard;
-using apollo::cyber::common::GlobalData;
+using edith::cyber::base::AtomicHashMap;
+using edith::cyber::base::AtomicRWLock;
+using edith::cyber::base::ReadLockGuard;
+using edith::cyber::base::WriteLockGuard;
+using edith::cyber::common::GlobalData;
 using cyber::proto::RoleAttributes;
 
 class Dispatcher;
@@ -169,6 +169,6 @@ void Dispatcher::RemoveListener(const RoleAttributes& self_attr,
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_DISPATCHER_DISPATCHER_H_

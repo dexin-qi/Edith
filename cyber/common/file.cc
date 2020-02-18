@@ -29,7 +29,7 @@
 #include <fstream>
 #include <string>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace common {
 
@@ -402,4 +402,4 @@ bool CreateDir(const string &dir) {
 
 }  // namespace common
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

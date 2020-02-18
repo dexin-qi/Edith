@@ -20,7 +20,7 @@
 #include <atomic>
 #include <cstdint>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -57,6 +57,6 @@ class Block {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_SHM_BLOCK_H_

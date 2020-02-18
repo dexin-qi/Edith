@@ -40,11 +40,11 @@
 #include "cyber/transport/transmitter/shm_transmitter.h"
 #include "cyber/transport/transmitter/transmitter.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
-using apollo::cyber::proto::OptionalMode;
+using edith::cyber::proto::OptionalMode;
 
 class Transport {
  public:
@@ -167,6 +167,6 @@ auto Transport::CreateReceiver(
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_TRANSPORT_H_

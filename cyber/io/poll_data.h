@@ -21,7 +21,7 @@
 #include <cstdint>
 #include <functional>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace io {
 
@@ -46,6 +46,6 @@ struct PollCtrlParam {
 
 }  // namespace io
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_IO_POLL_DATA_H_

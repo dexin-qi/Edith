@@ -20,7 +20,7 @@
 #include "cyber/state.h"
 #include "cyber/time/time.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace service_discovery {
 
@@ -113,4 +113,4 @@ void NodeManager::DisposeLeave(const ChangeMsg& msg) {
 
 }  // namespace service_discovery
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

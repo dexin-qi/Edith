@@ -24,7 +24,7 @@
 #include "cyber/message/raw_message.h"
 #include "cyber/node/writer.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
@@ -54,6 +54,6 @@ class PlayTask {
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TOOLS_CYBER_RECORDER_PLAYER_PLAY_TASK_H_

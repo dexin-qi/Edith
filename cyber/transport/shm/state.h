@@ -22,7 +22,7 @@
 #include <mutex>
 #include <string>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -61,6 +61,6 @@ class State {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_SHM_STATE_H_

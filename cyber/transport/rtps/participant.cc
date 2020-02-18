@@ -20,7 +20,7 @@
 #include "cyber/common/log.h"
 #include "cyber/proto/transport_conf.pb.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -141,4 +141,4 @@ void Participant::CreateFastRtpsParticipant(
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

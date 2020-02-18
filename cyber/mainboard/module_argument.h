@@ -24,7 +24,7 @@
 #include "cyber/common/log.h"
 #include "cyber/common/types.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace mainboard {
 
@@ -68,6 +68,6 @@ inline const std::list<std::string>& ModuleArgument::GetDAGConfList() const {
 
 }  // namespace mainboard
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_MAINBOARD_MODULE_ARGUMENT_H_

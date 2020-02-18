@@ -28,11 +28,11 @@
 #include "cyber/croutine/croutine.h"
 #include "cyber/scheduler/processor_context.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace scheduler {
 
-using apollo::cyber::base::AtomicRWLock;
+using edith::cyber::base::AtomicRWLock;
 using croutine::CRoutine;
 
 class ChoreographyContext : public ProcessorContext {
@@ -57,6 +57,6 @@ class ChoreographyContext : public ProcessorContext {
 
 }  // namespace scheduler
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_SCHEDULER_POLICY_CHOREOGRAPHY_CONTEXT_H_

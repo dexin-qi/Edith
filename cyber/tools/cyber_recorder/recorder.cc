@@ -18,7 +18,7 @@
 
 #include "cyber/record/header_builder.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
@@ -45,7 +45,7 @@ bool Recorder::Start() {
     return false;
   }
   std::string node_name = "cyber_recorder_record_" + std::to_string(getpid());
-  node_ = ::apollo::cyber::CreateNode(node_name);
+  node_ = ::edith::cyber::CreateNode(node_name);
   if (node_ == nullptr) {
     AERROR << "create node failed, node: " << node_name;
     return false;
@@ -89,7 +89,7 @@ bool Recorder::Stop() {
 void Recorder::TopologyCallback(const ChangeMsg& change_message) {
   ADEBUG << "ChangeMsg in Topology Callback:" << std::endl
          << change_message.ShortDebugString();
-  if (change_message.role_type() != apollo::cyber::proto::ROLE_WRITER) {
+  if (change_message.role_type() != edith::cyber::proto::ROLE_WRITER) {
     ADEBUG << "Change message role type is not ROLE_WRITER.";
     return;
   }
@@ -221,4 +221,4 @@ void Recorder::ShowProgress() {
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

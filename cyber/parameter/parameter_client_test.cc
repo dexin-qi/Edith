@@ -26,13 +26,13 @@
 #include "cyber/message/protobuf_factory.h"
 #include "cyber/parameter/parameter_server.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 class ParameterClientTest : public ::testing::Test {
  protected:
   ParameterClientTest() {
-    apollo::cyber::Init("parameter_client_test");
+    edith::cyber::Init("parameter_client_test");
     SetState(STATE_INITIALIZED);
     node_ = CreateNode("parameter_server");
   }
@@ -88,4 +88,4 @@ TEST_F(ParameterClientTest, list_parameter) {
 }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

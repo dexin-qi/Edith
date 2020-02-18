@@ -21,7 +21,7 @@
 
 #include "cyber/proto/qos_profile.pb.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -55,6 +55,6 @@ class QosProfileConf {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_QOS_QOS_PROFILE_CONF_H_

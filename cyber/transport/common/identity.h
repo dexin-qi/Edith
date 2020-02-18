@@ -21,7 +21,7 @@
 #include <cstring>
 #include <string>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -62,6 +62,6 @@ class Identity {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_COMMON_IDENTITY_H_

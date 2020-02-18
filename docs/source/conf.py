@@ -28,8 +28,8 @@ source_suffix = {
 }
 master_doc = 'index'
 project = 'Cyber RT Documents'
-copyright = '2019, Apollo'
-author = 'Apollo Baidu'
+copyright = '2019, Edith'
+author = 'Edith Baidu'
 
 #html_logo = 'quantstack-white.svg'
 

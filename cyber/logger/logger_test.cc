@@ -21,7 +21,7 @@
 
 #include "cyber/common/log.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace logger {
 
@@ -60,4 +60,4 @@ TEST(LoggerTest, SetLoggerToGlog) {
 
 }  // namespace logger
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

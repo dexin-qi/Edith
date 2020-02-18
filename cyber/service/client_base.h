@@ -22,7 +22,7 @@
 
 #include "cyber/common/macros.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 /**
@@ -78,6 +78,6 @@ class ClientBase {
 };
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_SERVICE_CLIENT_BASE_H_

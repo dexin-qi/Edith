@@ -20,7 +20,7 @@
 #include <cstdint>
 #include <string>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
@@ -66,6 +66,6 @@ struct RecordMessage {
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_RECORD_RECORD_READER_H_

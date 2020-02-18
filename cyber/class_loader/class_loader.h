@@ -24,7 +24,7 @@
 
 #include "cyber/class_loader/class_loader_register_macro.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace class_loader {
 
@@ -106,5 +106,5 @@ void ClassLoader::OnClassObjDeleter(Base* obj) {
 
 }  // namespace class_loader
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 #endif  // CYBER_CLASS_LOADER_CLASS_LOADER_H_

@@ -40,7 +40,7 @@
 #include "cyber/node/writer.h"
 #include "cyber/service_discovery/specific_manager/node_manager.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 inline bool py_init(const std::string& module_name) {
@@ -559,6 +559,6 @@ class PyServiceUtils {
 };
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_PY_WRAPPER_PY_CYBER_H_

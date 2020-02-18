@@ -55,7 +55,7 @@
 #include "cyber/logger/logger_util.h"
 #include "glog/log_severity.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace logger {
 
@@ -316,4 +316,4 @@ const string& LogFileObject::hostname() {
 
 }  // namespace logger
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

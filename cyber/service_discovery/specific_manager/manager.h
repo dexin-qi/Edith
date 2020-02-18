@@ -33,7 +33,7 @@
 #include "cyber/proto/topology_change.pb.h"
 #include "cyber/service_discovery/communication/subscriber_listener.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace service_discovery {
 
@@ -168,6 +168,6 @@ class Manager {
 
 }  // namespace service_discovery
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_SERVICE_DISCOVERY_SPECIFIC_MANAGER_MANAGER_H_

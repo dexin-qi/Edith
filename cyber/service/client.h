@@ -32,7 +32,7 @@
 #include "cyber/node/node_channel_impl.h"
 #include "cyber/service/client_base.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 /**
@@ -311,6 +311,6 @@ void Client<Request, Response>::HandleResponse(
 }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_SERVICE_CLIENT_H_

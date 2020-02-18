@@ -23,7 +23,7 @@
 
 #include "cyber/proto/record.pb.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
@@ -96,6 +96,6 @@ class RecordBase {
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_RECORD_RECORD_BASE_H_

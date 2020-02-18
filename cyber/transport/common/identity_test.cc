@@ -18,7 +18,7 @@
 
 #include "gtest/gtest.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -58,4 +58,4 @@ TEST(IdentityTest, testOperatorEqual) {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

@@ -23,11 +23,11 @@
 #include "cyber/common/global_data.h"
 #include "cyber/proto/run_mode_conf.pb.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
-using apollo::cyber::common::GlobalData;
-using apollo::cyber::proto::RunMode;
+using edith::cyber::common::GlobalData;
+using edith::cyber::proto::RunMode;
 
 std::unique_ptr<Node> CreateNode(const std::string& node_name,
                                  const std::string& name_space) {
@@ -42,4 +42,4 @@ std::unique_ptr<Node> CreateNode(const std::string& node_name,
 }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

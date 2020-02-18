@@ -51,7 +51,7 @@ class TestCyber(unittest.TestCase):
         self.assertEqual(reader.name, "channel/chatter")
         self.assertEqual(reader.data_type, SimpleMessage)
         self.assertEqual(SimpleMessage.DESCRIPTOR.full_name,
-                         "apollo.common.util.test.SimpleMessage")
+                         "edith.common.util.test.SimpleMessage")
 
         # Write.
         msg = SimpleMessage()
@@ -63,7 +63,7 @@ class TestCyber(unittest.TestCase):
         writer = writer_node.create_writer("channel/chatter", SimpleMessage, 7)
         self.assertEqual(writer.name, "channel/chatter")
         self.assertEqual(
-            writer.data_type, "apollo.common.util.test.SimpleMessage")
+            writer.data_type, "edith.common.util.test.SimpleMessage")
         self.assertTrue(writer.write(msg))
 
         # Wait for data to be processed by callback function.

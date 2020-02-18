@@ -27,7 +27,7 @@
 #include "cyber/record/record_message.h"
 #include "cyber/record/record_reader.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
@@ -201,6 +201,6 @@ class RecordViewer {
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_RECORD_RECORD_VIEWER_H_

@@ -18,7 +18,7 @@
 
 #include "cyber/common/log.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace service_discovery {
 
@@ -82,4 +82,4 @@ bool RoleServer::Match(const RoleAttributes& target_attr) const {
 
 }  // namespace service_discovery
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

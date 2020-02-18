@@ -28,12 +28,12 @@
 #include "cyber/record/file/record_file_writer.h"
 #include "cyber/record/header_builder.h"
 
-using ::apollo::cyber::proto::ChannelCache;
-using ::apollo::cyber::proto::ChunkBody;
-using ::apollo::cyber::proto::ChunkHeader;
-using ::apollo::cyber::proto::Header;
+using ::edith::cyber::proto::ChannelCache;
+using ::edith::cyber::proto::ChunkBody;
+using ::edith::cyber::proto::ChunkHeader;
+using ::edith::cyber::proto::Header;
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
@@ -60,6 +60,6 @@ class Spliter {
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TOOLS_CYBER_RECORDER_SPLITER_H_

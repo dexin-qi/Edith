@@ -26,7 +26,7 @@
 #include "cyber/transport/shm/shm_conf.h"
 #include "cyber/transport/shm/state.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -76,6 +76,6 @@ class Segment {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_SHM_SEGMENT_H_

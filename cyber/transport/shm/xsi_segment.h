@@ -19,7 +19,7 @@
 
 #include "cyber/transport/shm/segment.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -41,6 +41,6 @@ class XsiSegment : public Segment {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_SHM_XSI_SEGMENT_H_

@@ -27,13 +27,13 @@
 #include "cyber/event/perf_event_cache.h"
 #include "cyber/time/time.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace data {
 
-using apollo::cyber::Time;
-using apollo::cyber::base::AtomicHashMap;
-using apollo::cyber::event::PerfEventCache;
+using edith::cyber::Time;
+using edith::cyber::base::AtomicHashMap;
+using edith::cyber::event::PerfEventCache;
 
 struct Notifier {
   std::function<void()> callback;
@@ -85,6 +85,6 @@ inline bool DataNotifier::Notify(const uint64_t channel_id) {
 
 }  // namespace data
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_DATA_DATA_NOTIFIER_H_

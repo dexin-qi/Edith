@@ -18,7 +18,7 @@
 
 #include "cyber/common/log.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -74,4 +74,4 @@ void Block::ReleaseReadLock() { lock_num_.fetch_sub(1); }
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

@@ -33,7 +33,7 @@
 #include "cyber/common/macros.h"
 #include "glog/logging.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace logger {
 
@@ -191,6 +191,6 @@ class AsyncLogger : public google::base::Logger {
 
 }  // namespace logger
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_LOGGER_ASYNC_LOGGER_H_

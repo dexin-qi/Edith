@@ -23,7 +23,7 @@
 #include "cyber/transport/dispatcher/shm_dispatcher.h"
 #include "cyber/transport/receiver/receiver.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -94,6 +94,6 @@ void ShmReceiver<M>::Disable(const RoleAttributes& opposite_attr) {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_RECEIVER_SHM_RECEIVER_H_

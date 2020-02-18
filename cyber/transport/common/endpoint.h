@@ -23,7 +23,7 @@
 #include "cyber/proto/role_attributes.pb.h"
 #include "cyber/transport/common/identity.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -48,6 +48,6 @@ class Endpoint {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_COMMON_ENDPOINT_H_

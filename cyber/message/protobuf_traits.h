@@ -23,7 +23,7 @@
 
 #include "cyber/message/protobuf_factory.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace message {
 
@@ -71,6 +71,6 @@ bool RegisterMessage(const MessageT& message) {
 
 }  // namespace message
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_MESSAGE_PROTOBUF_TRAITS_H_

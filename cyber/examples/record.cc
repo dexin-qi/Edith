@@ -23,15 +23,15 @@
 #include "cyber/record/record_reader.h"
 #include "cyber/record/record_writer.h"
 
-using apollo::cyber::message::RawMessage;
-using ::apollo::cyber::record::RecordMessage;
-using ::apollo::cyber::record::RecordReader;
-using ::apollo::cyber::record::RecordWriter;
+using edith::cyber::message::RawMessage;
+using ::edith::cyber::record::RecordMessage;
+using ::edith::cyber::record::RecordReader;
+using ::edith::cyber::record::RecordWriter;
 
 const char CHANNEL_NAME_1[] = "/test/channel1";
 const char CHANNEL_NAME_2[] = "/test/channel2";
-const char MESSAGE_TYPE_1[] = "apollo.cyber.proto.Test";
-const char MESSAGE_TYPE_2[] = "apollo.cyber.proto.Channel";
+const char MESSAGE_TYPE_1[] = "edith.cyber.proto.Test";
+const char MESSAGE_TYPE_2[] = "edith.cyber.proto.Channel";
 const char PROTO_DESC[] = "1234567890";
 const char STR_10B[] = "1234567890";
 const char TEST_FILE[] = "test.record";
@@ -75,7 +75,7 @@ void test_read(const std::string &readfile) {
 }
 
 int main(int argc, char *argv[]) {
-  apollo::cyber::Init(argv[0]);
+  edith::cyber::Init(argv[0]);
   test_write(TEST_FILE);
   sleep(1);
   test_read(TEST_FILE);

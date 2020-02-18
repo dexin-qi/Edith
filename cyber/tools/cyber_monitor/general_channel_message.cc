@@ -27,9 +27,9 @@
 
 namespace {
 constexpr int ReaderWriterOffset = 4;
-using apollo::cyber::record::kGB;
-using apollo::cyber::record::kKB;
-using apollo::cyber::record::kMB;
+using edith::cyber::record::kGB;
+using edith::cyber::record::kKB;
+using edith::cyber::record::kMB;
 }  // namespace
 
 const char* GeneralChannelMessage::errCode2Str(
@@ -87,7 +87,7 @@ double GeneralChannelMessage::frame_ratio(void) {
   if (!is_enabled() || !has_message_come()) {
     return 0.0;
   }
-  auto time_now = apollo::cyber::Time::MonoTime();
+  auto time_now = edith::cyber::Time::MonoTime();
   auto interval = time_now - time_last_calc_;
   if (interval.ToNanosecond() > 1000000000) {
     int old = frame_counter_;
@@ -114,19 +114,19 @@ GeneralChannelMessage* GeneralChannelMessage::OpenChannel(
     return castErrorCode2Ptr(ErrorCode::NoCloseChannel);
   }
 
-  channel_node_ = apollo::cyber::CreateNode(node_name_);
+  channel_node_ = edith::cyber::CreateNode(node_name_);
   if (channel_node_ == nullptr) {
     return castErrorCode2Ptr(ErrorCode::CreateNodeFailed);
   }
 
   auto callBack =
       [this](
-          const std::shared_ptr<apollo::cyber::message::RawMessage>& rawMsg) {
+          const std::shared_ptr<edith::cyber::message::RawMessage>& rawMsg) {
         updateRawMessage(rawMsg);
       };
 
   channel_reader_ =
-      channel_node_->CreateReader<apollo::cyber::message::RawMessage>(
+      channel_node_->CreateReader<edith::cyber::message::RawMessage>(
           channelName, callBack);
   if (channel_reader_ == nullptr) {
     channel_node_.reset();
@@ -226,7 +226,7 @@ void GeneralChannelMessage::RenderDebugString(const Screen* s, int key,
                                               unsigned lineNo) {
   if (has_message_come()) {
     if (raw_msg_class_ == nullptr) {
-      auto rawFactory = apollo::cyber::message::ProtobufFactory::Instance();
+      auto rawFactory = edith::cyber::message::ProtobufFactory::Instance();
       raw_msg_class_ = rawFactory->GenerateMessageByType(message_type());
     }
 

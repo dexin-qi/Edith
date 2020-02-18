@@ -23,7 +23,7 @@
 
 #include "cyber/message/raw_message.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace message {
 
@@ -40,6 +40,6 @@ inline int ByteSize(const RawMessage& message) { return message.ByteSize(); }
 
 }  // namespace message
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_MESSAGE_RAW_MESSAGE_TRAITS_H_

@@ -20,11 +20,11 @@
 #include "cyber/component/timer_component.h"
 #include "cyber/examples/proto/examples.pb.h"
 
-using apollo::cyber::Component;
-using apollo::cyber::ComponentBase;
-using apollo::cyber::TimerComponent;
-using apollo::cyber::Writer;
-using apollo::cyber::examples::proto::Driver;
+using edith::cyber::Component;
+using edith::cyber::ComponentBase;
+using edith::cyber::TimerComponent;
+using edith::cyber::Writer;
+using edith::cyber::examples::proto::Driver;
 
 class TimerComponentSample : public TimerComponent {
  public:

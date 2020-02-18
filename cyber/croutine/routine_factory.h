@@ -26,7 +26,7 @@
 #include "cyber/data/data_visitor.h"
 #include "cyber/event/perf_event_cache.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace croutine {
 
@@ -150,6 +150,6 @@ RoutineFactory CreateRoutineFactory(Function&& f) {
 
 }  // namespace croutine
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_CROUTINE_ROUTINE_FACTORY_H_

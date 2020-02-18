@@ -18,7 +18,7 @@
 
 #include "gtest/gtest.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace common {
 
@@ -64,4 +64,4 @@ TEST(MacrosTest, shut_down_test) {
 
 }  // namespace common
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

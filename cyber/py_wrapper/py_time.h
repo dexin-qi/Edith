@@ -25,7 +25,7 @@
 #include "cyber/time/rate.h"
 #include "cyber/time/time.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 class PyTime {
@@ -87,6 +87,6 @@ class PyRate {
 };
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_PY_WRAPPER_PY_TIME_H_

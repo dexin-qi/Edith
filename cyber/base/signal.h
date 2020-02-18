@@ -23,7 +23,7 @@
 #include <memory>
 #include <mutex>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace base {
 
@@ -188,6 +188,6 @@ class Slot {
 
 }  // namespace base
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_BASE_SIGNAL_H_

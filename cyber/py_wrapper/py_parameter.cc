@@ -22,11 +22,11 @@
 
 #include "cyber/py_wrapper/py_cyber.h"
 
-using apollo::cyber::Parameter;
-using apollo::cyber::PyNode;
-using apollo::cyber::PyParameter;
-using apollo::cyber::PyParameterClient;
-using apollo::cyber::PyParameterServer;
+using edith::cyber::Parameter;
+using edith::cyber::PyNode;
+using edith::cyber::PyParameter;
+using edith::cyber::PyParameterClient;
+using edith::cyber::PyParameterServer;
 
 #if PY_MAJOR_VERSION >= 3
 #define PYOBJECT_NULL_STRING PyBytes_FromStringAndSize("", 0)
@@ -49,7 +49,7 @@ T PyObjectToPtr(PyObject* pyobj, const std::string& type_ptr) {
 
 PyObject* cyber_new_PyParameter_noparam(PyObject* self, PyObject* args) {
   PyParameter* pyparameter = new PyParameter();
-  return PyCapsule_New(pyparameter, "apollo_cybertron_pyparameter", nullptr);
+  return PyCapsule_New(pyparameter, "edith_cybertron_pyparameter", nullptr);
 }
 
 PyObject* cyber_delete_PyParameter(PyObject* self, PyObject* args) {
@@ -61,7 +61,7 @@ PyObject* cyber_delete_PyParameter(PyObject* self, PyObject* args) {
   }
 
   auto* pyparameter = reinterpret_cast<PyParameter*>(
-      PyCapsule_GetPointer(pyobj_param, "apollo_cybertron_pyparameter"));
+      PyCapsule_GetPointer(pyobj_param, "edith_cybertron_pyparameter"));
   if (nullptr == pyparameter) {
     AERROR << "cyber_delete_PyParameter:parameter ptr is null!";
     Py_INCREF(Py_None);
@@ -85,7 +85,7 @@ PyObject* cyber_new_PyParameter_int(PyObject* self, PyObject* args) {
   }
 
   PyParameter* pyparameter = new PyParameter(std::string(name, len), int_value);
-  return PyCapsule_New(pyparameter, "apollo_cybertron_pyparameter", nullptr);
+  return PyCapsule_New(pyparameter, "edith_cybertron_pyparameter", nullptr);
 }
 
 PyObject* cyber_new_PyParameter_double(PyObject* self, PyObject* args) {
@@ -102,7 +102,7 @@ PyObject* cyber_new_PyParameter_double(PyObject* self, PyObject* args) {
 
   PyParameter* pyparameter =
       new PyParameter(std::string(name, len), double_value);
-  return PyCapsule_New(pyparameter, "apollo_cybertron_pyparameter", nullptr);
+  return PyCapsule_New(pyparameter, "edith_cybertron_pyparameter", nullptr);
 }
 
 PyObject* cyber_new_PyParameter_string(PyObject* self, PyObject* args) {
@@ -118,7 +118,7 @@ PyObject* cyber_new_PyParameter_string(PyObject* self, PyObject* args) {
 
   PyParameter* pyparameter =
       new PyParameter(std::string(name), std::string(string_param));
-  return PyCapsule_New(pyparameter, "apollo_cybertron_pyparameter", nullptr);
+  return PyCapsule_New(pyparameter, "edith_cybertron_pyparameter", nullptr);
 }
 
 PyObject* cyber_PyParameter_type_name(PyObject* self, PyObject* args) {
@@ -131,7 +131,7 @@ PyObject* cyber_PyParameter_type_name(PyObject* self, PyObject* args) {
   }
 
   auto* param = reinterpret_cast<PyParameter*>(
-      PyCapsule_GetPointer(pyobj_param, "apollo_cybertron_pyparameter"));
+      PyCapsule_GetPointer(pyobj_param, "edith_cybertron_pyparameter"));
   if (nullptr == param) {
     AERROR << "cyber_PyParameter_type_name ptr is null!";
     return PYOBJECT_NULL_STRING;
@@ -151,7 +151,7 @@ PyObject* cyber_PyParameter_descriptor(PyObject* self, PyObject* args) {
   }
 
   auto* param = reinterpret_cast<PyParameter*>(
-      PyCapsule_GetPointer(pyobj_param, "apollo_cybertron_pyparameter"));
+      PyCapsule_GetPointer(pyobj_param, "edith_cybertron_pyparameter"));
   if (nullptr == param) {
     AERROR << "cyber_PyParameter_descriptor ptr is null!";
     return PYOBJECT_NULL_STRING;
@@ -170,7 +170,7 @@ PyObject* cyber_PyParameter_name(PyObject* self, PyObject* args) {
   }
 
   auto* param = reinterpret_cast<PyParameter*>(
-      PyCapsule_GetPointer(pyobj_param, "apollo_cybertron_pyparameter"));
+      PyCapsule_GetPointer(pyobj_param, "edith_cybertron_pyparameter"));
   if (nullptr == param) {
     AERROR << "cyber_PyParameter_name ptr is null!";
     return PYOBJECT_NULL_STRING;
@@ -190,7 +190,7 @@ PyObject* cyber_PyParameter_debug_string(PyObject* self, PyObject* args) {
   }
 
   auto* param = reinterpret_cast<PyParameter*>(
-      PyCapsule_GetPointer(pyobj_param, "apollo_cybertron_pyparameter"));
+      PyCapsule_GetPointer(pyobj_param, "edith_cybertron_pyparameter"));
   if (nullptr == param) {
     AERROR << "cyber_PyParameter_debug_string ptr is null!";
     return PYOBJECT_NULL_STRING;
@@ -210,7 +210,7 @@ PyObject* cyber_PyParameter_as_string(PyObject* self, PyObject* args) {
   }
 
   auto* param = reinterpret_cast<PyParameter*>(
-      PyCapsule_GetPointer(pyobj_param, "apollo_cybertron_pyparameter"));
+      PyCapsule_GetPointer(pyobj_param, "edith_cybertron_pyparameter"));
   if (nullptr == param) {
     AERROR << "cyber_PyParameter_as_string ptr is null!";
     return PYOBJECT_NULL_STRING;
@@ -230,7 +230,7 @@ PyObject* cyber_PyParameter_as_double(PyObject* self, PyObject* args) {
   }
 
   auto* param = reinterpret_cast<PyParameter*>(
-      PyCapsule_GetPointer(pyobj_param, "apollo_cybertron_pyparameter"));
+      PyCapsule_GetPointer(pyobj_param, "edith_cybertron_pyparameter"));
   if (nullptr == param) {
     AERROR << "cyber_PyParameter_as_double ptr is null!";
     return PyFloat_FromDouble(0.0);
@@ -249,7 +249,7 @@ PyObject* cyber_PyParameter_as_int64(PyObject* self, PyObject* args) {
   }
 
   auto* param = reinterpret_cast<PyParameter*>(
-      PyCapsule_GetPointer(pyobj_param, "apollo_cybertron_pyparameter"));
+      PyCapsule_GetPointer(pyobj_param, "edith_cybertron_pyparameter"));
   if (nullptr == param) {
     AERROR << "cyber_PyParameter_as_int64 ptr is null!";
     return PyLong_FromLongLong(0);
@@ -272,7 +272,7 @@ PyObject* cyber_new_PyParameterClient(PyObject* self, PyObject* args) {
     return Py_None;
   }
 
-  PyNode* pynode = PyObjectToPtr<PyNode*>(pyobj_node, "apollo_cyber_pynode");
+  PyNode* pynode = PyObjectToPtr<PyNode*>(pyobj_node, "edith_cyber_pynode");
   if (nullptr == pynode) {
     AERROR << "pynode ptr is null!";
     Py_INCREF(Py_None);
@@ -288,7 +288,7 @@ PyObject* cyber_new_PyParameterClient(PyObject* self, PyObject* args) {
 
   PyParameterClient* pyparameter_clt =
       new PyParameterClient(node, std::string(service_node_name, len));
-  return PyCapsule_New(pyparameter_clt, "apollo_cybertron_pyparameterclient",
+  return PyCapsule_New(pyparameter_clt, "edith_cybertron_pyparameterclient",
                        nullptr);
 }
 
@@ -303,7 +303,7 @@ PyObject* cyber_delete_PyParameterClient(PyObject* self, PyObject* args) {
   }
 
   PyParameterClient* pyparameter_clt = reinterpret_cast<PyParameterClient*>(
-      PyCapsule_GetPointer(pyobj_param, "apollo_cybertron_pyparameterclient"));
+      PyCapsule_GetPointer(pyobj_param, "edith_cybertron_pyparameterclient"));
   if (nullptr == pyparameter_clt) {
     AERROR << "cyber_delete_PyParameterClient:pyparameter_clt ptr is null!";
     Py_INCREF(Py_None);
@@ -325,14 +325,14 @@ PyObject* cyber_PyParameter_clt_set_parameter(PyObject* self, PyObject* args) {
   }
 
   PyParameterClient* pyparam_clt = PyObjectToPtr<PyParameterClient*>(
-      pyobj_param_clt, "apollo_cybertron_pyparameterclient");
+      pyobj_param_clt, "edith_cybertron_pyparameterclient");
   if (nullptr == pyparam_clt) {
     AERROR << "pyparam_clt ptr is null!";
     Py_RETURN_FALSE;
   }
 
   PyParameter* pyparam =
-      PyObjectToPtr<PyParameter*>(pyobj_param, "apollo_cybertron_pyparameter");
+      PyObjectToPtr<PyParameter*>(pyobj_param, "edith_cybertron_pyparameter");
   if (nullptr == pyparam) {
     AERROR << "pyparam ptr is null!";
     Py_RETURN_FALSE;
@@ -357,7 +357,7 @@ PyObject* cyber_PyParameter_clt_get_parameter(PyObject* self, PyObject* args) {
     return Py_None;
   }
   PyParameterClient* pyparam_clt = PyObjectToPtr<PyParameterClient*>(
-      pyobj_param_clt, "apollo_cybertron_pyparameterclient");
+      pyobj_param_clt, "edith_cybertron_pyparameterclient");
   if (nullptr == pyparam_clt) {
     AERROR << "pyparam_clt ptr is null!";
     Py_INCREF(Py_None);
@@ -373,7 +373,7 @@ PyObject* cyber_PyParameter_clt_get_parameter(PyObject* self, PyObject* args) {
   }
 
   PyParameter* pyparameter = new PyParameter(param);
-  return PyCapsule_New(pyparameter, "apollo_cybertron_pyparameter", nullptr);
+  return PyCapsule_New(pyparameter, "edith_cybertron_pyparameter", nullptr);
 }
 
 PyObject* cyber_PyParameter_clt_get_parameter_list(PyObject* self,
@@ -389,7 +389,7 @@ PyObject* cyber_PyParameter_clt_get_parameter_list(PyObject* self,
   }
 
   auto* pyparam_clt = reinterpret_cast<PyParameterClient*>(PyCapsule_GetPointer(
-      pyobj_param_clt, "apollo_cybertron_pyparameterclient"));
+      pyobj_param_clt, "edith_cybertron_pyparameterclient"));
   if (nullptr == pyparam_clt) {
     AERROR << "cyber_PyParameter_clt_get_parameter_list pyparam_clt is null!";
     Py_INCREF(Py_None);
@@ -405,7 +405,7 @@ PyObject* cyber_PyParameter_clt_get_parameter_list(PyObject* self,
     Parameter* param_ptr = new Parameter(param);
     PyParameter* pyparameter = new PyParameter(param_ptr);
     PyObject* pyobj_param =
-        PyCapsule_New(pyparameter, "apollo_cybertron_pyparameter", nullptr);
+        PyCapsule_New(pyparameter, "edith_cybertron_pyparameter", nullptr);
     PyList_SetItem(pyobj_list, pos, pyobj_param);
     pos++;
   }
@@ -424,7 +424,7 @@ PyObject* cyber_new_PyParameterServer(PyObject* self, PyObject* args) {
     return Py_None;
   }
 
-  PyNode* pynode = PyObjectToPtr<PyNode*>(pyobj_node, "apollo_cyber_pynode");
+  PyNode* pynode = PyObjectToPtr<PyNode*>(pyobj_node, "edith_cyber_pynode");
   if (nullptr == pynode) {
     AERROR << "pynode ptr is null!";
     Py_INCREF(Py_None);
@@ -439,7 +439,7 @@ PyObject* cyber_new_PyParameterServer(PyObject* self, PyObject* args) {
   }
 
   PyParameterServer* pyparameter_srv = new PyParameterServer(node);
-  return PyCapsule_New(pyparameter_srv, "apollo_cybertron_pyparameterserver",
+  return PyCapsule_New(pyparameter_srv, "edith_cybertron_pyparameterserver",
                        nullptr);
 }
 
@@ -454,7 +454,7 @@ PyObject* cyber_delete_PyParameterServer(PyObject* self, PyObject* args) {
   }
 
   PyParameterServer* pyparameter_srv = reinterpret_cast<PyParameterServer*>(
-      PyCapsule_GetPointer(pyobj_param, "apollo_cybertron_pyparameterserver"));
+      PyCapsule_GetPointer(pyobj_param, "edith_cybertron_pyparameterserver"));
   if (nullptr == pyparameter_srv) {
     AERROR << "cyber_delete_PyParameterServer:pyparameter_srv ptr is null!";
     Py_INCREF(Py_None);
@@ -477,7 +477,7 @@ PyObject* cyber_PyParameter_srv_set_parameter(PyObject* self, PyObject* args) {
   }
 
   PyParameterServer* pyparam_srv = PyObjectToPtr<PyParameterServer*>(
-      pyobj_param_srv, "apollo_cybertron_pyparameterserver");
+      pyobj_param_srv, "edith_cybertron_pyparameterserver");
   if (nullptr == pyparam_srv) {
     AERROR << "pyparam_srv ptr is null!";
     Py_INCREF(Py_None);
@@ -485,7 +485,7 @@ PyObject* cyber_PyParameter_srv_set_parameter(PyObject* self, PyObject* args) {
   }
 
   PyParameter* pyparam =
-      PyObjectToPtr<PyParameter*>(pyobj_param, "apollo_cybertron_pyparameter");
+      PyObjectToPtr<PyParameter*>(pyobj_param, "edith_cybertron_pyparameter");
   if (nullptr == pyparam) {
     AERROR << "pyparam ptr is null!";
     Py_INCREF(Py_None);
@@ -509,7 +509,7 @@ PyObject* cyber_PyParameter_srv_get_parameter(PyObject* self, PyObject* args) {
     return Py_None;
   }
   PyParameterServer* pyparam_srv = PyObjectToPtr<PyParameterServer*>(
-      pyobj_param_srv, "apollo_cybertron_pyparameterserver");
+      pyobj_param_srv, "edith_cybertron_pyparameterserver");
   if (nullptr == pyparam_srv) {
     AERROR << "pyparam_srv ptr is null!";
     Py_INCREF(Py_None);
@@ -525,7 +525,7 @@ PyObject* cyber_PyParameter_srv_get_parameter(PyObject* self, PyObject* args) {
   }
 
   PyParameter* pyparameter = new PyParameter(param);
-  return PyCapsule_New(pyparameter, "apollo_cybertron_pyparameter", nullptr);
+  return PyCapsule_New(pyparameter, "edith_cybertron_pyparameter", nullptr);
 }
 
 PyObject* cyber_PyParameter_srv_get_parameter_list(PyObject* self,
@@ -541,7 +541,7 @@ PyObject* cyber_PyParameter_srv_get_parameter_list(PyObject* self,
   }
 
   auto* pyparam_srv = reinterpret_cast<PyParameterServer*>(PyCapsule_GetPointer(
-      pyobj_param_srv, "apollo_cybertron_pyparameterserver"));
+      pyobj_param_srv, "edith_cybertron_pyparameterserver"));
   if (nullptr == pyparam_srv) {
     AERROR << "cyber_PyParameter_srv_get_parameter_list pyparam_srv is null!";
     Py_INCREF(Py_None);
@@ -557,7 +557,7 @@ PyObject* cyber_PyParameter_srv_get_parameter_list(PyObject* self,
     Parameter* param_ptr = new Parameter(param);
     PyParameter* pyparameter = new PyParameter(param_ptr);
     PyObject* pyobj_param =
-        PyCapsule_New(pyparameter, "apollo_cybertron_pyparameter", nullptr);
+        PyCapsule_New(pyparameter, "edith_cybertron_pyparameter", nullptr);
     PyList_SetItem(pyobj_list, pos, pyobj_param);
     pos++;
   }

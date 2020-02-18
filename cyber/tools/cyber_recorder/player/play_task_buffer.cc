@@ -18,7 +18,7 @@
 
 #include <utility>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
@@ -62,4 +62,4 @@ void PlayTaskBuffer::PopFront() {
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

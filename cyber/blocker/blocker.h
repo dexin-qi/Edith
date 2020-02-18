@@ -26,7 +26,7 @@
 #include <unordered_map>
 #include <vector>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace blocker {
 
@@ -283,6 +283,6 @@ void Blocker<T>::Notify(const MessagePtr& msg) {
 
 }  // namespace blocker
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_BLOCKER_BLOCKER_H_

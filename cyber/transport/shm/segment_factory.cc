@@ -24,11 +24,11 @@
 #include "cyber/transport/shm/posix_segment.h"
 #include "cyber/transport/shm/xsi_segment.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
-using apollo::cyber::common::GlobalData;
+using edith::cyber::common::GlobalData;
 
 auto SegmentFactory::CreateSegment(uint64_t channel_id) -> SegmentPtr {
   std::string segment_type(XsiSegment::Type());
@@ -50,4 +50,4 @@ auto SegmentFactory::CreateSegment(uint64_t channel_id) -> SegmentPtr {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

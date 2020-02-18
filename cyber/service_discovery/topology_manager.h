@@ -31,7 +31,7 @@
 #include "cyber/service_discovery/specific_manager/service_manager.h"
 #include "cyber/transport/rtps/participant.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace service_discovery {
 
@@ -134,4 +134,4 @@ class TopologyManager {
 
 }  // namespace service_discovery
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

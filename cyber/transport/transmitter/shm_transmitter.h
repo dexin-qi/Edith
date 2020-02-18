@@ -31,7 +31,7 @@
 #include "cyber/transport/shm/segment_factory.h"
 #include "cyber/transport/transmitter/transmitter.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -138,6 +138,6 @@ bool ShmTransmitter<M>::Transmit(const M& msg, const MessageInfo& msg_info) {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_TRANSMITTER_SHM_TRANSMITTER_H_

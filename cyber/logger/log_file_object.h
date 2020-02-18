@@ -24,7 +24,7 @@
 
 #include "glog/logging.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace logger {
 
@@ -96,6 +96,6 @@ class LogFileObject : public google::base::Logger {
 
 }  // namespace logger
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_LOGGER_LOG_FILE_OBJECT_H_

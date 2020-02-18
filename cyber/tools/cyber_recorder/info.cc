@@ -18,14 +18,14 @@
 
 #include "cyber/record/record_message.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
-using apollo::cyber::proto::ChannelCache;
-using apollo::cyber::record::kGB;
-using apollo::cyber::record::kKB;
-using apollo::cyber::record::kMB;
+using edith::cyber::proto::ChannelCache;
+using edith::cyber::record::kGB;
+using edith::cyber::record::kKB;
+using edith::cyber::record::kMB;
 
 Info::Info() {}
 
@@ -116,4 +116,4 @@ bool Info::Display(const std::string& file) {
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

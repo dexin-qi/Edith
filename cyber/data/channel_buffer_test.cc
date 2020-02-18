@@ -22,7 +22,7 @@
 
 #include "cyber/common/util.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace data {
 
@@ -99,4 +99,4 @@ TEST(ChannelBufferTest, FetchMulti) {
 
 }  // namespace data
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

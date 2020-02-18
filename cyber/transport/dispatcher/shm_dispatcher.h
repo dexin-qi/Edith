@@ -32,15 +32,15 @@
 #include "cyber/transport/shm/notifier_factory.h"
 #include "cyber/transport/shm/segment_factory.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
 class ShmDispatcher;
 using ShmDispatcherPtr = ShmDispatcher*;
-using apollo::cyber::base::AtomicRWLock;
-using apollo::cyber::base::ReadLockGuard;
-using apollo::cyber::base::WriteLockGuard;
+using edith::cyber::base::AtomicRWLock;
+using edith::cyber::base::ReadLockGuard;
+using edith::cyber::base::WriteLockGuard;
 
 class ShmDispatcher : public Dispatcher {
  public:
@@ -114,6 +114,6 @@ void ShmDispatcher::AddListener(const RoleAttributes& self_attr,
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_DISPATCHER_SHM_DISPATCHER_H_

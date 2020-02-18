@@ -24,10 +24,10 @@
 #include "cyber/node/writer.h"
 #include "cyber/proto/unit_test.pb.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
-using apollo::cyber::proto::Chatter;
+using edith::cyber::proto::Chatter;
 
 TEST(NodeTest, cases) {
   auto node = CreateNode("node_test");
@@ -64,10 +64,10 @@ TEST(NodeTest, cases) {
 }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
-  apollo::cyber::Init(argv[0]);
+  edith::cyber::Init(argv[0]);
   return RUN_ALL_TESTS();
 }

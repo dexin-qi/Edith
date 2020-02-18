@@ -24,7 +24,7 @@
 #include "cyber/base/atomic_rw_lock.h"
 #include "cyber/service_discovery/container/warehouse_base.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace service_discovery {
 
@@ -73,6 +73,6 @@ class MultiValueWarehouse : public WarehouseBase {
 
 }  // namespace service_discovery
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_SERVICE_DISCOVERY_CONTAINER_MULTI_VALUE_WAREHOUSE_H_

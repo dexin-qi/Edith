@@ -25,7 +25,7 @@
 #include "cyber/record/file/record_file_writer.h"
 #include "cyber/record/header_builder.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
@@ -111,7 +111,7 @@ TEST(RecordFileTest, SmallMessageHighThroughputOKThreadJitter) {
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 int main(int argc, char** argv) {
   testing::GTEST_FLAG(catch_exceptions) = 1;

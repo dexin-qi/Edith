@@ -17,7 +17,7 @@
 #ifndef CYBER_RECORD_FILE_SECTION_H_
 #define CYBER_RECORD_FILE_SECTION_H_
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
@@ -28,6 +28,6 @@ struct Section {
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_RECORD_FILE_SECTION_H_

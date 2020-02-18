@@ -21,7 +21,7 @@
 #include <iostream>
 #include <thread>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 Duration::Duration(int64_t nanoseconds) { nanoseconds_ = nanoseconds; }
@@ -119,4 +119,4 @@ std::ostream &operator<<(std::ostream &os, const Duration &rhs) {
 }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

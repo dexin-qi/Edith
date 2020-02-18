@@ -26,8 +26,8 @@ from google.protobuf.descriptor_pb2 import FileDescriptorProto
 from modules.common.util.testdata.simple_pb2 import SimpleMessage
 
 
-MSG_TYPE = "apollo.common.util.test.SimpleMessage"
-MSG_TYPE_CHATTER = "apollo.cyber.proto.Chatter"
+MSG_TYPE = "edith.common.util.test.SimpleMessage"
+MSG_TYPE_CHATTER = "edith.cyber.proto.Chatter"
 
 
 def test_record_writer(writer_path):

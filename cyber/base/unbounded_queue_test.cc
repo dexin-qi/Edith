@@ -18,7 +18,7 @@
 
 #include "gtest/gtest.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace base {
 
@@ -69,4 +69,4 @@ TEST(UnboundedQueueTest, all_in_one) {
 
 }  // namespace base
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

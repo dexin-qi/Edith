@@ -22,7 +22,7 @@
 #include "cyber/common/file.h"
 #include "cyber/component/component_base.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace mainboard {
 
@@ -138,4 +138,4 @@ int ModuleController::GetComponentNum(const std::string& path) {
 
 }  // namespace mainboard
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

@@ -23,7 +23,7 @@
 #include "cyber/common/log.h"
 #include "cyber/common/util.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -206,4 +206,4 @@ void ConditionNotifier::Reset() {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

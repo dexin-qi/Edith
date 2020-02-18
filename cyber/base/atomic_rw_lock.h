@@ -28,7 +28,7 @@
 
 #include "cyber/base/rw_lock_guard.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace base {
 
@@ -114,6 +114,6 @@ inline void AtomicRWLock::WriteUnlock() { lock_num_.fetch_add(1); }
 
 }  // namespace base
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_BASE_ATOMIC_RW_LOCK_H_

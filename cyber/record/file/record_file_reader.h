@@ -33,7 +33,7 @@
 #include "cyber/record/file/section.h"
 #include "cyber/time/time.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
@@ -89,6 +89,6 @@ bool RecordFileReader::ReadSection(int64_t size, T* message) {
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_RECORD_FILE_RECORD_FILE_READER_H_

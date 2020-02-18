@@ -23,7 +23,7 @@
 #include "cyber/scheduler/common/pin_thread.h"
 #include "cyber/scheduler/policy/choreography_context.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace scheduler {
 
@@ -53,4 +53,4 @@ TEST(ProcessorTest, all) {
 
 }  // namespace scheduler
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

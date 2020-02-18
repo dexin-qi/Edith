@@ -17,7 +17,7 @@
 #include "cyber/transport/common/endpoint.h"
 #include "cyber/common/global_data.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -40,4 +40,4 @@ Endpoint::~Endpoint() {}
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

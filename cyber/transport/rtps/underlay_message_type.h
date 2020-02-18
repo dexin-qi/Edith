@@ -20,7 +20,7 @@
 #include "cyber/transport/rtps/underlay_message.h"
 #include "fastrtps/TopicDataType.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -47,6 +47,6 @@ class UnderlayMessageType : public eprosima::fastrtps::TopicDataType {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_RTPS_UNDERLAY_MESSAGE_TYPE_H_

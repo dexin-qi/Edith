@@ -34,7 +34,7 @@
 #include "cyber/record/record_reader.h"
 #include "cyber/record/record_writer.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
@@ -143,6 +143,6 @@ class PyRecordWriter {
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // PYTHON_WRAPPER_PY_RECORD_H_

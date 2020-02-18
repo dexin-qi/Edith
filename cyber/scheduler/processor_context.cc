@@ -16,7 +16,7 @@
 
 #include "cyber/scheduler/processor_context.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace scheduler {
 
@@ -24,4 +24,4 @@ void ProcessorContext::Shutdown() { stop_.store(true); }
 
 }  // namespace scheduler
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

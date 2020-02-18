@@ -20,7 +20,7 @@
 #include <functional>
 #include <mutex>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 class TimerBucket;
@@ -38,6 +38,6 @@ struct TimerTask {
 };
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TIMER_TIMER_TASK_H_

@@ -21,10 +21,10 @@
 #include "cyber/croutine/routine_factory.h"
 #include "cyber/scheduler/scheduler_factory.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
-using apollo::cyber::common::GlobalData;
+using edith::cyber::common::GlobalData;
 static const char* const task_prefix = "/internal/task";
 
 TaskManager::TaskManager()
@@ -70,4 +70,4 @@ void TaskManager::Shutdown() {
 }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

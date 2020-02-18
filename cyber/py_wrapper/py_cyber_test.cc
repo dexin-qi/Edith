@@ -25,7 +25,7 @@
 #include "cyber/message/py_message.h"
 #include "cyber/proto/unit_test.pb.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 TEST(PyCyberTest, init_ok) {
@@ -39,7 +39,7 @@ TEST(PyCyberTest, create_reader) {
   PyNode node("listener");
   std::unique_ptr<PyReader> pr(
       node.create_reader("channel/chatter", chat.GetTypeName()));
-  EXPECT_EQ("apollo.cyber.proto.Chatter", chat.GetTypeName());
+  EXPECT_EQ("edith.cyber.proto.Chatter", chat.GetTypeName());
   EXPECT_NE(pr, nullptr);
   pr->register_func([](const char* channel_name) -> int {
     AINFO << "recv->[ " << channel_name << " ]";
@@ -60,7 +60,7 @@ TEST(PyCyberTest, create_writer) {
   msgChat->set_timestamp(Time::Now().ToNanosecond());
   msgChat->set_lidar_timestamp(Time::Now().ToNanosecond());
   msgChat->set_seq(seq++);
-  msgChat->set_content("Hello, apollo!");
+  msgChat->set_content("Hello, edith!");
 
   std::string org_data;
   msgChat->SerializeToString(&org_data);
@@ -68,13 +68,13 @@ TEST(PyCyberTest, create_writer) {
 }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
-  apollo::cyber::py_init("py_init_test");
+  edith::cyber::py_init("py_init_test");
   const int ret_val = RUN_ALL_TESTS();
-  apollo::cyber::py_shutdown();
+  edith::cyber::py_shutdown();
 
   return ret_val;
 }

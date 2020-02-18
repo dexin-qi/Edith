@@ -24,7 +24,7 @@
 #include "cyber/transport/message/history.h"
 #include "cyber/transport/message/message_info.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -67,6 +67,6 @@ void Receiver<M>::OnNewMessage(const MessagePtr& msg,
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_RECEIVER_RECEIVER_H_

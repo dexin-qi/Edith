@@ -25,7 +25,7 @@
 #include "cyber/node/node_channel_impl.h"
 #include "cyber/node/node_service_impl.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 template <typename M0, typename M1, typename M2, typename M3>
@@ -278,6 +278,6 @@ auto Node::GetReader(const std::string& name)
 }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_NODE_NODE_H_

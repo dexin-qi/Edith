@@ -29,7 +29,7 @@
 #include "cyber/data/channel_buffer.h"
 #include "cyber/data/fusion/data_fusion.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace data {
 namespace fusion {
@@ -182,6 +182,6 @@ class AllLatest<M0, M1, NullType, NullType> : public DataFusion<M0, M1> {
 }  // namespace fusion
 }  // namespace data
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_DATA_FUSION_ALL_LATEST_H_

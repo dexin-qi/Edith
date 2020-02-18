@@ -20,7 +20,7 @@
 #include <thread>
 #include "gtest/gtest.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace base {
 
@@ -99,4 +99,4 @@ TEST(AtomicHashMapTest, concurrency) {
 
 }  // namespace base
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

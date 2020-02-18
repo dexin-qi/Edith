@@ -26,10 +26,10 @@
 
 #include "cyber/scheduler/scheduler_factory.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
-using apollo::cyber::scheduler::Scheduler;
+using edith::cyber::scheduler::Scheduler;
 
 class SysMo {
  public:
@@ -51,6 +51,6 @@ class SysMo {
 };
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_SYSMO_SYSMO_H_

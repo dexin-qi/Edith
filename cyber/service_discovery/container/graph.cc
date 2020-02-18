@@ -18,7 +18,7 @@
 
 #include <queue>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace service_discovery {
 
@@ -280,4 +280,4 @@ bool Graph::LevelTraverse(const Vertice& start, const Vertice& end) {
 
 }  // namespace service_discovery
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

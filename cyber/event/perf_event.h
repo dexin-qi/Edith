@@ -24,7 +24,7 @@
 #include "cyber/common/global_data.h"
 #include "cyber/common/macros.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace event {
 
@@ -162,6 +162,6 @@ class TransportEvent : public EventBase {
 
 }  // namespace event
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_EVENT_PERF_EVENT_H_

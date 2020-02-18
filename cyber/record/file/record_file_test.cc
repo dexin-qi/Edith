@@ -24,20 +24,20 @@
 #include "cyber/record/file/record_file_writer.h"
 #include "cyber/record/header_builder.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
-using apollo::cyber::proto::Channel;
-using apollo::cyber::proto::ChunkBody;
-using apollo::cyber::proto::ChunkHeader;
-using apollo::cyber::proto::Header;
-using apollo::cyber::proto::SectionType;
-using apollo::cyber::proto::SingleMessage;
+using edith::cyber::proto::Channel;
+using edith::cyber::proto::ChunkBody;
+using edith::cyber::proto::ChunkHeader;
+using edith::cyber::proto::Header;
+using edith::cyber::proto::SectionType;
+using edith::cyber::proto::SingleMessage;
 
 constexpr char kChan1[] = "/test1";
 constexpr char kChan2[] = "/test2";
-constexpr char kMsgType[] = "apollo.cyber.proto.Test";
+constexpr char kMsgType[] = "edith.cyber.proto.Test";
 constexpr char kStr10B[] = "1234567890";
 constexpr char kTestFile1[] = "record_file_test_1.record";
 constexpr char kTestFile2[] = "record_file_test_2.record";
@@ -308,7 +308,7 @@ TEST(RecordFileTest, TestIndex) {
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 int main(int argc, char** argv) {
   testing::GTEST_FLAG(catch_exceptions) = 1;

@@ -30,9 +30,9 @@ const char LIBRARY_1[] =
     "/edith/bazel-bin/cyber/class_loader/test/libplugin1.so";
 const char LIBRARY_2[] =
     "/edith/bazel-bin/cyber/class_loader/test/libplugin2.so";
-using apollo::cyber::class_loader::ClassLoader;
-using apollo::cyber::class_loader::ClassLoaderManager;
-using apollo::cyber::class_loader::utility::IsLibraryLoadedByAnybody;
+using edith::cyber::class_loader::ClassLoader;
+using edith::cyber::class_loader::ClassLoaderManager;
+using edith::cyber::class_loader::utility::IsLibraryLoadedByAnybody;
 
 TEST(ClassLoaderTest, createClassObj) {
   ClassLoader loader1(LIBRARY_1);
@@ -176,14 +176,14 @@ class InvalidBaseClass {};
 
 TEST(ClassLoaderTest, util_test) {
   ClassLoader loader1(LIBRARY_1);
-  apollo::cyber::class_loader::utility::LoadLibrary("1", &loader1);
-  apollo::cyber::class_loader::utility::UnloadLibrary("1", nullptr);
-  apollo::cyber::class_loader::utility::IsLibraryLoaded(LIBRARY_1, &loader1);
-  apollo::cyber::class_loader::utility::IsLibraryLoaded(LIBRARY_2, &loader1);
+  edith::cyber::class_loader::utility::LoadLibrary("1", &loader1);
+  edith::cyber::class_loader::utility::UnloadLibrary("1", nullptr);
+  edith::cyber::class_loader::utility::IsLibraryLoaded(LIBRARY_1, &loader1);
+  edith::cyber::class_loader::utility::IsLibraryLoaded(LIBRARY_2, &loader1);
 }
 
 int main(int argc, char** argv) {
-  apollo::cyber::Init(argv[0]);
+  edith::cyber::Init(argv[0]);
   testing::InitGoogleTest(&argc, argv);
   const int output = RUN_ALL_TESTS();
   google::protobuf::ShutdownProtobufLibrary();

@@ -33,7 +33,7 @@
 
 #include "cyber/common/global_data.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace logger {
 
@@ -80,6 +80,6 @@ inline void FindModuleName(std::string* log_message, std::string* module_name) {
 
 }  // namespace logger
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_LOGGER_LOGGER_UTIL_H_

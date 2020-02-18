@@ -19,7 +19,7 @@
 #include <vector>
 #include "gtest/gtest.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace base {
 
@@ -36,4 +36,4 @@ TEST(ForEachTest, base) {
 
 }  // namespace base
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

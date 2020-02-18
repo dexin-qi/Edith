@@ -18,14 +18,14 @@
 
 #include <utility>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
-using apollo::cyber::proto::Channel;
-using apollo::cyber::proto::ChunkBody;
-using apollo::cyber::proto::ChunkHeader;
-using apollo::cyber::proto::SectionType;
+using edith::cyber::proto::Channel;
+using edith::cyber::proto::ChunkBody;
+using edith::cyber::proto::ChunkHeader;
+using edith::cyber::proto::SectionType;
 
 RecordReader::~RecordReader() {}
 
@@ -199,4 +199,4 @@ const std::string& RecordReader::GetProtoDesc(
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

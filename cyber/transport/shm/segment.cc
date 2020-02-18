@@ -20,7 +20,7 @@
 #include "cyber/common/util.h"
 #include "cyber/transport/shm/shm_conf.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -163,4 +163,4 @@ uint32_t Segment::GetNextWritableBlockIndex() {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

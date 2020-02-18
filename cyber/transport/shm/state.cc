@@ -16,7 +16,7 @@
 
 #include "cyber/transport/shm/state.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -27,4 +27,4 @@ State::~State() {}
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

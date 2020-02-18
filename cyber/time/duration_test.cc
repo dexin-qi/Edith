@@ -20,7 +20,7 @@
 
 #include "cyber/time/time.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 TEST(DurationTest, constructor) {
@@ -64,4 +64,4 @@ TEST(DurationTest, is_zero) {
 }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

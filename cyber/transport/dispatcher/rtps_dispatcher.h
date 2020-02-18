@@ -31,7 +31,7 @@
 #include "cyber/transport/rtps/participant.h"
 #include "cyber/transport/rtps/sub_listener.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -112,6 +112,6 @@ void RtpsDispatcher::AddListener(const RoleAttributes& self_attr,
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_DISPATCHER_RTPS_DISPATCHER_H_

@@ -28,7 +28,7 @@
 #include "cyber/node/writer.h"
 #include "cyber/proto/run_mode_conf.pb.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 class Node;
@@ -254,6 +254,6 @@ void NodeChannelImpl::FillInAttr(proto::RoleAttributes* attr) {
 }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_NODE_NODE_CHANNEL_IMPL_H_

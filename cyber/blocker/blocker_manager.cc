@@ -16,7 +16,7 @@
 
 #include "cyber/blocker/blocker_manager.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace blocker {
 
@@ -41,4 +41,4 @@ void BlockerManager::Reset() {
 
 }  // namespace blocker
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

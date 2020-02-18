@@ -21,11 +21,11 @@
 
 #include "cyber/proto/unit_test.pb.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace blocker {
 
-using apollo::cyber::proto::UnitTest;
+using edith::cyber::proto::UnitTest;
 
 TEST(BlockerTest, constructor) {
   BlockerAttr attr(10, "channel");
@@ -127,4 +127,4 @@ TEST(BlockerTest, subscribe) {
 
 }  // namespace blocker
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

@@ -20,7 +20,7 @@
 #include <utility>
 #include "gtest/gtest.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace service_discovery {
 
@@ -234,4 +234,4 @@ TEST(MultiValueWarehouseTest, test1) {
 
 }  // namespace service_discovery
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

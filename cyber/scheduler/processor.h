@@ -29,7 +29,7 @@
 #include "cyber/proto/scheduler_conf.pb.h"
 #include "cyber/scheduler/processor_context.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace scheduler {
 
@@ -70,6 +70,6 @@ class Processor {
 
 }  // namespace scheduler
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_SCHEDULER_PROCESSOR_H_

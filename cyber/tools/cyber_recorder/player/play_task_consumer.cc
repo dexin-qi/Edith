@@ -19,7 +19,7 @@
 #include "cyber/common/log.h"
 #include "cyber/time/time.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
@@ -131,4 +131,4 @@ void PlayTaskConsumer::ThreadFunc() {
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

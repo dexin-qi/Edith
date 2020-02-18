@@ -23,12 +23,12 @@
 #include "cyber/time/rate.h"
 #include "cyber/time/time.h"
 
-using apollo::cyber::Rate;
-using apollo::cyber::Time;
-using apollo::cyber::proto::Chatter;
+using edith::cyber::Rate;
+using edith::cyber::Time;
+using edith::cyber::proto::Chatter;
 
-using apollo::cyber::message::PyMessageWrap;
-apollo::cyber::PyService *server = nullptr;
+using edith::cyber::message::PyMessageWrap;
+edith::cyber::PyService *server = nullptr;
 int service_callback(const char *channel_name) {
   if (server == nullptr) {
     AERROR << "server is null.";
@@ -54,8 +54,8 @@ int service_callback(const char *channel_name) {
 }
 
 int main(int argc, char *argv[]) {
-  apollo::cyber::Init(argv[0]);
-  apollo::cyber::PyNode node("start_node");
+  edith::cyber::Init(argv[0]);
+  edith::cyber::PyNode node("start_node");
   Chatter driver_msg;
   driver_msg.set_seq(99);
   driver_msg.set_timestamp(88);
@@ -63,7 +63,7 @@ int main(int argc, char *argv[]) {
   server = node.create_service("test_service", driver_msg.GetTypeName());
   auto client = node.create_client("test_service", driver_msg.GetTypeName());
   server->register_func(service_callback);
-  while (apollo::cyber::OK()) {
+  while (edith::cyber::OK()) {
     std::string org_data;
     driver_msg.SerializeToString(&org_data);
     AINFO << "=========================";
@@ -78,6 +78,6 @@ int main(int argc, char *argv[]) {
     sleep(1);
   }
 
-  apollo::cyber::WaitForShutdown();
+  edith::cyber::WaitForShutdown();
   return 0;
 }

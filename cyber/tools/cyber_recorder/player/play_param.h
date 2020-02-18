@@ -21,7 +21,7 @@
 #include <set>
 #include <string>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
@@ -41,6 +41,6 @@ struct PlayParam {
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TOOLS_CYBER_RECORDER_PLAYER_PLAY_PARAM_H_

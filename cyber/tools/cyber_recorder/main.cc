@@ -30,16 +30,16 @@
 #include "cyber/tools/cyber_recorder/recoverer.h"
 #include "cyber/tools/cyber_recorder/spliter.h"
 
-using apollo::cyber::common::GetFileName;
-using apollo::cyber::common::StringToUnixSeconds;
-using apollo::cyber::common::UnixSecondsToString;
-using apollo::cyber::record::HeaderBuilder;
-using apollo::cyber::record::Info;
-using apollo::cyber::record::Player;
-using apollo::cyber::record::PlayParam;
-using apollo::cyber::record::Recorder;
-using apollo::cyber::record::Recoverer;
-using apollo::cyber::record::Spliter;
+using edith::cyber::common::GetFileName;
+using edith::cyber::common::StringToUnixSeconds;
+using edith::cyber::common::UnixSecondsToString;
+using edith::cyber::record::HeaderBuilder;
+using edith::cyber::record::Info;
+using edith::cyber::record::Player;
+using edith::cyber::record::PlayParam;
+using edith::cyber::record::Recorder;
+using edith::cyber::record::Recoverer;
+using edith::cyber::record::Spliter;
 
 const char INFO_OPTIONS[] = "h";
 const char RECORD_OPTIONS[] = "o:ac:i:m:h";
@@ -360,7 +360,7 @@ int main(int argc, char** argv) {
       std::cout << "usage: cyber_recorder info file" << std::endl;
       return -1;
     }
-    ::apollo::cyber::Init(argv[0]);
+    ::edith::cyber::Init(argv[0]);
     Info info;
     bool info_result = info.Display(file_path);
     return info_result ? 0 : -1;
@@ -377,7 +377,7 @@ int main(int argc, char** argv) {
       std::string default_output_file = opt_file_vec[0] + ".recover";
       opt_output_vec.push_back(default_output_file);
     }
-    ::apollo::cyber::Init(argv[0]);
+    ::edith::cyber::Init(argv[0]);
     Recoverer recoverer(opt_file_vec[0], opt_output_vec[0]);
     bool recover_result = recoverer.Proc();
     return recover_result ? 0 : -1;
@@ -388,7 +388,7 @@ int main(int argc, char** argv) {
       std::cout << "MUST specify file option (-f)." << std::endl;
       return -1;
     }
-    ::apollo::cyber::Init(argv[0]);
+    ::edith::cyber::Init(argv[0]);
     PlayParam play_param;
     play_param.is_play_all_channels = opt_all || opt_white_channels.empty();
     play_param.is_loop_playback = opt_loop;
@@ -422,12 +422,12 @@ int main(int argc, char** argv) {
           UnixSecondsToString(time(nullptr), "%Y%m%d%H%M%S") + ".record";
       opt_output_vec.push_back(default_output_file);
     }
-    ::apollo::cyber::Init(argv[0]);
+    ::edith::cyber::Init(argv[0]);
     auto recorder = std::make_shared<Recorder>(opt_output_vec[0], opt_all,
                                                opt_white_channels, opt_header);
     bool record_result = recorder->Start();
     if (record_result) {
-      while (!::apollo::cyber::IsShutdown()) {
+      while (!::edith::cyber::IsShutdown()) {
         std::this_thread::sleep_for(std::chrono::milliseconds(100));
       }
       record_result = recorder->Stop();
@@ -446,7 +446,7 @@ int main(int argc, char** argv) {
       std::string default_output_file = opt_file_vec[0] + ".split";
       opt_output_vec.push_back(default_output_file);
     }
-    ::apollo::cyber::Init(argv[0]);
+    ::edith::cyber::Init(argv[0]);
     Spliter spliter(opt_file_vec[0], opt_output_vec[0], opt_white_channels,
                     opt_black_channels, opt_begin, opt_end);
     bool split_result = spliter.Proc();

@@ -19,7 +19,7 @@
 
 #include <condition_variable>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace scheduler {
 
@@ -34,6 +34,6 @@ class CvWrapper {
 
 }  // namespace scheduler
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_SCHEDULER_COMMON_CV_WRAPPER_H_

@@ -16,7 +16,7 @@
 
 #include "cyber/transport/dispatcher/rtps_dispatcher.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -85,4 +85,4 @@ void RtpsDispatcher::OnMessage(uint64_t channel_id,
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

@@ -27,11 +27,11 @@
 #include "cyber/scheduler/processor_context.h"
 #include "cyber/scheduler/scheduler_factory.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace scheduler {
 
-using apollo::cyber::proto::InnerThread;
+using edith::cyber::proto::InnerThread;
 
 void proc() {}
 
@@ -87,4 +87,4 @@ TEST(SchedulerTest, set_inner_thread_attr) {
 
 }  // namespace scheduler
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

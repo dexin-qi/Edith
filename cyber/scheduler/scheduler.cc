@@ -27,11 +27,11 @@
 #include "cyber/scheduler/processor.h"
 #include "cyber/scheduler/processor_context.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace scheduler {
 
-using apollo::cyber::common::GlobalData;
+using edith::cyber::common::GlobalData;
 
 bool Scheduler::CreateTask(const RoutineFactory& factory,
                            const std::string& name) {
@@ -151,4 +151,4 @@ void Scheduler::Shutdown() {
 }
 }  // namespace scheduler
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

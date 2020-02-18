@@ -18,16 +18,16 @@
 
 #include "cyber/common/file.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
-using apollo::cyber::proto::SectionType;
+using edith::cyber::proto::SectionType;
 
 bool RecordFileReader::Open(const std::string& path) {
   std::lock_guard<std::mutex> lock(mutex_);
   path_ = path;
-  if (!::apollo::cyber::common::PathExists(path_)) {
+  if (!::edith::cyber::common::PathExists(path_)) {
     AERROR << "File not exist, file: " << path_;
     return false;
   }
@@ -144,4 +144,4 @@ bool RecordFileReader::SkipSection(int64_t size) {
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

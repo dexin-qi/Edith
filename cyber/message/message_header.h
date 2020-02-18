@@ -23,7 +23,7 @@
 #include <cstring>
 #include <string>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace message {
 
@@ -130,6 +130,6 @@ class MessageHeader {
 
 }  // namespace message
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_MESSAGE_MESSAGE_HEADER_H_

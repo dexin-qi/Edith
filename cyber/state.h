@@ -27,7 +27,7 @@
 
 #include "cyber/common/log.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 enum State : std::uint8_t {
@@ -60,6 +60,6 @@ inline void AsyncShutdown() {
 }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_STATE_H_

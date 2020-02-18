@@ -24,7 +24,7 @@
 
 #include "cyber/transport/common/identity.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -72,4 +72,4 @@ TEST(MessageInfoTest, test) {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

@@ -26,7 +26,7 @@
 #include "cyber/message/py_message_traits.h"
 #include "cyber/message/raw_message_traits.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace message {
 
@@ -291,6 +291,6 @@ std::string GetMessageName() {
 
 }  // namespace message
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_MESSAGE_MESSAGE_TRAITS_H_

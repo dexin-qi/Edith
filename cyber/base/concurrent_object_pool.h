@@ -28,7 +28,7 @@
 #include "cyber/base/for_each.h"
 #include "cyber/base/macros.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace base {
 
@@ -149,6 +149,6 @@ void CCObjectPool<T>::ReleaseObject(T *object) {
 
 }  // namespace base
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_BASE_CONCURRENT_OBJECT_POOL_H_

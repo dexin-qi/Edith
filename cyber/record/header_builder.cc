@@ -16,11 +16,11 @@
 
 #include "cyber/record/header_builder.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
-using ::apollo::cyber::proto::CompressType;
+using ::edith::cyber::proto::CompressType;
 
 proto::Header HeaderBuilder::GetHeader() {
   proto::Header header;
@@ -86,4 +86,4 @@ proto::Header HeaderBuilder::GetHeaderWithChunkParams(
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

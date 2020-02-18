@@ -18,7 +18,7 @@
 
 #include "gtest/gtest.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -53,4 +53,4 @@ TEST(ConditionNotifierTest, shutdown) {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

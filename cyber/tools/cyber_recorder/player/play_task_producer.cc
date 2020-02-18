@@ -24,7 +24,7 @@
 #include "cyber/message/protobuf_factory.h"
 #include "cyber/record/record_viewer.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
@@ -188,7 +188,7 @@ bool PlayTaskProducer::UpdatePlayParam() {
 
 bool PlayTaskProducer::CreateWriters() {
   std::string node_name = "cyber_recorder_play_" + std::to_string(getpid());
-  node_ = apollo::cyber::CreateNode(node_name);
+  node_ = edith::cyber::CreateNode(node_name);
   if (node_ == nullptr) {
     AERROR << "create node failed.";
     return false;
@@ -278,4 +278,4 @@ void PlayTaskProducer::ThreadFunc() {
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

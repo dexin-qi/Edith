@@ -17,7 +17,7 @@
 
 #include "cyber/class_loader/class_loader.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace class_loader {
 namespace utility {
@@ -80,4 +80,4 @@ const std::string AbstractClassFactoryBase::GetClassName() const {
 }  // namespace utility
 }  // namespace class_loader
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

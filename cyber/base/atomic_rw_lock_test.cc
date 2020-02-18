@@ -21,7 +21,7 @@
 
 #include "cyber/base/reentrant_rw_lock.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace base {
 
@@ -93,4 +93,4 @@ TEST(ReentrantRWLockTest, write_lock) {
 
 }  // namespace base
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

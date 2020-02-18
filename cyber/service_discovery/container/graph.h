@@ -23,7 +23,7 @@
 
 #include "cyber/base/atomic_rw_lock.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace service_discovery {
 
@@ -128,6 +128,6 @@ class Graph {
 
 }  // namespace service_discovery
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_SERVICE_DISCOVERY_CONTAINER_GRAPH_H_

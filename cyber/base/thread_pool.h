@@ -29,7 +29,7 @@
 
 #include "cyber/base/bounded_queue.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace base {
 
@@ -99,6 +99,6 @@ inline ThreadPool::~ThreadPool() {
 
 }  // namespace base
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_BASE_THREAD_POOL_H_

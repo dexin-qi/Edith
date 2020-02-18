@@ -23,7 +23,7 @@
 #include "cyber/transport/shm/condition_notifier.h"
 #include "cyber/transport/shm/multicast_notifier.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -59,4 +59,4 @@ auto NotifierFactory::CreateMulticastNotifier() -> NotifierPtr {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

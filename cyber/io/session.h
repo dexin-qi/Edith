@@ -25,7 +25,7 @@
 
 #include "cyber/io/poll_handler.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace io {
 
@@ -74,6 +74,6 @@ class Session {
 
 }  // namespace io
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_IO_SESSION_H_

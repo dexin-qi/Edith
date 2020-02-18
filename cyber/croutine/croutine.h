@@ -28,7 +28,7 @@
 #include "cyber/common/log.h"
 #include "cyber/croutine/detail/routine_context.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace croutine {
 
@@ -208,6 +208,6 @@ inline void CRoutine::SetUpdateFlag() {
 
 }  // namespace croutine
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_CROUTINE_CROUTINE_H_

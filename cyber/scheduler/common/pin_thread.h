@@ -23,7 +23,7 @@
 
 #include "cyber/common/log.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace scheduler {
 
@@ -37,6 +37,6 @@ void SetSchedPolicy(std::thread* thread, std::string spolicy,
 
 }  // namespace scheduler
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_SCHEDULER_COMMON_PIN_THREAD_H_

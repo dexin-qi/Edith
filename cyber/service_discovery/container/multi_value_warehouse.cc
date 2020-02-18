@@ -21,7 +21,7 @@
 
 #include "cyber/common/log.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace service_discovery {
 
@@ -213,4 +213,4 @@ void MultiValueWarehouse::GetAllRoles(std::vector<RoleAttributes>* roles_attr) {
 
 }  // namespace service_discovery
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

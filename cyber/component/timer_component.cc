@@ -18,7 +18,7 @@
 
 #include "cyber/timer/timer.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 TimerComponent::TimerComponent() {}
@@ -56,4 +56,4 @@ void TimerComponent::Clear() { timer_.reset(); }
 uint64_t TimerComponent::GetInterval() const { return interval_; }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

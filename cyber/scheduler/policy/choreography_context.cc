@@ -23,14 +23,14 @@
 
 #include "cyber/common/types.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace scheduler {
 
-using apollo::cyber::base::ReadLockGuard;
-using apollo::cyber::base::WriteLockGuard;
+using edith::cyber::base::ReadLockGuard;
+using edith::cyber::base::WriteLockGuard;
 
-using apollo::cyber::croutine::RoutineState;
+using edith::cyber::croutine::RoutineState;
 
 std::shared_ptr<CRoutine> ChoreographyContext::NextRoutine() {
   if (cyber_unlikely(stop_.load())) {
@@ -102,4 +102,4 @@ bool ChoreographyContext::RemoveCRoutine(uint64_t crid) {
 }
 }  // namespace scheduler
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

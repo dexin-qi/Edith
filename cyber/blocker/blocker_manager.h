@@ -24,7 +24,7 @@
 
 #include "cyber/blocker/blocker.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace blocker {
 
@@ -152,6 +152,6 @@ std::shared_ptr<Blocker<T>> BlockerManager::GetOrCreateBlocker(
 
 }  // namespace blocker
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_BLOCKER_BLOCKER_MANAGER_H_

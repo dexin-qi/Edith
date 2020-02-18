@@ -29,7 +29,7 @@
 #include "cyber/common/macros.h"
 #include "cyber/io/poll_data.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace io {
 
@@ -74,6 +74,6 @@ class Poller {
 
 }  // namespace io
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_IO_POLLER_H_

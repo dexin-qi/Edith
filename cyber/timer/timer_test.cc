@@ -26,7 +26,7 @@
 
 #include "cyber/timer/timer.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace timer {
 
@@ -94,10 +94,10 @@ TEST(TimerTest, sim_mode) {
 
 }  // namespace timer
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
-  apollo::cyber::Init(argv[0]);
+  edith::cyber::Init(argv[0]);
   return RUN_ALL_TESTS();
 }

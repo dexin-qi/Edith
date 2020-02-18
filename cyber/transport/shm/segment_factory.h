@@ -19,7 +19,7 @@
 
 #include "cyber/transport/shm/segment.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -30,6 +30,6 @@ class SegmentFactory {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_SHM_SEGMENT_FACTORY_H_

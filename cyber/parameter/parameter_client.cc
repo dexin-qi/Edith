@@ -18,7 +18,7 @@
 #include "cyber/node/node.h"
 #include "cyber/parameter/parameter_service_names.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 ParameterClient::ParameterClient(const std::shared_ptr<Node>& node,
@@ -78,4 +78,4 @@ bool ParameterClient::ListParameters(std::vector<Parameter>* parameters) {
 }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

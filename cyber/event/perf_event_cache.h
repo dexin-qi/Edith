@@ -28,7 +28,7 @@
 #include "cyber/event/perf_event.h"
 #include "cyber/proto/perf_conf.pb.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace event {
 
@@ -69,6 +69,6 @@ class PerfEventCache {
 
 }  // namespace event
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_EVENT_PERF_EVENT_CACHE_H_

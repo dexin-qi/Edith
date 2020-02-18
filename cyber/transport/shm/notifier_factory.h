@@ -21,7 +21,7 @@
 
 #include "cyber/transport/shm/notifier_base.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -36,6 +36,6 @@ class NotifierFactory {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_SHM_NOTIFIER_FACTORY_H_

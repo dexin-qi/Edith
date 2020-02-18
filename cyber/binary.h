@@ -19,7 +19,7 @@
 
 #include <string>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 class Binary {
  public:
@@ -31,6 +31,6 @@ class Binary {
   }
 };
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_BINARY_H_

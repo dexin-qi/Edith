@@ -19,7 +19,7 @@
 
 #include <string>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 /**
@@ -51,6 +51,6 @@ class ServiceBase {
 };
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_SERVICE_SERVICE_BASE_H_

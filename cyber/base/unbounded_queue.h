@@ -22,7 +22,7 @@
 #include <cstdint>
 #include <memory>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace base {
 
@@ -113,6 +113,6 @@ class UnboundedQueue {
 
 }  // namespace base
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_BASE_UNBOUNDED_QUEUE_H_

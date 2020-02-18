@@ -18,7 +18,7 @@
 
 #include <atomic>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 namespace {
@@ -30,4 +30,4 @@ State GetState() { return g_cyber_state.load(); }
 void SetState(const State& state) { g_cyber_state.store(state); }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

@@ -24,7 +24,7 @@
 
 #include "cyber/proto/role_attributes.pb.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 /**
@@ -101,6 +101,6 @@ class WriterBase {
 };
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_NODE_WRITER_BASE_H_

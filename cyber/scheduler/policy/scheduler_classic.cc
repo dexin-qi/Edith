@@ -25,25 +25,25 @@
 #include "cyber/scheduler/policy/classic_context.h"
 #include "cyber/scheduler/processor.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace scheduler {
 
-using apollo::cyber::base::ReadLockGuard;
-using apollo::cyber::base::WriteLockGuard;
-using apollo::cyber::common::GetAbsolutePath;
-using apollo::cyber::common::GetProtoFromFile;
-using apollo::cyber::common::GlobalData;
-using apollo::cyber::common::PathExists;
-using apollo::cyber::common::WorkRoot;
-using apollo::cyber::croutine::RoutineState;
+using edith::cyber::base::ReadLockGuard;
+using edith::cyber::base::WriteLockGuard;
+using edith::cyber::common::GetAbsolutePath;
+using edith::cyber::common::GetProtoFromFile;
+using edith::cyber::common::GlobalData;
+using edith::cyber::common::PathExists;
+using edith::cyber::common::WorkRoot;
+using edith::cyber::croutine::RoutineState;
 
 SchedulerClassic::SchedulerClassic() {
   std::string conf("conf/");
   conf.append(GlobalData::Instance()->ProcessGroup()).append(".conf");
   auto cfg_file = GetAbsolutePath(WorkRoot(), conf);
 
-  apollo::cyber::proto::CyberConfig cfg;
+  edith::cyber::proto::CyberConfig cfg;
   if (PathExists(cfg_file) && GetProtoFromFile(cfg_file, &cfg)) {
     for (auto& thr : cfg.scheduler_conf().threads()) {
       inner_thr_confs_[thr.name()] = thr;
@@ -221,4 +221,4 @@ bool SchedulerClassic::RemoveCRoutine(uint64_t crid) {
 
 }  // namespace scheduler
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

@@ -20,7 +20,7 @@
 #include "cyber/scheduler/scheduler_factory.h"
 #include "cyber/transport/shm/readable_info.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -154,4 +154,4 @@ bool ShmDispatcher::Init() {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

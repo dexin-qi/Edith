@@ -26,7 +26,7 @@
 #include "cyber/transport/shm/segment.h"
 #include "cyber/transport/shm/shm_conf.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -239,4 +239,4 @@ void PosixSegment::Reset() {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

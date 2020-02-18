@@ -17,7 +17,7 @@
 #include "cyber/message/protobuf_factory.h"
 #include "cyber/common/log.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace message {
 
@@ -230,4 +230,4 @@ void ErrorCollector::AddWarning(const std::string& filename,
 
 }  // namespace message
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

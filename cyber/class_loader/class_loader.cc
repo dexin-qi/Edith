@@ -15,7 +15,7 @@
  *****************************************************************************/
 #include "cyber/class_loader/class_loader.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace class_loader {
 ClassLoader::ClassLoader(const std::string& library_path)
@@ -63,4 +63,4 @@ const std::string ClassLoader::GetLibraryPath() const { return library_path_; }
 
 }  // namespace class_loader
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

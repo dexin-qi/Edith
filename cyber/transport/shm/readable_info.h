@@ -22,7 +22,7 @@
 #include <memory>
 #include <string>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -60,6 +60,6 @@ class ReadableInfo {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_SHM_READABLE_INFO_H_

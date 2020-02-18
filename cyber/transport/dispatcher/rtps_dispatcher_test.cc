@@ -26,7 +26,7 @@
 #include "cyber/transport/qos/qos_profile_conf.h"
 #include "cyber/transport/transport.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -101,13 +101,13 @@ TEST(RtpsDispatcherTest, shutdown) {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
-  apollo::cyber::Init(argv[0]);
-  apollo::cyber::transport::Transport::Instance();
+  edith::cyber::Init(argv[0]);
+  edith::cyber::transport::Transport::Instance();
   auto res = RUN_ALL_TESTS();
-  apollo::cyber::transport::Transport::Instance()->Shutdown();
+  edith::cyber::transport::Transport::Instance()->Shutdown();
   return res;
 }

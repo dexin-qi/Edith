@@ -54,7 +54,7 @@
 #include "cyber/time/rate.h"
 #include "cyber/common/log.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 Rate::Rate(double frequency)
@@ -111,4 +111,4 @@ void Rate::Reset() { start_ = Time::Now(); }
 Duration Rate::CycleTime() const { return actual_cycle_time_; }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

@@ -25,9 +25,9 @@
 #include "cyber/proto/record.pb.h"
 #include "cyber/record/file/record_file_reader.h"
 
-using ::apollo::cyber::common::UnixSecondsToString;
+using ::edith::cyber::common::UnixSecondsToString;
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
@@ -40,6 +40,6 @@ class Info {
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TOOLS_CYBER_RECORDER_INFO_H_

@@ -21,7 +21,7 @@
 
 #include "cyber/component/component_base.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 class Timer;
@@ -62,6 +62,6 @@ class TimerComponent : public ComponentBase {
 };
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_COMPONENT_TIMER_COMPONENT_H_

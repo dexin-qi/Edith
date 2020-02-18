@@ -26,11 +26,11 @@
 #include "cyber/croutine/croutine.h"
 #include "cyber/time/time.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace scheduler {
 
-using apollo::cyber::common::GlobalData;
+using edith::cyber::common::GlobalData;
 
 Processor::Processor() { running_.store(true); }
 
@@ -90,4 +90,4 @@ std::atomic<pid_t>& Processor::Tid() {
 
 }  // namespace scheduler
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

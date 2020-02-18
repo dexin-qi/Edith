@@ -21,7 +21,7 @@
 
 #include "cyber/proto/unit_test.pb.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace message {
 
@@ -268,18 +268,18 @@ TEST(MessageTraitsTest, serialize_parse_hc) {
 
 TEST(MessageTraitsTest, message_type) {
   std::string msg_type = MessageType<proto::UnitTest>();
-  EXPECT_EQ(msg_type, "apollo.cyber.proto.UnitTest");
+  EXPECT_EQ(msg_type, "edith.cyber.proto.UnitTest");
 
   proto::UnitTest ut;
   msg_type = MessageType(ut);
-  EXPECT_EQ(msg_type, "apollo.cyber.proto.UnitTest");
+  EXPECT_EQ(msg_type, "edith.cyber.proto.UnitTest");
 }
 
 TEST(MessageTraitsTest, descriptor) {
   const std::string pb_desc =
       "\n\xFA\x1\n\x1B"
       "cyber/proto/unit_test.proto\x12\x12"
-      "apollo.cyber.proto\"1\n\bUnitTest\x12\x12\n\nclass_name\x18\x1 "
+      "edith.cyber.proto\"1\n\bUnitTest\x12\x12\n\nclass_name\x18\x1 "
       "\x1(\t\x12\x11\n\tcase_name\x18\x2 "
       "\x1(\t\"S\n\aChatter\x12\x11\n\ttimestamp\x18\x1 "
       "\x1(\x4\x12\x17\n\xFlidar_timestamp\x18\x2 \x1(\x4\x12\v\n\x3seq\x18\x3 "
@@ -287,22 +287,22 @@ TEST(MessageTraitsTest, descriptor) {
       "ChatterBenchmark\x12\r\n\x5stamp\x18\x1 \x1(\x4\x12\v\n\x3seq\x18\x2 "
       "\x1(\x4\x12\xF\n\acontent\x18\x3 \x1(\t";
   std::string desc;
-  GetDescriptorString<proto::UnitTest>("apollo.cyber.proto.UnitTest", &desc);
+  GetDescriptorString<proto::UnitTest>("edith.cyber.proto.UnitTest", &desc);
   EXPECT_EQ(pb_desc, desc);
 
   desc = "";
-  GetDescriptorString<RawMessage>("apollo.cyber.proto.UnitTest", &desc);
+  GetDescriptorString<RawMessage>("edith.cyber.proto.UnitTest", &desc);
   EXPECT_EQ(pb_desc, desc);
 
   desc = "";
-  GetDescriptorString<Data>("apollo", &desc);
+  GetDescriptorString<Data>("edith", &desc);
   EXPECT_EQ("", desc);
 
   desc = "";
-  GetDescriptorString<Message>("apollo", &desc);
+  GetDescriptorString<Message>("edith", &desc);
   EXPECT_EQ("message", desc);
 }
 
 }  // namespace message
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

@@ -24,12 +24,12 @@
 #include "cyber/data/data_visitor.h"
 #include "cyber/data/fusion/all_latest.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace data {
 
-using apollo::cyber::message::RawMessage;
-using apollo::cyber::proto::RoleAttributes;
+using edith::cyber::message::RawMessage;
+using edith::cyber::proto::RoleAttributes;
 std::hash<std::string> str_hash;
 
 TEST(AllLatestTest, two_channels) {
@@ -149,4 +149,4 @@ TEST(AllLatestTest, four_channels) {
 
 }  // namespace data
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

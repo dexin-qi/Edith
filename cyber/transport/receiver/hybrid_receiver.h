@@ -37,13 +37,13 @@
 #include "cyber/transport/receiver/shm_receiver.h"
 #include "cyber/transport/rtps/participant.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
-using apollo::cyber::proto::OptionalMode;
-using apollo::cyber::proto::QosDurabilityPolicy;
-using apollo::cyber::proto::RoleAttributes;
+using edith::cyber::proto::OptionalMode;
+using edith::cyber::proto::QosDurabilityPolicy;
+using edith::cyber::proto::RoleAttributes;
 
 template <typename M>
 class HybridReceiver : public Receiver<M> {
@@ -306,6 +306,6 @@ Relation HybridReceiver<M>::GetRelation(const RoleAttributes& opposite_attr) {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_RECEIVER_HYBRID_RECEIVER_H_

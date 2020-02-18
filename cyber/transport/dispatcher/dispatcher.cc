@@ -16,7 +16,7 @@
 
 #include "cyber/transport/dispatcher/dispatcher.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -35,4 +35,4 @@ bool Dispatcher::HasChannel(uint64_t channel_id) {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

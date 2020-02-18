@@ -23,7 +23,7 @@
 
 #include "cyber/cyber.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace scheduler {
 
@@ -90,4 +90,4 @@ TEST(pin_thread_test, sched_policy) {
 
 }  // namespace scheduler
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

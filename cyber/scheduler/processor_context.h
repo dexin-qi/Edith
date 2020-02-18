@@ -24,7 +24,7 @@
 #include "cyber/base/macros.h"
 #include "cyber/croutine/croutine.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace scheduler {
 
@@ -42,6 +42,6 @@ class ProcessorContext {
 
 }  // namespace scheduler
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_SCHEDULER_PROCESSOR_CONTEXT_H_

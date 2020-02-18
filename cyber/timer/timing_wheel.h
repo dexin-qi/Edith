@@ -28,7 +28,7 @@
 #include "cyber/time/rate.h"
 #include "cyber/timer/timer_bucket.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 struct TimerTask;
@@ -87,6 +87,6 @@ class TimingWheel {
 };
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TIMER_TIMING_WHEEL_H_

@@ -17,7 +17,7 @@
 #include "cyber/io/session.h"
 #include "cyber/common/log.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace io {
 
@@ -221,4 +221,4 @@ ssize_t Session::Write(const void *buf, size_t count, int timeout_ms) {
 
 }  // namespace io
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

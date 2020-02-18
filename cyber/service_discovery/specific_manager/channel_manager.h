@@ -29,7 +29,7 @@
 #include "cyber/service_discovery/role/role.h"
 #include "cyber/service_discovery/specific_manager/manager.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace service_discovery {
 
@@ -215,6 +215,6 @@ class ChannelManager : public Manager {
 
 }  // namespace service_discovery
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  //  CYBER_SERVICE_DISCOVERY_SPECIFIC_MANAGER_CHANNEL_MANAGER_H_

@@ -24,7 +24,7 @@
 #include "cyber/transport/common/endpoint.h"
 #include "cyber/transport/common/identity.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -70,4 +70,4 @@ TEST(EndpointTest, endpoint_test) {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

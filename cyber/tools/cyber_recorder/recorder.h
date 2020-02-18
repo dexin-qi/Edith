@@ -30,17 +30,17 @@
 #include "cyber/proto/topology_change.pb.h"
 #include "cyber/record/record_writer.h"
 
-using apollo::cyber::Node;
-using apollo::cyber::ReaderBase;
-using apollo::cyber::base::Connection;
-using apollo::cyber::message::RawMessage;
-using apollo::cyber::proto::ChangeMsg;
-using apollo::cyber::proto::RoleAttributes;
-using apollo::cyber::proto::RoleType;
-using apollo::cyber::service_discovery::ChannelManager;
-using apollo::cyber::service_discovery::TopologyManager;
+using edith::cyber::Node;
+using edith::cyber::ReaderBase;
+using edith::cyber::base::Connection;
+using edith::cyber::message::RawMessage;
+using edith::cyber::proto::ChangeMsg;
+using edith::cyber::proto::RoleAttributes;
+using edith::cyber::proto::RoleType;
+using edith::cyber::service_discovery::ChannelManager;
+using edith::cyber::service_discovery::TopologyManager;
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
@@ -90,6 +90,6 @@ class Recorder : public std::enable_shared_from_this<Recorder> {
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TOOLS_CYBER_RECORDER_RECORDER_H_

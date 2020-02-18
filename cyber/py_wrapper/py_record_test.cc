@@ -23,13 +23,13 @@
 #include "cyber/cyber.h"
 #include "cyber/proto/unit_test.pb.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 const char TEST_RECORD_FILE[] = "/tmp/py_record_test.record";
 const char CHAN_1[] = "channel/chatter";
 const char CHAN_2[] = "/test2";
-const char MSG_TYPE[] = "apollo.cyber.proto.Test";
+const char MSG_TYPE[] = "edith.cyber.proto.Test";
 const char PROTO_DESC[] = "1234567890";
 const char MSG_DATA[] = "9876543210";
 const char TEST_FILE[] = "test.record";
@@ -76,4 +76,4 @@ TEST(CyberRecordTest, record_readerwriter) {
 }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

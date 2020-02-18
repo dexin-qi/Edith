@@ -25,7 +25,7 @@
 #include "cyber/scheduler/processor.h"
 #include "cyber/scheduler/scheduler_factory.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace scheduler {
 
@@ -82,4 +82,4 @@ TEST(SchedulerChoreoTest, sched_choreo) {
 
 }  // namespace scheduler
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

@@ -20,7 +20,7 @@
 #include <typeinfo>
 #include <vector>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace class_loader {
 
@@ -79,6 +79,6 @@ class ClassFactory : public AbstractClassFactory<Base> {
 }  // namespace utility
 }  // namespace class_loader
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_CLASS_LOADER_UTILITY_CLASS_FACTORY_H_

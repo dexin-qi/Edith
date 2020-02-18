@@ -20,7 +20,7 @@
 #include "cyber/common/util.h"
 #include "cyber/time/time.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace service_discovery {
 
@@ -121,4 +121,4 @@ void ServiceManager::DisposeLeave(const ChangeMsg& msg) {
 
 }  // namespace service_discovery
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

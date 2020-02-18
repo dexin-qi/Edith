@@ -31,15 +31,15 @@
 #include "cyber/scheduler/policy/scheduler_classic.h"
 #include "cyber/scheduler/scheduler.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace scheduler {
 
-using apollo::cyber::common::GetAbsolutePath;
-using apollo::cyber::common::GetProtoFromFile;
-using apollo::cyber::common::GlobalData;
-using apollo::cyber::common::PathExists;
-using apollo::cyber::common::WorkRoot;
+using edith::cyber::common::GetAbsolutePath;
+using edith::cyber::common::GetProtoFromFile;
+using edith::cyber::common::GlobalData;
+using edith::cyber::common::PathExists;
+using edith::cyber::common::WorkRoot;
 
 namespace {
 std::atomic<Scheduler*> instance = {nullptr};
@@ -56,7 +56,7 @@ Scheduler* Instance() {
       std::string conf("conf/");
       conf.append(GlobalData::Instance()->ProcessGroup()).append(".conf");
       auto cfg_file = GetAbsolutePath(WorkRoot(), conf);
-      apollo::cyber::proto::CyberConfig cfg;
+      edith::cyber::proto::CyberConfig cfg;
       if (PathExists(cfg_file) && GetProtoFromFile(cfg_file, &cfg)) {
         policy = cfg.scheduler_conf().policy();
       } else {
@@ -85,6 +85,6 @@ void CleanUp() {
 
 }  // namespace scheduler
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_SCHEDULER_SCHEDULER_FACTORY_H_

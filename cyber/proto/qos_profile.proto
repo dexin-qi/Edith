@@ -1,6 +1,6 @@
 syntax = "proto2";
 
-package apollo.cyber.proto;
+package edith.cyber.proto;
 
 enum QosHistoryPolicy {
   HISTORY_SYSTEM_DEFAULT = 0;

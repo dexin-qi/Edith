@@ -23,7 +23,7 @@
 #include <mutex>
 #include <thread>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace base {
 
@@ -117,6 +117,6 @@ class TimeoutBlockWaitStrategy : public WaitStrategy {
 
 }  // namespace base
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_BASE_WAIT_STRATEGY_H_

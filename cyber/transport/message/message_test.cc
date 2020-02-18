@@ -28,11 +28,11 @@
 #include "cyber/transport/message/listener_handler.h"
 #include "cyber/transport/message/message_info.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
-using apollo::cyber::message::RawMessage;
+using edith::cyber::message::RawMessage;
 
 TEST(MessageInfoTest, message_info_test) {
   char buff[ID_SIZE];
@@ -183,4 +183,4 @@ TEST(ListenerHandlerTest, listener_handler_test) {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

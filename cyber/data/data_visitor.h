@@ -29,7 +29,7 @@
 #include "cyber/data/fusion/all_latest.h"
 #include "cyber/data/fusion/data_fusion.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace data {
 
@@ -194,6 +194,6 @@ class DataVisitor<M0, NullType, NullType, NullType> : public DataVisitorBase {
 
 }  // namespace data
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_DATA_DATA_VISITOR_H_

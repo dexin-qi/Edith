@@ -19,7 +19,7 @@
 #include <thread>
 #include "gtest/gtest.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace base {
 
@@ -162,4 +162,4 @@ TEST(BoundedQueueTest, busy_wait) {
 
 }  // namespace base
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

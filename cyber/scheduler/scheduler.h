@@ -38,17 +38,17 @@
 #include "cyber/scheduler/common/mutex_wrapper.h"
 #include "cyber/scheduler/common/pin_thread.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace scheduler {
 
-using apollo::cyber::base::AtomicHashMap;
-using apollo::cyber::base::AtomicRWLock;
-using apollo::cyber::base::ReadLockGuard;
-using apollo::cyber::croutine::CRoutine;
-using apollo::cyber::croutine::RoutineFactory;
-using apollo::cyber::data::DataVisitorBase;
-using apollo::cyber::proto::InnerThread;
+using edith::cyber::base::AtomicHashMap;
+using edith::cyber::base::AtomicRWLock;
+using edith::cyber::base::ReadLockGuard;
+using edith::cyber::croutine::CRoutine;
+using edith::cyber::croutine::RoutineFactory;
+using edith::cyber::data::DataVisitorBase;
+using edith::cyber::proto::InnerThread;
 
 class Processor;
 class ProcessorContext;
@@ -103,6 +103,6 @@ class Scheduler {
 
 }  // namespace scheduler
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_SCHEDULER_SCHEDULER_H_

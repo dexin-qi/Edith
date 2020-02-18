@@ -20,7 +20,7 @@
 #include <set>
 #include <string>
 
-using apollo::cyber::PyTimer;
+using edith::cyber::PyTimer;
 
 #if PY_MAJOR_VERSION >= 3
 #define PyInt_AsLong PyLong_AsLong
@@ -49,12 +49,12 @@ PyObject* cyber_new_PyTimer(PyObject* self, PyObject* args) {
   void (*callback_fun)() = (void (*)())0;
   callback_fun = (void (*)())PyInt_AsLong(pyobj_regist_fun);
   PyTimer* pytimer = new PyTimer(period, callback_fun, oneshot != 0);
-  return PyCapsule_New(pytimer, "apollo_cybertron_pytimer", nullptr);
+  return PyCapsule_New(pytimer, "edith_cybertron_pytimer", nullptr);
 }
 
 PyObject* cyber_new_PyTimer_noparam(PyObject* self, PyObject* args) {
   PyTimer* pytimer = new PyTimer();
-  return PyCapsule_New(pytimer, "apollo_cybertron_pytimer", nullptr);
+  return PyCapsule_New(pytimer, "edith_cybertron_pytimer", nullptr);
 }
 
 PyObject* cyber_delete_PyTimer(PyObject* self, PyObject* args) {
@@ -66,7 +66,7 @@ PyObject* cyber_delete_PyTimer(PyObject* self, PyObject* args) {
   }
 
   auto* pytimer = reinterpret_cast<PyTimer*>(
-      PyCapsule_GetPointer(pyobj_timer, "apollo_cybertron_pytimer"));
+      PyCapsule_GetPointer(pyobj_timer, "edith_cybertron_pytimer"));
   if (nullptr == pytimer) {
     AERROR << "cyber_delete_PyTimer:timer ptr is null!";
     Py_INCREF(Py_None);
@@ -86,7 +86,7 @@ PyObject* cyber_PyTimer_start(PyObject* self, PyObject* args) {
   }
 
   auto* pytimer = reinterpret_cast<PyTimer*>(
-      PyCapsule_GetPointer(pyobj_timer, "apollo_cybertron_pytimer"));
+      PyCapsule_GetPointer(pyobj_timer, "edith_cybertron_pytimer"));
   if (nullptr == pytimer) {
     AERROR << "cyber_delete_PyTimer:timer ptr is null!";
     Py_INCREF(Py_None);
@@ -106,7 +106,7 @@ PyObject* cyber_PyTimer_stop(PyObject* self, PyObject* args) {
   }
 
   auto* pytimer = reinterpret_cast<PyTimer*>(
-      PyCapsule_GetPointer(pyobj_timer, "apollo_cybertron_pytimer"));
+      PyCapsule_GetPointer(pyobj_timer, "edith_cybertron_pytimer"));
   if (nullptr == pytimer) {
     AERROR << "cyber_delete_PyTimer:timer ptr is null!";
     Py_INCREF(Py_None);
@@ -133,7 +133,7 @@ PyObject* cyber_PyTimer_set_option(PyObject* self, PyObject* args) {
   }
 
   PyTimer* pytimer =
-      PyObjectToPtr<PyTimer*>(pyobj_timer, "apollo_cybertron_pytimer");
+      PyObjectToPtr<PyTimer*>(pyobj_timer, "edith_cybertron_pytimer");
   callback_fun = (void (*)())PyInt_AsLong(pyobj_regist_fun);
   if (nullptr == pytimer) {
     AERROR << "cyber_PyTimer_set_option ptr is null!";

@@ -18,7 +18,7 @@
 
 #include "gtest/gtest.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace message {
 
@@ -72,7 +72,7 @@ TEST(MessageHeaderTest, msg_type) {
   std::string msg_type = header.msg_type();
   EXPECT_TRUE(msg_type.empty());
   header.set_msg_type(nullptr, 1);
-  msg_type = "apollo.cyber.proto.UnitTest";
+  msg_type = "edith.cyber.proto.UnitTest";
   header.set_msg_type(msg_type.data(), msg_type.size());
   EXPECT_EQ(msg_type, header.msg_type());
   std::string long_type(1000, 'm');
@@ -90,4 +90,4 @@ TEST(MessageHeaderTest, content_size) {
 
 }  // namespace message
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

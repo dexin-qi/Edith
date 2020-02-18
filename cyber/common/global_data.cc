@@ -28,7 +28,7 @@
 #include "cyber/common/environment.h"
 #include "cyber/common/file.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace common {
 
@@ -261,4 +261,4 @@ std::string GlobalData::GetTaskNameById(uint64_t id) {
 
 }  // namespace common
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

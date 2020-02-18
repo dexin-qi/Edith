@@ -23,7 +23,7 @@
 #include "cyber/state.h"
 #include "cyber/time/time.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace event {
 
@@ -118,7 +118,7 @@ void PerfEventCache::AddTransportEvent(const TransPerf event_id,
 void PerfEventCache::Run() {
   EventBasePtr event;
   int buf_size = 0;
-  while (!shutdown_ && !apollo::cyber::IsShutdown()) {
+  while (!shutdown_ && !edith::cyber::IsShutdown()) {
     if (event_queue_.WaitDequeue(&event)) {
       of_ << event->SerializeToString() << std::endl;
       buf_size++;
@@ -143,4 +143,4 @@ void PerfEventCache::Start() {
 
 }  // namespace event
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

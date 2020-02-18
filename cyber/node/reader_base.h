@@ -28,17 +28,17 @@
 #include "cyber/event/perf_event_cache.h"
 #include "cyber/transport/transport.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
-using apollo::cyber::common::GlobalData;
-using apollo::cyber::event::PerfEventCache;
-using apollo::cyber::event::TransPerf;
+using edith::cyber::common::GlobalData;
+using edith::cyber::event::PerfEventCache;
+using edith::cyber::event::TransPerf;
 
 /**
  * @class ReaderBase
  * @brief Base Class for Reader
- * Reader is identified by one apollo::cyber::proto::RoleAttribute,
+ * Reader is identified by one edith::cyber::proto::RoleAttribute,
  * it contains the channel_name, channel_id that we subscribe,
  * and host_name, process_id and node that we are located,
  * and qos that describes our transportation quality.
@@ -225,6 +225,6 @@ auto ReceiverManager<MessageT>::GetReceiver(
 }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_NODE_READER_BASE_H_

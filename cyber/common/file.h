@@ -36,10 +36,10 @@
 #include "google/protobuf/text_format.h"
 
 /**
- * @namespace apollo::common::util
- * @brief apollo::common::util
+ * @namespace edith::common::util
+ * @brief edith::common::util
  */
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace common {
 
@@ -201,6 +201,6 @@ bool GetType(const std::string &filename, FileType *type);
 bool CreateDir(const std::string &dir);
 }  // namespace common
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_COMMON_FILE_H_

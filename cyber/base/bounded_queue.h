@@ -27,7 +27,7 @@
 #include "cyber/base/macros.h"
 #include "cyber/base/wait_strategy.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace base {
 
@@ -242,6 +242,6 @@ inline void BoundedQueue<T>::BreakAllWait() {
 
 }  // namespace base
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_BASE_BOUNDED_QUEUE_H_

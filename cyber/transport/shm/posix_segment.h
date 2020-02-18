@@ -21,7 +21,7 @@
 
 #include "cyber/transport/shm/segment.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -43,6 +43,6 @@ class PosixSegment : public Segment {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_SHM_POSIX_SEGMENT_H_

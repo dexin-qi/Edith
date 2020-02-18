@@ -34,7 +34,7 @@
 #include "cyber/tools/cyber_recorder/player/play_param.h"
 #include "cyber/tools/cyber_recorder/player/play_task_buffer.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
@@ -88,6 +88,6 @@ class PlayTaskProducer {
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TOOLS_CYBER_RECORDER_PLAYER_PLAY_TASK_PRODUCER_H_

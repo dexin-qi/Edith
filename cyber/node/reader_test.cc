@@ -23,7 +23,7 @@
 #include "cyber/init.h"
 #include "cyber/proto/unit_test.pb.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace reader {
 
@@ -203,10 +203,10 @@ TEST(ReaderTest, test2) {
 
 }  // namespace reader
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
-  apollo::cyber::Init(argv[0]);
+  edith::cyber::Init(argv[0]);
   return RUN_ALL_TESTS();
 }

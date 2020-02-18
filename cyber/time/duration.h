@@ -23,7 +23,7 @@
 #include <iostream>
 #include <stdexcept>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 class Duration {
@@ -63,6 +63,6 @@ class Duration {
 std::ostream &operator<<(std::ostream &os, const Duration &rhs);
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TIME_DURATION_H_

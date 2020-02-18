@@ -23,8 +23,8 @@
 
 #include "gflags/gflags.h"
 
-using apollo::cyber::mainboard::ModuleArgument;
-using apollo::cyber::mainboard::ModuleController;
+using edith::cyber::mainboard::ModuleArgument;
+using edith::cyber::mainboard::ModuleController;
 
 int main(int argc, char** argv) {
   google::SetUsageMessage("we use this program to load dag and run user apps.");
@@ -34,7 +34,7 @@ int main(int argc, char** argv) {
   module_args.ParseArgument(argc, argv);
 
   // initialize cyber
-  apollo::cyber::Init(argv[0]);
+  edith::cyber::Init(argv[0]);
 
   // start module
   ModuleController controller(module_args);
@@ -44,7 +44,7 @@ int main(int argc, char** argv) {
     return -1;
   }
 
-  apollo::cyber::WaitForShutdown();
+  edith::cyber::WaitForShutdown();
   controller.Clear();
   AINFO << "exit mainboard.";
 

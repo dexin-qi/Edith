@@ -21,7 +21,7 @@
 
 #include "cyber/transport/shm/readable_info.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -39,6 +39,6 @@ class NotifierBase {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_SHM_NOTIFIER_BASE_H_

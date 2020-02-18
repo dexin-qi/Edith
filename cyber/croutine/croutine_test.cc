@@ -21,14 +21,14 @@
 #include "cyber/cyber.h"
 #include "cyber/init.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace croutine {
 
 void function() { CRoutine::Yield(RoutineState::IO_WAIT); }
 
 TEST(Croutine, croutinetest) {
-  apollo::cyber::Init("croutine_test");
+  edith::cyber::Init("croutine_test");
   std::shared_ptr<CRoutine> cr = std::make_shared<CRoutine>(function);
   auto id = GlobalData::RegisterTaskName("croutine");
   cr->set_id(id);
@@ -51,4 +51,4 @@ TEST(Croutine, croutinetest) {
 
 }  // namespace croutine
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

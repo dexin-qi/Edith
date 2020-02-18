@@ -53,7 +53,7 @@ class Cdr;
 }
 }  // namespace eprosima
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -263,6 +263,6 @@ class UnderlayMessage {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_RTPS_UNDERLAY_MESSAGE_H_

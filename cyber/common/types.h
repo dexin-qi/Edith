@@ -19,7 +19,7 @@
 
 #include <cstdint>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 class NullType {};
@@ -44,6 +44,6 @@ static const char SRV_CHANNEL_REQ_SUFFIX[] = "__SRV__REQUEST";
 static const char SRV_CHANNEL_RES_SUFFIX[] = "__SRV__RESPONSE";
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_COMMON_TYPES_H_

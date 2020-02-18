@@ -26,7 +26,7 @@
 #include <mutex>
 #include <thread>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace base {
 
@@ -60,6 +60,6 @@ class WriteLockGuard {
 
 }  // namespace base
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_BASE_RW_LOCK_GUARD_H_

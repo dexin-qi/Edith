@@ -29,13 +29,13 @@
 #include "cyber/message/raw_message.h"
 #include "cyber/transport/message/message_info.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
-using apollo::cyber::base::AtomicRWLock;
-using apollo::cyber::base::ReadLockGuard;
-using apollo::cyber::base::WriteLockGuard;
+using edith::cyber::base::AtomicRWLock;
+using edith::cyber::base::ReadLockGuard;
+using edith::cyber::base::WriteLockGuard;
 
 class ListenerHandlerBase;
 using ListenerHandlerBasePtr = std::shared_ptr<ListenerHandlerBase>;
@@ -185,6 +185,6 @@ void ListenerHandler<MessageT>::RunFromString(const std::string& str,
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_MESSAGE_LISTENER_HANDLER_H_

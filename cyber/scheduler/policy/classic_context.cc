@@ -18,15 +18,15 @@
 
 #include <climits>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace scheduler {
 
-using apollo::cyber::base::AtomicRWLock;
-using apollo::cyber::base::ReadLockGuard;
-using apollo::cyber::base::WriteLockGuard;
-using apollo::cyber::croutine::CRoutine;
-using apollo::cyber::croutine::RoutineState;
+using edith::cyber::base::AtomicRWLock;
+using edith::cyber::base::ReadLockGuard;
+using edith::cyber::base::WriteLockGuard;
+using edith::cyber::croutine::CRoutine;
+using edith::cyber::croutine::RoutineState;
 
 alignas(CACHELINE_SIZE) GRP_WQ_MUTEX ClassicContext::mtx_wq_;
 alignas(CACHELINE_SIZE) GRP_WQ_CV ClassicContext::cv_wq_;
@@ -120,4 +120,4 @@ bool ClassicContext::RemoveCRoutine(const std::shared_ptr<CRoutine>& cr) {
 
 }  // namespace scheduler
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

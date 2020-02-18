@@ -21,7 +21,7 @@
 #include <utility>
 #include "gtest/gtest.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace data {
 
@@ -54,4 +54,4 @@ TEST(CacheBufferTest, cache_buffer_test) {
 
 }  // namespace data
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

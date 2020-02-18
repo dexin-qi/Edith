@@ -21,14 +21,14 @@
 
 #include "cyber/proto/unit_test.pb.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace message {
 
 TEST(ProtobufFactory, register_and_generate) {
   // register
   auto factory = ProtobufFactory::Instance();
-  apollo::cyber::proto::ProtoDesc proto_desc;
+  edith::cyber::proto::ProtoDesc proto_desc;
   proto::UnitTest ut;
   EXPECT_FALSE(factory->RegisterMessage("test"));
   EXPECT_FALSE(factory->RegisterPythonMessage("test"));
@@ -58,24 +58,24 @@ TEST(ProtobufFactory, register_and_generate) {
   EXPECT_EQ(get_desc_str, proto_desc_str);
 
   get_desc_str.clear();
-  factory->GetDescriptorString("apollo.cyber.proto.UnitTest", &get_desc_str);
+  factory->GetDescriptorString("edith.cyber.proto.UnitTest", &get_desc_str);
   EXPECT_EQ(get_desc_str, proto_desc_str);
 
   // Generate
   auto message = factory->GenerateMessageByType("test.not.found");
   EXPECT_EQ(nullptr, message);
 
-  message = factory->GenerateMessageByType("apollo.cyber.proto.UnitTest");
+  message = factory->GenerateMessageByType("edith.cyber.proto.UnitTest");
   EXPECT_NE(nullptr, message);
   delete message;
 
   auto desc_ptr = factory->FindMessageTypeByName("test.not.found");
   EXPECT_EQ(nullptr, desc_ptr);
 
-  desc_ptr = factory->FindMessageTypeByName("apollo.cyber.proto.UnitTest");
+  desc_ptr = factory->FindMessageTypeByName("edith.cyber.proto.UnitTest");
   EXPECT_NE(nullptr, desc_ptr);
 }
 
 }  // namespace message
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

@@ -35,7 +35,7 @@
 #include "cyber/record/file/section.h"
 #include "cyber/time/time.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
@@ -161,6 +161,6 @@ bool RecordFileWriter::WriteSection(const T& message) {
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_RECORD_FILE_RECORD_FILE_WRITER_H_

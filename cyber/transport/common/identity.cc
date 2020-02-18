@@ -20,7 +20,7 @@
 
 #include "cyber/common/util.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -72,4 +72,4 @@ void Identity::Update() {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

@@ -21,7 +21,7 @@
 #include "cyber/common/log.h"
 #include "cyber/transport/qos/qos_profile_conf.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -181,4 +181,4 @@ bool AttributesFiller::FillInSubAttr(
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

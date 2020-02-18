@@ -21,7 +21,7 @@
 
 #include "cyber/base/concurrent_object_pool.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace base {
 
@@ -124,4 +124,4 @@ TEST(ObjectPoolTest, get_object) {
 
 }  // namespace base
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

@@ -21,7 +21,7 @@
 
 #include "cyber/common/log.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
@@ -214,4 +214,4 @@ RecordViewer::Iterator::reference RecordViewer::Iterator::operator*() {
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

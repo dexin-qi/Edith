@@ -105,7 +105,7 @@ class GeneralChannelMessage : public GeneralMessageBase {
         has_message_come_(false),
         message_type_(),
         frame_counter_(0),
-        last_time_(apollo::cyber::Time::MonoTime()),
+        last_time_(edith::cyber::Time::MonoTime()),
         msg_time_(last_time_.ToNanosecond() + 1),
         channel_node_(nullptr),
         node_name_(nodeName),
@@ -139,16 +139,16 @@ class GeneralChannelMessage : public GeneralMessageBase {
   }
 
   void updateRawMessage(
-      const std::shared_ptr<apollo::cyber::message::RawMessage>& rawMsg) {
+      const std::shared_ptr<edith::cyber::message::RawMessage>& rawMsg) {
     set_has_message_come(true);
-    msg_time_ = apollo::cyber::Time::MonoTime();
+    msg_time_ = edith::cyber::Time::MonoTime();
     ++frame_counter_;
     std::lock_guard<std::mutex> _g(inner_lock_);
     channel_message_.reset();
     channel_message_ = rawMsg;
   }
 
-  std::shared_ptr<apollo::cyber::message::RawMessage> CopyMsgPtr(void) const {
+  std::shared_ptr<edith::cyber::message::RawMessage> CopyMsgPtr(void) const {
     decltype(channel_message_) channelMsg;
     {
       std::lock_guard<std::mutex> g(inner_lock_);
@@ -169,19 +169,19 @@ class GeneralChannelMessage : public GeneralMessageBase {
   bool has_message_come_;
   std::string message_type_;
   std::atomic<int> frame_counter_;
-  apollo::cyber::Time last_time_;
-  apollo::cyber::Time msg_time_;
-  apollo::cyber::Time time_last_calc_ = apollo::cyber::Time::MonoTime();
+  edith::cyber::Time last_time_;
+  edith::cyber::Time msg_time_;
+  edith::cyber::Time time_last_calc_ = edith::cyber::Time::MonoTime();
 
-  std::unique_ptr<apollo::cyber::Node> channel_node_;
+  std::unique_ptr<edith::cyber::Node> channel_node_;
 
   std::string node_name_;
 
   std::vector<std::string> readers_;
   std::vector<std::string> writers_;
 
-  std::shared_ptr<apollo::cyber::message::RawMessage> channel_message_;
-  std::shared_ptr<apollo::cyber::Reader<apollo::cyber::message::RawMessage>>
+  std::shared_ptr<edith::cyber::message::RawMessage> channel_message_;
+  std::shared_ptr<edith::cyber::Reader<edith::cyber::message::RawMessage>>
       channel_reader_;
   mutable std::mutex inner_lock_;
 

@@ -30,11 +30,11 @@
 #include "cyber/scheduler/scheduler.h"
 #include "gflags/gflags.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
-using apollo::cyber::proto::ComponentConfig;
-using apollo::cyber::proto::TimerComponentConfig;
+using edith::cyber::proto::ComponentConfig;
+using edith::cyber::proto::TimerComponentConfig;
 
 class ComponentBase : public std::enable_shared_from_this<ComponentBase> {
  public:
@@ -114,6 +114,6 @@ class ComponentBase : public std::enable_shared_from_this<ComponentBase> {
 };
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_COMPONENT_COMPONENT_BASE_H_

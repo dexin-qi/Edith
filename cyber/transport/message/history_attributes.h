@@ -21,7 +21,7 @@
 
 #include "cyber/proto/qos_profile.pb.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -39,6 +39,6 @@ struct HistoryAttributes {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_MESSAGE_HISTORY_ATTRIBUTES_H_

@@ -26,7 +26,7 @@
 #include "cyber/common/log.h"
 #include "cyber/data/data_notifier.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace data {
 
@@ -49,6 +49,6 @@ class DataVisitorBase {
 
 }  // namespace data
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_DATA_DATA_VISITOR_BASE_H_

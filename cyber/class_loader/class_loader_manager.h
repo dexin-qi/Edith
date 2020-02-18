@@ -25,7 +25,7 @@
 
 #include "cyber/class_loader/class_loader.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace class_loader {
 
@@ -104,6 +104,6 @@ std::vector<std::string> ClassLoaderManager::GetValidClassNames() {
 
 }  // namespace class_loader
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_CLASS_LOADER_CLASS_LOADER_MANAGER_H_

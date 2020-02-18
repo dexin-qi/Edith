@@ -20,7 +20,7 @@
 #include <string>
 #include "gtest/gtest.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace message {
 
@@ -69,12 +69,12 @@ TEST(RawMessageTest, parse_from_array) {
 TEST(RawMessageTest, message_type) {
   RawMessage msg;
   std::string msg_type = RawMessage::TypeName();
-  EXPECT_EQ(msg_type, "apollo.cyber.message.RawMessage");
+  EXPECT_EQ(msg_type, "edith.cyber.message.RawMessage");
 
   // msg_type = MessageType<RawMessage>();
-  // EXPECT_EQ(msg_type, "apollo.cyber.message.RawMessage");
+  // EXPECT_EQ(msg_type, "edith.cyber.message.RawMessage");
 }
 
 }  // namespace message
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

@@ -18,7 +18,7 @@
 
 #include "cyber/common/global_data.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 namespace {
@@ -156,4 +156,4 @@ Timer::~Timer() {
 }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

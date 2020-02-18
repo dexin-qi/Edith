@@ -25,7 +25,7 @@
 #include "cyber/logger/log_file_object.h"
 #include "cyber/logger/logger_util.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace logger {
 
@@ -133,4 +133,4 @@ void AsyncLogger::FlushBuffer(const std::unique_ptr<std::deque<Msg>>& buffer) {
 
 }  // namespace logger
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

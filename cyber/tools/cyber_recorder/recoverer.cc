@@ -19,13 +19,13 @@
 #include "cyber/base/for_each.h"
 #include "cyber/record/header_builder.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
-using apollo::cyber::proto::Channel;
-using apollo::cyber::proto::ChunkHeader;
-using apollo::cyber::proto::SectionType;
+using edith::cyber::proto::Channel;
+using edith::cyber::proto::ChunkHeader;
+using edith::cyber::proto::SectionType;
 
 Recoverer::Recoverer(const std::string& input_file,
                      const std::string& output_file)
@@ -130,4 +130,4 @@ bool Recoverer::Proc() {
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

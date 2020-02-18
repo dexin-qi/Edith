@@ -15,7 +15,7 @@
  *****************************************************************************/
 #include "cyber/class_loader/class_loader_manager.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace class_loader {
 
@@ -82,4 +82,4 @@ void ClassLoaderManager::UnloadAllLibrary() {
 }
 }  // namespace class_loader
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

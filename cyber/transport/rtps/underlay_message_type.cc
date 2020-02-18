@@ -26,7 +26,7 @@
 
 #include "cyber/common/log.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -131,4 +131,4 @@ bool UnderlayMessageType::getKey(void* data, InstanceHandle_t* handle) {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

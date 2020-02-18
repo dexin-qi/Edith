@@ -31,7 +31,7 @@
 #include "cyber/scheduler/common/mutex_wrapper.h"
 #include "cyber/scheduler/processor_context.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace scheduler {
 
@@ -83,6 +83,6 @@ class ClassicContext : public ProcessorContext {
 
 }  // namespace scheduler
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_SCHEDULER_POLICY_CLASSIC_CONTEXT_H_

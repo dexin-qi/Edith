@@ -25,7 +25,7 @@
 #include "cyber/scheduler/policy/scheduler_classic.h"
 #include "cyber/scheduler/scheduler.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace scheduler {
 
@@ -34,6 +34,6 @@ void CleanUp();
 
 }  // namespace scheduler
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_SCHEDULER_SCHEDULER_FACTORY_H_

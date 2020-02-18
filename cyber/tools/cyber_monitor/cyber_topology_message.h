@@ -22,14 +22,14 @@
 
 #include "cyber/tools/cyber_monitor/renderable_message.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace proto {
 class ChangeMsg;
 class RoleAttributes;
 }  // namespace proto
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 class GeneralChannelMessage;
 // class GeneralMessage;
@@ -42,8 +42,8 @@ class CyberTopologyMessage : public RenderableMessage {
   void Render(const Screen* s, int key) override;
   RenderableMessage* Child(int index) const override;
 
-  void TopologyChanged(const apollo::cyber::proto::ChangeMsg& change_msg);
-  void AddReaderWriter(const apollo::cyber::proto::RoleAttributes& role,
+  void TopologyChanged(const edith::cyber::proto::ChangeMsg& change_msg);
+  void AddReaderWriter(const edith::cyber::proto::RoleAttributes& role,
                        bool isWriter);
 
  private:

@@ -25,7 +25,7 @@
 #include "cyber/proto/parameter.pb.h"
 #include "cyber/service/client.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 class Node;
@@ -37,11 +37,11 @@ class Node;
  */
 class ParameterClient {
  public:
-  using Param = apollo::cyber::proto::Param;
-  using NodeName = apollo::cyber::proto::NodeName;
-  using ParamName = apollo::cyber::proto::ParamName;
-  using BoolResult = apollo::cyber::proto::BoolResult;
-  using Params = apollo::cyber::proto::Params;
+  using Param = edith::cyber::proto::Param;
+  using NodeName = edith::cyber::proto::NodeName;
+  using ParamName = edith::cyber::proto::ParamName;
+  using BoolResult = edith::cyber::proto::BoolResult;
+  using Params = edith::cyber::proto::Params;
   using GetParameterClient = Client<ParamName, Param>;
   using SetParameterClient = Client<Param, BoolResult>;
   using ListParametersClient = Client<NodeName, Params>;
@@ -92,6 +92,6 @@ class ParameterClient {
 };
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_PARAMETER_PARAMETER_CLIENT_H_

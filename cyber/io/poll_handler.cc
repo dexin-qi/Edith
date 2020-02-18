@@ -19,7 +19,7 @@
 #include "cyber/io/poller.h"
 #include "cyber/scheduler/scheduler_factory.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace io {
 
@@ -112,4 +112,4 @@ void PollHandler::ResponseCallback(const PollResponse& rsp) {
 
 }  // namespace io
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

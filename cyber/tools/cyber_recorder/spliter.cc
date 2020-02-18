@@ -16,12 +16,12 @@
 
 #include "cyber/tools/cyber_recorder/spliter.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
-using apollo::cyber::proto::Channel;
-using apollo::cyber::proto::SectionType;
+using edith::cyber::proto::Channel;
+using edith::cyber::proto::SectionType;
 
 Spliter::Spliter(const std::string& input_file, const std::string& output_file,
                  const std::vector<std::string>& white_channels,
@@ -164,4 +164,4 @@ bool Spliter::Proc() {
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

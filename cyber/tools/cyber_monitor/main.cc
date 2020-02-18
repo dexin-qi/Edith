@@ -86,7 +86,7 @@ int main(int argc, char *argv[]) {
     default:;
   }
 
-  apollo::cyber::Init(argv[0]);
+  edith::cyber::Init(argv[0]);
   FLAGS_minloglevel = 3;
   FLAGS_alsologtostderr = 0;
   FLAGS_colorlogtostderr = 0;
@@ -94,16 +94,16 @@ int main(int argc, char *argv[]) {
   CyberTopologyMessage topologyMsg(val);
 
   auto topologyCallback =
-      [&topologyMsg](const apollo::cyber::proto::ChangeMsg &change_msg) {
+      [&topologyMsg](const edith::cyber::proto::ChangeMsg &change_msg) {
         topologyMsg.TopologyChanged(change_msg);
       };
 
   auto channelManager =
-      apollo::cyber::service_discovery::TopologyManager::Instance()
+      edith::cyber::service_discovery::TopologyManager::Instance()
           ->channel_manager();
   channelManager->AddChangeListener(topologyCallback);
 
-  std::vector<apollo::cyber::proto::RoleAttributes> roleVec;
+  std::vector<edith::cyber::proto::RoleAttributes> roleVec;
   channelManager->GetWriters(&roleVec);
   for (auto &role : roleVec) {
     topologyMsg.AddReaderWriter(role, true);

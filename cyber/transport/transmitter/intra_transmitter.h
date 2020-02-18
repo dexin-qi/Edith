@@ -24,7 +24,7 @@
 #include "cyber/transport/dispatcher/intra_dispatcher.h"
 #include "cyber/transport/transmitter/transmitter.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -87,6 +87,6 @@ bool IntraTransmitter<M>::Transmit(const MessagePtr& msg,
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_TRANSMITTER_INTRA_TRANSMITTER_H_

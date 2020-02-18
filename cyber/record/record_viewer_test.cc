@@ -27,14 +27,14 @@
 #include "cyber/record/record_reader.h"
 #include "cyber/record/record_writer.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
-using apollo::cyber::message::RawMessage;
+using edith::cyber::message::RawMessage;
 
 constexpr char kChannelName1[] = "/test/channel1";
-constexpr char kMessageType1[] = "apollo.cyber.proto.Test";
+constexpr char kMessageType1[] = "edith.cyber.proto.Test";
 constexpr char kProtoDesc1[] = "1234567890";
 constexpr char kTestFile[] = "viewer_test.record";
 
@@ -184,4 +184,4 @@ TEST(RecordTest, mult_iterator_test) {
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

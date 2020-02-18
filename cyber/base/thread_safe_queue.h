@@ -23,7 +23,7 @@
 #include <thread>
 #include <utility>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace base {
 
@@ -87,6 +87,6 @@ class ThreadSafeQueue {
 
 }  // namespace base
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_BASE_THREAD_SAFE_QUEUE_H_

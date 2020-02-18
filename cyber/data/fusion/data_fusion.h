@@ -26,7 +26,7 @@
 
 #include "cyber/common/types.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace data {
 namespace fusion {
@@ -64,6 +64,6 @@ class DataFusion<M0, M1, NullType, NullType> {
 }  // namespace fusion
 }  // namespace data
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_DATA_FUSION_DATA_FUSION_H_

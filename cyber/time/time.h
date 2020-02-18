@@ -22,7 +22,7 @@
 
 #include "cyber/time/duration.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 /**
@@ -102,6 +102,6 @@ class Time {
 std::ostream& operator<<(std::ostream& os, const Time& rhs);
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TIME_TIME_H_

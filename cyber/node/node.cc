@@ -18,7 +18,7 @@
 #include "cyber/common/global_data.h"
 #include "cyber/time/time.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 using proto::RoleType;
@@ -46,4 +46,4 @@ void Node::ClearData() {
 }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

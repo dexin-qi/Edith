@@ -24,7 +24,7 @@
 
 #include "cyber/tools/cyber_recorder/player/play_task_buffer.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
@@ -69,6 +69,6 @@ class PlayTaskConsumer {
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TOOLS_CYBER_RECORDER_PLAYER_PLAY_TASK_CONSUMER_H_

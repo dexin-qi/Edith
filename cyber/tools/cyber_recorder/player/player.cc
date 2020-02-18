@@ -20,7 +20,7 @@
 
 #include "cyber/init.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
@@ -113,13 +113,13 @@ bool Player::Start() {
   producer_->Start();
 
   auto preload_sec = play_param.preload_time_s;
-  while (preload_sec > 0 && !is_stopped_.load() && apollo::cyber::OK()) {
+  while (preload_sec > 0 && !is_stopped_.load() && edith::cyber::OK()) {
     std::this_thread::sleep_for(std::chrono::seconds(1));
     --preload_sec;
   }
 
   auto delay_sec = play_param.delay_time_s;
-  while (delay_sec > 0 && !is_stopped_.load() && apollo::cyber::OK()) {
+  while (delay_sec > 0 && !is_stopped_.load() && edith::cyber::OK()) {
     std::this_thread::sleep_for(std::chrono::seconds(1));
     --delay_sec;
   }
@@ -134,7 +134,7 @@ bool Player::Start() {
       static_cast<double>(play_param.start_time_s);
 
   term_thread_.reset(new std::thread(&Player::ThreadFunc_Term, this));
-  while (!is_stopped_.load() && apollo::cyber::OK()) {
+  while (!is_stopped_.load() && edith::cyber::OK()) {
     if (is_playonce_) {
       consumer_->PlayOnce();
       is_playonce_ = false;
@@ -194,4 +194,4 @@ bool Player::Stop() {
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

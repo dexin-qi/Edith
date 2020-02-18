@@ -19,7 +19,7 @@
 #include "glog/logging.h"
 #include "gtest/gtest.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace common {
 
@@ -27,4 +27,4 @@ TEST(LogTest, TestAll) { AINFO << "11111"; }
 
 }  // namespace common
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

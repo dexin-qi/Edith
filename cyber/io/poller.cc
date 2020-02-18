@@ -26,7 +26,7 @@
 #include "cyber/scheduler/scheduler_factory.h"
 #include "cyber/time/time.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace io {
 
@@ -305,4 +305,4 @@ void Poller::Notify() {
 
 }  // namespace io
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

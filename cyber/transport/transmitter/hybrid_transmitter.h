@@ -38,13 +38,13 @@
 #include "cyber/transport/transmitter/shm_transmitter.h"
 #include "cyber/transport/transmitter/transmitter.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
-using apollo::cyber::proto::OptionalMode;
-using apollo::cyber::proto::QosDurabilityPolicy;
-using apollo::cyber::proto::RoleAttributes;
+using edith::cyber::proto::OptionalMode;
+using edith::cyber::proto::QosDurabilityPolicy;
+using edith::cyber::proto::RoleAttributes;
 
 template <typename M>
 class HybridTransmitter : public Transmitter<M> {
@@ -312,6 +312,6 @@ Relation HybridTransmitter<M>::GetRelation(
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_TRANSMITTER_HYBRID_TRANSMITTER_H_

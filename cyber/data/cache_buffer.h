@@ -21,7 +21,7 @@
 #include <mutex>
 #include <vector>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace data {
 
@@ -95,6 +95,6 @@ class CacheBuffer {
 
 }  // namespace data
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_DATA_CACHE_BUFFER_H_

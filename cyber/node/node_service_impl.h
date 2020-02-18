@@ -26,7 +26,7 @@
 #include "cyber/service/service.h"
 #include "cyber/service_discovery/topology_manager.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 class Node;
@@ -118,6 +118,6 @@ auto NodeServiceImpl::CreateClient(const std::string& service_name) ->
 }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_NODE_NODE_SERVICE_IMPL_H_

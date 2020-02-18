@@ -28,7 +28,7 @@
 #include "cyber/common/global_data.h"
 #include "cyber/common/log.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -182,4 +182,4 @@ bool MulticastNotifier::Init() {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

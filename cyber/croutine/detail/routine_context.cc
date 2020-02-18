@@ -16,7 +16,7 @@
 
 #include "cyber/croutine/detail/routine_context.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace croutine {
 
@@ -52,4 +52,4 @@ void MakeContext(const func &f1, const void *arg, RoutineContext *ctx) {
 
 }  // namespace croutine
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

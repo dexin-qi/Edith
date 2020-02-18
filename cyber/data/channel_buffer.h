@@ -26,11 +26,11 @@
 #include "cyber/common/log.h"
 #include "cyber/data/data_notifier.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace data {
 
-using apollo::cyber::common::GlobalData;
+using edith::cyber::common::GlobalData;
 
 template <typename T>
 class ChannelBuffer {
@@ -106,6 +106,6 @@ bool ChannelBuffer<T>::FetchMulti(uint64_t fetch_size,
 
 }  // namespace data
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_DATA_CHANNEL_BUFFER_H_

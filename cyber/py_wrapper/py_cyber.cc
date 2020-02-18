@@ -20,14 +20,14 @@
 #include <string>
 #include <vector>
 
-using apollo::cyber::Node;
-using apollo::cyber::PyChannelUtils;
-using apollo::cyber::PyClient;
-using apollo::cyber::PyNode;
-using apollo::cyber::PyReader;
-using apollo::cyber::PyService;
-using apollo::cyber::PyServiceUtils;
-using apollo::cyber::PyWriter;
+using edith::cyber::Node;
+using edith::cyber::PyChannelUtils;
+using edith::cyber::PyClient;
+using edith::cyber::PyNode;
+using edith::cyber::PyReader;
+using edith::cyber::PyService;
+using edith::cyber::PyServiceUtils;
+using edith::cyber::PyWriter;
 
 #if PY_MAJOR_VERSION >= 3
 #define PyInt_AsLong PyLong_AsLong
@@ -52,7 +52,7 @@ static PyObject *cyber_py_init(PyObject *self, PyObject *args) {
     Py_RETURN_FALSE;
   }
   std::string module_name(data, len);
-  bool is_init = apollo::cyber::py_init(module_name);
+  bool is_init = edith::cyber::py_init(module_name);
   if (is_init) {
     Py_RETURN_TRUE;
   } else {
@@ -61,7 +61,7 @@ static PyObject *cyber_py_init(PyObject *self, PyObject *args) {
 }
 
 static PyObject *cyber_py_ok(PyObject *self, PyObject *args) {
-  bool is_ok = apollo::cyber::py_ok();
+  bool is_ok = edith::cyber::py_ok();
   if (is_ok) {
     Py_RETURN_TRUE;
   } else {
@@ -70,13 +70,13 @@ static PyObject *cyber_py_ok(PyObject *self, PyObject *args) {
 }
 
 static PyObject *cyber_py_shutdown(PyObject *self, PyObject *args) {
-  apollo::cyber::py_shutdown();
+  edith::cyber::py_shutdown();
   Py_INCREF(Py_None);
   return Py_None;
 }
 
 static PyObject *cyber_py_is_shutdown(PyObject *self, PyObject *args) {
-  bool is_shutdown = apollo::cyber::py_is_shutdown();
+  bool is_shutdown = edith::cyber::py_is_shutdown();
   if (is_shutdown) {
     Py_RETURN_TRUE;
   } else {
@@ -85,7 +85,7 @@ static PyObject *cyber_py_is_shutdown(PyObject *self, PyObject *args) {
 }
 
 static PyObject *cyber_py_waitforshutdown(PyObject *self, PyObject *args) {
-  apollo::cyber::py_waitforshutdown();
+  edith::cyber::py_waitforshutdown();
   Py_INCREF(Py_None);
   return Py_None;
 }
@@ -112,7 +112,7 @@ PyObject *cyber_new_PyWriter(PyObject *self, PyObject *args) {
   }
 
   Node *node = reinterpret_cast<Node *>(
-      PyCapsule_GetPointer(node_pyobj, "apollo_cyber_pynode"));
+      PyCapsule_GetPointer(node_pyobj, "edith_cyber_pynode"));
   if (nullptr == node) {
     AERROR << "node is null";
     Py_INCREF(Py_None);
@@ -123,7 +123,7 @@ PyObject *cyber_new_PyWriter(PyObject *self, PyObject *args) {
       new PyWriter((std::string const &)*channel_name,
                    (std::string const &)*data_type, qos_depth, node);
   PyObject *pyobj_writer =
-      PyCapsule_New(writer, "apollo_cyber_pywriter", nullptr);
+      PyCapsule_New(writer, "edith_cyber_pywriter", nullptr);
   return pyobj_writer;
 }
 
@@ -136,7 +136,7 @@ PyObject *cyber_delete_PyWriter(PyObject *self, PyObject *args) {
   }
 
   PyWriter *writer = reinterpret_cast<PyWriter *>(
-      PyCapsule_GetPointer(writer_py, "apollo_cyber_pywriter"));
+      PyCapsule_GetPointer(writer_py, "edith_cyber_pywriter"));
   delete writer;
   Py_INCREF(Py_None);
   return Py_None;
@@ -153,7 +153,7 @@ PyObject *cyber_PyWriter_write(PyObject *self, PyObject *args) {
   }
 
   PyWriter *writer =
-      PyObjectToPtr<PyWriter *>(pyobj_writer, "apollo_cyber_pywriter");
+      PyObjectToPtr<PyWriter *>(pyobj_writer, "edith_cyber_pywriter");
 
   if (nullptr == writer) {
     AERROR << "cyber_PyWriter_write:writer ptr is null!";
@@ -176,7 +176,7 @@ PyObject *cyber_new_PyReader(PyObject *self, PyObject *args) {
   }
 
   Node *node = reinterpret_cast<Node *>(
-      PyCapsule_GetPointer(node_pyobj, "apollo_cyber_pynode"));
+      PyCapsule_GetPointer(node_pyobj, "edith_cyber_pynode"));
   if (!node) {
     AERROR << "node is null";
     Py_INCREF(Py_None);
@@ -186,7 +186,7 @@ PyObject *cyber_new_PyReader(PyObject *self, PyObject *args) {
   PyReader *reader = new PyReader((std::string const &)*channel_name,
                                   (std::string const &)*data_type, node);
   PyObject *pyobj_reader =
-      PyCapsule_New(reader, "apollo_cyber_pyreader", nullptr);
+      PyCapsule_New(reader, "edith_cyber_pyreader", nullptr);
   return pyobj_reader;
 }
 
@@ -199,7 +199,7 @@ PyObject *cyber_delete_PyReader(PyObject *self, PyObject *args) {
   }
 
   PyReader *reader = reinterpret_cast<PyReader *>(
-      PyCapsule_GetPointer(reader_py, "apollo_cyber_pyreader"));
+      PyCapsule_GetPointer(reader_py, "edith_cyber_pyreader"));
   delete reader;
   Py_INCREF(Py_None);
   return Py_None;
@@ -216,7 +216,7 @@ PyObject *cyber_PyReader_read(PyObject *self, PyObject *args) {
     return Py_None;
   }
   PyReader *reader =
-      PyObjectToPtr<PyReader *>(pyobj_reader, "apollo_cyber_pyreader");
+      PyObjectToPtr<PyReader *>(pyobj_reader, "edith_cyber_pyreader");
   if (nullptr == reader) {
     AERROR << "cyber_PyReader_read:PyReader ptr is null!";
     Py_INCREF(Py_None);
@@ -249,7 +249,7 @@ PyObject *cyber_PyReader_register_func(PyObject *self, PyObject *args) {
   }
 
   PyReader *reader =
-      PyObjectToPtr<PyReader *>(pyobj_reader, "apollo_cyber_pyreader");
+      PyObjectToPtr<PyReader *>(pyobj_reader, "edith_cyber_pyreader");
   callback_fun = (int (*)(const char *i))PyInt_AsLong(pyobj_regist_fun);
   if (reader) {
     AINFO << "reader regist fun";
@@ -271,7 +271,7 @@ PyObject *cyber_new_PyClient(PyObject *self, PyObject *args) {
   }
 
   Node *node = reinterpret_cast<Node *>(
-      PyCapsule_GetPointer(node_pyobj, "apollo_cyber_pynode"));
+      PyCapsule_GetPointer(node_pyobj, "edith_cyber_pynode"));
   if (!node) {
     AERROR << "node is null";
     Py_INCREF(Py_None);
@@ -281,7 +281,7 @@ PyObject *cyber_new_PyClient(PyObject *self, PyObject *args) {
   PyClient *client = new PyClient((std::string const &)*channel_name,
                                   (std::string const &)*data_type, node);
   PyObject *pyobj_client =
-      PyCapsule_New(client, "apollo_cyber_pyclient", nullptr);
+      PyCapsule_New(client, "edith_cyber_pyclient", nullptr);
   return pyobj_client;
 }
 
@@ -294,7 +294,7 @@ PyObject *cyber_delete_PyClient(PyObject *self, PyObject *args) {
   }
 
   PyClient *client = reinterpret_cast<PyClient *>(
-      PyCapsule_GetPointer(client_py, "apollo_cyber_pyclient"));
+      PyCapsule_GetPointer(client_py, "edith_cyber_pyclient"));
   delete client;
   Py_INCREF(Py_None);
   return Py_None;
@@ -311,7 +311,7 @@ PyObject *cyber_PyClient_send_request(PyObject *self, PyObject *args) {
   }
 
   PyClient *client =
-      PyObjectToPtr<PyClient *>(pyobj_client, "apollo_cyber_pyclient");
+      PyObjectToPtr<PyClient *>(pyobj_client, "edith_cyber_pyclient");
 
   if (nullptr == client) {
     AERROR << "cyber_PyClient_send_request:client ptr is null!";
@@ -337,7 +337,7 @@ PyObject *cyber_new_PyService(PyObject *self, PyObject *args) {
   }
 
   Node *node = reinterpret_cast<Node *>(
-      PyCapsule_GetPointer(node_pyobj, "apollo_cyber_pynode"));
+      PyCapsule_GetPointer(node_pyobj, "edith_cyber_pynode"));
   if (!node) {
     AERROR << "node is null";
     Py_INCREF(Py_None);
@@ -347,7 +347,7 @@ PyObject *cyber_new_PyService(PyObject *self, PyObject *args) {
   PyService *service = new PyService((std::string const &)*channel_name,
                                      (std::string const &)*data_type, node);
   PyObject *pyobj_service =
-      PyCapsule_New(service, "apollo_cyber_pyservice", nullptr);
+      PyCapsule_New(service, "edith_cyber_pyservice", nullptr);
   return pyobj_service;
 }
 
@@ -360,7 +360,7 @@ PyObject *cyber_delete_PyService(PyObject *self, PyObject *args) {
   }
 
   PyService *service = reinterpret_cast<PyService *>(
-      PyCapsule_GetPointer(pyobj_service, "apollo_cyber_pyservice"));
+      PyCapsule_GetPointer(pyobj_service, "edith_cyber_pyservice"));
   delete service;
   Py_INCREF(Py_None);
   return Py_None;
@@ -379,7 +379,7 @@ PyObject *cyber_PyService_register_func(PyObject *self, PyObject *args) {
   }
 
   PyService *service =
-      PyObjectToPtr<PyService *>(pyobj_service, "apollo_cyber_pyservice");
+      PyObjectToPtr<PyService *>(pyobj_service, "edith_cyber_pyservice");
   callback_fun = (int (*)(const char *i))PyInt_AsLong(pyobj_regist_fun);
   if (service) {
     AINFO << "service regist fun";
@@ -398,7 +398,7 @@ PyObject *cyber_PyService_read(PyObject *self, PyObject *args) {
     return PYOBJECT_NULL_STRING;
   }
   PyService *service =
-      PyObjectToPtr<PyService *>(pyobj_service, "apollo_cyber_pyservice");
+      PyObjectToPtr<PyService *>(pyobj_service, "edith_cyber_pyservice");
   if (nullptr == service) {
     AERROR << "cyber_PyService_read:service ptr is null!";
     return PYOBJECT_NULL_STRING;
@@ -420,7 +420,7 @@ PyObject *cyber_PyService_write(PyObject *self, PyObject *args) {
   }
 
   PyService *service =
-      PyObjectToPtr<PyService *>(pyobj_service, "apollo_cyber_pyservice");
+      PyObjectToPtr<PyService *>(pyobj_service, "edith_cyber_pyservice");
 
   if (nullptr == service) {
     AERROR << "cyber_PyService_write:writer ptr is null!";
@@ -441,7 +441,7 @@ PyObject *cyber_new_PyNode(PyObject *self, PyObject *args) {
   }
 
   PyNode *node = new PyNode((std::string const &)node_name);
-  PyObject *pyobj_node = PyCapsule_New(node, "apollo_cyber_pynode", nullptr);
+  PyObject *pyobj_node = PyCapsule_New(node, "edith_cyber_pynode", nullptr);
   return pyobj_node;
 }
 
@@ -454,7 +454,7 @@ PyObject *cyber_delete_PyNode(PyObject *self, PyObject *args) {
   }
 
   PyNode *node = reinterpret_cast<PyNode *>(
-      PyCapsule_GetPointer(pyobj_node, "apollo_cyber_pynode"));
+      PyCapsule_GetPointer(pyobj_node, "edith_cyber_pynode"));
   delete node;
   Py_INCREF(Py_None);
   return Py_None;
@@ -473,7 +473,7 @@ PyObject *cyber_PyNode_create_writer(PyObject *self, PyObject *args) {
     return Py_None;
   }
 
-  PyNode *node = PyObjectToPtr<PyNode *>(pyobj_node, "apollo_cyber_pynode");
+  PyNode *node = PyObjectToPtr<PyNode *>(pyobj_node, "edith_cyber_pynode");
   if (nullptr == node) {
     AERROR << "cyber_PyNode_create_writer:node ptr is null!";
     Py_INCREF(Py_None);
@@ -490,7 +490,7 @@ PyObject *cyber_PyNode_create_writer(PyObject *self, PyObject *args) {
     return Py_None;
   }
   PyObject *pyobj_writer =
-      PyCapsule_New(writer, "apollo_cyber_pywriter", nullptr);
+      PyCapsule_New(writer, "edith_cyber_pywriter", nullptr);
   return pyobj_writer;
 }
 
@@ -506,7 +506,7 @@ PyObject *cyber_PyNode_create_reader(PyObject *self, PyObject *args) {
     return Py_None;
   }
 
-  PyNode *node = PyObjectToPtr<PyNode *>(pyobj_node, "apollo_cyber_pynode");
+  PyNode *node = PyObjectToPtr<PyNode *>(pyobj_node, "edith_cyber_pynode");
   if (nullptr == node) {
     AERROR << "PyNode_create_reader:node ptr is null!";
     Py_INCREF(Py_None);
@@ -518,7 +518,7 @@ PyObject *cyber_PyNode_create_reader(PyObject *self, PyObject *args) {
   CHECK(reader) << "PyReader is NULL!";
 
   PyObject *pyobj_reader =
-      PyCapsule_New(reader, "apollo_cyber_pyreader", nullptr);
+      PyCapsule_New(reader, "edith_cyber_pyreader", nullptr);
   return pyobj_reader;
 }
 
@@ -534,7 +534,7 @@ PyObject *cyber_PyNode_create_client(PyObject *self, PyObject *args) {
     return Py_None;
   }
 
-  PyNode *node = PyObjectToPtr<PyNode *>(pyobj_node, "apollo_cyber_pynode");
+  PyNode *node = PyObjectToPtr<PyNode *>(pyobj_node, "edith_cyber_pynode");
   if (nullptr == node) {
     AERROR << "PyNode_create_client:node ptr is null!";
     Py_INCREF(Py_None);
@@ -544,7 +544,7 @@ PyObject *cyber_PyNode_create_client(PyObject *self, PyObject *args) {
   PyClient *client = reinterpret_cast<PyClient *>((node->create_client(
       (std::string const &)channel_name, (std::string const &)type_name)));
   PyObject *pyobj_client =
-      PyCapsule_New(client, "apollo_cyber_pyclient", nullptr);
+      PyCapsule_New(client, "edith_cyber_pyclient", nullptr);
 
   return pyobj_client;
 }
@@ -562,7 +562,7 @@ PyObject *cyber_PyNode_create_service(PyObject *self, PyObject *args) {
     return Py_None;
   }
 
-  PyNode *node = PyObjectToPtr<PyNode *>(pyobj_node, "apollo_cyber_pynode");
+  PyNode *node = PyObjectToPtr<PyNode *>(pyobj_node, "edith_cyber_pynode");
   if (nullptr == node) {
     AERROR << "cyber_PyNode_create_service:node ptr is null!";
     Py_INCREF(Py_None);
@@ -572,7 +572,7 @@ PyObject *cyber_PyNode_create_service(PyObject *self, PyObject *args) {
   PyService *service = reinterpret_cast<PyService *>((node->create_service(
       (std::string const &)channel_name, (std::string const &)type_name)));
   PyObject *pyobj_service =
-      PyCapsule_New(service, "apollo_cyber_pyservice", nullptr);
+      PyCapsule_New(service, "edith_cyber_pyservice", nullptr);
   return pyobj_service;
 }
 
@@ -586,7 +586,7 @@ PyObject *cyber_PyNode_shutdown(PyObject *self, PyObject *args) {
     return Py_None;
   }
 
-  PyNode *node = PyObjectToPtr<PyNode *>(pyobj_node, "apollo_cyber_pynode");
+  PyNode *node = PyObjectToPtr<PyNode *>(pyobj_node, "edith_cyber_pynode");
   if (nullptr == node) {
     AERROR << "cyber_PyNode_shutdown:node ptr is null!";
     Py_INCREF(Py_None);
@@ -608,7 +608,7 @@ PyObject *cyber_PyNode_register_message(PyObject *self, PyObject *args) {
     Py_INCREF(Py_None);
     return Py_None;
   }
-  PyNode *node = PyObjectToPtr<PyNode *>(pyobj_node, "apollo_cyber_pynode");
+  PyNode *node = PyObjectToPtr<PyNode *>(pyobj_node, "edith_cyber_pynode");
   if (nullptr == node) {
     AERROR << "cyber_PyNode_register_message:node ptr is null! desc->" << desc;
     Py_INCREF(Py_None);
@@ -717,7 +717,7 @@ PyObject *cyber_PyNodeUtils_get_active_nodes(PyObject *self, PyObject *args) {
   }
 
   std::vector<std::string> nodes_name =
-      apollo::cyber::PyNodeUtils::get_active_nodes(sleep_s);
+      edith::cyber::PyNodeUtils::get_active_nodes(sleep_s);
   PyObject *pyobj_list = PyList_New(nodes_name.size());
   size_t pos = 0;
   for (const std::string &name : nodes_name) {
@@ -741,7 +741,7 @@ PyObject *cyber_PyNodeUtils_get_node_attr(PyObject *self, PyObject *args) {
   }
   std::string name(node_name, len);
   const std::string node_attr =
-      apollo::cyber::PyNodeUtils::get_node_attr(name, sleep_s);
+      edith::cyber::PyNodeUtils::get_node_attr(name, sleep_s);
   return C_STR_TO_PY_BYTES(node_attr);
 }
 
@@ -758,7 +758,7 @@ PyObject *cyber_PyNodeUtils_get_readersofnode(PyObject *self, PyObject *args) {
   }
   std::string name(node_name, len);
   std::vector<std::string> readers_channel =
-      apollo::cyber::PyNodeUtils::get_readersofnode(name, sleep_s);
+      edith::cyber::PyNodeUtils::get_readersofnode(name, sleep_s);
   PyObject *pyobj_list = PyList_New(readers_channel.size());
   size_t pos = 0;
   for (const std::string &channel : readers_channel) {
@@ -782,7 +782,7 @@ PyObject *cyber_PyNodeUtils_get_writersofnode(PyObject *self, PyObject *args) {
   }
   std::string name(node_name, len);
   std::vector<std::string> writers_channel =
-      apollo::cyber::PyNodeUtils::get_writersofnode(name, sleep_s);
+      edith::cyber::PyNodeUtils::get_writersofnode(name, sleep_s);
   PyObject *pyobj_list = PyList_New(writers_channel.size());
   size_t pos = 0;
   for (const std::string &channel : writers_channel) {

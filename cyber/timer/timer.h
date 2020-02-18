@@ -22,7 +22,7 @@
 
 #include "cyber/timer/timing_wheel.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 /**
@@ -119,6 +119,6 @@ class Timer {
 };
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TIMER_TIMER_H_

@@ -24,7 +24,7 @@
 #include "cyber/common/macros.h"
 #include "cyber/transport/shm/notifier_base.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -65,6 +65,6 @@ class ConditionNotifier : public NotifierBase {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_SHM_CONDITION_NOTIFIER_H_

@@ -17,7 +17,7 @@
 #include "cyber/transport/shm/shm_conf.h"
 #include "cyber/common/log.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -110,4 +110,4 @@ uint32_t ShmConf::GetBlockNum(const uint64_t& ceiling_msg_size) {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

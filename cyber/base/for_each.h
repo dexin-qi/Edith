@@ -21,7 +21,7 @@
 
 #include "cyber/base/macros.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace base {
 
@@ -43,10 +43,10 @@ LessThan(const Value& val, const End& end) {
 
 #define FOR_EACH(i, begin, end)           \
   for (auto i = (true ? (begin) : (end)); \
-       apollo::cyber::base::LessThan(i, (end)); ++i)
+       edith::cyber::base::LessThan(i, (end)); ++i)
 
 }  // namespace base
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_BASE_FOR_EACH_H_

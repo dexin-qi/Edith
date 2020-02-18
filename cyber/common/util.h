@@ -19,7 +19,7 @@
 
 #include <string>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace common {
 
@@ -29,6 +29,6 @@ inline std::size_t Hash(const std::string& key) {
 
 }  // namespace common
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_COMMON_UTIL_H_

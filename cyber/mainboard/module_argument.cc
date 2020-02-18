@@ -19,9 +19,9 @@
 #include <getopt.h>
 #include <libgen.h>
 
-using apollo::cyber::common::GlobalData;
+using edith::cyber::common::GlobalData;
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace mainboard {
 
@@ -114,4 +114,4 @@ void ModuleArgument::GetOptions(const int argc, char* const argv[]) {
 
 }  // namespace mainboard
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

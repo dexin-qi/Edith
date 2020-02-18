@@ -29,11 +29,11 @@
 #include "google/protobuf/dynamic_message.h"
 #include "google/protobuf/io/tokenizer.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace message {
 
-using apollo::cyber::proto::ProtoDesc;
+using edith::cyber::proto::ProtoDesc;
 using google::protobuf::Descriptor;
 using google::protobuf::DescriptorPool;
 using google::protobuf::DynamicMessageFactory;
@@ -110,6 +110,6 @@ class ProtobufFactory {
 
 }  // namespace message
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_MESSAGE_PROTOBUF_FACTORY_H_

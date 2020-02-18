@@ -34,7 +34,7 @@
 /**
  *  class register implement
  */
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace class_loader {
 
@@ -130,6 +130,6 @@ std::vector<std::string> GetValidClassNames(ClassLoader* loader) {
 }  // namespace utility
 }  // namespace class_loader
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_CLASS_LOADER_UTILITY_CLASS_LOADER_UTILITY_H_

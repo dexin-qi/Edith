@@ -23,7 +23,7 @@
 
 #include "cyber/transport/common/identity.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -69,6 +69,6 @@ class MessageInfo {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_MESSAGE_MESSAGE_INFO_H_

@@ -20,7 +20,7 @@
 
 #include "gtest/gtest.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace common {
 
@@ -49,4 +49,4 @@ TEST(EnvironmentTest, work_root) {
 
 }  // namespace common
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

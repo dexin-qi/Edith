@@ -31,11 +31,11 @@
 #include "cyber/data/data_visitor.h"
 #include "cyber/scheduler/scheduler.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
-using apollo::cyber::common::GlobalData;
-using apollo::cyber::proto::RoleAttributes;
+using edith::cyber::common::GlobalData;
+using edith::cyber::proto::RoleAttributes;
 
 /**
  * @brief .
@@ -549,9 +549,9 @@ bool Component<M0, M1, M2, M3>::Initialize(const ComponentConfig& config) {
 }
 
 #define CYBER_REGISTER_COMPONENT(name) \
-  CLASS_LOADER_REGISTER_CLASS(name, apollo::cyber::ComponentBase)
+  CLASS_LOADER_REGISTER_CLASS(name, edith::cyber::ComponentBase)
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_COMPONENT_COMPONENT_H_

@@ -26,13 +26,13 @@
 #include "cyber/proto/classic_conf.pb.h"
 #include "cyber/scheduler/scheduler.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace scheduler {
 
-using apollo::cyber::croutine::CRoutine;
-using apollo::cyber::proto::ClassicConf;
-using apollo::cyber::proto::ClassicTask;
+using edith::cyber::croutine::CRoutine;
+using edith::cyber::proto::ClassicConf;
+using edith::cyber::proto::ClassicTask;
 
 class SchedulerClassic : public Scheduler {
  public:
@@ -54,6 +54,6 @@ class SchedulerClassic : public Scheduler {
 
 }  // namespace scheduler
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_SCHEDULER_POLICY_SCHEDULER_CLASSIC_H_

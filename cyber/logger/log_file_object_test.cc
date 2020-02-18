@@ -24,7 +24,7 @@
 #include "cyber/cyber.h"
 #include "cyber/time/time.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace logger {
 
@@ -42,4 +42,4 @@ TEST(LogFileObjectTest, init_and_write) {
 
 }  // namespace logger
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

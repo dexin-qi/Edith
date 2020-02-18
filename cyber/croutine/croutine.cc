@@ -24,7 +24,7 @@
 #include "cyber/common/log.h"
 #include "cyber/croutine/detail/routine_context.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace croutine {
 
@@ -89,4 +89,4 @@ void CRoutine::Stop() { force_stop_ = true; }
 
 }  // namespace croutine
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

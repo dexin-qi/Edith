@@ -19,7 +19,7 @@
 
 #include <mutex>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace scheduler {
 
@@ -34,6 +34,6 @@ class MutexWrapper {
 
 }  // namespace scheduler
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_SCHEDULER_COMMON_MUTEX_WRAPPER_H_

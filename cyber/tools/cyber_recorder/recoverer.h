@@ -27,12 +27,12 @@
 #include "cyber/record/file/record_file_reader.h"
 #include "cyber/record/file/record_file_writer.h"
 
-using ::apollo::cyber::proto::ChannelCache;
-using ::apollo::cyber::proto::ChunkBody;
-using ::apollo::cyber::proto::ChunkHeader;
-using ::apollo::cyber::proto::Header;
+using ::edith::cyber::proto::ChannelCache;
+using ::edith::cyber::proto::ChunkBody;
+using ::edith::cyber::proto::ChunkHeader;
+using ::edith::cyber::proto::Header;
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
@@ -52,6 +52,6 @@ class Recoverer {
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TOOLS_CYBER_RECORDER_RECOVERER_H_

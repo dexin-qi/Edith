@@ -29,8 +29,8 @@
 #include "cyber/task/task.h"
 #include "cyber/time/time.h"
 
-using apollo::cyber::Time;
-using apollo::cyber::io::Session;
+using edith::cyber::Time;
+using edith::cyber::io::Session;
 
 void Echo(const std::shared_ptr<Session>& session) {
   struct sockaddr_in client_addr;
@@ -57,10 +57,10 @@ int main(int argc, char* argv[]) {
     return -1;
   }
 
-  apollo::cyber::Init(argv[0]);
+  edith::cyber::Init(argv[0]);
 
   uint16_t server_port = static_cast<uint16_t>(atoi(argv[1]));
-  apollo::cyber::scheduler::Instance()->CreateTask(
+  edith::cyber::scheduler::Instance()->CreateTask(
       [&server_port]() {
         struct sockaddr_in server_addr;
         server_addr.sin_family = AF_INET;
@@ -80,6 +80,6 @@ int main(int argc, char* argv[]) {
       },
       "echo_server");
 
-  apollo::cyber::WaitForShutdown();
+  edith::cyber::WaitForShutdown();
   return 0;
 }

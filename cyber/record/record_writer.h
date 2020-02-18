@@ -33,7 +33,7 @@
 #include "cyber/record/header_builder.h"
 #include "cyber/record/record_base.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
@@ -243,6 +243,6 @@ bool RecordWriter::WriteMessage(const std::string& channel_name,
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_RECORD_RECORD_WRITER_H_

@@ -24,7 +24,7 @@
 #include <utility>
 #include <vector>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace common {
 
@@ -139,6 +139,6 @@ inline std::string UnixSecondsToString(
 
 }  // namespace common
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_COMMON_TIME_CONVERSION_H_

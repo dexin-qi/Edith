@@ -30,7 +30,7 @@
 #include "fastrtps/participant/Participant.h"
 #include "fastrtps/publisher/Publisher.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -127,6 +127,6 @@ bool RtpsTransmitter<M>::Transmit(const M& msg, const MessageInfo& msg_info) {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_TRANSMITTER_RTPS_TRANSMITTER_H_

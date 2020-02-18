@@ -17,10 +17,10 @@
 #include "cyber/parameter/parameter.h"
 #include "cyber/message/protobuf_factory.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
-using apollo::cyber::message::ProtobufFactory;
+using edith::cyber::message::ProtobufFactory;
 
 Parameter::Parameter() {
   param_.set_name("");
@@ -158,4 +158,4 @@ std::string Parameter::DebugString() const {
 }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

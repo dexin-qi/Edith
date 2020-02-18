@@ -21,19 +21,19 @@
 #include "cyber/common/file.h"
 #include "cyber/time/time.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
-using apollo::cyber::proto::Channel;
-using apollo::cyber::proto::ChannelCache;
-using apollo::cyber::proto::ChunkBody;
-using apollo::cyber::proto::ChunkBodyCache;
-using apollo::cyber::proto::ChunkHeader;
-using apollo::cyber::proto::ChunkHeaderCache;
-using apollo::cyber::proto::Header;
-using apollo::cyber::proto::SectionType;
-using apollo::cyber::proto::SingleIndex;
+using edith::cyber::proto::Channel;
+using edith::cyber::proto::ChannelCache;
+using edith::cyber::proto::ChunkBody;
+using edith::cyber::proto::ChunkBodyCache;
+using edith::cyber::proto::ChunkHeader;
+using edith::cyber::proto::ChunkHeaderCache;
+using edith::cyber::proto::Header;
+using edith::cyber::proto::SectionType;
+using edith::cyber::proto::SingleIndex;
 
 RecordFileWriter::RecordFileWriter() {}
 
@@ -42,7 +42,7 @@ RecordFileWriter::~RecordFileWriter() { Close(); }
 bool RecordFileWriter::Open(const std::string& path) {
   std::lock_guard<std::mutex> lock(mutex_);
   path_ = path;
-  if (::apollo::cyber::common::PathExists(path_)) {
+  if (::edith::cyber::common::PathExists(path_)) {
     AWARN << "File exist and overwrite, file: " << path_;
   }
   fd_ = open(path_.data(), O_CREAT | O_WRONLY,
@@ -254,4 +254,4 @@ uint64_t RecordFileWriter::GetMessageNumber(
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

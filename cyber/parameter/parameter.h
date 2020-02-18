@@ -25,15 +25,15 @@
 /**
  * @namespace cyber.parameter
  */
-namespace apollo {
+namespace edith {
 namespace cyber {
 
-using apollo::cyber::proto::Param;
-using apollo::cyber::proto::ParamType;
+using edith::cyber::proto::Param;
+using edith::cyber::proto::ParamType;
 
 /**
  * @class Parameter
- * @brief A `Parameter` holds an apollo::cyber::proto::Param,
+ * @brief A `Parameter` holds an edith::cyber::proto::Param,
  * It's more human-readable, you can use basic-value type and Protobuf values
  * to construct a paramter. Parameter is identified by their `name`,
  * and you can get Parameter content by call value()
@@ -355,6 +355,6 @@ inline double Parameter::AsDouble() const { return value<double>(); }
 const std::string Parameter::AsString() const { return value<std::string>(); }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_PARAMETER_PARAMETER_H_

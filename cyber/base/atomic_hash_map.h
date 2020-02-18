@@ -22,7 +22,7 @@
 #include <type_traits>
 #include <utility>
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace base {
 /**
@@ -294,6 +294,6 @@ class AtomicHashMap {
 
 }  // namespace base
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_BASE_ATOMIC_HASH_MAP_H_

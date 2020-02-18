@@ -24,7 +24,7 @@
 
 #include "cyber/common/log.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace logger {
 
@@ -78,4 +78,4 @@ TEST(LoggerUtilTest, PidHasChanged) { EXPECT_FALSE(PidHasChanged()); }
 
 }  // namespace logger
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

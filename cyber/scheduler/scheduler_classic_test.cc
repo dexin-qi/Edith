@@ -25,7 +25,7 @@
 #include "cyber/scheduler/scheduler_factory.h"
 #include "cyber/task/task.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace scheduler {
 
@@ -104,12 +104,12 @@ TEST(SchedulerClassicTest, sched_classic) {
 
 }  // namespace scheduler
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
-  apollo::cyber::Init(argv[0]);
+  edith::cyber::Init(argv[0]);
   auto res = RUN_ALL_TESTS();
-  apollo::cyber::Clear();
+  edith::cyber::Clear();
   return res;
 }

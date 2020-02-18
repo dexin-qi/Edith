@@ -18,7 +18,7 @@
 
 #include "cyber/class_loader/class_loader.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace class_loader {
 namespace utility {
@@ -281,4 +281,4 @@ void UnloadLibrary(const std::string& library_path, ClassLoader* loader) {
 }  // End namespace utility
 }  // End namespace class_loader
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

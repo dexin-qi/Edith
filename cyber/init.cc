@@ -35,11 +35,11 @@
 #include "cyber/timer/timing_wheel.h"
 #include "cyber/transport/transport.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
-using apollo::cyber::scheduler::Scheduler;
-using apollo::cyber::service_discovery::TopologyManager;
+using edith::cyber::scheduler::Scheduler;
+using edith::cyber::service_discovery::TopologyManager;
 
 namespace {
 
@@ -50,9 +50,9 @@ logger::AsyncLogger* async_logger = nullptr;
 void InitLogger(const char* binary_name) {
   const char* slash = strrchr(binary_name, '/');
   if (slash) {
-    ::apollo::cyber::Binary::SetName(slash + 1);
+    ::edith::cyber::Binary::SetName(slash + 1);
   } else {
-    ::apollo::cyber::Binary::SetName(binary_name);
+    ::edith::cyber::Binary::SetName(binary_name);
   }
 
   // Init glog
@@ -62,7 +62,7 @@ void InitLogger(const char* binary_name) {
   google::SetLogDestination(google::FATAL, "");
 
   // Init async logger
-  async_logger = new ::apollo::cyber::logger::AsyncLogger(
+  async_logger = new ::edith::cyber::logger::AsyncLogger(
       google::base::GetLogger(FLAGS_minloglevel));
   google::base::SetLogger(FLAGS_minloglevel, async_logger);
   async_logger->Start();
@@ -125,4 +125,4 @@ void Clear() {
 }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

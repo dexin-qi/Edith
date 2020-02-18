@@ -29,7 +29,7 @@
 #include "fastrtps/participant/ParticipantListener.h"
 #include "fastrtps/rtps/common/Locator.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -63,6 +63,6 @@ class Participant {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_RTPS_PARTICIPANT_H_

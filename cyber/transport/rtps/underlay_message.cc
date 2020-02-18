@@ -32,7 +32,7 @@ char dummy;
 }
 #endif
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -143,4 +143,4 @@ void UnderlayMessage::serializeKey(eprosima::fastcdr::Cdr& scdr) const {
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

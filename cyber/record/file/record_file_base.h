@@ -22,7 +22,7 @@
 
 #include "cyber/proto/record.pb.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace record {
 
@@ -50,6 +50,6 @@ class RecordFileBase {
 
 }  // namespace record
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_RECORD_FILE_RECORD_FILE_BASE_H_

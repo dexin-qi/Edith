@@ -26,7 +26,7 @@
 #include "cyber/logger/log_file_object.h"
 #include "cyber/logger/logger_util.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace logger {
 
@@ -76,4 +76,4 @@ uint32_t Logger::LogSize() { return wrapped_->LogSize(); }
 
 }  // namespace logger
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

@@ -37,7 +37,7 @@
 #include "cyber/time/time.h"
 #include "cyber/transport/transport.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 template <typename M0>
@@ -421,6 +421,6 @@ void Reader<MessageT>::GetWriters(std::vector<proto::RoleAttributes>* writers) {
 }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_NODE_READER_H_

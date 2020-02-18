@@ -20,7 +20,7 @@
 #include "cyber/common/log.h"
 #include "cyber/time/time.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace service_discovery {
 
@@ -199,4 +199,4 @@ bool TopologyManager::ParseParticipantName(const std::string& participant_name,
 
 }  // namespace service_discovery
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith

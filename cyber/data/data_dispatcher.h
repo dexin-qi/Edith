@@ -27,12 +27,12 @@
 #include "cyber/state.h"
 #include "cyber/time/time.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace data {
 
-using apollo::cyber::Time;
-using apollo::cyber::base::AtomicHashMap;
+using edith::cyber::Time;
+using edith::cyber::base::AtomicHashMap;
 
 template <typename T>
 class DataDispatcher {
@@ -73,7 +73,7 @@ template <typename T>
 bool DataDispatcher<T>::Dispatch(const uint64_t channel_id,
                                  const std::shared_ptr<T>& msg) {
   BufferVector* buffers = nullptr;
-  if (apollo::cyber::IsShutdown()) {
+  if (edith::cyber::IsShutdown()) {
     return false;
   }
   if (buffers_map_.Get(channel_id, &buffers)) {
@@ -91,6 +91,6 @@ bool DataDispatcher<T>::Dispatch(const uint64_t channel_id,
 
 }  // namespace data
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_DATA_DATA_DISPATCHER_H_

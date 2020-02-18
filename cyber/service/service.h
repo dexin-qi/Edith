@@ -27,7 +27,7 @@
 #include "cyber/scheduler/scheduler.h"
 #include "cyber/service/service_base.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
 /**
@@ -239,6 +239,6 @@ void Service<Request, Response>::SendResponse(
 }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_SERVICE_SERVICE_H_

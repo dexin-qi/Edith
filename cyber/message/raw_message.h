@@ -24,7 +24,7 @@
 
 #include "cyber/message/protobuf_factory.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace message {
 
@@ -51,8 +51,8 @@ struct RawMessage {
 
   class Descriptor {
    public:
-    std::string full_name() const { return "apollo.cyber.message.RawMessage"; }
-    std::string name() const { return "apollo.cyber.message.RawMessage"; }
+    std::string full_name() const { return "edith.cyber.message.RawMessage"; }
+    std::string name() const { return "edith.cyber.message.RawMessage"; }
   };
 
   static const Descriptor *descriptor() {
@@ -98,7 +98,7 @@ struct RawMessage {
 
   int ByteSize() const { return static_cast<int>(message.size()); }
 
-  static std::string TypeName() { return "apollo.cyber.message.RawMessage"; }
+  static std::string TypeName() { return "edith.cyber.message.RawMessage"; }
 
   std::string message;
   uint64_t timestamp;
@@ -106,6 +106,6 @@ struct RawMessage {
 
 }  // namespace message
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_MESSAGE_RAW_MESSAGE_H_

@@ -25,11 +25,11 @@
 #include "cyber/mainboard/module_argument.h"
 #include "cyber/proto/dag_conf.pb.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace mainboard {
 
-using apollo::cyber::proto::DagConfig;
+using edith::cyber::proto::DagConfig;
 
 class ModuleController {
  public:
@@ -59,6 +59,6 @@ inline bool ModuleController::Init() { return LoadAll(); }
 
 }  // namespace mainboard
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_MAINBOARD_MODULE_CONTROLLER_H_

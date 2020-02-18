@@ -23,7 +23,7 @@
 
 #include "cyber/message/py_message.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace message {
 
@@ -41,6 +41,6 @@ inline int ByteSize(const PyMessageWrap& message) { return message.ByteSize(); }
 
 }  // namespace message
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_MESSAGE_PY_MESSAGE_TRAITS_H_

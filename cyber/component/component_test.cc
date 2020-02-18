@@ -22,13 +22,13 @@
 #include "cyber/init.h"
 #include "cyber/message/raw_message.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 
-using apollo::cyber::Component;
-using apollo::cyber::message::RawMessage;
-using apollo::cyber::proto::ComponentConfig;
-using apollo::cyber::proto::TimerComponentConfig;
+using edith::cyber::Component;
+using edith::cyber::message::RawMessage;
+using edith::cyber::proto::ComponentConfig;
+using edith::cyber::proto::TimerComponentConfig;
 static bool ret_proc = true;
 static bool ret_init = true;
 template <typename M0, typename M1 = NullType, typename M2 = NullType,
@@ -70,31 +70,31 @@ class Component_C : public Component<M0> {
 TEST(CommonComponent, init) {
   ret_proc = true;
   ret_init = true;
-  apollo::cyber::proto::ComponentConfig compcfg;
+  edith::cyber::proto::ComponentConfig compcfg;
   auto msg_str1 = std::make_shared<message::RawMessage>();
   auto msg_str2 = std::make_shared<message::RawMessage>();
   auto msg_str3 = std::make_shared<message::RawMessage>();
   auto msg_str4 = std::make_shared<message::RawMessage>();
 
   compcfg.set_name("perception");
-  apollo::cyber::proto::ReaderOption *read_opt = compcfg.add_readers();
+  edith::cyber::proto::ReaderOption *read_opt = compcfg.add_readers();
   read_opt->set_channel("/perception/channel");
   auto comC = std::make_shared<Component_C<RawMessage>>();
   EXPECT_TRUE(comC->Initialize(compcfg));
   EXPECT_TRUE(comC->Process(msg_str1));
 
   compcfg.set_name("perception2");
-  apollo::cyber::proto::ReaderOption *read_opt2 = compcfg.add_readers();
+  edith::cyber::proto::ReaderOption *read_opt2 = compcfg.add_readers();
   read_opt2->set_channel("/driver/channel1");
   auto comB = std::make_shared<Component_B<RawMessage, RawMessage>>();
   EXPECT_TRUE(comB->Initialize(compcfg));
   EXPECT_TRUE(comB->Process(msg_str1, msg_str2));
 
   compcfg.set_name("perception3");
-  apollo::cyber::proto::ReaderOption *read_opt3 = compcfg.add_readers();
+  edith::cyber::proto::ReaderOption *read_opt3 = compcfg.add_readers();
   read_opt3->set_channel("/driver/channel2");
   compcfg.set_name("perception4");
-  apollo::cyber::proto::ReaderOption *read_opt4 = compcfg.add_readers();
+  edith::cyber::proto::ReaderOption *read_opt4 = compcfg.add_readers();
   read_opt4->set_channel("/driver/channel3");
   auto comA = std::make_shared<
       Component_A<RawMessage, RawMessage, RawMessage, RawMessage>>();
@@ -105,7 +105,7 @@ TEST(CommonComponent, init) {
 TEST(CommonComponentFail, init) {
   ret_proc = false;
   ret_init = false;
-  apollo::cyber::proto::ComponentConfig compcfg;
+  edith::cyber::proto::ComponentConfig compcfg;
 
   auto msg_str1 = std::make_shared<message::RawMessage>();
   auto msg_str2 = std::make_shared<message::RawMessage>();
@@ -113,23 +113,23 @@ TEST(CommonComponentFail, init) {
   auto msg_str4 = std::make_shared<message::RawMessage>();
 
   compcfg.set_name("perception_f");
-  apollo::cyber::proto::ReaderOption *read_opt = compcfg.add_readers();
+  edith::cyber::proto::ReaderOption *read_opt = compcfg.add_readers();
   read_opt->set_channel("/perception/channel");
   auto comC = std::make_shared<Component_C<RawMessage>>();
   EXPECT_FALSE(comC->Initialize(compcfg));
   EXPECT_FALSE(comC->Process(msg_str1));
 
   compcfg.set_name("perception2_f");
-  apollo::cyber::proto::ReaderOption *read_opt2 = compcfg.add_readers();
+  edith::cyber::proto::ReaderOption *read_opt2 = compcfg.add_readers();
   read_opt2->set_channel("/driver/channel1");
   auto comB = std::make_shared<Component_B<RawMessage, RawMessage>>();
   EXPECT_FALSE(comB->Initialize(compcfg));
   EXPECT_FALSE(comB->Process(msg_str1, msg_str2));
 
   compcfg.set_name("perception3_f");
-  apollo::cyber::proto::ReaderOption *read_opt3 = compcfg.add_readers();
+  edith::cyber::proto::ReaderOption *read_opt3 = compcfg.add_readers();
   read_opt3->set_channel("/driver/channel2");
-  apollo::cyber::proto::ReaderOption *read_opt4 = compcfg.add_readers();
+  edith::cyber::proto::ReaderOption *read_opt4 = compcfg.add_readers();
   read_opt4->set_channel("/driver/channel3");
   auto comA = std::make_shared<
       Component_A<RawMessage, RawMessage, RawMessage, RawMessage>>();
@@ -138,10 +138,10 @@ TEST(CommonComponentFail, init) {
 }
 
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 int main(int argc, char **argv) {
   testing::InitGoogleTest(&argc, argv);
-  apollo::cyber::Init(argv[0]);
+  edith::cyber::Init(argv[0]);
   return RUN_ALL_TESTS();
 }

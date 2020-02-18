@@ -27,7 +27,7 @@
 #include "cyber/io/session.h"
 #include "cyber/scheduler/scheduler_factory.h"
 
-using apollo::cyber::io::Session;
+using edith::cyber::io::Session;
 
 int main(int argc, char* argv[]) {
   if (argc != 2) {
@@ -35,10 +35,10 @@ int main(int argc, char* argv[]) {
     return -1;
   }
 
-  apollo::cyber::Init(argv[0]);
+  edith::cyber::Init(argv[0]);
 
   int server_port = atoi(argv[1]);
-  apollo::cyber::scheduler::Instance()->CreateTask(
+  edith::cyber::scheduler::Instance()->CreateTask(
       [&server_port]() {
         struct sockaddr_in server_addr;
         server_addr.sin_addr.s_addr = inet_addr("127.0.0.1");
@@ -64,7 +64,7 @@ int main(int argc, char* argv[]) {
           std::cout << "please enter a message (enter Ctrl+C to exit):"
                     << std::endl;
           std::getline(std::cin, user_input);
-          if (!apollo::cyber::OK()) {
+          if (!edith::cyber::OK()) {
             break;
           }
           if (user_input.empty()) {
@@ -105,6 +105,6 @@ int main(int argc, char* argv[]) {
       },
       "echo_client");
 
-  apollo::cyber::WaitForShutdown();
+  edith::cyber::WaitForShutdown();
   return 0;
 }

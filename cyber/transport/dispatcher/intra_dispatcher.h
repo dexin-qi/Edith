@@ -31,7 +31,7 @@
 #include "cyber/message/raw_message.h"
 #include "cyber/transport/dispatcher/dispatcher.h"
 
-namespace apollo {
+namespace edith {
 namespace cyber {
 namespace transport {
 
@@ -419,6 +419,6 @@ void IntraDispatcher::RemoveListener(const RoleAttributes& self_attr,
 
 }  // namespace transport
 }  // namespace cyber
-}  // namespace apollo
+}  // namespace edith
 
 #endif  // CYBER_TRANSPORT_DISPATCHER_INTRA_DISPATCHER_H_

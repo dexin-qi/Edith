@@ -92,11 +92,11 @@ CyberTopologyMessage::findChild(int lineNo) const {
 }
 
 void CyberTopologyMessage::TopologyChanged(
-    const apollo::cyber::proto::ChangeMsg& changeMsg) {
-  if (::apollo::cyber::proto::OperateType::OPT_JOIN ==
+    const edith::cyber::proto::ChangeMsg& changeMsg) {
+  if (::edith::cyber::proto::OperateType::OPT_JOIN ==
       changeMsg.operate_type()) {
     bool isWriter = true;
-    if (::apollo::cyber::proto::RoleType::ROLE_READER == changeMsg.role_type())
+    if (::edith::cyber::proto::RoleType::ROLE_READER == changeMsg.role_type())
       isWriter = false;
     AddReaderWriter(changeMsg.role_attr(), isWriter);
   } else {
@@ -105,7 +105,7 @@ void CyberTopologyMessage::TopologyChanged(
     if (iter != all_channels_map_.cend() &&
         !GeneralChannelMessage::isErrorCode(iter->second)) {
       const std::string& nodeName = changeMsg.role_attr().node_name();
-      if (::apollo::cyber::proto::RoleType::ROLE_WRITER ==
+      if (::edith::cyber::proto::RoleType::ROLE_WRITER ==
           changeMsg.role_type()) {
         iter->second->del_writer(nodeName);
       } else {
@@ -116,7 +116,7 @@ void CyberTopologyMessage::TopologyChanged(
 }
 
 void CyberTopologyMessage::AddReaderWriter(
-    const apollo::cyber::proto::RoleAttributes& role, bool isWriter) {
+    const edith::cyber::proto::RoleAttributes& role, bool isWriter) {
   const std::string& channelName = role.channel_name();
 
   if (!specified_channel_.empty() && specified_channel_ != channelName) {
@@ -160,8 +160,8 @@ void CyberTopologyMessage::AddReaderWriter(
 
   if (!GeneralChannelMessage::isErrorCode(channelMsg)) {
     if (isWriter) {
-      if (msgTypeName != apollo::cyber::message::MessageType<
-                             apollo::cyber::message::RawMessage>()) {
+      if (msgTypeName != edith::cyber::message::MessageType<
+                             edith::cyber::message::RawMessage>()) {
         channelMsg->set_message_type(msgTypeName);
       }
 
