@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 ###############################################################################
-# Copyright 2017 The Apollo Authors. All Rights Reserved.
+# Copyright 2020 The Edith Author. All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -83,46 +83,23 @@ function check_in_docker() {
 function set_lib_path() {
   export LD_LIBRARY_PATH=/usr/lib:/usr/lib/x86_64-linux-gnu
 
-  if [ "$RELEASE_DOCKER" == 1 ]; then
-    local CYBER_SETUP="/edith/cyber/setup.bash"
-    if [ -e "${CYBER_SETUP}" ]; then
-      source "${CYBER_SETUP}"
-    fi
-    PY_LIB_PATH=/edith/lib
-    PY_TOOLS_PATH=/edith/modules/tools
-  else
-    local CYBER_SETUP="/edith/cyber/setup.bash"
-    if [ -e "${CYBER_SETUP}" ]; then
-      source "${CYBER_SETUP}"
-    fi
-    PY_LIB_PATH=${EDITH_ROOT_DIR}/py_proto
-    PY_TOOLS_PATH=${EDITH_ROOT_DIR}/modules/tools
-    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/edith/lib:/edith/bazel-genfiles/external/caffe/lib
+  local CYBER_SETUP="/edith/cyber/setup.bash"
+  if [ -e "${CYBER_SETUP}" ]; then
+    source "${CYBER_SETUP}"
   fi
-  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/edith/lib:/usr/local/edith/local_integ/lib
+  PY_LIB_PATH=${EDITH_ROOT_DIR}/py_proto
+  PY_TOOLS_PATH=${EDITH_ROOT_DIR}/modules/tools
   export LD_LIBRARY_PATH=/usr/local/adolc/lib64:$LD_LIBRARY_PATH
   export LD_LIBRARY_PATH=/usr/local/Qt5.5.1/5.5/gcc_64/lib:$LD_LIBRARY_PATH
-  export LD_LIBRARY_PATH=/usr/local/fast-rtps/lib:$LD_LIBRARY_PATH
-  if [ "$USE_GPU" != "1" ];then
-    export LD_LIBRARY_PATH=/usr/local/edith/libtorch/lib:$LD_LIBRARY_PATH
-  else
-    export LD_LIBRARY_PATH=/usr/local/edith/libtorch_gpu/lib:$LD_LIBRARY_PATH
-  fi
+  
+  export LD_LIBRARY_PATH=/usr/local/edith/libtorch/lib:$LD_LIBRARY_PATH
   export LD_LIBRARY_PATH=/usr/local/edith/boost/lib:$LD_LIBRARY_PATH
-  export LD_LIBRARY_PATH=/usr/local/edith/paddlepaddle_dep/mkldnn/lib/:$LD_LIBRARY_PATH
-  export PYTHONPATH=/usr/local/lib/python2.7/dist-packages:${PY_LIB_PATH}:${PY_TOOLS_PATH}:${PYTHONPATH}
-
-  # Set teleop paths
   export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+
+  export PYTHONPATH=/usr/local/lib/python2.7/dist-packages:${PY_LIB_PATH}:${PY_TOOLS_PATH}:${PYTHONPATH}
+  # Set teleop paths
   export PYTHONPATH=/edith/modules/teleop/common:${PYTHONPATH}
   export PATH=/edith/modules/teleop/common/scripts:${PATH}
-
-  if [ -e /usr/local/cuda/ ];then
-    export PATH=/usr/local/cuda/bin:$PATH
-    export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
-    export C_INCLUDE_PATH=/usr/local/cuda/include:$C_INCLUDE_PATH
-    export CPLUS_INCLUDE_PATH=/usr/local/cuda/include:$CPLUS_INCLUDE_PATH
-  fi
 }
 
 function create_data_dir() {
@@ -140,8 +117,8 @@ function create_data_dir() {
 
 function determine_bin_prefix() {
   EDITH_BIN_PREFIX=$EDITH_ROOT_DIR
-  if [ -e "${EDITH_ROOT_DIR}/bazel-bin" ]; then
-    EDITH_BIN_PREFIX="${EDITH_ROOT_DIR}/bazel-bin"
+  if [ -e "${EDITH_ROOT_DIR}/build" ]; then
+    EDITH_BIN_PREFIX="${EDITH_ROOT_DIR}/build"
   fi
   export EDITH_BIN_PREFIX
 }
@@ -183,26 +160,6 @@ function setup_device() {
   if [ "$MACHINE_ARCH" == 'aarch64' ]; then
     sudo ip link set can0 type can bitrate 500000
     sudo ip link set can0 up
-  fi
-
-  # setup nvidia device
-  sudo /sbin/modprobe nvidia
-  sudo /sbin/modprobe nvidia-uvm
-  if [ ! -e /dev/nvidia0 ];then
-    sudo mknod -m 666 /dev/nvidia0 c 195 0
-  fi
-  if [ ! -e /dev/nvidiactl ];then
-    sudo mknod -m 666 /dev/nvidiactl c 195 255
-  fi
-  if [ ! -e /dev/nvidia-uvm ];then
-    sudo mknod -m 666 /dev/nvidia-uvm c 243 0
-  fi
-  if [ ! -e /dev/nvidia-uvm-tools ];then
-    sudo mknod -m 666 /dev/nvidia-uvm-tools c 243 1
-  fi
-
-  if [ ! -e /dev/nvidia-uvm-tools ];then
-    sudo mknod -m 666 /dev/nvidia-uvm-tools c 243 1
   fi
 }
 
