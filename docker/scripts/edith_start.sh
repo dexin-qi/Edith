@@ -17,6 +17,7 @@
 ###############################################################################
 
 VERSION=""
+LOCAL_IMAGE="no"
 ARCH=$(uname -m)
 VERSION_X86_64="x86_64"
 VERSION_AARCH64="aarch64_dev"
@@ -75,6 +76,9 @@ do
         [ -z ${VERSION_OPT// /} ] && echo -e "Missing parameter for $VAR" && exit 2
         [[ $VERSION_OPT =~ ^-.* ]] && echo -e "Missing parameter for $VAR" && exit 2
         ;;
+    -l|--local)
+        LOCAL_IMAGE="yes"
+        ;;
     -h|--help)
         show_usage
         ;;
@@ -109,7 +113,9 @@ if [ -z "$VERSION_OPT" ]; then
     VERSION="x86_64"
 fi
 
-
+if [ "$LOCAL_IMAGE" == "yes" ] && [ -z "$VERSION_OPT" ]; then
+    VERSION="x86_64_20200220"
+fi
 IMG=${DOCKER_REPO}:$VERSION
 
 function local_volumes() {
@@ -138,11 +144,15 @@ function local_volumes() {
 }
 
 function main(){
-    info "Start pulling docker image $IMG ..."
-    docker pull $IMG
-    if [ $? -ne 0 ];then
-        error "Failed to pull docker image."
-        exit 1
+    if [ "$LOCAL_IMAGE" = "yes" ];then
+        info "Start docker container based on local image : $IMG"
+    else
+        info "Start pulling docker image $IMG ..."
+        docker pull $IMG
+        if [ $? -ne 0 ];then
+            error "Failed to pull docker image."
+            exit 1
+        fi
     fi
 
     DOCKER_NAME="edith_cyber_${USER}"
