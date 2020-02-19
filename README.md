@@ -33,10 +33,11 @@ Learn how to use Edith at its [Doxygen site](http://dustinksi.cn/edith/docs).
 mkdir -p your/cpp_project/path
 git clone https://github.com/dustinksi/Edith.git --depth=1 && cd .. 
 mkdir build && cd build
-cmake .. -DBUILD_EDITH_TEST=true
-make -j4
-make test
+cmake .. -DBUILD_EDITH_TEST=false
+make -j8
 sudo make install
+bash scripts/gen_py_proto.sh
+bash scripts/gen_py_interface.sh
 ```
 ATTENTION: if your abseil library is not at correct version, Edith may not work well.
 

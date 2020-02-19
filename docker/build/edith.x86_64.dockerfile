@@ -47,6 +47,7 @@ RUN apt update -y && \
     libopenni-dev \
     libopenni2-0 \
     libopenni2-dev \
+    libpopt-dev \
     software-properties-common
 
 #install gcc 5.5.0-12
@@ -113,5 +114,6 @@ RUN ln -s /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.54.0 /usr/lib/x86_64-li
 RUN ln -s /usr/lib/python2.7/dist-packages/vtk/libvtkRenderingPythonTkWidgets.x86_64-linux-gnu.so /usr/lib/x86_64-linux-gnu/libvtkRenderingPythonTkWidgets.so
 
 RUN bash /tmp/installers/install_fast-rtps.sh
+RUN bash /tmp/installers/install_peak_driver.sh
 
 WORKDIR /edith

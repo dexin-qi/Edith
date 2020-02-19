@@ -10,7 +10,7 @@ service_path="/edith/cyber/tools/cyber_service"
 recorder_path="/edith/build/cyber/tools/cyber_recorder"
 monitor_path="/edith/build/cyber/tools/cyber_monitor"
 # qt_path=/usr/local/Qt5.5.1/5.5/gcc_64
-# visualizer_path="${apollo_tool_path}/visualizer"
+# visualizer_path="${edith_tool_path}/visualizer"
 # rosbag_to_record_path="/edith/bazel-bin/modules/data/tools/rosbag_to_record"
 
 python_load_path="/edith/build/cyber/py_wrapper"
