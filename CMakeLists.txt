@@ -29,3 +29,4 @@ find_package(fastcdr REQUIRED)
 include(FindPkgConfig)
 
 add_subdirectory(cyber)
+add_subdirectory(modules)

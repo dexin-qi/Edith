@@ -48,6 +48,12 @@ RUN apt update -y && \
     libopenni2-0 \
     libopenni2-dev \
     libpopt-dev \
+    usbutils \
+    pciutils \
+    module-init-tools \
+    inetutils-ping \
+    net-tools \
+    nano \
     software-properties-common
 
 #install gcc 5.5.0-12

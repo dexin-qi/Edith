@@ -1,0 +1,3 @@
+add_subdirectory(drivers)
+
+_add_proto_cc_lib(_modules_proto_cc)
