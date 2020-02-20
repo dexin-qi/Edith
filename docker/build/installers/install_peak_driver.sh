@@ -23,9 +23,9 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 
 tar xzvf peak-linux-driver-8.9.3.tar.gz
 
-pushd peak-linux-driver-8.9.3
-make -j2
-make install
-popd
+# pushd peak-linux-driver-8.9.3
+# make -j2
+# make install
+# popd
 
-rm -rf peak-linux-driver-8.9.3
+# rm -rf peak-linux-driver-8.9.3
