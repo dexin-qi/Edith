@@ -19,6 +19,8 @@
 # Fail on first error.
 set -e
 
+cd "$(dirname "${BASH_SOURCE[0]}")"
+
 tar xzvf peak-linux-driver-8.9.3.tar.gz
 
 pushd peak-linux-driver-8.9.3
