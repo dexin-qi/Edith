@@ -27,9 +27,9 @@
 #include "cyber/cyber.h"
 
 const char LIBRARY_1[] =
-    "/edith/bazel-bin/cyber/class_loader/test/libplugin1.so";
+    "/edith/build/cyber/class_loader/test/lib_class_loader_test_plugin1.so";
 const char LIBRARY_2[] =
-    "/edith/bazel-bin/cyber/class_loader/test/libplugin2.so";
+    "/edith/build/cyber/class_loader/test/lib_class_loader_test_plugin2.so";
 using edith::cyber::class_loader::ClassLoader;
 using edith::cyber::class_loader::ClassLoaderManager;
 using edith::cyber::class_loader::utility::IsLibraryLoadedByAnybody;

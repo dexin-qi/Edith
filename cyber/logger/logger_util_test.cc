@@ -63,7 +63,7 @@ TEST(LoggerUtilTest, FindModuleName) {
   log_message.append(RIGHT_BRACKET);
   log_message.append("123");
   FindModuleName(&log_message, &module_name);
-  EXPECT_EQ("logger_util_test_" + std::to_string(GetMainThreadPid()),
+  EXPECT_EQ("_logger_logger_util_test_" + std::to_string(GetMainThreadPid()),
             module_name);
 }
 

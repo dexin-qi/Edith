@@ -32,10 +32,10 @@
 
 DEFINE_bool(only_one_send, false, "only send test.");
 DEFINE_string(can_client_conf_file_a,
-              "modules/canbus/conf/can_client_conf_a.pb.txt",
+              "modules/vehicle/conf/can_client_conf_a.pb.txt",
               "can client conf for client a");
 DEFINE_string(can_client_conf_file_b,
-              "modules/canbus/conf/can_client_conf_b.pb.txt",
+              "modules/vehicle/conf/can_client_conf_b.pb.txt",
               "can client conf for client b");
 DEFINE_int64(agent_mutual_send_frames, 1000, "Every agent send frame num");
 

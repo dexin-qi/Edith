@@ -18,7 +18,7 @@
 
 #include "gtest/gtest.h"
 
-#include "modules/canbus/proto/chassis_detail.pb.h"
+#include "modules/vehicle/proto/chassis_detail.pb.h"
 #include "modules/common/proto/error_code.pb.h"
 #include "modules/drivers/canbus/can_client/fake/fake_can_client.h"
 #include "modules/drivers/canbus/can_comm/protocol_data.h"
@@ -28,12 +28,12 @@ namespace drivers {
 namespace canbus {
 
 TEST(CanSenderTest, OneRunCase) {
-  CanSender<::edith::canbus::ChassisDetail> sender;
+  CanSender<::edith::vehicle::ChassisDetail> sender;
   can::FakeCanClient can_client;
   sender.Init(&can_client, true);
 
-  ProtocolData<::edith::canbus::ChassisDetail> mpd;
-  SenderMessage<::edith::canbus::ChassisDetail> msg(1, &mpd);
+  ProtocolData<::edith::vehicle::ChassisDetail> mpd;
+  SenderMessage<::edith::vehicle::ChassisDetail> msg(1, &mpd);
   EXPECT_FALSE(sender.NeedSend(msg, 1));
   EXPECT_EQ(msg.message_id(), 1);
   int32_t period = msg.curr_period();

@@ -63,9 +63,7 @@ class Message {
     return true;
   }
 
-  static void GetDescriptorString(const std::string&, std::string* str) {
-    *str = "message";
-  }
+  static void GetDescriptorString(const std::string&, std::string* str) { *str = "message"; }
 
   std::string TypeName() const { return "type"; }
 };
@@ -244,23 +242,18 @@ TEST(MessageTraitsTest, serialize_parse_hc) {
   auto pb_msg = std::make_shared<proto::Chatter>();
   auto raw_msg = std::make_shared<RawMessage>();
 
-  EXPECT_TRUE(
-      ParseFromHC(const_cast<char*>(buffer.data()), size, pb_msg.get()));
-  EXPECT_TRUE(
-      ParseFromHC(const_cast<char*>(buffer.data()), size, raw_msg.get()));
+  EXPECT_TRUE(ParseFromHC(const_cast<char*>(buffer.data()), size, pb_msg.get()));
+  EXPECT_TRUE(ParseFromHC(const_cast<char*>(buffer.data()), size, raw_msg.get()));
 
   std::string new_buffer;
   new_buffer.resize(size);
-  EXPECT_TRUE(
-      SerializeToHC(*pb_msg, const_cast<char*>(new_buffer.data()), size));
+  EXPECT_TRUE(SerializeToHC(*pb_msg, const_cast<char*>(new_buffer.data()), size));
   EXPECT_EQ(new_buffer, buffer);
   new_buffer.clear();
 
   new_buffer.resize(size);
-  EXPECT_TRUE(
-      SerializeToHC(*raw_msg, const_cast<char*>(new_buffer.data()), size));
-  EXPECT_TRUE(
-      ParseFromHC(const_cast<char*>(new_buffer.data()), size, pb_msg.get()));
+  EXPECT_TRUE(SerializeToHC(*raw_msg, const_cast<char*>(new_buffer.data()), size));
+  EXPECT_TRUE(ParseFromHC(const_cast<char*>(new_buffer.data()), size, pb_msg.get()));
   EXPECT_EQ(pb_msg->timestamp(), 12345);
   EXPECT_EQ(pb_msg->seq(), 1);
   EXPECT_EQ(pb_msg->content(), "chatter msg");
@@ -277,11 +270,10 @@ TEST(MessageTraitsTest, message_type) {
 
 TEST(MessageTraitsTest, descriptor) {
   const std::string pb_desc =
-      "\n\xFA\x1\n\x1B"
-      "cyber/proto/unit_test.proto\x12\x12"
+      "\n\xF9\x1\n\x1B"
+      "cyber/proto/unit_test.proto\x12\x11"
       "edith.cyber.proto\"1\n\bUnitTest\x12\x12\n\nclass_name\x18\x1 "
-      "\x1(\t\x12\x11\n\tcase_name\x18\x2 "
-      "\x1(\t\"S\n\aChatter\x12\x11\n\ttimestamp\x18\x1 "
+      "\x1(\t\x12\x11\n\tcase_name\x18\x2 \x1(\t\"S\n\aChatter\x12\x11\n\ttimestamp\x18\x1 "
       "\x1(\x4\x12\x17\n\xFlidar_timestamp\x18\x2 \x1(\x4\x12\v\n\x3seq\x18\x3 "
       "\x1(\x4\x12\xF\n\acontent\x18\x4 \x1(\f\"?\n\x10"
       "ChatterBenchmark\x12\r\n\x5stamp\x18\x1 \x1(\x4\x12\v\n\x3seq\x18\x2 "

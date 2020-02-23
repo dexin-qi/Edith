@@ -23,7 +23,7 @@ import time
 from cyber.proto.unit_test_pb2 import Chatter
 from cyber_py3 import record
 from google.protobuf.descriptor_pb2 import FileDescriptorProto
-from modules.common.util.testdata.simple_pb2 import SimpleMessage
+from modules.common.util.proto.simple_pb2 import SimpleMessage
 
 
 MSG_TYPE = "edith.common.util.test.SimpleMessage"

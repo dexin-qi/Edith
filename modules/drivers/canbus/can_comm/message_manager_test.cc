@@ -21,7 +21,7 @@
 
 #include "gtest/gtest.h"
 
-#include "modules/canbus/proto/chassis_detail.pb.h"
+#include "modules/vehicle/proto/chassis_detail.pb.h"
 #include "modules/drivers/canbus/can_comm/protocol_data.h"
 
 namespace edith {
@@ -30,14 +30,14 @@ namespace canbus {
 
 using edith::common::ErrorCode;
 
-class MockProtocolData : public ProtocolData<::edith::canbus::ChassisDetail> {
+class MockProtocolData : public ProtocolData<::edith::vehicle::ChassisDetail> {
  public:
   static const int32_t ID = 0x111;
   MockProtocolData() {}
 };
 
 class MockMessageManager
-    : public MessageManager<::edith::canbus::ChassisDetail> {
+    : public MessageManager<::edith::vehicle::ChassisDetail> {
  public:
   MockMessageManager() {
     AddRecvProtocolData<MockProtocolData, true>();
@@ -52,8 +52,8 @@ TEST(MessageManagerTest, GetMutableProtocolDataById) {
   manager.ResetSendMessages();
   EXPECT_NE(manager.GetMutableProtocolDataById(MockProtocolData::ID), nullptr);
 
-  ::edith::canbus::ChassisDetail chassis_detail;
-  chassis_detail.set_car_type(::edith::canbus::ChassisDetail::QIRUI_EQ_15);
+  ::edith::vehicle::ChassisDetail chassis_detail;
+  chassis_detail.set_car_type(::edith::vehicle::ChassisDetail::QIRUI_EQ_15);
   EXPECT_EQ(manager.GetSensorData(&chassis_detail), ErrorCode::OK);
   EXPECT_EQ(manager.GetSensorData(nullptr), ErrorCode::CANBUS_ERROR);
 }

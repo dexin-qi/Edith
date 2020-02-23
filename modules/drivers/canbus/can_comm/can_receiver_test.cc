@@ -18,7 +18,7 @@
 
 #include "gtest/gtest.h"
 
-#include "modules/canbus/proto/chassis_detail.pb.h"
+#include "modules/vehicle/proto/chassis_detail.pb.h"
 #include "modules/common/proto/error_code.pb.h"
 #include "modules/drivers/canbus/can_client/fake/fake_can_client.h"
 #include "modules/drivers/canbus/can_comm/message_manager.h"
@@ -30,8 +30,8 @@ namespace canbus {
 TEST(CanReceiverTest, ReceiveOne) {
   cyber::Init("can_receiver_test");
   can::FakeCanClient can_client;
-  MessageManager<::edith::canbus::ChassisDetail> pm;
-  CanReceiver<::edith::canbus::ChassisDetail> receiver;
+  MessageManager<::edith::vehicle::ChassisDetail> pm;
+  CanReceiver<::edith::vehicle::ChassisDetail> receiver;
 
   receiver.Init(&can_client, &pm, false);
   EXPECT_EQ(receiver.Start(), common::ErrorCode::OK);

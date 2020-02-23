@@ -42,6 +42,14 @@ function(edith_test NAME)
   target_link_libraries("${NAME}" ${GMOCK_LIBRARIES})
 
   add_test(${NAME} ${NAME})
+  
+  target_include_directories(${NAME} PUBLIC
+    $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}>
+    $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
+    $<INSTALL_INTERFACE:include>
+  )
+
+  set_target_properties(${NAME} PROPERTIES COMPILE_FLAGS ${EDITH_CXX_FLAGS})
 endfunction()
 
 # add binary block
@@ -52,6 +60,14 @@ function(edith_binary NAME)
   foreach(LIB ${ARG_LIBS})
     _common_compile_stuff(${LIB})
   endforeach()
+
+  target_include_directories(${NAME} PUBLIC
+    $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}>
+    $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
+    $<INSTALL_INTERFACE:include>
+  )
+
+  set_target_properties(${NAME} PROPERTIES COMPILE_FLAGS ${EDITH_CXX_FLAGS})
 
   install(TARGETS "${NAME}" RUNTIME DESTINATION bin)
 endfunction()
@@ -97,6 +113,14 @@ macro(_add_proto_cc_lib LIB_NAME)
     $<INSTALL_INTERFACE:include>
   )
 endmacro(_add_proto_cc_lib LIB_NAME)
+
+function(dustin_var_append VAR_NAME NEXT_MEM)
+  if (${VAR_NAME})
+    set(${VAR_NAME} "${${VAR_NAME}};${NEXT_MEM}" PARENT_SCOPE)
+  else()
+    set(${VAR_NAME} "${NEXT_MEM}" PARENT_SCOPE)
+  endif()
+endfunction()
 
 function(dustin_add_flag VAR_NAME FLAG)
   if (${VAR_NAME})

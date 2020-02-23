@@ -17,6 +17,8 @@
 *.pyc
 *genrule.log
 
+bazel_to_cmake.py
+
 # Doxygen
 docs/build/
 docs/xml/

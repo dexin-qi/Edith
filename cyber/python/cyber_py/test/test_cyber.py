@@ -22,7 +22,7 @@ import time
 import unittest
 
 from cyber_py import cyber
-from modules.common.util.testdata.simple_pb2 import SimpleMessage
+from modules.common.util.proto.simple_pb2 import SimpleMessage
 
 
 class TestCyber(unittest.TestCase):

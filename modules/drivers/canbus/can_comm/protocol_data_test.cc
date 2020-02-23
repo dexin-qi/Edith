@@ -18,18 +18,18 @@
 
 #include "gtest/gtest.h"
 
-#include "modules/canbus/proto/chassis_detail.pb.h"
+#include "modules/vehicle/proto/chassis_detail.pb.h"
 
 namespace edith {
 namespace drivers {
 namespace canbus {
 
-using ::edith::canbus::ChassisDetail;
+using ::edith::vehicle::ChassisDetail;
 
 TEST(ProtocolDataTest, CheckSum) {
   const uint8_t INPUT[] = {0x00, 0x12, 0x00, 0x13, 0x00, 0xF3, 0x00, 0x00};
   const uint8_t result =
-      ProtocolData<edith::canbus::ChassisDetail>::CalculateCheckSum(INPUT, 8);
+      ProtocolData<edith::vehicle::ChassisDetail>::CalculateCheckSum(INPUT, 8);
   EXPECT_EQ(0xE7, result);
 }
 
@@ -38,7 +38,7 @@ TEST(ProtocolDataTest, BoundedValue) {
   const double_t min_bound = 0.0;
   const double_t max_bound = M_PI;
   const double_t result =
-      ProtocolData<edith::canbus::ChassisDetail>::BoundedValue(
+      ProtocolData<edith::vehicle::ChassisDetail>::BoundedValue(
           min_bound, max_bound, input);
   EXPECT_EQ(M_PI, result);
 }

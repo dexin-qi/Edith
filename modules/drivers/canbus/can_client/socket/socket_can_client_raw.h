@@ -45,8 +45,8 @@
 #include "modules/drivers/canbus/common/canbus_consts.h"
 
 /**
- * @namespace edith::canbus::can
- * @brief edith::canbus::can
+ * @namespace edith::vehicle::can
+ * @brief edith::vehicle::can
  */
 namespace edith {
 namespace drivers {

@@ -1,17 +1,18 @@
-###### bazel lib: _event_perf_event_cache ######
+### auto generate from bazel lib : _event_perf_event_cache ###
 add_library(_event_perf_event_cache SHARED
-  "perf_event_cache.cc"
-  "perf_event_cache.h"
-  "/edith/cyber/event/perf_event.h"
-  "/edith/cyber/base/bounded_queue.h"
-  "/edith/cyber/common/log.h"
   "/edith/cyber/common/macros.h"
-  "/edith/cyber/base/macros.h"
-  "/edith/cyber/base/wait_strategy.h"
+  "/edith/cyber/base/bounded_queue.h"
+  "/edith/cyber/event/perf_event.h"
   "/edith/cyber/binary.h"
+  "/edith/cyber/base/macros.h"
+  "/edith/cyber/event/perf_event_cache.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/event/perf_event_cache.cc"
+  "/edith/cyber/base/wait_strategy.h"
 )
-target_link_libraries(_event_perf_event_cache _state)
+
 target_link_libraries(_event_perf_event_cache _common_global_data)
+target_link_libraries(_event_perf_event_cache _state)
 target_link_libraries(_event_perf_event_cache _time_time)
 target_link_libraries(_event_perf_event_cache glog)
 
