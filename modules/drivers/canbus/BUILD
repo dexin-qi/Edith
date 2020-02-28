@@ -12,14 +12,14 @@ cc_library(
 )
 
 cc_library(
-    name = "_drivers_canbus_sensor_canbus_lib",
+    name = "sensor_canbus_lib",
     hdrs = ["sensor_canbus.h"],
     deps = [
-        _drivers_canbus_sensor_gflags
-        _common_monitor_log
-        _drivers_canbus_can_client_can_client_factory
-        _drivers_canbus_can_comm_can_receiver
-        _drivers_canbus_can_comm_message_manager_base
+        ":sensor_gflags",
+        "//modules/common/monitor_log",
+        "//modules/drivers/canbus/can_client:can_client_factory",
+        "//modules/drivers/canbus/can_comm:can_receiver",
+        "//modules/drivers/canbus/can_comm:message_manager_base",
     ],
 )
 

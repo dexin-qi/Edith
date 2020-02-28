@@ -1,20 +1,20 @@
 ### auto generate from bazel lib : _common_math_geometry ###
 add_library(_common_math_geometry SHARED
-  "/edith/modules/common/math/aabox2d.cc"
   "/edith/modules/common/math/box2d.h"
-  "/edith/modules/common/math/polygon2d.cc"
-  "/edith/modules/common/math/math_utils.h"
-  "/edith/modules/common/math/vec2d.cc"
-  "/edith/modules/common/math/line_segment2d.h"
   "/edith/modules/common/math/vec2d.h"
-  "/edith/modules/common/math/line_segment2d.cc"
   "/edith/cyber/binary.h"
-  "/edith/modules/common/math/polygon2d.h"
-  "/edith/modules/common/math/aabox2d.h"
-  "/edith/modules/common/math/math_utils.cc"
-  "/edith/cyber/common/log.h"
-  "/edith/modules/common/math/aaboxkdtree2d.h"
+  "/edith/modules/common/math/polygon2d.cc"
   "/edith/modules/common/math/box2d.cc"
+  "/edith/modules/common/math/aaboxkdtree2d.h"
+  "/edith/modules/common/math/math_utils.h"
+  "/edith/modules/common/math/line_segment2d.h"
+  "/edith/cyber/common/log.h"
+  "/edith/modules/common/math/aabox2d.h"
+  "/edith/modules/common/math/polygon2d.h"
+  "/edith/modules/common/math/math_utils.cc"
+  "/edith/modules/common/math/vec2d.cc"
+  "/edith/modules/common/math/line_segment2d.cc"
+  "/edith/modules/common/math/aabox2d.cc"
 )
 
 target_include_directories(_common_math_geometry SYSTEM PUBLIC ${EIGEN3_INCLUDE_DIRS})
@@ -34,8 +34,8 @@ target_include_directories(_common_math_geometry PUBLIC
 
 ### auto generate from bazel lib : _common_math_sin_table ###
 add_library(_common_math_sin_table SHARED
-  "/edith/modules/common/math/sin_table.h"
   "/edith/modules/common/math/sin_table.cc"
+  "/edith/modules/common/math/sin_table.h"
 )
 
 
@@ -49,8 +49,8 @@ target_include_directories(_common_math_sin_table PUBLIC
 
 ### auto generate from bazel lib : _common_math_angle ###
 add_library(_common_math_angle SHARED
-  "/edith/modules/common/math/angle.cc"
   "/edith/modules/common/math/angle.h"
+  "/edith/modules/common/math/angle.cc"
 )
 
 target_link_libraries(_common_math_angle _common_math_sin_table)
@@ -65,10 +65,10 @@ target_include_directories(_common_math_angle PUBLIC
 
 ### auto generate from bazel lib : _common_math_matrix_operations ###
 add_library(_common_math_matrix_operations SHARED
+  "/edith/modules/common/math/matrix_operations.h"
+  "/edith/cyber/binary.h"
   "/edith/cyber/common/log.h"
   "/edith/modules/common/math/matrix_operations.cc"
-  "/edith/cyber/binary.h"
-  "/edith/modules/common/math/matrix_operations.h"
 )
 
 target_include_directories(_common_math_matrix_operations SYSTEM PUBLIC ${EIGEN3_INCLUDE_DIRS})
@@ -102,10 +102,10 @@ target_include_directories(_common_math_path_matcher PUBLIC
 
 ### auto generate from bazel lib : _common_math_mpc_osqp ###
 add_library(_common_math_mpc_osqp SHARED
-  "/edith/cyber/common/log.h"
   "/edith/modules/common/math/mpc_osqp.h"
-  "/edith/cyber/binary.h"
   "/edith/modules/common/math/mpc_osqp.cc"
+  "/edith/cyber/binary.h"
+  "/edith/cyber/common/log.h"
 )
 
 target_include_directories(_common_math_mpc_osqp SYSTEM PUBLIC ${EIGEN3_INCLUDE_DIRS})
@@ -155,10 +155,10 @@ target_include_directories(_common_math_linear_interpolation PUBLIC
 
 ### auto generate from bazel lib : _common_math_integral ###
 add_library(_common_math_integral SHARED
-  "/edith/modules/common/math/integral.h"
-  "/edith/cyber/binary.h"
-  "/edith/modules/common/math/integral.cc"
   "/edith/cyber/common/log.h"
+  "/edith/cyber/binary.h"
+  "/edith/modules/common/math/integral.h"
+  "/edith/modules/common/math/integral.cc"
 )
 
 target_link_libraries(_common_math_integral glog)
@@ -174,9 +174,9 @@ target_include_directories(_common_math_integral PUBLIC
 ### auto generate from bazel lib : _common_math_lqr ###
 add_library(_common_math_lqr SHARED
   "/edith/cyber/common/log.h"
-  "/edith/modules/common/math/linear_quadratic_regulator.cc"
-  "/edith/cyber/binary.h"
   "/edith/modules/common/math/linear_quadratic_regulator.h"
+  "/edith/cyber/binary.h"
+  "/edith/modules/common/math/linear_quadratic_regulator.cc"
 )
 
 target_include_directories(_common_math_lqr SYSTEM PUBLIC ${EIGEN3_INCLUDE_DIRS})
@@ -193,9 +193,9 @@ target_include_directories(_common_math_lqr PUBLIC
 
 ### auto generate from bazel lib : _common_math_mpc ###
 add_library(_common_math_mpc SHARED
-  "/edith/cyber/common/log.h"
-  "/edith/modules/common/math/mpc_solver.cc"
   "/edith/cyber/binary.h"
+  "/edith/modules/common/math/mpc_solver.cc"
+  "/edith/cyber/common/log.h"
   "/edith/modules/common/math/mpc_solver.h"
 )
 
@@ -215,10 +215,10 @@ target_include_directories(_common_math_mpc PUBLIC
 
 ### auto generate from bazel lib : _common_math_cartesian_frenet_conversion ###
 add_library(_common_math_cartesian_frenet_conversion SHARED
-  "/edith/cyber/common/log.h"
   "/edith/modules/common/math/cartesian_frenet_conversion.cc"
-  "/edith/modules/common/math/cartesian_frenet_conversion.h"
   "/edith/cyber/binary.h"
+  "/edith/cyber/common/log.h"
+  "/edith/modules/common/math/cartesian_frenet_conversion.h"
 )
 
 target_include_directories(_common_math_cartesian_frenet_conversion SYSTEM PUBLIC ${EIGEN3_INCLUDE_DIRS})
@@ -236,10 +236,10 @@ target_include_directories(_common_math_cartesian_frenet_conversion PUBLIC
 
 
 ### auto generate from bazel test : _common_math_matrix_operations_test ###
+dustin_var_append(MATRIX_OPERATIONS_TEST_FILES /edith/modules/common/math/matrix_operations.h)
+dustin_var_append(MATRIX_OPERATIONS_TEST_FILES /edith/cyber/binary.h)
 dustin_var_append(MATRIX_OPERATIONS_TEST_FILES /edith/cyber/common/log.h)
 dustin_var_append(MATRIX_OPERATIONS_TEST_FILES /edith/modules/common/math/matrix_operations_test.cc)
-dustin_var_append(MATRIX_OPERATIONS_TEST_FILES /edith/cyber/binary.h)
-dustin_var_append(MATRIX_OPERATIONS_TEST_FILES /edith/modules/common/math/matrix_operations.h)
 
 edith_test(_common_math_matrix_operations_test
 SRCS
@@ -251,9 +251,9 @@ target_link_libraries(_common_math_matrix_operations_test _common_math_matrix_op
 target_link_libraries(_common_math_matrix_operations_test glog)
 
 ### auto generate from bazel test : _common_math_angle_test ###
-dustin_var_append(ANGLE_TEST_FILES /edith/modules/common/math/sin_table.h)
-dustin_var_append(ANGLE_TEST_FILES /edith/modules/common/math/angle_test.cc)
 dustin_var_append(ANGLE_TEST_FILES /edith/modules/common/math/angle.h)
+dustin_var_append(ANGLE_TEST_FILES /edith/modules/common/math/angle_test.cc)
+dustin_var_append(ANGLE_TEST_FILES /edith/modules/common/math/sin_table.h)
 
 edith_test(_common_math_angle_test
 SRCS
@@ -263,14 +263,14 @@ target_link_libraries(_common_math_angle_test _common_math_angle)
 target_link_libraries(_common_math_angle_test _common_math_sin_table)
 
 ### auto generate from bazel test : _common_math_mpc_osqp_test ###
-dustin_var_append(MPC_OSQP_TEST_FILES /edith/modules/common/math/qp_solver/active_set_qp_solver.h)
-dustin_var_append(MPC_OSQP_TEST_FILES /edith/modules/common/math/mpc_solver.h)
-dustin_var_append(MPC_OSQP_TEST_FILES /edith/modules/common/math/qp_solver/qp_solver.h)
-dustin_var_append(MPC_OSQP_TEST_FILES /edith/modules/common/math/qp_solver/qp_solver_gflags.h)
-dustin_var_append(MPC_OSQP_TEST_FILES /edith/cyber/binary.h)
-dustin_var_append(MPC_OSQP_TEST_FILES /edith/modules/common/math/mpc_osqp_test.cc)
-dustin_var_append(MPC_OSQP_TEST_FILES /edith/cyber/common/log.h)
 dustin_var_append(MPC_OSQP_TEST_FILES /edith/modules/common/math/mpc_osqp.h)
+dustin_var_append(MPC_OSQP_TEST_FILES /edith/cyber/binary.h)
+dustin_var_append(MPC_OSQP_TEST_FILES /edith/modules/common/math/mpc_solver.h)
+dustin_var_append(MPC_OSQP_TEST_FILES /edith/cyber/common/log.h)
+dustin_var_append(MPC_OSQP_TEST_FILES /edith/modules/common/math/qp_solver/qp_solver_gflags.h)
+dustin_var_append(MPC_OSQP_TEST_FILES /edith/modules/common/math/mpc_osqp_test.cc)
+dustin_var_append(MPC_OSQP_TEST_FILES /edith/modules/common/math/qp_solver/active_set_qp_solver.h)
+dustin_var_append(MPC_OSQP_TEST_FILES /edith/modules/common/math/qp_solver/qp_solver.h)
 
 edith_test(_common_math_mpc_osqp_test
 SRCS
@@ -290,13 +290,13 @@ target_link_libraries(_common_math_mpc_osqp_test glog)
 target_link_libraries(_common_math_mpc_osqp_test libosqp.so)
 
 ### auto generate from bazel test : _common_math_mpc_test ###
-dustin_var_append(MPC_TEST_FILES /edith/modules/common/math/qp_solver/active_set_qp_solver.h)
-dustin_var_append(MPC_TEST_FILES /edith/modules/common/math/mpc_solver.h)
-dustin_var_append(MPC_TEST_FILES /edith/modules/common/math/qp_solver/qp_solver.h)
-dustin_var_append(MPC_TEST_FILES /edith/modules/common/math/mpc_solver_test.cc)
-dustin_var_append(MPC_TEST_FILES /edith/modules/common/math/qp_solver/qp_solver_gflags.h)
 dustin_var_append(MPC_TEST_FILES /edith/cyber/binary.h)
+dustin_var_append(MPC_TEST_FILES /edith/modules/common/math/mpc_solver.h)
 dustin_var_append(MPC_TEST_FILES /edith/cyber/common/log.h)
+dustin_var_append(MPC_TEST_FILES /edith/modules/common/math/qp_solver/qp_solver_gflags.h)
+dustin_var_append(MPC_TEST_FILES /edith/modules/common/math/mpc_solver_test.cc)
+dustin_var_append(MPC_TEST_FILES /edith/modules/common/math/qp_solver/active_set_qp_solver.h)
+dustin_var_append(MPC_TEST_FILES /edith/modules/common/math/qp_solver/qp_solver.h)
 
 edith_test(_common_math_mpc_test
 SRCS
@@ -314,16 +314,16 @@ target_link_libraries(_common_math_mpc_test gflags)
 target_link_libraries(_common_math_mpc_test glog)
 
 ### auto generate from bazel test : _common_math_math_utils_test ###
-dustin_var_append(MATH_UTILS_TEST_FILES /edith/modules/common/util/string_util.h)
 dustin_var_append(MATH_UTILS_TEST_FILES /edith/modules/common/math/box2d.h)
-dustin_var_append(MATH_UTILS_TEST_FILES /edith/modules/common/math/line_segment2d.h)
-dustin_var_append(MATH_UTILS_TEST_FILES /edith/modules/common/math/math_utils_test.cc)
 dustin_var_append(MATH_UTILS_TEST_FILES /edith/modules/common/math/vec2d.h)
 dustin_var_append(MATH_UTILS_TEST_FILES /edith/cyber/binary.h)
-dustin_var_append(MATH_UTILS_TEST_FILES /edith/modules/common/math/polygon2d.h)
-dustin_var_append(MATH_UTILS_TEST_FILES /edith/modules/common/math/aabox2d.h)
-dustin_var_append(MATH_UTILS_TEST_FILES /edith/cyber/common/log.h)
 dustin_var_append(MATH_UTILS_TEST_FILES /edith/modules/common/util/future.h)
+dustin_var_append(MATH_UTILS_TEST_FILES /edith/modules/common/math/line_segment2d.h)
+dustin_var_append(MATH_UTILS_TEST_FILES /edith/cyber/common/log.h)
+dustin_var_append(MATH_UTILS_TEST_FILES /edith/modules/common/math/math_utils_test.cc)
+dustin_var_append(MATH_UTILS_TEST_FILES /edith/modules/common/math/aabox2d.h)
+dustin_var_append(MATH_UTILS_TEST_FILES /edith/modules/common/math/polygon2d.h)
+dustin_var_append(MATH_UTILS_TEST_FILES /edith/modules/common/util/string_util.h)
 dustin_var_append(MATH_UTILS_TEST_FILES /edith/modules/common/math/aaboxkdtree2d.h)
 
 edith_test(_common_math_math_utils_test
@@ -341,18 +341,18 @@ target_link_libraries(_common_math_math_utils_test libosqp.so)
 target_link_libraries(_common_math_math_utils_test standalone_absl)
 
 ### auto generate from bazel test : _common_math_linear_interpolation_test ###
-dustin_var_append(LINEAR_INTERPOLATION_TEST_FILES /edith/modules/common/util/string_util.h)
-dustin_var_append(LINEAR_INTERPOLATION_TEST_FILES /edith/modules/common/math/aaboxkdtree2d.h)
 dustin_var_append(LINEAR_INTERPOLATION_TEST_FILES /edith/modules/common/math/box2d.h)
 dustin_var_append(LINEAR_INTERPOLATION_TEST_FILES /edith/modules/common/math/linear_interpolation_test.cc)
-dustin_var_append(LINEAR_INTERPOLATION_TEST_FILES /edith/modules/common/math/line_segment2d.h)
 dustin_var_append(LINEAR_INTERPOLATION_TEST_FILES /edith/modules/common/math/vec2d.h)
 dustin_var_append(LINEAR_INTERPOLATION_TEST_FILES /edith/cyber/binary.h)
-dustin_var_append(LINEAR_INTERPOLATION_TEST_FILES /edith/modules/common/math/polygon2d.h)
-dustin_var_append(LINEAR_INTERPOLATION_TEST_FILES /edith/modules/common/math/aabox2d.h)
-dustin_var_append(LINEAR_INTERPOLATION_TEST_FILES /edith/cyber/common/log.h)
 dustin_var_append(LINEAR_INTERPOLATION_TEST_FILES /edith/modules/common/util/future.h)
+dustin_var_append(LINEAR_INTERPOLATION_TEST_FILES /edith/cyber/common/log.h)
+dustin_var_append(LINEAR_INTERPOLATION_TEST_FILES /edith/modules/common/math/line_segment2d.h)
+dustin_var_append(LINEAR_INTERPOLATION_TEST_FILES /edith/modules/common/math/aabox2d.h)
+dustin_var_append(LINEAR_INTERPOLATION_TEST_FILES /edith/modules/common/math/polygon2d.h)
+dustin_var_append(LINEAR_INTERPOLATION_TEST_FILES /edith/modules/common/util/string_util.h)
 dustin_var_append(LINEAR_INTERPOLATION_TEST_FILES /edith/modules/common/math/linear_interpolation.h)
+dustin_var_append(LINEAR_INTERPOLATION_TEST_FILES /edith/modules/common/math/aaboxkdtree2d.h)
 
 edith_test(_common_math_linear_interpolation_test
 SRCS
@@ -371,8 +371,8 @@ target_link_libraries(_common_math_linear_interpolation_test libosqp.so)
 target_link_libraries(_common_math_linear_interpolation_test standalone_absl)
 
 ### auto generate from bazel test : _common_math_search_test ###
-dustin_var_append(SEARCH_TEST_FILES /edith/modules/common/math/search_test.cc)
 dustin_var_append(SEARCH_TEST_FILES /edith/modules/common/math/search.h)
+dustin_var_append(SEARCH_TEST_FILES /edith/modules/common/math/search_test.cc)
 
 edith_test(_common_math_search_test
 SRCS
@@ -381,10 +381,10 @@ SRCS
 target_link_libraries(_common_math_search_test _common_math_search)
 
 ### auto generate from bazel test : _common_math_integral_test ###
-dustin_var_append(INTEGRAL_TEST_FILES /edith/modules/common/math/integral.h)
-dustin_var_append(INTEGRAL_TEST_FILES /edith/cyber/binary.h)
 dustin_var_append(INTEGRAL_TEST_FILES /edith/cyber/common/log.h)
 dustin_var_append(INTEGRAL_TEST_FILES /edith/modules/common/math/integral_test.cc)
+dustin_var_append(INTEGRAL_TEST_FILES /edith/cyber/binary.h)
+dustin_var_append(INTEGRAL_TEST_FILES /edith/modules/common/math/integral.h)
 
 edith_test(_common_math_integral_test
 SRCS
@@ -394,16 +394,16 @@ target_link_libraries(_common_math_integral_test _common_math_integral)
 target_link_libraries(_common_math_integral_test glog)
 
 ### auto generate from bazel test : _common_math_vec2d_test ###
-dustin_var_append(VEC2D_TEST_FILES /edith/modules/common/util/string_util.h)
 dustin_var_append(VEC2D_TEST_FILES /edith/modules/common/math/box2d.h)
-dustin_var_append(VEC2D_TEST_FILES /edith/modules/common/math/line_segment2d.h)
 dustin_var_append(VEC2D_TEST_FILES /edith/modules/common/math/vec2d.h)
 dustin_var_append(VEC2D_TEST_FILES /edith/cyber/binary.h)
-dustin_var_append(VEC2D_TEST_FILES /edith/modules/common/math/polygon2d.h)
-dustin_var_append(VEC2D_TEST_FILES /edith/modules/common/math/vec2d_test.cc)
-dustin_var_append(VEC2D_TEST_FILES /edith/modules/common/math/aabox2d.h)
-dustin_var_append(VEC2D_TEST_FILES /edith/cyber/common/log.h)
 dustin_var_append(VEC2D_TEST_FILES /edith/modules/common/util/future.h)
+dustin_var_append(VEC2D_TEST_FILES /edith/modules/common/math/line_segment2d.h)
+dustin_var_append(VEC2D_TEST_FILES /edith/cyber/common/log.h)
+dustin_var_append(VEC2D_TEST_FILES /edith/modules/common/math/aabox2d.h)
+dustin_var_append(VEC2D_TEST_FILES /edith/modules/common/math/polygon2d.h)
+dustin_var_append(VEC2D_TEST_FILES /edith/modules/common/util/string_util.h)
+dustin_var_append(VEC2D_TEST_FILES /edith/modules/common/math/vec2d_test.cc)
 dustin_var_append(VEC2D_TEST_FILES /edith/modules/common/math/aaboxkdtree2d.h)
 
 edith_test(_common_math_vec2d_test
@@ -421,18 +421,18 @@ target_link_libraries(_common_math_vec2d_test libosqp.so)
 target_link_libraries(_common_math_vec2d_test standalone_absl)
 
 ### auto generate from bazel test : _common_math_quaternion_test ###
-dustin_var_append(QUATERNION_TEST_FILES /edith/modules/common/util/string_util.h)
-dustin_var_append(QUATERNION_TEST_FILES /edith/modules/common/math/euler_angles_zxy.h)
 dustin_var_append(QUATERNION_TEST_FILES /edith/modules/common/math/box2d.h)
-dustin_var_append(QUATERNION_TEST_FILES /edith/modules/common/math/line_segment2d.h)
 dustin_var_append(QUATERNION_TEST_FILES /edith/modules/common/math/vec2d.h)
-dustin_var_append(QUATERNION_TEST_FILES /edith/modules/common/math/quaternion.h)
-dustin_var_append(QUATERNION_TEST_FILES /edith/modules/common/math/quaternion_test.cc)
-dustin_var_append(QUATERNION_TEST_FILES /edith/modules/common/math/polygon2d.h)
 dustin_var_append(QUATERNION_TEST_FILES /edith/cyber/binary.h)
-dustin_var_append(QUATERNION_TEST_FILES /edith/modules/common/math/aabox2d.h)
-dustin_var_append(QUATERNION_TEST_FILES /edith/cyber/common/log.h)
+dustin_var_append(QUATERNION_TEST_FILES /edith/modules/common/math/quaternion_test.cc)
 dustin_var_append(QUATERNION_TEST_FILES /edith/modules/common/util/future.h)
+dustin_var_append(QUATERNION_TEST_FILES /edith/modules/common/math/line_segment2d.h)
+dustin_var_append(QUATERNION_TEST_FILES /edith/cyber/common/log.h)
+dustin_var_append(QUATERNION_TEST_FILES /edith/modules/common/math/aabox2d.h)
+dustin_var_append(QUATERNION_TEST_FILES /edith/modules/common/math/euler_angles_zxy.h)
+dustin_var_append(QUATERNION_TEST_FILES /edith/modules/common/math/polygon2d.h)
+dustin_var_append(QUATERNION_TEST_FILES /edith/modules/common/util/string_util.h)
+dustin_var_append(QUATERNION_TEST_FILES /edith/modules/common/math/quaternion.h)
 dustin_var_append(QUATERNION_TEST_FILES /edith/modules/common/math/aaboxkdtree2d.h)
 
 edith_test(_common_math_quaternion_test
@@ -451,17 +451,17 @@ target_link_libraries(_common_math_quaternion_test libosqp.so)
 target_link_libraries(_common_math_quaternion_test standalone_absl)
 
 ### auto generate from bazel test : _common_math_euler_angles_zxy_test ###
-dustin_var_append(EULER_ANGLES_ZXY_TEST_FILES /edith/modules/common/util/string_util.h)
-dustin_var_append(EULER_ANGLES_ZXY_TEST_FILES /edith/modules/common/math/euler_angles_zxy.h)
 dustin_var_append(EULER_ANGLES_ZXY_TEST_FILES /edith/modules/common/math/box2d.h)
-dustin_var_append(EULER_ANGLES_ZXY_TEST_FILES /edith/modules/common/math/line_segment2d.h)
 dustin_var_append(EULER_ANGLES_ZXY_TEST_FILES /edith/modules/common/math/vec2d.h)
 dustin_var_append(EULER_ANGLES_ZXY_TEST_FILES /edith/cyber/binary.h)
+dustin_var_append(EULER_ANGLES_ZXY_TEST_FILES /edith/modules/common/util/future.h)
+dustin_var_append(EULER_ANGLES_ZXY_TEST_FILES /edith/modules/common/math/line_segment2d.h)
+dustin_var_append(EULER_ANGLES_ZXY_TEST_FILES /edith/cyber/common/log.h)
+dustin_var_append(EULER_ANGLES_ZXY_TEST_FILES /edith/modules/common/math/aabox2d.h)
+dustin_var_append(EULER_ANGLES_ZXY_TEST_FILES /edith/modules/common/math/euler_angles_zxy.h)
 dustin_var_append(EULER_ANGLES_ZXY_TEST_FILES /edith/modules/common/math/euler_angles_zxy_test.cc)
 dustin_var_append(EULER_ANGLES_ZXY_TEST_FILES /edith/modules/common/math/polygon2d.h)
-dustin_var_append(EULER_ANGLES_ZXY_TEST_FILES /edith/modules/common/math/aabox2d.h)
-dustin_var_append(EULER_ANGLES_ZXY_TEST_FILES /edith/cyber/common/log.h)
-dustin_var_append(EULER_ANGLES_ZXY_TEST_FILES /edith/modules/common/util/future.h)
+dustin_var_append(EULER_ANGLES_ZXY_TEST_FILES /edith/modules/common/util/string_util.h)
 dustin_var_append(EULER_ANGLES_ZXY_TEST_FILES /edith/modules/common/math/aaboxkdtree2d.h)
 
 edith_test(_common_math_euler_angles_zxy_test
@@ -479,16 +479,16 @@ target_link_libraries(_common_math_euler_angles_zxy_test libosqp.so)
 target_link_libraries(_common_math_euler_angles_zxy_test standalone_absl)
 
 ### auto generate from bazel test : _common_math_aabox2d_test ###
-dustin_var_append(AABOX2D_TEST_FILES /edith/modules/common/util/string_util.h)
 dustin_var_append(AABOX2D_TEST_FILES /edith/modules/common/math/box2d.h)
-dustin_var_append(AABOX2D_TEST_FILES /edith/modules/common/math/aabox2d_test.cc)
-dustin_var_append(AABOX2D_TEST_FILES /edith/modules/common/math/line_segment2d.h)
 dustin_var_append(AABOX2D_TEST_FILES /edith/modules/common/math/vec2d.h)
 dustin_var_append(AABOX2D_TEST_FILES /edith/cyber/binary.h)
-dustin_var_append(AABOX2D_TEST_FILES /edith/modules/common/math/polygon2d.h)
-dustin_var_append(AABOX2D_TEST_FILES /edith/modules/common/math/aabox2d.h)
-dustin_var_append(AABOX2D_TEST_FILES /edith/cyber/common/log.h)
 dustin_var_append(AABOX2D_TEST_FILES /edith/modules/common/util/future.h)
+dustin_var_append(AABOX2D_TEST_FILES /edith/modules/common/math/line_segment2d.h)
+dustin_var_append(AABOX2D_TEST_FILES /edith/modules/common/math/aabox2d_test.cc)
+dustin_var_append(AABOX2D_TEST_FILES /edith/cyber/common/log.h)
+dustin_var_append(AABOX2D_TEST_FILES /edith/modules/common/math/aabox2d.h)
+dustin_var_append(AABOX2D_TEST_FILES /edith/modules/common/math/polygon2d.h)
+dustin_var_append(AABOX2D_TEST_FILES /edith/modules/common/util/string_util.h)
 dustin_var_append(AABOX2D_TEST_FILES /edith/modules/common/math/aaboxkdtree2d.h)
 
 edith_test(_common_math_aabox2d_test
@@ -506,17 +506,17 @@ target_link_libraries(_common_math_aabox2d_test libosqp.so)
 target_link_libraries(_common_math_aabox2d_test standalone_absl)
 
 ### auto generate from bazel test : _common_math_aaboxkdtree2d_test ###
-dustin_var_append(AABOXKDTREE2D_TEST_FILES /edith/modules/common/util/string_util.h)
 dustin_var_append(AABOXKDTREE2D_TEST_FILES /edith/modules/common/math/box2d.h)
-dustin_var_append(AABOXKDTREE2D_TEST_FILES /edith/modules/common/math/line_segment2d.h)
 dustin_var_append(AABOXKDTREE2D_TEST_FILES /edith/modules/common/math/vec2d.h)
 dustin_var_append(AABOXKDTREE2D_TEST_FILES /edith/cyber/binary.h)
-dustin_var_append(AABOXKDTREE2D_TEST_FILES /edith/modules/common/math/polygon2d.h)
-dustin_var_append(AABOXKDTREE2D_TEST_FILES /edith/modules/common/math/aabox2d.h)
-dustin_var_append(AABOXKDTREE2D_TEST_FILES /edith/cyber/common/log.h)
 dustin_var_append(AABOXKDTREE2D_TEST_FILES /edith/modules/common/util/future.h)
-dustin_var_append(AABOXKDTREE2D_TEST_FILES /edith/modules/common/math/aaboxkdtree2d.h)
 dustin_var_append(AABOXKDTREE2D_TEST_FILES /edith/modules/common/math/aaboxkdtree2d_test.cc)
+dustin_var_append(AABOXKDTREE2D_TEST_FILES /edith/modules/common/math/line_segment2d.h)
+dustin_var_append(AABOXKDTREE2D_TEST_FILES /edith/cyber/common/log.h)
+dustin_var_append(AABOXKDTREE2D_TEST_FILES /edith/modules/common/math/aabox2d.h)
+dustin_var_append(AABOXKDTREE2D_TEST_FILES /edith/modules/common/math/polygon2d.h)
+dustin_var_append(AABOXKDTREE2D_TEST_FILES /edith/modules/common/util/string_util.h)
+dustin_var_append(AABOXKDTREE2D_TEST_FILES /edith/modules/common/math/aaboxkdtree2d.h)
 
 edith_test(_common_math_aaboxkdtree2d_test
 SRCS
@@ -533,16 +533,16 @@ target_link_libraries(_common_math_aaboxkdtree2d_test libosqp.so)
 target_link_libraries(_common_math_aaboxkdtree2d_test standalone_absl)
 
 ### auto generate from bazel test : _common_math_box2d_test ###
-dustin_var_append(BOX2D_TEST_FILES /edith/modules/common/util/string_util.h)
 dustin_var_append(BOX2D_TEST_FILES /edith/modules/common/math/box2d.h)
-dustin_var_append(BOX2D_TEST_FILES /edith/modules/common/math/box2d_test.cc)
-dustin_var_append(BOX2D_TEST_FILES /edith/modules/common/math/line_segment2d.h)
 dustin_var_append(BOX2D_TEST_FILES /edith/modules/common/math/vec2d.h)
 dustin_var_append(BOX2D_TEST_FILES /edith/cyber/binary.h)
-dustin_var_append(BOX2D_TEST_FILES /edith/modules/common/math/polygon2d.h)
-dustin_var_append(BOX2D_TEST_FILES /edith/modules/common/math/aabox2d.h)
-dustin_var_append(BOX2D_TEST_FILES /edith/cyber/common/log.h)
 dustin_var_append(BOX2D_TEST_FILES /edith/modules/common/util/future.h)
+dustin_var_append(BOX2D_TEST_FILES /edith/modules/common/math/line_segment2d.h)
+dustin_var_append(BOX2D_TEST_FILES /edith/cyber/common/log.h)
+dustin_var_append(BOX2D_TEST_FILES /edith/modules/common/math/aabox2d.h)
+dustin_var_append(BOX2D_TEST_FILES /edith/modules/common/math/box2d_test.cc)
+dustin_var_append(BOX2D_TEST_FILES /edith/modules/common/math/polygon2d.h)
+dustin_var_append(BOX2D_TEST_FILES /edith/modules/common/util/string_util.h)
 dustin_var_append(BOX2D_TEST_FILES /edith/modules/common/math/aaboxkdtree2d.h)
 
 edith_test(_common_math_box2d_test
@@ -560,16 +560,16 @@ target_link_libraries(_common_math_box2d_test libosqp.so)
 target_link_libraries(_common_math_box2d_test standalone_absl)
 
 ### auto generate from bazel test : _common_math_polygon2d_test ###
-dustin_var_append(POLYGON2D_TEST_FILES /edith/modules/common/util/string_util.h)
 dustin_var_append(POLYGON2D_TEST_FILES /edith/modules/common/math/box2d.h)
-dustin_var_append(POLYGON2D_TEST_FILES /edith/modules/common/math/polygon2d_test.cc)
-dustin_var_append(POLYGON2D_TEST_FILES /edith/modules/common/math/line_segment2d.h)
 dustin_var_append(POLYGON2D_TEST_FILES /edith/modules/common/math/vec2d.h)
 dustin_var_append(POLYGON2D_TEST_FILES /edith/cyber/binary.h)
-dustin_var_append(POLYGON2D_TEST_FILES /edith/modules/common/math/polygon2d.h)
-dustin_var_append(POLYGON2D_TEST_FILES /edith/modules/common/math/aabox2d.h)
-dustin_var_append(POLYGON2D_TEST_FILES /edith/cyber/common/log.h)
 dustin_var_append(POLYGON2D_TEST_FILES /edith/modules/common/util/future.h)
+dustin_var_append(POLYGON2D_TEST_FILES /edith/modules/common/math/polygon2d_test.cc)
+dustin_var_append(POLYGON2D_TEST_FILES /edith/modules/common/math/line_segment2d.h)
+dustin_var_append(POLYGON2D_TEST_FILES /edith/cyber/common/log.h)
+dustin_var_append(POLYGON2D_TEST_FILES /edith/modules/common/math/aabox2d.h)
+dustin_var_append(POLYGON2D_TEST_FILES /edith/modules/common/math/polygon2d.h)
+dustin_var_append(POLYGON2D_TEST_FILES /edith/modules/common/util/string_util.h)
 dustin_var_append(POLYGON2D_TEST_FILES /edith/modules/common/math/aaboxkdtree2d.h)
 
 edith_test(_common_math_polygon2d_test
@@ -587,16 +587,16 @@ target_link_libraries(_common_math_polygon2d_test libosqp.so)
 target_link_libraries(_common_math_polygon2d_test standalone_absl)
 
 ### auto generate from bazel test : _common_math_line_segment2d_test ###
-dustin_var_append(LINE_SEGMENT2D_TEST_FILES /edith/modules/common/util/string_util.h)
-dustin_var_append(LINE_SEGMENT2D_TEST_FILES /edith/modules/common/math/line_segment2d_test.cc)
 dustin_var_append(LINE_SEGMENT2D_TEST_FILES /edith/modules/common/math/box2d.h)
-dustin_var_append(LINE_SEGMENT2D_TEST_FILES /edith/modules/common/math/line_segment2d.h)
 dustin_var_append(LINE_SEGMENT2D_TEST_FILES /edith/modules/common/math/vec2d.h)
 dustin_var_append(LINE_SEGMENT2D_TEST_FILES /edith/cyber/binary.h)
-dustin_var_append(LINE_SEGMENT2D_TEST_FILES /edith/modules/common/math/polygon2d.h)
-dustin_var_append(LINE_SEGMENT2D_TEST_FILES /edith/modules/common/math/aabox2d.h)
-dustin_var_append(LINE_SEGMENT2D_TEST_FILES /edith/cyber/common/log.h)
 dustin_var_append(LINE_SEGMENT2D_TEST_FILES /edith/modules/common/util/future.h)
+dustin_var_append(LINE_SEGMENT2D_TEST_FILES /edith/modules/common/math/line_segment2d.h)
+dustin_var_append(LINE_SEGMENT2D_TEST_FILES /edith/cyber/common/log.h)
+dustin_var_append(LINE_SEGMENT2D_TEST_FILES /edith/modules/common/math/line_segment2d_test.cc)
+dustin_var_append(LINE_SEGMENT2D_TEST_FILES /edith/modules/common/math/aabox2d.h)
+dustin_var_append(LINE_SEGMENT2D_TEST_FILES /edith/modules/common/math/polygon2d.h)
+dustin_var_append(LINE_SEGMENT2D_TEST_FILES /edith/modules/common/util/string_util.h)
 dustin_var_append(LINE_SEGMENT2D_TEST_FILES /edith/modules/common/math/aaboxkdtree2d.h)
 
 edith_test(_common_math_line_segment2d_test
@@ -614,11 +614,11 @@ target_link_libraries(_common_math_line_segment2d_test libosqp.so)
 target_link_libraries(_common_math_line_segment2d_test standalone_absl)
 
 ### auto generate from bazel test : _common_math_kalman_filter_test ###
-dustin_var_append(KALMAN_FILTER_TEST_FILES /edith/modules/common/math/kalman_filter_test.cc)
 dustin_var_append(KALMAN_FILTER_TEST_FILES /edith/cyber/binary.h)
-dustin_var_append(KALMAN_FILTER_TEST_FILES /edith/modules/common/math/kalman_filter.h)
-dustin_var_append(KALMAN_FILTER_TEST_FILES /edith/cyber/common/log.h)
 dustin_var_append(KALMAN_FILTER_TEST_FILES /edith/modules/common/math/matrix_operations.h)
+dustin_var_append(KALMAN_FILTER_TEST_FILES /edith/cyber/common/log.h)
+dustin_var_append(KALMAN_FILTER_TEST_FILES /edith/modules/common/math/kalman_filter.h)
+dustin_var_append(KALMAN_FILTER_TEST_FILES /edith/modules/common/math/kalman_filter_test.cc)
 
 edith_test(_common_math_kalman_filter_test
 SRCS
@@ -630,17 +630,17 @@ target_link_libraries(_common_math_kalman_filter_test _common_math_matrix_operat
 target_link_libraries(_common_math_kalman_filter_test glog)
 
 ### auto generate from bazel test : _common_math_cartesian_frenet_conversion_test ###
-dustin_var_append(CARTESIAN_FRENET_CONVERSION_TEST_FILES /edith/modules/common/util/string_util.h)
 dustin_var_append(CARTESIAN_FRENET_CONVERSION_TEST_FILES /edith/modules/common/math/box2d.h)
-dustin_var_append(CARTESIAN_FRENET_CONVERSION_TEST_FILES /edith/modules/common/math/cartesian_frenet_conversion_test.cc)
-dustin_var_append(CARTESIAN_FRENET_CONVERSION_TEST_FILES /edith/modules/common/math/line_segment2d.h)
 dustin_var_append(CARTESIAN_FRENET_CONVERSION_TEST_FILES /edith/modules/common/math/vec2d.h)
 dustin_var_append(CARTESIAN_FRENET_CONVERSION_TEST_FILES /edith/cyber/binary.h)
-dustin_var_append(CARTESIAN_FRENET_CONVERSION_TEST_FILES /edith/modules/common/math/polygon2d.h)
-dustin_var_append(CARTESIAN_FRENET_CONVERSION_TEST_FILES /edith/modules/common/math/aabox2d.h)
-dustin_var_append(CARTESIAN_FRENET_CONVERSION_TEST_FILES /edith/cyber/common/log.h)
 dustin_var_append(CARTESIAN_FRENET_CONVERSION_TEST_FILES /edith/modules/common/util/future.h)
+dustin_var_append(CARTESIAN_FRENET_CONVERSION_TEST_FILES /edith/modules/common/math/line_segment2d.h)
+dustin_var_append(CARTESIAN_FRENET_CONVERSION_TEST_FILES /edith/cyber/common/log.h)
 dustin_var_append(CARTESIAN_FRENET_CONVERSION_TEST_FILES /edith/modules/common/math/cartesian_frenet_conversion.h)
+dustin_var_append(CARTESIAN_FRENET_CONVERSION_TEST_FILES /edith/modules/common/math/aabox2d.h)
+dustin_var_append(CARTESIAN_FRENET_CONVERSION_TEST_FILES /edith/modules/common/math/polygon2d.h)
+dustin_var_append(CARTESIAN_FRENET_CONVERSION_TEST_FILES /edith/modules/common/util/string_util.h)
+dustin_var_append(CARTESIAN_FRENET_CONVERSION_TEST_FILES /edith/modules/common/math/cartesian_frenet_conversion_test.cc)
 dustin_var_append(CARTESIAN_FRENET_CONVERSION_TEST_FILES /edith/modules/common/math/aaboxkdtree2d.h)
 
 edith_test(_common_math_cartesian_frenet_conversion_test

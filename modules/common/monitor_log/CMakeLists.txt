@@ -1,10 +1,10 @@
 ### auto generate from bazel lib : _common_monitor_log_monitor_log ###
 add_library(_common_monitor_log_monitor_log SHARED
+  "/edith/modules/common/util/message_util.h"
   "/edith/modules/common/monitor_log/monitor_log_buffer.cc"
-  "/edith/modules/common/monitor_log/monitor_logger.cc"
   "/edith/modules/common/monitor_log/monitor_log_buffer.h"
   "/edith/modules/common/monitor_log/monitor_logger.h"
-  "/edith/modules/common/util/message_util.h"
+  "/edith/modules/common/monitor_log/monitor_logger.cc"
 )
 
 target_include_directories(_common_monitor_log_monitor_log SYSTEM PUBLIC ${PROTOBUF_INCLUDE_DIR})

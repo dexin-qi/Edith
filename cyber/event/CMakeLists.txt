@@ -1,14 +1,14 @@
 ### auto generate from bazel lib : _event_perf_event_cache ###
 add_library(_event_perf_event_cache SHARED
-  "/edith/cyber/common/macros.h"
-  "/edith/cyber/base/bounded_queue.h"
-  "/edith/cyber/event/perf_event.h"
-  "/edith/cyber/binary.h"
-  "/edith/cyber/base/macros.h"
   "/edith/cyber/event/perf_event_cache.h"
+  "/edith/cyber/binary.h"
+  "/edith/cyber/common/macros.h"
   "/edith/cyber/common/log.h"
   "/edith/cyber/event/perf_event_cache.cc"
+  "/edith/cyber/base/bounded_queue.h"
   "/edith/cyber/base/wait_strategy.h"
+  "/edith/cyber/base/macros.h"
+  "/edith/cyber/event/perf_event.h"
 )
 
 target_link_libraries(_event_perf_event_cache _common_global_data)

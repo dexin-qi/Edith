@@ -16,8 +16,8 @@ target_include_directories(_class_loader_test_plugin1 PUBLIC
 
 ### auto generate from bazel lib : _class_loader_test_plugin2 ###
 add_library(_class_loader_test_plugin2 SHARED
-  "/edith/cyber/class_loader/test/base.h"
   "/edith/cyber/class_loader/test/plugin2.cc"
+  "/edith/cyber/class_loader/test/base.h"
 )
 
 target_link_libraries(_class_loader_test_plugin2 _class_loader_class_loader_manager)

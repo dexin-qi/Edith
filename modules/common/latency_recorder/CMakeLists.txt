@@ -1,10 +1,10 @@
 ### auto generate from bazel lib : _common_latency_recorder_latency_recorder ###
 add_library(_common_latency_recorder_latency_recorder SHARED
-  "/edith/modules/common/latency_recorder/latency_recorder.cc"
   "/edith/cyber/binary.h"
-  "/edith/modules/common/latency_recorder/latency_recorder.h"
-  "/edith/cyber/common/log.h"
   "/edith/modules/common/util/message_util.h"
+  "/edith/cyber/common/log.h"
+  "/edith/modules/common/latency_recorder/latency_recorder.h"
+  "/edith/modules/common/latency_recorder/latency_recorder.cc"
 )
 
 target_include_directories(_common_latency_recorder_latency_recorder SYSTEM PUBLIC ${PROTOBUF_INCLUDE_DIR})

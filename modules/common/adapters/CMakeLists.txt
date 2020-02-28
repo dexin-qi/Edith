@@ -1,7 +1,7 @@
 ### auto generate from bazel lib : _common_adapters_adapter_gflags ###
 add_library(_common_adapters_adapter_gflags SHARED
-  "/edith/modules/common/adapters/adapter_gflags.cc"
   "/edith/modules/common/adapters/adapter_gflags.h"
+  "/edith/modules/common/adapters/adapter_gflags.cc"
 )
 
 target_link_libraries(_common_adapters_adapter_gflags gflags)

@@ -1,8 +1,8 @@
 
 ### auto generate from bazel test : _common_status_status_test ###
-dustin_var_append(STATUS_TEST_FILES /edith/modules/common/util/future.h)
-dustin_var_append(STATUS_TEST_FILES /edith/modules/common/status/status.h)
 dustin_var_append(STATUS_TEST_FILES /edith/modules/common/status/status_test.cc)
+dustin_var_append(STATUS_TEST_FILES /edith/modules/common/status/status.h)
+dustin_var_append(STATUS_TEST_FILES /edith/modules/common/util/future.h)
 
 edith_test(_common_status_status_test
 SRCS

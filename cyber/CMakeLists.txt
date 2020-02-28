@@ -1,27 +1,29 @@
-add_subdirectory(scheduler)
-add_subdirectory(blocker)
-add_subdirectory(task)
-add_subdirectory(node)
-add_subdirectory(component)
-add_subdirectory(parameter)
-add_subdirectory(service_discovery)
-add_subdirectory(class_loader/test)
-add_subdirectory(time)
-add_subdirectory(sysmo)
-add_subdirectory(transport)
-add_subdirectory(timer)
-add_subdirectory(io)
 add_subdirectory(event)
-add_subdirectory(class_loader)
-add_subdirectory(croutine)
-add_subdirectory(common)
-add_subdirectory(message)
 add_subdirectory(record)
+add_subdirectory(component)
+add_subdirectory(class_loader)
+add_subdirectory(service_discovery)
+add_subdirectory(message)
+add_subdirectory(timer)
+add_subdirectory(common)
+add_subdirectory(blocker)
 add_subdirectory(logger)
+add_subdirectory(scheduler)
+add_subdirectory(time)
+add_subdirectory(io)
+add_subdirectory(sysmo)
+add_subdirectory(croutine)
+add_subdirectory(class_loader/test)
+add_subdirectory(parameter)
+add_subdirectory(node)
+add_subdirectory(transport)
+add_subdirectory(task)
 add_subdirectory(py_wrapper)
 add_subdirectory(proto)
 
 add_subdirectory(examples)
+add_subdirectory(base) # pure test
+add_subdirectory(data) # pure test
 add_subdirectory(tools/cyber_monitor)
 add_subdirectory(tools/cyber_recorder)
 file(GLOB_RECURSE MB_CC "mainboard/*.cc")
@@ -39,14 +41,14 @@ edith_binary(mainboard
 
 ### auto generate from bazel lib : _state ###
 add_library(_state SHARED
-  "/edith/cyber/common/macros.h"
-  "/edith/cyber/state.h"
-  "/edith/cyber/state.cc"
   "/edith/cyber/binary.h"
-  "/edith/cyber/base/macros.h"
-  "/edith/cyber/common/time_conversion.h"
-  "/edith/cyber/common/util.h"
+  "/edith/cyber/state.h"
+  "/edith/cyber/common/macros.h"
   "/edith/cyber/common/log.h"
+  "/edith/cyber/state.cc"
+  "/edith/cyber/common/util.h"
+  "/edith/cyber/common/time_conversion.h"
+  "/edith/cyber/base/macros.h"
   "/edith/cyber/common/types.h"
   "/edith/cyber/common/environment.h"
 )
@@ -85,52 +87,52 @@ target_include_directories(_init PUBLIC
 
 ### auto generate from bazel lib : _cyber_core ###
 add_library(_cyber_core SHARED
-  "/edith/cyber/message/message_header.h"
-  "/edith/cyber/message/py_message_traits.h"
-  "/edith/cyber/data/fusion/all_latest.h"
-  "/edith/cyber/component/component.h"
-  "/edith/cyber/cyber.cc"
-  "/edith/cyber/base/atomic_rw_lock.h"
-  "/edith/cyber/io/poll_data.h"
-  "/edith/cyber/message/message_traits.h"
-  "/edith/cyber/component/component_base.h"
-  "/edith/cyber/base/for_each.h"
-  "/edith/cyber/data/fusion/data_fusion.h"
-  "/edith/cyber/message/protobuf_traits.h"
-  "/edith/cyber/service/service_base.h"
-  "/edith/cyber/data/data_notifier.h"
-  "/edith/cyber/data/cache_buffer.h"
-  "/edith/cyber/service/client_base.h"
-  "/edith/cyber/message/raw_message.h"
-  "/edith/cyber/base/atomic_hash_map.h"
-  "/edith/cyber/common/time_conversion.h"
-  "/edith/cyber/base/signal.h"
-  "/edith/cyber/message/py_message.h"
-  "/edith/cyber/common/types.h"
-  "/edith/cyber/base/object_pool.h"
-  "/edith/cyber/service/service.h"
-  "/edith/cyber/base/macros.h"
-  "/edith/cyber/base/thread_pool.h"
-  "/edith/cyber/cyber.h"
-  "/edith/cyber/common/log.h"
-  "/edith/cyber/base/rw_lock_guard.h"
-  "/edith/cyber/base/thread_safe_queue.h"
-  "/edith/cyber/data/data_dispatcher.h"
-  "/edith/cyber/task/task.h"
   "/edith/cyber/message/raw_message_traits.h"
-  "/edith/cyber/base/wait_strategy.h"
+  "/edith/cyber/cyber.cc"
+  "/edith/cyber/cyber.h"
   "/edith/cyber/common/macros.h"
-  "/edith/cyber/service/client.h"
-  "/edith/cyber/data/data_visitor_base.h"
-  "/edith/cyber/base/bounded_queue.h"
+  "/edith/cyber/base/thread_pool.h"
+  "/edith/cyber/component/component_base.h"
+  "/edith/cyber/base/atomic_hash_map.h"
   "/edith/cyber/base/reentrant_rw_lock.h"
-  "/edith/cyber/data/data_visitor.h"
+  "/edith/cyber/common/time_conversion.h"
   "/edith/cyber/binary.h"
+  "/edith/cyber/base/for_each.h"
   "/edith/cyber/base/unbounded_queue.h"
+  "/edith/cyber/io/poll_data.h"
+  "/edith/cyber/base/thread_safe_queue.h"
+  "/edith/cyber/base/object_pool.h"
   "/edith/cyber/common/util.h"
+  "/edith/cyber/service/service.h"
+  "/edith/cyber/data/cache_buffer.h"
+  "/edith/cyber/data/data_visitor_base.h"
+  "/edith/cyber/data/fusion/data_fusion.h"
+  "/edith/cyber/task/task.h"
+  "/edith/cyber/data/data_dispatcher.h"
+  "/edith/cyber/message/protobuf_traits.h"
+  "/edith/cyber/base/rw_lock_guard.h"
+  "/edith/cyber/message/message_header.h"
+  "/edith/cyber/base/atomic_rw_lock.h"
   "/edith/cyber/data/channel_buffer.h"
-  "/edith/cyber/base/concurrent_object_pool.h"
+  "/edith/cyber/message/py_message.h"
+  "/edith/cyber/service/client.h"
+  "/edith/cyber/base/macros.h"
   "/edith/cyber/common/environment.h"
+  "/edith/cyber/base/signal.h"
+  "/edith/cyber/service/client_base.h"
+  "/edith/cyber/base/concurrent_object_pool.h"
+  "/edith/cyber/common/log.h"
+  "/edith/cyber/data/data_visitor.h"
+  "/edith/cyber/message/raw_message.h"
+  "/edith/cyber/data/data_notifier.h"
+  "/edith/cyber/base/bounded_queue.h"
+  "/edith/cyber/data/fusion/all_latest.h"
+  "/edith/cyber/message/py_message_traits.h"
+  "/edith/cyber/base/wait_strategy.h"
+  "/edith/cyber/component/component.h"
+  "/edith/cyber/service/service_base.h"
+  "/edith/cyber/message/message_traits.h"
+  "/edith/cyber/common/types.h"
 )
 
 target_link_libraries(_cyber_core -lprotobuf)

@@ -1,7 +1,7 @@
 ### auto generate from bazel lib : _common_configs_config_gflags ###
 add_library(_common_configs_config_gflags SHARED
-  "/edith/modules/common/configs/config_gflags.h"
   "/edith/modules/common/configs/config_gflags.cc"
+  "/edith/modules/common/configs/config_gflags.h"
 )
 
 target_link_libraries(_common_configs_config_gflags gflags)
@@ -16,10 +16,10 @@ target_include_directories(_common_configs_config_gflags PUBLIC
 
 ### auto generate from bazel lib : _common_configs_vehicle_config_helper ###
 add_library(_common_configs_vehicle_config_helper SHARED
-  "/edith/cyber/common/macros.h"
-  "/edith/cyber/base/macros.h"
-  "/edith/modules/common/configs/vehicle_config_helper.h"
   "/edith/modules/common/configs/vehicle_config_helper.cc"
+  "/edith/cyber/common/macros.h"
+  "/edith/modules/common/configs/vehicle_config_helper.h"
+  "/edith/cyber/base/macros.h"
 )
 
 target_link_libraries(_common_configs_vehicle_config_helper _common_configs_config_gflags)
@@ -38,41 +38,41 @@ target_include_directories(_common_configs_vehicle_config_helper PUBLIC
 
 
 ### auto generate from bazel test : _common_configs_vehicle_config_helper_test ###
-dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/cyber/common/file.h)
 dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/util/util.h)
-dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/integral.h)
-dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/angle.h)
-dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/polygon2d.h)
-dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/factorial.h)
-dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/sin_table.h)
-dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/curve_fitting.h)
-dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/linear_interpolation.h)
-dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/matrix_operations.h)
-dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/aabox2d.h)
-dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/configs/vehicle_config_helper.h)
-dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/cartesian_frenet_conversion.h)
-dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/cyber/common/types.h)
-dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/util/string_util.h)
-dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/qp_solver/active_set_qp_solver.h)
 dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/mpc_solver.h)
-dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/configs/config_gflags.h)
-dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/line_segment2d.h)
-dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/cyber/base/macros.h)
-dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/linear_quadratic_regulator.h)
-dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/cyber/common/log.h)
-dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/util/future.h)
 dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/cyber/common/macros.h)
+dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/linear_quadratic_regulator.h)
+dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/matrix_operations.h)
 dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/euler_angles_zxy.h)
-dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/box2d.h)
-dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/configs/vehicle_config_helper_test.cc)
-dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/qp_solver/qp_solver.h)
+dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/aabox2d.h)
+dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/aaboxkdtree2d.h)
 dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/cyber/binary.h)
 dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/vec2d.h)
-dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/kalman_filter.h)
-dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/quaternion.h)
+dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/sin_table.h)
+dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/util/future.h)
 dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/qp_solver/qp_solver_gflags.h)
+dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/qp_solver/active_set_qp_solver.h)
+dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/quaternion.h)
+dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/curve_fitting.h)
+dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/configs/vehicle_config_helper_test.cc)
+dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/configs/config_gflags.h)
+dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/kalman_filter.h)
+dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/integral.h)
+dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/polygon2d.h)
+dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/util/string_util.h)
+dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/cyber/base/macros.h)
+dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/box2d.h)
 dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/search.h)
-dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/aaboxkdtree2d.h)
+dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/configs/vehicle_config_helper.h)
+dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/angle.h)
+dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/cyber/common/log.h)
+dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/line_segment2d.h)
+dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/cartesian_frenet_conversion.h)
+dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/factorial.h)
+dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/qp_solver/qp_solver.h)
+dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/cyber/common/types.h)
+dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/modules/common/math/linear_interpolation.h)
+dustin_var_append(VEHICLE_CONFIG_HELPER_TEST_FILES /edith/cyber/common/file.h)
 
 edith_test(_common_configs_vehicle_config_helper_test
 SRCS

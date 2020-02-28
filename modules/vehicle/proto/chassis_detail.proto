@@ -5,11 +5,6 @@ package edith.vehicle;
 import "modules/common/configs/proto/vehicle_config.proto";
 import "modules/vehicle/proto/chassis.proto";
 import "modules/vehicle/proto/ge3.proto";
-import "modules/vehicle/proto/lexus.proto";
-import "modules/vehicle/proto/transit.proto";
-import "modules/vehicle/proto/wey.proto";
-import "modules/vehicle/proto/zhongyun.proto";
-import "modules/vehicle/proto/ch.proto";
 
 message ChassisDetail {
   enum Type {
@@ -34,12 +29,7 @@ message ChassisDetail {
   optional License license = 16 [deprecated = true];  // License info
   optional Surround surround = 17;                    // Surround information
   optional Gem gem = 18;
-  optional Lexus lexus = 19;
-  optional Transit transit = 20;
   optional Ge3 ge3 = 21;
-  optional Wey wey = 22;
-  optional Zhongyun zhongyun = 23;
-  optional Ch ch = 24;
   // Reserve fields for other vehicles
   optional edith.common.VehicleID vehicle_id = 101;
 }

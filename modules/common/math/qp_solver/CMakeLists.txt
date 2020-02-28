@@ -16,8 +16,8 @@ target_include_directories(_common_math_qp_solver_qp_solver_gflags PUBLIC
 
 ### auto generate from bazel lib : _common_math_qp_solver_qp_solver ###
 add_library(_common_math_qp_solver_qp_solver SHARED
-  "/edith/modules/common/math/qp_solver/qp_solver.h"
   "/edith/modules/common/math/qp_solver/qp_solver.cc"
+  "/edith/modules/common/math/qp_solver/qp_solver.h"
 )
 
 target_include_directories(_common_math_qp_solver_qp_solver SYSTEM PUBLIC ${EIGEN3_INCLUDE_DIRS})
@@ -34,9 +34,9 @@ target_include_directories(_common_math_qp_solver_qp_solver PUBLIC
 ### auto generate from bazel lib : _common_math_qp_solver_active_set_qp_solver ###
 add_library(_common_math_qp_solver_active_set_qp_solver SHARED
   "/edith/cyber/common/log.h"
-  "/edith/modules/common/math/qp_solver/active_set_qp_solver.h"
   "/edith/cyber/binary.h"
   "/edith/modules/common/math/qp_solver/active_set_qp_solver.cc"
+  "/edith/modules/common/math/qp_solver/active_set_qp_solver.h"
 )
 
 target_include_directories(_common_math_qp_solver_active_set_qp_solver SYSTEM PUBLIC "/usr/local/include")
@@ -57,12 +57,12 @@ target_include_directories(_common_math_qp_solver_active_set_qp_solver PUBLIC
 
 
 ### auto generate from bazel test : _common_math_qp_solver_active_set_qp_solver_test ###
+dustin_var_append(ACTIVE_SET_QP_SOLVER_TEST_FILES /edith/cyber/binary.h)
+dustin_var_append(ACTIVE_SET_QP_SOLVER_TEST_FILES /edith/cyber/common/log.h)
+dustin_var_append(ACTIVE_SET_QP_SOLVER_TEST_FILES /edith/modules/common/math/qp_solver/active_set_qp_solver_test.cc)
+dustin_var_append(ACTIVE_SET_QP_SOLVER_TEST_FILES /edith/modules/common/math/qp_solver/qp_solver_gflags.h)
 dustin_var_append(ACTIVE_SET_QP_SOLVER_TEST_FILES /edith/modules/common/math/qp_solver/active_set_qp_solver.h)
 dustin_var_append(ACTIVE_SET_QP_SOLVER_TEST_FILES /edith/modules/common/math/qp_solver/qp_solver.h)
-dustin_var_append(ACTIVE_SET_QP_SOLVER_TEST_FILES /edith/modules/common/math/qp_solver/qp_solver_gflags.h)
-dustin_var_append(ACTIVE_SET_QP_SOLVER_TEST_FILES /edith/cyber/binary.h)
-dustin_var_append(ACTIVE_SET_QP_SOLVER_TEST_FILES /edith/modules/common/math/qp_solver/active_set_qp_solver_test.cc)
-dustin_var_append(ACTIVE_SET_QP_SOLVER_TEST_FILES /edith/cyber/common/log.h)
 
 edith_test(_common_math_qp_solver_active_set_qp_solver_test
 SRCS

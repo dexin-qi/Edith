@@ -1,10 +1,10 @@
 ### auto generate from bazel lib : _common_kv_db_kv_db ###
 add_library(_common_kv_db_kv_db SHARED
   "/edith/cyber/binary.h"
-  "/edith/modules/common/kv_db/kv_db.h"
+  "/edith/modules/common/util/future.h"
   "/edith/modules/common/kv_db/kv_db.cc"
   "/edith/cyber/common/log.h"
-  "/edith/modules/common/util/future.h"
+  "/edith/modules/common/kv_db/kv_db.h"
 )
 
 target_link_libraries(_common_kv_db_kv_db -lsqlite3)
@@ -24,36 +24,36 @@ target_include_directories(_common_kv_db_kv_db PUBLIC
 
 ### auto generate from bazel test : _common_kv_db_kv_db_test ###
 dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/util/util.h)
-dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/integral.h)
-dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/angle.h)
-dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/polygon2d.h)
-dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/factorial.h)
-dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/sin_table.h)
-dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/curve_fitting.h)
-dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/linear_interpolation.h)
-dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/matrix_operations.h)
-dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/aabox2d.h)
-dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/cartesian_frenet_conversion.h)
-dustin_var_append(KV_DB_TEST_FILES /edith/cyber/common/types.h)
-dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/util/string_util.h)
-dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/qp_solver/active_set_qp_solver.h)
 dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/mpc_solver.h)
-dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/line_segment2d.h)
-dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/kv_db/kv_db_test.cc)
 dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/linear_quadratic_regulator.h)
-dustin_var_append(KV_DB_TEST_FILES /edith/cyber/common/log.h)
-dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/util/future.h)
+dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/matrix_operations.h)
 dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/euler_angles_zxy.h)
-dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/box2d.h)
-dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/qp_solver/qp_solver.h)
+dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/aabox2d.h)
+dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/aaboxkdtree2d.h)
 dustin_var_append(KV_DB_TEST_FILES /edith/cyber/binary.h)
 dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/vec2d.h)
-dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/kalman_filter.h)
-dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/quaternion.h)
+dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/sin_table.h)
+dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/util/future.h)
 dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/qp_solver/qp_solver_gflags.h)
-dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/kv_db/kv_db.h)
+dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/qp_solver/active_set_qp_solver.h)
+dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/quaternion.h)
+dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/curve_fitting.h)
+dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/kv_db/kv_db_test.cc)
+dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/kalman_filter.h)
+dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/integral.h)
+dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/polygon2d.h)
+dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/util/string_util.h)
+dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/box2d.h)
 dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/search.h)
-dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/aaboxkdtree2d.h)
+dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/angle.h)
+dustin_var_append(KV_DB_TEST_FILES /edith/cyber/common/log.h)
+dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/line_segment2d.h)
+dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/cartesian_frenet_conversion.h)
+dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/factorial.h)
+dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/qp_solver/qp_solver.h)
+dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/kv_db/kv_db.h)
+dustin_var_append(KV_DB_TEST_FILES /edith/cyber/common/types.h)
+dustin_var_append(KV_DB_TEST_FILES /edith/modules/common/math/linear_interpolation.h)
 
 edith_test(_common_kv_db_kv_db_test
 SRCS
