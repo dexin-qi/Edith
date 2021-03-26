@@ -1,0 +1,475 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Migration guide from Apollo ROS &mdash; Cyber RT Documents  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/main_stylesheet.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="C++ API" href="api/cppapi_index.html" />
+    <link rel="prev" title="Develop inside Docker Environment" href="CyberRT_Docker.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Cyber RT Documents
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">CyberRT QUICKSTART</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Quick_Start.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Terms.html">Cyber RT Terms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_FAQs.html">F.A.Q.</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CyberRT TUTORIALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_API_for_Developers.html">Cyber RT API tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Python_API.html">Python API tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Developer_Tools.html">Apollo Cyber RT Developer Tools</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CyberRT ADVANCED TOPICS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Docker.html">Develop inside Docker Environment</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Migration guide from Apollo ROS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#build-system">Build system</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#proto">Proto</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#folder-structure">Folder structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#apollo-ros">Apollo ROS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cyber-rt">Cyber RT</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#update-source-code">Update source code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#listener">Listener</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#talker">Talker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tools-mapping">Tools mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ros-bag-data-migration">ROS bag data migration</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">CyberRT API REFERENCE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/cppapi_index.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/pythonapi_index.html">Python API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Cyber RT Documents</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Migration guide from Apollo ROS</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/CyberRT_Migration_Guide.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="migration-guide-from-apollo-ros">
+<h1>Migration guide from Apollo ROS<a class="headerlink" href="#migration-guide-from-apollo-ros" title="Permalink to this headline">¶</a></h1>
+<p>This article describes the essential changes for projects to migrate from Apollo ROS (Apollo 3.0 and before) to Apollo Cyber RT (Apollo 3.5 and after). We will be using the very first ROS project talker/listener as example to demonstrate step by step migration instruction.</p>
+<div class="section" id="build-system">
+<h2>Build system<a class="headerlink" href="#build-system" title="Permalink to this headline">¶</a></h2>
+<p>ROS use <code class="docutils literal notranslate"><span class="pre">CMake</span></code> as its build system but Cyber RT use <code class="docutils literal notranslate"><span class="pre">bazel</span></code>. In a ROS project, CmakeLists.txt and package.xml are required for defining build configs like build target, dependency, message files and so on. As for a Cyber RT component, a single bazel BUILD file covers. Some key build config mappings are listed below.</p>
+<p>Cmake</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">project</span><span class="p">(</span><span class="s">pb_msgs_example</span><span class="p">)</span>
+<span class="nb">add_proto_files</span><span class="p">(</span>
+  <span class="s">DIRECTORY</span> <span class="s">proto</span>
+  <span class="s">FILES</span> <span class="s">chatter.proto</span>
+<span class="p">)</span>
+<span class="c">## Declare a C++ executable</span>
+<span class="nb">add_executable</span><span class="p">(</span><span class="s">pb_talker</span> <span class="s">src/talker.cpp</span><span class="p">)</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">pb_talker</span> <span class="o">${</span><span class="nv">catkin_LIBRARIES</span><span class="o">}</span><span class="s">pb_msgs_example_proto</span><span class="p">)</span>
+<span class="nb">add_executable</span><span class="p">(</span><span class="s">pb_listener</span> <span class="s">src/listener.cpp</span><span class="p">)</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">pb_listener</span> <span class="o">${</span><span class="nv">catkin_LIBRARIES</span><span class="o">}</span>  <span class="s">pb_msgs_example_proto</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Bazel</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cc_binary</span><span class="p">(</span>
+  <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;talker&quot;</span><span class="p">,</span>
+  <span class="n">srcs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;talker.cc&quot;</span><span class="p">],</span>
+  <span class="n">deps</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;//cyber&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;//cyber/examples/proto:examples_cc_proto&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+  <span class="p">)</span>
+<span class="n">cc_binary</span><span class="p">(</span>
+  <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;listener&quot;</span><span class="p">,</span>
+  <span class="n">srcs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;listener.cc&quot;</span><span class="p">],</span>
+  <span class="n">deps</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;//cyber&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;//cyber/examples/proto:examples_cc_proto&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+  <span class="p">)</span>
+</pre></div>
+</div>
+<p>We can find the mapping easily from the 2 file snippets. For example, <code class="docutils literal notranslate"><span class="pre">pb_talker</span></code> and <code class="docutils literal notranslate"><span class="pre">src/talker.cpp</span></code> in cmake <code class="docutils literal notranslate"><span class="pre">add_executable</span></code> setting map to <code class="docutils literal notranslate"><span class="pre">name</span> <span class="pre">=</span> <span class="pre">&quot;talker&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">srcs</span> <span class="pre">=</span> <span class="pre">[&quot;talker.cc&quot;]</span></code> in BUILD file <code class="docutils literal notranslate"><span class="pre">cc_binary</span></code>.</p>
+<div class="section" id="proto">
+<h3>Proto<a class="headerlink" href="#proto" title="Permalink to this headline">¶</a></h3>
+<p>Apollo ROS has customized to support proto message formate that a separate section <code class="docutils literal notranslate"><span class="pre">add_proto_files</span></code> and projectName_proto(<code class="docutils literal notranslate"><span class="pre">pb_msgs_example_proto</span></code>) in <code class="docutils literal notranslate"><span class="pre">target_link_libraries</span></code> are required to send message in proto formate. For config proto message in Cyber RT, it’s as simple as adding the target proto file path concantenated with name of <code class="docutils literal notranslate"><span class="pre">cc_proto_library</span></code> in <code class="docutils literal notranslate"><span class="pre">deps</span></code> setting. The <code class="docutils literal notranslate"><span class="pre">cc_proto_library</span></code> is set up in BUILD file under proto folder.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cc_proto_library</span><span class="p">(</span>
+  <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;examples_cc_proto&quot;</span><span class="p">,</span>
+  <span class="n">deps</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;:examples_proto&quot;</span><span class="p">,</span>
+  <span class="p">],</span>
+<span class="p">)</span>
+<span class="n">proto_library</span><span class="p">(</span>
+  <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;examples_proto&quot;</span><span class="p">,</span>
+  <span class="n">srcs</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;examples.proto&quot;</span><span class="p">,</span>
+  <span class="p">],</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>The package definition has also changed in Cyber RT. In Apollo ROS a fixed package <code class="docutils literal notranslate"><span class="pre">package</span> <span class="pre">pb_msgs;</span></code> is used for proto files, but in Cyber RT, the proto file path <code class="docutils literal notranslate"><span class="pre">package</span> <span class="pre">apollo.cyber.examples.proto;</span></code> is used instead.</p>
+</div>
+</div>
+<div class="section" id="folder-structure">
+<h2>Folder structure<a class="headerlink" href="#folder-structure" title="Permalink to this headline">¶</a></h2>
+<p>As shown below, Cyber RT remove the src folder and pull all source code in the same folder as BUILD file. BUILD file plays the same role as CMakeLists.txt plus package.xml. Both Cyber RT and Apollo ROS talker/listener example have a proto folder for message proto files but Cyber RT requires a separate BUILD file for proto folder to set up the proto library.</p>
+<div class="section" id="apollo-ros">
+<h3>Apollo ROS<a class="headerlink" href="#apollo-ros" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>CMakeLists.txt</p></li>
+<li><p>package.xml</p></li>
+<li><p>proto</p>
+<ul>
+<li><p>chatter.proto</p></li>
+</ul>
+</li>
+<li><p>src</p>
+<ul>
+<li><p>listener.cpp</p></li>
+<li><p>talker.cpp</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="cyber-rt">
+<h3>Cyber RT<a class="headerlink" href="#cyber-rt" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>BUILD</p></li>
+<li><p>listener.cc</p></li>
+<li><p>talker.cc</p></li>
+<li><p>proto</p>
+<ul>
+<li><p>BUILD</p></li>
+<li><p>examples.proto (with chatter message)</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="update-source-code">
+<h2>Update source code<a class="headerlink" href="#update-source-code" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="listener">
+<h3>Listener<a class="headerlink" href="#listener" title="Permalink to this headline">¶</a></h3>
+<p>Cyber RT</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;cyber/cyber.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/examples/proto/examples.pb.h&quot;</span><span class="cp"></span>
+
+<span class="kt">void</span> <span class="nf">MessageCallback</span><span class="p">(</span>
+    <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">examples</span><span class="o">::</span><span class="n">proto</span><span class="o">::</span><span class="n">Chatter</span><span class="o">&gt;&amp;</span> <span class="n">msg</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">AINFO</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Received message seq-&gt; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">msg</span><span class="o">-&gt;</span><span class="n">seq</span><span class="p">();</span>
+  <span class="n">AINFO</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;msgcontent-&gt;&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">msg</span><span class="o">-&gt;</span><span class="n">content</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span> <span class="p">{</span>
+  <span class="c1">// init cyber framework</span>
+  <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">Init</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+  <span class="c1">// create listener node</span>
+  <span class="k">auto</span> <span class="n">listener_node</span> <span class="o">=</span> <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">CreateNode</span><span class="p">(</span><span class="s">&quot;listener&quot;</span><span class="p">);</span>
+  <span class="c1">// create listener</span>
+  <span class="k">auto</span> <span class="n">listener</span> <span class="o">=</span>
+      <span class="n">listener_node</span><span class="o">-&gt;</span><span class="n">CreateReader</span><span class="o">&lt;</span><span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">examples</span><span class="o">::</span><span class="n">proto</span><span class="o">::</span><span class="n">Chatter</span><span class="o">&gt;</span><span class="p">(</span>
+          <span class="s">&quot;channel/chatter&quot;</span><span class="p">,</span> <span class="n">MessageCallback</span><span class="p">);</span>
+  <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">WaitForShutdown</span><span class="p">();</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>ROS</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;ros/ros.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;chatter.pb.h&quot;</span><span class="cp"></span>
+
+<span class="kt">void</span> <span class="nf">MessageCallback</span><span class="p">(</span><span class="k">const</span> <span class="n">boost</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">pb_msgs</span><span class="o">::</span><span class="n">Chatter</span><span class="o">&gt;&amp;</span> <span class="n">msg</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">ROS_INFO_STREAM</span><span class="p">(</span><span class="s">&quot;Time: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">msg</span><span class="o">-&gt;</span><span class="n">stamp</span><span class="p">().</span><span class="n">sec</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;.&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">msg</span><span class="o">-&gt;</span><span class="n">stamp</span><span class="p">().</span><span class="n">nsec</span><span class="p">());</span>
+  <span class="n">ROS_INFO</span><span class="p">(</span><span class="s">&quot;I heard pb Chatter message: [%s]&quot;</span><span class="p">,</span> <span class="n">msg</span><span class="o">-&gt;</span><span class="n">content</span><span class="p">().</span><span class="n">c_str</span><span class="p">());</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">ros</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">,</span> <span class="s">&quot;listener&quot;</span><span class="p">);</span>
+  <span class="n">ros</span><span class="o">::</span><span class="n">NodeHandle</span> <span class="n">n</span><span class="p">;</span>
+  <span class="n">ros</span><span class="o">::</span><span class="n">Subscriber</span> <span class="n">pb_sub</span> <span class="o">=</span> <span class="n">n</span><span class="p">.</span><span class="n">subscribe</span><span class="p">(</span><span class="s">&quot;chatter&quot;</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">MessageCallback</span><span class="p">);</span>
+  <span class="n">ros</span><span class="o">::</span><span class="n">spin</span><span class="p">();</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>You can see easily from the two listener code above that Cyber RT provides very similar API to for developers to migrate from ROS.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ros::init(argc,</span> <span class="pre">argv,</span> <span class="pre">&quot;listener&quot;);</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">apollo::cyber::Init(argv[0]);</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ros::NodeHandle</span> <span class="pre">n;</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">auto</span> <span class="pre">listener_node</span> <span class="pre">=</span> <span class="pre">apollo::cyber::CreateNode(&quot;listener&quot;);</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ros::Subscriber</span> <span class="pre">pb_sub</span> <span class="pre">=</span> <span class="pre">n.subscribe(&quot;chatter&quot;,</span> <span class="pre">1000,</span> <span class="pre">MessageCallback);</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">auto</span> <span class="pre">listener</span> <span class="pre">=</span> <span class="pre">listener_node-&gt;CreateReader(&quot;channel/chatter&quot;,</span> <span class="pre">MessageCallback);</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ros::spin();</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">apollo::cyber::WaitForShutdown();</span></code></p></li>
+</ul>
+<p>Note: for Cyber RT, a listener node has to use <code class="docutils literal notranslate"><span class="pre">node-&gt;CreateReader&lt;messageType&gt;(channelName,</span> <span class="pre">callback)</span></code> to read data from channel.</p>
+</div>
+<div class="section" id="talker">
+<h3>Talker<a class="headerlink" href="#talker" title="Permalink to this headline">¶</a></h3>
+<p>Cyber RT</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;cyber/cyber.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/examples/proto/examples.pb.h&quot;</span><span class="cp"></span>
+
+<span class="k">using</span> <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">examples</span><span class="o">::</span><span class="n">proto</span><span class="o">::</span><span class="n">Chatter</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span> <span class="p">{</span>
+  <span class="c1">// init cyber framework</span>
+  <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">Init</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+  <span class="c1">// create talker node</span>
+  <span class="k">auto</span> <span class="n">talker_node</span> <span class="o">=</span> <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">CreateNode</span><span class="p">(</span><span class="s">&quot;talker&quot;</span><span class="p">);</span>
+  <span class="c1">// create talker</span>
+  <span class="k">auto</span> <span class="n">talker</span> <span class="o">=</span> <span class="n">talker_node</span><span class="o">-&gt;</span><span class="n">CreateWriter</span><span class="o">&lt;</span><span class="n">Chatter</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;channel/chatter&quot;</span><span class="p">);</span>
+  <span class="n">Rate</span> <span class="n">rate</span><span class="p">(</span><span class="mf">1.0</span><span class="p">);</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">OK</span><span class="p">())</span> <span class="p">{</span>
+    <span class="k">static</span> <span class="kt">uint64_t</span> <span class="n">seq</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">auto</span> <span class="n">msg</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">Chatter</span><span class="o">&gt;</span><span class="p">();</span>
+    <span class="n">msg</span><span class="o">-&gt;</span><span class="n">set_timestamp</span><span class="p">(</span><span class="n">Time</span><span class="o">::</span><span class="n">Now</span><span class="p">().</span><span class="n">ToNanosecond</span><span class="p">());</span>
+    <span class="n">msg</span><span class="o">-&gt;</span><span class="n">set_lidar_timestamp</span><span class="p">(</span><span class="n">Time</span><span class="o">::</span><span class="n">Now</span><span class="p">().</span><span class="n">ToNanosecond</span><span class="p">());</span>
+    <span class="n">msg</span><span class="o">-&gt;</span><span class="n">set_seq</span><span class="p">(</span><span class="n">seq</span><span class="o">++</span><span class="p">);</span>
+    <span class="n">msg</span><span class="o">-&gt;</span><span class="n">set_content</span><span class="p">(</span><span class="s">&quot;Hello, apollo!&quot;</span><span class="p">);</span>
+    <span class="n">talker</span><span class="o">-&gt;</span><span class="n">Write</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
+    <span class="n">AINFO</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;talker sent a message!&quot;</span><span class="p">;</span>
+    <span class="n">rate</span><span class="p">.</span><span class="n">Sleep</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>ROS</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;ros/ros.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;chatter.pb.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;sstream&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">ros</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">,</span> <span class="s">&quot;talker&quot;</span><span class="p">);</span>
+  <span class="n">ros</span><span class="o">::</span><span class="n">NodeHandle</span> <span class="n">n</span><span class="p">;</span>
+  <span class="n">ros</span><span class="o">::</span><span class="n">Publisher</span> <span class="n">chatter_pub</span> <span class="o">=</span> <span class="n">n</span><span class="p">.</span><span class="n">advertise</span><span class="o">&lt;</span><span class="n">pb_msgs</span><span class="o">::</span><span class="n">Chatter</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;chatter&quot;</span><span class="p">,</span> <span class="mi">1000</span><span class="p">);</span>
+  <span class="n">ros</span><span class="o">::</span><span class="n">Rate</span> <span class="n">loop_rate</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+  <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">ros</span><span class="o">::</span><span class="n">ok</span><span class="p">())</span> <span class="p">{</span>
+    <span class="n">pb_msgs</span><span class="o">::</span><span class="n">Chatter</span> <span class="n">msg</span><span class="p">;</span>
+    <span class="n">ros</span><span class="o">::</span><span class="n">Time</span> <span class="n">now</span> <span class="o">=</span> <span class="n">ros</span><span class="o">::</span><span class="n">Time</span><span class="o">::</span><span class="n">now</span><span class="p">();</span>
+    <span class="n">msg</span><span class="p">.</span><span class="n">mutable_stamp</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">set_sec</span><span class="p">(</span><span class="n">now</span><span class="p">.</span><span class="n">sec</span><span class="p">);</span>
+    <span class="n">msg</span><span class="p">.</span><span class="n">mutable_stamp</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">set_nsec</span><span class="p">(</span><span class="n">now</span><span class="p">.</span><span class="n">nsec</span><span class="p">);</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">stringstream</span> <span class="n">ss</span><span class="p">;</span>
+    <span class="n">ss</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Hello world &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">count</span><span class="p">;</span>
+    <span class="n">msg</span><span class="p">.</span><span class="n">set_content</span><span class="p">(</span><span class="n">ss</span><span class="p">.</span><span class="n">str</span><span class="p">());</span>
+    <span class="n">chatter_pub</span><span class="p">.</span><span class="n">publish</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
+    <span class="n">ros</span><span class="o">::</span><span class="n">spinOnce</span><span class="p">();</span>
+    <span class="n">loop_rate</span><span class="p">.</span><span class="n">sleep</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Most of the mappings are illustrated in listener code above, the rest are listed here.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ros::Publisher</span> <span class="pre">chatter_pub</span> <span class="pre">=</span> <span class="pre">n.advertise&lt;pb_msgs::Chatter&gt;(&quot;chatter&quot;,</span> <span class="pre">1000);</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">auto</span> <span class="pre">talker</span> <span class="pre">=</span> <span class="pre">talker_node-&gt;CreateWriter&lt;Chatter&gt;(&quot;channel/chatter&quot;);</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">chatter_pub.publish(msg);</span></code> –&gt; <code class="docutils literal notranslate"> <span class="pre">talker-&gt;Write(msg);</span></code></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="tools-mapping">
+<h2>Tools mapping<a class="headerlink" href="#tools-mapping" title="Permalink to this headline">¶</a></h2>
+<p>ROS | Cyber RT | Note
+:————- | :————- | :————–
+rosbag    |   cyber_recorder |   data file
+scripts/diagnostics.sh | cyber_monitor | channel debug
+offline_lidar_visualizer_tool   | cyber_visualizer |point cloud visualizer</p>
+</div>
+<div class="section" id="ros-bag-data-migration">
+<h2>ROS bag data migration<a class="headerlink" href="#ros-bag-data-migration" title="Permalink to this headline">¶</a></h2>
+<p>The data file changed from ROS bag to Cyber record in Cyber RT. Cyber RT has a data migration tool <code class="docutils literal notranslate"><span class="pre">rosbag_to_record</span></code> for users to easily migrate data files before Apollo 3.0 (ROS) to Cyber RT like the sample usage below.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosbag_to_record demo_3.0.bag demo_3.5.record
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="api/cppapi_index.html" class="btn btn-neutral float-right" title="C++ API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="CyberRT_Docker.html" class="btn btn-neutral float-left" title="Develop inside Docker Environment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Edith.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

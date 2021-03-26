@@ -1,0 +1,611 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Python API tutorial &mdash; Cyber RT Documents  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/main_stylesheet.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Apollo Cyber RT Developer Tools" href="CyberRT_Developer_Tools.html" />
+    <link rel="prev" title="Cyber RT API tutorial" href="CyberRT_API_for_Developers.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Cyber RT Documents
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">CyberRT QUICKSTART</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Quick_Start.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Terms.html">Cyber RT Terms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_FAQs.html">F.A.Q.</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CyberRT TUTORIALS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_API_for_Developers.html">Cyber RT API tutorial</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Python API tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#background">1. Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-rt-python-interfaces">2. Cyber RT Python Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#overview-of-python-interfaces-in-cyber-rt">3. Overview of Python Interfaces in Cyber RT</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#read-write-of-channels">3.1 Read/Write of Channels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#record-interfaces">3.2 Record Interfaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#time-interfaces">3.3 Time Interfaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#timer-interfaces">3.4 Timer Interfaces</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">4. Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#read-from-channel-in-cyber-python-examples-listener-py">4.1 Read from Channel (in cyber/python/examples/listener.py)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#write-to-channel-in-cyber-python-examples-talker-py">4.2 Write to Channel(in cyber/python/examples/talker.py)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#read-and-write-messages-from-to-record-file-in-cyber-python-examples-record-py">4.3 Read and Write Messages from/to Record File(in cyber/python/examples/record.py)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Developer_Tools.html">Apollo Cyber RT Developer Tools</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CyberRT ADVANCED TOPICS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Docker.html">Develop inside Docker Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Migration_Guide.html">Migration guide from Apollo ROS</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CyberRT API REFERENCE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/cppapi_index.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/pythonapi_index.html">Python API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Cyber RT Documents</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Python API tutorial</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/CyberRT_Python_API.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="python-api-tutorial">
+<h1>Python API tutorial<a class="headerlink" href="#python-api-tutorial" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="background">
+<h2>1. Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<p>The core functions of Cyber RT are developed in C++. We also provide more python interfaces to help developers build their own utilities for specific projects.</p>
+</div>
+<div class="section" id="cyber-rt-python-interfaces">
+<h2>2. Cyber RT Python Interfaces<a class="headerlink" href="#cyber-rt-python-interfaces" title="Permalink to this headline">¶</a></h2>
+<p>The python interfaces of Cyber RT are wrapper the corresponding C++ interfaces. The implementation doesn’t rely on other third-party tools, e.g. swig, which makes it easier to maintain.</p>
+</div>
+<div class="section" id="overview-of-python-interfaces-in-cyber-rt">
+<h2>3. Overview of Python Interfaces in Cyber RT<a class="headerlink" href="#overview-of-python-interfaces-in-cyber-rt" title="Permalink to this headline">¶</a></h2>
+<p>So far, the python interfaces covers:</p>
+<ul class="simple">
+<li><p>access the information of channels</p></li>
+<li><p>server/client communication</p></li>
+<li><p>query informatoin in record files</p></li>
+<li><p>read and write from/to record files</p></li>
+<li><p>Time/Duration/Rate related operations</p></li>
+<li><p>Timer</p></li>
+</ul>
+<div class="section" id="read-write-of-channels">
+<h3>3.1 Read/Write of Channels<a class="headerlink" href="#read-write-of-channels" title="Permalink to this headline">¶</a></h3>
+<p>Steps shown as below:</p>
+<ol class="simple">
+<li><p>First create a Node；</p></li>
+<li><p>Create corresponding reader or writer;</p></li>
+<li><p>If write to a channel, use write interface in writer.</p></li>
+<li><p>If read from a channel, use the spin interface in the node, and process the messages in your callback function</p></li>
+</ol>
+<p>The interfaces are shown below:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Node</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Class for cyber Node wrapper.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">create_writer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">data_type</span><span class="p">,</span> <span class="n">qos_depth</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        create a topic writer for send message to topic.</span>
+<span class="sd">        @param self</span>
+<span class="sd">        @param name str: topic name</span>
+<span class="sd">        @param data_type proto: message class for serialization</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+   <span class="k">def</span> <span class="nf">create_reader</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">data_type</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        create a topic reader for receive message from topic.</span>
+<span class="sd">        @param self</span>
+<span class="sd">        @param name str: topic name</span>
+<span class="sd">        @param data_type proto: message class for serialization</span>
+<span class="sd">        @callback fn: function to call (fn(data)) when data is</span>
+<span class="sd">                   received. If args is set, the function must</span>
+<span class="sd">                   accept the args as a second argument,</span>
+<span class="sd">                   i.e. fn(data, args)</span>
+<span class="sd">        @args any: additional arguments to pass to the callback</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+	<span class="k">def</span> <span class="nf">create_client</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">request_data_type</span><span class="p">,</span> <span class="n">response_data_type</span><span class="p">):</span>
+	<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	<span class="k">def</span> <span class="nf">create_service</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">req_data_type</span><span class="p">,</span> <span class="n">res_data_type</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">spin</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        spin in wait and process message.</span>
+<span class="sd">        @param self</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+<span class="k">class</span> <span class="nc">Writer</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Class for cyber writer wrapper.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">write</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        writer msg string</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="record-interfaces">
+<h3>3.2 Record Interfaces<a class="headerlink" href="#record-interfaces" title="Permalink to this headline">¶</a></h3>
+<p>Read from record：</p>
+<ol class="simple">
+<li><p>Create a RecordReader;</p></li>
+<li><p>Read messages from Record;</p></li>
+</ol>
+<p>Write to record：</p>
+<ol class="simple">
+<li><p>Create a RecordWriter</p></li>
+<li><p>Write messages to record；</p></li>
+</ol>
+<p>The interfaces are shown below:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">RecordReader</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Class for cyber RecordReader wrapper.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">read_messages</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start_time</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">end_time</span><span class="o">=</span><span class="mi">18446744073709551615</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        read message from bag file.</span>
+<span class="sd">        @param self</span>
+<span class="sd">        @param start_time:</span>
+<span class="sd">        @param end_time:</span>
+<span class="sd">        @return: generator of (message, data_type, timestamp)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+	<span class="k">def</span> <span class="nf">get_messagenumber</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">channel_name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        return message count.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+	<span class="k">def</span> <span class="nf">get_messagetype</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">channel_name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        return message type.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+	<span class="k">def</span> <span class="nf">get_protodesc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">channel_name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        return message protodesc.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+	<span class="k">def</span> <span class="nf">get_headerstring</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        return message header string.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+	<span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        return reset.</span>
+<span class="sd">        &quot;&quot;</span>
+<span class="sd">        return _CYBER_RECORD.PyRecordReader_Reset(self.record_reader)</span>
+
+<span class="sd">    def get_channellist(self):</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">channel</span> <span class="nb">list</span><span class="o">.</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        return _CYBER_RECORD.PyRecordReader_GetChannelList(self.record_reader)</span>
+
+
+<span class="sd">class RecordWriter(object):</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">Class</span> <span class="k">for</span> <span class="n">cyber</span> <span class="n">RecordWriter</span> <span class="n">wrapper</span><span class="o">.</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	def open(self, path):</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">open</span> <span class="n">record</span> <span class="n">file</span> <span class="k">for</span> <span class="n">write</span><span class="o">.</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	def write_channel(self, channel_name, type_name, proto_desc):</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">writer</span> <span class="n">channel</span> <span class="n">by</span> <span class="n">channelname</span><span class="p">,</span><span class="n">typename</span><span class="p">,</span><span class="n">protodesc</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	def write_message(self, channel_name, data, time, raw = True):</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">writer</span> <span class="n">msg</span><span class="p">:</span><span class="n">channelname</span><span class="p">,</span><span class="n">data</span><span class="p">,</span><span class="n">time</span><span class="p">,</span><span class="ow">is</span> <span class="n">data</span> <span class="n">raw</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">	def set_size_fileseg(self, size_kilobytes):</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">filesegment</span> <span class="n">size</span><span class="o">.</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    def set_intervaltime_fileseg(self, time_sec):</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">file</span> <span class="n">interval</span> <span class="n">time</span><span class="o">.</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    def get_messagenumber(self, channel_name):</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">message</span> <span class="n">count</span><span class="o">.</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    def get_messagetype(self, channel_name):</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">message</span> <span class="nb">type</span><span class="o">.</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    def get_protodesc(self, channel_name):</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">message</span> <span class="n">protodesc</span><span class="o">.</span>
+        <span class="s2">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="time-interfaces">
+<h3>3.3 Time Interfaces<a class="headerlink" href="#time-interfaces" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Time</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+	<span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">now</span><span class="p">():</span>
+        <span class="n">time_now</span> <span class="o">=</span> <span class="n">Time</span><span class="p">(</span><span class="n">_CYBER_TIME</span><span class="o">.</span><span class="n">PyTime_now</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">time_now</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">mono_time</span><span class="p">():</span>
+        <span class="n">mono_time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">(</span><span class="n">_CYBER_TIME</span><span class="o">.</span><span class="n">PyTime_mono_time</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">mono_time</span>
+
+    <span class="k">def</span> <span class="nf">to_sec</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">_CYBER_TIME</span><span class="o">.</span><span class="n">PyTime_to_sec</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">time</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">to_nsec</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">_CYBER_TIME</span><span class="o">.</span><span class="n">PyTime_to_nsec</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">time</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">sleep_until</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nanoseconds</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">_CYBER_TIME</span><span class="o">.</span><span class="n">PyTime_sleep_until</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">time</span><span class="p">,</span> <span class="n">nanoseconds</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="timer-interfaces">
+<h3>3.4 Timer Interfaces<a class="headerlink" href="#timer-interfaces" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Timer</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">set_option</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">period</span><span class="p">,</span> <span class="n">callback</span><span class="p">,</span> <span class="n">oneshot</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        set the option of timer.</span>
+<span class="sd">        @param period The period of the timer, unit is ms.</span>
+<span class="sd">        @param callback The tasks that the timer needs to perform.</span>
+<span class="sd">        @param oneshot 1:perform the callback only after the first timing cycle</span>
+<span class="sd">        0:perform the callback every timed period</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>4. Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="read-from-channel-in-cyber-python-examples-listener-py">
+<h3>4.1 Read from Channel (in cyber/python/examples/listener.py)<a class="headerlink" href="#read-from-channel-in-cyber-python-examples-listener-py" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;../&quot;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">cyber_py</span> <span class="kn">import</span> <span class="n">cyber</span>
+<span class="kn">from</span> <span class="nn">modules.common.util.testdata.simple_pb2</span> <span class="kn">import</span> <span class="n">SimpleMessage</span>
+
+<span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    reader message callback.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">print</span> <span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">80</span>
+    <span class="nb">print</span> <span class="s2">&quot;py:reader callback msg-&gt;:&quot;</span>
+    <span class="nb">print</span> <span class="n">data</span>
+    <span class="nb">print</span> <span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">80</span>
+
+<span class="k">def</span> <span class="nf">test_listener_class</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    reader message.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">print</span> <span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">120</span>
+    <span class="n">test_node</span> <span class="o">=</span> <span class="n">cyber</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span><span class="s2">&quot;listener&quot;</span><span class="p">)</span>
+    <span class="n">test_node</span><span class="o">.</span><span class="n">create_reader</span><span class="p">(</span><span class="s2">&quot;channel/chatter&quot;</span><span class="p">,</span>
+            <span class="n">SimpleMessage</span><span class="p">,</span> <span class="n">callback</span><span class="p">)</span>
+    <span class="n">test_node</span><span class="o">.</span><span class="n">spin</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+
+    <span class="n">cyber</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+    <span class="n">test_listener_class</span><span class="p">()</span>
+    <span class="n">cyber</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="write-to-channel-in-cyber-python-examples-talker-py">
+<h3>4.2 Write to Channel(in cyber/python/examples/talker.py)<a class="headerlink" href="#write-to-channel-in-cyber-python-examples-talker-py" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">modules.common.util.testdata.simple_pb2</span> <span class="kn">import</span> <span class="n">SimpleMessage</span>
+<span class="kn">from</span> <span class="nn">cyber_py</span> <span class="kn">import</span> <span class="n">cyber</span>
+<span class="sd">&quot;&quot;&quot;Module for example of talker.&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;../&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">test_talker_class</span><span class="p">():</span>
+   <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">   test talker.</span>
+<span class="sd">   &quot;&quot;&quot;</span>
+   <span class="n">msg</span> <span class="o">=</span> <span class="n">SimpleMessage</span><span class="p">()</span>
+   <span class="n">msg</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;talker:send Alex!&quot;</span>
+   <span class="n">msg</span><span class="o">.</span><span class="n">integer</span> <span class="o">=</span> <span class="mi">0</span>
+   <span class="n">test_node</span> <span class="o">=</span> <span class="n">cyber</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span><span class="s2">&quot;node_name1&quot;</span><span class="p">)</span>
+   <span class="n">g_count</span> <span class="o">=</span> <span class="mi">1</span>
+   <span class="n">writer</span> <span class="o">=</span> <span class="n">test_node</span><span class="o">.</span><span class="n">create_writer</span><span class="p">(</span><span class="s2">&quot;channel/chatter&quot;</span><span class="p">,</span>
+                                    <span class="n">SimpleMessage</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+   <span class="k">while</span> <span class="ow">not</span> <span class="n">cyber</span><span class="o">.</span><span class="n">is_shutdown</span><span class="p">():</span>
+       <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+       <span class="n">g_count</span> <span class="o">=</span> <span class="n">g_count</span> <span class="o">+</span> <span class="mi">1</span>
+       <span class="n">msg</span><span class="o">.</span><span class="n">integer</span> <span class="o">=</span> <span class="n">g_count</span>
+       <span class="nb">print</span> <span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">80</span>
+       <span class="nb">print</span> <span class="s2">&quot;write msg -&gt; </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">msg</span>
+       <span class="n">writer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+   <span class="n">cyber</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+   <span class="n">test_talker_class</span><span class="p">()</span>
+   <span class="n">cyber</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="read-and-write-messages-from-to-record-file-in-cyber-python-examples-record-py">
+<h3>4.3 Read and Write Messages from/to Record File(in cyber/python/examples/record.py)<a class="headerlink" href="#read-and-write-messages-from-to-record-file-in-cyber-python-examples-record-py" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Module for example of record.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;../&quot;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">cyber_py</span> <span class="kn">import</span> <span class="n">cyber</span>
+<span class="kn">from</span> <span class="nn">cyber_py</span> <span class="kn">import</span> <span class="n">record</span>
+<span class="kn">from</span> <span class="nn">google.protobuf.descriptor_pb2</span> <span class="kn">import</span> <span class="n">FileDescriptorProto</span>
+<span class="kn">from</span> <span class="nn">modules.common.util.testdata.simple_pb2</span> <span class="kn">import</span> <span class="n">SimpleMessage</span>
+
+<span class="n">TEST_RECORD_FILE</span> <span class="o">=</span> <span class="s2">&quot;test02.record&quot;</span>
+<span class="n">CHAN_1</span> <span class="o">=</span> <span class="s2">&quot;channel/chatter&quot;</span>
+<span class="n">CHAN_2</span> <span class="o">=</span> <span class="s2">&quot;/test2&quot;</span>
+<span class="n">MSG_TYPE</span> <span class="o">=</span> <span class="s2">&quot;apollo.common.util.test.SimpleMessage&quot;</span>
+<span class="n">STR_10B</span> <span class="o">=</span> <span class="s2">&quot;1234567890&quot;</span>
+<span class="n">TEST_FILE</span> <span class="o">=</span> <span class="s2">&quot;test.record&quot;</span>
+
+<span class="k">def</span> <span class="nf">test_record_writer</span><span class="p">(</span><span class="n">writer_path</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    record writer.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">fwriter</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">RecordWriter</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">fwriter</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">writer_path</span><span class="p">):</span>
+        <span class="nb">print</span> <span class="s2">&quot;writer open failed!&quot;</span>
+        <span class="k">return</span>
+    <span class="nb">print</span> <span class="s2">&quot;+++ begin to writer...&quot;</span>
+    <span class="n">fwriter</span><span class="o">.</span><span class="n">write_channel</span><span class="p">(</span><span class="n">CHAN_1</span><span class="p">,</span> <span class="n">MSG_TYPE</span><span class="p">,</span> <span class="n">STR_10B</span><span class="p">)</span>
+    <span class="n">fwriter</span><span class="o">.</span><span class="n">write_message</span><span class="p">(</span><span class="n">CHAN_1</span><span class="p">,</span> <span class="n">STR_10B</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+
+    <span class="n">msg</span> <span class="o">=</span> <span class="n">SimpleMessage</span><span class="p">()</span>
+    <span class="n">msg</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;AAAAAA&quot;</span>
+
+    <span class="n">file_desc</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">DESCRIPTOR</span><span class="o">.</span><span class="n">file</span>
+    <span class="n">proto</span> <span class="o">=</span> <span class="n">FileDescriptorProto</span><span class="p">()</span>
+    <span class="n">file_desc</span><span class="o">.</span><span class="n">CopyToProto</span><span class="p">(</span><span class="n">proto</span><span class="p">)</span>
+    <span class="n">proto</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">file_desc</span><span class="o">.</span><span class="n">name</span>
+    <span class="n">desc_str</span> <span class="o">=</span> <span class="n">proto</span><span class="o">.</span><span class="n">SerializeToString</span><span class="p">()</span>
+
+    <span class="n">fwriter</span><span class="o">.</span><span class="n">write_channel</span><span class="p">(</span><span class="s1">&#39;chatter_a&#39;</span><span class="p">,</span> <span class="n">msg</span><span class="o">.</span><span class="n">DESCRIPTOR</span><span class="o">.</span><span class="n">full_name</span><span class="p">,</span> <span class="n">desc_str</span><span class="p">)</span>
+    <span class="n">fwriter</span><span class="o">.</span><span class="n">write_message</span><span class="p">(</span><span class="s1">&#39;chatter_a&#39;</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="mi">998</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="n">fwriter</span><span class="o">.</span><span class="n">write_message</span><span class="p">(</span><span class="s2">&quot;chatter_a&quot;</span><span class="p">,</span> <span class="n">msg</span><span class="o">.</span><span class="n">SerializeToString</span><span class="p">(),</span> <span class="mi">999</span><span class="p">)</span>
+
+    <span class="n">fwriter</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">test_record_reader</span><span class="p">(</span><span class="n">reader_path</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    record reader.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">freader</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">RecordReader</span><span class="p">(</span><span class="n">reader_path</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="s2">&quot;+&quot;</span><span class="o">*</span><span class="mi">80</span>
+    <span class="nb">print</span> <span class="s2">&quot;+++begin to read...&quot;</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">channelname</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">datatype</span><span class="p">,</span> <span class="n">timestamp</span> <span class="ow">in</span> <span class="n">freader</span><span class="o">.</span><span class="n">read_messages</span><span class="p">():</span>
+        <span class="nb">print</span> <span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">80</span>
+        <span class="nb">print</span> <span class="s2">&quot;read [</span><span class="si">%d</span><span class="s2">] msg&quot;</span> <span class="o">%</span> <span class="n">count</span>
+        <span class="nb">print</span> <span class="s2">&quot;chnanel_name -&gt; </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">channelname</span>
+        <span class="nb">print</span> <span class="s2">&quot;msg -&gt; </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">msg</span>
+        <span class="nb">print</span> <span class="s2">&quot;msgtime -&gt; </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">timestamp</span>
+        <span class="nb">print</span> <span class="s2">&quot;msgnum -&gt; </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">freader</span><span class="o">.</span><span class="n">get_messagenumber</span><span class="p">(</span><span class="n">channelname</span><span class="p">)</span>
+        <span class="nb">print</span> <span class="s2">&quot;msgtype -&gt; </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">datatype</span>
+        <span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">cyber</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+    <span class="n">test_record_writer</span><span class="p">(</span><span class="n">TEST_RECORD_FILE</span><span class="p">)</span>
+    <span class="n">test_record_reader</span><span class="p">(</span><span class="n">TEST_RECORD_FILE</span><span class="p">)</span>
+    <span class="n">cyber</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="CyberRT_Developer_Tools.html" class="btn btn-neutral float-right" title="Apollo Cyber RT Developer Tools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="CyberRT_API_for_Developers.html" class="btn btn-neutral float-left" title="Cyber RT API tutorial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Edith.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

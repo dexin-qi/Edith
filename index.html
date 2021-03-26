@@ -1,0 +1,373 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Introduction &mdash; Cyber RT Documents  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/main_stylesheet.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Getting started" href="CyberRT_Quick_Start.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> Cyber RT Documents
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">CyberRT QUICKSTART</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Quick_Start.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Terms.html">Cyber RT Terms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_FAQs.html">F.A.Q.</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CyberRT TUTORIALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_API_for_Developers.html">Cyber RT API tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Python_API.html">Python API tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Developer_Tools.html">Apollo Cyber RT Developer Tools</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CyberRT ADVANCED TOPICS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Docker.html">Develop inside Docker Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Migration_Guide.html">Migration guide from Apollo ROS</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CyberRT API REFERENCE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/cppapi_index.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/pythonapi_index.html">Python API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Cyber RT Documents</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Introduction</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>Apollo Cyber RT is an open source, high performance runtime framework designed specifically for autonomous driving
+scenarios. Based on a centralized computing model, it is greatly optimized for high concurrency, low latency,
+and high throughput in autonomous driving.</p>
+<p>During the last few years of the development of autonomous driving technologies, we have learned a lot from our
+previous experience with Apollo. The industry is evolving and so is Apollo. Going forward, Apollo has already
+moved from development to productization, with volume deployments in the real world, we see the demands for the
+highest level of robustness and performance. That’s why we spent years building and perfecting Apollo Cyber RT,
+which addresses that requirements of autonomous driving solutions.</p>
+<p>Key benefits of using Apollo Cyber RT:</p>
+<ul class="simple">
+<li><p>Accelerate development</p>
+<ul>
+<li><p>Well defined task interface with data fusion</p></li>
+<li><p>Array of development tools</p></li>
+<li><p>Large set of sensor drivers</p></li>
+</ul>
+</li>
+<li><p>Simplify deployment</p>
+<ul>
+<li><p>Efficient and adaptive message communication</p></li>
+<li><p>Configurable user level scheduler with resource awareness</p></li>
+<li><p>Portable with fewer dependencies</p></li>
+</ul>
+</li>
+<li><p>Empower your own autonomous vehicles</p>
+<ul>
+<li><p>The default open source runtime framework</p></li>
+<li><p>Building blocks specifically designed for autonomous driving</p></li>
+<li><p>Plug and play your own AD system</p></li>
+</ul>
+</li>
+</ul>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">CyberRT QUICKSTART</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Quick_Start.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Terms.html">Cyber RT Terms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_FAQs.html">F.A.Q.</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">CyberRT TUTORIALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_API_for_Developers.html">Cyber RT API tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_API_for_Developers.html#table-of-contents">Table of Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_API_for_Developers.html#talker-listener">Talker-Listener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_API_for_Developers.html#service-creation-and-use">Service Creation and Use</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_API_for_Developers.html#parameter-service">Parameter Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_API_for_Developers.html#log-api">Log API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_API_for_Developers.html#building-a-module-based-on-component">Building a module based on Component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_API_for_Developers.html#launch">Launch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_API_for_Developers.html#timer">Timer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_API_for_Developers.html#time-api">Time API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_API_for_Developers.html#record-file-read-and-write">Record file: Read and Write</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_API_for_Developers.html#api-directory">API Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_API_for_Developers.html#writer-api">Writer API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_API_for_Developers.html#client-api">Client API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_API_for_Developers.html#parameter-api">Parameter API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_API_for_Developers.html#timer-api">Timer API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_API_for_Developers.html#id12">Time API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_API_for_Developers.html#duration-api">Duration API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_API_for_Developers.html#rate-api">Rate API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_API_for_Developers.html#recordreader-api">RecordReader API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_API_for_Developers.html#recordwriter-api">RecordWriter API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Python_API.html">Python API tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_Python_API.html#background">1. Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_Python_API.html#cyber-rt-python-interfaces">2. Cyber RT Python Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_Python_API.html#overview-of-python-interfaces-in-cyber-rt">3. Overview of Python Interfaces in Cyber RT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_Python_API.html#examples">4. Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Developer_Tools.html">Apollo Cyber RT Developer Tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_Developer_Tools.html#cyber-visualizer">Cyber_visualizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_Developer_Tools.html#cyber-monitor">Cyber_monitor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_Developer_Tools.html#get-familiar-with-ui-of-cyber-monitor">Get familiar with UI of cyber_monitor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_Developer_Tools.html#cyber-recorder">Cyber_recorder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_Developer_Tools.html#rosbag-to-record">rosbag_to_record</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">CyberRT ADVANCED TOPICS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Docker.html">Develop inside Docker Environment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_Docker.html#build-and-test-with-cyber-rt-in-docker">Build and Test with Cyber RT in Docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_Docker.html#build-cyber-rt-docker-image">Build Cyber RT Docker Image</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Migration_Guide.html">Migration guide from Apollo ROS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_Migration_Guide.html#build-system">Build system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_Migration_Guide.html#folder-structure">Folder structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_Migration_Guide.html#update-source-code">Update source code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_Migration_Guide.html#tools-mapping">Tools mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CyberRT_Migration_Guide.html#ros-bag-data-migration">ROS bag data migration</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">CyberRT API REFERENCE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/cppapi_index.html">C++ API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/cppapi.html">cyber/node/node.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cppapi.html#cyber-node-reader-base-h">cyber/node/reader_base.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cppapi.html#cyber-node-reader-h">cyber/node/reader.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cppapi.html#cyber-node-writer-base-h">cyber/node/writer_base.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cppapi.html#cyber-node-writer-h">cyber/node/writer.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cppapi.html#cyber-node-node-channel-impl-h">cyber/node/node_channel_impl.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cppapi.html#cyber-node-node-service-impl-h">cyber/node/node_service_impl.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cppapi.html#cyber-parameter-parameter-h">cyber/parameter/parameter.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cppapi.html#cyber-parameter-parameter-server-h">cyber/parameter/parameter_server.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cppapi.html#cyber-parameter-parameter-client-h">cyber/parameter/parameter_client.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cppapi.html#cyber-service-service-base-h">cyber/service/service_base.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cppapi.html#cyber-service-service-h">cyber/service/service.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cppapi.html#cyber-service-client-base-h">cyber/service/client_base.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cppapi.html#cyber-service-client-h">cyber/service/client.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cppapi.html#cyber-service-discovery-specific-manager-manager-h">cyber/service_discovery/specific_manager/manager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cppapi.html#cyber-service-discovery-specific-manager-channel-manager-h">cyber/service_discovery/specific_manager/channel_manager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cppapi.html#cyber-service-discovery-specific-manager-node-manager-h">cyber/service_discovery/specific_manager/node_manager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cppapi.html#cyber-service-discovery-specific-manager-service-manager-h">cyber/service_discovery/specific_manager/service_manager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cppapi.html#cyber-service-discovery-topology-manager-h">cyber/service_discovery/topology_manager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cppapi.html#cyber-component-component-h">cyber/component/component.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cppapi.html#cyber-component-timer-component-h">cyber/component/timer_component.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cppapi.html#cyber-logger-async-logger-h">cyber/logger/async_logger.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cppapi.html#cyber-timer-timer-h">cyber/timer/timer.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cppapi.html#cyber-time-time-h">cyber/time/time.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cppapi.html#cyber-record-header-builder-h">cyber/record/header_builder.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cppapi.html#cyber-record-record-base-h">cyber/record/record_base.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cppapi.html#cyber-record-record-message-h">cyber/record/record_message.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cppapi.html#cyber-record-record-reader-h">cyber/record/record_reader.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cppapi.html#cyber-record-record-writer-h">cyber/record/record_writer.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/cppapi.html#cyber-record-record-viewer-h">cyber/record/record_viewer.h</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/pythonapi_index.html">Python API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/pythonapi.html">python/cyber_py/cyber.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/pythonapi.html#python-cyber-py-record-py">python/cyber_py/record.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/pythonapi.html#python-cyber-py-cyber-time-py">python/cyber_py/cyber_time.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/pythonapi.html#python-cyber-py-cyber-timer-py">python/cyber_py/cyber_timer.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/pythonapi.html#python-cyber-py-parameter-py">python/cyber_py/parameter.py</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="CyberRT_Quick_Start.html" class="btn btn-neutral float-right" title="Getting started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Edith.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

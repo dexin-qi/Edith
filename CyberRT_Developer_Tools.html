@@ -1,0 +1,606 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Apollo Cyber RT Developer Tools &mdash; Cyber RT Documents  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/main_stylesheet.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Develop inside Docker Environment" href="CyberRT_Docker.html" />
+    <link rel="prev" title="Python API tutorial" href="CyberRT_Python_API.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Cyber RT Documents
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">CyberRT QUICKSTART</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Quick_Start.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Terms.html">Cyber RT Terms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_FAQs.html">F.A.Q.</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CyberRT TUTORIALS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_API_for_Developers.html">Cyber RT API tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Python_API.html">Python API tutorial</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Apollo Cyber RT Developer Tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-visualizer">Cyber_visualizer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#install-and-run">Install and run</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interacting-with-cyber-visualizer">Interacting with cyber_visualizer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-monitor">Cyber_monitor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Install and run</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#useful-commands">Useful commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#display-help-information">Display help information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#specify-the-channel">Specify the channel</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#get-familiar-with-ui-of-cyber-monitor">Get familiar with UI of cyber_monitor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#interacting-with-cyber-monitor">Interacting with cyber_monitor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#common-commands">Common commands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#common-command-for-topology-and-channel">Common command for topology and channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#commands-only-for-topology">Commands only for topology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#commands-only-for-channel">Commands only for channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#view-the-repeated-data-field-in-a-channel">View the repeated data field in a channel</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-recorder">Cyber_recorder</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Install and run</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#commands-of-cyber-recorder">Commands of cyber_recorder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#examples-of-using-cyber-recorder">Examples of using cyber_recorder</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#check-the-details-of-a-record-file">Check the details of a record file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#record-a-record-file">Record a record file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#replay-a-record-file">Replay a record file</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#rosbag-to-record">rosbag_to_record</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Install and run</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">CyberRT ADVANCED TOPICS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Docker.html">Develop inside Docker Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Migration_Guide.html">Migration guide from Apollo ROS</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CyberRT API REFERENCE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/cppapi_index.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/pythonapi_index.html">Python API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Cyber RT Documents</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Apollo Cyber RT Developer Tools</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/CyberRT_Developer_Tools.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="apollo-cyber-rt-developer-tools">
+<h1>Apollo Cyber RT Developer Tools<a class="headerlink" href="#apollo-cyber-rt-developer-tools" title="Permalink to this headline">¶</a></h1>
+<p>Apollo Cyber RT framework comes with a collection of useful tools for daily development, including one visualization tool cyber_visualizer and two command line tools cyber_monitor and cyber_recorder.</p>
+<p><em>Note: apollo docker environment is required to use the tools, please follow apollo wiki to enter docker</em></p>
+<p>All the tools from Apollo Cyber RT rely on Apollo Cyber RT library, so you must source the setup.bash file for environment setup before using any Apollo Cyber RT tools, shown as below:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>username@computername:~$: <span class="nb">source</span> /your-path-to-apollo-install-dir/cyber/setup.bash
+</pre></div>
+</div>
+<div class="section" id="cyber-visualizer">
+<h2>Cyber_visualizer<a class="headerlink" href="#cyber-visualizer" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="install-and-run">
+<h3>Install and run<a class="headerlink" href="#install-and-run" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">cyber_visualizer</span></code> is a visualization tool for displaying the channel data in Apollo Cyber RT.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>username@computername:~$: <span class="nb">source</span> /your-path-to-apollo-install-dir/cyber/setup.bash
+username@computername:~$: cyber_visualizer
+</pre></div>
+</div>
+</div>
+<div class="section" id="interacting-with-cyber-visualizer">
+<h3>Interacting with cyber_visualizer<a class="headerlink" href="#interacting-with-cyber-visualizer" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p>After launching cyber_visualizer, you will see the following interface:</p>
+<p><img alt="interface" src="_images/cyber_visualizer1.png" /></p>
+</li>
+<li><p>When data flow through channels in Apollo Cyber RT, the list of all channels are displayed under <code class="docutils literal notranslate"><span class="pre">ChannelNames</span></code> as seen in the figure below. For example, you can use the record tool(cyber_recorder) of Apollo Cyber RT to replay data from another terminal, then <code class="docutils literal notranslate"><span class="pre">cyber_visualizer</span></code> will receive information of all active channels(from replay data) and display it.</p>
+<p><img alt="channel information" src="_images/cyber_visualizer2.png" /></p>
+</li>
+<li><p>By clicking on options in toolbar, you can enable reference grid, display point clouds, add images, or display multiple camera’s data at the same time. If you have <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">Grid</span></code> option enabled, you can set the color of the grid by double-clicking the <code class="docutils literal notranslate"><span class="pre">Color</span></code> item of the <code class="docutils literal notranslate"><span class="pre">Grid</span></code> list below <code class="docutils literal notranslate"><span class="pre">ChannelNames</span></code>. The default color is gray. You can also edit the value of <code class="docutils literal notranslate"><span class="pre">CellCount</span></code> to adjust the number of cells in the grid.
+As for a point cloud or an image, you can select the source channel through its <code class="docutils literal notranslate"><span class="pre">ChannelName</span></code> sub-item, and <code class="docutils literal notranslate"><span class="pre">Action</span></code> sub-item to play or stop the data from the corresponding channel.
+As shown in figure below, three cameras’ channel data on the button sections and one point cloud channel data on the top section are displayed simultaneously.</p>
+<p><img alt="visualization" src="_images/cyber_visualizer3.png" /></p>
+</li>
+<li><p>To adjust the virtual camera in the 3D point cloud scene, you can right click on the point cloud display section. A dialog box will pop up as shown in figure below.</p>
+<p><img alt="visualization" src="_images/cyber_visualizer4.png" /></p>
+<p>The point cloud scene supports two types of cameras: Free and Target.(select Type from pop up dialog above)</p>
+<ul class="simple">
+<li><p><strong>Free type Camera</strong>: For this type of camera in the point cloud scene, you can change the pose of the camera by holding down either left or right mouse button and move it. To change the pitch of camera, you can scroll the mouse wheel.</p></li>
+<li><p><strong>Target type Camera</strong>: For this type of camera in the point cloud scene, to change the camera’s viewing angle, you can hold down the left mouse button and then move it. To change the distance of the camera to the observed point (the default observation point is the coordinate system origin (0, 0,0)), you can scroll the mouse wheel.</p></li>
+</ul>
+<p>You can also modify the camera information directly in the dialog box to change the camera’s observation status in the point cloud scene. And the “Step” item is the step value from the dialog box.</p>
+<p>Place the mouse on the image of the camera channel, you can double-click the left button to highlight the corresponding data channel on the left menu bar. Right click on the image to bring up menu for deleting the camera channel.</p>
+<p>Play and Pause buttons: when clicking the <code class="docutils literal notranslate"><span class="pre">Play</span></code> button, all channels will be shown. While when clicking the <code class="docutils literal notranslate"><span class="pre">Pause</span></code> button, all channels will stop showing on the tool.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="cyber-monitor">
+<h2>Cyber_monitor<a class="headerlink" href="#cyber-monitor" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Install and run<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>The command line tool <code class="docutils literal notranslate"><span class="pre">cyber_monitor</span></code> provides a clear view of the list of real time channel information Apollo Cyber RT in the terminal.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>username@computername:~$: <span class="nb">source</span> /your-path-to-apollo-install-dir/cyber/setup.bash
+username@computername:~$: cyber_monitor
+</pre></div>
+</div>
+</div>
+<div class="section" id="useful-commands">
+<h3>Useful commands<a class="headerlink" href="#useful-commands" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="display-help-information">
+<h4>Display help information<a class="headerlink" href="#display-help-information" title="Permalink to this headline">¶</a></h4>
+<p>Use the -h option to get help for cyber_monitor</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>username@computername:~$: cyber_monitor -h
+</pre></div>
+</div>
+</div>
+<div class="section" id="specify-the-channel">
+<h4>Specify the channel<a class="headerlink" href="#specify-the-channel" title="Permalink to this headline">¶</a></h4>
+<p>With the -c option, you can have cyber_monitor to monitor only a specified channel, such as:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>username@computername:~$: cyber_monitor -c ChannelName
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="get-familiar-with-ui-of-cyber-monitor">
+<h2>Get familiar with UI of cyber_monitor<a class="headerlink" href="#get-familiar-with-ui-of-cyber-monitor" title="Permalink to this headline">¶</a></h2>
+<p>After launching the command line tool, you will notice it is similar to cyber_visualizer. It automatically collects the information of all the channels through the topology and displays them in two columns (channel name, channel data type).</p>
+<p>The default display for channel information is in red. However, if there is data flowing through the a channel, the corresponding line of the channel is displayed in green. As shown in the image below:</p>
+<p><img alt="monitor" src="_images/cyber_monitor.png" /></p>
+<div class="section" id="interacting-with-cyber-monitor">
+<h3>Interacting with cyber_monitor<a class="headerlink" href="#interacting-with-cyber-monitor" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="common-commands">
+<h4>Common commands<a class="headerlink" href="#common-commands" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ESC</span> <span class="o">|</span> <span class="n">q</span> <span class="n">key</span> <span class="o">----</span> <span class="n">Exit</span>
+<span class="n">Backspace</span> <span class="o">----</span> <span class="n">Back</span>
+<span class="n">h</span> <span class="o">|</span> <span class="n">H</span> <span class="o">----</span> <span class="n">Show</span> <span class="n">help</span> <span class="n">page</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="common-command-for-topology-and-channel">
+<h4>Common command for topology and channel<a class="headerlink" href="#common-command-for-topology-and-channel" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">PageDown</span> <span class="o">|</span> <span class="n">Ctrl</span><span class="o">+</span><span class="n">d</span> <span class="o">---</span> <span class="n">Next</span>
+<span class="n">PageUp</span> <span class="o">|</span> <span class="n">Ctrl</span><span class="o">+</span><span class="n">u</span> <span class="o">---</span> <span class="n">Previous</span>
+<span class="n">Up</span><span class="p">,</span> <span class="n">down</span> <span class="n">or</span> <span class="n">w</span><span class="p">,</span> <span class="n">s</span> <span class="n">keys</span> <span class="o">----</span> <span class="n">Move</span> <span class="n">the</span> <span class="n">current</span> <span class="n">highlight</span> <span class="n">line</span> <span class="n">up</span> <span class="n">and</span> <span class="n">down</span>
+<span class="n">Right</span> <span class="n">arrow</span> <span class="n">or</span> <span class="n">d</span> <span class="n">key</span> <span class="o">----</span> <span class="n">Enter</span> <span class="n">highlight</span> <span class="n">line</span><span class="p">,</span> <span class="n">display</span> <span class="n">highlighted</span> <span class="n">line</span> <span class="n">data</span> <span class="n">in</span> <span class="n">detail</span>
+<span class="n">Left</span> <span class="n">arrow</span> <span class="n">or</span> <span class="n">a</span> <span class="n">key</span> <span class="o">------</span> <span class="n">Return</span> <span class="n">to</span> <span class="n">the</span> <span class="n">previous</span> <span class="n">layer</span> <span class="n">from</span> <span class="n">the</span> <span class="n">current</span>
+<span class="n">Enter</span> <span class="n">key</span> <span class="o">-----</span> <span class="n">Same</span> <span class="n">as</span> <span class="n">d</span> <span class="n">key</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="commands-only-for-topology">
+<h4>Commands only for topology<a class="headerlink" href="#commands-only-for-topology" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">|</span> <span class="n">F</span> <span class="o">-----</span> <span class="n">Display</span> <span class="n">frame</span> <span class="n">rate</span>
+<span class="n">t</span> <span class="o">|</span> <span class="n">T</span> <span class="o">-----</span> <span class="n">Display</span> <span class="n">channel</span> <span class="n">message</span> <span class="n">type</span>
+<span class="n">Space</span> <span class="o">-----</span> <span class="n">Close</span><span class="o">|</span><span class="n">Open</span> <span class="n">channel</span> <span class="p">(</span><span class="n">only</span> <span class="n">valid</span> <span class="k">for</span> <span class="n">channels</span> <span class="n">with</span> <span class="n">data</span> <span class="n">arrival</span><span class="p">;</span> <span class="n">yellow</span> <span class="n">color</span> <span class="n">after</span> <span class="n">channel</span> <span class="n">is</span> <span class="n">closed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="commands-only-for-channel">
+<h4>Commands only for channel<a class="headerlink" href="#commands-only-for-channel" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">|</span> <span class="n">I</span> <span class="o">-----</span> <span class="n">Display</span> <span class="n">channel</span> <span class="n">Reader</span> <span class="n">and</span> <span class="n">Writer</span> <span class="n">information</span>
+<span class="n">b</span> <span class="o">|</span> <span class="n">B</span> <span class="o">------</span> <span class="n">Display</span> <span class="n">channel</span> <span class="n">message</span> <span class="n">content</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="view-the-repeated-data-field-in-a-channel">
+<h4>View the repeated data field in a channel<a class="headerlink" href="#view-the-repeated-data-field-in-a-channel" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">|</span> <span class="n">N</span> <span class="o">----</span> <span class="n">Repeat</span> <span class="n">the</span> <span class="n">next</span> <span class="n">data</span> <span class="n">in</span> <span class="n">the</span> <span class="n">domain</span>
+<span class="n">m</span> <span class="o">|</span> <span class="n">M</span> <span class="o">----</span> <span class="n">Repeat</span> <span class="n">one</span> <span class="n">data</span> <span class="n">on</span> <span class="n">the</span> <span class="n">domain</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="cyber-recorder">
+<h2>Cyber_recorder<a class="headerlink" href="#cyber-recorder" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">cyber_recorder</span></code> is a record/playback tool provided by Apollo Cyber RT. It provides many useful functions, including recording a record file, playing back a record file, splitting a record file, checking the information of record file and etc.</p>
+<div class="section" id="id2">
+<h3>Install and run<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Launch cyber_recorder:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">source</span> /your-path-to-apollo-install-dir/cyber/setup.bash
+$ cyber_recorder
+usage: cyber_recorder &lt;command&gt;&gt; <span class="o">[</span>&lt;args&gt;<span class="o">]</span>
+The cyber_recorder commands are:
+    info                               Show information of an exist record.
+    play                               Play an exist record.
+    record                             Record same topic.
+    split                              Split an exist record.
+    recover                            Recover an exist record.
+</pre></div>
+</div>
+</div>
+<div class="section" id="commands-of-cyber-recorder">
+<h3>Commands of cyber_recorder<a class="headerlink" href="#commands-of-cyber-recorder" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>To view the information of a record file:</p></li>
+</ul>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">$</span> <span class="n">cyber_recorder</span> <span class="n">info</span> <span class="o">-</span><span class="n">h</span>
+<span class="nl">usage</span><span class="p">:</span> <span class="n">cyber_recorder</span> <span class="n">info</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+	<span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>				<span class="n">show</span> <span class="n">help</span> <span class="n">message</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>To record a record file</p></li>
+</ul>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">$</span> <span class="n">cyber_recorder</span> <span class="n">record</span> <span class="o">-</span><span class="n">h</span>
+<span class="nl">usage</span><span class="p">:</span> <span class="n">cyber_recorder</span> <span class="n">record</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+    <span class="o">-</span><span class="n">o</span><span class="p">,</span> <span class="o">--</span><span class="n">output</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span>                <span class="n">output</span> <span class="n">record</span> <span class="n">file</span>
+    <span class="o">-</span><span class="n">a</span><span class="p">,</span> <span class="o">--</span><span class="n">all</span>                          <span class="n">all</span> <span class="n">channels</span>
+    <span class="o">-</span><span class="n">c</span><span class="p">,</span> <span class="o">--</span><span class="n">channel</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span>               <span class="n">channel</span> <span class="n">name</span>
+    <span class="o">-</span><span class="n">i</span><span class="p">,</span> <span class="o">--</span><span class="n">segment</span><span class="o">-</span><span class="n">interval</span> <span class="o">&lt;</span><span class="n">seconds</span><span class="o">&gt;</span>   <span class="n">record</span> <span class="n">segmented</span> <span class="n">every</span> <span class="n">n</span> <span class="n">second</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="o">-</span><span class="n">m</span><span class="p">,</span> <span class="o">--</span><span class="n">segment</span><span class="o">-</span><span class="n">size</span> <span class="o">&lt;</span><span class="n">MB</span><span class="o">&gt;</span>            <span class="n">record</span> <span class="n">segmented</span> <span class="n">every</span> <span class="n">n</span> <span class="n">megabyte</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>                         <span class="n">show</span> <span class="n">help</span> <span class="n">message</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>To play back a record file:</p></li>
+</ul>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">$</span> <span class="n">cyber_recorder</span> <span class="n">play</span> <span class="o">-</span><span class="n">h</span>
+<span class="nl">usage</span><span class="p">:</span> <span class="n">cyber_recorder</span> <span class="n">play</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+    <span class="o">-</span><span class="n">f</span><span class="p">,</span> <span class="o">--</span><span class="n">file</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span>			<span class="n">input</span> <span class="n">record</span> <span class="n">file</span>
+    <span class="o">-</span><span class="n">a</span><span class="p">,</span> <span class="o">--</span><span class="n">all</span>				<span class="n">play</span> <span class="n">all</span>
+    <span class="o">-</span><span class="n">c</span><span class="p">,</span> <span class="o">--</span><span class="n">white</span><span class="o">-</span><span class="n">channel</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span>		<span class="n">only</span> <span class="n">play</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">channel</span>
+    <span class="o">-</span><span class="n">k</span><span class="p">,</span> <span class="o">--</span><span class="n">black</span><span class="o">-</span><span class="n">channel</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span>		<span class="n">not</span> <span class="n">play</span> <span class="n">the</span> <span class="n">specified</span> <span class="n">channel</span>
+    <span class="o">-</span><span class="n">l</span><span class="p">,</span> <span class="o">--</span><span class="n">loop</span>				<span class="n">loop</span> <span class="n">play</span>
+    <span class="o">-</span><span class="n">r</span><span class="p">,</span> <span class="o">--</span><span class="n">rate</span> <span class="o">&lt;</span><span class="mf">1.0</span><span class="o">&gt;</span>			<span class="n">multiply</span> <span class="n">the</span> <span class="n">play</span> <span class="n">rate</span> <span class="n">by</span> <span class="n">FACTOR</span>
+    <span class="o">-</span><span class="n">b</span><span class="p">,</span> <span class="o">--</span><span class="n">begin</span> <span class="o">&lt;</span><span class="mi">2018</span><span class="mo">-07-01</span> <span class="mo">00</span><span class="o">:</span><span class="mo">00</span><span class="o">:</span><span class="mo">00</span><span class="o">&gt;</span>	<span class="n">play</span> <span class="n">the</span> <span class="n">record</span> <span class="n">begin</span> <span class="n">at</span>
+    <span class="o">-</span><span class="n">e</span><span class="p">,</span> <span class="o">--</span><span class="n">end</span> <span class="o">&lt;</span><span class="mi">2018</span><span class="mo">-07-01</span> <span class="mo">00</span><span class="o">:</span><span class="mo">01</span><span class="o">:</span><span class="mo">00</span><span class="o">&gt;</span>	<span class="n">play</span> <span class="n">the</span> <span class="n">record</span> <span class="n">end</span> <span class="n">at</span>
+    <span class="o">-</span><span class="n">s</span><span class="p">,</span> <span class="o">--</span><span class="n">start</span> <span class="o">&lt;</span><span class="n">seconds</span><span class="o">&gt;</span>		<span class="n">play</span> <span class="n">started</span> <span class="n">at</span> <span class="n">n</span> <span class="n">seconds</span>
+    <span class="o">-</span><span class="n">d</span><span class="p">,</span> <span class="o">--</span><span class="n">delay</span> <span class="o">&lt;</span><span class="n">seconds</span><span class="o">&gt;</span>		<span class="n">play</span> <span class="n">delayed</span> <span class="n">n</span> <span class="n">seconds</span>
+    <span class="o">-</span><span class="n">p</span><span class="p">,</span> <span class="o">--</span><span class="n">preload</span> <span class="o">&lt;</span><span class="n">seconds</span><span class="o">&gt;</span>		<span class="n">play</span> <span class="n">after</span> <span class="n">trying</span> <span class="n">to</span> <span class="n">preload</span> <span class="n">n</span> <span class="n">second</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>				<span class="n">show</span> <span class="n">help</span> <span class="n">message</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>To split a record file:</p></li>
+</ul>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">$</span> <span class="n">cyber_recorder</span> <span class="n">split</span> <span class="o">-</span><span class="n">h</span>
+<span class="nl">usage</span><span class="p">:</span> <span class="n">cyber_recorder</span> <span class="n">split</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+    <span class="o">-</span><span class="n">f</span><span class="p">,</span> <span class="o">--</span><span class="n">file</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span>                  <span class="n">input</span> <span class="n">record</span> <span class="n">file</span>
+    <span class="o">-</span><span class="n">o</span><span class="p">,</span> <span class="o">--</span><span class="n">output</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span>                <span class="n">output</span> <span class="n">record</span> <span class="n">file</span>
+    <span class="o">-</span><span class="n">a</span><span class="p">,</span> <span class="o">--</span><span class="n">all</span>                          <span class="n">all</span> <span class="n">channels</span>
+    <span class="o">-</span><span class="n">c</span><span class="p">,</span> <span class="o">--</span><span class="n">channel</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span>               <span class="n">channel</span> <span class="n">name</span>
+    <span class="o">-</span><span class="n">b</span><span class="p">,</span> <span class="o">--</span><span class="n">begin</span> <span class="o">&lt;</span><span class="mi">2018</span><span class="mo">-07-01</span> <span class="mo">00</span><span class="o">:</span><span class="mo">00</span><span class="o">:</span><span class="mo">00</span><span class="o">&gt;</span>  <span class="n">begin</span> <span class="n">at</span> <span class="n">assigned</span> <span class="n">time</span>
+    <span class="o">-</span><span class="n">e</span><span class="p">,</span> <span class="o">--</span><span class="n">end</span> <span class="o">&lt;</span><span class="mi">2018</span><span class="mo">-07-01</span> <span class="mo">01</span><span class="o">:</span><span class="mo">00</span><span class="o">:</span><span class="mo">00</span><span class="o">&gt;</span>    <span class="n">end</span> <span class="n">at</span> <span class="n">assigned</span> <span class="n">time</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>To repair a record file:</p></li>
+</ul>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">$</span> <span class="n">cyber_recorder</span> <span class="n">recover</span> <span class="o">-</span><span class="n">h</span>
+<span class="nl">usage</span><span class="p">:</span> <span class="n">cyber_recorder</span> <span class="n">recover</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+    <span class="o">-</span><span class="n">f</span><span class="p">,</span> <span class="o">--</span><span class="n">file</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span>                  <span class="n">input</span> <span class="n">record</span> <span class="n">file</span>
+    <span class="o">-</span><span class="n">o</span><span class="p">,</span> <span class="o">--</span><span class="n">output</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span>                <span class="n">output</span> <span class="n">record</span> <span class="n">file</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="examples-of-using-cyber-recorder">
+<h3>Examples of using cyber_recorder<a class="headerlink" href="#examples-of-using-cyber-recorder" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="check-the-details-of-a-record-file">
+<h4>Check the details of a record file<a class="headerlink" href="#check-the-details-of-a-record-file" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">$</span> <span class="n">cyber_recorder</span> <span class="n">info</span> <span class="n">demo</span><span class="p">.</span><span class="n">record</span>
+<span class="nl">record_file</span><span class="p">:</span>    <span class="n">demo</span><span class="p">.</span><span class="n">record</span>
+<span class="nl">version</span><span class="p">:</span>        <span class="mf">1.0</span>
+<span class="nl">duration</span><span class="p">:</span>       <span class="mf">19.995227</span> <span class="n">Seconds</span>
+<span class="nl">begin_time</span><span class="p">:</span>     <span class="mi">2018</span><span class="mo">-04</span><span class="mi">-17</span> <span class="mo">06</span><span class="o">:</span><span class="mi">25</span><span class="o">:</span><span class="mi">36</span>
+<span class="nl">end_time</span><span class="p">:</span>       <span class="mi">2018</span><span class="mo">-04</span><span class="mi">-17</span> <span class="mo">06</span><span class="o">:</span><span class="mi">25</span><span class="o">:</span><span class="mi">55</span>
+<span class="nl">size</span><span class="p">:</span>           <span class="mi">28275479</span> <span class="n">Bytes</span> <span class="p">(</span><span class="mf">26.965598</span> <span class="n">MB</span><span class="p">)</span>
+<span class="nl">is_complete</span><span class="p">:</span>    <span class="nb">true</span>
+<span class="nl">message_number</span><span class="p">:</span> <span class="mi">15379</span>
+<span class="nl">channel_number</span><span class="p">:</span> <span class="mi">16</span>
+<span class="nl">channel_info</span><span class="p">:</span>   <span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">localization</span><span class="o">/</span><span class="n">pose</span>                             <span class="mi">2000</span> <span class="nl">messages</span> <span class="p">:</span> <span class="n">apollo</span><span class="p">.</span><span class="n">localization</span><span class="p">.</span><span class="n">LocalizationEstimate</span>
+                <span class="o">/</span><span class="n">tf</span>                                                   <span class="mi">4000</span> <span class="nl">messages</span> <span class="p">:</span> <span class="n">apollo</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">TransformStampeds</span>
+                <span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">control</span>                                       <span class="mi">2000</span> <span class="nl">messages</span> <span class="p">:</span> <span class="n">apollo</span><span class="p">.</span><span class="n">control</span><span class="p">.</span><span class="n">ControlCommand</span>
+                <span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">sensor</span><span class="o">/</span><span class="n">gnss</span><span class="o">/</span><span class="n">odometry</span>                          <span class="mi">2000</span> <span class="nl">messages</span> <span class="p">:</span> <span class="n">apollo</span><span class="p">.</span><span class="n">localization</span><span class="p">.</span><span class="n">Gps</span>
+                <span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">canbus</span><span class="o">/</span><span class="n">chassis</span>                                <span class="mi">2000</span> <span class="nl">messages</span> <span class="p">:</span> <span class="n">apollo</span><span class="p">.</span><span class="n">canbus</span><span class="p">.</span><span class="n">Chassis</span>
+                <span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">sensor</span><span class="o">/</span><span class="n">gnss</span><span class="o">/</span><span class="n">imu</span>                               <span class="mi">1999</span> <span class="nl">messages</span> <span class="p">:</span> <span class="n">apollo</span><span class="p">.</span><span class="n">drivers</span><span class="p">.</span><span class="n">gnss</span><span class="p">.</span><span class="n">Imu</span>
+                <span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">sensor</span><span class="o">/</span><span class="n">gnss</span><span class="o">/</span><span class="n">rtk_obs</span>                             <span class="mi">41</span> <span class="nl">messages</span> <span class="p">:</span> <span class="n">apollo</span><span class="p">.</span><span class="n">drivers</span><span class="p">.</span><span class="n">gnss</span><span class="p">.</span><span class="n">EpochObservation</span>
+                <span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">sensor</span><span class="o">/</span><span class="n">gnss</span><span class="o">/</span><span class="n">ins_stat</span>                            <span class="mi">20</span> <span class="nl">messages</span> <span class="p">:</span> <span class="n">apollo</span><span class="p">.</span><span class="n">drivers</span><span class="p">.</span><span class="n">gnss</span><span class="p">.</span><span class="n">InsStat</span>
+                <span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">sensor</span><span class="o">/</span><span class="n">gnss</span><span class="o">/</span><span class="n">best_pose</span>                           <span class="mi">20</span> <span class="nl">messages</span> <span class="p">:</span> <span class="n">apollo</span><span class="p">.</span><span class="n">drivers</span><span class="p">.</span><span class="n">gnss</span><span class="p">.</span><span class="n">GnssBestPose</span>
+                <span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">perception</span><span class="o">/</span><span class="n">obstacles</span>                           <span class="mi">400</span> <span class="nl">messages</span> <span class="p">:</span> <span class="n">apollo</span><span class="p">.</span><span class="n">perception</span><span class="p">.</span><span class="n">PerceptionObstacles</span>
+                <span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">prediction</span>                                     <span class="mi">400</span> <span class="nl">messages</span> <span class="p">:</span> <span class="n">apollo</span><span class="p">.</span><span class="n">prediction</span><span class="p">.</span><span class="n">PredictionObstacles</span>
+                <span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">sensor</span><span class="o">/</span><span class="n">conti_radar</span>                             <span class="mi">270</span> <span class="nl">messages</span> <span class="p">:</span> <span class="n">apollo</span><span class="p">.</span><span class="n">drivers</span><span class="p">.</span><span class="n">ContiRadar</span>
+                <span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">planning</span>                                       <span class="mi">200</span> <span class="nl">messages</span> <span class="p">:</span> <span class="n">apollo</span><span class="p">.</span><span class="n">planning</span><span class="p">.</span><span class="n">ADCTrajectory</span>
+                <span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">monitor</span><span class="o">/</span><span class="n">static_info</span>                              <span class="mi">1</span> <span class="nl">messages</span> <span class="p">:</span> <span class="n">apollo</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">StaticInfo</span>
+                <span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">sensor</span><span class="o">/</span><span class="n">gnss</span><span class="o">/</span><span class="n">rtk_eph</span>                             <span class="mi">25</span> <span class="nl">messages</span> <span class="p">:</span> <span class="n">apollo</span><span class="p">.</span><span class="n">drivers</span><span class="p">.</span><span class="n">gnss</span><span class="p">.</span><span class="n">GnssEphemeris</span>
+                <span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">monitor</span>                                          <span class="mi">3</span> <span class="nl">messages</span> <span class="p">:</span> <span class="n">apollo</span><span class="p">.</span><span class="n">common</span><span class="p">.</span><span class="n">monitor</span><span class="p">.</span><span class="n">MonitorMessage</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="record-a-record-file">
+<h4>Record a record file<a class="headerlink" href="#record-a-record-file" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">$</span> <span class="n">cyber_recorder</span> <span class="n">record</span> <span class="o">-</span><span class="n">a</span>
+<span class="p">[</span><span class="n">RUNNING</span><span class="p">]</span>  <span class="nl">Record</span> <span class="p">:</span>     <span class="n">total</span> <span class="n">channel</span> <span class="nl">num</span> <span class="p">:</span> <span class="mi">1</span>  <span class="n">total</span> <span class="n">msg</span> <span class="nl">num</span> <span class="p">:</span> <span class="mi">5</span>
+<span class="p">...</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="replay-a-record-file">
+<h4>Replay a record file<a class="headerlink" href="#replay-a-record-file" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">$</span> <span class="n">cyber_recorder</span> <span class="n">play</span> <span class="o">-</span><span class="n">f</span> <span class="mf">20180720202307.</span><span class="n">record</span>
+<span class="nl">file</span><span class="p">:</span> <span class="mf">20180720202307.</span><span class="n">record</span><span class="p">,</span> <span class="nl">chunk_number</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nl">begin_time</span><span class="p">:</span> <span class="mi">1532089398663399667</span><span class="p">,</span> <span class="nl">end_time</span><span class="p">:</span> <span class="mi">1532089404688079759</span><span class="p">,</span> <span class="nl">message_number</span><span class="p">:</span> <span class="mi">75</span>
+<span class="n">please</span> <span class="n">wait</span> <span class="k">for</span> <span class="n">loading</span> <span class="n">and</span> <span class="n">playing</span> <span class="n">back</span> <span class="n">record</span><span class="p">...</span>
+<span class="n">Hit</span> <span class="n">Ctrl</span><span class="o">+</span><span class="n">C</span> <span class="n">to</span> <span class="n">stop</span> <span class="n">replay</span><span class="p">,</span> <span class="n">or</span> <span class="n">Space</span> <span class="n">to</span> <span class="n">pause</span><span class="p">.</span>
+<span class="p">[</span><span class="n">RUNNING</span><span class="p">]</span>  <span class="n">Record</span> <span class="nl">Time</span><span class="p">:</span> <span class="mf">1532089404.688080</span>    <span class="nl">Progress</span><span class="p">:</span> <span class="mf">6.024680</span> <span class="o">/</span> <span class="mf">6.024680</span>
+<span class="n">play</span> <span class="n">finished</span><span class="p">.</span> <span class="nl">file</span><span class="p">:</span> <span class="mf">20180720202307.</span><span class="n">record</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="rosbag-to-record">
+<h2>rosbag_to_record<a class="headerlink" href="#rosbag-to-record" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">rosbag_to_record</span></code> is a tool which can convert rosbag to recorder file provided by Apollo Cyber RT. Now the tool support following channel:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">perception</span><span class="o">/</span><span class="n">obstacles</span>
+<span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">planning</span>
+<span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">prediction</span>
+<span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">canbus</span><span class="o">/</span><span class="n">chassis</span>
+<span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">control</span>
+<span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">guardian</span>
+<span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">localization</span><span class="o">/</span><span class="n">pose</span>
+<span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">perception</span><span class="o">/</span><span class="n">traffic_light</span>
+<span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">drive_event</span>
+<span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">sensor</span><span class="o">/</span><span class="n">gnss</span><span class="o">/</span><span class="n">odometry</span>
+<span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">monitor</span><span class="o">/</span><span class="n">static_info</span>
+<span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">monitor</span>
+<span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">canbus</span><span class="o">/</span><span class="n">chassis_detail</span>
+<span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">control</span><span class="o">/</span><span class="n">pad</span>
+<span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">navigation</span>
+<span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">routing_request</span>
+<span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">routing_response</span>
+<span class="o">/</span><span class="n">tf</span>
+<span class="o">/</span><span class="n">tf_static</span>
+<span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">sensor</span><span class="o">/</span><span class="n">conti_radar</span>
+<span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">sensor</span><span class="o">/</span><span class="n">delphi_esr</span>
+<span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">sensor</span><span class="o">/</span><span class="n">gnss</span><span class="o">/</span><span class="n">best_pose</span>
+<span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">sensor</span><span class="o">/</span><span class="n">gnss</span><span class="o">/</span><span class="n">imu</span>
+<span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">sensor</span><span class="o">/</span><span class="n">gnss</span><span class="o">/</span><span class="n">ins_stat</span>
+<span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">sensor</span><span class="o">/</span><span class="n">gnss</span><span class="o">/</span><span class="n">rtk_eph</span>
+<span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">sensor</span><span class="o">/</span><span class="n">gnss</span><span class="o">/</span><span class="n">rtk_obs</span>
+<span class="o">/</span><span class="n">edith</span><span class="o">/</span><span class="n">sensor</span><span class="o">/</span><span class="n">velodyne64</span><span class="o">/</span><span class="n">compensator</span><span class="o">/</span><span class="n">PointCloud2</span>
+</pre></div>
+</div>
+<div class="section" id="id3">
+<h3>Install and run<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Launch rosbag_to_record:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">source</span> /your-path-to-apollo-install-dir/cyber/setup.bash
+$ rosbag_to_record
+Usage:
+  rosbag_to_record input.bag output.record
+</pre></div>
+</div>
+</div>
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<p>We can convert <a class="reference external" href="https://github.com/ApolloAuto/apollo/releases/download/v2.5.0/demo_2.5.bag">Apollo2.5 demo bag</a> to record file.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ rosbag_to_record demo_2.5.bag demo.record
+record_file:    demo.record
+version:        <span class="m">1</span>.0
+duration:       <span class="m">19</span>.995227 Seconds
+begin_time:     <span class="m">2018</span>-04-17 <span class="m">06</span>:25:36
+end_time:       <span class="m">2018</span>-04-17 <span class="m">06</span>:25:55
+size:           <span class="m">28275479</span> Bytes <span class="o">(</span><span class="m">26</span>.965598 MB<span class="o">)</span>
+is_complete:    <span class="nb">true</span>
+message_number: <span class="m">15379</span>
+channel_number: <span class="m">16</span>
+channel_info:   /edith/localization/pose                             <span class="m">2000</span> messages : apollo.localization.LocalizationEstimate
+                /tf                                                   <span class="m">4000</span> messages : apollo.transform.TransformStampeds
+                /edith/control                                       <span class="m">2000</span> messages : apollo.control.ControlCommand
+                /edith/sensor/gnss/odometry                          <span class="m">2000</span> messages : apollo.localization.Gps
+                /edith/canbus/chassis                                <span class="m">2000</span> messages : apollo.canbus.Chassis
+                /edith/sensor/gnss/imu                               <span class="m">1999</span> messages : apollo.drivers.gnss.Imu
+                /edith/sensor/gnss/rtk_obs                             <span class="m">41</span> messages : apollo.drivers.gnss.EpochObservation
+                /edith/sensor/gnss/ins_stat                            <span class="m">20</span> messages : apollo.drivers.gnss.InsStat
+                /edith/sensor/gnss/best_pose                           <span class="m">20</span> messages : apollo.drivers.gnss.GnssBestPose
+                /edith/perception/obstacles                           <span class="m">400</span> messages : apollo.perception.PerceptionObstacles
+                /edith/prediction                                     <span class="m">400</span> messages : apollo.prediction.PredictionObstacles
+                /edith/sensor/conti_radar                             <span class="m">270</span> messages : apollo.drivers.ContiRadar
+                /edith/planning                                       <span class="m">200</span> messages : apollo.planning.ADCTrajectory
+                /edith/monitor/static_info                              <span class="m">1</span> messages : apollo.data.StaticInfo
+                /edith/sensor/gnss/rtk_eph                             <span class="m">25</span> messages : apollo.drivers.gnss.GnssEphemeris
+                /edith/monitor                                          <span class="m">3</span> messages : apollo.common.monitor.MonitorMessage
+Conversion finished! Took <span class="m">0</span>.505623051 seconds <span class="k">in</span> total.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="CyberRT_Docker.html" class="btn btn-neutral float-right" title="Develop inside Docker Environment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="CyberRT_Python_API.html" class="btn btn-neutral float-left" title="Python API tutorial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Edith.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

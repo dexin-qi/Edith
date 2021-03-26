@@ -1,0 +1,1580 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Cyber RT API tutorial &mdash; Cyber RT Documents  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/main_stylesheet.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Python API tutorial" href="CyberRT_Python_API.html" />
+    <link rel="prev" title="F.A.Q." href="CyberRT_FAQs.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Cyber RT Documents
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">CyberRT QUICKSTART</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Quick_Start.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Terms.html">Cyber RT Terms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_FAQs.html">F.A.Q.</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CyberRT TUTORIALS</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Cyber RT API tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#table-of-contents">Table of Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#talker-listener">Talker-Listener</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-node">Create a node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-writer">Create a writer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-reader">Create a reader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-example">Code Example</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#talker-cyber-examples-talker-cc">Talker (cyber/examples/talker.cc)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#listener-cyber-examples-listener-cc">Listener (cyber/examples/listener.cc)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bazel-build-file-cyber-samples-build">Bazel BUILD file(cyber/samples/BUILD)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#build-and-run">Build and Run</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#service-creation-and-use">Service Creation and Use</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#demo-example">Demo - Example</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#define-request-and-response-messages">Define request and response messages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-a-service-and-a-client">Create a service and a client</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bazel-build-file">Bazel build file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Build and run</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#precautions">Precautions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#parameter-service">Parameter Service</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#parameter-object">Parameter Object</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#supported-data-types">Supported Data types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-the-parameter-object">Creating the Parameter Object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#interface-and-data-reading">Interface and Data Reading</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Parameter Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#parameter-client">Parameter Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Demo - example</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Build and run</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#log-api">Log API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#log-library">Log library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#log-configuration">Log configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#log-initialization">Log initialization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#log-output-macro">Log output macro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#log-format">Log format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#about-log-files">About log files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#building-a-module-based-on-component">Building a module based on Component</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#key-concepts">Key concepts</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#component">1. Component</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#binary-vs-component">2. Binary vs Component</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dag-file-format">3. Dag file format</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#demo-examples">Demo - examples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#common-component-example-cyber-examples-common-component-example">Common_component_example(cyber/examples/common_component_example/*)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#timer-component-example-cyber-examples-timer-component-example">Timer_component_example(cyber/examples/timer_component_example/*)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">Build and run</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Precautions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#launch">Launch</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#launch-file-format">Launch File Format</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#timer">Timer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#timer-interface">Timer Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#start-timer">Start Timer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stop-timer">Stop Timer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Demo - example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#time-api">Time API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#record-file-read-and-write">Record file: Read and Write</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#reading-the-reader-file">Reading the Reader file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#demo-example-cyber-examples-record-cc">Demo - example(cyber/examples/record.cc)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id8">Build and run</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#api-directory">API Directory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#node-api">Node API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api-list">API List</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#writer-api">Writer API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id9">API List</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#client-api">Client API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id10">API List</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#parameter-api">Parameter API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#api-list-setting-parameters">API List - Setting parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api-list-reading-parameters">API List - Reading parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api-list-creating-parameter-service">API List - Creating parameter service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api-list-creating-parameter-client">API List - Creating parameter client</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#timer-api">Timer API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id11">API List</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id12">Time API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id13">API List</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#duration-api">Duration API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id14">API List</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#rate-api">Rate API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id15">API List</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#recordreader-api">RecordReader API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id16">API List</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#recordwriter-api">RecordWriter API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id17">API List</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Python_API.html">Python API tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Developer_Tools.html">Apollo Cyber RT Developer Tools</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CyberRT ADVANCED TOPICS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Docker.html">Develop inside Docker Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Migration_Guide.html">Migration guide from Apollo ROS</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CyberRT API REFERENCE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/cppapi_index.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/pythonapi_index.html">Python API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Cyber RT Documents</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Cyber RT API tutorial</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/CyberRT_API_for_Developers.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cyber-rt-api-tutorial">
+<h1>Cyber RT API tutorial<a class="headerlink" href="#cyber-rt-api-tutorial" title="Permalink to this headline">¶</a></h1>
+<p>This document provides an extensive technical deep dive into how to create, manipulate and use Cyber RT’s API.</p>
+<div class="section" id="table-of-contents">
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="#Talker-Listener">Talker-Listener</a></p></li>
+<li><p><a class="reference external" href="#Service-Creation-and-Use">Service Creation and Use</a></p></li>
+<li><p><a class="reference external" href="#Param-parameter-service">Param parameter service</a></p></li>
+<li><p><a class="reference external" href="#LOG-API">Log API</a></p></li>
+<li><p><a class="reference external" href="#Building-a-module-based-on-Component">Building a module based on Component</a></p></li>
+<li><p><a class="reference external" href="#Launch">Launch</a></p></li>
+<li><p><a class="reference external" href="#timer">Timer</a></p></li>
+<li><p><a class="reference external" href="#use-of-time">Time API</a></p></li>
+<li><p><a class="reference external" href="#Record-file-Read-and-Write">Record file: Read and Write</a></p></li>
+<li><p><a class="reference external" href="##API-Directory">C++ API Directory</a></p>
+<ul>
+<li><p><a class="reference external" href="#node-api">Node</a></p></li>
+<li><p><a class="reference external" href="#writer-api">Writer</a></p></li>
+<li><p><a class="reference external" href="#client-api">Client</a></p></li>
+<li><p><a class="reference external" href="#parameter-api">Parameter</a></p></li>
+<li><p><a class="reference external" href="#timer-api">Timer</a></p></li>
+<li><p><a class="reference external" href="#timer-api">Time</a></p></li>
+<li><p><a class="reference external" href="#duration-api">Duration</a></p></li>
+<li><p><a class="reference external" href="#rate-api">Rate</a></p></li>
+<li><p><a class="reference external" href="#recordreader-api">RecordReader</a></p></li>
+<li><p><a class="reference external" href="#recordwriter-api">RecordWriter</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="talker-listener">
+<h2>Talker-Listener<a class="headerlink" href="#talker-listener" title="Permalink to this headline">¶</a></h2>
+<p>The first part of demonstrating CyberRT API is to understand the Talker/Listener example. Following are three essential concepts: node (basic unit), reader(facility to read message) and writer(facility to write message) of the example.</p>
+<div class="section" id="create-a-node">
+<h3>Create a node<a class="headerlink" href="#create-a-node" title="Permalink to this headline">¶</a></h3>
+<p>In the CyberRT framework, the node is the most fundamental unit, similar to the role of a <code class="docutils literal notranslate"><span class="pre">handle</span></code>. When creating a specific functional object (writer, reader, etc.), you need to create it based on an existing node instance.
+The node creation interface is as follows:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span> <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">CreateNode</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">node_name</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name_space</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<ul>
+<li><p>Parameters:</p>
+<ul class="simple">
+<li><p>node_name: name of the node, globally unique identifier</p></li>
+<li><p>name_space: name of the space where the node is located</p></li>
+</ul>
+<blockquote>
+<div><p>name_space is empty by default. It is the name of the space concatenated with node_name. The format is <code class="docutils literal notranslate"><span class="pre">/namespace/node_name</span></code></p>
+</div></blockquote>
+</li>
+<li><p>Return value - An exclusive smart pointer to Node</p></li>
+<li><p>Error Conditions - when <code class="docutils literal notranslate"><span class="pre">cyber::Init()</span></code> has not called, the system is in an uninitialized state, unable to create a node, return nullptr</p></li>
+</ul>
+</div>
+<div class="section" id="create-a-writer">
+<h3>Create a writer<a class="headerlink" href="#create-a-writer" title="Permalink to this headline">¶</a></h3>
+<p>The writer is the basic facility used in CyberRT to send messages. Every writer corresponds to a channel with a specific data type.
+The writer is created by the <code class="docutils literal notranslate"><span class="pre">CreateWriter</span></code> interface in the node class. The interfaces are listed as below:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">MessageT</span><span class="o">&gt;</span>
+   <span class="k">auto</span> <span class="n">CreateWriter</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">channel_name</span><span class="p">)</span>
+       <span class="o">-&gt;</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Writer</span><span class="o">&lt;</span><span class="n">MessageT</span><span class="o">&gt;&gt;</span><span class="p">;</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">MessageT</span><span class="o">&gt;</span>
+   <span class="k">auto</span> <span class="n">CreateWriter</span><span class="p">(</span><span class="k">const</span> <span class="n">proto</span><span class="o">::</span><span class="n">RoleAttributes</span><span class="o">&amp;</span> <span class="n">role_attr</span><span class="p">)</span>
+       <span class="o">-&gt;</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Writer</span><span class="o">&lt;</span><span class="n">MessageT</span><span class="o">&gt;&gt;</span><span class="p">;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Parameters:</p>
+<ul>
+<li><p>channel_name: the name of the channel to write to</p></li>
+<li><p>MessageT: The type of message to be written out</p></li>
+</ul>
+</li>
+<li><p>Return value - Shared pointer to the Writer object</p></li>
+</ul>
+</div>
+<div class="section" id="create-a-reader">
+<h3>Create a reader<a class="headerlink" href="#create-a-reader" title="Permalink to this headline">¶</a></h3>
+<p>The reader is the basic facility used in cyber to receive messages. Reader has to be bound to a callback function when it is created. When a new message arrives in the channel, the callback will be called.
+The reader is created by the <code class="docutils literal notranslate"><span class="pre">CreateReader</span></code> interface of the node class. The interfaces are listed as below:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">MessageT</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">CreateReader</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">channel_name</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">MessageT</span><span class="o">&gt;&amp;</span><span class="p">)</span><span class="o">&gt;&amp;</span> <span class="n">reader_func</span><span class="p">)</span>
+    <span class="o">-&gt;</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Reader</span><span class="o">&lt;</span><span class="n">MessageT</span><span class="o">&gt;&gt;</span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">MessageT</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">CreateReader</span><span class="p">(</span><span class="k">const</span> <span class="n">ReaderConfig</span><span class="o">&amp;</span> <span class="n">config</span><span class="p">,</span>
+                  <span class="k">const</span> <span class="n">CallbackFunc</span><span class="o">&lt;</span><span class="n">MessageT</span><span class="o">&gt;&amp;</span> <span class="n">reader_func</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">)</span>
+    <span class="o">-&gt;</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">cyber</span><span class="o">::</span><span class="n">Reader</span><span class="o">&lt;</span><span class="n">MessageT</span><span class="o">&gt;&gt;</span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">MessageT</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">CreateReader</span><span class="p">(</span><span class="k">const</span> <span class="n">proto</span><span class="o">::</span><span class="n">RoleAttributes</span><span class="o">&amp;</span> <span class="n">role_attr</span><span class="p">,</span>
+                  <span class="k">const</span> <span class="n">CallbackFunc</span><span class="o">&lt;</span><span class="n">MessageT</span><span class="o">&gt;&amp;</span> <span class="n">reader_func</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">)</span>
+<span class="o">-&gt;</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">cyber</span><span class="o">::</span><span class="n">Reader</span><span class="o">&lt;</span><span class="n">MessageT</span><span class="o">&gt;&gt;</span><span class="p">;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Parameters:</p>
+<ul>
+<li><p>MessageT: The type of message to read</p></li>
+<li><p>channel_name: the name of the channel to receive from</p></li>
+<li><p>reader_func: callback function to process the messages</p></li>
+</ul>
+</li>
+<li><p>Return value - Shared pointer to the Reader object</p></li>
+</ul>
+</div>
+<div class="section" id="code-example">
+<h3>Code Example<a class="headerlink" href="#code-example" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="talker-cyber-examples-talker-cc">
+<h4>Talker (cyber/examples/talker.cc)<a class="headerlink" href="#talker-cyber-examples-talker-cc" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;cyber/cyber.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/proto/chatter.pb.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/time/rate.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/time/time.h&quot;</span><span class="cp"></span>
+<span class="k">using</span> <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">Rate</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">Time</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">proto</span><span class="o">::</span><span class="n">Chatter</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span> <span class="p">{</span>
+  <span class="c1">// init cyber framework</span>
+  <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">Init</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+  <span class="c1">// create talker node</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">Node</span><span class="o">&gt;</span> <span class="n">talker_node</span><span class="p">(</span>
+      <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">CreateNode</span><span class="p">(</span><span class="s">&quot;talker&quot;</span><span class="p">));</span>
+  <span class="c1">// create talker</span>
+  <span class="k">auto</span> <span class="n">talker</span> <span class="o">=</span> <span class="n">talker_node</span><span class="o">-&gt;</span><span class="n">CreateWriter</span><span class="o">&lt;</span><span class="n">Chatter</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;channel/chatter&quot;</span><span class="p">);</span>
+  <span class="n">Rate</span> <span class="n">rate</span><span class="p">(</span><span class="mf">1.0</span><span class="p">);</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">OK</span><span class="p">())</span> <span class="p">{</span>
+    <span class="k">static</span> <span class="kt">uint64_t</span> <span class="n">seq</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">auto</span> <span class="n">msg</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">proto</span><span class="o">::</span><span class="n">Chatter</span><span class="o">&gt;</span><span class="p">();</span>
+    <span class="n">msg</span><span class="o">-&gt;</span><span class="n">set_timestamp</span><span class="p">(</span><span class="n">Time</span><span class="o">::</span><span class="n">Now</span><span class="p">().</span><span class="n">ToNanosecond</span><span class="p">());</span>
+    <span class="n">msg</span><span class="o">-&gt;</span><span class="n">set_lidar_timestamp</span><span class="p">(</span><span class="n">Time</span><span class="o">::</span><span class="n">Now</span><span class="p">().</span><span class="n">ToNanosecond</span><span class="p">());</span>
+    <span class="n">msg</span><span class="o">-&gt;</span><span class="n">set_seq</span><span class="p">(</span><span class="n">seq</span><span class="o">++</span><span class="p">);</span>
+    <span class="n">msg</span><span class="o">-&gt;</span><span class="n">set_content</span><span class="p">(</span><span class="s">&quot;Hello, apollo!&quot;</span><span class="p">);</span>
+    <span class="n">talker</span><span class="o">-&gt;</span><span class="n">Write</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
+    <span class="n">AINFO</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;talker sent a message!&quot;</span><span class="p">;</span>
+    <span class="n">rate</span><span class="p">.</span><span class="n">Sleep</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="listener-cyber-examples-listener-cc">
+<h4>Listener (cyber/examples/listener.cc)<a class="headerlink" href="#listener-cyber-examples-listener-cc" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;cyber/cyber.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/proto/chatter.pb.h&quot;</span><span class="cp"></span>
+<span class="kt">void</span> <span class="nf">MessageCallback</span><span class="p">(</span>
+    <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">proto</span><span class="o">::</span><span class="n">Chatter</span><span class="o">&gt;&amp;</span> <span class="n">msg</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">AINFO</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Received message seq-&gt; &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">msg</span><span class="o">-&gt;</span><span class="n">seq</span><span class="p">();</span>
+  <span class="n">AINFO</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;msgcontent-&gt;&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">msg</span><span class="o">-&gt;</span><span class="n">content</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span> <span class="p">{</span>
+  <span class="c1">// init cyber framework</span>
+  <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">Init</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+  <span class="c1">// create listener node</span>
+  <span class="k">auto</span> <span class="n">listener_node</span> <span class="o">=</span> <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">CreateNode</span><span class="p">(</span><span class="s">&quot;listener&quot;</span><span class="p">);</span>
+  <span class="c1">// create listener</span>
+  <span class="k">auto</span> <span class="n">listener</span> <span class="o">=</span>
+      <span class="n">listener_node</span><span class="o">-&gt;</span><span class="n">CreateReader</span><span class="o">&lt;</span><span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">proto</span><span class="o">::</span><span class="n">Chatter</span><span class="o">&gt;</span><span class="p">(</span>
+          <span class="s">&quot;channel/chatter&quot;</span><span class="p">,</span> <span class="n">MessageCallback</span><span class="p">);</span>
+  <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">WaitForShutdown</span><span class="p">();</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="bazel-build-file-cyber-samples-build">
+<h4>Bazel BUILD file(cyber/samples/BUILD)<a class="headerlink" href="#bazel-build-file-cyber-samples-build" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cc_binary</span><span class="p">(</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;talker&quot;</span><span class="p">,</span>
+    <span class="n">srcs</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">&quot;talker.cc&quot;</span><span class="p">,</span> <span class="p">],</span>
+    <span class="n">deps</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;//cyber&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;//cyber/examples/proto:examples_cc_proto&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+<span class="p">)</span>
+
+<span class="n">cc_binary</span><span class="p">(</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;listener&quot;</span><span class="p">,</span>
+    <span class="n">srcs</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">&quot;listener.cc&quot;</span><span class="p">,</span> <span class="p">],</span>
+    <span class="n">deps</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;//cyber&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;//cyber/examples/proto:examples_cc_proto&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="build-and-run">
+<h4>Build and Run<a class="headerlink" href="#build-and-run" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Build: bazel build cyber/examples/…</p></li>
+<li><p>Run talker/listener in different terminals:</p>
+<ul>
+<li><p>./bazel-bin/cyber/examples/talker</p></li>
+<li><p>./bazel-bin/cyber/examples/listener</p></li>
+</ul>
+</li>
+<li><p>Examine the results: you should see message printing out on listener.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="service-creation-and-use">
+<h2>Service Creation and Use<a class="headerlink" href="#service-creation-and-use" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="introduction">
+<h3>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h3>
+<p>In an autonomous driving system, there are many scenarios that require more from module communication than just sending or receiving messages. Service is another way of communication between nodes. Unlike channel, service implements <code class="docutils literal notranslate"><span class="pre">two-way</span></code> communication, e.g. a node obtains a response by sending a request. This section introduces the <code class="docutils literal notranslate"><span class="pre">service</span></code> module in CyberRT API with examples.</p>
+</div>
+<div class="section" id="demo-example">
+<h3>Demo - Example<a class="headerlink" href="#demo-example" title="Permalink to this headline">¶</a></h3>
+<p>Problem: create a client-server model that pass Driver.proto back and forth.
+When a request is sent in by the client, the server parses/processes the request and returns the response.</p>
+<p>The implementation of the demo mainly includes the following steps.</p>
+<div class="section" id="define-request-and-response-messages">
+<h4>Define request and response messages<a class="headerlink" href="#define-request-and-response-messages" title="Permalink to this headline">¶</a></h4>
+<p>All messages in cyber are in the <code class="docutils literal notranslate"><span class="pre">protobuf</span></code> format. Any protobuf message with serialize/deserialize interfaces can be used as the service request and response message. <code class="docutils literal notranslate"><span class="pre">Driver</span></code> in examples.proto is used as service request and response in this example:</p>
+<div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span><span class="c1">// filename: examples.proto</span>
+<span class="k">syntax</span> <span class="o">=</span> <span class="s">&quot;proto2&quot;</span><span class="p">;</span>
+<span class="kn">package</span> <span class="nn">apollo</span><span class="o">.</span><span class="n">cyber.examples.proto</span><span class="p">;</span>
+<span class="kd">message</span> <span class="nc">Driver</span> <span class="p">{</span>
+    <span class="k">optional</span> <span class="kt">string</span> <span class="na">content</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">optional</span> <span class="kt">uint64</span> <span class="na">msg_id</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="k">optional</span> <span class="kt">uint64</span> <span class="na">timestamp</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-a-service-and-a-client">
+<h4>Create a service and a client<a class="headerlink" href="#create-a-service-and-a-client" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// filename: cyber/examples/service.cc</span>
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/cyber.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/examples/proto/examples.pb.h&quot;</span><span class="cp"></span>
+
+<span class="k">using</span> <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">examples</span><span class="o">::</span><span class="n">proto</span><span class="o">::</span><span class="n">Driver</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span> <span class="p">{</span>
+  <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">Init</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">Node</span><span class="o">&gt;</span> <span class="n">node</span><span class="p">(</span>
+      <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">CreateNode</span><span class="p">(</span><span class="s">&quot;start_node&quot;</span><span class="p">));</span>
+  <span class="k">auto</span> <span class="n">server</span> <span class="o">=</span> <span class="n">node</span><span class="o">-&gt;</span><span class="n">CreateService</span><span class="o">&lt;</span><span class="n">Driver</span><span class="p">,</span> <span class="n">Driver</span><span class="o">&gt;</span><span class="p">(</span>
+      <span class="s">&quot;test_server&quot;</span><span class="p">,</span> <span class="p">[](</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Driver</span><span class="o">&gt;&amp;</span> <span class="n">request</span><span class="p">,</span>
+                        <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Driver</span><span class="o">&gt;&amp;</span> <span class="n">response</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">AINFO</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;server: I am driver server&quot;</span><span class="p">;</span>
+        <span class="k">static</span> <span class="kt">uint64_t</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="o">++</span><span class="n">id</span><span class="p">;</span>
+        <span class="n">response</span><span class="o">-&gt;</span><span class="n">set_msg_id</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+        <span class="n">response</span><span class="o">-&gt;</span><span class="n">set_timestamp</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+      <span class="p">});</span>
+  <span class="k">auto</span> <span class="n">client</span> <span class="o">=</span> <span class="n">node</span><span class="o">-&gt;</span><span class="n">CreateClient</span><span class="o">&lt;</span><span class="n">Driver</span><span class="p">,</span> <span class="n">Driver</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;test_server&quot;</span><span class="p">);</span>
+  <span class="k">auto</span> <span class="n">driver_msg</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">Driver</span><span class="o">&gt;</span><span class="p">();</span>
+  <span class="n">driver_msg</span><span class="o">-&gt;</span><span class="n">set_msg_id</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="n">driver_msg</span><span class="o">-&gt;</span><span class="n">set_timestamp</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">OK</span><span class="p">())</span> <span class="p">{</span>
+    <span class="k">auto</span> <span class="n">res</span> <span class="o">=</span> <span class="n">client</span><span class="o">-&gt;</span><span class="n">SendRequest</span><span class="p">(</span><span class="n">driver_msg</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">res</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">AINFO</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;client: response: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">res</span><span class="o">-&gt;</span><span class="n">ShortDebugString</span><span class="p">();</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="n">AINFO</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;client: service may not ready.&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">WaitForShutdown</span><span class="p">();</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="bazel-build-file">
+<h4>Bazel build file<a class="headerlink" href="#bazel-build-file" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cc_binary</span><span class="p">(</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;service&quot;</span><span class="p">,</span>
+    <span class="n">srcs</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">&quot;service.cc&quot;</span><span class="p">,</span> <span class="p">],</span>
+    <span class="n">deps</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;//cyber&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;//cyber/examples/proto:examples_cc_proto&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h4>Build and run<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Build service/client: bazel build cyber/examples/…</p></li>
+<li><p>Run: ./bazel-bin/cyber/examples/service</p></li>
+<li><p>Examining result: you should see content below in apollo/data/log/service.INFO</p></li>
+</ul>
+<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>I1124 16:36:44.568845 14965 service.cc:30] [service] server: i am driver server
+I1124 16:36:44.569031 14949 service.cc:43] [service] client: response: msg_id: 1 timestamp: 0
+I1124 16:36:45.569514 14966 service.cc:30] [service] server: i am driver server
+I1124 16:36:45.569932 14949 service.cc:43] [service] client: response: msg_id: 2 timestamp: 0
+I1124 16:36:46.570627 14967 service.cc:30] [service] server: i am driver server
+I1124 16:36:46.571024 14949 service.cc:43] [service] client: response: msg_id: 3 timestamp: 0
+I1124 16:36:47.571566 14968 service.cc:30] [service] server: i am driver server
+I1124 16:36:47.571962 14949 service.cc:43] [service] client: response: msg_id: 4 timestamp: 0
+I1124 16:36:48.572634 14969 service.cc:30] [service] server: i am driver server
+I1124 16:36:48.573030 14949 service.cc:43] [service] client: response: msg_id: 5 timestamp: 0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="precautions">
+<h3>Precautions<a class="headerlink" href="#precautions" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>When registering a service, note that duplicate service names are not allowed</p></li>
+<li><p>The node name applied when registering the server and client should not be duplicated either</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="parameter-service">
+<h2>Parameter Service<a class="headerlink" href="#parameter-service" title="Permalink to this headline">¶</a></h2>
+<p>The Parameter Service is used for shared data between nodes, and provides basic operations such as <code class="docutils literal notranslate"><span class="pre">set</span></code>, <code class="docutils literal notranslate"><span class="pre">get</span></code>, and <code class="docutils literal notranslate"><span class="pre">list</span></code>. The Parameter Service is based on the <code class="docutils literal notranslate"><span class="pre">Service</span></code> implementation and contains service and client.</p>
+<div class="section" id="parameter-object">
+<h3>Parameter Object<a class="headerlink" href="#parameter-object" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="supported-data-types">
+<h4>Supported Data types<a class="headerlink" href="#supported-data-types" title="Permalink to this headline">¶</a></h4>
+<p>All parameters passed through cyber are <code class="docutils literal notranslate"><span class="pre">apollo::cyber::Parameter</span></code> objects, the table below lists the 5 supported parameter types.</p>
+<p>Parameter type | C++ data type | protobuf data type
+:————- | :————- | :————–
+apollo::cyber::proto::ParamType::INT    |   int64_t |   int64
+apollo::cyber::proto::ParamType::DOUBLE | double | double
+apollo::cyber::proto::ParamType::BOOL   | bool |bool
+apollo::cyber::proto::ParamType::STRING  | std::string | string
+apollo::cyber::proto::ParamType::PROTOBUF  | std::string | string
+apollo::cyber::proto::ParamType::NOT_SET | - | -</p>
+<p>Besides the 5 types above, Parameter also supports interface with protobuf object as incoming parameter. Post performing serialization processes the object and converts it to the STRING type for transfer.</p>
+</div>
+<div class="section" id="creating-the-parameter-object">
+<h4>Creating the Parameter Object<a class="headerlink" href="#creating-the-parameter-object" title="Permalink to this headline">¶</a></h4>
+<p>Supported constructors:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Parameter</span><span class="p">();</span>  <span class="c1">// Name is empty, type is NOT_SET</span>
+<span class="k">explicit</span> <span class="nf">Parameter</span><span class="p">(</span><span class="k">const</span> <span class="n">Parameter</span><span class="o">&amp;</span> <span class="n">parameter</span><span class="p">);</span>
+<span class="k">explicit</span> <span class="nf">Parameter</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">);</span>  <span class="c1">// type为NOT_SET</span>
+<span class="n">Parameter</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="kt">bool</span> <span class="n">bool_value</span><span class="p">);</span>
+<span class="n">Parameter</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">int_value</span><span class="p">);</span>
+<span class="n">Parameter</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="kt">int64_t</span> <span class="n">int_value</span><span class="p">);</span>
+<span class="n">Parameter</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">double_value</span><span class="p">);</span>
+<span class="n">Parameter</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="kt">double</span> <span class="n">double_value</span><span class="p">);</span>
+<span class="n">Parameter</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">string_value</span><span class="p">);</span>
+<span class="n">Parameter</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">string_value</span><span class="p">);</span>
+<span class="n">Parameter</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">msg_str</span><span class="p">,</span>
+          <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">full_name</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">proto_desc</span><span class="p">);</span>
+<span class="n">Parameter</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">Message</span><span class="o">&amp;</span> <span class="n">msg</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Sample code of using Parameter object:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Parameter</span> <span class="nf">a</span><span class="p">(</span><span class="s">&quot;int&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+<span class="n">Parameter</span> <span class="nf">b</span><span class="p">(</span><span class="s">&quot;bool&quot;</span><span class="p">,</span> <span class="nb">true</span><span class="p">);</span>
+<span class="n">Parameter</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;double&quot;</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">);</span>
+<span class="n">Parameter</span> <span class="nf">d</span><span class="p">(</span><span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="s">&quot;cyber&quot;</span><span class="p">);</span>
+<span class="n">Parameter</span> <span class="nf">e</span><span class="p">(</span><span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="s">&quot;cyber&quot;</span><span class="p">));</span>
+<span class="c1">// proto message Chatter</span>
+<span class="n">Chatter</span> <span class="n">chatter</span><span class="p">;</span>
+<span class="n">Parameter</span> <span class="nf">f</span><span class="p">(</span><span class="s">&quot;chatter&quot;</span><span class="p">,</span> <span class="n">chatter</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">msg_str</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="n">chatter</span><span class="p">.</span><span class="n">SerializeToString</span><span class="p">(</span><span class="o">&amp;</span><span class="n">msg_str</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">msg_desc</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="n">ProtobufFactory</span><span class="o">::</span><span class="n">GetDescriptorString</span><span class="p">(</span><span class="n">chatter</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">msg_desc</span><span class="p">);</span>
+<span class="n">Parameter</span> <span class="nf">g</span><span class="p">(</span><span class="s">&quot;chatter&quot;</span><span class="p">,</span> <span class="n">msg_str</span><span class="p">,</span> <span class="n">Chatter</span><span class="o">::</span><span class="n">descriptor</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">full_name</span><span class="p">(),</span> <span class="n">msg_desc</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="interface-and-data-reading">
+<h4>Interface and Data Reading<a class="headerlink" href="#interface-and-data-reading" title="Permalink to this headline">¶</a></h4>
+<p>Interface list:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kr">inline</span> <span class="n">ParamType</span> <span class="n">type</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="kr">inline</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">TypeName</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="kr">inline</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">Descriptor</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="kr">inline</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">Name</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="kr">inline</span> <span class="kt">bool</span> <span class="n">AsBool</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="kr">inline</span> <span class="kt">int64_t</span> <span class="n">AsInt64</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="kr">inline</span> <span class="kt">double</span> <span class="n">AsDouble</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="kr">inline</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">AsString</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">DebugString</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">Type</span><span class="o">&gt;</span>
+<span class="k">typename</span> <span class="nc">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">is_base_of</span><span class="o">&lt;</span><span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">Message</span><span class="p">,</span> <span class="n">Type</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span> <span class="n">Type</span><span class="o">&gt;::</span><span class="n">type</span>
+<span class="n">value</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">Type</span><span class="o">&gt;</span>
+<span class="k">typename</span> <span class="nc">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">is_integral</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;::</span><span class="n">value</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">Type</span><span class="p">,</span> <span class="kt">bool</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span> <span class="n">Type</span><span class="o">&gt;::</span><span class="n">type</span>
+<span class="n">value</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">Type</span><span class="o">&gt;</span>
+<span class="k">typename</span> <span class="nc">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">is_floating_point</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span> <span class="n">Type</span><span class="o">&gt;::</span><span class="n">type</span>
+<span class="n">value</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">Type</span><span class="o">&gt;</span>
+<span class="k">typename</span> <span class="nc">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">is_convertible</span><span class="o">&lt;</span><span class="n">Type</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;&gt;::</span><span class="n">type</span>
+<span class="n">value</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">Type</span><span class="o">&gt;</span>
+<span class="k">typename</span> <span class="nc">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">Type</span><span class="p">,</span> <span class="kt">bool</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span> <span class="kt">bool</span><span class="o">&gt;::</span><span class="n">type</span>
+<span class="n">value</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>An example of how to use those interfaces:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Parameter</span> <span class="nf">a</span><span class="p">(</span><span class="s">&quot;int&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+<span class="n">a</span><span class="p">.</span><span class="n">Name</span><span class="p">();</span>  <span class="c1">// return int</span>
+<span class="n">a</span><span class="p">.</span><span class="n">Type</span><span class="p">();</span>  <span class="c1">// return apollo::cyber::proto::ParamType::INT</span>
+<span class="n">a</span><span class="p">.</span><span class="n">TypeName</span><span class="p">();</span>  <span class="c1">// return string: INT</span>
+<span class="n">a</span><span class="p">.</span><span class="n">DebugString</span><span class="p">();</span>  <span class="c1">// return string: {name: &quot;int&quot;, type: &quot;INT&quot;, value: 10}</span>
+<span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">a</span><span class="p">.</span><span class="n">AsInt64</span><span class="p">();</span>  <span class="c1">// x = 10</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">a</span><span class="p">.</span><span class="n">value</span><span class="o">&lt;</span><span class="kt">int64_t</span><span class="o">&gt;</span><span class="p">();</span>  <span class="c1">// x = 10</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">a</span><span class="p">.</span><span class="n">AsString</span><span class="p">();</span>  <span class="c1">// Undefined behavior, error log prompt</span>
+<span class="n">f</span><span class="p">.</span><span class="n">TypeName</span><span class="p">();</span>  <span class="c1">// return string: chatter</span>
+<span class="k">auto</span> <span class="n">chatter</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="n">value</span><span class="o">&lt;</span><span class="n">Chatter</span><span class="o">&gt;</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>Parameter Service<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>If a node wants to provide a Parameter Service to other nodes, then you need to create a <code class="docutils literal notranslate"><span class="pre">ParameterService</span></code>.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * @brief Construct a new ParameterService object</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param node shared_ptr of the node handler</span>
+<span class="cm"> */</span>
+<span class="k">explicit</span> <span class="nf">ParameterService</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;&amp;</span> <span class="n">node</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Since all parameters are stored in the parameter service object, the parameters can be manipulated directly in the ParameterService without sending a service request.</p>
+<p><strong>Setting parameters:</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * @brief Set the Parameter object</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param parameter parameter to be set</span>
+<span class="cm"> */</span>
+<span class="kt">void</span> <span class="nf">SetParameter</span><span class="p">(</span><span class="k">const</span> <span class="n">Parameter</span><span class="o">&amp;</span> <span class="n">parameter</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Getting parameters:</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * @brief Get the Parameter object</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param param_name</span>
+<span class="cm"> * @param parameter the pointer to store</span>
+<span class="cm"> * @return true</span>
+<span class="cm"> * @return false call service fail or timeout</span>
+<span class="cm"> */</span>
+<span class="kt">bool</span> <span class="nf">GetParameter</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">param_name</span><span class="p">,</span> <span class="n">Parameter</span><span class="o">*</span> <span class="n">parameter</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Getting the list of parameters:</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * @brief Get all the Parameter objects</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param parameters pointer of vector to store all the parameters</span>
+<span class="cm"> * @return true</span>
+<span class="cm"> * @return false call service fail or timeout</span>
+<span class="cm"> */</span>
+<span class="kt">bool</span> <span class="nf">ListParameters</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Parameter</span><span class="o">&gt;*</span> <span class="n">parameters</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="parameter-client">
+<h3>Parameter Client<a class="headerlink" href="#parameter-client" title="Permalink to this headline">¶</a></h3>
+<p>If a node wants to use parameter services of other nodes, you need to create a <code class="docutils literal notranslate"><span class="pre">ParameterClient</span></code>.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * @brief Construct a new ParameterClient object</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param node shared_ptr of the node handler</span>
+<span class="cm"> * @param service_node_name node name which provide a param services</span>
+<span class="cm"> */</span>
+<span class="n">ParameterClient</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;&amp;</span> <span class="n">node</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">service_node_name</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>You could also perform <code class="docutils literal notranslate"><span class="pre">SetParameter</span></code>, <code class="docutils literal notranslate"><span class="pre">GetParameter</span></code> and <code class="docutils literal notranslate"><span class="pre">ListParameters</span></code> mentioned under <a class="reference external" href="#Parameter-Service">Parameter Service</a>.</p>
+</div>
+<div class="section" id="id3">
+<h3>Demo - example<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;cyber/cyber.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/parameter/parameter_client.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/parameter/parameter_server.h&quot;</span><span class="cp"></span>
+
+<span class="k">using</span> <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">Parameter</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">ParameterServer</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">ParameterClient</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">Init</span><span class="p">(</span><span class="o">*</span><span class="n">argv</span><span class="p">);</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">Node</span><span class="o">&gt;</span> <span class="n">node</span> <span class="o">=</span>
+      <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">CreateNode</span><span class="p">(</span><span class="s">&quot;parameter&quot;</span><span class="p">);</span>
+  <span class="k">auto</span> <span class="n">param_server</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ParameterServer</span><span class="o">&gt;</span><span class="p">(</span><span class="n">node</span><span class="p">);</span>
+  <span class="k">auto</span> <span class="n">param_client</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ParameterClient</span><span class="o">&gt;</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s">&quot;parameter&quot;</span><span class="p">);</span>
+  <span class="n">param_server</span><span class="o">-&gt;</span><span class="n">SetParameter</span><span class="p">(</span><span class="n">Parameter</span><span class="p">(</span><span class="s">&quot;int&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span>
+  <span class="n">Parameter</span> <span class="n">parameter</span><span class="p">;</span>
+  <span class="n">param_server</span><span class="o">-&gt;</span><span class="n">GetParameter</span><span class="p">(</span><span class="s">&quot;int&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">parameter</span><span class="p">);</span>
+  <span class="n">AINFO</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;int: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">parameter</span><span class="p">.</span><span class="n">AsInt64</span><span class="p">();</span>
+  <span class="n">param_client</span><span class="o">-&gt;</span><span class="n">SetParameter</span><span class="p">(</span><span class="n">Parameter</span><span class="p">(</span><span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="s">&quot;test&quot;</span><span class="p">));</span>
+  <span class="n">param_client</span><span class="o">-&gt;</span><span class="n">GetParameter</span><span class="p">(</span><span class="s">&quot;string&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">parameter</span><span class="p">);</span>
+  <span class="n">AINFO</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;string: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">parameter</span><span class="p">.</span><span class="n">AsString</span><span class="p">();</span>
+  <span class="n">param_client</span><span class="o">-&gt;</span><span class="n">GetParameter</span><span class="p">(</span><span class="s">&quot;int&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">parameter</span><span class="p">);</span>
+  <span class="n">AINFO</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;int: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">parameter</span><span class="p">.</span><span class="n">AsInt64</span><span class="p">();</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="section" id="id4">
+<h4>Build and run<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Build: bazel build cyber/examples/…</p></li>
+<li><p>Run: ./bazel-bin/cyber/examples/paramserver</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="log-api">
+<h2>Log API<a class="headerlink" href="#log-api" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="log-library">
+<h3>Log library<a class="headerlink" href="#log-library" title="Permalink to this headline">¶</a></h3>
+<p>Cyber log library is built on top of glog. The following header files need to be included:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;cyber/common/log.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/init.h&quot;</span><span class="cp"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="log-configuration">
+<h3>Log configuration<a class="headerlink" href="#log-configuration" title="Permalink to this headline">¶</a></h3>
+<p>Default global config path: cyber/setup.bash</p>
+<p>The configs below could be modified by devloper:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">export</span> <span class="n">GLOG_log_dir</span><span class="o">=/</span><span class="n">edith</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">log</span>
+<span class="k">export</span> <span class="n">GLOG_alsologtostderr</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">export</span> <span class="n">GLOG_colorlogtostderr</span><span class="o">=</span><span class="mi">1</span>
+<span class="k">export</span> <span class="n">GLOG_minloglevel</span><span class="o">=</span><span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="log-initialization">
+<h3>Log initialization<a class="headerlink" href="#log-initialization" title="Permalink to this headline">¶</a></h3>
+<p>Call the Init method at the code entry to initialize the log:</p>
+<div class="highlight-cpp++ notranslate"><div class="highlight"><pre><span></span>apollo::cyber::cyber::Init(argv[0]) is initialized.
+If no macro definition is made in the previous component, the corresponding log is printed to the binary log.
+</pre></div>
+</div>
+</div>
+<div class="section" id="log-output-macro">
+<h3>Log output macro<a class="headerlink" href="#log-output-macro" title="Permalink to this headline">¶</a></h3>
+<p>Log library is encapsulated in Log printing macros. The related log macros are used as follows:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ADEBUG</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;hello cyber.&quot;</span><span class="p">;</span>
+<span class="n">AINFO</span>  <span class="o">&lt;&lt;</span> <span class="s">&quot;hello cyber.&quot;</span><span class="p">;</span>
+<span class="n">AWARN</span>  <span class="o">&lt;&lt;</span> <span class="s">&quot;hello cyber.&quot;</span><span class="p">;</span>
+<span class="n">AERROR</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;hello cyber.&quot;</span><span class="p">;</span>
+<span class="n">AFATAL</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;hello cyber.&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="log-format">
+<h3>Log format<a class="headerlink" href="#log-format" title="Permalink to this headline">¶</a></h3>
+<p>The format is <code class="docutils literal notranslate"><span class="pre">&lt;MODULE_NAME&gt;.log.&lt;LOG_LEVEL&gt;.&lt;datetime&gt;.&lt;process_id&gt;</span></code></p>
+</div>
+<div class="section" id="about-log-files">
+<h3>About log files<a class="headerlink" href="#about-log-files" title="Permalink to this headline">¶</a></h3>
+<p>Currently, the only different output behavior from default glog is that different log levels of a module will be written into the same log file.</p>
+</div>
+</div>
+<div class="section" id="building-a-module-based-on-component">
+<h2>Building a module based on Component<a class="headerlink" href="#building-a-module-based-on-component" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="key-concepts">
+<h3>Key concepts<a class="headerlink" href="#key-concepts" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="component">
+<h4>1. Component<a class="headerlink" href="#component" title="Permalink to this headline">¶</a></h4>
+<p>The component is the base class that Cyber RT provides to build application modules. Each specific application module can inherit the Component class and define its own <code class="docutils literal notranslate"><span class="pre">Init</span></code> and <code class="docutils literal notranslate"><span class="pre">Proc</span></code> functions so that it can be loaded into the Cyber framework.</p>
+</div>
+<div class="section" id="binary-vs-component">
+<h4>2. Binary vs Component<a class="headerlink" href="#binary-vs-component" title="Permalink to this headline">¶</a></h4>
+<p>There are two options to use Cyber RT framework for applications:</p>
+<ul class="simple">
+<li><p>Binary based: the application is compiled separately into a binary, which communicates with other cyber modules by creating its own <code class="docutils literal notranslate"><span class="pre">Reader</span></code> and <code class="docutils literal notranslate"><span class="pre">Writer</span></code>.</p></li>
+<li><p>Component based: the application is compiled into a Shared Library. By inheriting the Component class and writing the corresponding dag description file, the Cyber RT framework will load and run the application dynamically.</p></li>
+</ul>
+<div class="section" id="the-essential-component-interface">
+<h5>The essential Component interface<a class="headerlink" href="#the-essential-component-interface" title="Permalink to this headline">¶</a></h5>
+<ul class="simple">
+<li><p>The component’s <code class="docutils literal notranslate"><span class="pre">Init()</span></code> function is like the main function that does some initialization of the algorithm.</p></li>
+<li><p>Component’s <code class="docutils literal notranslate"><span class="pre">Proc()</span></code> function works like Reader’s callback function that is called by the framework when a message arrives.</p></li>
+</ul>
+</div>
+<div class="section" id="advantages-of-using-component">
+<h5>Advantages of using Component<a class="headerlink" href="#advantages-of-using-component" title="Permalink to this headline">¶</a></h5>
+<ul class="simple">
+<li><p>Component can be loaded into different processes through the launch file, and the deployment is flexible.</p></li>
+<li><p>Component can change the received channel name by modifying the dag file without recompiling.</p></li>
+<li><p>Component supports receiving multiple types of data.</p></li>
+<li><p>Component supports providing multiple fusion strategies.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="dag-file-format">
+<h4>3. Dag file format<a class="headerlink" href="#dag-file-format" title="Permalink to this headline">¶</a></h4>
+<p>An example dag file:</p>
+<div class="highlight-protobuf notranslate"><div class="highlight"><pre><span></span># Define all coms in DAG streaming.
+module_config {
+    module_library : &quot;lib/libperception_component.so&quot;
+    components {
+        class_name : &quot;PerceptionComponent&quot;
+        config {
+            name : &quot;perception&quot;
+            readers {
+                channel: &quot;perception/channel_name&quot;
+            }
+        }
+    }
+    timer_components {
+        class_name : &quot;DriverComponent&quot;
+        config {
+            name : &quot;driver&quot;
+            interval : 100
+        }
+    }
+}
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>module_library</strong>: If you want to load the .so library the root directory is the working directory of cyber (the same directory of <code class="docutils literal notranslate"><span class="pre">setup.bash</span></code>)</p></li>
+<li><p><strong>components &amp; timer_component</strong>: Select the base component class type that needs to be loaded.</p></li>
+<li><p><strong>class_name</strong>: the name of the component class to load</p></li>
+<li><p><strong>name</strong>: the loaded class_name as the identifier of the loading example</p></li>
+<li><p><strong>readers</strong>: Data received by the current component, supporting 1-3 channels of data.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="demo-examples">
+<h3>Demo - examples<a class="headerlink" href="#demo-examples" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="common-component-example-cyber-examples-common-component-example">
+<h4>Common_component_example(cyber/examples/common_component_example/*)<a class="headerlink" href="#common-component-example-cyber-examples-common-component-example" title="Permalink to this headline">¶</a></h4>
+<p>Header definition(common_component_example.h)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;memory&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/class_loader/class_loader.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/component/component.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/examples/proto/examples.pb.h&quot;</span><span class="cp"></span>
+
+<span class="k">using</span> <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">examples</span><span class="o">::</span><span class="n">proto</span><span class="o">::</span><span class="n">Driver</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">Component</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">ComponentBase</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Commontestcomponent</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Component</span><span class="o">&lt;</span><span class="n">Driver</span><span class="p">,</span> <span class="n">Driver</span><span class="o">&gt;</span> <span class="p">{</span>
+ <span class="k">public</span><span class="o">:</span>
+  <span class="kt">bool</span> <span class="n">Init</span><span class="p">()</span> <span class="k">override</span><span class="p">;</span>
+  <span class="kt">bool</span> <span class="nf">Proc</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Driver</span><span class="o">&gt;&amp;</span> <span class="n">msg0</span><span class="p">,</span>
+            <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Driver</span><span class="o">&gt;&amp;</span> <span class="n">msg1</span><span class="p">)</span> <span class="k">override</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="n">CYBER_REGISTER_COMPONENT</span><span class="p">(</span><span class="n">Commontestcomponent</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Cpp file implementation(common_component_example.cc)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;cyber/examples/common_component_smaple/common_component_example.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/class_loader/class_loader.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/component/component.h&quot;</span><span class="cp"></span>
+
+<span class="kt">bool</span> <span class="n">Commontestcomponent</span><span class="o">::</span><span class="n">Init</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">AINFO</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Commontest component init&quot;</span><span class="p">;</span>
+  <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">bool</span> <span class="n">Commontestcomponent</span><span class="o">::</span><span class="n">Proc</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Driver</span><span class="o">&gt;&amp;</span> <span class="n">msg0</span><span class="p">,</span>
+                               <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Driver</span><span class="o">&gt;&amp;</span> <span class="n">msg1</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">AINFO</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Start commontest component Proc [&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">msg0</span><span class="o">-&gt;</span><span class="n">msg_id</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;] [&quot;</span>
+        <span class="o">&lt;&lt;</span> <span class="n">msg1</span><span class="o">-&gt;</span><span class="n">msg_id</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;]&quot;</span><span class="p">;</span>
+  <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="timer-component-example-cyber-examples-timer-component-example">
+<h4>Timer_component_example(cyber/examples/timer_component_example/*)<a class="headerlink" href="#timer-component-example-cyber-examples-timer-component-example" title="Permalink to this headline">¶</a></h4>
+<p>Header definition(timer_component_example.h)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;memory&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/class_loader/class_loader.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/component/component.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/component/timer_component.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/examples/proto/examples.pb.h&quot;</span><span class="cp"></span>
+
+<span class="k">using</span> <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">examples</span><span class="o">::</span><span class="n">proto</span><span class="o">::</span><span class="n">Driver</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">Component</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">ComponentBase</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">TimerComponent</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">Writer</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">TimertestComponent</span> <span class="o">:</span> <span class="k">public</span> <span class="n">TimerComponent</span> <span class="p">{</span>
+ <span class="k">public</span><span class="o">:</span>
+  <span class="kt">bool</span> <span class="n">Init</span><span class="p">()</span> <span class="k">override</span><span class="p">;</span>
+  <span class="kt">bool</span> <span class="nf">Proc</span><span class="p">()</span> <span class="k">override</span><span class="p">;</span>
+
+ <span class="k">private</span><span class="o">:</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Writer</span><span class="o">&lt;</span><span class="n">Driver</span><span class="o">&gt;&gt;</span> <span class="n">driver_writer_</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="n">CYBER_REGISTER_COMPONENT</span><span class="p">(</span><span class="n">TimertestComponent</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Cpp file implementation(timer_component_example.cc)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;cyber/examples/timer_component_example/timer_component_example.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/class_loader/class_loader.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/component/component.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/examples/proto/examples.pb.h&quot;</span><span class="cp"></span>
+
+<span class="kt">bool</span> <span class="n">TimertestComponent</span><span class="o">::</span><span class="n">Init</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">driver_writer_</span> <span class="o">=</span> <span class="n">node_</span><span class="o">-&gt;</span><span class="n">CreateWriter</span><span class="o">&lt;</span><span class="n">Driver</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;/carstatus/channel&quot;</span><span class="p">);</span>
+  <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">bool</span> <span class="n">TimertestComponent</span><span class="o">::</span><span class="n">Proc</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">static</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">auto</span> <span class="n">out_msg</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">Driver</span><span class="o">&gt;</span><span class="p">();</span>
+  <span class="n">out_msg</span><span class="o">-&gt;</span><span class="n">set_msg_id</span><span class="p">(</span><span class="n">i</span><span class="o">++</span><span class="p">);</span>
+  <span class="n">driver_writer_</span><span class="o">-&gt;</span><span class="n">Write</span><span class="p">(</span><span class="n">out_msg</span><span class="p">);</span>
+  <span class="n">AINFO</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;timertestcomponent: Write drivermsg-&gt;&quot;</span>
+        <span class="o">&lt;&lt;</span> <span class="n">out_msg</span><span class="o">-&gt;</span><span class="n">ShortDebugString</span><span class="p">();</span>
+  <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h4>Build and run<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<p>Use timertestcomponent as example:</p>
+<ul class="simple">
+<li><p>Build: bazel build cyber/examples/timer_component_smaple/…</p></li>
+<li><p>Run: mainboard -d cyber/examples/timer_component_smaple/timer.dag</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>Precautions<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Component needs to be registered to load the class through SharedLibrary. The registration interface looks like:</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CYBER_REGISTER_COMPONENT</span><span class="p">(</span><span class="n">DriverComponent</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you use a namespace when registering, you also need to add a namespace when you define it in the dag file.</p>
+<ul class="simple">
+<li><p>The configuration files of the Component and TimerComponent are different, please be careful not to mix the two up.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="launch">
+<h2>Launch<a class="headerlink" href="#launch" title="Permalink to this headline">¶</a></h2>
+<p><strong>cyber_launch</strong> is the launcher of the Cyber RT framework. It starts multiple mainboards according to the launch file, and loads different components into different mainboards according to the dag file.
+cyber_launch supports two scenarios for dynamically loading components or starting Binary programs in a child process.</p>
+<div class="section" id="launch-file-format">
+<h3>Launch File Format<a class="headerlink" href="#launch-file-format" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;cyber&gt;</span>
+    <span class="nt">&lt;module&gt;</span>
+        <span class="nt">&lt;name&gt;</span>driver<span class="nt">&lt;/name&gt;</span>
+        <span class="nt">&lt;dag_conf&gt;</span>driver.dag<span class="nt">&lt;/dag_conf&gt;</span>
+        <span class="nt">&lt;process_name&gt;&lt;/process_name&gt;</span>
+        <span class="nt">&lt;exception_handler&gt;</span>exit<span class="nt">&lt;/exception_handler&gt;</span>
+    <span class="nt">&lt;/module&gt;</span>
+    <span class="nt">&lt;module&gt;</span>
+        <span class="nt">&lt;name&gt;</span>perception<span class="nt">&lt;/name&gt;</span>
+        <span class="nt">&lt;dag_conf&gt;</span>perception.dag<span class="nt">&lt;/dag_conf&gt;</span>
+        <span class="nt">&lt;process_name&gt;&lt;/process_name&gt;</span>
+        <span class="nt">&lt;exception_handler&gt;</span>respawn<span class="nt">&lt;/exception_handler&gt;</span>
+    <span class="nt">&lt;/module&gt;</span>
+    <span class="nt">&lt;module&gt;</span>
+        <span class="nt">&lt;name&gt;</span>planning<span class="nt">&lt;/name&gt;</span>
+        <span class="nt">&lt;dag_conf&gt;</span>planning.dag<span class="nt">&lt;/dag_conf&gt;</span>
+        <span class="nt">&lt;process_name&gt;&lt;/process_name&gt;</span>
+    <span class="nt">&lt;/module&gt;</span>
+<span class="nt">&lt;/cyber&gt;</span>
+</pre></div>
+</div>
+<p><strong>Module</strong>:
+Each loaded component or binary is a module</p>
+<ul class="simple">
+<li><p><strong>name</strong> is the loaded module name</p></li>
+<li><p><strong>dag_conf</strong> is the name of the corresponding dag file of the component</p></li>
+<li><p><strong>process_name</strong> is the name of the mainboard process once started, and the same component of process_name will be loaded and run in the same process.</p></li>
+<li><p><strong>exception_handler</strong> is the handler method when the exception occurs in the process. The value can be exit or respawn listed below.</p>
+<ul>
+<li><p>exit, which means that the entire process needs to stop running when the current process exits abnormally.</p></li>
+<li><p>respawn, the current process needs to be restarted after abnormal exit. Start this process. If there is no such thing as it is empty, it means no treatment. Can be controlled by the user according to the specific conditions of the process</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="timer">
+<h2>Timer<a class="headerlink" href="#timer" title="Permalink to this headline">¶</a></h2>
+<p>Timer can be used to create a timed task to run on a periodic basis, or to run only once</p>
+<div class="section" id="timer-interface">
+<h3>Timer Interface<a class="headerlink" href="#timer-interface" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * @brief Construct a new Timer object</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param period The period of the timer, unit is ms</span>
+<span class="cm"> * @param callback The tasks that the timer needs to perform</span>
+<span class="cm"> * @param oneshot True: perform the callback only after the first timing cycle</span>
+<span class="cm"> *                False: perform the callback every timed period</span>
+<span class="cm"> */</span>
+<span class="n">Timer</span><span class="p">(</span><span class="kt">uint32_t</span> <span class="n">period</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="p">()</span><span class="o">&gt;</span> <span class="n">callback</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">oneshot</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Or you could encapsulate the parameters into a timer option as follows:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="nc">TimerOption</span> <span class="p">{</span>
+  <span class="kt">uint32_t</span> <span class="n">period</span><span class="p">;</span>                 <span class="c1">// The period of the timer, unit is ms</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="p">()</span><span class="o">&gt;</span> <span class="n">callback</span><span class="p">;</span>  <span class="c1">// The tasks that the timer needs to perform</span>
+  <span class="kt">bool</span> <span class="n">oneshot</span><span class="p">;</span>  <span class="c1">// True: perform the callback only after the first timing cycle</span>
+                 <span class="c1">// False: perform the callback every timed period</span>
+<span class="p">};</span>
+<span class="cm">/**</span>
+<span class="cm"> * @brief Construct a new Timer object</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param opt Timer option</span>
+<span class="cm"> */</span>
+<span class="k">explicit</span> <span class="nf">Timer</span><span class="p">(</span><span class="n">TimerOption</span> <span class="n">opt</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="start-timer">
+<h3>Start Timer<a class="headerlink" href="#start-timer" title="Permalink to this headline">¶</a></h3>
+<p>After creating a Timer instance, you must call <code class="docutils literal notranslate"><span class="pre">Timer::Start()</span></code> to start the timer.</p>
+</div>
+<div class="section" id="stop-timer">
+<h3>Stop Timer<a class="headerlink" href="#stop-timer" title="Permalink to this headline">¶</a></h3>
+<p>When you need to manually stop a timer that has already started, you can call the <code class="docutils literal notranslate"><span class="pre">Timer::Stop()</span></code> interface.</p>
+</div>
+<div class="section" id="id7">
+<h3>Demo - example<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/cyber.h&quot;</span><span class="cp"></span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cyber</span><span class="o">::</span><span class="n">Init</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+    <span class="c1">// Print current time every 100ms</span>
+    <span class="n">cyber</span><span class="o">::</span><span class="n">Timer</span> <span class="n">timer</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="p">[](){</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">cyber</span><span class="o">::</span><span class="n">Time</span><span class="o">::</span><span class="n">Now</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+    <span class="p">},</span> <span class="nb">false</span><span class="p">);</span>
+    <span class="n">timer</span><span class="p">.</span><span class="n">Start</span><span class="p">()</span>
+    <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="n">timer</span><span class="p">.</span><span class="n">Stop</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="time-api">
+<h2>Time API<a class="headerlink" href="#time-api" title="Permalink to this headline">¶</a></h2>
+<p>Time is a class used to manage time; it can be used for current time acquisition, time-consuming calculation, time conversion, and so on.</p>
+<p>The time interfaces are as follows:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// constructor, passing in a different value to construct Time</span>
+<span class="n">Time</span><span class="p">(</span><span class="kt">uint64_t</span> <span class="n">nanoseconds</span><span class="p">);</span> <span class="c1">//uint64_t, in nanoseconds</span>
+<span class="n">Time</span><span class="p">(</span><span class="kt">int</span> <span class="n">nanoseconds</span><span class="p">);</span> <span class="c1">// int type, unit: nanoseconds</span>
+<span class="n">Time</span><span class="p">(</span><span class="kt">double</span> <span class="n">seconds</span><span class="p">);</span> <span class="c1">// double, in seconds</span>
+<span class="n">Time</span><span class="p">(</span><span class="kt">uint32_t</span> <span class="n">seconds</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">nanoseconds</span><span class="p">);</span>
+<span class="c1">// seconds seconds + nanoseconds nanoseconds</span>
+<span class="n">Static</span> <span class="n">Time</span> <span class="n">Now</span><span class="p">();</span> <span class="c1">// Get the current time</span>
+<span class="n">Double</span> <span class="nf">ToSecond</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span> <span class="c1">// convert to seconds</span>
+<span class="n">Uint64_t</span> <span class="nf">ToNanosecond</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span> <span class="c1">// Convert to nanoseconds</span>
+<span class="n">Std</span><span class="o">::</span><span class="n">string</span> <span class="n">ToString</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span> <span class="c1">// Convert to a string in the format &quot;2018-07-10 20:21:51.123456789&quot;</span>
+<span class="n">Bool</span> <span class="nf">IsZero</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span> <span class="c1">// Determine if the time is 0</span>
+</pre></div>
+</div>
+<p>A code example can be seen below:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/cyber.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/duration.h&quot;</span><span class="cp"></span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cyber</span><span class="o">::</span><span class="n">Init</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+    <span class="n">Time</span> <span class="n">t1</span><span class="p">(</span><span class="mi">1531225311123456789UL</span><span class="p">);</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">t1</span><span class="p">.</span><span class="n">ToString</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span> <span class="c1">// 2018-07-10 20:21:51.123456789</span>
+    <span class="c1">// Duration time interval</span>
+    <span class="n">Time</span> <span class="n">t1</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+    <span class="n">Duration</span> <span class="n">d</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+    <span class="n">Time</span> <span class="n">t2</span><span class="p">(</span><span class="mi">300</span><span class="p">);</span>
+    <span class="n">assert</span><span class="p">(</span><span class="n">d</span> <span class="o">==</span> <span class="p">(</span><span class="n">t1</span><span class="o">-</span><span class="n">t2</span><span class="p">));</span> <span class="c1">// true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="record-file-read-and-write">
+<h2>Record file: Read and Write<a class="headerlink" href="#record-file-read-and-write" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="reading-the-reader-file">
+<h3>Reading the Reader file<a class="headerlink" href="#reading-the-reader-file" title="Permalink to this headline">¶</a></h3>
+<p><strong>RecordReader</strong> is the component used to read messages in the cyber framework. Each RecordReader can open an existing record file through the <code class="docutils literal notranslate"><span class="pre">Open</span></code> method, and the thread will asynchronously read the information in the record file. The user only needs to execute ReadMessage to extract the latest message in RecordReader, and then get the message information through GetCurrentMessageChannelName, GetCurrentRawMessage, GetCurrentMessageTime.</p>
+<p><strong>RecordWriter</strong> is the component used to record messages in the cyber framework. Each RecordWriter can create a new record file through the Open method. The user only needs to execute WriteMessage and WriteChannel to write message and channel information, and the writing process is asynchronous.</p>
+</div>
+<div class="section" id="demo-example-cyber-examples-record-cc">
+<h3>Demo - example(cyber/examples/record.cc)<a class="headerlink" href="#demo-example-cyber-examples-record-cc" title="Permalink to this headline">¶</a></h3>
+<p>Write 100 RawMessage to<code class="docutils literal notranslate"><span class="pre">TEST_FILE</span></code> through <code class="docutils literal notranslate"><span class="pre">test_write</span></code> method, then read them out through <code class="docutils literal notranslate"><span class="pre">test_read</span></code> method.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/cyber.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/message/raw_message.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/proto/record.pb.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/record/record_message.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/record/record_reader.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;cyber/record/record_writer.h&quot;</span><span class="cp"></span>
+
+<span class="k">using</span> <span class="o">::</span><span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">record</span><span class="o">::</span><span class="n">RecordReader</span><span class="p">;</span>
+<span class="k">using</span> <span class="o">::</span><span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">record</span><span class="o">::</span><span class="n">RecordWriter</span><span class="p">;</span>
+<span class="k">using</span> <span class="o">::</span><span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">record</span><span class="o">::</span><span class="n">RecordMessage</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">message</span><span class="o">::</span><span class="n">RawMessage</span><span class="p">;</span>
+
+<span class="k">const</span> <span class="kt">char</span> <span class="n">CHANNEL_NAME_1</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;/test/channel1&quot;</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">char</span> <span class="n">CHANNEL_NAME_2</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;/test/channel2&quot;</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">char</span> <span class="n">MESSAGE_TYPE_1</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;apollo.cyber.proto.Test&quot;</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">char</span> <span class="n">MESSAGE_TYPE_2</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;apollo.cyber.proto.Channel&quot;</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">char</span> <span class="n">PROTO_DESC</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;1234567890&quot;</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">char</span> <span class="n">STR_10B</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;1234567890&quot;</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">char</span> <span class="n">TEST_FILE</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;test.record&quot;</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">test_write</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">writefile</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">RecordWriter</span> <span class="n">writer</span><span class="p">;</span>
+  <span class="n">writer</span><span class="p">.</span><span class="n">SetSizeOfFileSegmentation</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="n">writer</span><span class="p">.</span><span class="n">SetIntervalOfFileSegmentation</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="n">writer</span><span class="p">.</span><span class="n">Open</span><span class="p">(</span><span class="n">writefile</span><span class="p">);</span>
+  <span class="n">writer</span><span class="p">.</span><span class="n">WriteChannel</span><span class="p">(</span><span class="n">CHANNEL_NAME_1</span><span class="p">,</span> <span class="n">MESSAGE_TYPE_1</span><span class="p">,</span> <span class="n">PROTO_DESC</span><span class="p">);</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">uint32_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">auto</span> <span class="n">msg</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">RawMessage</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;abc&quot;</span> <span class="o">+</span> <span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+    <span class="n">writer</span><span class="p">.</span><span class="n">WriteMessage</span><span class="p">(</span><span class="n">CHANNEL_NAME_1</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="mi">888</span> <span class="o">+</span> <span class="n">i</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="n">writer</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">test_read</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">readfile</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">RecordReader</span> <span class="n">reader</span><span class="p">(</span><span class="n">readfile</span><span class="p">);</span>
+  <span class="n">RecordMessage</span> <span class="n">message</span><span class="p">;</span>
+  <span class="kt">uint64_t</span> <span class="n">msg_count</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="n">GetMessageNumber</span><span class="p">(</span><span class="n">CHANNEL_NAME_1</span><span class="p">);</span>
+  <span class="n">AINFO</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;MSGTYPE: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">reader</span><span class="p">.</span><span class="n">GetMessageType</span><span class="p">(</span><span class="n">CHANNEL_NAME_1</span><span class="p">);</span>
+  <span class="n">AINFO</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;MSGDESC: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">reader</span><span class="p">.</span><span class="n">GetProtoDesc</span><span class="p">(</span><span class="n">CHANNEL_NAME_1</span><span class="p">);</span>
+
+  <span class="c1">// read all message</span>
+  <span class="kt">uint64_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="kt">uint64_t</span> <span class="n">valid</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">msg_count</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">reader</span><span class="p">.</span><span class="n">ReadMessage</span><span class="p">(</span><span class="o">&amp;</span><span class="n">message</span><span class="p">))</span> <span class="p">{</span>
+      <span class="n">AINFO</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;msg[&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;]-&gt; &quot;</span>
+            <span class="o">&lt;&lt;</span> <span class="s">&quot;channel name: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">message</span><span class="p">.</span><span class="n">channel_name</span>
+            <span class="o">&lt;&lt;</span> <span class="s">&quot;; content: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">message</span><span class="p">.</span><span class="n">content</span>
+            <span class="o">&lt;&lt;</span> <span class="s">&quot;; msg time: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">message</span><span class="p">.</span><span class="n">time</span><span class="p">;</span>
+      <span class="n">valid</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="n">AERROR</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;read msg[&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;] failed&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="n">AINFO</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;static msg=================&quot;</span><span class="p">;</span>
+  <span class="n">AINFO</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;MSG validmsg:totalcount: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">valid</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;:&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">msg_count</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span> <span class="p">{</span>
+  <span class="n">apollo</span><span class="o">::</span><span class="n">cyber</span><span class="o">::</span><span class="n">Init</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+  <span class="n">test_write</span><span class="p">(</span><span class="n">TEST_FILE</span><span class="p">);</span>
+  <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+  <span class="n">test_read</span><span class="p">(</span><span class="n">TEST_FILE</span><span class="p">);</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="section" id="id8">
+<h4>Build and run<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Build: bazel build cyber/examples/…</p></li>
+<li><p>Run: ./bazel-bin/cyber/examples/record</p></li>
+<li><p>Examining result:</p></li>
+</ul>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">I1124</span> <span class="mi">16</span><span class="o">:</span><span class="mi">56</span><span class="o">:</span><span class="mf">27.248200</span> <span class="mi">15118</span> <span class="n">record</span><span class="p">.</span><span class="nl">cc</span><span class="p">:</span><span class="mi">64</span><span class="p">]</span> <span class="p">[</span><span class="n">record</span><span class="p">]</span> <span class="n">msg</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-&gt;</span> <span class="n">channel</span> <span class="nl">name</span><span class="p">:</span> <span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">channel1</span><span class="p">;</span> <span class="nl">content</span><span class="p">:</span> <span class="n">abc0</span><span class="p">;</span> <span class="n">msg</span> <span class="nl">time</span><span class="p">:</span> <span class="mi">888</span>
+<span class="n">I1124</span> <span class="mi">16</span><span class="o">:</span><span class="mi">56</span><span class="o">:</span><span class="mf">27.248227</span> <span class="mi">15118</span> <span class="n">record</span><span class="p">.</span><span class="nl">cc</span><span class="p">:</span><span class="mi">64</span><span class="p">]</span> <span class="p">[</span><span class="n">record</span><span class="p">]</span> <span class="n">msg</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-&gt;</span> <span class="n">channel</span> <span class="nl">name</span><span class="p">:</span> <span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">channel1</span><span class="p">;</span> <span class="nl">content</span><span class="p">:</span> <span class="n">abc1</span><span class="p">;</span> <span class="n">msg</span> <span class="nl">time</span><span class="p">:</span> <span class="mi">889</span>
+<span class="n">I1124</span> <span class="mi">16</span><span class="o">:</span><span class="mi">56</span><span class="o">:</span><span class="mf">27.248239</span> <span class="mi">15118</span> <span class="n">record</span><span class="p">.</span><span class="nl">cc</span><span class="p">:</span><span class="mi">64</span><span class="p">]</span> <span class="p">[</span><span class="n">record</span><span class="p">]</span> <span class="n">msg</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">-&gt;</span> <span class="n">channel</span> <span class="nl">name</span><span class="p">:</span> <span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">channel1</span><span class="p">;</span> <span class="nl">content</span><span class="p">:</span> <span class="n">abc2</span><span class="p">;</span> <span class="n">msg</span> <span class="nl">time</span><span class="p">:</span> <span class="mi">890</span>
+<span class="n">I1124</span> <span class="mi">16</span><span class="o">:</span><span class="mi">56</span><span class="o">:</span><span class="mf">27.248252</span> <span class="mi">15118</span> <span class="n">record</span><span class="p">.</span><span class="nl">cc</span><span class="p">:</span><span class="mi">64</span><span class="p">]</span> <span class="p">[</span><span class="n">record</span><span class="p">]</span> <span class="n">msg</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">-&gt;</span> <span class="n">channel</span> <span class="nl">name</span><span class="p">:</span> <span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">channel1</span><span class="p">;</span> <span class="nl">content</span><span class="p">:</span> <span class="n">abc3</span><span class="p">;</span> <span class="n">msg</span> <span class="nl">time</span><span class="p">:</span> <span class="mi">891</span>
+<span class="n">I1124</span> <span class="mi">16</span><span class="o">:</span><span class="mi">56</span><span class="o">:</span><span class="mf">27.248297</span> <span class="mi">15118</span> <span class="n">record</span><span class="p">.</span><span class="nl">cc</span><span class="p">:</span><span class="mi">64</span><span class="p">]</span> <span class="p">[</span><span class="n">record</span><span class="p">]</span> <span class="n">msg</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">-&gt;</span> <span class="n">channel</span> <span class="nl">name</span><span class="p">:</span> <span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">channel1</span><span class="p">;</span> <span class="nl">content</span><span class="p">:</span> <span class="n">abc4</span><span class="p">;</span> <span class="n">msg</span> <span class="nl">time</span><span class="p">:</span> <span class="mi">892</span>
+<span class="n">I1124</span> <span class="mi">16</span><span class="o">:</span><span class="mi">56</span><span class="o">:</span><span class="mf">27.248378</span> <span class="mi">15118</span> <span class="n">record</span><span class="p">.</span><span class="nl">cc</span><span class="p">:</span><span class="mi">64</span><span class="p">]</span> <span class="p">[</span><span class="n">record</span><span class="p">]</span> <span class="n">msg</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">-&gt;</span> <span class="n">channel</span> <span class="nl">name</span><span class="p">:</span> <span class="o">/</span><span class="n">test</span><span class="o">/</span><span class="n">channel1</span><span class="p">;</span> <span class="nl">content</span><span class="p">:</span> <span class="n">abc5</span><span class="p">;</span> <span class="n">msg</span> <span class="nl">time</span><span class="p">:</span> <span class="mi">893</span>
+<span class="p">...</span>
+<span class="n">I1124</span> <span class="mi">16</span><span class="o">:</span><span class="mi">56</span><span class="o">:</span><span class="mf">27.250422</span> <span class="mi">15118</span> <span class="n">record</span><span class="p">.</span><span class="nl">cc</span><span class="p">:</span><span class="mi">73</span><span class="p">]</span> <span class="p">[</span><span class="n">record</span><span class="p">]</span> <span class="k">static</span> <span class="n">msg</span><span class="o">=================</span>
+<span class="n">I1124</span> <span class="mi">16</span><span class="o">:</span><span class="mi">56</span><span class="o">:</span><span class="mf">27.250434</span> <span class="mi">15118</span> <span class="n">record</span><span class="p">.</span><span class="nl">cc</span><span class="p">:</span><span class="mi">74</span><span class="p">]</span> <span class="p">[</span><span class="n">record</span><span class="p">]</span> <span class="n">MSG</span> <span class="nl">validmsg</span><span class="p">:</span><span class="nl">totalcount</span><span class="p">:</span> <span class="mi">100</span><span class="o">:</span><span class="mi">100</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="api-directory">
+<h2>API Directory<a class="headerlink" href="#api-directory" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="node-api">
+<h3>Node API<a class="headerlink" href="#node-api" title="Permalink to this headline">¶</a></h3>
+<p>For additional information and examples, refer to <a class="reference external" href="#node">Node</a></p>
+</div>
+<div class="section" id="api-list">
+<h3>API List<a class="headerlink" href="#api-list" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//create writer with user-define attr and message type</span>
+<span class="k">auto</span> <span class="nf">CreateWriter</span><span class="p">(</span><span class="k">const</span> <span class="n">proto</span><span class="o">::</span><span class="n">RoleAttributes</span><span class="o">&amp;</span> <span class="n">role_attr</span><span class="p">)</span>
+    <span class="o">-&gt;</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">transport</span><span class="o">::</span><span class="n">Writer</span><span class="o">&lt;</span><span class="n">MessageT</span><span class="o">&gt;&gt;</span><span class="p">;</span>
+<span class="c1">//create reader with user-define attr, callback and message type</span>
+<span class="k">auto</span> <span class="nf">CreateReader</span><span class="p">(</span><span class="k">const</span> <span class="n">proto</span><span class="o">::</span><span class="n">RoleAttributes</span><span class="o">&amp;</span> <span class="n">role_attr</span><span class="p">,</span>
+    <span class="k">const</span> <span class="n">croutine</span><span class="o">::</span><span class="n">CRoutineFunc</span><span class="o">&lt;</span><span class="n">MessageT</span><span class="o">&gt;&amp;</span> <span class="n">reader_func</span><span class="p">)</span>
+    <span class="o">-&gt;</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">transport</span><span class="o">::</span><span class="n">Reader</span><span class="o">&lt;</span><span class="n">MessageT</span><span class="o">&gt;&gt;</span><span class="p">;</span>
+<span class="c1">//create writer with specific channel name and message type</span>
+<span class="k">auto</span> <span class="nf">CreateWriter</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">channel_name</span><span class="p">)</span>
+    <span class="o">-&gt;</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">transport</span><span class="o">::</span><span class="n">Writer</span><span class="o">&lt;</span><span class="n">MessageT</span><span class="o">&gt;&gt;</span><span class="p">;</span>
+<span class="c1">//create reader with specific channel name, callback and message type</span>
+<span class="k">auto</span> <span class="nf">CreateReader</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">channel_name</span><span class="p">,</span>
+    <span class="k">const</span> <span class="n">croutine</span><span class="o">::</span><span class="n">CRoutineFunc</span><span class="o">&lt;</span><span class="n">MessageT</span><span class="o">&gt;&amp;</span> <span class="n">reader_func</span><span class="p">)</span>
+    <span class="o">-&gt;</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">transport</span><span class="o">::</span><span class="n">Reader</span><span class="o">&lt;</span><span class="n">MessageT</span><span class="o">&gt;&gt;</span><span class="p">;</span>
+<span class="c1">//create reader with user-define config, callback and message type</span>
+<span class="k">auto</span> <span class="nf">CreateReader</span><span class="p">(</span><span class="k">const</span> <span class="n">ReaderConfig</span><span class="o">&amp;</span> <span class="n">config</span><span class="p">,</span>
+                  <span class="k">const</span> <span class="n">CallbackFunc</span><span class="o">&lt;</span><span class="n">MessageT</span><span class="o">&gt;&amp;</span> <span class="n">reader_func</span><span class="p">)</span>
+    <span class="o">-&gt;</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">cybertron</span><span class="o">::</span><span class="n">Reader</span><span class="o">&lt;</span><span class="n">MessageT</span><span class="o">&gt;&gt;</span><span class="p">;</span>
+<span class="c1">//create service with name and specific callback</span>
+<span class="k">auto</span> <span class="nf">CreateService</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">service_name</span><span class="p">,</span>
+    <span class="k">const</span> <span class="k">typename</span> <span class="nc">service</span><span class="o">::</span><span class="n">Service</span><span class="o">&lt;</span><span class="n">Request</span><span class="p">,</span> <span class="n">Response</span><span class="o">&gt;::</span><span class="n">ServiceCallback</span><span class="o">&amp;</span> <span class="n">service_calllback</span><span class="p">)</span>
+    <span class="o">-&gt;</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">service</span><span class="o">::</span><span class="n">Service</span><span class="o">&lt;</span><span class="n">Request</span><span class="p">,</span> <span class="n">Response</span><span class="o">&gt;&gt;</span><span class="p">;</span>
+<span class="c1">//create client with name to send request to server</span>
+<span class="k">auto</span> <span class="nf">CreateClient</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">service_name</span><span class="p">)</span>
+    <span class="o">-&gt;</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">service</span><span class="o">::</span><span class="n">Client</span><span class="o">&lt;</span><span class="n">Request</span><span class="p">,</span> <span class="n">Response</span><span class="o">&gt;&gt;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="writer-api">
+<h2>Writer API<a class="headerlink" href="#writer-api" title="Permalink to this headline">¶</a></h2>
+<p>For additional information and examples, refer to <a class="reference external" href="#writer">Writer</a></p>
+<div class="section" id="id9">
+<h3>API List<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span> <span class="nf">Write</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">MessageT</span><span class="o">&gt;&amp;</span> <span class="n">message</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="client-api">
+<h2>Client API<a class="headerlink" href="#client-api" title="Permalink to this headline">¶</a></h2>
+<p>For additional information and examples, refer to <a class="reference external" href="#service-creation-and-use">Client</a></p>
+<div class="section" id="id10">
+<h3>API List<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SharedResponse</span> <span class="nf">SendRequest</span><span class="p">(</span><span class="n">SharedRequest</span> <span class="n">request</span><span class="p">,</span>
+                           <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">seconds</span><span class="o">&amp;</span> <span class="n">timeout_s</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">seconds</span><span class="p">(</span><span class="mi">5</span><span class="p">));</span>
+<span class="n">SharedResponse</span> <span class="nf">SendRequest</span><span class="p">(</span><span class="k">const</span> <span class="n">Request</span><span class="o">&amp;</span> <span class="n">request</span><span class="p">,</span>
+                           <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">seconds</span><span class="o">&amp;</span> <span class="n">timeout_s</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">seconds</span><span class="p">(</span><span class="mi">5</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="parameter-api">
+<h2>Parameter API<a class="headerlink" href="#parameter-api" title="Permalink to this headline">¶</a></h2>
+<p>The interface that the user uses to perform parameter related operations:</p>
+<ul class="simple">
+<li><p>Set the parameter related API.</p></li>
+<li><p>Read the parameter related API.</p></li>
+<li><p>Create a ParameterService to provide parameter service related APIs for other nodes.</p></li>
+<li><p>Create a ParameterClient that uses the parameters provided by other nodes to service related APIs.</p></li>
+</ul>
+<p>For additional information and examples, refer to <a class="reference external" href="##param-parameter-service">Parameter</a></p>
+<div class="section" id="api-list-setting-parameters">
+<h3>API List - Setting parameters<a class="headerlink" href="#api-list-setting-parameters" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Parameter</span><span class="p">();</span>  <span class="c1">// Name is empty, type is NOT_SET</span>
+<span class="k">explicit</span> <span class="nf">Parameter</span><span class="p">(</span><span class="k">const</span> <span class="n">Parameter</span><span class="o">&amp;</span> <span class="n">parameter</span><span class="p">);</span>
+<span class="k">explicit</span> <span class="nf">Parameter</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">);</span>  <span class="c1">// Type is NOT_SET</span>
+<span class="n">Parameter</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="kt">bool</span> <span class="n">bool_value</span><span class="p">);</span>
+<span class="n">Parameter</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">int_value</span><span class="p">);</span>
+<span class="n">Parameter</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="kt">int64_t</span> <span class="n">int_value</span><span class="p">);</span>
+<span class="n">Parameter</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">double_value</span><span class="p">);</span>
+<span class="n">Parameter</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="kt">double</span> <span class="n">double_value</span><span class="p">);</span>
+<span class="n">Parameter</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">string_value</span><span class="p">);</span>
+<span class="n">Parameter</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">string_value</span><span class="p">);</span>
+<span class="n">Parameter</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">msg_str</span><span class="p">,</span>
+          <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">full_name</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">proto_desc</span><span class="p">);</span>
+<span class="n">Parameter</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">Message</span><span class="o">&amp;</span> <span class="n">msg</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="api-list-reading-parameters">
+<h3>API List - Reading parameters<a class="headerlink" href="#api-list-reading-parameters" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kr">inline</span> <span class="n">ParamType</span> <span class="n">type</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="kr">inline</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">TypeName</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="kr">inline</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">Descriptor</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="kr">inline</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">Name</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="kr">inline</span> <span class="kt">bool</span> <span class="n">AsBool</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="kr">inline</span> <span class="kt">int64_t</span> <span class="n">AsInt64</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="kr">inline</span> <span class="kt">double</span> <span class="n">AsDouble</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="kr">inline</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">AsString</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">DebugString</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">Type</span><span class="o">&gt;</span>
+<span class="k">typename</span> <span class="nc">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">is_base_of</span><span class="o">&lt;</span><span class="n">google</span><span class="o">::</span><span class="n">protobuf</span><span class="o">::</span><span class="n">Message</span><span class="p">,</span> <span class="n">Type</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span> <span class="n">Type</span><span class="o">&gt;::</span><span class="n">type</span>
+<span class="n">value</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">Type</span><span class="o">&gt;</span>
+<span class="k">typename</span> <span class="nc">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">is_integral</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;::</span><span class="n">value</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">Type</span><span class="p">,</span> <span class="kt">bool</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span> <span class="n">Type</span><span class="o">&gt;::</span><span class="n">type</span>
+<span class="n">value</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">Type</span><span class="o">&gt;</span>
+<span class="k">typename</span> <span class="nc">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">is_floating_point</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span> <span class="n">Type</span><span class="o">&gt;::</span><span class="n">type</span>
+<span class="n">value</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">Type</span><span class="o">&gt;</span>
+<span class="k">typename</span> <span class="nc">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">is_convertible</span><span class="o">&lt;</span><span class="n">Type</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;&gt;::</span><span class="n">type</span>
+<span class="n">value</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">Type</span><span class="o">&gt;</span>
+<span class="k">typename</span> <span class="nc">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">Type</span><span class="p">,</span> <span class="kt">bool</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span> <span class="kt">bool</span><span class="o">&gt;::</span><span class="n">type</span>
+<span class="n">value</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="api-list-creating-parameter-service">
+<h3>API List - Creating parameter service<a class="headerlink" href="#api-list-creating-parameter-service" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">explicit</span> <span class="nf">ParameterService</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;&amp;</span> <span class="n">node</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">SetParameter</span><span class="p">(</span><span class="k">const</span> <span class="n">Parameter</span><span class="o">&amp;</span> <span class="n">parameter</span><span class="p">);</span>
+<span class="kt">bool</span> <span class="nf">GetParameter</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">param_name</span><span class="p">,</span> <span class="n">Parameter</span><span class="o">*</span> <span class="n">parameter</span><span class="p">);</span>
+<span class="kt">bool</span> <span class="nf">ListParameters</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Parameter</span><span class="o">&gt;*</span> <span class="n">parameters</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="api-list-creating-parameter-client">
+<h3>API List - Creating parameter client<a class="headerlink" href="#api-list-creating-parameter-client" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ParameterClient</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;&amp;</span> <span class="n">node</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">service_node_name</span><span class="p">);</span>
+<span class="kt">bool</span> <span class="nf">SetParameter</span><span class="p">(</span><span class="k">const</span> <span class="n">Parameter</span><span class="o">&amp;</span> <span class="n">parameter</span><span class="p">);</span>
+<span class="kt">bool</span> <span class="nf">GetParameter</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">param_name</span><span class="p">,</span> <span class="n">Parameter</span><span class="o">*</span> <span class="n">parameter</span><span class="p">);</span>
+<span class="kt">bool</span> <span class="nf">ListParameters</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Parameter</span><span class="o">&gt;*</span> <span class="n">parameters</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="timer-api">
+<h2>Timer API<a class="headerlink" href="#timer-api" title="Permalink to this headline">¶</a></h2>
+<p>You can set the parameters of the Timer and call the start and stop interfaces to start the timer and stop the timer.
+For additional information and examples, refer to <a class="reference external" href="#timer">Timer</a></p>
+<div class="section" id="id11">
+<h3>API List<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Timer</span><span class="p">(</span><span class="kt">uint32_t</span> <span class="n">period</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="p">()</span><span class="o">&gt;</span> <span class="n">callback</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">oneshot</span><span class="p">);</span>
+<span class="n">Timer</span><span class="p">(</span><span class="n">TimerOption</span> <span class="n">opt</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">SetTimerOption</span><span class="p">(</span><span class="n">TimerOption</span> <span class="n">opt</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">Start</span><span class="p">();</span>
+<span class="kt">void</span> <span class="nf">Stop</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id12">
+<h2>Time API<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<p>For additional information and examples, refer to <a class="reference external" href="#use-of-time">Time</a></p>
+<div class="section" id="id13">
+<h3>API List<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="k">const</span> <span class="n">Time</span> <span class="n">MAX</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">const</span> <span class="n">Time</span> <span class="n">MIN</span><span class="p">;</span>
+<span class="n">Time</span><span class="p">()</span> <span class="p">{}</span>
+<span class="k">explicit</span> <span class="n">Time</span><span class="p">(</span><span class="kt">uint64_t</span> <span class="n">nanoseconds</span><span class="p">);</span>
+<span class="k">explicit</span> <span class="nf">Time</span><span class="p">(</span><span class="kt">int</span> <span class="n">nanoseconds</span><span class="p">);</span>
+<span class="k">explicit</span> <span class="nf">Time</span><span class="p">(</span><span class="kt">double</span> <span class="n">seconds</span><span class="p">);</span>
+<span class="n">Time</span><span class="p">(</span><span class="kt">uint32_t</span> <span class="n">seconds</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">nanoseconds</span><span class="p">);</span>
+<span class="n">Time</span><span class="p">(</span><span class="k">const</span> <span class="n">Time</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">);</span>
+<span class="k">static</span> <span class="n">Time</span> <span class="n">Now</span><span class="p">();</span>
+<span class="k">static</span> <span class="n">Time</span> <span class="n">MonoTime</span><span class="p">();</span>
+<span class="k">static</span> <span class="kt">void</span> <span class="n">SleepUntil</span><span class="p">(</span><span class="k">const</span> <span class="n">Time</span><span class="o">&amp;</span> <span class="n">time</span><span class="p">);</span>
+<span class="kt">double</span> <span class="nf">ToSecond</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="kt">uint64_t</span> <span class="nf">ToNanosecond</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">ToString</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="kt">bool</span> <span class="nf">IsZero</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="duration-api">
+<h2>Duration API<a class="headerlink" href="#duration-api" title="Permalink to this headline">¶</a></h2>
+<p>Interval-related interface, used to indicate the time interval, can be initialized according to the specified nanosecond or second.</p>
+<div class="section" id="id14">
+<h3>API List<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Duration</span><span class="p">()</span> <span class="p">{}</span>
+<span class="n">Duration</span><span class="p">(</span><span class="kt">int64_t</span> <span class="n">nanoseconds</span><span class="p">);</span>
+<span class="n">Duration</span><span class="p">(</span><span class="kt">int</span> <span class="n">nanoseconds</span><span class="p">);</span>
+<span class="n">Duration</span><span class="p">(</span><span class="kt">double</span> <span class="n">seconds</span><span class="p">);</span>
+<span class="n">Duration</span><span class="p">(</span><span class="kt">uint32_t</span> <span class="n">seconds</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">nanoseconds</span><span class="p">);</span>
+<span class="n">Duration</span><span class="p">(</span><span class="k">const</span> <span class="n">Rate</span><span class="o">&amp;</span> <span class="n">rate</span><span class="p">);</span>
+<span class="n">Duration</span><span class="p">(</span><span class="k">const</span> <span class="n">Duration</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">);</span>
+<span class="kt">double</span> <span class="nf">ToSecond</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="kt">int64_t</span> <span class="nf">ToNanosecond</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="kt">bool</span> <span class="nf">IsZero</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="kt">void</span> <span class="nf">Sleep</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="rate-api">
+<h2>Rate API<a class="headerlink" href="#rate-api" title="Permalink to this headline">¶</a></h2>
+<p>The frequency interface is generally used to initialize the time of the sleep frequency after the object is initialized according to the specified frequency.</p>
+<div class="section" id="id15">
+<h3>API List<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Rate</span><span class="p">(</span><span class="kt">double</span> <span class="n">frequency</span><span class="p">);</span>
+<span class="n">Rate</span><span class="p">(</span><span class="kt">uint64_t</span> <span class="n">nanoseconds</span><span class="p">);</span>
+<span class="n">Rate</span><span class="p">(</span><span class="k">const</span> <span class="n">Duration</span><span class="o">&amp;</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">Sleep</span><span class="p">();</span>
+<span class="kt">void</span> <span class="nf">Reset</span><span class="p">();</span>
+<span class="n">Duration</span> <span class="nf">CycleTime</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+<span class="n">Duration</span> <span class="nf">ExpectedCycleTime</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="n">expected_cycle_time_</span><span class="p">;</span> <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="recordreader-api">
+<h2>RecordReader API<a class="headerlink" href="#recordreader-api" title="Permalink to this headline">¶</a></h2>
+<p>The interface for reading the record file is used to read the message and channel information in the record file.</p>
+<div class="section" id="id16">
+<h3>API List<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">RecordReader</span><span class="p">();</span>
+<span class="kt">bool</span> <span class="nf">Open</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">filename</span><span class="p">,</span> <span class="kt">uint64_t</span> <span class="n">begin_time</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+          <span class="kt">uint64_t</span> <span class="n">end_time</span> <span class="o">=</span> <span class="n">UINT64_MAX</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">Close</span><span class="p">();</span>
+<span class="kt">bool</span> <span class="nf">ReadMessage</span><span class="p">();</span>
+<span class="kt">bool</span> <span class="nf">EndOfFile</span><span class="p">();</span>
+<span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">CurrentMessageChannelName</span><span class="p">();</span>
+<span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">RawMessage</span><span class="o">&gt;</span> <span class="n">CurrentRawMessage</span><span class="p">();</span>
+<span class="kt">uint64_t</span> <span class="nf">CurrentMessageTime</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="recordwriter-api">
+<h2>RecordWriter API<a class="headerlink" href="#recordwriter-api" title="Permalink to this headline">¶</a></h2>
+<p>The interface for writing the record file, used to record the message and channel information into the record file.</p>
+<div class="section" id="id17">
+<h3>API List<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">RecordWriter</span><span class="p">();</span>
+<span class="kt">bool</span> <span class="nf">Open</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">file</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">Close</span><span class="p">();</span>
+<span class="kt">bool</span> <span class="nf">WriteChannel</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">type</span><span class="p">,</span>
+                  <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">proto_desc</span><span class="p">);</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">MessageT</span><span class="o">&gt;</span>
+<span class="kt">bool</span> <span class="n">WriteMessage</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">channel_name</span><span class="p">,</span> <span class="k">const</span> <span class="n">MessageT</span><span class="o">&amp;</span> <span class="n">message</span><span class="p">,</span>
+                  <span class="k">const</span> <span class="kt">uint64_t</span> <span class="n">time_nanosec</span><span class="p">,</span>
+                  <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">proto_desc</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="kt">bool</span> <span class="nf">SetSizeOfFileSegmentation</span><span class="p">(</span><span class="kt">uint64_t</span> <span class="n">size_kilobytes</span><span class="p">);</span>
+<span class="kt">bool</span> <span class="nf">SetIntervalOfFileSegmentation</span><span class="p">(</span><span class="kt">uint64_t</span> <span class="n">time_sec</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="CyberRT_Python_API.html" class="btn btn-neutral float-right" title="Python API tutorial" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="CyberRT_FAQs.html" class="btn btn-neutral float-left" title="F.A.Q." accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Edith.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

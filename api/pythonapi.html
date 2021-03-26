@@ -1,0 +1,1281 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>python/cyber_py/cyber.py &mdash; Cyber RT Documents  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/main_stylesheet.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Python API" href="pythonapi_index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Cyber RT Documents
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">CyberRT QUICKSTART</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../CyberRT_Quick_Start.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CyberRT_Terms.html">Cyber RT Terms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CyberRT_FAQs.html">F.A.Q.</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CyberRT TUTORIALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../CyberRT_API_for_Developers.html">Cyber RT API tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CyberRT_Python_API.html">Python API tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CyberRT_Developer_Tools.html">Apollo Cyber RT Developer Tools</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CyberRT ADVANCED TOPICS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../CyberRT_Docker.html">Develop inside Docker Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CyberRT_Migration_Guide.html">Migration guide from Apollo ROS</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CyberRT API REFERENCE</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="cppapi_index.html">C++ API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pythonapi_index.html">Python API</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">python/cyber_py/cyber.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-cyber-py-record-py">python/cyber_py/record.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-cyber-py-cyber-time-py">python/cyber_py/cyber_time.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-cyber-py-cyber-timer-py">python/cyber_py/cyber_timer.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-cyber-py-parameter-py">python/cyber_py/parameter.py</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cyber RT Documents</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="pythonapi_index.html">Python API</a> &raquo;</li>
+        
+      <li>python/cyber_py/cyber.py</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/pythonapi.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="python-cyber-py-cyber-py">
+<h1>python/cyber_py/cyber.py<a class="headerlink" href="#python-cyber-py-cyber-py" title="Permalink to this headline">¶</a></h1>
+<p>Defined in python/cyber_py/cyber.py</p>
+<dl class="py function">
+<dt id="cyber_py.cyber.init">
+<span class="target" id="cyber_8py_1a2d058d55515282a5ebd6c53ca056f580"></span><code class="sig-prename descclassname"><span class="pre">cyber_py.cyber.</span></code><code class="sig-name descname"><span class="pre">init</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cyber_py'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cyber_py.cyber.init" title="Permalink to this definition">¶</a></dt>
+<dd><p>init cyber environment. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Success is True, otherwise False. <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">init</span> <span class="n">cyber</span> <span class="n">environment</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">module_name</span></code>: Used as the log file name.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cyber_py.cyber.ok">
+<span class="target" id="cyber_8py_1ad175bf470c96b1cbd4636a031a814a5d"></span><code class="sig-prename descclassname"><span class="pre">cyber_py.cyber.</span></code><code class="sig-name descname"><span class="pre">ok</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cyber_py.cyber.ok" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">is</span> <span class="n">cyber</span> <span class="n">envi</span> <span class="n">ok</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cyber_py.cyber.shutdown">
+<span class="target" id="cyber_8py_1a195af21f4f189b29930de4582d7c1d8e"></span><code class="sig-prename descclassname"><span class="pre">cyber_py.cyber.</span></code><code class="sig-name descname"><span class="pre">shutdown</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cyber_py.cyber.shutdown" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">shutdown</span> <span class="n">cyber</span> <span class="n">envi</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cyber_py.cyber.is_shutdown">
+<span class="target" id="cyber_8py_1a0c6770fda3d744edf5d40b3b3ace2d0c"></span><code class="sig-prename descclassname"><span class="pre">cyber_py.cyber.</span></code><code class="sig-name descname"><span class="pre">is_shutdown</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cyber_py.cyber.is_shutdown" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">is</span> <span class="n">cyber</span> <span class="n">shutdown</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cyber_py.cyber.waitforshutdown">
+<span class="target" id="cyber_8py_1a068017256d012f9ff6e8269c06581121"></span><code class="sig-prename descclassname"><span class="pre">cyber_py.cyber.</span></code><code class="sig-name descname"><span class="pre">waitforshutdown</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cyber_py.cyber.waitforshutdown" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">wait</span> <span class="n">until</span> <span class="n">the</span> <span class="n">cyber</span> <span class="n">is</span> <span class="n">shutdown</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py class">
+<dt>
+<span class="target" id="classcyber__py_1_1cyber_1_1_node"></span><code class="sig-name descname"><span class="pre">cyber_py.cyber.Node</span> <span class="pre">:</span> <span class="pre">public</span> <span class="pre">object</span></code></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Class</span> <span class="k">for</span> <span class="n">cyber</span> <span class="n">Node</span> <span class="n">wrapper</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="py function">
+<dt id="register_message">
+<span class="target" id="classcyber__py_1_1cyber_1_1_node_1a2c21ee01abf0deaf784c6ccd689bb31b"></span><code class="sig-name descname"><span class="pre">register_message</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_desc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#register_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>register proto message by proto descriptor file. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">file_desc</span></code>: object about datatype.DESCRIPTOR.file . <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">register</span> <span class="n">proto</span> <span class="n">message</span> <span class="n">desc</span> <span class="n">file</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="create_writer">
+<span class="target" id="classcyber__py_1_1cyber_1_1_node_1a4fdf8d1b9f42b74c526737edfe17346b"></span><code class="sig-name descname"><span class="pre">create_writer</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qos_depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#create_writer" title="Permalink to this definition">¶</a></dt>
+<dd><p>create a channel writer for send message to another channel. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>return the writer object. <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">create</span> <span class="n">a</span> <span class="n">channel</span> <span class="n">writer</span> <span class="k">for</span> <span class="n">send</span> <span class="n">message</span> <span class="n">to</span> <span class="n">another</span> <span class="n">channel</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: is the channel name. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data_type</span></code>: is message class for serialization </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">qos_depth</span></code>: is a queue size, which defines the size of the cache.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="create_reader">
+<span class="target" id="classcyber__py_1_1cyber_1_1_node_1a75533a85b8be78891684be4103ac3335"></span><code class="sig-name descname"><span class="pre">create_reader</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#create_reader" title="Permalink to this definition">¶</a></dt>
+<dd><p>create a channel reader for receive message from another channel. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>return the writer object. <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">create</span> <span class="n">a</span> <span class="n">channel</span> <span class="n">reader</span> <span class="k">for</span> <span class="n">receive</span> <span class="n">message</span> <span class="n">from</span> <span class="n">another</span> <span class="n">channel</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: the channel name to read. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data_type</span></code>: message class for serialization </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">callback</span></code>: function to call (fn(data)) when data is received. If args is set, the function must accept the args as a second argument, i.e. fn(data, args) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">args</span></code>: additional arguments to pass to the callback</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="create_rawdata_reader">
+<span class="target" id="classcyber__py_1_1cyber_1_1_node_1a926e683d3818c860a6e3a5418b604e1c"></span><code class="sig-name descname"><span class="pre">create_rawdata_reader</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#create_rawdata_reader" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Create</span> <span class="n">RawData</span> <span class="nl">reader</span><span class="p">:</span><span class="n">listener</span> <span class="n">RawMessage</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="create_client">
+<span class="target" id="classcyber__py_1_1cyber_1_1_node_1a92fec2b4e198f62fdfc555eaad039639"></span><code class="sig-name descname"><span class="pre">create_client</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request_data_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response_data_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#create_client" title="Permalink to this definition">¶</a></dt>
+<dd><p>create client for the c/s. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the client object. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: the service name. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">request_data_type</span></code>: the request message type. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">response_data_type</span></code>: the response message type.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="create_service">
+<span class="target" id="classcyber__py_1_1cyber_1_1_node_1af50b32e7718e200d96d749aaedb0b688"></span><code class="sig-name descname"><span class="pre">create_service</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">req_data_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">res_data_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#create_service" title="Permalink to this definition">¶</a></dt>
+<dd><p>create client for the c/s. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>return the service object. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: the service name. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">req_data_type</span></code>: the request message type. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">res_data_type</span></code>: the response message type. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">callback</span></code>: function to call (fn(data)) when data is received. If args is set, the function must accept the args as a second argument, i.e. fn(data, args) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">args</span></code>: additional arguments to pass to the callback.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="spin">
+<span class="target" id="classcyber__py_1_1cyber_1_1_node_1a66ad6f204bf67cd1264622da0b234296"></span><code class="sig-name descname"><span class="pre">spin</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#spin" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">spin</span> <span class="k">for</span> <span class="n">every</span> <span class="mf">0.002</span><span class="n">s</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt>
+<span class="target" id="classcyber__py_1_1cyber_1_1_writer"></span><code class="sig-name descname"><span class="pre">cyber_py.cyber.Writer</span> <span class="pre">:</span> <span class="pre">public</span> <span class="pre">object</span></code></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Class</span> <span class="k">for</span> <span class="n">cyber</span> <span class="n">writer</span> <span class="n">wrapper</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="py function">
+<dt id="write">
+<span class="target" id="classcyber__py_1_1cyber_1_1_writer_1ac842ee583d0fd41f6c60c158c7e2ea86"></span><code class="sig-name descname"><span class="pre">write</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#write" title="Permalink to this definition">¶</a></dt>
+<dd><p>write message. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Success is 0, otherwise False. <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">writer</span> <span class="n">message</span> <span class="n">string</span>
+</pre></div>
+</div>
+ </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code>: is a message type.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt>
+<span class="target" id="classcyber__py_1_1cyber_1_1_reader"></span><code class="sig-name descname"><span class="pre">cyber_py.cyber.Reader</span> <span class="pre">:</span> <span class="pre">public</span> <span class="pre">object</span></code></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Class</span> <span class="k">for</span> <span class="n">cyber</span> <span class="n">reader</span> <span class="n">wrapper</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py class">
+<dt>
+<span class="target" id="classcyber__py_1_1cyber_1_1_client"></span><code class="sig-name descname"><span class="pre">cyber_py.cyber.Client</span> <span class="pre">:</span> <span class="pre">public</span> <span class="pre">object</span></code></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Class</span> <span class="k">for</span> <span class="n">cyber</span> <span class="n">service</span> <span class="n">client</span> <span class="n">wrapper</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="py function">
+<dt id="send_request">
+<span class="target" id="classcyber__py_1_1cyber_1_1_client_1a6e1e771c690b1d7ea994b5a5dd65ee4a"></span><code class="sig-name descname"><span class="pre">send_request</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#send_request" title="Permalink to this definition">¶</a></dt>
+<dd><p>send request message to service. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>None or response from service. <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">send</span> <span class="n">request</span> <span class="n">to</span> <span class="n">service</span>
+</pre></div>
+</div>
+ </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code>: is a message type.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt>
+<span class="target" id="classcyber__py_1_1cyber_1_1_channel_utils"></span><code class="sig-name descname"><span class="pre">cyber_py.cyber.ChannelUtils</span> <span class="pre">:</span> <span class="pre">public</span> <span class="pre">object</span></code></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Functions</p>
+<dl class="py function">
+<dt id="get_debugstring_rawmsgdata">
+<span class="target" id="classcyber__py_1_1cyber_1_1_channel_utils_1a1278d6cf4be0923956f24ce52b7d5b3b"></span><code class="sig-name descname"><span class="pre">get_debugstring_rawmsgdata</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rawmsgdata</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_debugstring_rawmsgdata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse rawmsg from rawmsg data by message type. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>a human readable form of this message. For debugging and other purposes. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">msg_type</span></code>: message type. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rawmsgdata</span></code>: rawmsg data.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="get_msgtype">
+<span class="target" id="classcyber__py_1_1cyber_1_1_channel_utils_1af543b269f0a64690c7df0b96b619e77e"></span><code class="sig-name descname"><span class="pre">get_msgtype</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sleep_s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_msgtype" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse rawmsg from channel name. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>return the messsage type of this channel. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">channel_name</span></code>: channel name. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sleep_s</span></code>: wait time for topo discovery.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="get_channels">
+<span class="target" id="classcyber__py_1_1cyber_1_1_channel_utils_1a8aafcc65b07bfbac0eeddf335c1c3f4d"></span><code class="sig-name descname"><span class="pre">get_channels</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sleep_s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_channels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all active channel names. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>all active channel names. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sleep_s</span></code>: wait time for topo discovery.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="get_channels_info">
+<span class="target" id="classcyber__py_1_1cyber_1_1_channel_utils_1a8961b609a63efb9d0897f1c46988db47"></span><code class="sig-name descname"><span class="pre">get_channels_info</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sleep_s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_channels_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the active channel info. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>all active channels info. {‘channel1’:[], ‘channel2’:[]} . </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sleep_s</span></code>: wait time for topo discovery.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt>
+<span class="target" id="classcyber__py_1_1cyber_1_1_node_utils"></span><code class="sig-name descname"><span class="pre">cyber_py.cyber.NodeUtils</span> <span class="pre">:</span> <span class="pre">public</span> <span class="pre">object</span></code></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Functions</p>
+<dl class="py function">
+<dt id="get_nodes">
+<span class="target" id="classcyber__py_1_1cyber_1_1_node_utils_1a872a2a242818c3e7193eb9fcfcaf0ce3"></span><code class="sig-name descname"><span class="pre">get_nodes</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sleep_s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all active node names. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>all active node names. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sleep_s</span></code>: wait time for topo discovery.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="get_node_attr">
+<span class="target" id="classcyber__py_1_1cyber_1_1_node_utils_1ae93e81479a1ab502d7cac24996f14f09"></span><code class="sig-name descname"><span class="pre">get_node_attr</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sleep_s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_node_attr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get node attribute by the node name. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the node’s attribute. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">node_name</span></code>: node name. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sleep_s</span></code>: wait time for topo discovery.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="get_readersofnode">
+<span class="target" id="classcyber__py_1_1cyber_1_1_node_utils_1a18fe0ebeb1181099d07d0599d6852b98"></span><code class="sig-name descname"><span class="pre">get_readersofnode</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sleep_s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_readersofnode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get node’s reader channel names. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>node’s reader channel names. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">node_name</span></code>: the node name. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sleep_s</span></code>: wait time for topo discovery.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="get_writersofnode">
+<span class="target" id="classcyber__py_1_1cyber_1_1_node_utils_1a1b9e4f334ca2e64fbe026df0ba91d49e"></span><code class="sig-name descname"><span class="pre">get_writersofnode</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sleep_s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_writersofnode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get node’s writer channel names. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>node’s writer channel names. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">node_name</span></code>: the node name. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sleep_s</span></code>: wait time for topo discovery.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="python-cyber-py-record-py">
+<h1>python/cyber_py/record.py<a class="headerlink" href="#python-cyber-py-record-py" title="Permalink to this headline">¶</a></h1>
+<p>Defined in python/cyber_py/record.py</p>
+<dl class="py class">
+<dt>
+<span class="target" id="classcyber__py_1_1record_1_1_record_reader"></span><code class="sig-name descname"><span class="pre">cyber_py.record.RecordReader</span> <span class="pre">:</span> <span class="pre">public</span> <span class="pre">object</span></code></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Class</span> <span class="k">for</span> <span class="n">cyber</span> <span class="n">RecordReader</span> <span class="n">wrapper</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="py function">
+<dt id="init__">
+<span id="__init__"></span><span class="target" id="classcyber__py_1_1record_1_1_record_reader_1a978a56d9cd66ca08c5051bc7122fc832"></span><code class="sig-name descname"><span class="pre">__init__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>the constructor function. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">file_name</span></code>: the record file name. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="read_messages">
+<span class="target" id="classcyber__py_1_1record_1_1_record_reader_1a8dfc9b065d759d7b78b73a287ba9e08e"></span><code class="sig-name descname"><span class="pre">read_messages</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">18446744073709551615</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#read_messages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read message from bag file. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>return (channnel, data, data_type, timestamp) </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">start_time</span></code>: the start time to read. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">end_time</span></code>: the end time to read.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="get_messagenumber">
+<span class="target" id="classcyber__py_1_1record_1_1_record_reader_1af9636392345c7daa609fbf98d674fa8b"></span><code class="sig-name descname"><span class="pre">get_messagenumber</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_messagenumber" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return message count of the channel in current record file. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>return the message count. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">channel_name</span></code>: the channel name.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="get_messagetype">
+<span class="target" id="classcyber__py_1_1record_1_1_record_reader_1a6b955defbdadc485513ec60207c86aa2"></span><code class="sig-name descname"><span class="pre">get_messagetype</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_messagetype" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the corresponding message type of channel. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>return the name of ther string type. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">channel_name</span></code>: channel name.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="get_protodesc">
+<span class="target" id="classcyber__py_1_1record_1_1_record_reader_1a436b4f6b64ead67e31bf3e9b43544be7"></span><code class="sig-name descname"><span class="pre">get_protodesc</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_protodesc" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Return</span> <span class="n">message</span> <span class="n">protodesc</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="get_headerstring">
+<span class="target" id="classcyber__py_1_1record_1_1_record_reader_1a13ee52e0a683dbbd2a04bfda4b002829"></span><code class="sig-name descname"><span class="pre">get_headerstring</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_headerstring" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Return</span> <span class="n">message</span> <span class="n">header</span> <span class="n">string</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="reset">
+<span class="target" id="classcyber__py_1_1record_1_1_record_reader_1a76428904cabaa5773c7a9247cb812577"></span><code class="sig-name descname"><span class="pre">reset</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#reset" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Return</span> <span class="n">reset</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="get_channellist">
+<span class="target" id="classcyber__py_1_1record_1_1_record_reader_1acc195bccd6137a0d09476a88ca29dc55"></span><code class="sig-name descname"><span class="pre">get_channellist</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_channellist" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Return</span> <span class="n">current</span> <span class="n">channel</span> <span class="n">names</span> <span class="n">list</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt>
+<span class="target" id="classcyber__py_1_1record_1_1_record_writer"></span><code class="sig-name descname"><span class="pre">cyber_py.record.RecordWriter</span> <span class="pre">:</span> <span class="pre">public</span> <span class="pre">object</span></code></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Class</span> <span class="k">for</span> <span class="n">cyber</span> <span class="n">RecordWriter</span> <span class="n">wrapper</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="py function">
+<dt id="id0">
+<span class="target" id="classcyber__py_1_1record_1_1_record_writer_1a59fcbf2d130cc666dbc27d040d91f8b5"></span><code class="sig-name descname"><span class="pre">__init__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_segmentation_size_kb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_segmentation_interval_sec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<dd><p>the constructor function. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">file_segmentation_size_kb</span></code>: size to segment the file, 0 is no segmentation. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">file_segmentation_interval_sec</span></code>: size to segment the file, 0 is no segmentation. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="open">
+<span class="target" id="classcyber__py_1_1record_1_1_record_writer_1a51d9944cb52ef24d454a42ed2151eea4"></span><code class="sig-name descname"><span class="pre">open</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open record file for write. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Success is True, other False. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code>: the file path.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="close">
+<span class="target" id="classcyber__py_1_1record_1_1_record_writer_1a6862f940ecc857b0a1bc355b91888c02"></span><code class="sig-name descname"><span class="pre">close</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close record file. </p>
+<p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Close</span> <span class="n">record</span> <span class="n">file</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="write_channel">
+<span class="target" id="classcyber__py_1_1record_1_1_record_writer_1ae90c9a13b190f1f13dab0987c235a353"></span><code class="sig-name descname"><span class="pre">write_channel</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proto_desc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#write_channel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writer channel by channelname, typename, protodesc. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Success is True, other False. <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Writer</span> <span class="n">channel</span> <span class="n">by</span> <span class="n">channelname</span><span class="p">,</span><span class="k">typename</span><span class="p">,</span><span class="n">protodesc</span>
+</pre></div>
+</div>
+ </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">channel_name</span></code>: the channel name to write </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type_name</span></code>: a string of message type name. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">proto_desc</span></code>: the message descriptor.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="write_message">
+<span class="target" id="classcyber__py_1_1record_1_1_record_writer_1a5bb12dd93b38219ce4acf19e13d0f6d5"></span><code class="sig-name descname"><span class="pre">write_message</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#write_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writer msg: channelname, data, writer time. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>Success is True, other False. <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Writer</span> <span class="nl">msg</span><span class="p">:</span><span class="n">channelname</span><span class="p">,</span><span class="n">rawmsg</span><span class="p">,</span><span class="n">writer</span> <span class="n">time</span>
+</pre></div>
+</div>
+ </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">channel_name</span></code>: channel name to write. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code>: when raw is True, data processed as a rawdata, other it needs to SerializeToString </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">time</span></code>: message time. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raw</span></code>: the flag implies data whether or not a rawdata.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="set_size_fileseg">
+<span class="target" id="classcyber__py_1_1record_1_1_record_writer_1a8213d64415bc4b139f2d714d74dd82b1"></span><code class="sig-name descname"><span class="pre">set_size_fileseg</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size_kilobytes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#set_size_fileseg" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Return</span> <span class="n">filesegment</span> <span class="n">size</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="set_intervaltime_fileseg">
+<span class="target" id="classcyber__py_1_1record_1_1_record_writer_1a180a309b13543895242205f2e2406341"></span><code class="sig-name descname"><span class="pre">set_intervaltime_fileseg</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_sec</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#set_intervaltime_fileseg" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Return</span> <span class="n">file</span> <span class="n">interval</span> <span class="n">time</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="id1">
+<span class="target" id="classcyber__py_1_1record_1_1_record_writer_1a04c6ffd7271f11af87de401ec5c1bd73"></span><code class="sig-name descname"><span class="pre">get_messagenumber</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id1" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Return</span> <span class="n">message</span> <span class="n">count</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="id2">
+<span class="target" id="classcyber__py_1_1record_1_1_record_writer_1a9318b386c8181e2ad3506a12fc01fda9"></span><code class="sig-name descname"><span class="pre">get_messagetype</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id2" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Return</span> <span class="n">message</span> <span class="n">type</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="id3">
+<span class="target" id="classcyber__py_1_1record_1_1_record_writer_1a148c4ec2cbe6edef5d2815d9aebc30a4"></span><code class="sig-name descname"><span class="pre">get_protodesc</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id3" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Return</span> <span class="n">message</span> <span class="n">protodesc</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="python-cyber-py-cyber-time-py">
+<h1>python/cyber_py/cyber_time.py<a class="headerlink" href="#python-cyber-py-cyber-time-py" title="Permalink to this headline">¶</a></h1>
+<p>Defined in python/cyber_py/cyber_time.py</p>
+<dl class="py class">
+<dt>
+<span class="target" id="classcyber__py_1_1cyber__time_1_1_duration"></span><code class="sig-name descname"><span class="pre">cyber_py.cyber_time.Duration</span> <span class="pre">:</span> <span class="pre">public</span> <span class="pre">object</span></code></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Class</span> <span class="k">for</span> <span class="n">cyber</span> <span class="n">Duration</span> <span class="n">wrapper</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="py function">
+<dt id="sleep">
+<span class="target" id="classcyber__py_1_1cyber__time_1_1_duration_1a3ee57561d3f3b7f7354e96598b3b633c"></span><code class="sig-name descname"><span class="pre">sleep</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sleep" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">sleep</span> <span class="k">for</span> <span class="n">the</span> <span class="n">amount</span> <span class="n">of</span> <span class="n">time</span> <span class="n">specified</span> <span class="n">by</span> <span class="n">the</span> <span class="n">duration</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="to_sec">
+<span class="target" id="classcyber__py_1_1cyber__time_1_1_duration_1a35b3212d3d983f77d9184f01f06f9076"></span><code class="sig-name descname"><span class="pre">to_sec</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#to_sec" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">convert</span> <span class="n">to</span> <span class="n">second</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="to_nsec">
+<span class="target" id="classcyber__py_1_1cyber__time_1_1_duration_1ab29fa02ea60dbbe9da97595ae9496664"></span><code class="sig-name descname"><span class="pre">to_nsec</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#to_nsec" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">convert</span> <span class="n">to</span> <span class="n">nanosecond</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt>
+<span class="target" id="classcyber__py_1_1cyber__time_1_1_time"></span><code class="sig-name descname"><span class="pre">cyber_py.cyber_time.Time</span> <span class="pre">:</span> <span class="pre">public</span> <span class="pre">object</span></code></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Class</span> <span class="k">for</span> <span class="n">cyber</span> <span class="n">time</span> <span class="n">wrapper</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="py function">
+<dt id="id4">
+<span class="target" id="classcyber__py_1_1cyber__time_1_1_time_1a0b99e9e8cae078a6c523220df424aee2"></span><code class="sig-name descname"><span class="pre">__init__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id4" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor, creates a <a class="reference internal" href="#classcyber__py_1_1cyber__time_1_1_time"><span class="std std-ref">Time</span></a>. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">other</span></code>: float means seconds unit. int or long means nanoseconds. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="id5">
+<span class="target" id="classcyber__py_1_1cyber__time_1_1_time_1ac62c72f5e03ccd49fd4242d885488590"></span><code class="sig-name descname"><span class="pre">to_sec</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id5" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">convert</span> <span class="n">to</span> <span class="n">second</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="id6">
+<span class="target" id="classcyber__py_1_1cyber__time_1_1_time_1ac2cf6cb8b5bf8da09de9394641a9ceb7"></span><code class="sig-name descname"><span class="pre">to_nsec</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id6" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">convert</span> <span class="n">to</span> <span class="n">nanosecond</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="sleep_until">
+<span class="target" id="classcyber__py_1_1cyber__time_1_1_time_1aca809dae476d3e0b52fd89f405eac505"></span><code class="sig-name descname"><span class="pre">sleep_until</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cyber_time</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sleep_until" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">sleep</span> <span class="n">until</span> <span class="n">time</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Static Functions</p>
+<dl class="py function">
+<dt id="now">
+<span class="target" id="classcyber__py_1_1cyber__time_1_1_time_1a86608e3ba3035a3093f3d965238ff006"></span><code class="sig-name descname"><span class="pre">now</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#now" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="n">current</span> <span class="n">time</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt>
+<span class="target" id="classcyber__py_1_1cyber__time_1_1_rate"></span><code class="sig-name descname"><span class="pre">cyber_py.cyber_time.Rate</span> <span class="pre">:</span> <span class="pre">public</span> <span class="pre">object</span></code></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Class</span> <span class="k">for</span> <span class="n">cyber</span> <span class="n">Rate</span> <span class="n">wrapper</span><span class="p">.</span> <span class="n">Help</span> <span class="n">run</span> <span class="n">loops</span> <span class="n">at</span> <span class="n">a</span> <span class="n">desired</span> <span class="n">frequency</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="py function">
+<dt id="id7">
+<span class="target" id="classcyber__py_1_1cyber__time_1_1_rate_1a958f8c29cd080b4d9f2d9aaa70af84d4"></span><code class="sig-name descname"><span class="pre">__init__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id7" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor, creates a <a class="reference internal" href="#classcyber__py_1_1cyber__time_1_1_rate"><span class="std std-ref">Rate</span></a>. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">other</span></code>: float means frequency the desired rate to run at in Hz. int or long means the expected_cycle_time. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="id8">
+<span class="target" id="classcyber__py_1_1cyber__time_1_1_rate_1a0c2ff37c27ac6ded01cd256b2eb11dac"></span><code class="sig-name descname"><span class="pre">sleep</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id8" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Sleeps</span> <span class="k">for</span> <span class="n">any</span> <span class="n">leftover</span> <span class="n">time</span> <span class="n">in</span> <span class="n">a</span> <span class="n">cycle</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="id9">
+<span class="target" id="classcyber__py_1_1cyber__time_1_1_rate_1a583a4433345db3491af7475d4e277265"></span><code class="sig-name descname"><span class="pre">reset</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id9" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Sets</span> <span class="n">the</span> <span class="n">start</span> <span class="n">time</span> <span class="k">for</span> <span class="n">the</span> <span class="n">rate</span> <span class="n">to</span> <span class="n">now</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="get_cycle_time">
+<span class="target" id="classcyber__py_1_1cyber__time_1_1_rate_1a7871b770f69af0e8b61039bc71d1c888"></span><code class="sig-name descname"><span class="pre">get_cycle_time</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_cycle_time" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Get</span> <span class="n">the</span> <span class="n">actual</span> <span class="n">run</span> <span class="n">time</span> <span class="n">of</span> <span class="n">a</span> <span class="n">cycle</span> <span class="n">from</span> <span class="n">start</span> <span class="n">to</span> <span class="n">sleep</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="get_expected_cycle_time">
+<span class="target" id="classcyber__py_1_1cyber__time_1_1_rate_1a1ee26fa86a0842a8d486fe105a1abefa"></span><code class="sig-name descname"><span class="pre">get_expected_cycle_time</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_expected_cycle_time" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Get</span> <span class="n">the</span> <span class="n">expected</span> <span class="n">cycle</span> <span class="n">time</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="python-cyber-py-cyber-timer-py">
+<h1>python/cyber_py/cyber_timer.py<a class="headerlink" href="#python-cyber-py-cyber-timer-py" title="Permalink to this headline">¶</a></h1>
+<p>Defined in python/cyber_py/cyber_timer.py</p>
+<dl class="py class">
+<dt>
+<span class="target" id="classcyber__py_1_1cyber__timer_1_1_timer"></span><code class="sig-name descname"><span class="pre">cyber_py.cyber_timer.Timer</span> <span class="pre">:</span> <span class="pre">public</span> <span class="pre">object</span></code></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Class</span> <span class="k">for</span> <span class="n">cyber</span> <span class="n">timer</span> <span class="n">wrapper</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="py function">
+<dt id="id10">
+<span class="target" id="classcyber__py_1_1cyber__timer_1_1_timer_1a3456e4e82e75dc869dc15ac64646eeb0"></span><code class="sig-name descname"><span class="pre">__init__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">oneshot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id10" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used to perform oneshot or periodic timing tasks. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">period</span></code>: The period of the timer, unit is ms. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">callback</span></code>: The tasks that the timer needs to perform. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oneshot</span></code>: 1:perform the callback only after the first timing cycle 0:perform the callback every timed period </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="set_option">
+<span class="target" id="classcyber__py_1_1cyber__timer_1_1_timer_1ad51ca035abb9183b8b8f238427882b6c"></span><code class="sig-name descname"><span class="pre">set_option</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">oneshot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#set_option" title="Permalink to this definition">¶</a></dt>
+<dd><p>set the option of timer. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">period</span></code>: The period of the timer, unit is ms. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">callback</span></code>: The tasks that the timer needs to perform. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oneshot</span></code>: 1:perform the callback only after the first timing cycle 0:perform the callback every timed period </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="start">
+<span class="target" id="classcyber__py_1_1cyber__timer_1_1_timer_1a68840b061d50f8b7dd43afc46dca47d8"></span><code class="sig-name descname"><span class="pre">start</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#start" title="Permalink to this definition">¶</a></dt>
+<dd><p>start the timer </p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="stop">
+<span class="target" id="classcyber__py_1_1cyber__timer_1_1_timer_1ab600e059dfc6c59f1efcd616b2600138"></span><code class="sig-name descname"><span class="pre">stop</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>stop the timer </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="python-cyber-py-parameter-py">
+<h1>python/cyber_py/parameter.py<a class="headerlink" href="#python-cyber-py-parameter-py" title="Permalink to this headline">¶</a></h1>
+<p>Defined in python/cyber_py/parameter.py</p>
+<dl class="py class">
+<dt>
+<span class="target" id="classcyber__py_1_1parameter_1_1_parameter"></span><code class="sig-name descname"><span class="pre">cyber_py.parameter.Parameter</span> <span class="pre">:</span> <span class="pre">public</span> <span class="pre">object</span></code></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Class</span> <span class="k">for</span> <span class="n">Parameter</span> <span class="n">wrapper</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="py function">
+<dt id="type_name">
+<span class="target" id="classcyber__py_1_1parameter_1_1_parameter_1a927a248bb1db1da8fca953ec1b23591c"></span><code class="sig-name descname"><span class="pre">type_name</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#type_name" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="n">Parameter</span> <span class="k">typename</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="descriptor">
+<span class="target" id="classcyber__py_1_1parameter_1_1_parameter_1a54ca58e703f9d39889bb521f0295a0f7"></span><code class="sig-name descname"><span class="pre">descriptor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#descriptor" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="n">Parameter</span> <span class="n">descriptor</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="name">
+<span class="target" id="classcyber__py_1_1parameter_1_1_parameter_1a7c66a30cbba167761c4c67e1a0bd3bcb"></span><code class="sig-name descname"><span class="pre">name</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#name" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="n">Parameter</span> <span class="n">name</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="debug_string">
+<span class="target" id="classcyber__py_1_1parameter_1_1_parameter_1a7e080f20331f0e6b75096993ab6cb93e"></span><code class="sig-name descname"><span class="pre">debug_string</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#debug_string" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="n">Parameter</span> <span class="n">debug</span> <span class="n">string</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="as_string">
+<span class="target" id="classcyber__py_1_1parameter_1_1_parameter_1a6263ca5f589dfb01dbd15666184a0d13"></span><code class="sig-name descname"><span class="pre">as_string</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#as_string" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="n">native</span> <span class="n">value</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="as_double">
+<span class="target" id="classcyber__py_1_1parameter_1_1_parameter_1a622a3342b4c7d33bce671644b627bbf2"></span><code class="sig-name descname"><span class="pre">as_double</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#as_double" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="n">native</span> <span class="n">value</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="as_int64">
+<span class="target" id="classcyber__py_1_1parameter_1_1_parameter_1af6d31e7b4952a89fb05400b62471d437"></span><code class="sig-name descname"><span class="pre">as_int64</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#as_int64" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="n">native</span> <span class="n">value</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt>
+<span class="target" id="classcyber__py_1_1parameter_1_1_parameter_server"></span><code class="sig-name descname"><span class="pre">cyber_py.parameter.ParameterServer</span> <span class="pre">:</span> <span class="pre">public</span> <span class="pre">object</span></code></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Class</span> <span class="k">for</span> <span class="n">ParameterServer</span> <span class="n">wrapper</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="py function">
+<dt id="id11">
+<span class="target" id="classcyber__py_1_1parameter_1_1_parameter_server_1aecbb0cebea35baf665972e5320842975"></span><code class="sig-name descname"><span class="pre">__init__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id11" title="Permalink to this definition">¶</a></dt>
+<dd><p>constructor the <a class="reference internal" href="#classcyber__py_1_1parameter_1_1_parameter_server"><span class="std std-ref">ParameterServer</span></a> by the node object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">node</span></code>: the node to support the parameter server. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="set_parameter">
+<span class="target" id="classcyber__py_1_1parameter_1_1_parameter_server_1aa15c290875d49eaf04bdea8c6d9e8b72"></span><code class="sig-name descname"><span class="pre">set_parameter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#set_parameter" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">set</span> <span class="n">parameter</span><span class="p">,</span> <span class="n">param</span> <span class="n">is</span> <span class="n">Parameter</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="get_parameter">
+<span class="target" id="classcyber__py_1_1parameter_1_1_parameter_server_1a575abab01f839bcb122377f8ce30ca59"></span><code class="sig-name descname"><span class="pre">get_parameter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_parameter" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">get</span> <span class="n">Parameter</span> <span class="n">by</span> <span class="n">param</span> <span class="n">name</span> <span class="n">param_name</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="get_paramslist">
+<span class="target" id="classcyber__py_1_1parameter_1_1_parameter_server_1aae6627cb4ac050046e8be26171c2b357"></span><code class="sig-name descname"><span class="pre">get_paramslist</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_paramslist" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">get</span> <span class="n">all</span> <span class="n">params</span> <span class="n">of</span> <span class="k">this</span> <span class="n">parameterserver</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt>
+<span class="target" id="classcyber__py_1_1parameter_1_1_parameter_client"></span><code class="sig-name descname"><span class="pre">cyber_py.parameter.ParameterClient</span> <span class="pre">:</span> <span class="pre">public</span> <span class="pre">object</span></code></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Class</span> <span class="k">for</span> <span class="n">ParameterClient</span> <span class="n">wrapper</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="py function">
+<dt id="id12">
+<span class="target" id="classcyber__py_1_1parameter_1_1_parameter_client_1af4d9a7c0803ca1877de9902043d46a35"></span><code class="sig-name descname"><span class="pre">__init__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server_node_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id12" title="Permalink to this definition">¶</a></dt>
+<dd><p>constructor the <a class="reference internal" href="#classcyber__py_1_1parameter_1_1_parameter_client"><span class="std std-ref">ParameterClient</span></a> by a node and the parameter server node name. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">node</span></code>: a node to create client. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">server_node_name</span></code>: the parameter server’s node name. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="id13">
+<span class="target" id="classcyber__py_1_1parameter_1_1_parameter_client_1a8f9965259f121366b9809b541dbccf6d"></span><code class="sig-name descname"><span class="pre">set_parameter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id13" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">set</span> <span class="n">parameter</span><span class="p">,</span> <span class="n">param</span> <span class="n">is</span> <span class="n">Parameter</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="id14">
+<span class="target" id="classcyber__py_1_1parameter_1_1_parameter_client_1a9ad2188e879c9aebdb276b6a0de4b14c"></span><code class="sig-name descname"><span class="pre">get_parameter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id14" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">get</span> <span class="n">Parameter</span> <span class="n">by</span> <span class="n">param</span> <span class="n">name</span> <span class="n">param_name</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="id15">
+<span class="target" id="classcyber__py_1_1parameter_1_1_parameter_client_1a325391be0bd9792944687a7f9f6189d4"></span><code class="sig-name descname"><span class="pre">get_paramslist</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id15" title="Permalink to this definition">¶</a></dt>
+<dd><p><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">get</span> <span class="n">all</span> <span class="n">params</span> <span class="n">of</span> <span class="n">the</span> <span class="n">server_node_name</span> <span class="n">parameterserver</span><span class="p">.</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="pythonapi_index.html" class="btn btn-neutral float-left" title="Python API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Edith.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

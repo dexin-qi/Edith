@@ -1,0 +1,292 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Develop inside Docker Environment &mdash; Cyber RT Documents  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/main_stylesheet.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Migration guide from Apollo ROS" href="CyberRT_Migration_Guide.html" />
+    <link rel="prev" title="Apollo Cyber RT Developer Tools" href="CyberRT_Developer_Tools.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Cyber RT Documents
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">CyberRT QUICKSTART</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Quick_Start.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Terms.html">Cyber RT Terms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_FAQs.html">F.A.Q.</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CyberRT TUTORIALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_API_for_Developers.html">Cyber RT API tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Python_API.html">Python API tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Developer_Tools.html">Apollo Cyber RT Developer Tools</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CyberRT ADVANCED TOPICS</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Develop inside Docker Environment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#build-and-test-with-cyber-rt-in-docker">Build and Test with Cyber RT in Docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#build-cyber-rt-docker-image">Build Cyber RT Docker Image</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CyberRT_Migration_Guide.html">Migration guide from Apollo ROS</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CyberRT API REFERENCE</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/cppapi_index.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/pythonapi_index.html">Python API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Cyber RT Documents</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Develop inside Docker Environment</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/CyberRT_Docker.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="develop-inside-docker-environment">
+<h1>Develop inside Docker Environment<a class="headerlink" href="#develop-inside-docker-environment" title="Permalink to this headline">¶</a></h1>
+<p>To make life easier, Apollo Cyber RT has released a docker image and a number of scripts to help developers to build and play with Cyber RT.</p>
+<p>The official Cyber RT docker image is built based on Ubuntu 18.04. It comes with the full support for building Cyber RT and the drivers on top of it. So if you are interested in Cyber RT only, that would be the ideal point to start with.</p>
+<p><strong>Note: ARM platform support has added recently fully integrated with Apollo development environment. You will be able to develop Cyber RT on both x86 and ARM platform with the same set of scripts. However, since ARM platform has only been verified on Nvidia Drive PX, so if you are trying on some dev board other than Drive PX. Please let us know if you run into any issues</strong></p>
+<p>The following sections will show to how to start and play with Cyber RT docker and also how to build your own docker image from scratch.</p>
+<div class="section" id="build-and-test-with-cyber-rt-in-docker">
+<h2>Build and Test with Cyber RT in Docker<a class="headerlink" href="#build-and-test-with-cyber-rt-in-docker" title="Permalink to this headline">¶</a></h2>
+<p>To start the official Cyber RT docker, you need to run the command below first:</p>
+<p><strong>Note</strong>: Running this command for the first time could take a while because you will be downloading the full docker image, depending on your network bandwidth.</p>
+<p><strong>Note</strong>:  You will lose all your previous changes in the docker if you have ran this command before. Unless you would like to start a fresh docker environment.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./docker/scripts/cyber_start.sh
+</pre></div>
+</div>
+<p>To enter the docker you just started:</p>
+<p><strong>Note</strong>: you can enter and exit multiple times whenever you like, the docker environment will stay there until the next time you start the docker again.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./docker/scripts/cyber_into.sh
+</pre></div>
+</div>
+<p>To build Cyber RT only and test it:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./apollo.sh build_cyber
+bazel <span class="nb">test</span> cyber/...
+</pre></div>
+</div>
+<p>You should be able to see all the tests passed before developing your project.</p>
+<p>To build drivers on Cyber RT only:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./apollo.sh build_drivers
+</pre></div>
+</div>
+<p><strong>Note: start of instructions for ARM platform only</strong></p>
+<p>Due to some limitation of docker on Drive PX platform, you need to follow the steps below on top of the procedure above.</p>
+<p>For the first time after running cyber_into.sh to get into the Cyber RT container, please run the following two commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/edith/scripts/docker_adduser.sh
+su nvidia
+</pre></div>
+</div>
+<p><strong>To exit, please use <code class="docutils literal notranslate"><span class="pre">ctrl+p</span> <span class="pre">ctrl+q</span></code> instead of <code class="docutils literal notranslate"><span class="pre">exit</span></code></strong>. Otherwise, you will lose your current running container.</p>
+<p><strong>Note: end instructions for ARM platform only</strong></p>
+</div>
+<div class="section" id="build-cyber-rt-docker-image">
+<h2>Build Cyber RT Docker Image<a class="headerlink" href="#build-cyber-rt-docker-image" title="Permalink to this headline">¶</a></h2>
+<p>To build your owner docker image for Cyber RT, please run the following commands on x86 platform:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> docker/build/
+./build_cyber.sh cyber.x86_64.dockerfile
+</pre></div>
+</div>
+<p>For ARM platform,</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> docker/build/
+./build_cyber.sh cyber.aarch64.dockerfile
+</pre></div>
+</div>
+<p>To save you some time due to the performance on ARM platform, you can add the following option to download some prebuilt packages.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> docker/build/
+./build_cyber.sh cyber.aarch64.dockerfile download
+</pre></div>
+</div>
+<p>If you would like to save your docker image for long term, use the following commands
+as example to save it in your own docker registry, please use “docker images” to find the name of your own image.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker push <span class="o">[</span>YOUR_OWN_DOCKER_REGISTRY<span class="o">]</span>:cyber-x86_64-18.04-20190531_1115
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="CyberRT_Migration_Guide.html" class="btn btn-neutral float-right" title="Migration guide from Apollo ROS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="CyberRT_Developer_Tools.html" class="btn btn-neutral float-left" title="Apollo Cyber RT Developer Tools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Edith.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,507 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>cyber/node/node.h &mdash; Cyber RT Documents  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/main_stylesheet.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Python API" href="pythonapi_index.html" />
+    <link rel="prev" title="C++ API" href="cppapi_index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Cyber RT Documents
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">CyberRT QUICKSTART</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../CyberRT_Quick_Start.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CyberRT_Terms.html">Cyber RT Terms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CyberRT_FAQs.html">F.A.Q.</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CyberRT TUTORIALS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../CyberRT_API_for_Developers.html">Cyber RT API tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CyberRT_Python_API.html">Python API tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CyberRT_Developer_Tools.html">Apollo Cyber RT Developer Tools</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CyberRT ADVANCED TOPICS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../CyberRT_Docker.html">Develop inside Docker Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CyberRT_Migration_Guide.html">Migration guide from Apollo ROS</a></li>
+</ul>
+<p class="caption"><span class="caption-text">CyberRT API REFERENCE</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="cppapi_index.html">C++ API</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">cyber/node/node.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-node-reader-base-h">cyber/node/reader_base.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-node-reader-h">cyber/node/reader.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-node-writer-base-h">cyber/node/writer_base.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-node-writer-h">cyber/node/writer.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-node-node-channel-impl-h">cyber/node/node_channel_impl.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-node-node-service-impl-h">cyber/node/node_service_impl.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-parameter-parameter-h">cyber/parameter/parameter.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-parameter-parameter-server-h">cyber/parameter/parameter_server.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-parameter-parameter-client-h">cyber/parameter/parameter_client.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-service-service-base-h">cyber/service/service_base.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-service-service-h">cyber/service/service.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-service-client-base-h">cyber/service/client_base.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-service-client-h">cyber/service/client.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-service-discovery-specific-manager-manager-h">cyber/service_discovery/specific_manager/manager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-service-discovery-specific-manager-channel-manager-h">cyber/service_discovery/specific_manager/channel_manager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-service-discovery-specific-manager-node-manager-h">cyber/service_discovery/specific_manager/node_manager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-service-discovery-specific-manager-service-manager-h">cyber/service_discovery/specific_manager/service_manager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-service-discovery-topology-manager-h">cyber/service_discovery/topology_manager.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-component-component-h">cyber/component/component.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-component-timer-component-h">cyber/component/timer_component.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-logger-async-logger-h">cyber/logger/async_logger.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-timer-timer-h">cyber/timer/timer.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-time-time-h">cyber/time/time.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-record-header-builder-h">cyber/record/header_builder.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-record-record-base-h">cyber/record/record_base.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-record-record-message-h">cyber/record/record_message.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-record-record-reader-h">cyber/record/record_reader.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-record-record-writer-h">cyber/record/record_writer.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cyber-record-record-viewer-h">cyber/record/record_viewer.h</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pythonapi_index.html">Python API</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Cyber RT Documents</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="cppapi_index.html">C++ API</a> &raquo;</li>
+        
+      <li>cyber/node/node.h</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/cppapi.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cyber-node-node-h">
+<h1>cyber/node/node.h<a class="headerlink" href="#cyber-node-node-h" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <code class="docutils literal notranslate"><span class="pre">cyber/node/node.h</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “apollo::cyber::Node” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+</div>
+<div class="section" id="cyber-node-reader-base-h">
+<h1>cyber/node/reader_base.h<a class="headerlink" href="#cyber-node-reader-base-h" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <code class="docutils literal notranslate"><span class="pre">cyber/node/reader_base.h</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “apollo::cyber::ReaderBase” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+</div>
+<div class="section" id="cyber-node-reader-h">
+<h1>cyber/node/reader.h<a class="headerlink" href="#cyber-node-reader-h" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <code class="docutils literal notranslate"><span class="pre">cyber/node/reader.h</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “apollo::cyber::Reader” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+</div>
+<div class="section" id="cyber-node-writer-base-h">
+<h1>cyber/node/writer_base.h<a class="headerlink" href="#cyber-node-writer-base-h" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <code class="docutils literal notranslate"><span class="pre">cyber/node/writer_base.h</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “apollo::cyber::WriterBase” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+</div>
+<div class="section" id="cyber-node-writer-h">
+<h1>cyber/node/writer.h<a class="headerlink" href="#cyber-node-writer-h" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <code class="docutils literal notranslate"><span class="pre">cyber/node/writer.h</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “apollo::cyber::Writer” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+</div>
+<div class="section" id="cyber-node-node-channel-impl-h">
+<h1>cyber/node/node_channel_impl.h<a class="headerlink" href="#cyber-node-node-channel-impl-h" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <code class="docutils literal notranslate"><span class="pre">cyber/node/node_channel_impl.h</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenstruct: Cannot find class “apollo::cyber::ReaderConfig” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “apollo::cyber::NodeChannelImpl” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+</div>
+<div class="section" id="cyber-node-node-service-impl-h">
+<h1>cyber/node/node_service_impl.h<a class="headerlink" href="#cyber-node-node-service-impl-h" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <code class="docutils literal notranslate"><span class="pre">cyber/node/node_service_impl.h</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “apollo::cyber::NodeServiceImpl” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+</div>
+<div class="section" id="cyber-parameter-parameter-h">
+<h1>cyber/parameter/parameter.h<a class="headerlink" href="#cyber-parameter-parameter-h" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <code class="docutils literal notranslate"><span class="pre">cyber/parameter/parameter.h</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “apollo::cyber::Parameter” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+</div>
+<div class="section" id="cyber-parameter-parameter-server-h">
+<h1>cyber/parameter/parameter_server.h<a class="headerlink" href="#cyber-parameter-parameter-server-h" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <code class="docutils literal notranslate"><span class="pre">cyber/parameter/parameter_server.h</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “apollo::cyber::ParameterServer” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+</div>
+<div class="section" id="cyber-parameter-parameter-client-h">
+<h1>cyber/parameter/parameter_client.h<a class="headerlink" href="#cyber-parameter-parameter-client-h" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <code class="docutils literal notranslate"><span class="pre">cyber/parameter/parameter_client.h</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “apollo::cyber::ParameterClient” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+</div>
+<div class="section" id="cyber-service-service-base-h">
+<h1>cyber/service/service_base.h<a class="headerlink" href="#cyber-service-service-base-h" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <code class="docutils literal notranslate"><span class="pre">cyber/service/service_base.h</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “apollo::cyber::ServiceBase” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+</div>
+<div class="section" id="cyber-service-service-h">
+<h1>cyber/service/service.h<a class="headerlink" href="#cyber-service-service-h" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <code class="docutils literal notranslate"><span class="pre">cyber/service/service.h</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “apollo::cyber::Service” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+</div>
+<div class="section" id="cyber-service-client-base-h">
+<h1>cyber/service/client_base.h<a class="headerlink" href="#cyber-service-client-base-h" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <code class="docutils literal notranslate"><span class="pre">cyber/service/client_base.h</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “apollo::cyber::ClientBase” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+</div>
+<div class="section" id="cyber-service-client-h">
+<h1>cyber/service/client.h<a class="headerlink" href="#cyber-service-client-h" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <code class="docutils literal notranslate"><span class="pre">cyber/service/client.h</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “apollo::cyber::Client” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+</div>
+<div class="section" id="cyber-service-discovery-specific-manager-manager-h">
+<h1>cyber/service_discovery/specific_manager/manager.h<a class="headerlink" href="#cyber-service-discovery-specific-manager-manager-h" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <code class="docutils literal notranslate"><span class="pre">cyber/service_discovery/specific_manager/channel_namager.h</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “apollo::cyber::service_discovery::Manager” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+</div>
+<div class="section" id="cyber-service-discovery-specific-manager-channel-manager-h">
+<h1>cyber/service_discovery/specific_manager/channel_manager.h<a class="headerlink" href="#cyber-service-discovery-specific-manager-channel-manager-h" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <code class="docutils literal notranslate"><span class="pre">cyber/service_discovery/specific_manager/channel_manager.h</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “apollo::cyber::service_discovery::ChannelManager” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+</div>
+<div class="section" id="cyber-service-discovery-specific-manager-node-manager-h">
+<h1>cyber/service_discovery/specific_manager/node_manager.h<a class="headerlink" href="#cyber-service-discovery-specific-manager-node-manager-h" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <code class="docutils literal notranslate"><span class="pre">cyber/service_discovery/specific_manager/node_manager.h</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “apollo::cyber::service_discovery::NodeManager” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+</div>
+<div class="section" id="cyber-service-discovery-specific-manager-service-manager-h">
+<h1>cyber/service_discovery/specific_manager/service_manager.h<a class="headerlink" href="#cyber-service-discovery-specific-manager-service-manager-h" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <code class="docutils literal notranslate"><span class="pre">cyber/service_discovery/specific_manager/service_manager.h</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “apollo::cyber::service_discovery::ServiceManager” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+</div>
+<div class="section" id="cyber-service-discovery-topology-manager-h">
+<h1>cyber/service_discovery/topology_manager.h<a class="headerlink" href="#cyber-service-discovery-topology-manager-h" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <code class="docutils literal notranslate"><span class="pre">cyber/service_discovery/topology_manager.h</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “apollo::cyber::service_discovery::TopologyManager” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+</div>
+<div class="section" id="cyber-component-component-h">
+<h1>cyber/component/component.h<a class="headerlink" href="#cyber-component-component-h" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <code class="docutils literal notranslate"><span class="pre">cyber/component/component.h</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “apollo::cyber::Component” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+</div>
+<div class="section" id="cyber-component-timer-component-h">
+<h1>cyber/component/timer_component.h<a class="headerlink" href="#cyber-component-timer-component-h" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <code class="docutils literal notranslate"><span class="pre">cyber/component/timer_component.h</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “apollo::cyber::TimerComponent” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+</div>
+<div class="section" id="cyber-logger-async-logger-h">
+<h1>cyber/logger/async_logger.h<a class="headerlink" href="#cyber-logger-async-logger-h" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <code class="docutils literal notranslate"><span class="pre">cyber/logger/async_logger.h</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “apollo::cyber::logger::AsyncLogger” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+</div>
+<div class="section" id="cyber-timer-timer-h">
+<h1>cyber/timer/timer.h<a class="headerlink" href="#cyber-timer-timer-h" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <code class="docutils literal notranslate"><span class="pre">cyber/timer/timer.h</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenstruct: Cannot find class “apollo::cyber::TimerOption” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “apollo::cyber::Timer” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+</div>
+<div class="section" id="cyber-time-time-h">
+<h1>cyber/time/time.h<a class="headerlink" href="#cyber-time-time-h" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <code class="docutils literal notranslate"><span class="pre">cyber/time/time.h</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “apollo::cyber::Time” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+</div>
+<div class="section" id="cyber-record-header-builder-h">
+<h1>cyber/record/header_builder.h<a class="headerlink" href="#cyber-record-header-builder-h" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <code class="docutils literal notranslate"><span class="pre">cyber/record/header_builder.h</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “apollo::cyber::record::HeaderBuilder” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+</div>
+<div class="section" id="cyber-record-record-base-h">
+<h1>cyber/record/record_base.h<a class="headerlink" href="#cyber-record-record-base-h" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <code class="docutils literal notranslate"><span class="pre">cyber/record/record_base.h</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “apollo::cyber::record::RecordBase” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+</div>
+<div class="section" id="cyber-record-record-message-h">
+<h1>cyber/record/record_message.h<a class="headerlink" href="#cyber-record-record-message-h" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <code class="docutils literal notranslate"><span class="pre">cyber/record/record_message.h</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenstruct: Cannot find class “apollo::cyber::record::RecordMessage” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+</div>
+<div class="section" id="cyber-record-record-reader-h">
+<h1>cyber/record/record_reader.h<a class="headerlink" href="#cyber-record-record-reader-h" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <code class="docutils literal notranslate"><span class="pre">cyber/record/record_reader.h</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “apollo::cyber::record::RecordReader” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+</div>
+<div class="section" id="cyber-record-record-writer-h">
+<h1>cyber/record/record_writer.h<a class="headerlink" href="#cyber-record-record-writer-h" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <code class="docutils literal notranslate"><span class="pre">cyber/record/record_writer.h</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “apollo::cyber::record::RecordWriter” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+</div>
+<div class="section" id="cyber-record-record-viewer-h">
+<h1>cyber/record/record_viewer.h<a class="headerlink" href="#cyber-record-record-viewer-h" title="Permalink to this headline">¶</a></h1>
+<p>Defined in <code class="docutils literal notranslate"><span class="pre">cyber/record/record_viewer.h</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>doxygenclass: Cannot find class “apollo::cyber::record::RecordViewer” in doxygen xml output for project “Cyber RT Documents” from directory: ../xml</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="pythonapi_index.html" class="btn btn-neutral float-right" title="Python API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="cppapi_index.html" class="btn btn-neutral float-left" title="C++ API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Edith.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
